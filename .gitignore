@@ -1,5 +1,6 @@
 secring.gpg
 random_seed
+config.codekit
 *~
 bower_components/
 files/build/
