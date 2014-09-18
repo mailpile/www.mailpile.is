@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Brennan Novak">
+
+	<!-- Mobile Specific Metas
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS - CHANGE URL when making live
+    ================================================== -->
+	<link rel="stylesheet" href="/css/mailpile.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+	<title>Mailpile: Designing Security (video)</title>
+
+	<!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/list.min.js"></script>
+    
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+
+		// Smooth Scrolling
+		$('a.scroll-link[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+					var link_height = target.offset().top - 108;		           
+		             $('html,body').animate({
+		                 scrollTop: link_height
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		}); 
+
+		// Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
+
+</head>
+<body>
+
+	<div id="navigation">
+	  <div class="menu-button">Menu</div>
+		<ul data-breakpoint="800" class="flexnav">
+			<li><a href="/" class="scroll-link">About</a></li>
+			<li><a href="/download/" class="scroll-link">Download</a></li>
+			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
+			<li><a href="/demos/" class="scroll-link">Demos</a></li>
+			<li><a href="/donate/" class="scroll-link">Donate</a></li>
+			<li><a href="/blog/" class="scroll-link">Blog</a></li>
+			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+		</ul>
+	</div>
+
+	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+	<div id="content" class="container">
+		<div id="header" class="clearfix">
+			<div class="col-3 text-center">
+				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+			</div>
+			<div class="col-11">
+				<a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+			</div>
+		</div>
+		<hr class="blog-hr">
+		<div class="row"></div>
+
+		<!-- Content -->
+		<div id="pages" class="clearfix">
+			<div class="col-13">
+				<a href="2013-08-11_Designing_Security.html"><h1>Designing Security (video)</h1></a>
+				<p><strong>Posted by <a href="#">Brennan</a> on August 11, 2013</strong></p>
+
+<iframe src="http://player.vimeo.com/video/72109354?title=0&amp;byline=0&amp;portrait=0&amp;color=be2408" width="650" height="366" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<p>&nbsp;</p>
+
+<p>In this inaugural Mailpile Conversations video, two of our team members: Smari McCarthy & Brennan Novak discuss some of the importances and challenges of getting encryption right in an email interface!</p>
+
+<p>There is currently an active thread about this fun challenge, Follow along or participate at the Mailpile <a href="github.com/pagekite/Mailpile/issues/59" target="_blank">Github Issues</a></p>
+
+<p><p>Music by:<br>
+"Dark Horizon" by <a href="http://mezmedallion.com" target="_blank">Mez Medallion</a><br>
+"Soft Flight" by <a href="http://itunes.apple.com/album/volume-10/id668711123" target="_blank">theknowledgist</a>
+</a></p>
+    <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+    <hr>
+  </div>
+</div>
+
+		<!-- Contact & Media -->
+		<div id="footer" class="clearfix">
+			<div class="one-third">
+				<h3>Please Donate</h3>
+				<p>To ensure future development and growth of Mailpile and our community!</p>
+				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+			</div>
+			<div class="one-third">
+				<h3>Contact Us</h3>
+				<ul class="add-bottom">
+					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+				</ul>
+				<ul>
+					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+				</ul>
+			</div>
+			<div class="one-third">
+				<h3>Downloads</h3>
+				<ul class="add-bottom">
+					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+          <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
+          <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
+					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+        </ul>
+				<ul>
+					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="add-top add-bottom"></div>
+
+
+	</div><!-- container -->
+
+</body>
+</html>

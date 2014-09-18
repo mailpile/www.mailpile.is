@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Brennan Novak">
+
+	<!-- Mobile Specific Metas
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS - CHANGE URL when making live
+    ================================================== -->
+	<link rel="stylesheet" href="/css/mailpile.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+	<title>Mailpile: Download and Install</title>
+
+	<!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/list.min.js"></script>
+    
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+
+		// Smooth Scrolling
+		$('a.scroll-link[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+					var link_height = target.offset().top - 108;		           
+		             $('html,body').animate({
+		                 scrollTop: link_height
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		}); 
+
+		// Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
+
+</head>
+<body>
+
+	<div id="navigation">
+	  <div class="menu-button">Menu</div>
+		<ul data-breakpoint="800" class="flexnav">
+			<li><a href="/" class="scroll-link">About</a></li>
+			<li><a href="/download/" class="scroll-link">Download</a></li>
+			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
+			<li><a href="/demos/" class="scroll-link">Demos</a></li>
+			<li><a href="/donate/" class="scroll-link">Donate</a></li>
+			<li><a href="/blog/" class="scroll-link">Blog</a></li>
+			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+		</ul>
+	</div>
+
+	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+	<div id="content" class="container">
+<h4 class="text-center half-bottom">Get your very own <img src="/img/icon-48x48.png" style="margin-left: 10px; position: relative; top:15px"> <strong>mail</strong>pile</h4>
+<h1 class="text-center">Download & Install</h1>
+
+<div class="row text-center">
+  <p>Select the operating system and download method you prefer:</p>
+</div>
+
+<div class="row add-bottom">
+  <div class="col-4 col-offset-2 text-center">
+    <div id="download-mac" class="download-os">
+      <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg"><img src="/img/os-mac.png" style="height:48px;"></a><br>
+      <h4 class="half-bottom">Mac OS</h4>
+      Download via:<br>
+      <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg">HTTPS</a> or 
+      <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.torrent">Bittorrent</a><br>
+      <span class="download-checksums"><a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.sha1">sha1</a> &nbsp;<a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.md5">md5</a></span>
+    </div>
+  </div>
+  <div class="col-4 text-center">
+    <div id="download-windows" class="download-os">
+      <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe"><img src="/img/os-windows.png" style="height:48px;"></a><br>
+      <h4 class="half-bottom">Windows</h4>
+      Download via:<br>
+      <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe">HTTPS</a> or 
+      <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.torrent">Bittorrent</a><br>
+      <span class="download-checksums"><a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.sha1">sha1</a> &nbsp;<a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.md5">md5</a></span>
+    </div>
+  </div>
+  <div class="col-4 text-center">
+    <div id="download-linux" class="download-os">
+      <a href="https://github.com/pagekite/Mailpile/releases"><img src="/img/os-linux.png" style="height:48px;"></a><br>
+      <h4 class="half-bottom">Linux</h4>
+      Download via:<br>
+      <a href="https://github.com/pagekite/Mailpile/releases" target="_blank">Github (source code)</a>
+    </div>
+  </div>
+</div>
+
+<div class="row half-top text-center">
+  <p><strong>Note: our beta release has some rough edges still, please read</strong> <a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta" target="_blank">our release notes</a></p>
+  <p>If you experience problems installing Mailpile please let us know by opening a <a href="https://github.com/pagekite/Mailpile/issues" target="_blank">Github issue</a> or by <a href="mailto:team@mailpile.is?subject=Beta Feedback">emailing us</a>.<br> You can also <a href="https://twitter.com/mailpileteam" target="_blank">Tweet at us</a> or stop by our IRC room <strong>#mailpile</strong> on irc.freenode.net</p>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-14 col-offset-1">
+    <h3 class="text-center"><span class="icon-hosting"></span> Email Servers</h3>
+    <p>The current incarnation of Mailpile does not solve 100% of migrating your email away from Gmail or Yahoo. Mailpile is just an <a href="https://en.wikipedia.org/wiki/Email_client" target="_blank">email client</a> (MUA) with built-in PGP encryption and other nice features. Mailpile is <em>not</em> an <a href="https://en.wikipedia.org/wiki/Message_transfer_agent" target="_blank">email server</a> (MTA). Services like Gmail, Yahoo, and others provide both the email "client" and "server" in one package. However, you can use Mailpile with your Gmail to be more secure!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-10 col-offset-1">
+    <p>At some point in the future, we would love to offer better tools and integrations for Mailpile that make the email server component easier to integrate with. But, doing this the right way that doesn't compromise security or ethics takes time to create. Until that point in the future, if you're handy with the command line, you might want to consider setting up a mail server using one of the following open source projects. Each options has the goal of making self hosting an email server much easier.</p>
+  </div>
+  <div class="col-4 text-center">
+    <h5 class="half-top">Self Hosted Email Solutions</h5>
+    <ul>
+      <li><a href="https://mailinabox.email" target="_blank">Mail In A Box</a></li>
+      <li><a href="http://www.iredmail.org" target="_blank">iRedMail</a></li>
+      <li><a href="https://yunohost.org" target="_blank">YunoHost</a></li>
+    </ul>
+  </div>
+</div>
+<hr>
+
+<!--
+<div class="row">
+  <h3 class="text-center"><span class="icon-graph"></span> Personal Clouds</h3>
+  <div class="col-7 col-offset-1">
+    <p>Personal clouds are an exciting new way to self host web applications (like Mailpile) that is gaining popularity. Personal clouds can be installed on a VPS or home computer. Currently, this approach is only viable for people with some technical knowledge.</p>
+  </div>
+  <div class="col-7">
+    <p>One of the great things about personal clouds is that they are helping to <a href="http://redecentralize.org/" target="_blank">redecentralize</a> the internet, which is something we think is very important. Additionally, each of these platforms is fully open source and are rapidly improving all the time.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="one-quarter text-center">
+    <h4 class="half-bottom">ArkOS</h4>
+    <a href="https://arkos.io" target="_blank">Learn more</a>
+  </div>
+  <div class="one-quarter text-center">
+    <h4 class="half-bottom">CloudFleet</h4>
+    <a href="https://cloudfleet.io" target="_blank">Learn more</a>
+  </div>
+  <div class="one-quarter text-center">
+    <h4 class="half-bottom">Indie Box</h4>
+    <a href="http://indieboxproject.org/blog/" target="_blank">Learn more</a>
+  </div>
+  <div class="one-quarter text-center">
+    <h4 class="half-bottom">Sandstorm</h4>
+    <a href="https://sandstorm.io" target="_blank">Learn more</a>
+  </div>
+</div>
+<hr>
+-->
+
+<script>
+$(document).ready(function() {
+
+  if (navigator.appVersion.indexOf("Mac") != -1) {
+    $('#download-mac').addClass('download-os-on');
+  }
+  else if (navigator.appVersion.indexOf("Win") != -1) { 
+    $('#download-windows').addClass('download-os-on');
+  }
+  else if (navigator.appVersion.indexOf("X11") != -1) {
+    $('#download-linux').addClass('download-os-on');
+  }
+  else if (navigator.appVersion.indexOf("Linux") != -1) {
+    $('#download-linux').addClass('download-os-on');
+  }
+
+});
+</script>
+
+		<!-- Contact & Media -->
+		<div id="footer" class="clearfix">
+			<div class="one-third">
+				<h3>Please Donate</h3>
+				<p>To ensure future development and growth of Mailpile and our community!</p>
+				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+			</div>
+			<div class="one-third">
+				<h3>Contact Us</h3>
+				<ul class="add-bottom">
+					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+				</ul>
+				<ul>
+					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+				</ul>
+			</div>
+			<div class="one-third">
+				<h3>Downloads</h3>
+				<ul class="add-bottom">
+					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+          <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
+          <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
+					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+        </ul>
+				<ul>
+					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="add-top add-bottom"></div>
+
+
+	</div><!-- container -->
+
+</body>
+</html>

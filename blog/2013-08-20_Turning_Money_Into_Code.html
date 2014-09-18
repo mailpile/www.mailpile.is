@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Brennan Novak">
+
+	<!-- Mobile Specific Metas
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS - CHANGE URL when making live
+    ================================================== -->
+	<link rel="stylesheet" href="/css/mailpile.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+	<title>Mailpile: Turning Money Into Code</title>
+
+	<!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/list.min.js"></script>
+    
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+
+		// Smooth Scrolling
+		$('a.scroll-link[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+					var link_height = target.offset().top - 108;		           
+		             $('html,body').animate({
+		                 scrollTop: link_height
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		}); 
+
+		// Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
+
+</head>
+<body>
+
+	<div id="navigation">
+	  <div class="menu-button">Menu</div>
+		<ul data-breakpoint="800" class="flexnav">
+			<li><a href="/" class="scroll-link">About</a></li>
+			<li><a href="/download/" class="scroll-link">Download</a></li>
+			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
+			<li><a href="/demos/" class="scroll-link">Demos</a></li>
+			<li><a href="/donate/" class="scroll-link">Donate</a></li>
+			<li><a href="/blog/" class="scroll-link">Blog</a></li>
+			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+		</ul>
+	</div>
+
+	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+	<div id="content" class="container">
+		<div id="header" class="clearfix">
+			<div class="col-3 text-center">
+				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+			</div>
+			<div class="col-11">
+				<a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+			</div>
+		</div>
+		<hr class="blog-hr">
+		<div class="row"></div>
+
+		<!-- Content -->
+		<div id="pages" class="clearfix">
+			<div class="col-13">
+				<a href="2013-08-20_Turning_Money_Into_Code.html"><h1>Turning Money Into Code</h1></a>
+				<p><strong>Posted by <a href="#">Bjarni</a> on August 20, 2013</strong></p>
+
+<p>With three weeks left of <a href="http://igg.me/at/mailpile">our campaign</a>, we
+have already reached our goal of $100,000 USD!</p>
+
+<p>This is absolutely fantastic and we are deeply grateful to all of you
+for believing in us and supporting our vision with your hard earned
+cash. It's now very likely that we will over-shoot our goals and raise
+more money than we initially planned for. This begs the question: how do
+we turn extra money into code?</p>
+
+<p>We have already had this discussion in private with some of our larger
+backers, but we feel it is only right to make a public statement about
+this and keep our entire community informed.</p>
+
+<h3>A Young Project</h3>
+
+<p>Mailpile is a project which is just in its infancy. We have a rough
+prototype, we have a vision and now we have a community and money to
+work with. But we don't yet have all the answers.</p>
+
+<p>Over the next few months, we need to sort out a lot of things to do with
+the infrastructure of the project:</p>
+
+<ul>
+<li>We need a community forum to continue interacting with our backers</li>
+<li>We need automated tests for our code-base</li>
+<li>We need to define APIs for plug-ins and interacting with external apps</li>
+<li>We need to further develop our theme architecture</li>
+<li>We need to solidify the overall design of the system, so it is clear
+where and how people can pitch in</li>
+</ul>
+
+<p>These are all prerequisites for being able to accept outside help - or
+to be able to turn money into manpower into useful code. So these are
+our top priorities for the Alpha release in January.</p>
+
+<h3>What Can Money do?</h3>
+
+<p>Having extra money gives us a few options:</p>
+
+<ol>
+<li>Raise our salaries</li>
+<li>Work longer, extend the lifetime of the project beyond 1 year</li>
+<li>Hire additional people</li>
+<li>Hire contractors for specific tasks</li>
+<li>Set money aside for a "rainy day" or unexpected events</li>
+<li>Attend conferences, hackathons and meetups in other countries</li>
+</ol>
+
+<p>Which of these makes sense, depends a lot on how the project develops
+and how much money we end up with at the end of the campaign. At the
+moment we are leaning towards the last three - contractors, a "rainy
+day" fund, and growing our community in person.</p>
+
+<p>The reasons for this are threefold.</p>
+
+<p>One has to do with the general  unpredictability of software
+development. A rainy day fund explicitly acknowledges the fact that we
+don't yet have all the answers and gives us the flexibility to react to
+the known unknowns we will face later on.</p>
+
+<p>Choosing to work with contractors rather than hiring a fourth or fifth
+team member is appealing to us, because it reduces the management
+overhead and allows us to choose who we work with based on exactly the
+skills required for specific tasks, rather than looking for more
+generalists who are willing to take a pay cut to work on a cool project
+in a far away land. An example of sub-projects which fit this model are
+development of an Android native client, or packaging work to make
+Mailpile available to non-technical Windows or Mac users and as part of
+the more popular Linux distros. As we make progress refining our design
+and the project matures, more such sub-projects will emerge and money
+will let us act upon them.</p>
+
+<p>Finally, without our community, this project wouldn't be what it is. We
+want to meet you and hear your feedback and build relationships. This is
+vital for the long term viability of Mailpile and the health of the
+project. Not to mention making it more fun!</p>
+
+<p>The bottom line is, we want to spend the money in the most effective way
+possible and do what is right for Mailpile and our community. We don't
+yet know all of the details, but we look forward to figuring it out and
+we'll keep you posted as we go along.</p>
+
+<p>Thank you for your support!</p>
+    <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+    <hr>
+  </div>
+</div>
+
+		<!-- Contact & Media -->
+		<div id="footer" class="clearfix">
+			<div class="one-third">
+				<h3>Please Donate</h3>
+				<p>To ensure future development and growth of Mailpile and our community!</p>
+				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+			</div>
+			<div class="one-third">
+				<h3>Contact Us</h3>
+				<ul class="add-bottom">
+					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+				</ul>
+				<ul>
+					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+				</ul>
+			</div>
+			<div class="one-third">
+				<h3>Downloads</h3>
+				<ul class="add-bottom">
+					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+          <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
+          <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
+					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+        </ul>
+				<ul>
+					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="add-top add-bottom"></div>
+
+
+	</div><!-- container -->
+
+</body>
+</html>

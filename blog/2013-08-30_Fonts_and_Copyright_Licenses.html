@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Brennan Novak">
+
+	<!-- Mobile Specific Metas
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS - CHANGE URL when making live
+    ================================================== -->
+	<link rel="stylesheet" href="/css/mailpile.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+	<title>Mailpile: Fonts and Copyright Licenses</title>
+
+	<!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/list.min.js"></script>
+    
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+
+		// Smooth Scrolling
+		$('a.scroll-link[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+					var link_height = target.offset().top - 108;		           
+		             $('html,body').animate({
+		                 scrollTop: link_height
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		}); 
+
+		// Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
+
+</head>
+<body>
+
+	<div id="navigation">
+	  <div class="menu-button">Menu</div>
+		<ul data-breakpoint="800" class="flexnav">
+			<li><a href="/" class="scroll-link">About</a></li>
+			<li><a href="/download/" class="scroll-link">Download</a></li>
+			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
+			<li><a href="/demos/" class="scroll-link">Demos</a></li>
+			<li><a href="/donate/" class="scroll-link">Donate</a></li>
+			<li><a href="/blog/" class="scroll-link">Blog</a></li>
+			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+		</ul>
+	</div>
+
+	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+	<div id="content" class="container">
+		<div id="header" class="clearfix">
+			<div class="col-3 text-center">
+				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+			</div>
+			<div class="col-11">
+				<a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+			</div>
+		</div>
+		<hr class="blog-hr">
+		<div class="row"></div>
+
+		<!-- Content -->
+		<div id="pages" class="clearfix">
+			<div class="col-13">
+				<a href="2013-08-30_Fonts_and_Copyright_Licenses.html"><h1>Fonts and Copyright Licenses</h1></a>
+				<p><strong>Posted by <a href="#">Smári McCarthy</a> on August 30, 2013</strong></p>
+
+<p><img src="/files/Logo-Font-Comparisson.png"></p>
+
+<p>When developing free software, one of the things we need to be very careful about is compliance with copyright licenses. Any modern application uses dozens of libraries and resources, and all of them are subject to copyright. Because Mailpile is based almost exclusively on the core Python library, we don't have to worry quite as much as normal, but already we have a few dependencies. These dependencies are all free software though, so we can distribute them with Mailpile with no problem.</p>
+
+<p>It's worth reiterating the distinction: Free software refers to freedom, specifically the freedom to use the software for any purpose, to study it, to make modifications, and to share it with your friends. When we say that Mailpile is "free", we mean free as in freedom - although incidentally, Mailpile is also free as in free beer - which is to say, you don't have to pay anything to use it.</p>
+
+<h2>Running into problems</h2>
+
+<p>A few weeks ago, we ran into a bit of a problem. It turns out that the font we have been using in our logo and in the web app, <a href="http://www.exljbris.com/museo.html" target="_blank">Museo - 300, 500, 700</a>, has a pretty unusual license which allows free (as in free beer) commercial use of the font for any purpose, but does not allow redistribution of the font. Specifically, it says:</p>
+
+<blockquote>"MUSEO font family has five weights (100 300 500 700 900). 3 weights are <bold>absolutely free</bold> (300 500 700) and 2 are paid (100 900)."</blockquote>
+
+<p>But if you read the license carefully it means the variants we are using do not cost any money, but secondary redistribution is not allowed. This means that we cannot bundle it in Mailpile, because even though strictly speaking the license would allow us to package it in the font, anybody else who would distribute Mailpile onwards - say, for instance, giving their friend a copy - would be violating copyright by doing so. This is something we cannot live with.</p>
+
+<p>We tried negotiating with the font's author, didn't come to a positive conclusion. We will of course respect his wishes, which unfortunately means that we must stop using Museo. We are very sad about this, because it really is a beautiful font and fits quite nicely with the feel of Mailpile's UI. But it can't be helped, so we must remove it from Mailpile and move on with life.</p>
+
+<h2>Seeking alternatives</h2>
+
+<p>After this came up, we spent a few days looking for alternatives. We found quite a few nice collections of free (as in freedom) fonts, but nobody had exactly the type of slab serif font we were looking for - something that has the same aesthetic as Museo. The best substitute we found was <a href="http://www.fontspace.com/eduardo-tunni/fauna-one" target="_blank">Fauna One</a> by Eduardo Rodríguez Tunni, which is licensed under the SIL Open Font License (OFL), meaning it's free (as in freedom)! The only thing it is missing is a heavier weight, and an italic variant, because we like to be able to emphasize text in various ways. It would also be nice if it supported a wider character set, because a lot of our users are going to be using extended latin alphabets (not to mention potential users of other writing systems - something we'll address in another post!).</p>
+
+<p>The good news is, because Fauna One is licensed under the OFL, we can work on expanding it to support the things we need. We're not entirely sure if that's what we'll do yet, but it's our best lead so far...</p>
+
+<h2>Culture clash</h2>
+
+<p>This entire experience taught us two things that we thought it might be worth bringing up:</p>
+
+<ol>
+<li>Designers often have a very different understanding of how to deal with issues of copyright, usage rights and so on than software developers, and in particular, there seems to be a need to have more conversations about free culture with designers and artists. </li>
+</ol>
+
+<p>(This is interestingly something that I've noticed more in the anglosphere than, say, in latin countries - many of my favorite Spanish artists distribute (almost) everything they do under liberal licenses, such as comic artist/musician <a href="http://lasbuenasnoches.com" target="_blank">Miguel Brieva</a>...)</p>
+
+<ol>
+<li>Possibly as a side-effect of 1, there are depressingly few free (as in freedom) fonts in the world. This is being remedied to some extent by groups such as <a href="http://www.theleagueofmoveabletype.com" target=="_blank">The League of Movable Type</a>, but it feels as if this fairly gargantuan task needs more hands. Beautiful typefaces for the people!</li>
+</ol>
+
+<p>We're not entirely sure what to do about this, but we thought we'd bring it up and see if there's any momentum generated by it... but we know, making typefaces is a lot of work and quite difficult to do well. There are some really nice free (as in freedom) typefaces around already, such as Gentium, Lago, Andika, the TeX Gyre fonts, and so on, and we're really grateful to those who've made them, and made them available to the community at large, not just for use, but also for distribution.</p>
+
+<h2>Beauty is hard</h2>
+
+<p>In a way, this goes to show that building an application like Mailpile has a lot more facets than it seems. We could just default to whatever sans-serif font is installed on the user's system and accept that some users will have a weird look-and-feel, but we'd much rather bundle a nice default font set and only have the look-and-feel downgrade for people who actively block CSS @font declarations, or users of the text mode version of <a href="http://links.twibright.com">Links</a> and other non-graphical UIs (hint: Mailpile has a built-in CLI for people like you!).</p>
+    <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+    <hr>
+  </div>
+</div>
+
+		<!-- Contact & Media -->
+		<div id="footer" class="clearfix">
+			<div class="one-third">
+				<h3>Please Donate</h3>
+				<p>To ensure future development and growth of Mailpile and our community!</p>
+				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+			</div>
+			<div class="one-third">
+				<h3>Contact Us</h3>
+				<ul class="add-bottom">
+					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+				</ul>
+				<ul>
+					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+				</ul>
+			</div>
+			<div class="one-third">
+				<h3>Downloads</h3>
+				<ul class="add-bottom">
+					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+          <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
+          <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
+					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+        </ul>
+				<ul>
+					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="add-top add-bottom"></div>
+
+
+	</div><!-- container -->
+
+</body>
+</html>

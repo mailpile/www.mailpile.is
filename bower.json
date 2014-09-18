@@ -1,0 +1,22 @@
+{
+  "name": "Mailpile.is",
+  "version": "1.0.0",
+  "homepage": "https://mailpile.is",
+  "authors": [
+    "Brennan Novak <hi@brennannovak.com>"
+  ],
+  "description": "The public website for Mailpile software project",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rebar": "*"
+  }
+}

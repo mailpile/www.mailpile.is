@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Mailpile: </title>
+  <link>http://www.mailpile.is/providers/</link>
+  <item>
+    <title>Providers</title>
+    <link>http://www.mailpile.is/providers/index.html</link>
+    <description>
+&lt;div class="row add-bottom"&gt;
+  &lt;div class="col-6 text-center"&gt;
+    &lt;img src="/img/logo-275x200.png"&gt;
+  &lt;/div&gt;
+  &lt;div class="col-10 text-center"&gt;
+    &lt;br&gt;
+    &lt;h1&gt;&lt;strong&gt;mail&lt;/strong&gt;pile&lt;/h1&gt;
+    &lt;h4&gt;Preferred Providers&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Our Preferred Providers&lt;/h3&gt;
+
+&lt;p&gt;This is a list of providers that we have reviewed and determined to provide good security and a quality experience that compliments Mailpile's security features and software. All of these providers&lt;/p&gt;
+
+&lt;table class="full-width-table rounded add-bottom"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;em&gt;Company&lt;/em&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;em&gt;Email Addresses&lt;/em&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;em&gt;Whitelist Sending&lt;/em&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;em&gt;Encrypted Sending&lt;/em&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;em&gt;Encrypted Hosting&lt;/em&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href="https://www.hushmail.com/"&gt;Hushmail&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;Yes&lt;/td&gt;
+    &lt;td&gt;Yes&lt;/td&gt;
+    &lt;td&gt;No&lt;/td&gt;
+    &lt;td&gt;No&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href="https://www.1984.is"&gt;1984&lt;/a&gt;&lt;/td&gt;
+    &lt;td&gt;Yes&lt;/td&gt;
+    &lt;td&gt;Yes&lt;/td&gt;
+    &lt;td&gt;No&lt;/td&gt;
+    &lt;td&gt;No&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;Become a Preferred Provider :)&lt;/h3&gt;
+
+&lt;p&gt;Mailpile is a next generation email client designed and engineered in an unsual way that is catching on with other projects, to read more about this [go here]. Due to our unusual design, there are many different ways people can install and use Mailpile to interfact with their email. In traditional email, there is the &lt;a href="https://en.wikipedia.org/wiki/Mail_user_agent" target="_blank"&gt;email client&lt;/a&gt; (MUA) and the &lt;a href="https://en.wikipedia.org/wiki/List_of_mail_servers" target="_blank"&gt;email server&lt;/a&gt; (MTA).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Most webmail solutions blur this line by putting both the email client &amp; server in the same location&lt;/strong&gt; which is accessible via a URL. Like traditional email clients, Mailpile is not 100% capable of handling email as a standalone application, an email server is still needed from which Mailpile users can download &amp; send their email through.&lt;/p&gt;
+
+&lt;p&gt;Because Mailpile is highly focused on providing high levels of data ownership, privacy and security to users, as well as trying to &lt;a href="http://redecentralize.org/about/" target="_blank"&gt;re-decentralize&lt;/a&gt; the internet, we are very selective about what services we refer users to from our website and application installer process. That said, if you are creating or already have a company that provides email addresses &amp; email server support, that also cares about some (preferably all) of the following, data-ownership, privacy, security, and decentralization- we would love to talk to you.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in becoming a Mailpile Preferred Provider, please fill out this brief questionaire and we will get in touch with you asap. Select the things you think the internet needs more of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;label&gt;&lt;input type="checkbox" class="provider-meet-our-terms"&gt; Data-ownership&lt;/label&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;label&gt;&lt;input type="checkbox" class="provider-meet-our-terms"&gt; Privacy&lt;/label&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;label&gt;&lt;input type="checkbox" class="provider-meet-our-terms"&gt; Security&lt;/label&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;label&gt;&lt;input type="checkbox" class="provider-meet-our-terms"&gt; Decentralization&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="text-center"&gt;
+  &lt;a href="#" class="button-primary center"&gt;Full Questionaire Coming Soon...&lt;/a&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+
+&lt;h3&gt;Non Preferred Providers&lt;/h3&gt;
+
+&lt;p&gt;If you are operating a shared hosting or cloud service company and you would like to offer Mailpile to your users, there are a few ways you can go about this. Due to the nature of Mailpile's libre license (AGPL 3.0 and Apache 2), you are free to download Mailpile's open source code and use it however you want, yay &lt;a href="http://en.wikipedia.org/wiki/Free_software" target="_blank"&gt;Free software&lt;/a&gt;. However, the &lt;strong&gt;Mailpile logo and brand name&lt;/strong&gt; are registered trademarks of Icelandic corporation Mailpile ehf. and US corporation Reverse Productions Ltd. thus we reserve the right to either grant or deny you the right to use our logo and brand in association with your service.&lt;/p&gt;
+
+&lt;p&gt;Luckily for you, if you do not meet the criteria for our Preferred Partner status, we are lenient on allowing people to use our logo and trademark as long as you meet the following criteria:&lt;/p&gt;
+&lt;br class="add-bottom"&gt;
+
+&lt;h5&gt;1.) Do &lt;strong&gt;not&lt;/strong&gt; make claims that your service is better than Mailpile Preferred Partners&lt;/h5&gt;
+&lt;p&gt;An example of this is a grid that compares multiple services by various criteria such as: mailbox size, # of email addresses, price. This is often misleading to customers and considering the nature of email security, Mailpile does not want it's users to be tricked into thinking a service which does not meet our criteria is in fact secure (and cheaper) because of clever marketing copy. Besides, if your service actually is better for X, Y, and Z reasons you &lt;em&gt;should&lt;/em&gt; be a preferred provider.&lt;/p&gt;
+&lt;br class="add-bottom"&gt;
+
+&lt;h5&gt;2.) Do &lt;strong&gt;not&lt;/strong&gt; make claims about your service providing added privacy &amp; security because of Mailpile&lt;/h5&gt;
+&lt;blockquote&gt;&lt;strong class="color-green"&gt;RIGHT&lt;/strong&gt; Users access their Mailpile instances and send email over industry standard SSL/TLS connections&lt;br&gt;
+&lt;strong class="color-red"&gt;WRONG&lt;/strong&gt; Due to Mailpile's heavy encryption &amp; security features, your email will be more secure than ever&lt;/blockquote&gt;
+&lt;br class="add-bottom"&gt;
+
+&lt;h5&gt;3.) Do &lt;strong&gt;not&lt;/strong&gt; make claims that Mailpile endorses your service in ANY written, graphical, and audio or video materials&lt;/h5&gt;
+&lt;blockquote&gt;&lt;strong class="color-green"&gt;RIGHT&lt;/strong&gt; Super Cloud Service offers free installations of Mailpile&lt;br&gt;
+&lt;strong class="color-red"&gt;WRONG&lt;/strong&gt; "Super Cloud Service is reccomended and trusted by Mailpile users the world over&lt;/blockquote&gt;
+&lt;br class="add-bottom"&gt;
+
+&lt;h5&gt;4.) You leave the "&lt;strong&gt;heart icon&lt;/strong&gt;" and donate link in the top navigation bar&lt;/h5&gt;
+&lt;p&gt;Users are allowed to manually hide this link (without donating to Mailpile), but since we are funded 100% by donations and from our Preferred Providers, we need to keep the "Option to Donate" as visibility as possible to ensure contiued development and improvement of Mailpile.&lt;/p&gt;
+&lt;br class="add-bottom"&gt;
+
+&lt;h5&gt;5.) You at least consider making a small donation to Mailpile&lt;/h5&gt;
+&lt;p&gt;C'mon, if you have the resources pay for collocated servers and networking infrastructure, you can surely donate something to the awesome Free Software you offering to your users. Additionally, if you &lt;strong&gt;donate $23 or more&lt;/strong&gt;, you can be a part of our &lt;a href="/#community"&gt; user community&lt;/a&gt; and vote on features you would like to see in Mailpile.&lt;/p&gt;
+&lt;br class="add-bottom"&gt;
+
+&lt;h5&gt;6.) We reserve the right to request you stop using our logo and brand in your marketing materials and user facing app deploys, should we find you not honoring our previous stipulations.&lt;/h5&gt;
+
+&lt;p&gt;As long as you adhere to our criteria, using our logo and name is more than welcome. The greatest benefit of you using our logo is it helps raise brand awareness for us (the makers of Mailpile) which will luckily trickle back to donations and ensure we keep developing quality software. This also benefits you and your users, in that they know they are using the next generation email client, Mailpile.&lt;/p&gt;
+
+&lt;p&gt;If you are unsure your marketing material or copy meets our criteria, please &lt;a href="mailto:team@mailpile.is"&gt;get in touch&lt;/a&gt; and we will review it promptly. If you think you do not meet our criteria, and do not want to get in touch, please do NOT use our logo and brand in association with your service. We &lt;strong&gt;do not like&lt;/strong&gt; discovering that people are not respecting our terms of use, and we really don't like hiring laywers and wasting money- there are more important things to be doing to improve the world.&lt;/p&gt;
+
+&lt;hr&gt;
+    </description>
+  </item>
+</channel></rss>

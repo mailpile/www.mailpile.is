@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="Brennan Novak">
+
+	<!-- Mobile Specific Metas
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS - CHANGE URL when making live
+    ================================================== -->
+	<link rel="stylesheet" href="/css/mailpile.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+	<title>Mailpile: Speaking Your Language</title>
+
+	<!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/list.min.js"></script>
+    
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+
+		// Smooth Scrolling
+		$('a.scroll-link[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+					var link_height = target.offset().top - 108;		           
+		             $('html,body').animate({
+		                 scrollTop: link_height
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		}); 
+
+		// Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
+
+</head>
+<body>
+
+	<div id="navigation">
+	  <div class="menu-button">Menu</div>
+		<ul data-breakpoint="800" class="flexnav">
+			<li><a href="/" class="scroll-link">About</a></li>
+			<li><a href="/download/" class="scroll-link">Download</a></li>
+			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
+			<li><a href="/demos/" class="scroll-link">Demos</a></li>
+			<li><a href="/donate/" class="scroll-link">Donate</a></li>
+			<li><a href="/blog/" class="scroll-link">Blog</a></li>
+			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+		</ul>
+	</div>
+
+	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+	<div id="content" class="container">
+		<div id="header" class="clearfix">
+			<div class="col-3 text-center">
+				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+			</div>
+			<div class="col-11">
+				<a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+			</div>
+		</div>
+		<hr class="blog-hr">
+		<div class="row"></div>
+
+		<!-- Content -->
+		<div id="pages" class="clearfix">
+			<div class="col-13">
+				<a href="2013-11-18_Speaking_your_language.html"><h1>Speaking Your Language</h1></a>
+				<p><strong>Posted by <a href="#">Smári</a> on November 18, 2013</strong></p>
+
+<p><img src='/files/internationalization.jpg'></p>
+
+<p>About a week ago, we sneakily pushed out i18n support for Mailpile, in the hopes that nobody would pay it much attention until after the alpha release - or at least until it stopped crashing. But as is sometimes the case when working on free software, people pick up on the darnedest things. A little over a day after we pushed the super-breaky half-hacked together i18n code that still needed fixing up and reviewing, we had our first translations coming in - Dutch, French and Swedish. Now, a week later, we've got Italian, German, and partial Danish translations as well.</p>
+
+<p>In short: We're flabberghasted. Thank you, everybody!</p>
+
+<p>Translating software is a fairly difficult and slow task. In order to do it well, it requires a lot of skill and a lot of understanding of the context in which the various strings are used and the way users are going to understand them. But translation is also very important - it helps make software accessible and useful to people who don't understand the language the application is originally developed in. For many people all over the planet who don't speak English, these translation efforts are vital to the viability of Mailpile, so we take this very seriously.</p>
+
+<h3>A panoply of errors</h3>
+
+<p>One of the things early translators have noticed is that the vast majority of the messages are error messages. This isn't very surprising really. Mailpile isn't very chatty software. Most of the text content of the application comes from people's e-mail, contacts and such, not from Mailpile itself. The little bits that are textual are normally quite simple things, like "E-mail address" (mailpile/defaults.py:55), "To:" (static/default/html/message/index.html:18), and "Contacts" (static/default/html/partials/sub<em>nav</em>contacts.html:3). Aside from that, there's error reporting.</p>
+
+<p>Most of Mailpile's error reporting only happens when you turn on higher log levels on the command line interface, because we're trying to build Mailpile with the philosophy of having sensible defaults and failing gracefully. So while "Invalid hostname: %s" (mailpile/config.py:126) and "Mailbox ID too large: %s" (mailpile/config.py:876) are rather ominous-looking messages, in reality they should only ever be seen by power users who are trying to do strange things manually. Nevertheless, it is important to translate these strings too, since there are lots of power users in the world who don't speak English and might be put off by strange garbled weirdness in a language they don't know.</p>
+
+<h3>More languages!</h3>
+
+<p>These design choices have resulted in the current i18n translation base being relatively small, but as we noted in our issue tracker (https://github.com/pagekite/Mailpile/issues/73), the messages in Mailpile are not stable and are likely to change a lot in coming months. This mostly means that new messages will be added, but it's entirely possible that some messages might go away and never come back. We tried at first to discourage people from starting to translate just yet on the basis that there might be a lot of fluctuation, but realistically 90% of the messages that are there now are likely to continue to be used and things are stabilizing faster than we really expected anyway.</p>
+
+<p>That is all to say that we hope you enjoy Mailpile in whichever language you speak - and if your native language isn't supported yet, feel free to contribute. To enable a translation, at the moment, you need to either set your environment variables appropriately or set the prefs.language variable in the command line interface: "set prefs.language = nl_NL" for instance, to switch to Dutch.</p>
+
+<p>We have designated a translation freeze for our first alpha release for January 2nd, 2014. Any translations arriving after that date will not be included in the alpha, although they will be merged in after the alpha version ships.</p>
+
+<h3>Getting Involved</h3>
+
+<p>If you're interested in contributing language translations to Mailpile, checkout the project <a href="https://www.transifex.com/projects/p/mailpile/">on Transifex</a> and submit a pull request to our <a href="http://github.com/pagekite/mailpile">Github</a> or get in touch with <a href="http://github.com/Ovnicraft">Ovnicraft</a> who has been awesomely spearheading the endeavor.</p>
+
+<p>Thanks again!</p>
+    <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+    <hr>
+  </div>
+</div>
+
+		<!-- Contact & Media -->
+		<div id="footer" class="clearfix">
+			<div class="one-third">
+				<h3>Please Donate</h3>
+				<p>To ensure future development and growth of Mailpile and our community!</p>
+				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+			</div>
+			<div class="one-third">
+				<h3>Contact Us</h3>
+				<ul class="add-bottom">
+					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+				</ul>
+				<ul>
+					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+				</ul>
+			</div>
+			<div class="one-third">
+				<h3>Downloads</h3>
+				<ul class="add-bottom">
+					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+          <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
+          <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
+					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+        </ul>
+				<ul>
+					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="add-top add-bottom"></div>
+
+
+	</div><!-- container -->
+
+</body>
+</html>

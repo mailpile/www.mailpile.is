@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Mailpile: The Mailpile Blog</title>
+  <link>http://www.mailpile.is/blog/</link>
+  <item>
+    <title>One Year Later: Mailpile Beta</title>
+    <link>http://www.mailpile.is/blog/2014-09-13_Mailpile_Beta_Release.html</link>
+    <description>
+&lt;p&gt;&lt;img src="/files/Beta-Time-Icons.png" border="0"&gt;&lt;/p&gt;
+
+&lt;p&gt;It's been almost exactly a year since our crowdfunding campaign ended and we realized that building Mailpile really would become our full time job. We are very grateful to be given this chance and have been working hard ever since.&lt;/p&gt;
+
+&lt;p&gt;It's been a busy year, with ups and downs, highs and lows, stickers and t-shirts and hackathons and conferences. If you've been following Mailpile's development over the past year, you'll have seen the codebase mature from a rough prototype into a usable app, the protocol support grow and expand, and the UI mature by leaps and bounds. You'll also have seen blog posts about delays and long stretches of silence as we doubled down and immersed ourselves in hard work.&lt;/p&gt;
+
+&lt;p&gt;Since we started development last fall, we've released two Alpha versions. The first one was a very rough technology preview focusing on the basic capabilities - our built in webserver, the core Mailpile commands, a REST API, the search engine, and basic support for sending and reading encrypted email. We released an updated Alpha II this summer, which featured advanced UI, support for mail sources, and more.&lt;/p&gt;
+
+&lt;p&gt;Now, it's time for our Beta release!&lt;/p&gt;
+
+&lt;h3&gt;What's in a Beta?&lt;/h3&gt;
+
+&lt;p&gt;We believe in the old-fashioned kind of beta-release - a release that has most of the features of a 1.0, but may lack polish and maturity. Polish and maturity can only come from exposure to a wider range of users than the core team of developers and our friends. So although we are a little bashful about how many bugs remain and how many exciting features didn't make the cut-off, we feel it is time to share our work with a wider audience.&lt;/p&gt;
+
+&lt;p&gt;So please give it a try and let us know how it works. But please understand that this is still not a finished product.&lt;/p&gt;
+
+&lt;p&gt;Our &lt;a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta"&gt;Release Notes&lt;/a&gt; cover some of the technicalities, as does our &lt;a href="https://github.com/pagekite/Mailpile/wiki/Security-roadmap"&gt;Security Roadmap&lt;/a&gt;. Please read them!  In particular, it's worth taking a look at the list of known issues, so you aren't caught off guard by one of our many known bugs. Taking a look at the known issues list will also help reduce the load on us developers - the fewer people file bugs for stuff we already know about, the less time we have to spend curating our bug tracker and the more time we can spend actually fixing things!&lt;/p&gt;
+
+&lt;h3&gt;The good news and...&lt;/h3&gt;
+
+&lt;p&gt;For those of you too busy to read the full release notes, here is the good news:&lt;/p&gt;
+
+&lt;ul class="square"&gt;
+  &lt;li&gt;Getting started is easy: Mailpile now sports a user-friendly interactive setup flow&lt;/li&gt;
+  &lt;li&gt;Reading and writing e-mail works, including attachments&lt;/li&gt;
+  &lt;li&gt;Our searching and tagging engine can handle hundreds of thousands of messages&lt;/li&gt;
+  &lt;li&gt;The user interface is clean and elegant, and our font now looks great in all browsers &amp; weights&lt;/li&gt;
+  &lt;li&gt;The spam filter works well (as long as you correct its mistakes now and then)&lt;/li&gt;
+  &lt;li&gt;Our OpenPGP support is convenient and easy to work with, including searching for &amp; importing keys&lt;/li&gt;
+  &lt;li&gt;We have packages for Windows and the Mac!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of the things that still need work:&lt;/p&gt;
+
+&lt;ul class="square"&gt;
+  &lt;li&gt;The user interface has not been optimized, so it can be quite slow now and then&lt;/li&gt;
+  &lt;li&gt;The user interface needs some improvements to work well on smaller screens&lt;/li&gt;
+  &lt;li&gt;We need to integrate Tor to better protect our users' privacy&lt;/li&gt;
+  &lt;li&gt;We wrote code too fast and our translators couldn't really keep up&lt;/li&gt;
+  &lt;li&gt;There are still lots of bugs that need fixing!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Where can I get it?&lt;/h3&gt;
+
+&lt;p&gt;The Mailpile beta is released in 4 forms:&lt;/p&gt;
+
+&lt;div class="add-bottom"&gt;
+&lt;h5 class="half-bottom"&gt;Online Demo&lt;/h5&gt;
+View our &lt;a href="https://www.mailpile.is/demos/"&gt;online demo here&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="add-bottom"&gt;
+&lt;h5 class="half-bottom"&gt;&lt;img src="/img/os-windows.png" border="0" style="height:24px;"&gt; Windows Installer&lt;/h5&gt;
+Download via: &lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe"&gt;HTTPS&lt;/a&gt; or &lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.torrent"&gt;Bittorrent&lt;/a&gt; (faster)&lt;br&gt;
+&lt;em&gt;Checksums: &lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.sha1"&gt;sha1&lt;/a&gt; &amp;nbsp;&lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.md5"&gt;md5&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;div class="add-bottom"&gt;
+&lt;h5 class="half-bottom"&gt;&lt;img src="/img/os-mac.png" border="0" style="height:24px;"&gt; Mac OS Installer&lt;/h5&gt;
+Download via: &lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg"&gt;HTTPS&lt;/a&gt; or &lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.torrent"&gt;Bittorrent&lt;/a&gt; (faster)&lt;br&gt;
+&lt;em&gt;Checksums: &lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.sha1"&gt;sha1&lt;/a&gt; &amp;nbsp;&lt;a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.md5"&gt;md5&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;div class="add-bottom"&gt;
+&lt;h5 class="half-bottom"&gt;&lt;img src="/img/os-linux.png" border="0" style="height:24px;"&gt; Linux&lt;/h5&gt;
+As a &lt;a href="https://github.com/pagekite/Mailpile/releases" target="_blank"&gt;tagged source release on Github&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So give it a spin, seed our torrents and let us know what you think. :-)&lt;/p&gt;
+
+&lt;p&gt;In the meantime, we're going to get back to work. We still have 3-4 months worth of money in the bank, which should be exactly the right amount to get our 1.0 shipped in time for the New Year. Fingers crossed!&lt;/p&gt;
+
+&lt;p&gt;Hugs and ciphers, &lt;br /&gt;
+  ~The Mailpile team&lt;/p&gt;
+
+&lt;p&gt;P.S. Check out &lt;a href="https://news.ycombinator.com/item?id=8315086"&gt;this Hacker News&lt;/a&gt;
+post to discuss!&lt;/p&gt;
+    </description>
+  </item>
+  <item>
+    <title>Our Upcoming Beta Release: Part II</title>
+    <link>http://www.mailpile.is/blog/2014-08-20_Upcoming_Beta_Release_Part_II.html</link>
+    <description>
+&lt;p&gt;Initially, we planned to release our Beta (this is sounding familiar) back on August 8th. A few days before this date, we realized we were no where near ready. We thought we could polish everything off if we gave ourselves roughly an extra week, so we did. We also told you about this deadline, dear supporters. As we neared the end of that extended date, some of these bugs were still not resolved and we joyfully discovered some wonderful new bugs as we got further into user testing.&lt;/p&gt;
+
+&lt;p&gt;After taking a serious look at what the user experience was going to be like for people setting up Mailpile for the first time, we realized for many Mailpile would have been largely unsuable to nontechnical users, and tricky for others.  Considering our commitment to making a great email client with easy to use encryption, this was  entirely unacceptable. Some of these bugs are silly things out of our control, like Gmail's insistance on blocking IMAP &amp;amp; SMTP access unless you configure special security settings in your Google Account - meaning that for GMail users, Mailpile wouldn't be easy to use. Other bugs include email attachments not being handled correctly by GPG. A larger bug is Mailpile running on a Windows machine, we have a few known issues with interacting with GPG that are blocking further testing - as many of you know, Windows is weird. Another aspect of the app which needs improving is unifying the native OS app launcher, the Python backend, and the web browser instance with the UI.&lt;/p&gt;
+
+&lt;p&gt;Solutions to all of these are being worked on at the moment. However, by the end of last week the team was a bit frayed after pulling quite a lot of 14+ hr days trying to ship on schedule. Due to the gravity of some of these bugs, we decided not to push a Beta out into the world. We're taking a couple of calm days before returning to battle, although in those calm days we're still working on squishing bugs.&lt;/p&gt;
+
+&lt;p&gt;By now you're probably wondering &lt;em&gt;"So... uh... ok... when is the Beta going to be released?"&lt;/em&gt; The only clear answer to that is &lt;em&gt;"we don't know."&lt;/em&gt;  We wish we had a more clear answer. A couple options that we are considering are:&lt;/p&gt;
+
+&lt;ul class="square"&gt;
+ &lt;li&gt;Pushing out a "Developer Beta" ASAP&lt;/li&gt;
+ &lt;li&gt;Waiting and doing our Beta in September (when we had planned our 1.0)&lt;/li&gt;
+ &lt;li&gt;Following that up with our 1.0 later in the fall&lt;/li&gt;
+ &lt;li&gt;Give up and run for the hills, woods, a deserted island / arctic tundra, etc...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last option is totally a joke. Despite being as frustrated &amp;amp; disappointed as you are about the state of things, we are not giving up. We are commited as ever to shipping an easy to use encrypted email client and doing so as soon as possible. We would love to hear your thoughts. Would you rather see a rougher Developer Beta with some bugs or would you rather wait until things are more polished? Let us know. Also, if you are of a more technical disposition, this might be a good time to start testing things out: poke around, see if you can clear up some bugs. Every little bit helps :)&lt;/p&gt;
+
+&lt;p&gt;Sincerely,&lt;/p&gt;
+
+&lt;p&gt;Your Mailpile Team&lt;/p&gt;
+    </description>
+  </item>
+  <item>
+    <title>Our Upcoming Beta Release</title>
+    <link>http://www.mailpile.is/blog/2014-08-08_Our_Upcoming_Beta_Release.html</link>
+    <description>
+&lt;p&gt;We planed to release our Beta today, but because we wanted the Beta to be a little less like an Alpha, we postponed it for a bit. Don't worry, it won't be long! We're hard at work. Bugs are being fixed, functionality is being added, people are losing sleep. Our Beta release is forthcoming. In fact, you'll be shocked when you figure out how few days it is until it gets released. Hint: it's less than 10 days and more than 5 days away, give or take a couple depending on your timezone ;)&lt;/p&gt;
+
+&lt;p&gt;We recently attended the &lt;a href="http://cups.cs.cmu.edu/soups/2014/workshops/effcup.html"&gt;EFF Crypto Usability Price Workshop&lt;/a&gt; in Menlo Park, California in July 2014. We presented many aspects of our encryption &amp;amp; security interface which was received enthusiastically. We met and befriended the people behind some fascinating projects like &lt;a href="http://okturtles.com"&gt;OkTurtles&lt;/a&gt;, &lt;a href="https://kinko.me"&gt;Kinko.me&lt;/a&gt;, &lt;a href="https://github.com/warner/petmail/"&gt;PetMail&lt;/a&gt;, &lt;a href="https://gpgtools.org"&gt;GPG Tools&lt;/a&gt;, &lt;a href="https://github.com/open-keychain/open-keychain"&gt;Open Keychain&lt;/a&gt;, and &lt;a href="https://github.com/cryptosphere/confusion"&gt;Confusion&lt;/a&gt;. We formed a working group with a couple other PGP related projects to harmonize UI aspects across multiple PGP related projects- a blog post about all of this is forthcoming shortly after our beta!&lt;/p&gt;
+
+&lt;p&gt;Oh, as per our planned beta, we mailed stickers to the nice &lt;a href="http://eff.org"&gt;EFF&lt;/a&gt; people to pass out at the &lt;a href="http://cryptovillage.org"&gt;DEFCON CryptoVillage&lt;/a&gt; table, so if you're at DEFCON swing on by and say hi :)&lt;/p&gt;
+    </description>
+  </item>
+  <item>
+    <title>Mailpile Alpha II - The Dogfood Edition</title>
+    <link>http://www.mailpile.is/blog/2014-06-03_Mailpile_Alpha_II.html</link>
+    <description>
+&lt;p&gt;&lt;img src="/files/Alpha-II.jpg" border="0"&gt;&lt;/p&gt;
+
+&lt;p&gt;Hello Mailpile supporters!&lt;/p&gt;
+
+&lt;p&gt;We know many of you are hungry for Mailpile. So are we, although we're
+proud to report that the entire core team have been "eating our own
+dogfood" and using Mailpile to read and write e-mail for well over a
+month now. We use it every day and we like it - we feel we are getting
+really close to having a working product for you guys.&lt;/p&gt;
+
+&lt;p&gt;But you're hungry now, and it's high time for another appetizer.  So
+without further ado, we present &lt;strong&gt;Mailpile Alpha II - The Dogfood Edition!&lt;/strong&gt;
+Yummy! This savoury mass of source code has been tagged in Github
+(&lt;a href="https://github.com/pagekite/Mailpile/releases"&gt;release 0.2.0&lt;/a&gt;)
+and we have updated our &lt;a href="/demos/"&gt;live demos&lt;/a&gt;. It's a little hard
+to summarize what all has changed (it would be easier to summarize what
+hasn't), but we made a list of some of the more important changes and
+improvements, which you can find in our
+&lt;a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201406-Alpha-II"&gt;release notes&lt;/a&gt;. Have a taste and let us know what you think ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="button-primary" href="/demos/"&gt;Try Mailpile Alpha II Demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class="button-secondary" href="https://github.com/pagekite/Mailpile" target="_blank"&gt;Download Source Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br class="add-bottom"&gt;&lt;/p&gt;
+
+&lt;h4&gt;Events&lt;/h4&gt;
+
+&lt;p&gt;If you're located in the UK or the San Francisco area and want to discuss things in person, we'd love to meetup and chat at the following events:&lt;/p&gt;
+
+&lt;ul class="square"&gt;
+   &lt;li&gt;&lt;a href="https://indietech.org/summit/"&gt;Indie Tech Summit&lt;/a&gt; in Brighton, July 4 - 5th&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://cups.cs.cmu.edu/soups/2014/workshops/effcup.html"&gt;EFF Crypto Usability Prize Workshop&lt;/a&gt; in Silicon Valley, July 9 - 11th&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aside from the summit and workshop, we can be found
+&lt;a href="https://twitter.com/MailpileTeam"&gt;on Twitter&lt;/a&gt; or IRC (&lt;strong&gt;#mailpile&lt;/strong&gt; on
+Freenode), and will be spending the next month hard at work in the
+Mailpile code kitchen in Iceland preparing the main course - the Mailpile Beta,
+which we will launch in just over a month. Our target date is August
+7th, so wish us luck!&lt;/p&gt;
+
+&lt;p&gt;Bon appetit,&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp; ~Your Mailpile Team&lt;/p&gt;
+    </description>
+  </item>
+  <item>
+    <title>Where is the Community Site?</title>
+    <link>http://www.mailpile.is/blog/2014-04-30_Where_is_the_Community_Site.html</link>
+    <description>
+&lt;p&gt;&lt;img src="/files/No-Community.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Us Mailpilers have been feeling a bit guilty of late. We promised to
+launch the Mailpile Community over a month ago, and so far we have
+failed to do so. We feel you guys deserve an explanation and a status
+update.&lt;/p&gt;
+
+&lt;p&gt;In short, we underestimated the complexity of the task and overestimated
+the maturity of the tools we had planned to use for the site.&lt;/p&gt;
+
+&lt;p&gt;We have been evaluating two really interesting Free Software projects,
+&lt;a href="https://www.loomio.org"&gt;Loomio&lt;/a&gt; and
+&lt;a href="https://www.yrpri.org"&gt;Your Priorities&lt;/a&gt;. The latter is local to
+Iceland, the former is from as far away as possible without leaving our
+lovely blue planet: New Zealand, which incidentally also happens to be
+an island nation with volcanos!  Both projects are doing amazing work
+and both software solutions look like they would be excellent tools to
+communicate with our community, foster discussion and build consensus.
+We know there are a lot of other great tools out there, such as Ad
+Hocracy, Agora Voting, Wasa2il, and Liquid Feedback, but none of them
+quite fit our requirements as well as those two.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, Loomio and Your Priorities are not quite ready yet. Both
+are written in Ruby on Rails and have a heavy slant towards supporting
+their own on-line services and their own existing users. As a result,
+neither are really ready for third parties to install their software and
+just use them without spending a significant amount of time and effort
+customizing and tweaking. Our Mailpile development schedule is so tight
+we don't really feel we have time for that - in particular because none
+of us are Rails developers and getting this done right would mean at
+least one of us would have to take time to learn an entire new
+programming language and framework.&lt;/p&gt;
+
+&lt;p&gt;We would rather be writing Mailpile. That is what most of our backers
+want from us anyways, and that is our number one priority.&lt;/p&gt;
+
+&lt;p&gt;So we're putting the Community site back on ice for a little longer...&lt;/p&gt;
+
+&lt;p&gt;However! If you are a Ruby on Rails developer and you would like to both
+help Mailpile and improve the world of Open Source discussion tools, we
+do have a pretty good idea of what needs to be done. If you're
+interested in helping out, please find us on the #mailpile IRC channel
+on Freenode or &lt;a href="mailto:team@mailpile.is"&gt;email us&lt;/a&gt;. At the end of this post, we go into some of the technical
+details about our requirements and where we feel the two projects fall
+short at the moment.&lt;/p&gt;
+
+&lt;p&gt;In the meantime, we're going to launch something far simpler and less
+ambitious soon. We have questions for our community that
+need to be answered, and we're not going to let some technicalities get
+in the way of us having a conversation. So stay tuned...&lt;/p&gt;
+
+&lt;h2&gt;What needs to be done&lt;/h2&gt;
+
+&lt;p&gt;As mentioned above, we felt we were pretty close to having both Loomio
+and Your Priorities working, but both projects fell short in a few
+critical ways. To clarify what needs to be done, these are the
+characteristics we are looking for:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Clean, easy-to-understand user interface&lt;/li&gt;
+&lt;li&gt;The ability for community members to make proposals, debate and
+  reach a consensus&lt;/li&gt;
+&lt;li&gt;Read-only access for the general public&lt;/li&gt;
+&lt;li&gt;Limited account signups (access is restricted to people who donated
+  to the project)&lt;/li&gt;
+&lt;li&gt;Privacy friendly (hosted by us, not leaking data to Facebook,
+  Google, etc.)&lt;/li&gt;
+&lt;li&gt;Easy to administer and upgrade (well documented, stable development)&lt;/li&gt;
+&lt;li&gt;Easy to customize and brand with our own look and feel&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After our evaluation, both Loomio and Your Priorities fulfill the first
+two requirements better than anything else we have seen. They both need
+varying amounts work on the other points though and although we know
+roughly what needs to be done, we lack the skills and time to do them.
+If you think you can help, please get in touch!&lt;/p&gt;
+
+&lt;p&gt;[UPDATE]
+A handful of people have got in touch asking if we have considered &lt;a href="http://www.discourse.org" target="_blank"&gt;Discourse&lt;/a&gt;. The short answer is, yes, we considered Discourse quite a bit. While the maturity of Discourse was a very attractive reason to use it- the core features were not quite what we were looking for. Specifically, Discourse is focused purely on discussion, it has a beautiful user interface &amp;amp; experience that provides a much needed update to the forums of yesteryear. But, what we need is a platform that helps us bring ideas &amp;amp; features to vote so that we can reach a clear consensus.&lt;/p&gt;
+    </description>
+  </item>
+  <item>
+    <title>Mailpile Workshop in London</title>
+    <link>http://www.mailpile.is/blog/2014-04-07_Workshop_in_London.html</link>
+    <description>
+&lt;p&gt;&lt;img src="/files/London-Workshop-2014.png"&gt;&lt;/p&gt;
+
+&lt;p&gt;Later this month the Mailpile core team will all be in London for
+various reasons. We would love to take advantage of this to get to know
+some of the people in our community, and have decided to host a workshop
+and social event in the city on the 18th of April. &lt;/p&gt;
+
+&lt;p&gt;The event will be at the ThoughtWorks London offices, on the 9th floor, 
+168-174 High Holborn, London, WC1V 7AA. For access to the building, call 
+Smári on +44 (0)7473 363763.&lt;/p&gt;
+
+&lt;h2&gt;Schedule&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Workshop:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;12:00  Doors open. Coffee is served.
+12:30  Presentation: Mailpile internals and plugin architecture
+13:00  Plugin hacking session
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Social event:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;17:00  Presentation: Mailpile roadmap and community
+18:00  Social event: Pizza, beer, ...
+20:00  Presentation: What did we hack on today?
+20:30  Doors close, thirsty people move to the pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;What's going on?&lt;/h2&gt;
+
+&lt;p&gt;At this event we will launch a bare-bones community site and start
+soliciting feedback from our community on which software license they
+prefer the project use long-term. Note that this will not be the final
+iteration of our community platform but it wil be a start. Many people
+have asked about the status of our community platform as we had promised
+it back in February and have not yet delivered, apologies - we will post
+more details later this week. :)&lt;/p&gt;
+
+&lt;p&gt;The timing for this workshop aligns nicely with us putting the finishing
+touches on the second iteration of the Mailpile plugin architecture. We
+are quite excited about this - it is rapidly becoming feasible to
+develop useful plugins as stand-alone projects, which will make it
+easier for members of our community to contribute and customize Mailpile
+to match their diverse needs - without the core team being a
+bottle-neck. This workshop will introduce this new system to members of
+our U.K. community, we will get their feedback and hopefully squash a
+few bugs as a result.&lt;/p&gt;
+
+&lt;p&gt;So save the date and join us in London! We can't wait to meet you.&lt;/p&gt;
+    </description>
+  </item>
+  <item>
+    <title>Development, Perks, and Alpha (IGG Update #8)</title>
+    <link>http://www.mailpile.is/blog/2014-02-07_IndieGoGo_Update_8.html</link>
+    <description>
+&lt;p&gt;Dear Mailpile Backers,&lt;/p&gt;
+
+&lt;p&gt;Lots of news to report from Mailpile HQ since our last update. Hopefully you have all had a wonderful holiday season and your new years are all off to smashing starts! To recap the exciting last many months (and to show you a little bit of our teams work / culture) we’ve assembled this short 2.5 minute video. Then read on below. Enjoy :)&lt;/p&gt;
+
+&lt;iframe src="//player.vimeo.com/video/85881181?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=d90902" width="650" height="366" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h4&gt;Perks&lt;/h4&gt;
+
+&lt;p&gt;By now, almost all of you should have received your perks in the mail. If you did not receive anything (or if it was partial or damaged), let us know and we will look into it immediately. But, hopefully, you all have a quirky postcard of Icelandic horses, volcanoes or majestic landscapes of our home on your desk / refrigerator / cork board!&lt;/p&gt;
+
+&lt;h4&gt;Alpha Release&lt;/h4&gt;
+
+&lt;p&gt;If you missed the update on various social media channels, we have now officially released &lt;a href="https://www.mailpile.is/blog/2014-01-31_Alpha_Release_Shipping_Bits_and_Atoms.html"&gt;the “Alpha” version of Mailpile&lt;/a&gt;. The announcement was on Feb 1st, 2014 and was made while we were speaking at the FOSDEM open source conference in Brussels, Belgium.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/pagekite/Mailpile"&gt;This release&lt;/a&gt; is far from a finished version of Mailpile. In fact, many of you will probably not be able to get your copy working on your own computer just yet- unless of course you feel comfortable on the command line using git and installing various dependencies and configurations. Sorry to disappoint if the anticipation is killing you :P&lt;/p&gt;
+
+&lt;p&gt;But have no fear, we have setup a &lt;a href="https://www.mailpile.is/demos/"&gt;demo version&lt;/a&gt; on our site so you can still try out Mailpile and see all the work we’ve been doing. We also setup instances in 13 other non-english languages. We have many other languages that are partially complete, if you speak an additional language to english and would like to help translate &lt;a href="mailto:team@mailpile.is?subject=Translating%20Mailpile"&gt;get in touch&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h4&gt;Next Steps&lt;/h4&gt;
+
+&lt;p&gt;The goals of our Alpha release are to &lt;a href="mailto:team@mailpile.is?subject=Alpha%20Feedback"&gt;collect feedback&lt;/a&gt; about the interface, current feature set, and discovery of bugs. We shall then use this feedback to iterate and improve upon the Alpha release. Secondly we will continue adding more features and tools that bring Mailpile up to feature parity with other email clients and beyond!&lt;/p&gt;
+
+&lt;h4&gt;Community Site&lt;/h4&gt;
+
+&lt;p&gt;Our community voting site is &lt;strong&gt;almost&lt;/strong&gt; ready for prime time. Once it is ready, the $23 (and higher) level backers will be able to start discussing and voting on the future of Mailpile. We plan to have the community site ready in 1 - 2 more weeks (by Feb 21st). You will receive an email invite from us at that time. Thanks for your patience!&lt;/p&gt;
+
+&lt;h4&gt;Future Communications&lt;/h4&gt;
+
+&lt;p&gt;This is the last communication we are going to send via the IndieGoGo platform. From now on we are going to move to using our own email infrastructure to keep in touch with all of you, especially once we finish setting up the Community site, release the Beta, and then finally the 1.0. Stay tuned, we’re excited :)&lt;/p&gt;
+
+&lt;p&gt;As always, thank you for your incredible support that has allowed us to work on our exciting &amp;amp; passionate project!&lt;/p&gt;
+
+&lt;p&gt;~The Mailpile Team&lt;/p&gt;
+    </description>
+  </item>
+</channel></rss>
