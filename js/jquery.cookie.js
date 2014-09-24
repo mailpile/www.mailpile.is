@@ -1,1 +1,1 @@
-../../mvuserdbwv/js/jquery.cookie.js
+../../hoipoi/js/jquery.cookie.js

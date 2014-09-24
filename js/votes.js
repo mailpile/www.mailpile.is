@@ -1,1 +1,0 @@
-../../mvuserdbwv/js/votes.js

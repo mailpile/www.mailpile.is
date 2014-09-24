@@ -6,13 +6,14 @@
 				<a href="/"><h2><strong>mail</strong>pile</h2></a>
 <!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
 			</div>
-                        <div class="login-box">
-                                <input id="login-username"/>
-                                <input type="password" id="login-password"/>
-                                <button id="login-button">Log in</button>
+                        <div class="login-form" style="display: none;">
+                                <input class="username"/>
+                                <input class="password" type="password"/>
+                                <button id="login">Log in</button>
                         </div>
-                        <div class="logout-box">
-                                <button id="logout-button">Log out</button>
+                        <div class="logout-form" style="display: none;">
+                                Hello, <span class="login-nickname"></span>
+                                <button class="logout">Log out</button>
                         </div>
 		</div>
 		<hr class="blog-hr">

@@ -5,61 +5,67 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
-	<!-- Basic Page Needs
+    <!-- Basic Page Needs
     ================================================== -->
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="author" content="Brennan Novak">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
 
-	<!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
     ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS - CHANGE URL when making live
+    <!-- CSS - CHANGE URL when making live
     ================================================== -->
-	<link rel="stylesheet" href="/css/mailpile.css">
-	<link rel="stylesheet" href="/css/mvuserdbwv.css">
+    <link rel="stylesheet" href="/css/mailpile.css">
+    <link rel="stylesheet" href="/css/hoipoi.css">
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="../img/favicon.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-	<title>Mailpile: @SUBJECT@</title>
+    <title>Mailpile: @SUBJECT@</title>
 
-	<!-- JS ================================================== -->
+    <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
     <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
     
     <script type="text/javascript">
     jQuery(document).ready(function($){
 
-		// Smooth Scrolling
-		$('a.scroll-link[href*=#]:not([href=#])').click(function() {
-		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-		        || location.hostname == this.hostname) {
-		        var target = $(this.hash);
-		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		           if (target.length) {
-					var link_height = target.offset().top - 108;		           
-		             $('html,body').animate({
-		                 scrollTop: link_height
-		            }, 1000);
-		            return false;
-		        }
-		    }
-		}); 
+        // Smooth Scrolling
+        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+                || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                   if (target.length) {
+                    var link_height = target.offset().top - 108;                   
+                     $('html,body').animate({
+                         scrollTop: link_height
+                    }, 1000);
+                    return false;
+                }
+            }
+        }); 
 
-		// Flexnav
+        // Flexnav
         $(".flexnav").flexNav();
+
+        // Hoi Poi community stuff
+        hoipoi.init();
     });
     </script>
 
