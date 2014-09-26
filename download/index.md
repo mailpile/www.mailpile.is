@@ -34,7 +34,7 @@ Format: html
       <a href="https://github.com/pagekite/Mailpile/releases"><img src="/img/os-linux.png" style="height:48px;"></a><br>
       <h4 class="half-bottom">Linux</h4>
       Download via:<br>
-      <a href="https://github.com/pagekite/Mailpile/releases" target="_blank">Github (source code)</a>
+      <a href="https://github.com/pagekite/Mailpile/wiki/Getting-started-on-linux" target="_blank">Github (source code)</a>
     </div>
   </div>
 </div>
