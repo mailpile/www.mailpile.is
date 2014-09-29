@@ -47,7 +47,14 @@
 
 &lt;div class="row half-top text-center"&gt;
   &lt;p&gt;&lt;strong&gt;Note: our beta release has some rough edges still, please read &lt;a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta" target="_blank"&gt;our release notes&lt;/a&gt;.&lt;br&gt; If you have  security concerns, &lt;a href="https://github.com/pagekite/Mailpile/wiki/Security-roadmap" target="_blank"&gt;READ OUR SECURITY ROADMAP&lt;/a&gt;, current implementation may not meet your needs!&lt;/strong&gt;&lt;/p&gt;
-  &lt;p&gt;If you experience problems installing Mailpile please let us know by opening a &lt;a href="https://github.com/pagekite/Mailpile/issues" target="_blank"&gt;Github issue&lt;/a&gt; or by &lt;a href="mailto:team@mailpile.is?subject=Beta Feedback"&gt;emailing us&lt;/a&gt;.&lt;br&gt; You can also &lt;a href="https://twitter.com/mailpileteam" target="_blank"&gt;Tweet at us&lt;/a&gt; or stop by our IRC room &lt;strong&gt;#mailpile&lt;/strong&gt; on irc.freenode.net&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class="row half-top text-center"&gt;
+  &lt;div class="col-14 col-offset-1"&gt;
+    &lt;h3&gt;&lt;span class="icon-help"&gt;&lt;/span&gt; Need Help?&lt;/h3&gt;
+    &lt;p&gt;Read our full documentation and development guide on our &lt;a href="https://github.com/pagekite/mailpile/wiki" target="_blank"&gt;Github Wiki&lt;/a&gt;.&lt;br&gt; If you experience problems installing Mailpile, please let us know by &lt;a href="https://github.com/pagekite/Mailpile/issues" target="_blank"&gt;opening an issue&lt;/a&gt; or &lt;a href="mailto:team@mailpile.is?subject=Beta Feedback"&gt;email us&lt;/a&gt;.&lt;br&gt; You can also &lt;a href="https://twitter.com/mailpileteam" target="_blank"&gt;Tweet at us&lt;/a&gt; or stop by our IRC room &lt;strong&gt;#mailpile&lt;/strong&gt; on irc.freenode.net&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 

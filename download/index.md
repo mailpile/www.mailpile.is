@@ -41,7 +41,14 @@ Format: html
 
 <div class="row half-top text-center">
   <p><strong>Note: our beta release has some rough edges still, please read <a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta" target="_blank">our release notes</a>.<br> If you have  security concerns, <a href="https://github.com/pagekite/Mailpile/wiki/Security-roadmap" target="_blank">READ OUR SECURITY ROADMAP</a>, current implementation may not meet your needs!</strong></p>
-  <p>If you experience problems installing Mailpile please let us know by opening a <a href="https://github.com/pagekite/Mailpile/issues" target="_blank">Github issue</a> or by <a href="mailto:team@mailpile.is?subject=Beta Feedback">emailing us</a>.<br> You can also <a href="https://twitter.com/mailpileteam" target="_blank">Tweet at us</a> or stop by our IRC room <strong>#mailpile</strong> on irc.freenode.net</p>
+</div>
+<hr>
+
+<div class="row half-top text-center">
+  <div class="col-14 col-offset-1">
+    <h3><span class="icon-help"></span> Need Help?</h3>
+    <p>Read our full documentation and development guide on our <a href="https://github.com/pagekite/mailpile/wiki" target="_blank">Github Wiki</a>.<br> If you experience problems installing Mailpile, please let us know by <a href="https://github.com/pagekite/Mailpile/issues" target="_blank">opening an issue</a> or <a href="mailto:team@mailpile.is?subject=Beta Feedback">email us</a>.<br> You can also <a href="https://twitter.com/mailpileteam" target="_blank">Tweet at us</a> or stop by our IRC room <strong>#mailpile</strong> on irc.freenode.net</p>
+  </div>
 </div>
 <hr>
 
