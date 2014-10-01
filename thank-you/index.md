@@ -144,8 +144,8 @@ Format: html
  <li>Andrew Savory</li>
  <li>Andrew Terry</li>
  <li>Andrew W</li>
+ <li><a href="http://andrioid.net">Andri Óskarsson</a></li>
  <li>André Koot</li>
- <li><a href="http://andrioid.net">Andri Oskarsson</a></li>
  <li>Andy Blackshaw</li>
  <li>Andy O'Neill</li>
  <li>Andy Pols</li>
@@ -356,6 +356,7 @@ Format: html
  <li>David Turner</li>
  <li>David V.</li>
  <li>Davide G</li>
+ <li>Davide Saurino</li>
  <li>Dax</li>
  <li>Derek Lackaff</li>
  <li>Derek Leverenz</li>
@@ -673,7 +674,7 @@ Format: html
  <li>Lars Kreisz </li>
  <li>Laura</li>
  <li><a href="http://laurakogler.net/">Laura Kogler</a></li>
- <li>Layne L larsen</li>
+ <li>Layne L. Larsen</li>
  <li>Lazaro Pereira</li>
  <li>LeaseMatrix</li>
  <li>Lee</li>
@@ -700,6 +701,7 @@ Format: html
  <li>lucha</li>
  <li>Ludwik Trammer</li>
  <li>Luis Abreu - @lmjabreu</li>
+ <li><a href="http://eltitular.do/">Luis Bourget</a></li>
  <li>Luise Bartsch</li>
  <li>Lukas Daniel Klausner</li>
  <li>Lukas Mathis</li>
