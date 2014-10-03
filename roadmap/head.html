@@ -38,6 +38,7 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
     <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
     <script src="/js/jquery.cookie.js"></script>
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
@@ -65,7 +66,18 @@
         $(".flexnav").flexNav();
 
         // Hoi Poi community stuff
-        hoipoi.init();
+        hoipoi.init({
+            url_db: "/hoipoi/db/",       // Directory of user json
+            url_up: "/cgi-bin/mailpile/user-up.py",   // Path to update CGI scr
+            url_mv: "/cgi-bin/mailpile/user-mv.py",   // Path to moving CGI scr
+            url_mk: "/cgi-bin/mailpile/user-mk.py",   // Path to creating CGI s
+            dom_login: ".login-form",        // Selector for login form
+            dom_logout: ".logout-form",      // Selector for logout form
+            dom_login_error: ".login-error", // Selector for "login failed"
+            dom_nickname: ".login-nickname", // Selector for user's name
+            cookie_user: "usr",              // Cookie to store user name
+            cookie_token: "tok"              // Cookie to store token
+        });
     });
     </script>
 
