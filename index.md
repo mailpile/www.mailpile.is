@@ -36,7 +36,7 @@ Format: html
 		</div>
 		<div class="row">
 			<div class="one-third">
-				<h3><span class="icon-encrypted"></span> Encryption</h3>
+				<h3><span class="icon-lock-closed"></span> Encryption</h3>
 				<p>OpenPGP signatures and encryption are part of Mailpile's core design, not an afterthought or plugin.</p>
 			</div>
 			<div class="one-third">
