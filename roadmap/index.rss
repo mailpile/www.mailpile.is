@@ -29,9 +29,6 @@
          &lt;li class="issue label-front_end label-stretch" data-issue="999"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/999"&gt;Implement support for viewing &amp; editing Contacts via web UI&lt;/a&gt;&lt;/li&gt;
          &lt;li class="issue label-front_end label-stretch" data-issue="1003"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1003"&gt;Implement web UI for enabling/disabling autotagging&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;&lt;/li&gt;
-      &lt;li class="label label-unlabeled"&gt;Unlabeled       &lt;ul class="issues ranked-election " data-election="all-1_0_release-unlabeled-issues"&gt;
-         &lt;li class="issue " data-issue="642"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/642"&gt;Drop the Apache 2 from our dual license&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;&lt;/li&gt;
    &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
     </description>

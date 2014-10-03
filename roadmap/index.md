@@ -23,8 +23,5 @@ Format: html
          <li class="issue label-front_end label-stretch" data-issue="999"><a href="https://github.com/pagekite/Mailpile/issues/999">Implement support for viewing & editing Contacts via web UI</a></li>
          <li class="issue label-front_end label-stretch" data-issue="1003"><a href="https://github.com/pagekite/Mailpile/issues/1003">Implement web UI for enabling/disabling autotagging</a></li>
       </ul></li>
-      <li class="label label-unlabeled">Unlabeled       <ul class="issues ranked-election " data-election="all-1_0_release-unlabeled-issues">
-         <li class="issue " data-issue="642"><a href="https://github.com/pagekite/Mailpile/issues/642">Drop the Apache 2 from our dual license</a></li>
-      </ul></li>
    </ul></li>
 </ul>
