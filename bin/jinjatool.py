@@ -31,6 +31,7 @@ import jinja2.utils
 import json
 import os
 import sys
+import re
 
 from jinja2.ext import Extension
 from markdown import markdown
@@ -53,9 +54,15 @@ class JinjaToolExtension(Extension):
     def __init__(self, env):
         Extension.__init__(self, env)
         env.globals['cat'] = self._cat
+        env.globals['ls'] = self._ls
         env.filters['markdown'] = self._markdown
         env.filters['to_json'] = self._to_json
         env.filters['from_json'] = self._from_json
+
+    def _ls(self, dirname, pattern='^[^\.]'):
+        OPENED_FILES.add(os.path.abspath(dirname))
+        return [fn for fn in os.listdir(dirname)
+                if re.search(pattern, fn)]
 
     def _cat(self, fn):
         return open(fn, 'r').read().decode('utf-8')
