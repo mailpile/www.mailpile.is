@@ -58,14 +58,21 @@ class JinjaToolExtension(Extension):
         env.filters['markdown'] = self._markdown
         env.filters['to_json'] = self._to_json
         env.filters['from_json'] = self._from_json
+        env.filters['from_rfc822'] = self._from_rfc822
 
     def _ls(self, dirname, pattern='^[^\.]'):
-        OPENED_FILES.add(os.path.abspath(dirname))
-        return [fn for fn in os.listdir(dirname)
-                if re.search(pattern, fn)]
+        try:
+            OPENED_FILES.add(os.path.abspath(dirname))
+            return [fn for fn in os.listdir(dirname)
+                    if re.search(pattern, fn)]
+        except (OSError, IOError):
+            return None
 
     def _cat(self, fn):
-        return open(fn, 'r').read().decode('utf-8')
+        try:
+            return open(fn, 'r').read().decode('utf-8')
+        except (OSError, IOError):
+            return None
 
     def _markdown(self, text):
         return jinja2.Markup(markdown(text))
@@ -77,6 +84,18 @@ class JinjaToolExtension(Extension):
 
     def _from_json(self, data):
         return json.loads(data)
+
+    def _from_rfc822(self, text, parse_markdown=True):
+        header, body = (text or '' + '\n\n').replace('\r', '').split('\n\n', 1)
+        rfc822 = dict([(h1.lower(), h2.strip())
+                       for h1, h2 in [h.split(':', 1)
+                                      for h in header.splitlines()
+                                      if ':' in h]])
+        if parse_markdown and rfc822.get('format') == 'markdown':
+            rfc822['body'] = markdown(body).strip()
+        else:
+            rfc822['body'] = body.strip()
+        return rfc822
 
 
 def Main():
@@ -94,8 +113,10 @@ def Main():
 
     variables = copy.copy(os.environ)
     depcheck = False
+    basedir = os.path.abspath('.')
 
     for arg in sys.argv[1:]:
+
         if '=' in arg:
             k, v = arg.split('=', 1)
             variables[k] = v
@@ -114,13 +135,18 @@ def Main():
             assert(os.path.exists(inpath))
 
             # This renders the data, hooray!
+            os.chdir(os.path.dirname(inpath))
             template = jinja_env.get_template(inpath)
             data = template.render(variables).encode('utf-8')
+            os.chdir(basedir)
 
             if depcheck:
                 deps = sorted([os.path.relpath(o) for o in OPENED_FILES])
                 if ofile:
-                    print '%s: %s' % (ofile, ' '.join(deps))
+                    relofile = os.path.relpath(os.path.abspath(ofile))
+                    if relofile in deps:
+                        deps.remove(relofile)
+                    print '%s: %s' % (relofile, ' '.join(deps))
                 else:
                     deps.remove(inrelpath)
                     print '%s: %s'  % (infile, ' '.join(deps))

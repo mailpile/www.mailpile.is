@@ -1,0 +1,6 @@
+<html><head>
+    {% set data = cat(MP_RFC822_FILE)|from_rfc822 -%}
+    <title>{{ data.subject }}</title>
+</head><body>
+{{ data.body|safe }}
+</body></html>
