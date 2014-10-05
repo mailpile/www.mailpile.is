@@ -104,7 +104,6 @@ def Main():
     jinja_env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(searchpath='/'),
         autoescape=True,
-        trim_blocks=True,
         extensions=['jinja2.ext.with_',
                     'jinja2.ext.do',
                     'jinja2.ext.autoescape',

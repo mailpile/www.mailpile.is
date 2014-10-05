@@ -11,14 +11,14 @@ TARGETS = find . -name \*.jinja -o -name \*.md \
 
 
 all:
-	@$(TARGETS) |xargs $(MAKE)
+	@$(TARGETS) |xargs -r $(MAKE)
 
 clean: cleanMakefile
-	@$(TARGETS) |xargs rm -f
+	@$(TARGETS) |xargs -r rm -f
 
 loop: depend
 	@while [ 1 ]; do \
-	  $(TARGETS) |xargs $(MAKE) \
+	  $(TARGETS) |xargs -r $(MAKE) \
             |grep -v 'up to date' \
             && $(MAKE) depend \
             || sleep 1; \
