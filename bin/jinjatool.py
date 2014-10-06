@@ -30,8 +30,8 @@ import jinja2
 import jinja2.utils
 import json
 import os
-import sys
 import re
+import sys
 
 from jinja2.ext import Extension
 from markdown import markdown
@@ -86,15 +86,21 @@ class JinjaToolExtension(Extension):
         return json.loads(data)
 
     def _from_rfc822(self, text, parse_markdown=True):
-        header, body = (text or '' + '\n\n').replace('\r', '').split('\n\n', 1)
+        header, body = ((text or '') + '\n\n'
+                        ).replace('\r', '').split('\n\n', 1)
+        header_lines = header.splitlines()
+        if not (header_lines and ':' in header_lines[0]):
+            body = header + '\n\n' + body
+            header, header_lines = '', []
+
         rfc822 = dict([(h1.lower(), h2.strip())
                        for h1, h2 in [h.split(':', 1)
-                                      for h in header.splitlines()
-                                      if ':' in h]])
-        if parse_markdown and rfc822.get('format') == 'markdown':
-            rfc822['body'] = markdown(body).strip()
+                                      for h in header_lines if ':' in h]])
+
+        if parse_markdown and rfc822.get('format') in (None, '', 'markdown'):
+            rfc822['body'] = markdown(body).rstrip()
         else:
-            rfc822['body'] = body.strip()
+            rfc822['body'] = body.rstrip()
         return rfc822
 
 
@@ -134,7 +140,7 @@ def Main():
             assert(os.path.exists(inpath))
 
             # This renders the data, hooray!
-            os.chdir(os.path.dirname(inpath))
+            os.chdir(variables.get('dir', os.path.dirname(inpath)))
             template = jinja_env.get_template(inpath)
             data = template.render(variables).encode('utf-8')
             os.chdir(basedir)
