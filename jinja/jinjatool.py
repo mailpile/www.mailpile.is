@@ -42,8 +42,13 @@ REAL_OPEN = open
 OPENED_FILES = set()
 
 def open(fn, *args, **kwargs):
-    OPENED_FILES.add(os.path.abspath(fn))
-    return REAL_OPEN(fn, *args, **kwargs)
+    try:
+        rv = REAL_OPEN(fn, *args, **kwargs)
+        OPENED_FILES.add(os.path.abspath(fn))
+        return rv
+    except:
+#       sys.stderr.write('Failed to open: %s\n' % fn)
+        raise
 
 jinja2.open = open
 jinja2.utils.open = open
@@ -63,8 +68,8 @@ class JinjaToolExtension(Extension):
     def _ls(self, dirname, pattern='^[^\.]'):
         try:
             OPENED_FILES.add(os.path.abspath(dirname))
-            return [fn for fn in os.listdir(dirname)
-                    if re.search(pattern, fn)]
+            return sorted([fn for fn in os.listdir(dirname)
+                           if re.search(pattern, fn)])
         except (OSError, IOError):
             return None
 
@@ -107,8 +112,12 @@ class JinjaToolExtension(Extension):
 def Main():
     global OPENED_FILES
 
+    script_path = os.path.dirname(os.path.abspath(__file__))
+    script_parent = os.path.abspath(os.path.join(script_path, '..'))
     jinja_env = jinja2.Environment(
-        loader=jinja2.FileSystemLoader(searchpath='/'),
+        loader=jinja2.FileSystemLoader(searchpath=[script_path,
+                                                   script_parent,
+                                                   '/']),
         autoescape=True,
         extensions=['jinja2.ext.with_',
                     'jinja2.ext.do',
@@ -154,7 +163,7 @@ def Main():
                     print '%s: %s' % (relofile, ' '.join(deps))
                 else:
                     deps.remove(inrelpath)
-                    print '%s: %s'  % (infile, ' '.join(deps))
+                    print '%s: %s'  % (inrelpath, ' '.join(deps))
                 # Clear caches so each dependency list is correct
                 jinja2.clear_caches()
                 OPENED_FILES = set()
