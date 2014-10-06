@@ -1,6 +1,7 @@
 Subject: One Year Later: Mailpile Beta
 Author: The Team
 Date: September 13, 2014
+Type: blog
 
 <img src="/files/Beta-Time-Icons.png" border="0">
 

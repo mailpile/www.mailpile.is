@@ -1,5 +1,6 @@
 Subject: Let's take e-mail back!
 Format: html
+Type: full
 
     <h1 class="hide"> - a Free and open source privacy focused email client</h1>
 		<div id="header" class="clearfix">

@@ -1,6 +1,7 @@
 Subject: The Month of Dog Fooding
 Author: The Team
 Date: October 11, 2013
+Type: blog
 
 <img src="/files/dog-fooding-mailpile.jpg">
 

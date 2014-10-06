@@ -1,6 +1,7 @@
 Subject: Designing Security (video)
 Author: Brennan
 Date: August 11, 2013
+Type: blog
 
 <iframe src="http://player.vimeo.com/video/72109354?title=0&amp;byline=0&amp;portrait=0&amp;color=be2408" width="650" height="366" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 

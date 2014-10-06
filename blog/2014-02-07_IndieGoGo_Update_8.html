@@ -5,163 +5,185 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
-	<!-- Basic Page Needs
+    <!-- Basic Page Needs
     ================================================== -->
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="author" content="Brennan Novak">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
 
-	<!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
     ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS - CHANGE URL when making live
+    <!-- CSS - CHANGE URL when making live
     ================================================== -->
-	<link rel="stylesheet" href="/css/mailpile.css">
+    <link rel="stylesheet" href="/css/mailpile.css">
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="../img/favicon.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-	<title>Mailpile: Development, Perks, and Alpha (IGG Update #8)</title>
+    <title>Mailpile: Development, Perks, and Alpha (IGG Update #8)</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
     <script src="/js/list.min.js"></script>
-    <script src="/js/jquery.sortable.js"></script>
-    <script src="/js/jquery.cookie.js"></script>
-    <script src="/js/sjcl.js"></script>
-    <script src="/js/hoipoi.js"></script>
-    <script src="/js/site.js"></script>
-</head><body>
 
-	<div id="navigation">
-	  <div class="menu-button">Menu</div>
-		<ul data-breakpoint="800" class="flexnav">
-			<li><a href="/" class="scroll-link">About</a></li>
-			<li><a href="/download/" class="scroll-link">Download</a></li>
-			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
-			<li><a href="/demos/" class="scroll-link">Demos</a></li>
-			<li><a href="/donate/" class="scroll-link">Donate</a></li>
-			<li><a href="/blog/" class="scroll-link">Blog</a></li>
-			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
-		</ul>
-	</div>
 
-	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
 
-	<div id="content" class="container">
-		<div id="header" class="clearfix">
-			<div class="col-2 text-center">
-				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
-			</div>
-			<div class="col-12">
-				<a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
-<!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
-			</div>
-		</div>
-		<hr class="blog-hr">
-		<div class="row"></div>
+        // Smooth Scrolling
+        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                   if (target.length) {
+                    var link_height = target.offset().top - 108;
+                     $('html,body').animate({
+                         scrollTop: link_height
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
 
-		<!-- Content -->
-		<div id="pages" class="clearfix">
-			<div class="col-13">
-				<a href="2014-02-07_IndieGoGo_Update_8.html"><h1>Development, Perks, and Alpha (IGG Update #8)</h1></a>
-				<p><strong>Posted by <a href="#">The Team</a> on February 7, 2014</strong></p>
+        // Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
 
-<p>Dear Mailpile Backers,</p>
 
+
+
+</head>
+<body>
+
+
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link">About</a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/demos/" class="scroll-link">Demos</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+
+
+    <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+
+    <div id="content" class="container">
+
+        <div id="header" class="clearfix">
+            <div class="col-3 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-11">
+                <a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+
+    <a href="/blog/2014-02-07_IndieGoGo_Update_8.html"><h1>Development, Perks, and Alpha (IGG Update #8)</h1></a>
+    <p><strong>Posted by <a href="#">The Team</a> on February 7, 2014</strong></p>
+
+  <p>Dear Mailpile Backers,</p>
 <p>Lots of news to report from Mailpile HQ since our last update. Hopefully you have all had a wonderful holiday season and your new years are all off to smashing starts! To recap the exciting last many months (and to show you a little bit of our teams work / culture) we’ve assembled this short 2.5 minute video. Then read on below. Enjoy :)</p>
-
 <iframe src="//player.vimeo.com/video/85881181?title=0&amp;byline=0&amp;portrait=0&amp;color=d90902" width="650" height="366" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <p>&nbsp;</p>
 
 <h4>Perks</h4>
-
 <p>By now, almost all of you should have received your perks in the mail. If you did not receive anything (or if it was partial or damaged), let us know and we will look into it immediately. But, hopefully, you all have a quirky postcard of Icelandic horses, volcanoes or majestic landscapes of our home on your desk / refrigerator / cork board!</p>
-
 <h4>Alpha Release</h4>
-
 <p>If you missed the update on various social media channels, we have now officially released <a href="https://www.mailpile.is/blog/2014-01-31_Alpha_Release_Shipping_Bits_and_Atoms.html">the “Alpha” version of Mailpile</a>. The announcement was on Feb 1st, 2014 and was made while we were speaking at the FOSDEM open source conference in Brussels, Belgium.</p>
-
 <p><a href="https://github.com/pagekite/Mailpile">This release</a> is far from a finished version of Mailpile. In fact, many of you will probably not be able to get your copy working on your own computer just yet- unless of course you feel comfortable on the command line using git and installing various dependencies and configurations. Sorry to disappoint if the anticipation is killing you :P</p>
-
 <p>But have no fear, we have setup a <a href="https://www.mailpile.is/demos/">demo version</a> on our site so you can still try out Mailpile and see all the work we’ve been doing. We also setup instances in 13 other non-english languages. We have many other languages that are partially complete, if you speak an additional language to english and would like to help translate <a href="mailto:team@mailpile.is?subject=Translating%20Mailpile">get in touch</a>!</p>
-
 <h4>Next Steps</h4>
-
 <p>The goals of our Alpha release are to <a href="mailto:team@mailpile.is?subject=Alpha%20Feedback">collect feedback</a> about the interface, current feature set, and discovery of bugs. We shall then use this feedback to iterate and improve upon the Alpha release. Secondly we will continue adding more features and tools that bring Mailpile up to feature parity with other email clients and beyond!</p>
-
 <h4>Community Site</h4>
-
 <p>Our community voting site is <strong>almost</strong> ready for prime time. Once it is ready, the $23 (and higher) level backers will be able to start discussing and voting on the future of Mailpile. We plan to have the community site ready in 1 - 2 more weeks (by Feb 21st). You will receive an email invite from us at that time. Thanks for your patience!</p>
-
 <h4>Future Communications</h4>
-
 <p>This is the last communication we are going to send via the IndieGoGo platform. From now on we are going to move to using our own email infrastructure to keep in touch with all of you, especially once we finish setting up the Community site, release the Beta, and then finally the 1.0. Stay tuned, we’re excited :)</p>
-
 <p>As always, thank you for your incredible support that has allowed us to work on our exciting &amp; passionate project!</p>
-
 <p>~The Mailpile Team</p>
-    <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
-    <hr>
-  </div>
-</div>
 
-		<!-- Contact & Media -->
-		<div id="footer" class="clearfix">
-			<div class="one-third">
-				<h3>Please Donate</h3>
-				<p>To ensure future development and growth of Mailpile and our community!</p>
-				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
-			</div>
-			<div class="one-third">
-				<h3>Contact Us</h3>
-				<ul class="add-bottom">
-					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
-					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
-					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
-					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
-				</ul>
-				<ul>
-					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
-					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
-					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
-				</ul>
-			</div>
-			<div class="one-third">
-				<h3>Downloads</h3>
-				<ul class="add-bottom">
-					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
-					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+                <hr>
+            </div>
+        </div>
+
+
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                </ul>
+                <ul>
+                    <li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+                    <li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+                    <li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Downloads</h3>
+                <ul class="add-bottom">
+                    <li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
           <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
           <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
-					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
         </ul>
-				<ul>
-					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
-					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
-					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
-					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
-					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
-				</ul>
-			</div>
-		</div>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+                    <li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+                    <li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+                </ul>
+            </div>
+        </div>
 
-		<div class="add-top add-bottom"></div>
+        <div class="add-top add-bottom"></div>
 
 
-	</div><!-- container -->
+    </div><!-- container -->
+
+
 
 </body>
 </html>

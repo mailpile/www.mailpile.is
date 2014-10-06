@@ -1,6 +1,7 @@
 Subject: PayPal News (IGG Update #4)
 Author: Bjarni
 Date: September 6, 2013
+Type: blog
 
 <small>(The following was posted to
 [IndieGoGo](http://igg.me/at/mailpile) as a campaign update.)</small>

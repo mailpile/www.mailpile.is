@@ -1,6 +1,7 @@
 Subject: A Plan For Spam ... and Bacon!
 Date: January 12, 2014
 Author: Bjarni
+Type: blog
 
 <img src="/files/Spam-og-Bacon.jpg" border="0">
 

@@ -5,109 +5,132 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
-	<!-- Basic Page Needs
+    <!-- Basic Page Needs
     ================================================== -->
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="author" content="Brennan Novak">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
 
-	<!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
     ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS - CHANGE URL when making live
+    <!-- CSS - CHANGE URL when making live
     ================================================== -->
-	<link rel="stylesheet" href="/css/mailpile.css">
+    <link rel="stylesheet" href="/css/mailpile.css">
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="../img/favicon.png">
-	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-	<title>Mailpile: Mailpile Workshop in London</title>
+    <title>Mailpile: Mailpile Workshop in London</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
     <script src="/js/list.min.js"></script>
-    <script src="/js/jquery.sortable.js"></script>
-    <script src="/js/jquery.cookie.js"></script>
-    <script src="/js/sjcl.js"></script>
-    <script src="/js/hoipoi.js"></script>
-    <script src="/js/site.js"></script>
-</head><body>
 
-	<div id="navigation">
-	  <div class="menu-button">Menu</div>
-		<ul data-breakpoint="800" class="flexnav">
-			<li><a href="/" class="scroll-link">About</a></li>
-			<li><a href="/download/" class="scroll-link">Download</a></li>
-			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
-			<li><a href="/demos/" class="scroll-link">Demos</a></li>
-			<li><a href="/donate/" class="scroll-link">Donate</a></li>
-			<li><a href="/blog/" class="scroll-link">Blog</a></li>
-			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
-		</ul>
-	</div>
 
-	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
 
-	<div id="content" class="container">
-		<div id="header" class="clearfix">
-			<div class="col-2 text-center">
-				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
-			</div>
-			<div class="col-12">
-				<a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
-<!--				<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
-			</div>
-		</div>
-		<hr class="blog-hr">
-		<div class="row"></div>
+        // Smooth Scrolling
+        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                   if (target.length) {
+                    var link_height = target.offset().top - 108;
+                     $('html,body').animate({
+                         scrollTop: link_height
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
 
-		<!-- Content -->
-		<div id="pages" class="clearfix">
-			<div class="col-13">
-				<a href="2014-04-07_Workshop_in_London.html"><h1>Mailpile Workshop in London</h1></a>
-				<p><strong>Posted by <a href="#">Bjarni</a> on April 7, 2014</strong></p>
+        // Flexnav
+        $(".flexnav").flexNav();
+    });
+    </script>
 
-<p><img src="/files/London-Workshop-2014.png"></p>
 
+
+
+</head>
+<body>
+
+
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link">About</a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/demos/" class="scroll-link">Demos</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+
+
+    <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+
+    <div id="content" class="container">
+
+        <div id="header" class="clearfix">
+            <div class="col-3 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-11">
+                <a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+
+    <a href="/blog/2014-04-07_Workshop_in_London.html"><h1>Mailpile Workshop in London</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on April 7, 2014</strong></p>
+
+  <p><img src="/files/London-Workshop-2014.png"></p>
 <p>Later this month the Mailpile core team will all be in London for
 various reasons. We would love to take advantage of this to get to know
 some of the people in our community, and have decided to host a workshop
 and social event in the city on the 18th of April. </p>
-
 <p>The event will be at the ThoughtWorks London offices, on the 9th floor, 
 168-174 High Holborn, London, WC1V 7AA. For access to the building, call 
 Smári on +44 (0)7473 363763.</p>
-
 <h2>Schedule</h2>
-
 <p><strong>Workshop:</strong></p>
-
 <pre><code>12:00  Doors open. Coffee is served.
 12:30  Presentation: Mailpile internals and plugin architecture
 13:00  Plugin hacking session
 </code></pre>
-
 <p><strong>Social event:</strong></p>
-
 <pre><code>17:00  Presentation: Mailpile roadmap and community
 18:00  Social event: Pizza, beer, ...
 20:00  Presentation: What did we hack on today?
 20:30  Doors close, thirsty people move to the pub
 </code></pre>
-
 <h2>What's going on?</h2>
-
 <p>At this event we will launch a bare-bones community site and start
 soliciting feedback from our community on which software license they
 prefer the project use long-term. Note that this will not be the final
@@ -115,7 +138,6 @@ iteration of our community platform but it wil be a start. Many people
 have asked about the status of our community platform as we had promised
 it back in February and have not yet delivered, apologies - we will post
 more details later this week. :)</p>
-
 <p>The timing for this workshop aligns nicely with us putting the finishing
 touches on the second iteration of the Mailpile plugin architecture. We
 are quite excited about this - it is rapidly becoming feasible to
@@ -125,57 +147,61 @@ to match their diverse needs - without the core team being a
 bottle-neck. This workshop will introduce this new system to members of
 our U.K. community, we will get their feedback and hopefully squash a
 few bugs as a result.</p>
-
 <p>So save the date and join us in London! We can't wait to meet you.</p>
-    <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
-    <hr>
-  </div>
-</div>
 
-		<!-- Contact & Media -->
-		<div id="footer" class="clearfix">
-			<div class="one-third">
-				<h3>Please Donate</h3>
-				<p>To ensure future development and growth of Mailpile and our community!</p>
-				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
-			</div>
-			<div class="one-third">
-				<h3>Contact Us</h3>
-				<ul class="add-bottom">
-					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
-					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
-					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
-					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
-				</ul>
-				<ul>
-					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
-					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
-					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
-				</ul>
-			</div>
-			<div class="one-third">
-				<h3>Downloads</h3>
-				<ul class="add-bottom">
-					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
-					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+                <hr>
+            </div>
+        </div>
+
+
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                </ul>
+                <ul>
+                    <li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+                    <li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+                    <li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Downloads</h3>
+                <ul class="add-bottom">
+                    <li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
           <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
           <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
-					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
         </ul>
-				<ul>
-					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
-					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
-					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
-					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
-					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
-				</ul>
-			</div>
-		</div>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+                    <li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+                    <li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+                </ul>
+            </div>
+        </div>
 
-		<div class="add-top add-bottom"></div>
+        <div class="add-top add-bottom"></div>
 
 
-	</div><!-- container -->
+    </div><!-- container -->
+
+
 
 </body>
 </html>

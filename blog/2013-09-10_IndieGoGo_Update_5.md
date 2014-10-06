@@ -1,6 +1,7 @@
 Subject: The Home Stretch (IGG Update #5)
 Author: Brennan
 Date: September 10, 2013
+Type: blog
 
 <small>(The following was posted to
 [IndieGoGo](http://igg.me/at/mailpile) as a campaign update.)</small>

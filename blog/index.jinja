@@ -1,0 +1,25 @@
+{% extends "/layouts/page.html-jinja" %}
+
+{% block title %}The Mailpile Blog{% endblock %}
+
+{% block content %}
+  {%- for fn in ls('.', '\.md$')[-4:]|reverse %}
+    {% set page = cat(fn)|from_rfc822 -%}
+    {% set url = fn|replace('.md', '.html') -%}
+    <a href="{{ url }}"><h1>{{ page.subject }}</h1></a>
+    <p><strong>Posted by <a href="#">{{ page.author }}</a>
+               on {{ page.date }}</strong></p>
+    {{ page.body|safe }}
+  {%- endfor %}
+
+  <hr>
+  <h3>Older stuff</h3><ul>
+  {%- for fn in ls('.', '\.md$')[:-4]|reverse %}
+    {% set page = cat(fn)|from_rfc822 -%}
+    {% set url = fn|replace('.md', '.html') -%}
+    <li><a href="{{ url }}">{{ page.subject }}</a></li>
+  {%- endfor %}
+  </ul>
+
+  <hr>
+{% endblock %}

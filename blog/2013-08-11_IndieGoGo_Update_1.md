@@ -1,6 +1,7 @@
 Subject: Our first week (IGG update #1)
 Author: Bjarni
 Date: August 11, 2013
+Type: blog
 
 <small>(The following was posted to [IndieGoGo](http://igg.me/at/mailpile)
 as a campaign update.)</small>

@@ -1,6 +1,7 @@
 Subject: Digging Through the Details
 Author: Smári
 Date: August 15, 2013
+Type: blog
 
 Hello Internets!
 

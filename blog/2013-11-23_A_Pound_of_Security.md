@@ -1,6 +1,7 @@
 Subject: A Pound of Security
 Date: November 23, 2013
 Author: Bjarni
+Type: blog
 
 <style type='text/css'>
   code { font-family: Terminus,Consolas,Profont,"Andale Mono",Monaco,Inconsolata,Inconsolata-g,Unifont,Lime,"ClearlyU PUA",Clean,"DejaVu Sans Mono","Lucida Console","Bitstream Vera Sans Mono",Freemono,"Liberation Mono",Dina,Anka,Droid Sans Mono,Anonymous Pro,Proggy fonts,Envy Code R,Gamow,Courier,"Courier New",Terminal,monospace; }
