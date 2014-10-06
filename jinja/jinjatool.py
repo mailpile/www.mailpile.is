@@ -109,12 +109,10 @@ class JinjaToolExtension(Extension):
         return rfc822
 
 
-def Main():
-    global OPENED_FILES
-
+def MakeJinjaEnvironment():
     script_path = os.path.dirname(os.path.abspath(__file__))
     script_parent = os.path.abspath(os.path.join(script_path, '..'))
-    jinja_env = jinja2.Environment(
+    return jinja2.Environment(
         loader=jinja2.FileSystemLoader(searchpath=[script_path,
                                                    script_parent,
                                                    '/']),
@@ -125,6 +123,11 @@ def Main():
                     JinjaToolExtension]
     )
 
+
+def Main():
+    global OPENED_FILES
+
+    jinja_env = MakeJinjaEnvironment()
     variables = copy.copy(os.environ)
     depcheck = False
     basedir = os.path.abspath('.')
@@ -149,10 +152,17 @@ def Main():
             assert(os.path.exists(inpath))
 
             # This renders the data, hooray!
-            os.chdir(variables.get('dir', os.path.dirname(inpath)))
-            template = jinja_env.get_template(inpath)
-            data = template.render(variables).encode('utf-8')
-            os.chdir(basedir)
+            try:
+                os.chdir(variables.get('dir', os.path.dirname(inpath)))
+                template = jinja_env.get_template(inpath)
+                data = template.render(variables).encode('utf-8')
+                os.chdir(basedir)
+            except:
+                if depcheck:
+                    print '# FAILED DEPS: %s' % inpath
+                    continue
+                else:
+                    raise
 
             if depcheck:
                 deps = sorted([os.path.relpath(o) for o in OPENED_FILES])
@@ -164,8 +174,9 @@ def Main():
                 else:
                     deps.remove(inrelpath)
                     print '%s: %s'  % (inrelpath, ' '.join(deps))
+
                 # Clear caches so each dependency list is correct
-                jinja2.clear_caches()
+                jinja_env = MakeJinjaEnvironment()
                 OPENED_FILES = set()
             else:
                 if ofile:
