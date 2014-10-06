@@ -1,104 +1,12 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
+{% extends "layouts/page.html-jinja" %}
 
-    <!-- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="Brennan Novak">
+{% set page = {'type': 'full'} %}
+{% block page_top %}{% endblock %}
+{% block page_bottom %}{% endblock %}
 
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{% block title %}Support with a donation{% endblock %}
 
-    <!-- CSS - CHANGE URL when making live
-    ================================================== -->
-    <link rel="stylesheet" href="/css/mailpile.css">
-
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="../img/favicon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
-
-    <title>Mailpile: Support with a donation</title>
-
-    <!-- JS ================================================== -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.flexnav.min.js"></script>
-    <script src="/js/list.min.js"></script>
-<<<<<<< HEAD
-    <script src="/js/jquery.sortable.js"></script>
-    <script src="/js/jquery.cookie.js"></script>
-    <script src="/js/sjcl.js"></script>
-    <script src="/js/hoipoi.js"></script>
-    <script src="/js/site.js"></script>
-</head><body>
-=======
-
-
-    <script type="text/javascript">
-    jQuery(document).ready(function($){
-
-        // Smooth Scrolling
-        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                   if (target.length) {
-                    var link_height = target.offset().top - 108;
-                     $('html,body').animate({
-                         scrollTop: link_height
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-
-        // Flexnav
-        $(".flexnav").flexNav();
-    });
-    </script>
-
-
-
-
-</head>
-<body>
->>>>>>> Migrated donate/ to jinjatool
-
-
-
-    <div id="navigation">
-      <div class="menu-button">Menu</div>
-        <ul data-breakpoint="800" class="flexnav">
-            <li><a href="/" class="scroll-link">About</a></li>
-            <li><a href="/download/" class="scroll-link">Download</a></li>
-            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
-            <li><a href="/demos/" class="scroll-link">Demos</a></li>
-            <li><a href="/donate/" class="scroll-link">Donate</a></li>
-            <li><a href="/blog/" class="scroll-link">Blog</a></li>
-            <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
-        </ul>
-    </div>
-
-
-    <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-
-
-    <div id="content" class="container">
-
+{% block content %}
     <div id="header-donate" class="row">
         <div class="half text-center">
             <span class="add-bottom icon-donate"></span>
@@ -184,14 +92,9 @@
         <p><a href="http://www.indiegogo.com/projects/mailpile-taking-e-mail-back" target="_blank"><img src="/img/indiegogo-button.png"></a></p>
         <h5>Thank you for your awesome support!</h5>
     </div>
+{% endblock %}
 
-
-
-
-    </div><!-- container -->
-
-
-
+{% block tail %}
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
@@ -218,6 +121,4 @@
         $(".flexnav").flexNav();
     });
     </script>
-
-</body>
-</html>
+{% endblock %}
