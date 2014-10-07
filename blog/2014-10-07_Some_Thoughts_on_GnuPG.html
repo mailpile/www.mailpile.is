@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: The Mailpile Blog</title>
+    <title>Mailpile: Some thoughts on working with GnuPG</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -77,10 +77,10 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="2014-10-07_Some_Thoughts_on_GnuPG.html"><h1>Some thoughts on working with GnuPG</h1></a>
-    <p><strong>Posted by <a href="#">Smári</a>
-               on </strong></p>
-    <p>A lot of people have complained about OpenPGP for a number of valid cryptographical reasons<a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">1</a>,<a href="http://secushare.org/PGP">2</a>. It doesn't change the fact that it is widely used, and wildly useful. It urgently needs to be replaced with something more sensible, but for now we're stuck with it. In practice, this also means that we are stuck with GnuPG, the most common and by far the best implementation of OpenPGP.</p>
+    <a href="/blog/2014-10-07_Some_Thoughts_on_GnuPG.html"><h1>Some thoughts on working with GnuPG</h1></a>
+    <p><strong>Posted by <a href="#">Smári</a> on </strong></p>
+
+<p>A lot of people have complained about OpenPGP for a number of valid cryptographical reasons<a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">1</a>,<a href="http://secushare.org/PGP">2</a>. It doesn't change the fact that it is widely used, and wildly useful. It urgently needs to be replaced with something more sensible, but for now we're stuck with it. In practice, this also means that we are stuck with GnuPG, the most common and by far the best implementation of OpenPGP.</p>
 <p>GnuPG is the one and only reference implementation of <a href="http://tools.ietf.org/html/rfc4880">RFC 4880</a>, and despite thousands of companies making use of OpenPGP in their infrastructre there is for all intents and purposes a solitary dude in Germany trying to keep it all together. <a href="http://werner.eifelkommune.de/">Werner Koch</a> is an absolute hero for managing to do that, and deserves our respect and support. Financially supporting the GnuPG project is also something people should be doing. </p>
 <p>The following is however neccessary and hopefully constructive criticism of GnuPG.</p>
 <p>One of the things I'm largely to blame for in Mailpile is the GnuPG interface. It's a chunk of Python code that executes the GnuPG binary, tosses information at it, and figures out what to do with the output. There are lots of libraries for doing this, but after a great deal of exploration I found that all of the Python libraries that did this were insufficient for our needs, and the only thing crazier than manually forking out GnuPG in our situation would be to use the PGPME library.</p>
@@ -213,124 +213,6 @@ fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6
 <h2>Conclusion</h2>
 <p>GnuPG is important and great in many ways, but it is also deeply broken and downright dangerous. The sooner it becomes a consistent tool, the sooner it will become something other than a fool's errand to attempt to interface with it. I'm happy to be on the caravan of fools for now, but only if there is something worthwhile at the end of this quest.</p>
 <p>Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I'm sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?</p>
-    <a href="2014-09-13_Mailpile_Beta_Release.html"><h1>One Year Later: Mailpile Beta</h1></a>
-    <p><strong>Posted by <a href="#">The Team</a>
-               on September 13, 2014</strong></p>
-    <p><img src="/files/Beta-Time-Icons.png" border="0"></p>
-<p>It's been almost exactly a year since our crowdfunding campaign ended and we realized that building Mailpile really would become our full time job. We are very grateful to be given this chance and have been working hard ever since.</p>
-<p>It's been a busy year, with ups and downs, highs and lows, stickers and t-shirts and hackathons and conferences. If you've been following Mailpile's development over the past year, you'll have seen the codebase mature from a rough prototype into a usable app, the protocol support grow and expand, and the UI mature by leaps and bounds. You'll also have seen blog posts about delays and long stretches of silence as we doubled down and immersed ourselves in hard work.</p>
-<p>Since we started development last fall, we've released two Alpha versions. The first one was a very rough technology preview focusing on the basic capabilities - our built in webserver, the core Mailpile commands, a REST API, the search engine, and basic support for sending and reading encrypted email. We released an updated Alpha II this summer, which featured advanced UI, support for mail sources, and more.</p>
-<p>Now, it's time for our Beta release!</p>
-<h3>What's in a Beta?</h3>
-<p>We believe in the old-fashioned kind of beta-release - a release that has most of the features of a 1.0, but may lack polish and maturity. Polish and maturity can only come from exposure to a wider range of users than the core team of developers and our friends. So although we are a little bashful about how many bugs remain and how many exciting features didn't make the cut-off, we feel it is time to share our work with a wider audience.</p>
-<p>So please give it a try and let us know how it works. But please understand that this is still not a finished product.</p>
-<p>Our <a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta">Release Notes</a> cover some of the technicalities, as does our <a href="https://github.com/pagekite/Mailpile/wiki/Security-roadmap">Security Roadmap</a>. Please read them!  In particular, it's worth taking a look at the list of known issues, so you aren't caught off guard by one of our many known bugs. Taking a look at the known issues list will also help reduce the load on us developers - the fewer people file bugs for stuff we already know about, the less time we have to spend curating our bug tracker and the more time we can spend actually fixing things!</p>
-<h3>The good news and...</h3>
-<p>For those of you too busy to read the full release notes, here is the good news:</p>
-<ul class="square">
-  <li>Getting started is easy: Mailpile now sports a user-friendly interactive setup flow</li>
-  <li>Reading and writing e-mail works, including attachments</li>
-  <li>Our searching and tagging engine can handle hundreds of thousands of messages</li>
-  <li>The user interface is clean and elegant, and our font now looks great in all browsers & weights</li>
-  <li>The spam filter works well (as long as you correct its mistakes now and then)</li>
-  <li>Our OpenPGP support is convenient and easy to work with, including searching for & importing keys</li>
-  <li>We have packages for Windows and the Mac!</li>
-</ul>
-
-<p>Some of the things that still need work:</p>
-<ul class="square">
-  <li>The user interface has not been optimized, so it can be quite slow now and then</li>
-  <li>The user interface needs some improvements to work well on smaller screens</li>
-  <li>We need to integrate Tor to better protect our users' privacy</li>
-  <li>We wrote code too fast and our translators couldn't really keep up</li>
-  <li>There are still lots of bugs that need fixing!</li>
-</ul>
-
-<h3>Where can I get it?</h3>
-<p>The Mailpile beta is released in 4 forms:</p>
-<div class="add-bottom">
-<h5 class="half-bottom">Online Demo</h5>
-View our <a href="https://www.mailpile.is/demos/">online demo here</a>
-</div>
-
-<div class="add-bottom">
-<h5 class="half-bottom"><img src="/img/os-windows.png" border="0" style="height:24px;"> Windows Installer</h5>
-Download via: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe">HTTPS</a> or <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.torrent">Bittorrent</a> (faster)<br>
-<em>Checksums: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.sha1">sha1</a> &nbsp;<a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.md5">md5</a></em>
-</div>
-
-<div class="add-bottom">
-<h5 class="half-bottom"><img src="/img/os-mac.png" border="0" style="height:24px;"> Mac OS Installer</h5>
-Download via: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg">HTTPS</a> or <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.torrent">Bittorrent</a> (faster)<br>
-<em>Checksums: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.sha1">sha1</a> &nbsp;<a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.md5">md5</a></em>
-</div>
-
-<div class="add-bottom">
-<h5 class="half-bottom"><img src="/img/os-linux.png" border="0" style="height:24px;"> Linux</h5>
-As a <a href="https://github.com/pagekite/Mailpile/releases" target="_blank">tagged source release on Github</a>
-</div>
-
-<p>So give it a spin, seed our torrents and let us know what you think. :-)</p>
-<p>In the meantime, we're going to get back to work. We still have 3-4 months worth of money in the bank, which should be exactly the right amount to get our 1.0 shipped in time for the New Year. Fingers crossed!</p>
-<p>Hugs and ciphers,<br />
-  ~The Mailpile team</p>
-<p>P.S. Check out <a href="https://news.ycombinator.com/item?id=8315086">this Hacker News</a>
-post to discuss!</p>
-    <a href="2014-08-20_Upcoming_Beta_Release_Part_II.html"><h1>Our Upcoming Beta Release: Part II</h1></a>
-    <p><strong>Posted by <a href="#">The Team</a>
-               on August 20, 2014</strong></p>
-    <p>Initially, we planned to release our Beta (this is sounding familiar) back on August 8th. A few days before this date, we realized we were no where near ready. We thought we could polish everything off if we gave ourselves roughly an extra week, so we did. We also told you about this deadline, dear supporters. As we neared the end of that extended date, some of these bugs were still not resolved and we joyfully discovered some wonderful new bugs as we got further into user testing.</p>
-<p>After taking a serious look at what the user experience was going to be like for people setting up Mailpile for the first time, we realized for many Mailpile would have been largely unsuable to nontechnical users, and tricky for others.  Considering our commitment to making a great email client with easy to use encryption, this was  entirely unacceptable. Some of these bugs are silly things out of our control, like Gmail's insistance on blocking IMAP &amp; SMTP access unless you configure special security settings in your Google Account - meaning that for GMail users, Mailpile wouldn't be easy to use. Other bugs include email attachments not being handled correctly by GPG. A larger bug is Mailpile running on a Windows machine, we have a few known issues with interacting with GPG that are blocking further testing - as many of you know, Windows is weird. Another aspect of the app which needs improving is unifying the native OS app launcher, the Python backend, and the web browser instance with the UI.</p>
-<p>Solutions to all of these are being worked on at the moment. However, by the end of last week the team was a bit frayed after pulling quite a lot of 14+ hr days trying to ship on schedule. Due to the gravity of some of these bugs, we decided not to push a Beta out into the world. We're taking a couple of calm days before returning to battle, although in those calm days we're still working on squishing bugs.</p>
-<p>By now you're probably wondering <em>"So... uh... ok... when is the Beta going to be released?"</em> The only clear answer to that is <em>"we don't know."</em>  We wish we had a more clear answer. A couple options that we are considering are:</p>
-<ul class="square">
- <li>Pushing out a "Developer Beta" ASAP</li>
- <li>Waiting and doing our Beta in September (when we had planned our 1.0)</li>
- <li>Following that up with our 1.0 later in the fall</li>
- <li>Give up and run for the hills, woods, a deserted island / arctic tundra, etc...</li>
-</ul>
-
-<p>The last option is totally a joke. Despite being as frustrated &amp; disappointed as you are about the state of things, we are not giving up. We are commited as ever to shipping an easy to use encrypted email client and doing so as soon as possible. We would love to hear your thoughts. Would you rather see a rougher Developer Beta with some bugs or would you rather wait until things are more polished? Let us know. Also, if you are of a more technical disposition, this might be a good time to start testing things out: poke around, see if you can clear up some bugs. Every little bit helps :)</p>
-<p>Sincerely,</p>
-<p>Your Mailpile Team</p>
-    <a href="2014-08-08_Our_Upcoming_Beta_Release.html"><h1>Our Upcoming Beta Release</h1></a>
-    <p><strong>Posted by <a href="#">The Team</a>
-               on August 8, 2014</strong></p>
-    <p>We planed to release our Beta today, but because we wanted the Beta to be a little less like an Alpha, we postponed it for a bit. Don't worry, it won't be long! We're hard at work. Bugs are being fixed, functionality is being added, people are losing sleep. Our Beta release is forthcoming. In fact, you'll be shocked when you figure out how few days it is until it gets released. Hint: it's less than 10 days and more than 5 days away, give or take a couple depending on your timezone ;)</p>
-<p>We recently attended the <a href="http://cups.cs.cmu.edu/soups/2014/workshops/effcup.html">EFF Crypto Usability Price Workshop</a> in Menlo Park, California in July 2014. We presented many aspects of our encryption &amp; security interface which was received enthusiastically. We met and befriended the people behind some fascinating projects like <a href="http://okturtles.com">OkTurtles</a>, <a href="https://kinko.me">Kinko.me</a>, <a href="https://github.com/warner/petmail/">PetMail</a>, <a href="https://gpgtools.org">GPG Tools</a>, <a href="https://github.com/open-keychain/open-keychain">Open Keychain</a>, and <a href="https://github.com/cryptosphere/confusion">Confusion</a>. We formed a working group with a couple other PGP related projects to harmonize UI aspects across multiple PGP related projects- a blog post about all of this is forthcoming shortly after our beta!</p>
-<p>Oh, as per our planned beta, we mailed stickers to the nice <a href="http://eff.org">EFF</a> people to pass out at the <a href="http://cryptovillage.org">DEFCON CryptoVillage</a> table, so if you're at DEFCON swing on by and say hi :)</p>
-
-  <hr>
-  <h3>Older stuff</h3><ul>
-    <li><a href="2014-06-03_Mailpile_Alpha_II.html">Mailpile Alpha II - The Dogfood Edition</a></li>
-    <li><a href="2014-04-30_Where_is_the_Community_Site.html">Where is the Community Site?</a></li>
-    <li><a href="2014-04-07_Workshop_in_London.html">Mailpile Workshop in London</a></li>
-    <li><a href="2014-02-07_IndieGoGo_Update_8.html">Development, Perks, and Alpha (IGG Update #8)</a></li>
-    <li><a href="2014-01-31_Alpha_Release_Shipping_Bits_and_Atoms.html">Alpha Release: Shipping Bits and Atoms</a></li>
-    <li><a href="2014-01-12_A_Plan_For_Spam.html">A Plan For Spam ... and Bacon!</a></li>
-    <li><a href="2013-11-23_A_Pound_of_Security.html">A Pound of Security</a></li>
-    <li><a href="2013-11-18_Speaking_your_language.html">Speaking Your Language</a></li>
-    <li><a href="2013-11-01_IndieGoGo_Update_7.html">Perks? What perks? (IGG Update #7)</a></li>
-    <li><a href="2013-10-31_DarkMail_and_Secure_Protocols.html">DarkMail and Secure Protocols</a></li>
-    <li><a href="2013-10-11_The_Month_of_Dog_Fooding.html">The Month of Dog Fooding</a></li>
-    <li><a href="2013-09-12_IndieGoGo_Update_6.html">Thank you! (IGG Update #6)</a></li>
-    <li><a href="2013-09-11_Budget_and_Roadmap.html">A Rough Budget and Alpha Roadmap</a></li>
-    <li><a href="2013-09-10_Surveillance_Centralization.html">Surveillance And Centralization (video)</a></li>
-    <li><a href="2013-09-10_IndieGoGo_Update_5.html">The Home Stretch (IGG Update #5)</a></li>
-    <li><a href="2013-09-06_IndieGoGo_Update_4.html">PayPal News (IGG Update #4)</a></li>
-    <li><a href="2013-09-05_PayPal_Freezes_Campaign_Funds.html">PayPal Freezes Campaign Funds</a></li>
-    <li><a href="2013-09-05_IndieGoGo_Update_3.html">PayPal News (IGG Update #3)</a></li>
-    <li><a href="2013-08-30_Fonts_and_Copyright_Licenses.html">Fonts and Copyright Licenses</a></li>
-    <li><a href="2013-08-21_IndieGoGo_Update_2.html">We are funded! (IGG update #2)</a></li>
-    <li><a href="2013-08-20_Turning_Money_Into_Code.html">Turning Money Into Code</a></li>
-    <li><a href="2013-08-15_Digging_Through_the_Details.html">Digging Through the Details</a></li>
-    <li><a href="2013-08-11_IndieGoGo_Update_1.html">Our first week (IGG update #1)</a></li>
-    <li><a href="2013-08-11_Designing_Security.html">Designing Security (video)</a></li>
-    <li><a href="2013-08-08_Mailpile_Launched.html">Mailpile Launched</a></li>
-  </ul>
-
-  <hr>
-
 <!-- Page content ends -->
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
                 <hr>
