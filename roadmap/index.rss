@@ -7,30 +7,65 @@
     <title>Roadmap</title>
     <link>http://www.mailpile.is/roadmap/index.html</link>
     <description>
-&lt;ul class="milestones vote-list "&gt;
-   &lt;li class="milestone milestone-1_0_release"&gt;1.0 Release    &lt;ul class="labels "&gt;
-      &lt;li class="label label-back_end"&gt;Back End       &lt;ul class="issues ranked-election " data-election="all-1_0_release-back_end-issues"&gt;
-         &lt;li class="issue label-back_end" data-issue="996"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/996"&gt;Create Linux packages (.deb, .rpm)&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-stretch" data-issue="1004"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1004"&gt;Ensure that incoming non-pgp/mime encrypted attachments are usable&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-stretch" data-issue="1000"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1000"&gt;Get pakcage into Debian Jessie&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-stretch" data-issue="1001"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1001"&gt;Implement IMAP IDLE support&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-front_end label-stretch" data-issue="1002"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1002"&gt;Implement Restoration process to match the backed up Mailpile&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-privacy_security" data-issue="487"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/487"&gt;Implement smart "crypto policy" support on a per-contact basis&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-front_end" data-issue="993"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/993"&gt;Implement suport for MacMail sources&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end" data-issue="994"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/994"&gt;Implement suport for POP3 mail sources&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end" data-issue="897"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/897"&gt;Implement suport for Thunderbird mail sources&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end" data-issue="997"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/997"&gt;Improve overall speed of Indexing of new mail&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-front_end" data-issue="995"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/995"&gt;Improve overall speed of Web UI&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-front_end label-stretch" data-issue="967"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/967"&gt;Manual PGP key selection&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-back_end label-front_end label-stretch" data-issue="60"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/60"&gt;multi account support? &lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;&lt;/li&gt;
-      &lt;li class="label label-front_end"&gt;Front End       &lt;ul class="issues ranked-election " data-election="all-1_0_release-front_end-issues"&gt;
-         &lt;li class="issue label-front_end label-stretch" data-issue="998"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/998"&gt;Create web UI for Filters&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-front_end label-stretch" data-issue="999"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/999"&gt;Implement support for viewing &amp; editing Contacts via web UI&lt;/a&gt;&lt;/li&gt;
-         &lt;li class="issue label-front_end label-stretch" data-issue="1003"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1003"&gt;Implement web UI for enabling/disabling autotagging&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;&lt;/li&gt;
-   &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class="row clearfix"&gt;
+  &lt;div class="col-10"&gt;
+    &lt;ul class="milestones vote-list "&gt;
+       &lt;li class="milestone milestone-1_0_release"&gt;1.0 Release    &lt;ul class="labels "&gt;
+          &lt;li class="label label-back_end"&gt;Back End
+            &lt;ol class="issues ranked-election " data-election="all-1_0_release-back_end-issues"&gt;
+             &lt;li class="issue label-back_end" data-issue="996"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/996"&gt;Create Linux packages (.deb, .rpm)&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-stretch" data-issue="1004"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1004"&gt;Ensure that incoming non-pgp/mime encrypted attachments are usable&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-stretch" data-issue="1000"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1000"&gt;Get pakcage into Debian Jessie&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-stretch" data-issue="1001"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1001"&gt;Implement IMAP IDLE support&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-front_end label-stretch" data-issue="1002"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1002"&gt;Implement Restoration process to match the backed up Mailpile&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-privacy_security" data-issue="487"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/487"&gt;Implement smart "crypto policy" support on a per-contact basis&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-front_end" data-issue="993"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/993"&gt;Implement suport for MacMail sources&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end" data-issue="994"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/994"&gt;Implement suport for POP3 mail sources&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end" data-issue="897"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/897"&gt;Implement suport for Thunderbird mail sources&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end" data-issue="997"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/997"&gt;Improve overall speed of Indexing of new mail&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-front_end" data-issue="995"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/995"&gt;Improve overall speed of Web UI&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-front_end label-stretch" data-issue="967"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/967"&gt;Manual PGP key selection&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-back_end label-front_end label-stretch" data-issue="60"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/60"&gt;multi account support? &lt;/a&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+          &lt;li class="label label-front_end"&gt;Front End
+            &lt;ol class="issues ranked-election " data-election="all-1_0_release-front_end-issues"&gt;
+             &lt;li class="issue label-front_end label-stretch" data-issue="998"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/998"&gt;Create web UI for Filters&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-front_end label-stretch" data-issue="999"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/999"&gt;Implement support for viewing &amp; editing Contacts via web UI&lt;/a&gt;&lt;/li&gt;
+             &lt;li class="issue label-front_end label-stretch" data-issue="1003"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/1003"&gt;Implement web UI for enabling/disabling autotagging&lt;/a&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+          &lt;/li&gt;
+       &lt;/ul&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="col-6"&gt;
+    &lt;h4&gt;Current Decisions&lt;/h4&gt;
+    &lt;div class="roadmap-single-choices"&gt;
+      &lt;div class="single-choice-election"&gt;
+          &lt;div class="issue" data-issue="30201" data-options="yes,no"&gt;
+              &lt;span class="issue-title"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/30201"&gt;Drop the Apache 2 license&lt;/a&gt;&lt;/span&gt;
+              &lt;span class="issue-details"&gt;Dropping the Apache 2 license makes Mailpile keeps it more focused on remaining Free software... someone else write this out.&lt;/span&gt;
+              &lt;div class="vote-options"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="single-choice-election"&gt;
+          &lt;div class="issue" data-issue="30221" data-options="yes,no"&gt;
+              &lt;span class="issue-title"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/30201"&gt;Drop the AGPL 3 license&lt;/a&gt;&lt;/span&gt;
+              &lt;span class="issue-details"&gt;Dropping the AGPL 3 license would make Mailpile more friendly to companies that are not fully open source and have more commericial applications in mind.&lt;/span&gt;
+              &lt;div class="vote-options"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="single-choice-election"&gt;
+          &lt;div class="issue" data-issue="30231" data-options="yes,no"&gt;
+              &lt;span class="issue-title"&gt;&lt;a href="https://github.com/pagekite/Mailpile/issues/30201"&gt;Should the Mailpile team get new haircuts?&lt;/a&gt;&lt;/span&gt;
+              &lt;span class="issue-details"&gt;Some people have complained. So, we wanted to put it to vote for you, dear community supporters, since after all we are using money you graciously donated.&lt;/span&gt;
+              &lt;div class="vote-options"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
     </description>
   </item>
 </channel></rss>
