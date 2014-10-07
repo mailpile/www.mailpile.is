@@ -1,5 +1,6 @@
 Subject: Some thoughts on working with GnuPG
-Author: Smári
+Author: Smári 
+Date: October 7, 2014
 Type: blog
 
 A lot of people have complained about OpenPGP for a number of valid cryptographical reasons[1],[2]. It doesn't change the fact that it is widely used, and wildly useful. It urgently needs to be replaced with something more sensible, but for now we're stuck with it. In practice, this also means that we are stuck with GnuPG, the most common and by far the best implementation of OpenPGP.
@@ -16,7 +17,7 @@ As a result, we've got a roughly 1200 line chunk of code in Mailpile that has th
 
 The problems with GnuPG seem to fall roughly into two broad categories: inconsistent output structure, inconsistent interfaces. These are both ripe with surprising behaviour and confusing failure modes. In addition to these categories, it appears that the larger meta problem is that no single statement about its problems is going to remain a stable statement, as these problems disappear and reappear at odd intervals as new versions are being built. The number of moving parts essentially leads to a lot of confusion about whether a particular bug exists in a particular version or not, and whether it is affected by wind speed. To wit, I have over the course of Mailpile development added, removed, and readded a workaround for a bug, although I think I'm safe to say that it does not exist post GnuPG 2.1. The comment of that workaround in the code illustrates the issue perfectly:
 
-```
+<pre>
 def list_secret_keys(self):
        #
        # Note: The "." parameter that is passed is to work around a bug
@@ -47,11 +48,11 @@ def list_secret_keys(self):
                            "--list-secret-keys", "t",
                            "--list-secret-keys", "k"])
        return self.parse_keylist(retvals[1]["stdout"])
-```
+</pre>
 
 This bug exists in the first category:
 
-## Inconsistent output structure
+### Inconsistent output structure
 
 GnuPG *generally* accepts command line parameters, uses these to perform actions, and returns output. The output generally takes two forms:
 
@@ -62,7 +63,7 @@ The line-by-line output has two modes, the normal mode where the data is tabulat
 
 First, a word on discoverability. If you ever intend to do anything with GnuPG, you first need to read and internalize a document aptly titled `DETAILS`, which contains a lot of the details about what's going on with GnuPG output. I have dutifully read, memorized chunks of, and bookmarked this file for posterity. It is immensely helpful. For example, it gives an example of GnuPG's output:
 
-```
+<pre>
 $ gpg --with-colons --list-keys \
       --with-fingerprint --with-fingerprint wk@gnupg.org
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
@@ -73,7 +74,7 @@ sub:f:1536:16:06AD222CADF6A6E1:919537416:1036177416:::::e:
 fpr:::::::::CF8BCC4B18DE08FCD8A1615906AD222CADF6A6E1:
 sub:r:1536:20:5CE086B5B5A18FF4:899817788:1025961788:::::esc:
 fpr:::::::::AB059359A3B81F410FCFF97F5CE086B5B5A18FF4:
-```
+</pre>
 
 In order to decipher what this all means, you need to refer to rest of the document. This shows the `--with-colons` format, which is the way we want to be working with it.
 
@@ -87,17 +88,17 @@ Now, the inconsistencies start to get exciting around about here.
 
 Notice these two lines:
 
-```
+<pre>
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
 fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-```
+</pre>
 
 These both follow the same output format, according to `DETAILS`. But look what happens when I add spaces to align the columns:
 
-```
+<pre>
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:                                        ::scESC:
 fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-```
+</pre>
 
 Some of the columns are meaningless for some of the output lines, but more shockingly, some of the columns are MISSING sometimes. Three of the columns just simply evaporate if the line is an `fpr`-type line. On top of that, there's no really good reason why the fingerprint needs to be a separate output line rather than just being added in at the right place. According to the `DETAILS` file, field 10 is for "User ID" - which is to say, the name, e-mail address, and comment associated with the key. Things that the fingerprint emphatically is not.
 
@@ -106,13 +107,13 @@ It this point you'll notice that field 5 contains the Key ID. And for added pain
 Frustrated yet? Me too. But let's just wave the rest of this category away, and move on to the next:
 
 
-## Inconsistent interfaces
+### Inconsistent interfaces
 
 So let's imagine you want to generate a key. Sounds like a reasonable thing to do, right? So we're all hip and cool and want to do so programatically with our shiny command line interface to GnuPG, so naturally we think it'll look something like:
 
-```
+<pre>
 $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA --keysize 4096 --expires 2017-10-06
-```
+</pre>
 
 ... or something to that effect. And have sensible defaults for any parameters that are skipped, or otherwise make them required. Right?
 
@@ -138,7 +139,7 @@ Actually, it should also be mentioned that as nice as it is to have all these de
 
 Speaking of order, consider this handling of the passphrase descriptor -- a special descriptor for accepting a passphrase sent by the user as part of a wrapper-mediated communication (because nobody ever uses pipes like that on the command line), from GnuPG's `gpg.c`:
 
-```
+<pre>
 	...
     if( pwfd != -1 )  /* Read the passphrase now. */
     read_passphrase_from_fd( pwfd );
@@ -148,7 +149,7 @@ Speaking of order, consider this handling of the passphrase descriptor -- a spec
       case aPrimegen:
       case aPrintMD:
       ...
-```
+</pre>
 
 The interesting thing (aside from the annoying and dangerous lack of indentation on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase *must* be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before *anything* else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG's internal state, which would be absolutely insane, even if it weren't version dependent. 
 
@@ -163,14 +164,14 @@ The reason for this is that Mailpile provides a web interface, and in some of it
 All of this is weird and annoyingly inconsistent. This category of problems probably doubled our interface in size and complexity, and made error handling an absolute nightmare. 
 
 
-## The Error Handling Issue
+### The Error Handling Issue
 
 When writing a library like this, we need to be able to anticipate errors from GnuPG and respond appropriately. The number of different and confusing ways of receiving information also means that there are a number of different and confusing ways to receive error statuses and such. Sometimes the return value is useful, but frequently it is not. Sometimes there is something on the status descriptor, or on STDERR. Often both, sometimes neither. The entire thing is maddening.
 
 The approach we've had to take is the opposite of what would be preferable. It is simply to check if the positive output we're getting from GnuPG is roughly of the sort that we were expecting, and assume that if it isn't, an error has occurred. As a general error handling strategy this is idiotic, we know, and we'd like it to stop.
 
 
-## What can be done?
+### What can be done?
 
 The short answer is the same as [Matt Green's answer][1]: It is time for PGP to die -- or rather, RFC 4880 needs to be cleaned up, simplified, and replaced. PGP in its current form needs to evolve. There are a lot of very good reasons why, which [Carlos has neatly catalogued][2]. But realistically, PGP is what people use for e-mail, and until we have widespread adoption of crypto in e-mail *at all*, trying to replace PGP is just going to cause painful fragmentation. Since one of Mailpile's goals is to get millions of people encrypting their e-mail by default, we can't risk this fragmentation right now. If we round to the closest [lakh][3], zero people currently encrypt their e-mail. This is [scary][4] and [bad][5]. The way forward is not to throw PGP out, but to start thinking seriously about what replaces RFC 4880.
 
@@ -194,17 +195,17 @@ But long term is long term. Short term, the only option is to stick with GnuPG.
 I'd therefore like to propose the following:
 
 
-## GnuPG JSON Mode
+### GnuPG JSON Mode
 
 As I mentioned, a lot of GnuPG's output is actually structured a lot more than the output format supports. In our work so far, we've managed to build reasonable JSON structures out of that output for a lot of things. Completing that work and expanding on it, it would be possible to support something like this:
 
-```
+<pre>
  $ gpg --json '{query}'
  {response1}
  {response2}
  ...
  {responseN}
-```
+</pre>
 
 This would be relatively easy to build atop of GnuPG's current source code, making the `--json` flag preempt all else in the way `--batch` currently does. Then it uses a well supported library to parse the query, figure out what it is doing, call the appropriate internal functionality, and return the right data structures, also JSON encoded.
 
@@ -217,12 +218,11 @@ With this, anybody implementing a GnuPG interface will be able to do all the mag
 Somebody might ask, what about PGPME? Frankly, PGPME is great for a particular subset of GnuPG users. They can keep using it if they want. But if `--json` exists and is consistent and comprehensive, everybody will use that. Trust me.
 
 
-## Conclusion
+### Conclusion
 
 GnuPG is important and great in many ways, but it is also deeply broken and downright dangerous. The sooner it becomes a consistent tool, the sooner it will become something other than a fool's errand to attempt to interface with it. I'm happy to be on the caravan of fools for now, but only if there is something worthwhile at the end of this quest.
 
 Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I'm sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?
-
 
 
  [1]: http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html
