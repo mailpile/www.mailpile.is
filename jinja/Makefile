@@ -38,6 +38,9 @@ loop: depend
 %.jinja:
 	@touch $@
 
+%.md: %.md.py
+	(cd $(<D); ./$(<F)) > $@
+
 %.md:
 	@touch $@
 
