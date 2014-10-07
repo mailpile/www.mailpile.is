@@ -35,41 +35,14 @@
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
     <script src="/js/list.min.js"></script>
-
-
-    <script type="text/javascript">
-    jQuery(document).ready(function($){
-
-        // Smooth Scrolling
-        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                   if (target.length) {
-                    var link_height = target.offset().top - 108;
-                     $('html,body').animate({
-                         scrollTop: link_height
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-
-        // Flexnav
-        $(".flexnav").flexNav();
-    });
-    </script>
-
-
-
-
-</head>
-<body>
-
-
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+</head><body>
 
     <div id="navigation">
       <div class="menu-button">Menu</div>
@@ -84,14 +57,13 @@
         </ul>
     </div>
 
-
     <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-
     <div id="content" class="container">
+<!-- Page content begins -->
 
 
-  <div class="row add-bottom">
+<div class="row add-bottom">
   <div class="col-6 text-center">
     <img src="/img/logo-275x200.png">
   </div>
@@ -189,10 +161,7 @@
 <p>If you are unsure your marketing material or copy meets our criteria, please <a href="mailto:team@mailpile.is">get in touch</a> and we will review it promptly. If you think you do not meet our criteria, and do not want to get in touch, please do NOT use our logo and brand in association with your service. We <strong>do not like</strong> discovering that people are not respecting our terms of use, and we really don't like hiring laywers and wasting money- there are more important things to be doing to improve the world.</p>
 
 <hr>
-
-
-
-
+<!-- Page content ends -->
         <!-- Contact & Media -->
         <div id="footer" class="clearfix">
             <div class="one-third">
@@ -237,8 +206,6 @@
 
 
     </div><!-- container -->
-
-
 
 </body>
 </html>

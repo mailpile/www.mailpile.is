@@ -37,48 +37,12 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.flexnav.min.js"></script>
     <script src="/js/list.min.js"></script>
-<<<<<<< HEAD
     <script src="/js/jquery.sortable.js"></script>
     <script src="/js/jquery.cookie.js"></script>
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
     <script src="/js/site.js"></script>
 </head><body>
-=======
-
-
-    <script type="text/javascript">
-    jQuery(document).ready(function($){
-
-        // Smooth Scrolling
-        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                   if (target.length) {
-                    var link_height = target.offset().top - 108;
-                     $('html,body').animate({
-                         scrollTop: link_height
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-
-        // Flexnav
-        $(".flexnav").flexNav();
-    });
-    </script>
-
-
-
-
-</head>
-<body>
->>>>>>> Migrated donate/ to jinjatool
-
-
 
     <div id="navigation">
       <div class="menu-button">Menu</div>
@@ -93,11 +57,10 @@
         </ul>
     </div>
 
-
     <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-
     <div id="content" class="container">
+<!-- Page content begins -->
 
     <div id="header-donate" class="row">
         <div class="half text-center">
@@ -185,12 +148,9 @@
         <h5>Thank you for your awesome support!</h5>
     </div>
 
-
-
+<!-- Page content ends -->
 
     </div><!-- container -->
-
-
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>

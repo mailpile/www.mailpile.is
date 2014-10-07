@@ -35,41 +35,14 @@
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
     <script src="/js/list.min.js"></script>
-
-
-    <script type="text/javascript">
-    jQuery(document).ready(function($){
-
-        // Smooth Scrolling
-        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                   if (target.length) {
-                    var link_height = target.offset().top - 108;
-                     $('html,body').animate({
-                         scrollTop: link_height
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-
-        // Flexnav
-        $(".flexnav").flexNav();
-    });
-    </script>
-
-
-
-
-</head>
-<body>
-
-
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+</head><body>
 
     <div id="navigation">
       <div class="menu-button">Menu</div>
@@ -84,33 +57,30 @@
         </ul>
     </div>
 
-
     <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-
     <div id="content" class="container">
-
         <div id="header" class="clearfix">
-            <div class="col-3 text-center">
+            <div class="col-2 text-center">
                 <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
             </div>
-            <div class="col-11">
-                <a href="/"><h2><strong>mail</strong>pile</h2></a>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
 <!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
             </div>
         </div>
         <hr class="blog-hr">
         <div class="row"></div>
 
-
         <!-- Content -->
         <div id="pages" class="clearfix">
             <div class="col-13">
+<!-- Page content begins -->
 
     <a href="/blog/2013-10-11_The_Month_of_Dog_Fooding.html"><h1>The Month of Dog Fooding</h1></a>
     <p><strong>Posted by <a href="#">The Team</a> on October 11, 2013</strong></p>
 
-  <p><img src="/files/dog-fooding-mailpile.jpg"></p>
+<p><img src="/files/dog-fooding-mailpile.jpg"></p>
 <p>Hello Internets!</p>
 <p>We've been quite silent these past few weeks as we've been ramping up our development. The good news is that we reached our first set of goals for September more or less on time, and now we're rushing through a bunch of the October goals.</p>
 <h3>Development Progress</h3>
@@ -146,14 +116,11 @@
 <p>That said, there are some big things afoot in October and November. This month, we intend to get OpenPGP working, set up a testing environment for the project and be more hard on ourselves about documenting what we're doing. On top of that we're going to flesh out the plugin architecture and the APIs, bake in some internationalization and localization support, and get the contact manager to do a little bit more than just storing names.</p>
 <p>We're excited about all of this, and we hope you are too.</p>
 <p>-- Bjarni, Brennan and Smári</p>
-
-
+<!-- Page content ends -->
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
                 <hr>
             </div>
         </div>
-
-
         <!-- Contact & Media -->
         <div id="footer" class="clearfix">
             <div class="one-third">
@@ -198,8 +165,6 @@
 
 
     </div><!-- container -->
-
-
 
 </body>
 </html>

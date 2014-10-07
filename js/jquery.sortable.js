@@ -1,1 +1,1 @@
-/Users/brennannovak/Sites/HoiPoi/js/jquery.sortable.js
+../../hoipoi/js/jquery.sortable.js
