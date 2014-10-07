@@ -1,5 +1,6 @@
 Subject: Providers
 Format: html
+Type: full
 
 <div class="row add-bottom">
   <div class="col-6 text-center">
