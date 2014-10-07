@@ -1,5 +1,6 @@
 Subject: Thanks To Our Community
 Format: html
+Type: full
 
 		<div id="header-donate" class="row">
 			<div class="col-12 text-center">
