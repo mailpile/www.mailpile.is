@@ -17,7 +17,7 @@ As a result, we've got a roughly 1200 line chunk of code in Mailpile that has th
 
 The problems with GnuPG seem to fall roughly into two broad categories: inconsistent output structure, inconsistent interfaces. These are both ripe with surprising behaviour and confusing failure modes. In addition to these categories, it appears that the larger meta problem is that no single statement about its problems is going to remain a stable statement, as these problems disappear and reappear at odd intervals as new versions are being built. The number of moving parts essentially leads to a lot of confusion about whether a particular bug exists in a particular version or not, and whether it is affected by wind speed. To wit, I have over the course of Mailpile development added, removed, and readded a workaround for a bug, although I think I'm safe to say that it does not exist post GnuPG 2.1. The comment of that workaround in the code illustrates the issue perfectly:
 
-<pre>
+<pre class="add-bottom">
 def list_secret_keys(self):
        #
        # Note: The "." parameter that is passed is to work around a bug
@@ -63,7 +63,7 @@ The line-by-line output has two modes, the normal mode where the data is tabulat
 
 First, a word on discoverability. If you ever intend to do anything with GnuPG, you first need to read and internalize a document aptly titled `DETAILS`, which contains a lot of the details about what's going on with GnuPG output. I have dutifully read, memorized chunks of, and bookmarked this file for posterity. It is immensely helpful. For example, it gives an example of GnuPG's output:
 
-<pre>
+<pre class="add-bottom">
 $ gpg --with-colons --list-keys \
       --with-fingerprint --with-fingerprint wk@gnupg.org
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
@@ -88,14 +88,14 @@ Now, the inconsistencies start to get exciting around about here.
 
 Notice these two lines:
 
-<pre>
+<pre class="add-bottom">
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
 fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
 </pre>
 
 These both follow the same output format, according to `DETAILS`. But look what happens when I add spaces to align the columns:
 
-<pre>
+<pre class="add-bottom">
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:                                        ::scESC:
 fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
 </pre>
@@ -111,7 +111,7 @@ Frustrated yet? Me too. But let's just wave the rest of this category away, and 
 
 So let's imagine you want to generate a key. Sounds like a reasonable thing to do, right? So we're all hip and cool and want to do so programatically with our shiny command line interface to GnuPG, so naturally we think it'll look something like:
 
-<pre>
+<pre class="add-bottom">
 $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA --keysize 4096 --expires 2017-10-06
 </pre>
 
@@ -139,7 +139,7 @@ Actually, it should also be mentioned that as nice as it is to have all these de
 
 Speaking of order, consider this handling of the passphrase descriptor -- a special descriptor for accepting a passphrase sent by the user as part of a wrapper-mediated communication (because nobody ever uses pipes like that on the command line), from GnuPG's `gpg.c`:
 
-<pre>
+<pre class="add-bottom">
 	...
     if( pwfd != -1 )  /* Read the passphrase now. */
     read_passphrase_from_fd( pwfd );
@@ -199,7 +199,7 @@ I'd therefore like to propose the following:
 
 As I mentioned, a lot of GnuPG's output is actually structured a lot more than the output format supports. In our work so far, we've managed to build reasonable JSON structures out of that output for a lot of things. Completing that work and expanding on it, it would be possible to support something like this:
 
-<pre>
+<pre class="add-bottom">
  $ gpg --json '{query}'
  {response1}
  {response2}

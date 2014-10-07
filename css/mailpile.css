@@ -2154,10 +2154,10 @@ blockquote cite a:visited {
 code,
 pre,
 .pre {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   background: #f6f6f6;
   color: #333333;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border: 1px solid #b3b3b3;
   border-radius: 3px;
   font-family: 'Courier';

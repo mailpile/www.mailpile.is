@@ -87,7 +87,7 @@
 <p>PGPME is almost as confusing and annoying as calling GnuPG directly, but it also requires us to ship architecture-specific libraries to everybody, something we're actively avoiding. Having to ship GnuPG binaries to Windows and MacOS users is bad enough, but dependency hell is a place we want to stay out of. If we were writing Mailpile in, say, C or C++, then PGPME would definitely be the library of choice, but we're not, so it isn't. On top of that, the available <a href="http://pyme.sourceforge.net/">Python bindings for PGPME</a> are very flaky (last updated in 2008!), and not developed or maintained by the GnuPG team.</p>
 <p>As a result, we've got a roughly 1200 line chunk of code in Mailpile that has the fun and useful task of chatting with GnuPG, and the stupifyingly annoying task of working around all of GnuPG's inconsistencies.</p>
 <p>The problems with GnuPG seem to fall roughly into two broad categories: inconsistent output structure, inconsistent interfaces. These are both ripe with surprising behaviour and confusing failure modes. In addition to these categories, it appears that the larger meta problem is that no single statement about its problems is going to remain a stable statement, as these problems disappear and reappear at odd intervals as new versions are being built. The number of moving parts essentially leads to a lot of confusion about whether a particular bug exists in a particular version or not, and whether it is affected by wind speed. To wit, I have over the course of Mailpile development added, removed, and readded a workaround for a bug, although I think I'm safe to say that it does not exist post GnuPG 2.1. The comment of that workaround in the code illustrates the issue perfectly:</p>
-<pre>
+<pre class="add-bottom">
 def list_secret_keys(self):
        #
        # Note: The "." parameter that is passed is to work around a bug
@@ -129,7 +129,7 @@ def list_secret_keys(self):
 </ol>
 <p>The line-by-line output has two modes, the normal mode where the data is tabulated with spaces into mostly nice, if somewhat confusing columns, and the <code>--with-colons</code> mode, where the spaces are replaced with colons, for easy parsing. This is quite clever and good. The problem arises when one intends to start parsing this data.</p>
 <p>First, a word on discoverability. If you ever intend to do anything with GnuPG, you first need to read and internalize a document aptly titled <code>DETAILS</code>, which contains a lot of the details about what's going on with GnuPG output. I have dutifully read, memorized chunks of, and bookmarked this file for posterity. It is immensely helpful. For example, it gives an example of GnuPG's output:</p>
-<pre>
+<pre class="add-bottom">
 $ gpg --with-colons --list-keys \
       --with-fingerprint --with-fingerprint wk@gnupg.org
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
@@ -148,13 +148,13 @@ fpr:::::::::AB059359A3B81F410FCFF97F5CE086B5B5A18FF4:
 <p>In reality, parsing this isn't too terrible, but it can only be done in a reasonable way if you understand the structure of PGP keys and the output format of GnuPG. These are <em>not</em> reasonable assumptions for GnuPG to be making. Even armed with knowledge about the structure of keys and the handy <code>DETAILS</code> document, my first version of a parser was overly generic and terribly inefficient, because I kept trying to avoid inconsistencies.</p>
 <p>Now, the inconsistencies start to get exciting around about here.</p>
 <p>Notice these two lines:</p>
-<pre>
+<pre class="add-bottom">
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
 fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
 </pre>
 
 <p>These both follow the same output format, according to <code>DETAILS</code>. But look what happens when I add spaces to align the columns:</p>
-<pre>
+<pre class="add-bottom">
 pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:                                        ::scESC:
 fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
 </pre>
@@ -164,7 +164,7 @@ fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6
 <p>Frustrated yet? Me too. But let's just wave the rest of this category away, and move on to the next:</p>
 <h3>Inconsistent interfaces</h3>
 <p>So let's imagine you want to generate a key. Sounds like a reasonable thing to do, right? So we're all hip and cool and want to do so programatically with our shiny command line interface to GnuPG, so naturally we think it'll look something like:</p>
-<pre>
+<pre class="add-bottom">
 $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA --keysize 4096 --expires 2017-10-06
 </pre>
 
@@ -180,7 +180,7 @@ $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA
 <p>The biggest complaint about the status descriptor is that it cannot be relied upon as a flow control mechanism. It does not always give output, or indicate the appropriate sequence of things, so an interface can use it for the purpose of increasing their information about the current situation, but not as a replacement for constant reading and parsing of the STDOUT and STDERR handles, and certainly not as a replacement for in-depth understanding of which order things happen in.</p>
 <p>Actually, it should also be mentioned that as nice as it is to have all these descriptors, heavy use of descriptors turns into a world of problems on Windows. Windows is finicky enough as it is. Our solution was passing the status through to STDERR, which really works kind of fine.</p>
 <p>Speaking of order, consider this handling of the passphrase descriptor -- a special descriptor for accepting a passphrase sent by the user as part of a wrapper-mediated communication (because nobody ever uses pipes like that on the command line), from GnuPG's <code>gpg.c</code>:</p>
-<pre>
+<pre class="add-bottom">
     ...
     if( pwfd != -1 )  /* Read the passphrase now. */
     read_passphrase_from_fd( pwfd );
@@ -218,7 +218,7 @@ $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA
 <p>I'd therefore like to propose the following:</p>
 <h3>GnuPG JSON Mode</h3>
 <p>As I mentioned, a lot of GnuPG's output is actually structured a lot more than the output format supports. In our work so far, we've managed to build reasonable JSON structures out of that output for a lot of things. Completing that work and expanding on it, it would be possible to support something like this:</p>
-<pre>
+<pre class="add-bottom">
  $ gpg --json '{query}'
  {response1}
  {response2}
