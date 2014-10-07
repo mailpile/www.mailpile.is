@@ -35,45 +35,18 @@
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.flexnav.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
     <script src="/js/list.min.js"></script>
-{% block head_extra %}{% endblock %}
-
-    <script type="text/javascript">
-{%- block script %}
-    jQuery(document).ready(function($){
-
-        // Smooth Scrolling
-        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-                || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                   if (target.length) {
-                    var link_height = target.offset().top - 108;
-                     $('html,body').animate({
-                         scrollTop: link_height
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-
-        // Flexnav
-        $(".flexnav").flexNav();
-{%- block document_ready_extra %}{%- endblock %}
-    });
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+{%- block head_extra %}{% endblock %}
 {%- endblock %}
-    </script>
-
-
-{% endblock %}
-
-</head>
-<body>
+</head><body>
 {% block body %}
-
-{% block navigation %}
+{%- block navigation %}
     <div id="navigation">
       <div class="menu-button">Menu</div>
         <ul data-breakpoint="800" class="flexnav">
@@ -86,40 +59,41 @@
             <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
     </div>
-{% endblock %}
+{%- endblock %}
 {% block github_banner %}
     <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-{% endblock %}
+{%- endblock %}
 
     <div id="content" class="container">
 {%- if not page or not page.type == 'full' %}
-{% block page_top %}
+{%- block page_top %}
         <div id="header" class="clearfix">
-            <div class="col-3 text-center">
+            <div class="col-2 text-center">
                 <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
             </div>
-            <div class="col-11">
-                <a href="/"><h2><strong>mail</strong>pile</h2></a>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile{% if page and page.breadcrumb %} : {{ page.breadcrumb }}{% endif %}</h2></a>
 <!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
             </div>
         </div>
         <hr class="blog-hr">
         <div class="row"></div>
-{% endblock %}
+{%- endblock %}
 
         <!-- Content -->
         <div id="pages" class="clearfix">
             <div class="col-13">
 {%- endif %}
+<!-- Page content begins -->
 {% block content %}{% endblock %}
+<!-- Page content ends -->
 {%- if not page or not page.type == 'full' %}
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
                 <hr>
             </div>
         </div>
 {%- endif %}
-
-{% block page_bottom %}
+{%- block page_bottom %}
         <!-- Contact & Media -->
         <div id="footer" class="clearfix">
             <div class="one-third">
@@ -164,8 +138,7 @@
 {% endblock %}
 
     </div><!-- container -->
-
 {% endblock %}
-{% block tail %}{% endblock %}
+{%- block tail %}{% endblock %}
 </body>
 </html>

@@ -7,7 +7,7 @@ MP_RFC822 ?= `find . -name template.md-jinja`
 
 MAKE = make JINJATOOL=$(JINJATOOL) MP_RFC822=$(MP_RFC822) --no-print-directory
 TARGETS = find . -name \*.jinja* -o -name \*.md \
-            |grep -v -e '.swp$$' -e '.py$$' |sort \
+            |grep -v -e '.swp$$' -e '.py$$' -e '~$$' |sort \
             |sed -e 's/md$$/html/g' \
                  -e 's/jinja-rss$$/rss/g' \
                  -e 's/jinja$$/html/g'
