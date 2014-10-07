@@ -2990,9 +2990,10 @@ ol.issues li.issue {
   background: #ffffff;
 }
 ol.issues li.issue:hover {
-  border: 1px solid #be1c21;
+  border: 1px solid #b3b3b3;
   background: #ffffff;
   cursor: move;
+  transition-duration: 0.3s;
 }
 ol.issues li.issue:active {
   border: 1px solid #b3b3b3;
