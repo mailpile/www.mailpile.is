@@ -75,7 +75,7 @@ donate/cancel.jinja: donate/index.jinja jinja/layouts/page.html-jinja
 donate/index.jinja: jinja/layouts/page.html-jinja
 donate/thanks.jinja: donate/index.jinja jinja/layouts/page.html-jinja
 download/index.jinja: jinja/layouts/page.html-jinja
-jinja/layouts/jinja-test.jinja: jinja/layouts jinja/layouts/md-test.md
+jinja/tests/jinja-test.jinja: jinja/tests jinja/tests/md-test.md
 press/index.jinja: jinja/layouts/page.html-jinja press press/2013-08-09_50000_USD_a_einni_viku.md press/2013-08-09_50000_USD_in_one_week.md
 roadmap/index.jinja: jinja/layouts/page.html-jinja roadmap/roadmap.html
 blog/2013-08-08_Mailpile_Launched.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
@@ -110,7 +110,7 @@ faq/faq.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
 faq/features.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
 faq/index.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
 index.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
-jinja/layouts/md-test.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
+jinja/tests/md-test.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
 press/2013-08-09_50000_USD_a_einni_viku.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
 press/2013-08-09_50000_USD_in_one_week.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
 providers/index.md: jinja/layouts/page.html-jinja jinja/template.md-jinja
