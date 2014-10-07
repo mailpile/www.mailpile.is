@@ -19,7 +19,6 @@ jQuery(document).ready(function($){
     // Flexnav
     $(".flexnav").flexNav();
 
-
     // Hoi Poi community stuff
     hoipoi.init({
         url_db: "/hoipoi/db/",       // Directory of user json
@@ -32,17 +31,20 @@ jQuery(document).ready(function($){
         dom_nickname: ".login-nickname", // Selector for user's name
         cookie_user: "usr",              // Cookie to store user name
         cookie_token: "tok",             // Cookie to store token
+        template_vote: "<a class='vote vote-%(vote)s' id='%(id)s' data-issue='%(issue)s' data-value='%(vote)s'><span class='icon-vote-%(vote)s'></span> %(vote)s</a>",
         callback_login_ok: function() {
-          alert('Login OK');
+          $('#roadmap-details').show();
+          console.log('Login OK');
         },
         callback_login_error: function() {
           alert('Login error :(');
         },
         callback_logged_out: function() {
-          alert('You have been logged out. Good riddance');
+          $('#roadmap-details').hide();
+          console.log('You have been logged out. Good riddance');
         },
         callback_ranked_vote_ok: function() {
-          alert('Stuff got ranked!');
+          console.log('Stuff got ranked!');
         },
         callback_ranked_vote_error: function() {
           alert('Oops, could not rank things');
