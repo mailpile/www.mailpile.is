@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
     <title>Mailpile: Roadmap</title>
 
@@ -37,174 +37,182 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.flexnav.min.js"></script>
     <script src="/js/list.min.js"></script>
+
+    <!-- Hoi Poi additions -->
+    <link rel="stylesheet" href="/css/hoipoi.css">
     <script src="/js/jquery.sortable.js"></script>
     <script src="/js/jquery.cookie.js"></script>
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
-    <script src="/js/site.js"></script>
+
+
+    <script type="text/javascript">
+
+    jQuery(document).ready(function($){
+
+        // Smooth Scrolling
+        $('a.scroll-link[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                   if (target.length) {
+                    var link_height = target.offset().top - 108;
+                     $('html,body').animate({
+                         scrollTop: link_height
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+
+        // Flexnav
+        $(".flexnav").flexNav();
+
+        // Hoi Poi community stuff
+        hoipoi.init({
+            url_db: "/hoipoi/db/",       // Directory of user json
+            url_up: "/cgi-bin/mailpile/user-up.py",   // Path to update CGI scr
+            url_mv: "/cgi-bin/mailpile/user-mv.py",   // Path to moving CGI scr
+            url_mk: "/cgi-bin/mailpile/user-mk.py",   // Path to creating CGI s
+            dom_login: ".login-form",        // Selector for login form
+            dom_logout: ".logout-form",      // Selector for logout form
+            dom_login_error: ".login-error", // Selector for "login failed"
+            dom_nickname: ".login-nickname", // Selector for user's name
+            cookie_user: "usr",              // Cookie to store user name
+            cookie_token: "tok"              // Cookie to store token
+        });
+
+    });
+
+    </script>
 
 </head>
 <body>
 
-	<div id="navigation">
-	  <div class="menu-button">Menu</div>
-		<ul data-breakpoint="800" class="flexnav">
-			<li><a href="/" class="scroll-link">About</a></li>
-			<li><a href="/download/" class="scroll-link">Download</a></li>
-			<li><a href="/faq/" class="scroll-link">FAQ</a></li>
-			<li><a href="/demos/" class="scroll-link">Demos</a></li>
-			<li><a href="/donate/" class="scroll-link">Donate</a></li>
-			<li><a href="/blog/" class="scroll-link">Blog</a></li>
-			<li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
-		</ul>
-	</div>
 
-	<a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
-	<div id="content" class="container">
-		<div id="header" class="clearfix">
-			<div class="col-2 text-center">
-				<a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
-			</div>
-			<div class="col-12">
-				<a href="/"><h2><strong>mail</strong>pile : community</h2></a>
-<!--		<h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
-			</div>
-		</div>
-		<hr class="blog-hr">
-		<div class="row"></div>
-
-		<!-- Content -->
-		<div id="pages" class="clearfix">
-      <div class="row">
-        <div class="login-form hide text-center">
-          <h5>Welcome to the Mailpile community. Please login to vote!</h5>
-          <form class="standard full text-center clearfix">
-            <input class="username left add-right" type="text" placeholder="username"> &nbsp;
-            <input class="password left add-left" type="password" placeholder="password">
-            <button id="login" class="button-primary">Log in</button>
-          </form>
-          <p>Don't have a login? All you need to do is <a href="/donate/"><span class="icon-donate"></span>  Donate at least $23.00 per year</a> to support the creation of Mailpile :)</p>
-        </div>
-        <div class="logout-form hide text-center clearfix">
-          <h5 class="left">Halló, <span class="login-nickname"></span></h5>
-          <button class="button-primary left logout">Log out</button>
-        </div>
-      </div>
-      <div id="roadmap-details" class="row clearfix hide">
-        <div class="col-10">
-          <h3>Prioritize our Roadmap</h3>
-          <p>Our roadmap consists of new features, ideas, and known bugs that we are aware of. Drag items in list to let us know what issues are of the highest priority to you and what you'd like to see fixed the fastest. To add an item please <a href="https://github.com/pagekite/mailpile/issues/new" target="_blank">file an issue on Github.</a></p>
-        </div>
-        <div class="col-6">
-          <h3>Vote on Decisions</h3>
-          <p>There are decisions we need to make as a company & project. Cast your vote yes or no to decide the outcome of each. You can also <a href="https://github.com/pagekite/mailpile/issues/new" target="_blank">submit new items</a> to the list.</p>
-        </div>
-      </div>
-<div class="row clearfix">
-  <div class="col-10">
-    <ul class="milestones vote-list ">
-       <li class="milestone milestone-1_0_release">1.0 Release    <ul class="labels ">
-          <li class="label label-back_end">Back End
-            <ol class="issues ranked-election " data-election="all-1_0_release-back_end-issues">
-             <li class="issue label-back_end" data-issue="996"><a href="https://github.com/pagekite/Mailpile/issues/996">Create Linux packages (.deb, .rpm)</a></li>
-             <li class="issue label-back_end label-stretch" data-issue="1004"><a href="https://github.com/pagekite/Mailpile/issues/1004">Ensure that incoming non-pgp/mime encrypted attachments are usable</a></li>
-             <li class="issue label-back_end label-stretch" data-issue="1000"><a href="https://github.com/pagekite/Mailpile/issues/1000">Get pakcage into Debian Jessie</a></li>
-             <li class="issue label-back_end label-stretch" data-issue="1001"><a href="https://github.com/pagekite/Mailpile/issues/1001">Implement IMAP IDLE support</a></li>
-             <li class="issue label-back_end label-front_end label-stretch" data-issue="1002"><a href="https://github.com/pagekite/Mailpile/issues/1002">Implement Restoration process to match the backed up Mailpile</a></li>
-             <li class="issue label-back_end label-privacy_security" data-issue="487"><a href="https://github.com/pagekite/Mailpile/issues/487">Implement smart "crypto policy" support on a per-contact basis</a></li>
-             <li class="issue label-back_end label-front_end" data-issue="993"><a href="https://github.com/pagekite/Mailpile/issues/993">Implement suport for MacMail sources</a></li>
-             <li class="issue label-back_end" data-issue="994"><a href="https://github.com/pagekite/Mailpile/issues/994">Implement suport for POP3 mail sources</a></li>
-             <li class="issue label-back_end" data-issue="897"><a href="https://github.com/pagekite/Mailpile/issues/897">Implement suport for Thunderbird mail sources</a></li>
-             <li class="issue label-back_end" data-issue="997"><a href="https://github.com/pagekite/Mailpile/issues/997">Improve overall speed of Indexing of new mail</a></li>
-             <li class="issue label-back_end label-front_end" data-issue="995"><a href="https://github.com/pagekite/Mailpile/issues/995">Improve overall speed of Web UI</a></li>
-             <li class="issue label-back_end label-front_end label-stretch" data-issue="967"><a href="https://github.com/pagekite/Mailpile/issues/967">Manual PGP key selection</a></li>
-             <li class="issue label-back_end label-front_end label-stretch" data-issue="60"><a href="https://github.com/pagekite/Mailpile/issues/60">multi account support? </a></li>
-            </ol>
-          </li>
-          <li class="label label-front_end">Front End
-            <ol class="issues ranked-election " data-election="all-1_0_release-front_end-issues">
-             <li class="issue label-front_end label-stretch" data-issue="998"><a href="https://github.com/pagekite/Mailpile/issues/998">Create web UI for Filters</a></li>
-             <li class="issue label-front_end label-stretch" data-issue="999"><a href="https://github.com/pagekite/Mailpile/issues/999">Implement support for viewing & editing Contacts via web UI</a></li>
-             <li class="issue label-front_end label-stretch" data-issue="1003"><a href="https://github.com/pagekite/Mailpile/issues/1003">Implement web UI for enabling/disabling autotagging</a></li>
-            </ol>
-          </li>
-       </ul></li>
-    </ul>
-  </div>
-  <div class="col-6">
-    <h4>Current Decisions</h4>
-    <div class="roadmap-single-choices">
-      <div class="single-choice-election">
-          <div class="issue" data-issue="30201" data-options="yes,no">
-              <span class="issue-title"><a href="https://github.com/pagekite/Mailpile/issues/30201">Drop the Apache 2 license</a></span>
-              <span class="issue-details">Dropping the Apache 2 license makes Mailpile keeps it more focused on remaining Free software... someone else write this out.</span>
-              <div class="vote-options"></div>
-          </div>
-      </div>
-      <div class="single-choice-election">
-          <div class="issue" data-issue="30221" data-options="yes,no">
-              <span class="issue-title"><a href="https://github.com/pagekite/Mailpile/issues/30201">Drop the AGPL 3 license</a></span>
-              <span class="issue-details">Dropping the AGPL 3 license would make Mailpile more friendly to companies that are not fully open source and have more commericial applications in mind.</span>
-              <div class="vote-options"></div>
-          </div>
-      </div>
-      <div class="single-choice-election">
-          <div class="issue" data-issue="30231" data-options="yes,no">
-              <span class="issue-title"><a href="https://github.com/pagekite/Mailpile/issues/30201">Should the Mailpile team get new haircuts?</a></span>
-              <span class="issue-details">Some people have complained. So, we wanted to put it to vote for you, dear community supporters, since after all we are using money you graciously donated.</span>
-              <div class="vote-options"></div>
-          </div>
-      </div>
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link">About</a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/demos/" class="scroll-link">Demos</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
     </div>
-  </div>
-</div>
-<hr>
 
-		<!-- Contact & Media -->
-		<div id="footer" class="clearfix">
-			<div class="one-third">
-				<h3>Please Donate</h3>
-				<p>To ensure future development and growth of Mailpile and our community!</p>
-				<p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
-			</div>
-			<div class="one-third">
-				<h3>Contact Us</h3>
-				<ul class="add-bottom">
-					<li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
-					<li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
-					<li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
-					<li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
-				</ul>
-				<ul>
-					<li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
-					<li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
-					<li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
-				</ul>
-			</div>
-			<div class="one-third">
-				<h3>Downloads</h3>
-				<ul class="add-bottom">
-					<li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
-					<li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+
+    <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+
+    <div id="content" class="container">
+
+        <div id="header" class="clearfix">
+            <div class="col-3 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-11">
+                <a href="/"><h2><strong>mail</strong>pile</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+            <div class="login-form" style="display: none;">
+                <input class="username"/>
+                <input class="password" type="password"/>
+                <button id="login">Log in</button>
+            </div>
+            <div class="logout-form" style="display: none;">
+                Hello, <span class="login-nickname"></span>
+                <button class="logout">Log out</button>
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+<ul class="milestones vote-list ">
+   <li class="milestone milestone-1_0_release">1.0 Release    <ul class="labels ">
+      <li class="label label-back_end">Back End       <ul class="issues ranked-election " data-election="all-1_0_release-back_end-issues">
+         <li class="issue label-back_end" data-issue="996"><a href="https://github.com/pagekite/Mailpile/issues/996">Create Linux packages (.deb, .rpm)</a></li>
+         <li class="issue label-back_end label-stretch" data-issue="1004"><a href="https://github.com/pagekite/Mailpile/issues/1004">Ensure that incoming non-pgp/mime encrypted attachments are usable</a></li>
+         <li class="issue label-back_end label-stretch" data-issue="1000"><a href="https://github.com/pagekite/Mailpile/issues/1000">Get pakcage into Debian Jessie</a></li>
+         <li class="issue label-back_end label-stretch" data-issue="1001"><a href="https://github.com/pagekite/Mailpile/issues/1001">Implement IMAP IDLE support</a></li>
+         <li class="issue label-back_end label-front_end label-stretch" data-issue="1002"><a href="https://github.com/pagekite/Mailpile/issues/1002">Implement Restoration process to match the backed up Mailpile</a></li>
+         <li class="issue label-back_end label-privacy_security" data-issue="487"><a href="https://github.com/pagekite/Mailpile/issues/487">Implement smart "crypto policy" support on a per-contact basis</a></li>
+         <li class="issue label-back_end label-front_end" data-issue="993"><a href="https://github.com/pagekite/Mailpile/issues/993">Implement suport for MacMail sources</a></li>
+         <li class="issue label-back_end" data-issue="994"><a href="https://github.com/pagekite/Mailpile/issues/994">Implement suport for POP3 mail sources</a></li>
+         <li class="issue label-back_end" data-issue="897"><a href="https://github.com/pagekite/Mailpile/issues/897">Implement suport for Thunderbird mail sources</a></li>
+         <li class="issue label-back_end" data-issue="997"><a href="https://github.com/pagekite/Mailpile/issues/997">Improve overall speed of Indexing of new mail</a></li>
+         <li class="issue label-back_end label-front_end" data-issue="995"><a href="https://github.com/pagekite/Mailpile/issues/995">Improve overall speed of Web UI</a></li>
+         <li class="issue label-back_end label-front_end label-stretch" data-issue="967"><a href="https://github.com/pagekite/Mailpile/issues/967">Manual PGP key selection</a></li>
+         <li class="issue label-back_end label-front_end label-stretch" data-issue="60"><a href="https://github.com/pagekite/Mailpile/issues/60">multi account support? </a></li>
+      </ul></li>
+      <li class="label label-front_end">Front End       <ul class="issues ranked-election " data-election="all-1_0_release-front_end-issues">
+         <li class="issue label-front_end label-stretch" data-issue="998"><a href="https://github.com/pagekite/Mailpile/issues/998">Create web UI for Filters</a></li>
+         <li class="issue label-front_end label-stretch" data-issue="999"><a href="https://github.com/pagekite/Mailpile/issues/999">Implement support for viewing & editing Contacts via web UI</a></li>
+         <li class="issue label-front_end label-stretch" data-issue="1003"><a href="https://github.com/pagekite/Mailpile/issues/1003">Implement web UI for enabling/disabling autotagging</a></li>
+      </ul></li>
+   </ul></li>
+</ul>
+
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+                <hr>
+            </div>
+        </div>
+
+
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 85%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                </ul>
+                <ul>
+                    <li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+                    <li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+                    <li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Downloads</h3>
+                <ul class="add-bottom">
+                    <li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
           <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
           <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
-					<li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
         </ul>
-				<ul>
-					<li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
-					<li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
-					<li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
-					<li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
-					<li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
-				</ul>
-			</div>
-		</div>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+                    <li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+                    <li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+                </ul>
+            </div>
+        </div>
 
-		<div class="add-top add-bottom"></div>
+        <div class="add-top add-bottom"></div>
 
 
-	</div><!-- container -->
+    </div><!-- container -->
+
+
 
 </body>
 </html>
