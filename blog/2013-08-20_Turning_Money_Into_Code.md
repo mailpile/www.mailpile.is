@@ -1,6 +1,7 @@
 Subject: Turning Money Into Code
 Author: Bjarni
 Date: August 20, 2013
+Type: blog
 
 With three weeks left of [our campaign](http://igg.me/at/mailpile), we
 have already reached our goal of $100,000 USD!

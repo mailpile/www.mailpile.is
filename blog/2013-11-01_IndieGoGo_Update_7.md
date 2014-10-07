@@ -1,6 +1,7 @@
 Subject: Perks? What perks? (IGG Update #7)
 Author: Bjarni
 Date: November 1, 2013
+Type: blog
 
 <small>(The following was posted to
 [IndieGoGo](http://igg.me/at/mailpile) as a campaign update.)</small>

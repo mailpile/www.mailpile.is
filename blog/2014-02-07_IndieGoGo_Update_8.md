@@ -1,6 +1,7 @@
 Subject: Development, Perks, and Alpha (IGG Update #8)
 Author: The Team
 Date: February 7, 2014
+Type: blog
 
 Dear Mailpile Backers,
 

@@ -1,6 +1,7 @@
 Subject: We are funded! (IGG update #2)
 Author: Bjarni
 Date: August 21, 2013
+Type: blog
 
 <small>(The following was posted to [IndieGoGo](http://igg.me/at/mailpile)
 as a campaign update.)</small>

@@ -1,6 +1,7 @@
 Subject: Our Upcoming Beta Release
 Author: The Team
 Date: August 8, 2014
+Type: blog
 
 We planed to release our Beta today, but because we wanted the Beta to be a little less like an Alpha, we postponed it for a bit. Don't worry, it won't be long! We're hard at work. Bugs are being fixed, functionality is being added, people are losing sleep. Our Beta release is forthcoming. In fact, you'll be shocked when you figure out how few days it is until it gets released. Hint: it's less than 10 days and more than 5 days away, give or take a couple depending on your timezone ;)
 

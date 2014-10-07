@@ -1,6 +1,7 @@
 Subject: Mailpile Workshop in London
 Author: Bjarni
 Date: April 7, 2014
+Type: blog
 
 <img src="/files/London-Workshop-2014.png">
 

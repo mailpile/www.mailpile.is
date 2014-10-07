@@ -1,6 +1,7 @@
 Subject: Fonts and Copyright Licenses
 Author: Smári McCarthy
 Date: August 30, 2013
+Type: blog
 
 <img src="/files/Logo-Font-Comparisson.png">
 

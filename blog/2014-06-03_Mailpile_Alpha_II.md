@@ -1,6 +1,7 @@
 Subject: Mailpile Alpha II - The Dogfood Edition
 Author: The Team
 Date: July 3, 2014
+Type: blog
 
 <img src="/files/Alpha-II.jpg" border="0">
 

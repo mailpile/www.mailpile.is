@@ -1,6 +1,7 @@
 Subject: Our Upcoming Beta Release: Part II
 Author: The Team
 Date: August 20, 2014
+Type: blog
 
 Initially, we planned to release our Beta (this is sounding familiar) back on August 8th. A few days before this date, we realized we were no where near ready. We thought we could polish everything off if we gave ourselves roughly an extra week, so we did. We also told you about this deadline, dear supporters. As we neared the end of that extended date, some of these bugs were still not resolved and we joyfully discovered some wonderful new bugs as we got further into user testing.
 

@@ -1,6 +1,7 @@
 Subject: PayPal Freezes Campaign Funds
 Author: Brennan
 Date: September 5, 2013
+Type: blog
 
 [**Update:** PayPal have unfrozen the account, for now at least. Thank
 you for your support!]

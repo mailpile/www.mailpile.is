@@ -1,6 +1,7 @@
 Subject: DarkMail and Secure Protocols
 Author: Smári
 Date: October 31, 2013
+Type: blog
 
 Over the last couple of days, a lot of people have contacted us asking if we
 are going to support or implement [DarkMail, a project announced yesterday by

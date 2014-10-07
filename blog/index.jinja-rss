@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Mailpile: The Mailpile Blog</title>
+  <link>http://www.mailpile.is/blog/</link>
+{%- for fn in ls('.', '\.md$')[-5:]|reverse %}
+  {% set page = cat(fn)|from_rfc822 -%}
+  {% set html = fn|replace('.md', '.html') -%}
+  <item>
+    <title>{{ page.subject }}</title>
+    <link>http://www.mailpile.is/blog/{{ html }}</link>
+    <description>{{ page.body }}</description>
+  </item>
+{%- endfor %}
+</channel></rss>

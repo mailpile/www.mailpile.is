@@ -1,6 +1,7 @@
 Subject: Mailpile Launched
 Author: Bjarni
 Date: August 8, 2013
+Type: blog
 
 Hello world! It has now been a few days since [Mailpile](/) launched,
 and it is time to start blogging about what has been going on.

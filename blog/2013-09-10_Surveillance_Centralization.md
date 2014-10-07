@@ -1,6 +1,7 @@
 Subject: Surveillance And Centralization (video)
 Author: Brennan
 Date: September 10, 2013
+Type: blog
 
 <iframe src="//player.vimeo.com/video/74119313?title=0&amp;byline=0&amp;portrait=0&amp;color=be2408" width="650" height="366" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 

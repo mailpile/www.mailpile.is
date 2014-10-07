@@ -1,6 +1,7 @@
 Subject: Where is the Community Site?
 Author: The Team
 Date: April 30, 2014
+Type: blog
 
 <img src="/files/No-Community.png">
 

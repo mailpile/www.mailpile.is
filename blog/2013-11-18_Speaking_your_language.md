@@ -1,6 +1,7 @@
 Subject: Speaking Your Language
 Author: Smári
 Date: November 18, 2013
+Type: blog
 
 <img src='/files/internationalization.jpg'>
 

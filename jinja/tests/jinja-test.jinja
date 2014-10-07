@@ -1,0 +1,11 @@
+<html><head>
+    <title>Testing things</title>
+</head><body>
+    <h1>Hello {{ USER }}!</h1>
+    <ul>{% for fn in ls('.', '\.md$')|sort %}
+        {% set data = cat(fn)|from_rfc822 -%}
+        <li><a href="{{ fn|replace('.md', '.html') }}">
+            {{ data.subject }}
+        </a></li>
+    {% endfor %}</ul>
+</body></html>

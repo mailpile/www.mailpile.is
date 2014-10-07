@@ -1,6 +1,7 @@
 Subject: A Rough Budget and Alpha Roadmap
 Author: Bjarni
 Date: September 11, 2013
+Type: blog
 
 Brennan, Smári and I had a longish meeting in London last Friday to
 discuss our next steps, now that the campaign is finished.  We discussed

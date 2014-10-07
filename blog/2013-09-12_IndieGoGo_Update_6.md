@@ -1,6 +1,7 @@
 Subject: Thank you! (IGG Update #6)
 Author: Bjarni
 Date: September 12, 2013
+Type: blog
 
 <small>(The following was posted to
 [IndieGoGo](http://igg.me/at/mailpile) as a campaign update.)</small>

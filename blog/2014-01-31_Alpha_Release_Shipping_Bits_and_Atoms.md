@@ -1,6 +1,7 @@
 Subject: Alpha Release: Shipping Bits and Atoms
 Date: February 1, 2014
 Author: The Team
+Type: blog
 
 <img src="/files/Blog-Post-Alpha.jpg">
 
