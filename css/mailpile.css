@@ -2066,8 +2066,8 @@ h6 a {
   font-weight: inherit;
 }
 h1 {
-  font-size: 85px;
-  line-height: 102px;
+  font-size: 72px;
+  line-height: 86.4px;
   margin-bottom: 22.5px;
 }
 h2 {
@@ -2954,6 +2954,9 @@ ul.backers li {
   }
 }
 /* Roadmap */
+#form-community-login input {
+  display: inline-block;
+}
 /* Roadmap - Sorting */
 ul.milestones {
   margin: 0px;

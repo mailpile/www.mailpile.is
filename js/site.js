@@ -25,23 +25,21 @@ jQuery(document).ready(function($){
         url_up: "/cgi-bin/mailpile/user-up.py",   // Path to update CGI scr
         url_mv: "/cgi-bin/mailpile/user-mv.py",   // Path to moving CGI scr
         url_mk: "/cgi-bin/mailpile/user-mk.py",   // Path to creating CGI s
-        dom_login: ".login-form",        // Selector for login form
-        dom_logout: ".logout-form",      // Selector for logout form
+        dom_login: "#login-form",        // Selector for login form
+        dom_logout: "#logout-form",      // Selector for logout form
         dom_login_error: ".login-error", // Selector for "login failed"
         dom_nickname: ".login-nickname", // Selector for user's name
         cookie_user: "usr",              // Cookie to store user name
         cookie_token: "tok",             // Cookie to store token
         template_vote: "<a class='vote vote-%(vote)s' id='%(id)s' data-issue='%(issue)s' data-value='%(vote)s'><span class='icon-vote-%(vote)s'></span> %(vote)s</a>",
         callback_login_ok: function() {
-          $('#roadmap-details').show();
-          console.log('Login OK');
+          $('#roadmap-details').slideDown();
         },
         callback_login_error: function() {
-          alert('Login error :(');
+          alert('Unfortunately we could not log you in :( please double check your email');
         },
         callback_logged_out: function() {
-          $('#roadmap-details').hide();
-          console.log('You have been logged out. Good riddance');
+          $('#roadmap-details').slideUp();
         },
         callback_ranked_vote_ok: function() {
           console.log('Stuff got ranked!');
