@@ -34,24 +34,24 @@ jQuery(document).ready(function($){
         template_vote: "<a class='vote vote-%(vote)s' id='%(id)s' data-issue='%(issue)s' data-value='%(vote)s'><span class='icon-vote-%(vote)s'></span> %(vote)s</a>",
         callback_login_ok: function() {
           $('#roadmap-details').slideDown();
+          $('#community-perks').slideDown();
         },
         callback_login_error: function() {
           alert('Unfortunately we could not log you in :( please double check your email');
         },
         callback_logged_out: function() {
-          $('#roadmap-details').slideUp();
+          window.location.reload(true);
         },
         callback_ranked_vote_ok: function() {
-          console.log('Stuff got ranked!');
         },
         callback_ranked_vote_error: function() {
           alert('Oops, could not rank things');
         },
         callback_single_vote_ok: function() {
-          alert('The vote got saved!');
+          //alert('The vote got saved!');
         },
         callback_single_vote_error: function() {
-          alert('Oops, could not vote on things');
+          alert('Oops, could not vote on that');
         }
     });
 
