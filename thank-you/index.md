@@ -75,8 +75,8 @@ Type: full
 			  <a href="http://robofont.com" target="_blank">RoboFont</a>
 			</div>
       <div class="one-quarter text-center">
-				<a href="https://www.expressvpn.biz" target="_blank"><img src="/img/community-13.png"></a><br>
-				<a href="https://www.expressvpn.biz" target="_blank">Express VPN</a>
+				<a href="https://www.expressvpn.com" target="_blank"><img src="/img/community-13.png"></a><br>
+				<a href="https://www.expressvpn.com" target="_blank">Express VPN</a>
 			</div>
     </div>
     <div class="row">
