@@ -10,6 +10,7 @@
     <title>{{ page.subject }}</title>
     <link>http://www.mailpile.is/blog/{{ html }}</link>
     <description>{{ page.body }}</description>
+    <pubDate>{{ page.date|date('--rfc-2822') }}</pubDate>
   </item>
 {%- endfor %}
 </channel></rss>

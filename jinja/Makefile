@@ -27,13 +27,13 @@ loop: depend
          done
 
 %.rss: %.jinja-rss
-	$(JINJATOOL) $<:$@
+	LC_ALL=C $(JINJATOOL) $<:$@
 
 %.html: %.jinja
-	$(JINJATOOL) $<:$@
+	LC_ALL=C $(JINJATOOL) $<:$@
 
 %.html: %.md
-	$(JINJATOOL) dir="`pwd`" MP_RFC822_FILE="$<" $(MP_RFC822):$@
+	LC_ALL=C $(JINJATOOL) dir="`pwd`" MP_RFC822_FILE="$<" $(MP_RFC822):$@
 
 %.jinja: %.jinja.py
 	(cd $(<D); ./$(<F)) > $@

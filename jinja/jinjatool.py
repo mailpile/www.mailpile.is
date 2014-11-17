@@ -31,6 +31,7 @@ import jinja2.utils
 import json
 import os
 import re
+import subprocess
 import sys
 
 from jinja2.ext import Extension
@@ -60,6 +61,7 @@ class JinjaToolExtension(Extension):
         Extension.__init__(self, env)
         env.globals['cat'] = self._cat
         env.globals['ls'] = self._ls
+        env.filters['date'] = self._date
         env.filters['markdown'] = self._markdown
         env.filters['to_json'] = self._to_json
         env.filters['from_json'] = self._from_json
@@ -78,6 +80,18 @@ class JinjaToolExtension(Extension):
             return open(fn, 'r').read().decode('utf-8')
         except (OSError, IOError):
             return None
+
+    def _date(self, data, fmt='%Y-%m-%d'):
+        try:
+            if fmt[:1] not in ('-', '+'):
+                fmt = '+%s' % fmt
+            data = data.replace(',', ' ')
+            if ':' not in data:
+                data += ' 12:00'
+            return subprocess.check_output(['date', fmt, '--date', data]
+                                           ).decode('utf-8').strip()
+        except (OSError, IOError, subprocess.CalledProcessError):
+            return data
 
     def _markdown(self, text):
         return jinja2.Markup(markdown(text))

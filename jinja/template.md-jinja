@@ -12,7 +12,7 @@
 
   {%- if page.type == 'blog' %}
     <a href="{{ url }}"><h1>{{ page.subject }}</h1></a>
-    <p><strong>Posted by <a href="#">{{ page.author }}</a> on {{ page.date }}</strong></p>
+    <p><strong>Posted by <a href="#">{{ page.author }}</a> on {{ page.date|date('%B %e, %Y') }}</strong></p>
   {%- endif %}
 
 {{ page.body|safe -}}
