@@ -100,42 +100,41 @@ $(document).ready(function() {
 <li class="section-crypto"><a href="#crypto-2">What is your PGP public key?</a></li>
 <li class="section-crypto"><a href="#crypto-3">Can you please include <em>insert-some-random-encrypted-service</em>.</a></li>
 <li class="section-crypto"><a href="#crypto-4">I was looking for a private email server that can hide my email address from everyone that I haven't mailed to, does your service provide this?</a></li>
-<li class="section-crypto"><a href="#crypto-5">Is it possible to delete a message that you send to someone, but you don't want them to keep in their account after certain period? (If not it should be developed).</a></li>
-<li class="section-crypto"><a href="#crypto-6">Can you create a pseudonym email address that only the recipient can see to identify us and send a message to, but that does not reveal our actual email address?</a></li>
+<li class="section-crypto"><a href="#crypto-5">Is  it possible to delete a message that you send to someone, but you don't want them to keep in their account after certain period? (If not it should be developed).</a></li>
+<li class="section-crypto"><a href="#crypto-6">Can you create a pseudonym email address that only the recipient can see to identify us and send us message to, but it does not reveal my actual email address?</a></li>
 <li class="section-crypto"><a href="#crypto-7">How will you prevent governments from accessing your user database?</a></li>
-<li class="section-crypto"><a href="#crypto-8">How safe is it to store email metadata in RAM (random-access memory)?</a></li>
+<li class="section-crypto"><a href="#crypto-8">How safe is it to store email metadata in RAM (Random-access memory)?</a></li>
 <li class="section-crypto"><a href="#crypto-9">Will it, by default, deploy using encrypted configuration data?</a></li>
 <li class="section-crypto"><a href="#crypto-10">Would it possible to add support for one-time passwords?</a></li>
 <li class="section-crypto"><a href="#crypto-11">How secure is the database? Is it stored on an encrypted volume?</a></li>
-<li class="section-crypto"><a href="#crypto-12">How are attachments stored? Are they encrypted, too?</a></li>
-<li class="section-crypto"><a href="#crypto-13">Will search work with encrypted files or do they reside on some encrypted file system and seem un-encrypted to it?</a></li>
+<li class="section-crypto"><a href="#crypto-12">How are attachments stored? Are they encrypted, as well?</a></li>
+<li class="section-crypto"><a href="#crypto-13">Will search work with encrypted files? Or, are they residing on some encrypted file system, and seem un-encrypted to it?</a></li>
 <li class="section-crypto"><a href="#crypto-14">Does Mailpile have no weak points when it comes to privacy/security? How can they be closed?</a></li>
 <li class="section-crypto"><a href="#crypto-15">The decrypted message is vulnerable/visible on compromised system? Can it be obfuscated?</a></li>
 <li class="section-crypto"><a href="#crypto-16">Will Mailpile work with .onion (Tor) domains?</a></li>
-<li class="section-crypto"><a href="#crypto-17">Will it work when residing on a Tor server?</a></li>
-<li class="section-crypto"><a href="#crypto-18">Will Mailpile support address aliases for incoming mail? (e.g. 132txche6763fhjf@domain.onion = green_leaf_dude@domain.onion)</a></li>
+<li class="section-crypto"><a href="#crypto-17">Will it work when residing on an in-Tor server?</a></li>
+<li class="section-crypto"><a href="#crypto-18">Will Mailpile support address aliases for incoming mail? (132txche6763fhjf@domain.onion = green_leaf_dude@domain.onion)</a></li>
 <li class="section-crypto"><a href="#crypto-19">Isn't email forwarding a possible breach of security?</a></li>
-<li class="section-crypto"><a href="#crypto-20">How will this service compare with something like Hushmail which claims to offer message en/decryption in a browser as well as IMAP (if one pays).</a></li>
-<li class="section-crypto"><a href="#crypto-21">Is MailPile a viable non-centralized solution to issues like those faced by other privacy-focused email companies such as Lavabit or Silent Circle?</a></li>
-<li class="section-crypto"><a href="#crypto-22">What happens when you are communicating with people who are still hosted by Google or a self-hosted insecure server? Do they need to implement something, too?</a></li>
+<li class="section-crypto"><a href="#crypto-20">How will this service compare with something like Hushmail which claims to offer message en/decryption in browser as well as IMAP (if one pays).</a></li>
+<li class="section-crypto"><a href="#crypto-21">Is MailPile a viable non-centralized solution to issues like those faced by other privacy focused email companies like Lavabit or Silent Circle?</a></li>
+<li class="section-crypto"><a href="#crypto-22">What happens when you are communicating with people who are still hosted by Google or a self hosted insecure server? Do they need to implement something too?</a></li>
 <li class="section-crypto"><a href="#crypto-23">Does everyone need to be on your system (and using Mailpile) to be truly secure?</a></li>
 <li class="section-crypto"><a href="#crypto-24">You don't mention anything about secure public key distribution. Is this a problem you plan to tackle?</a></li>
-<li class="section-crypto"><a href="#crypto-25">If I write an email from my Mailpile to a friend's Gmail account, how does the encryption prevent his inbox from scanning the contents of my email?</a></li>
+<li class="section-crypto"><a href="#crypto-25">If I write an email from my Mailpile to a friend's gmail, how does the encryption prevent his inbox from scanning the contents of my email?</a></li>
 <li class="section-crypto"><a href="#crypto-26">Will you be storing my private key on your mail server?</a></li>
-<li class="section-crypto"><a href="#crypto-27">Will Mailpile function similar to Lavabit and use different passwords for IMAP connections that are not related with private key/password used to to decrypt mails?</a></li>
-<li class="section-crypto"><a href="#crypto-28">Do you have plans to implement RFC6698 DANE and move towards CA free authentication?</a></li>
+<li class="section-crypto"><a href="#crypto-27">Will Mailpile function similar to Lavabit and use different passwords for IMAP connections that are not related with private key password used to to decrypt mails?</a></li>
+<li class="section-crypto"><a href="#crypto-28">Do you have plans to implement RFC6698 DANE, and move towards CA free authentication?</a></li>
 <li class="section-crypto"><a href="#crypto-29">Do the mails stay encrypted in your servers or are they stored in plain text?</a></li>
-<li class="section-crypto"><a href="#crypto-30">If emails are encrypted, how do you intend to implement a search function?</a></li>
+<li class="section-crypto"><a href="#crypto-30">If e-mails are encrypted, how do you intend to implement a searching function?</a></li>
 <li class="section-crypto"><a href="#crypto-31">So what exactly will be encrypted and what about the metadata?</a></li>
-<li class="section-crypto"><a href="#crypto-32">Is Mailpile going to send PGP-encrypted email, where the mail body is encrypted, but all the headers and the metadata are not?</a></li>
-<li class="section-crypto"><a href="#crypto-33">Or are you planning to somehow also encrypt the metadata (as with Bitmessage)? Would that even be possible with email?</a></li>
-<li class="section-crypto"><a href="#crypto-34">Will you use Perfect Forward Secrecy (PFS) in your mail ?</a></li>
-<li class="section-crypto"><a href="#crypto-35">Will you implement STARTTLS in your email system?</a></li>
-<li class="section-crypto"><a href="#crypto-36">Will you hide the client's IP address when send an email with your service?</a></li>
-<li class="section-crypto"><a href="#crypto-37">How does Mailpile know which key to use for a recipient?</a></li>
-<li class="section-crypto"><a href="#crypto-38">How can I add a key to the key server?</a></li>
-<li class="section-crypto"><a href="#crypto-39">Does Mailpile support sending S/MIME emails?</a></li>
-<li class="section-crypto"><a href="#crypto-40">I send a lot of email. When it arrives on their servers, is it decrypted or does decryption take place on the computer of the person who is supposed to receive it?</a></li>
+<li class="section-crypto"><a href="#crypto-32">Is Mailpile going to send PGP encrypted e-mail, where the mail body is encrypted, but all the headers and the metadata are not?</a></li>
+<li class="section-crypto"><a href="#crypto-33">Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with e-mail?</a></li>
+<li class="section-crypto"><a href="#crypto-34">Will you use the Perfect Forward Secrecy in your mail ?</a></li>
+<li class="section-crypto"><a href="#crypto-35">Will you implement start TLS in your e-mail system?</a></li>
+<li class="section-crypto"><a href="#crypto-36">Will you hide the IP when send an e-mail with your service?</a></li>
+<li class="section-crypto"><a href="#crypto-37">Does Mailpile automatically search for recipients keys or generate new keys which is then submited to the public key servers?</a></li>
+<li class="section-crypto"><a href="#crypto-38">Does Mailpile support sending SMIME e-mails?</a></li>
+<li class="section-crypto"><a href="#crypto-39">I send a lot of email, when it arrives on there servers is it decrypted or does decryption take place on the computer of the person who is supposed to receive it?</a></li>
 </ul></li>
 <li><a href="#tech">Technical Questions</a><ul>
 <li class="section-tech"><a href="#tech-1">Will Mailpile run on Windows 8.1, Mac OSX, Linux etc. etc.?</a></li>
@@ -312,10 +311,10 @@ $(document).ready(function() {
 </li>
 <li class="faq-section-title" id="crypto"><h2>Encryption and Security</h2></li>
 <li class="faq-item" id="crypto-1"> <h3 class="faq-title">Is Mailpile an encrypted email service?</h3> <span class="faq-section">crypto</span>
-<p>Mailpile is not an email service, it is an email client that supports strong encryption.</p>
+<p>Mailpile is not an email service, it is an email client. But Mailpile does support strong encryption.</p>
 </li>
 <li class="faq-item" id="crypto-2"> <h3 class="faq-title">What is your PGP public key?</h3> <span class="faq-section">crypto</span>
-<p>Our team PGP key is downloadable from here: https://www.mailpile.is/files/team@mailpile.is.asc</p>
+<p>Our team PGP key is downloadble from here: https://www.mailpile.is/files/team@mailpile.is.asc</p>
 </li>
 <li class="faq-item" id="crypto-3"> <h3 class="faq-title">Can you please include <em>insert-some-random-encrypted-service</em>.</h3> <span class="faq-section">crypto</span>
 <p>Yeah, we'll get right to that - after we get the widely adopted protocols supported robustly ;)</p>
@@ -323,16 +322,16 @@ $(document).ready(function() {
 <li class="faq-item" id="crypto-4"> <h3 class="faq-title">I was looking for a private email server that can hide my email address from everyone that I haven't mailed to, does your service provide this?</h3> <span class="faq-section">crypto</span>
 <p>Nope. That's actually impossible. If anybody tells you they can do this, they are probably lying. Sorry!</p>
 </li>
-<li class="faq-item" id="crypto-5"> <h3 class="faq-title">Is it possible to delete a message that you send to someone, but you don't want them to keep in their account after certain period? (If not it should be developed).</h3> <span class="faq-section">crypto</span>
-<p>No, that isn't possible. You can't un-tell somebody something. You can ask them nicely to delete the message, but if they decide not to, you can't make them. Sorry. Nobody is going to be able to develop that feature in a way that is guaranteed to work, ever. This isn't a James Bond movie.</p>
+<li class="faq-item" id="crypto-5"> <h3 class="faq-title">Is  it possible to delete a message that you send to someone, but you don't want them to keep in their account after certain period? (If not it should be developed).</h3> <span class="faq-section">crypto</span>
+<p>No, that isn't possible. You can't un-tell somebody something. You can ask them nicely to delete the mail, but if they decide not to, you can't make them. Sorry. Nobody is going to be able to develop that feature in a way that is guaranteed to work, ever. This isn't a James Bond movie.</p>
 </li>
-<li class="faq-item" id="crypto-6"> <h3 class="faq-title">Can you create a pseudonym email address that only the recipient can see to identify us and send a message to, but that does not reveal our actual email address?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-6"> <h3 class="faq-title">Can you create a pseudonym email address that only the recipient can see to identify us and send us message to, but it does not reveal my actual email address?</h3> <span class="faq-section">crypto</span>
 <p>That's not really a part of the intended use of Mailpile. Somebody might provide this kind of service though - it sounds useful!</p>
 </li>
 <li class="faq-item" id="crypto-7"> <h3 class="faq-title">How will you prevent governments from accessing your user database?</h3> <span class="faq-section">crypto</span>
 <p>Simple: We will not have a user database. We do not have any server infrastructure that contains user information. Users install the Mailpile client on their own computers. We do not track people that want to use Mailpile.</p>
 </li>
-<li class="faq-item" id="crypto-8"> <h3 class="faq-title">How safe is it to store email metadata in RAM (random-access memory)?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-8"> <h3 class="faq-title">How safe is it to store email metadata in RAM (Random-access memory)?</h3> <span class="faq-section">crypto</span>
 <p>It's pretty safe. If your computer is compromised, the storage is probably compromised anyway and you will have bigger things to worry about than your email account.</p>
 </li>
 <li class="faq-item" id="crypto-9"> <h3 class="faq-title">Will it, by default, deploy using encrypted configuration data?</h3> <span class="faq-section">crypto</span>
@@ -344,14 +343,14 @@ $(document).ready(function() {
 <li class="faq-item" id="crypto-11"> <h3 class="faq-title">How secure is the database? Is it stored on an encrypted volume?</h3> <span class="faq-section">crypto</span>
 <p>Yes. All configuration data, including the search index, will be encrypted by default when we get to the full release.</p>
 </li>
-<li class="faq-item" id="crypto-12"> <h3 class="faq-title">How are attachments stored? Are they encrypted, too?</h3> <span class="faq-section">crypto</span>
-<p>Email attachments are stored wherever your email is stored. If that's secure, the attachments are secure. We will provide methods to secure your email, although we recommend that you use full disk encryption!</p>
+<li class="faq-item" id="crypto-12"> <h3 class="faq-title">How are attachments stored? Are they encrypted, as well?</h3> <span class="faq-section">crypto</span>
+<p>They are stored wherever your email is stored. If that's secure, the attachments are secure. We will provide methods to secure your email, although we recommend you should be using a full disk encryption!</p>
 </li>
-<li class="faq-item" id="crypto-13"> <h3 class="faq-title">Will search work with encrypted files or do they reside on some encrypted file system and seem un-encrypted to it?</h3> <span class="faq-section">crypto</span>
-<p>Mailpile decrypts incoming emails, indexes them, and re-encrypts them. The search index is stored encrypted and the terms are stored as hashes. Good enough?</p>
+<li class="faq-item" id="crypto-13"> <h3 class="faq-title">Will search work with encrypted files? Or, are they residing on some encrypted file system, and seem un-encrypted to it?</h3> <span class="faq-section">crypto</span>
+<p>Mailpile decrypts incoming emails, indexes them, and re-encrypts them. The search index is stored encrypted, and the terms are stored as hashes. Good enough?</p>
 </li>
 <li class="faq-item" id="crypto-14"> <h3 class="faq-title">Does Mailpile have no weak points when it comes to privacy/security? How can they be closed?</h3> <span class="faq-section">crypto</span>
-<p>Email metadata is hard to secure because the standards don't really allow for keeping it all secret. We can't do much about that. Also, if the recipient of your email doesn't provide or publish a public encryption key, you can't send them encrypted email. Sorry, that's the way public key cryptography works.</p>
+<p>Yes. Email metadata is hard to secure, because the standards don't really allow for keeping it all secret. We can't do much about that. Also, if the recipient of your email doesn't have a publicly available encryption key, you can't send them encrypted email. Sorry, that's the way public key cryptography works.</p>
 </li>
 <li class="faq-item" id="crypto-15"> <h3 class="faq-title">The decrypted message is vulnerable/visible on compromised system? Can it be obfuscated?</h3> <span class="faq-section">crypto</span>
 <p>If your system is compromised, you have a very big problem that Mailpile can't really help you solve. We will try to do what we can, but endpoint security is very important.</p>
@@ -359,77 +358,74 @@ $(document).ready(function() {
 <li class="faq-item" id="crypto-16"> <h3 class="faq-title">Will Mailpile work with .onion (Tor) domains?</h3> <span class="faq-section">crypto</span>
 <p>We plan to provide support for that.</p>
 </li>
-<li class="faq-item" id="crypto-17"> <h3 class="faq-title">Will it work when residing on a Tor server?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-17"> <h3 class="faq-title">Will it work when residing on an in-Tor server?</h3> <span class="faq-section">crypto</span>
 <p>Yes!</p>
 </li>
-<li class="faq-item" id="crypto-18"> <h3 class="faq-title">Will Mailpile support address aliases for incoming mail? (e.g. 132txche6763fhjf@domain.onion = green_leaf_dude@domain.onion)</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-18"> <h3 class="faq-title">Will Mailpile support address aliases for incoming mail? (132txche6763fhjf@domain.onion = green_leaf_dude@domain.onion)</h3> <span class="faq-section">crypto</span>
 <p>That's really up to the mail server to decide. Mailpile is a mail client, not a mail server. Sorry!</p>
 </li>
 <li class="faq-item" id="crypto-19"> <h3 class="faq-title">Isn't email forwarding a possible breach of security?</h3> <span class="faq-section">crypto</span>
-<p>Yes, it is. It's also unavoidable. We can't prevent people from forwarding information - even if we were to do all sorts of magic to make it impossible in Mailpile, somebody could still write down your email on a postcard and send it to a friend. This is called the analog gap. The only solution is to not send secrets in email to people you don't trust.</p>
+<p>Yes, it is. It's also unavoidable. We can't prevent people from forwarding information - even if we were to do all sorts of magic to make it impossible in Mailpile, somebody could still write down your email on a postcard and send it to a friend. This is called the analog gap. The only solution is, don't send secrets in email to people you don't trust.</p>
 </li>
-<li class="faq-item" id="crypto-20"> <h3 class="faq-title">How will this service compare with something like Hushmail which claims to offer message en/decryption in a browser as well as IMAP (if one pays).</h3> <span class="faq-section">crypto</span>
-<p>Hushmail stores your email data on their servers. Mailpile does not have servers and we do not store users' email. One can use Mailpile for free to send &amp; receive encrypted email through any IMAP server.</p>
+<li class="faq-item" id="crypto-20"> <h3 class="faq-title">How will this service compare with something like Hushmail which claims to offer message en/decryption in browser as well as IMAP (if one pays).</h3> <span class="faq-section">crypto</span>
+<p>Hushmail stores your email data on their servers. Mailpile does not have servers and we do not store users email. One can use Mailpile for free to send &amp; receiving encrypted email through any IMAP servers.</p>
 </li>
-<li class="faq-item" id="crypto-21"> <h3 class="faq-title">Is MailPile a viable non-centralized solution to issues like those faced by other privacy-focused email companies such as Lavabit or Silent Circle?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-21"> <h3 class="faq-title">Is MailPile a viable non-centralized solution to issues like those faced by other privacy focused email companies like Lavabit or Silent Circle?</h3> <span class="faq-section">crypto</span>
 <p>Yes, this is one of our core beliefs and underlying design principles.</p>
 </li>
-<li class="faq-item" id="crypto-22"> <h3 class="faq-title">What happens when you are communicating with people who are still hosted by Google or a self-hosted insecure server? Do they need to implement something, too?</h3> <span class="faq-section">crypto</span>
-<p>People can continue using gmail or their academic institutions email "server", as Mailpile is just the "client" that allows for sending of encrypted messages.</p>
+<li class="faq-item" id="crypto-22"> <h3 class="faq-title">What happens when you are communicating with people who are still hosted by Google or a self hosted insecure server? Do they need to implement something too?</h3> <span class="faq-section">crypto</span>
+<p>People can continue using gmail or their acamdemic institutions email "server" as Mailpile is just the "client" that allows for sending of encrypted messages.</p>
 </li>
 <li class="faq-item" id="crypto-23"> <h3 class="faq-title">Does everyone need to be on your system (and using Mailpile) to be truly secure?</h3> <span class="faq-section">crypto</span>
-<p>In order to send encrypted email all recipients need to have public and private PGP keys and be encrypting their messages in a manner that follows standard conventions. Many other email clients allow people to send PGP encrypted emails using those conventions. Hopefully, Mailpile is the easiest to use. ;)</p>
+<p>In order to send encrypted email all recipients need to have public &amp; private PGP keys and be encrypting their messages. Many other email clients allow people to send PGP encrypted emails. Hopefully, Mailpile is the easiest to use ;)</p>
 </li>
 <li class="faq-item" id="crypto-24"> <h3 class="faq-title">You don't mention anything about secure public key distribution. Is this a problem you plan to tackle?</h3> <span class="faq-section">crypto</span>
-<p>We plan to attach users public keys with outgoing emails. Additionally, as some instances of Mailpile will be accessible over the web, that makes for interesting new opportunities for sharing of keys.</p>
+<p>We plan to attach users public keys with outgoing emails. Additionally, since some instances of Mailpile will be accessible over the web, that makes for interesting new opportunities for sharing of keys.</p>
 </li>
-<li class="faq-item" id="crypto-25"> <h3 class="faq-title">If I write an email from my Mailpile to a friend's Gmail account, how does the encryption prevent his inbox from scanning the contents of my email?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-25"> <h3 class="faq-title">If I write an email from my Mailpile to a friend's gmail, how does the encryption prevent his inbox from scanning the contents of my email?</h3> <span class="faq-section">crypto</span>
 <p>As long as both people use encryption, even if one or both people have @gmail.com addresses, Gmail cannot read encrypted email data even if the data ends up being stored on Gmail's servers.</p>
 </li>
 <li class="faq-item" id="crypto-26"> <h3 class="faq-title">Will you be storing my private key on your mail server?</h3> <span class="faq-section">crypto</span>
-<p>No. We do not have servers and we do not store users' private keys. You install our software on your computer, which keeps your key nice, safe, and under your control.</p>
+<p>No. We do not have servers and we do not store users private keys. You install our software on your computer which keeps your key nice, safe, and under your control.</p>
 </li>
-<li class="faq-item" id="crypto-27"> <h3 class="faq-title">Will Mailpile function similar to Lavabit and use different passwords for IMAP connections that are not related with private key/password used to to decrypt mails?</h3> <span class="faq-section">crypto</span>
-<p>No. Mailpile is entirely different from Lavabit.</p>
+<li class="faq-item" id="crypto-27"> <h3 class="faq-title">Will Mailpile function similar to Lavabit and use different passwords for IMAP connections that are not related with private key password used to to decrypt mails?</h3> <span class="faq-section">crypto</span>
+<p>No. Mailpile is entirely different than Lavabit.</p>
 </li>
-<li class="faq-item" id="crypto-28"> <h3 class="faq-title">Do you have plans to implement RFC6698 DANE and move towards CA free authentication?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-28"> <h3 class="faq-title">Do you have plans to implement RFC6698 DANE, and move towards CA free authentication?</h3> <span class="faq-section">crypto</span>
 <p>We are uncertain about this at the moment.</p>
 </li>
 <li class="faq-item" id="crypto-29"> <h3 class="faq-title">Do the mails stay encrypted in your servers or are they stored in plain text?</h3> <span class="faq-section">crypto</span>
-<p>We don't have servers, so, no. We do not store your emails. Messages are stored on your computer and encrypted with OpenPGP. This does not include headers and metadata. Mailpile will, however, encrypt metadata on your computer using AES-256-CBC, at the moment, with a plan to move to AES-256-GCM in the future, for tagging purposes. The keys for the AES encryption are stored in the configuration file, which is PGP-encrypted. </p>
+<p>We don't have servers, so no. We do not store your emails. Messages are stored on your computer and encrypted with Open PGP. This does not include headers and metadata. However, Mailpile will encrypt metadata on your disc using AES-256-CBC at the moment, with a plan to move to AES-256-GCM in the future for tagging purposes. The keys for the AES are stored in the configuration file, which is PGP encrypted. </p>
 </li>
-<li class="faq-item" id="crypto-30"> <h3 class="faq-title">If emails are encrypted, how do you intend to implement a search function?</h3> <span class="faq-section">crypto</span>
-<p>Mailpile decrypts incoming emails, indexes them, and re-encrypts them. The search index is stored and encrypted as are the terms, which are stored as hashes. Good enough?</p>
+<li class="faq-item" id="crypto-30"> <h3 class="faq-title">If e-mails are encrypted, how do you intend to implement a searching function?</h3> <span class="faq-section">crypto</span>
+<p>Mailpile decrypts incoming e-mails, index them, and re-encrypts them. The search index is stored and also encrypted as well as the terms which are stored as hashes. Good enough?</p>
 </li>
 <li class="faq-item" id="crypto-31"> <h3 class="faq-title">So what exactly will be encrypted and what about the metadata?</h3> <span class="faq-section">crypto</span>
-<p>The email body will be encrypted. We are trying to find ways to make most of the metadata encrypted as well, but some of it can't be because of how email works.</p>
+<p>The e-mail body will be encrypted. We are trying to find ways to make most of the metadata encrypted as well, but some of it can't be because of how e-mail works.</p>
 </li>
-<li class="faq-item" id="crypto-32"> <h3 class="faq-title">Is Mailpile going to send PGP-encrypted email, where the mail body is encrypted, but all the headers and the metadata are not?</h3> <span class="faq-section">crypto</span>
+<li class="faq-item" id="crypto-32"> <h3 class="faq-title">Is Mailpile going to send PGP encrypted e-mail, where the mail body is encrypted, but all the headers and the metadata are not?</h3> <span class="faq-section">crypto</span>
 <p>Yes. We are experimenting with ways to encrypt headers as well using standard PGP + SMTP protocols.</p>
 </li>
-<li class="faq-item" id="crypto-33"> <h3 class="faq-title">Or are you planning to somehow also encrypt the metadata (as with Bitmessage)? Would that even be possible with email?</h3> <span class="faq-section">crypto</span>
-<p>We're going to try and encrypt all the metadata using PGP + SMTP, but email still requires that some of the metadata be un-encrypted so that mail servers will know where to deliver it. We plan on integrating Bitmessage before 1.0</p>
+<li class="faq-item" id="crypto-33"> <h3 class="faq-title">Or are you planning to somehow also encrypt the metadata (like in Bitmessage)? Would that even be possible with e-mail?</h3> <span class="faq-section">crypto</span>
+<p>We're going to try and encrypt all the metadata using PGP + SMTP, but e-mail still requires that some of the metadata be un-encrypted so that mail servers will know where to deliver it to. We plan on integrating Bitmessage before 1.0</p>
 </li>
-<li class="faq-item" id="crypto-34"> <h3 class="faq-title">Will you use Perfect Forward Secrecy (PFS) in your mail ?</h3> <span class="faq-section">crypto</span>
-<p>We can't actually guarantee that without breaking a vital part of email's functionality: people want to be able to read their old email. If we implemented PFS, then nobody could ever view their archives. We consider this an anti-feature, so we won't even try. Instead, we're just going to try to protect your email as well as we can while it is in transit (using PGP and opportunistic SSL), and as well as we can when it is at rest (using PGP, mostly).</p>
+<li class="faq-item" id="crypto-34"> <h3 class="faq-title">Will you use the Perfect Forward Secrecy in your mail ?</h3> <span class="faq-section">crypto</span>
+<p>We can't actually guarantee that without breaking a vital part of e-mail's functionality: people want to be able to read their old e-mails. If we implemented PFS, then nobody could ever view their archives. We consider this an antifeature, so we won't even try. Instead, we're going to just try to protect your e-mail as well as we can while it is in transit (using PGP and opportunistic SSL), and as well as we can when it is at rest (using PGP, mostly).</p>
 </li>
-<li class="faq-item" id="crypto-35"> <h3 class="faq-title">Will you implement STARTTLS in your email system?</h3> <span class="faq-section">crypto</span>
-<p>Of course, although we do urge all email providers to provide TLS natively. Although opportunistic encryption is better than no encryption, it's way better to support always-on encryption.</p>
+<li class="faq-item" id="crypto-35"> <h3 class="faq-title">Will you implement start TLS in your e-mail system?</h3> <span class="faq-section">crypto</span>
+<p>Of course. Although we do urge all e-mail providers to provide TLS natively, because, while opportunistic encryption is better than no encryption, it's way better to support always-on encryption.</p>
 </li>
-<li class="faq-item" id="crypto-36"> <h3 class="faq-title">Will you hide the client's IP address when send an email with your service?</h3> <span class="faq-section">crypto</span>
-<p>We aren't providing a sending service. Our email client can't obfuscate IP addresses, but if you route your mail through Tor or a Mixmaster, it might improve things for you.</p>
+<li class="faq-item" id="crypto-36"> <h3 class="faq-title">Will you hide the IP when send an e-mail with your service?</h3> <span class="faq-section">crypto</span>
+<p>We aren't providing a sending service. Our e-mail client can't obfuscate IP addresses - but if you route your mail through Tor or a Mixmaster, it might improve things for you.</p>
 </li>
-<li class="faq-item" id="crypto-37"> <h3 class="faq-title">How does Mailpile know which key to use for a recipient?</h3> <span class="faq-section">crypto</span>
-<p>When you add or edit a contact, select the "Find Encryption Keys" button. Mailpile will then search a public key server for a matching key and add the key to the contact. In the beta version, Mailpile selects the first matching key at server hkp://subset.pool.sks-keyservers.net.</p>
+<li class="faq-item" id="crypto-37"> <h3 class="faq-title">Does Mailpile automatically search for recipients keys or generate new keys which is then submited to the public key servers?</h3> <span class="faq-section">crypto</span>
+<p>Yes we search &amp; create keys. We are not sure yet about automatically submitting to keyservers.</p>
 </li>
-<li class="faq-item" id="crypto-38"> <h3 class="faq-title">How can I add a key to the key server?</h3> <span class="faq-section">crypto</span>
-<p>If the recipient's key is not already on the server(s) searched by Mailpile, you (or anyone else) can submit a public key directly to the server at http://subset.pool.sks-keyservers.net/.</p>
+<li class="faq-item" id="crypto-38"> <h3 class="faq-title">Does Mailpile support sending SMIME e-mails?</h3> <span class="faq-section">crypto</span>
+<p>No.  We are working on pgp/mime first, getting the metaphors and the UI right before we add alternate encryption schemes. S/MIME is also generally based on PKI which the general consumer may not have easy access to. We expect it'll be supported in the future.</p>
 </li>
-<li class="faq-item" id="crypto-39"> <h3 class="faq-title">Does Mailpile support sending S/MIME emails?</h3> <span class="faq-section">crypto</span>
-<p>No.  We are working on PGP/MIME first, getting the metaphors and the UI right before we add alternative encryption schemes. S/MIME is also generally based on PKI, which the general consumer may not have easy access to. We expect it'll be supported in the future.</p>
-</li>
-<li class="faq-item" id="crypto-40"> <h3 class="faq-title">I send a lot of email. When it arrives on their servers, is it decrypted or does decryption take place on the computer of the person who is supposed to receive it?</h3> <span class="faq-section">crypto</span>
-<p>You do not have any control over how the recipients of your mail are going to decrypt the encrypted emails they receive from you, since the setup of emails can vary a lot.</p>
+<li class="faq-item" id="crypto-39"> <h3 class="faq-title">I send a lot of email, when it arrives on there servers is it decrypted or does decryption take place on the computer of the person who is supposed to receive it?</h3> <span class="faq-section">crypto</span>
+<p>You do not have any control over how the recipients of your mail is going to PGP decrypt the encrypted emails they receive from you, since the setup of emails can vary a lot.</p>
 </li>
 <li class="faq-section-title" id="tech"><h2>Technical Questions</h2></li>
 <li class="faq-item" id="tech-1"> <h3 class="faq-title">Will Mailpile run on Windows 8.1, Mac OSX, Linux etc. etc.?</h3> <span class="faq-section">tech</span>
