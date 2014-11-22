@@ -3,10 +3,10 @@ Author: Bjarni
 Date: November 11, 2014
 Type: blog
 
-**tl;dr**  PGP/MIME has some serious flaws. I propose specifying an
+**TL;DR**: PGP/MIME has some serious flaws. I propose specifying an
 alternative method for PGP-encrypting e-mail (including attachments)
-which is backwards compatible with legacy ad-hoc PGP encryption,
-air-gaps and web-mail plugins.
+which improves security while being backwards compatible with legacy
+ad-hoc PGP encryption, air-gaps and webmail plugins.
 
 
 ## How does e-mail encryption work?
@@ -61,7 +61,6 @@ attachment looks a bit like this:
     E
     E [BASE64 ENCODED PICTURE OF NAUGHTY TOES]
     E --==67890==--
-    E
     . -----END PGP MESSAGE-----
     .
     . --==12345==--
@@ -285,10 +284,33 @@ client could suppress the duplicate information automatically to avoid
 clutter.
 
 
+## What does the recipient see?
+
+If a recipient's mail client understands Email Manifests, the message
+can be rendered just as nicely as if it were sent using PGP/MIME, except
+the protected headers can be marked as secure.
+
+A PGP-aware mail client that doesn't understand the Manifest will see
+simplified headers, and the text-part of the e-mail will have some extra
+clutter at the top, From, To, Subject etc, and a notice at the bottom.
+The attachments may need to be renamed or extracted from a ZIP archive
+before they are useful.
+
+A mail client with no support for PGP, will present the user with
+encrypted text and attachments they can save to disk for offline
+processing.
+
+So overall, this improves the security of Mailpile users (or others
+supporting Email Manifests), makes life somewhat less convenient for the
+users of other PGP-aware mail software, and dramatically improves
+interoperability with mail clients and plugins that do not understand
+PGP/MIME, including webmail users.
+
+
 ## Conclusion
 
 It is definitely possible to transmit PGP-encrypted messages and
-attachments over e-mail in a way which is both more interperable and
+attachments over e-mail in a way which is both more interoperable and
 more secure than the PGP/MIME format.
 
 The question remains - should we?
