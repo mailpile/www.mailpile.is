@@ -203,7 +203,7 @@ complementary, but the Email Manifest is actually the more important of
 the two.
 
 Putting attachments in an archive would largely be a matter of
-convenience for the end-user, as it allows us to stop transmitting
+convenience for the recipient, as it allows us to stop transmitting
 file-names in the clear, while allowing the user to use standard, well
 understood tools to interact with the contents. Without such an archive,
 we either have to transmit file names in the clear, or ask users to
@@ -302,9 +302,9 @@ understand Email Manifests.
 
 Is the ZIP archive idea good or bad? It makes some things easier and
 both hides and preserves more metadata, but it complicates
-implementation and may add extra steps for the user (how many is
+implementation and may add extra steps for the recipent - how many is
 unclear, if file names are suppressed a user may still need to manually
-rename files - otherwise we metadata is leaked).
+rename files - otherwise metadata is leaked.
 
 We would like to get feedback on this from people who work with
 encrypted e-mail on a day to day basis, security trainers and such
