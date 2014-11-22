@@ -27,29 +27,29 @@ message body itself.
 To illustrate the difference, a PGP/MIME encrypted message with a single
 attachment looks a bit like this:
 
-    . From: Alice <a1234@wonderland.com>
-    . To: Bob <b9973@builders.com>
-    . Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
-    . Subject: I have a secret
-    . Content-Type: multipart/encrypted;
-    .               protocol="application/pgp-encrypted";
-    .               boundary="==12345=="
-    .
-    . --==12345==
-    . Content-Type: application/pgp-encrypted
-    . Content-Disposition: attachment
-    . 
-    . Version: 1
-    .
-    . --==12345==
-    . Content-Type: application/octet-stream
-    . Content-Disposition: attachment; filename="msg.asc"
-    . 
-    . -----BEGIN PGP MESSAGE-----
-    . Version: GnuPG v1
-    .
+    | From: Alice <a1234@wonderland.com>
+    | To: Bob <b9973@builders.com>
+    | Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+    | Subject: I have a secret
+    | Content-Type: multipart/encrypted;
+    |               protocol="application/pgp-encrypted";
+    |               boundary="==12345=="
+    |
+    | --==12345==
+    | Content-Type: application/pgp-encrypted
+    | Content-Disposition: attachment
+    |
+    | Version: 1
+    |
+    | --==12345==
+    | Content-Type: application/octet-stream
+    | Content-Disposition: attachment; filename="msg.asc"
+    |
+    | -----BEGIN PGP MESSAGE-----
+    | Version: GnuPG v1
+    |
     E Content-Type: multipart/mixed; boundary="==67890=="
-    E 
+    E
     E --==67890==
     E Content-Type: text/plain; charset='utf-8'
     E
@@ -61,35 +61,35 @@ attachment looks a bit like this:
     E
     E [BASE64 ENCODED PICTURE OF NAUGHTY TOES]
     E --==67890==--
-    . -----END PGP MESSAGE-----
-    .
-    . --==12345==--
+    | -----END PGP MESSAGE-----
+    |
+    | --==12345==--
 
-The clear-text bits are preceded with a '-' and the contents of the
+The clear-text bits are preceded with a '|' and the contents of the
 encrypted part with an 'E'. The same message, sent using ad-hoc
 encryption, might look like this:
 
-    . From: Alice <a1234@wonderland.com>
-    . To: Bob <b9973@builders.com>
-    . Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
-    . Subject: I have a secret
-    . Content-Type: multipart/mixed; boundary="==12345=="
-    .
-    . --==12345==
-    . Content-Type: text/plain; charset='utf-8'
-    . 
-    . -----BEGIN PGP MESSAGE----
-    . Digest: sha-1
-    .
+    | From: Alice <a1234@wonderland.com>
+    | To: Bob <b9973@builders.com>
+    | Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+    | Subject: I have a secret
+    | Content-Type: multipart/mixed; boundary="==12345=="
+    |
+    | --==12345==
+    | Content-Type: text/plain; charset='utf-8'
+    |
+    | -----BEGIN PGP MESSAGE----
+    | Digest: sha-1
+    |
     E I am not wearing any socks!!
-    . -----END PGP MESSAGE----
-    . 
-    . --==67890==
-    . Content-Type: application/octet-stream
-    . Content-Disposition: attachment; filename="my-toes.jpg.pgp"
-    . 
+    | -----END PGP MESSAGE----
+    |
+    | --==67890==
+    | Content-Type: application/octet-stream
+    | Content-Disposition: attachment; filename="my-toes.jpg.pgp"
+    |
     E [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-    . --==67890==--
+    | --==67890==--
 
 There are noticable differences here:
 
@@ -229,18 +229,18 @@ manner.
 To revisit our example, an e-mail sent using an Email Manifest approach
 might look like this:
 
-    . From: a1234@wonderland.com
-    . To: b9973@builders.com
-    . Cc: omgwtf@lucasfilm.com
-    . Subject: Encrypted Message
-    . Content-Type: multipart/mixed; boundary="==12345=="
-    .
-    . --==12345==
-    . Content-Type: text/plain; charset='utf-8'
-    . 
-    . -----BEGIN PGP MESSAGE----
-    . Digest: sha-1
-    .
+    | From: a1234@wonderland.com
+    | To: b9973@builders.com
+    | Cc: omgwtf@lucasfilm.com
+    | Subject: Encrypted Message
+    | Content-Type: multipart/mixed; boundary="==12345=="
+    |
+    | --==12345==
+    | Content-Type: text/plain; charset='utf-8'
+    |
+    | -----BEGIN PGP MESSAGE----
+    | Digest: sha-1
+    |
     E From: Alice
     E To: Bob
     E Cc: Jar Jar Binks
@@ -249,26 +249,26 @@ might look like this:
     E I am not wearing any socks!!
     E
     E Note: this message should have 1 attachment and a manifest.
-    . -----END PGP MESSAGE----
-    . 
-    . --==67890==
-    . Content-Type: application/octet-stream
-    . Content-Disposition: attachment; filename="attachment-1.pgp"
-    . 
+    | -----END PGP MESSAGE----
+    |
+    | --==67890==
+    | Content-Type: application/octet-stream
+    | Content-Disposition: attachment; filename="attachment-1.pgp"
+    |
     E [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-    . --==67890==
-    . Content-Type: application/pgp-manifest
-    . Content-Disposition: attachment; filename="manifest.pgp"
-    . 
+    | --==67890==
+    | Content-Type: application/pgp-manifest
+    | Content-Disposition: attachment; filename="manifest.pgp"
+    |
     E Manifest-Version: 1.0
     E From: Alice <a1234@wonderland.com>
     E To: Bob <b9973@builders.com>
     E Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
     E Subject: I have a secret
     E
-    E Text-part: text/plain; sha1sum="..."; has-pgp; pgp-has-hints
-    E Attachment-1: image/jpeg; filename="my-toes.jpg"; sha1sum="..."
-    . --==67890==--
+    E Inline: text/plain; sha2sum="..."; has-pgp; pgp-has-hints
+    E Attachment-1: image/jpeg; filename="my-toes.jpg"; sha2sum="..."
+    | --==67890==--
 
 This sample demonstrates how both the message structure and sensitive
 headers could be moved into the Email Manifest.
@@ -287,24 +287,26 @@ clutter.
 ## What does the recipient see?
 
 If a recipient's mail client understands Email Manifests, the message
-can be rendered just as nicely as if it were sent using PGP/MIME, except
-the protected headers can be marked as secure.
+can be rendered just as nicely as if it were sent using PGP/MIME, with
+the added benefit that protected headers can be marked as secure.
 
 A PGP-aware mail client that doesn't understand the Manifest will see
 simplified headers, and the text-part of the e-mail will have some extra
 clutter at the top, From, To, Subject etc, and a notice at the bottom.
 The attachments may need to be renamed or extracted from a ZIP archive
-before they are useful.
+before they are useful. They will also see the Email Manifest itself as
+an attachment, which they can decrypt and read if they would like to
+manually confirm the message was delivered intact.
 
 A mail client with no support for PGP, will present the user with
 encrypted text and attachments they can save to disk for offline
 processing.
 
-So overall, this improves the security of Mailpile users (or others
-supporting Email Manifests), makes life somewhat less convenient for the
-users of other PGP-aware mail software, and dramatically improves
-interoperability with mail clients and plugins that do not understand
-PGP/MIME, including webmail users.
+So compared to PGP/MIME, this approach improves the security of Mailpile
+users (or others supporting Email Manifests), makes life somewhat less
+convenient for the users of other PGP/MIME-aware mail software, and
+dramatically improves interoperability with mail clients and plugins
+that do not understand PGP/MIME, including webmail users.
 
 
 ## Conclusion
@@ -324,9 +326,9 @@ understand Email Manifests.
 
 Is the ZIP archive idea good or bad? It makes some things easier and
 both hides and preserves more metadata, but it complicates
-implementation and may add extra steps for the recipent - how many is
-unclear, if file names are suppressed a user may still need to manually
-rename files - otherwise metadata is leaked.
+implementation and may add extra steps for the recipent. On the other
+hand, manually renaming files is no fun and ZIP files may be the lesser
+of two evils if we assume we are indeed abandoning PGP/MIME.
 
 We would like to get feedback on this from people who work with
 encrypted e-mail on a day to day basis, security trainers and such
