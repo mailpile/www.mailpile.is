@@ -1,6 +1,6 @@
 Subject: To PGP/MIME or not to PGP/MIME
 Author: Bjarni
-Date: November 11, 2014
+Date: November 21, 2014
 Type: blog
 
 **TL;DR**: PGP/MIME has some serious flaws. I propose specifying an
