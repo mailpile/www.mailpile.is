@@ -9,7 +9,7 @@ which improves security while being backwards compatible with legacy
 ad-hoc PGP encryption, air-gaps and webmail plugins.
 
 
-## How does e-mail encryption work?
+### How does e-mail encryption work?
 
 The world of e-mail encryption can be surprisingly complicated and
 convoluted.
@@ -27,69 +27,73 @@ message body itself.
 To illustrate the difference, a PGP/MIME encrypted message with a single
 attachment looks a bit like this:
 
-    | From: Alice <a1234@wonderland.com>
-    | To: Bob <b9973@builders.com>
-    | Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
-    | Subject: I have a secret
-    | Content-Type: multipart/encrypted;
-    |               protocol="application/pgp-encrypted";
-    |               boundary="==12345=="
-    |
-    | --==12345==
-    | Content-Type: application/pgp-encrypted
-    | Content-Disposition: attachment
-    |
-    | Version: 1
-    |
-    | --==12345==
-    | Content-Type: application/octet-stream
-    | Content-Disposition: attachment; filename="msg.asc"
-    |
-    | -----BEGIN PGP MESSAGE-----
-    | Version: GnuPG v1
-    |
-    E Content-Type: multipart/mixed; boundary="==67890=="
-    E
-    E --==67890==
-    E Content-Type: text/plain; charset='utf-8'
-    E
-    E I am not wearing any socks!!
-    E
-    E --==67890==
-    E Content-Type: image/jpeg
-    E Content-Disposition: attachment; filename="my-toes.jpg"
-    E
-    E [BASE64 ENCODED PICTURE OF NAUGHTY TOES]
-    E --==67890==--
-    | -----END PGP MESSAGE-----
-    |
-    | --==12345==--
+<pre class="add-bottom">
+  |  From: Alice <a1234@wonderland.com>
+  |  To: Bob <b9973@builders.com>
+  |  Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+  |  Subject: I have a secret
+  |  Content-Type: multipart/encrypted;
+  |                protocol="application/pgp-encrypted";
+  |                boundary="==12345=="
+  |
+  |  --==12345==
+  |  Content-Type: application/pgp-encrypted
+  |  Content-Disposition: attachment
+  |
+  |  Version: 1
+  |
+  |  --==12345==
+  |  Content-Type: application/octet-stream
+  |  Content-Disposition: attachment; filename="msg.asc"
+  |
+  |  -----BEGIN PGP MESSAGE-----
+  |  Version: GnuPG v1
+  |
+  E  Content-Type: multipart/mixed; boundary="==67890=="
+  E
+  E  --==67890==
+  E  Content-Type: text/plain; charset='utf-8'
+  E
+  E  I am not wearing any socks!!
+  E
+  E  --==67890==
+  E  Content-Type: image/jpeg
+  E  Content-Disposition: attachment; filename="my-toes.jpg"
+  E
+  E  [BASE64 ENCODED PICTURE OF NAUGHTY TOES]
+  E  --==67890==--
+  |  -----END PGP MESSAGE-----
+  |
+  |  --==12345==--
+</pre>
 
 The clear-text bits are preceded with a '|' and the contents of the
 encrypted part with an 'E'. The same message, sent using ad-hoc
 encryption, might look like this:
 
-    | From: Alice <a1234@wonderland.com>
-    | To: Bob <b9973@builders.com>
-    | Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
-    | Subject: I have a secret
-    | Content-Type: multipart/mixed; boundary="==12345=="
-    |
-    | --==12345==
-    | Content-Type: text/plain; charset='utf-8'
-    |
-    | -----BEGIN PGP MESSAGE----
-    | Digest: sha-1
-    |
-    E I am not wearing any socks!!
-    | -----END PGP MESSAGE----
-    |
-    | --==67890==
-    | Content-Type: application/octet-stream
-    | Content-Disposition: attachment; filename="my-toes.jpg.pgp"
-    |
-    E [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-    | --==67890==--
+<pre class="add-bottom">
+  |  From: Alice <a1234@wonderland.com>
+  |  To: Bob <b9973@builders.com>
+  |  Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+  |  Subject: I have a secret
+  |  Content-Type: multipart/mixed; boundary="==12345=="
+  |
+  |  --==12345==
+  |  Content-Type: text/plain; charset='utf-8'
+  |
+  |  -----BEGIN PGP MESSAGE----
+  |  Digest: sha-1
+  |
+  E  I am not wearing any socks!!
+  |  -----END PGP MESSAGE----
+  |
+  |  --==67890==
+  |  Content-Type: application/octet-stream
+  |  Content-Disposition: attachment; filename="my-toes.jpg.pgp"
+  |
+  E  [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
+  |  --==67890==--
+</pre>
 
 There are noticable differences here:
 
@@ -106,7 +110,7 @@ There are noticable differences here:
    detect that anything happened.
 
 
-## What does this all mean?
+### What does this all mean?
 
 When the technical characteristics of the two formats are compared, there
 are two major considerations - security and compatibility.
@@ -130,7 +134,7 @@ Conversely:
    MIME are not widely available, so for non-technical users the data is
    effectively worthless.
 
-What does this mean for Mailpile?
+#### What does this mean for Mailpile?
 
 When trying to design and deploy a user-friendly e-mail encryption tool,
 we can't just consider the interface we present to our own users, we
@@ -149,7 +153,7 @@ to us, we probably should avoid creating new content using a format that
 is known to have fundamental flaws.
 
 
-## What is the impact?
+#### What is the impact?
 
 Most desktop and some mobile mail clients do support PGP/MIME, but few
 do so natively - most require a 3rd party plugin, which is a usability
@@ -181,7 +185,7 @@ standards and protocols.
 And by that logic, the question changes...
 
 
-## Can ad-hoc PGP encryption be made as secure as PGP/MIME?
+### Can ad-hoc PGP encryption be made as secure as PGP/MIME?
 
 I think maybe it can.
 
@@ -224,51 +228,53 @@ specification deals with white-space in a clear and easy to implement
 manner.
 
 
-## Another example
+#### Another example
 
 To revisit our example, an e-mail sent using an Email Manifest approach
 might look like this:
 
-    | From: a1234@wonderland.com
-    | To: b9973@builders.com
-    | Cc: omgwtf@lucasfilm.com
-    | Subject: Encrypted Message
-    | Content-Type: multipart/mixed; boundary="==12345=="
-    |
-    | --==12345==
-    | Content-Type: text/plain; charset='utf-8'
-    |
-    | -----BEGIN PGP MESSAGE----
-    | Digest: sha-1
-    |
-    E From: Alice
-    E To: Bob
-    E Cc: Jar Jar Binks
-    E Subject: I have a secret
-    E
-    E I am not wearing any socks!!
-    E
-    E Note: this message should have 1 attachment and a manifest.
-    | -----END PGP MESSAGE----
-    |
-    | --==67890==
-    | Content-Type: application/octet-stream
-    | Content-Disposition: attachment; filename="attachment-1.pgp"
-    |
-    E [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-    | --==67890==
-    | Content-Type: application/pgp-manifest
-    | Content-Disposition: attachment; filename="manifest.pgp"
-    |
-    E Manifest-Version: 1.0
-    E From: Alice <a1234@wonderland.com>
-    E To: Bob <b9973@builders.com>
-    E Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
-    E Subject: I have a secret
-    E
-    E Inline: text/plain; sha2sum="..."; has-pgp; pgp-has-hints
-    E Attachment-1: image/jpeg; filename="my-toes.jpg"; sha2sum="..."
-    | --==67890==--
+<pre class="add-bottom">
+  |  From: a1234@wonderland.com
+  |  To: b9973@builders.com
+  |  Cc: omgwtf@lucasfilm.com
+  |  Subject: Encrypted Message
+  |  Content-Type: multipart/mixed; boundary="==12345=="
+  |
+  |  --==12345==
+  |  Content-Type: text/plain; charset='utf-8'
+  |
+  |  -----BEGIN PGP MESSAGE----
+  |  Digest: sha-1
+  |
+  E  From: Alice
+  E  To: Bob
+  E  Cc: Jar Jar Binks
+  E  Subject: I have a secret
+  E
+  E  I am not wearing any socks!!
+  E
+  E  Note: this message should have 1 attachment and a manifest.
+  |  -----END PGP MESSAGE----
+  |
+  |  --==67890==
+  |  Content-Type: application/octet-stream
+  |  Content-Disposition: attachment; filename="attachment-1.pgp"
+  |
+  E  [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
+  |  --==67890==
+  |  Content-Type: application/pgp-manifest
+  |  Content-Disposition: attachment; filename="manifest.pgp"
+  |
+  E  Manifest-Version: 1.0
+  E  From: Alice <a1234@wonderland.com>
+  E  To: Bob <b9973@builders.com>
+  E  Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+  E  Subject: I have a secret
+  E
+  E  Inline: text/plain; sha2sum="..."; has-pgp; pgp-has-hints
+  E  Attachment-1: image/jpeg; filename="my-toes.jpg"; sha2sum="..."
+  |  --==67890==--
+</pre>
 
 This sample demonstrates how both the message structure and sensitive
 headers could be moved into the Email Manifest.
@@ -284,7 +290,7 @@ client could suppress the duplicate information automatically to avoid
 clutter.
 
 
-## What does the recipient see?
+#### What does the recipient see?
 
 If a recipient's mail client understands Email Manifests, the message
 can be rendered just as nicely as if it were sent using PGP/MIME, with
@@ -309,7 +315,7 @@ dramatically improves interoperability with mail clients and plugins
 that do not understand PGP/MIME, including webmail users.
 
 
-## Conclusion
+### Conclusion
 
 It is definitely possible to transmit PGP-encrypted messages and
 attachments over e-mail in a way which is both more interoperable and
@@ -336,5 +342,7 @@ folks, and from folks writing secure e-mail tools. What do you think?
 Please mail us at [team@mailpile.is](mailto:team@mailpile.is) or tweet
 at [@MailpileTeam](https://twitter.com/MailpileTeam) if you have
 insights to share.
+
+We'll also be following [comments on Hacker News](https://news.ycombinator.com/item?id=8648587).
 
 Thanks!
