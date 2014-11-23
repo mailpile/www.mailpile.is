@@ -41,6 +41,9 @@ loop: depend
 %.jinja:
 	@touch $@
 
+%.jinja-rss:
+	@touch $@
+
 %.md: %.md.py
 	(cd $(<D); ./$(<F)) > $@
 
