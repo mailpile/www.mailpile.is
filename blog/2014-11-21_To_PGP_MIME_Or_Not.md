@@ -167,8 +167,8 @@ promising at the moment, are merely automating that process and generally
 [do not support PGP/MIME](https://code.google.com/p/end-to-end/#Which_RFCs_does_End-To-End_support?).
 Although [Google's engineers have expressed interest in supporting
 PGP/MIME eventually](https://code.google.com/p/end-to-end/issues/detail?id=32),
-it is not an easy problem and they make no promises about when or
-whether the user-experience will be acceptable.
+[as have Mailvelope's](https://github.com/mailvelope/mailvelope/issues/41),
+it is not an easy problem and they make no promises about when or how.
 
 Finally, there is a very small, but disproportionatly important, set of
 users (whistle-blowers, activists, spies) who have a need to run their

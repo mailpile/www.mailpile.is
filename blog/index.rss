@@ -153,8 +153,8 @@ promising at the moment, are merely automating that process and generally
 &lt;a href=&#34;https://code.google.com/p/end-to-end/#Which_RFCs_does_End-To-End_support?&#34;&gt;do not support PGP/MIME&lt;/a&gt;.
 Although &lt;a href=&#34;https://code.google.com/p/end-to-end/issues/detail?id=32&#34;&gt;Google&#39;s engineers have expressed interest in supporting
 PGP/MIME eventually&lt;/a&gt;,
-it is not an easy problem and they make no promises about when or
-whether the user-experience will be acceptable.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/mailvelope/mailvelope/issues/41&#34;&gt;as have Mailvelope&#39;s&lt;/a&gt;,
+it is not an easy problem and they make no promises about when or how.&lt;/p&gt;
 &lt;p&gt;Finally, there is a very small, but disproportionatly important, set of
 users (whistle-blowers, activists, spies) who have a need to run their
 Internet tools and their encryption tools on separate machines.  An &#34;air
