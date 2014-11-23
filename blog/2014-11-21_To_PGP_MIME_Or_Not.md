@@ -28,9 +28,9 @@ To illustrate the difference, a PGP/MIME encrypted message with a single
 attachment looks a bit like this:
 
 <pre class="add-bottom">
-  |  From: Alice <a1234@wonderland.com>
-  |  To: Bob <b9973@builders.com>
-  |  Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+  |  From: Alice &lt;a1234@wonderland.com&gt;
+  |  To: Bob &lt;b9973@builders.com&gt;
+  |  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
   |  Subject: I have a secret
   |  Content-Type: multipart/encrypted;
   |                protocol="application/pgp-encrypted";
@@ -72,9 +72,9 @@ encrypted part with an 'E'. The same message, sent using ad-hoc
 encryption, might look like this:
 
 <pre class="add-bottom">
-  |  From: Alice <a1234@wonderland.com>
-  |  To: Bob <b9973@builders.com>
-  |  Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+  |  From: Alice &lt;a1234@wonderland.com&gt;
+  |  To: Bob &lt;b9973@builders.com&gt;
+  |  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
   |  Subject: I have a secret
   |  Content-Type: multipart/mixed; boundary="==12345=="
   |
@@ -266,9 +266,9 @@ might look like this:
   |  Content-Disposition: attachment; filename="manifest.pgp"
   |
   E  Manifest-Version: 1.0
-  E  From: Alice <a1234@wonderland.com>
-  E  To: Bob <b9973@builders.com>
-  E  Cc: Jar Jar Binks <omgwtf@lucasfilm.com>
+  E  From: Alice &lt;a1234@wonderland.com&gt;
+  E  To: Bob &lt;b9973@builders.com&gt;
+  E  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
   E  Subject: I have a secret
   E
   E  Inline: text/plain; sha2sum="..."; has-pgp; pgp-has-hints

@@ -24,9 +24,9 @@ message body itself.&lt;/p&gt;
 &lt;p&gt;To illustrate the difference, a PGP/MIME encrypted message with a single
 attachment looks a bit like this:&lt;/p&gt;
 &lt;pre class=&#34;add-bottom&#34;&gt;
-  |  From: Alice &lt;a1234@wonderland.com&gt;
-  |  To: Bob &lt;b9973@builders.com&gt;
-  |  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
+  |  From: Alice &amp;lt;a1234@wonderland.com&amp;gt;
+  |  To: Bob &amp;lt;b9973@builders.com&amp;gt;
+  |  Cc: Jar Jar Binks &amp;lt;omgwtf@lucasfilm.com&amp;gt;
   |  Subject: I have a secret
   |  Content-Type: multipart/encrypted;
   |                protocol=&#34;application/pgp-encrypted&#34;;
@@ -67,9 +67,9 @@ attachment looks a bit like this:&lt;/p&gt;
 encrypted part with an &#39;E&#39;. The same message, sent using ad-hoc
 encryption, might look like this:&lt;/p&gt;
 &lt;pre class=&#34;add-bottom&#34;&gt;
-  |  From: Alice &lt;a1234@wonderland.com&gt;
-  |  To: Bob &lt;b9973@builders.com&gt;
-  |  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
+  |  From: Alice &amp;lt;a1234@wonderland.com&amp;gt;
+  |  To: Bob &amp;lt;b9973@builders.com&amp;gt;
+  |  Cc: Jar Jar Binks &amp;lt;omgwtf@lucasfilm.com&amp;gt;
   |  Subject: I have a secret
   |  Content-Type: multipart/mixed; boundary=&#34;==12345==&#34;
   |
@@ -238,9 +238,9 @@ might look like this:&lt;/p&gt;
   |  Content-Disposition: attachment; filename=&#34;manifest.pgp&#34;
   |
   E  Manifest-Version: 1.0
-  E  From: Alice &lt;a1234@wonderland.com&gt;
-  E  To: Bob &lt;b9973@builders.com&gt;
-  E  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
+  E  From: Alice &amp;lt;a1234@wonderland.com&amp;gt;
+  E  To: Bob &amp;lt;b9973@builders.com&amp;gt;
+  E  Cc: Jar Jar Binks &amp;lt;omgwtf@lucasfilm.com&amp;gt;
   E  Subject: I have a secret
   E
   E  Inline: text/plain; sha2sum=&#34;...&#34;; has-pgp; pgp-has-hints
