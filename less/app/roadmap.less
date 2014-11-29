@@ -8,7 +8,7 @@
   @roadmap-item-padding: 15px;
 
   .roadmap-item-font() {
-  	font-size: 18px;
+  	font-size: 16px;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     line-height: 21px;
@@ -65,10 +65,26 @@
     border: 1px solid @gray;
   }
 
-  ol.issues li.issue a {
-    .roadmap-item-font();
+  ol.issues li.issue h6.title {
+    font-family: @text-font-family-bold;
+    font-weight: bold;
+    margin-bottom: 5px;
   }
-  
+
+  ol.issues li.issue span.summary {
+    display: none;
+    margin: 10px 20px;
+    font-size: @text-font-size;
+    font-weight: normal;
+    line-height: @text-line-height;
+  }
+
+  ol.issues li.issue a.more {
+    .roadmap-item-font();
+    display: block;
+    margin-left: 20px;
+  }
+
   ol.issues li.issue .issue-details {
 
   }
