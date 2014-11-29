@@ -2,8 +2,7 @@ jQuery(document).ready(function($){
 
     // Smooth Scrolling
     $('a.scroll-link[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-            || location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                if (target.length) {
@@ -53,6 +52,35 @@ jQuery(document).ready(function($){
         callback_single_vote_error: function() {
           alert('Oops, could not vote on that');
         }
+    });
+
+
+    $('a.more').on('click', function(e) {
+
+      e.preventDefault();
+      var item = $(this).parent();
+      var summary = $(this).parent().find('span.summary');
+
+      if (summary.css('display') === 'none') {
+        
+        summary.css('display', 'block');
+
+        if (item.data('comments')) {
+
+          $(this).html(item.data('comments') + ' Comments on Github');
+
+        } else {
+          $(this).html('Comment on Github');
+          
+        }
+
+      } else {
+
+        summary.fadeOut();
+        $(this).html('See Details');
+
+      }
+
     });
 
 });
