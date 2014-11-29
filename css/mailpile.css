@@ -503,7 +503,7 @@ body {
   font-size: 16px;
   font-weight: normal;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 24px;
+  line-height: 21px;
   color: #333333;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
@@ -2953,6 +2953,251 @@ ul.backers li {
     margin-right: auto;
   }
 }
+/* Demos */
+#svg-logo_whole {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 280px;
+}
+#svg-logo_mail_1 {
+  fill: #ffffff;
+  -webkit-animation-name: glow-blue;
+  -webkit-animation-delay: .5s;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: glow-blue;
+  -moz-animation-delay: .5s;
+  -moz-animation-duration: .7s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: forwards;
+  animation-name: glow-blue;
+  animation-delay: .5s;
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+#svg-logo_mail_2 {
+  fill: #ffffff;
+  -webkit-animation-name: glow-red;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: glow-red;
+  -moz-animation-delay: 1s;
+  -moz-animation-duration: .7s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: forwards;
+  animation-name: glow-red;
+  animation-delay: 1s;
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+#svg-logo_mail_3 {
+  fill: #ffffff;
+  -webkit-animation-name: glow-green;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: glow-green;
+  -moz-animation-delay: 1.5s;
+  -moz-animation-duration: .7s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: forwards;
+  animation-name: glow-green;
+  animation-delay: 1.5s;
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes glow-blue {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #56b6dc;
+  }
+}
+@-moz-keyframes glow-blue {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #56b6dc;
+  }
+}
+@keyframes glow-blue {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #56b6dc;
+  }
+}
+@-webkit-keyframes glow-red {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #ed545c;
+  }
+}
+@-moz-keyframes glow-red {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #ed545c;
+  }
+}
+@keyframes glow-red {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #ed545c;
+  }
+}
+@-webkit-keyframes glow-green {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #53aa46;
+  }
+}
+@-moz-keyframes glow-green {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #53aa46;
+  }
+}
+@keyframes glow-green {
+  0% {
+    fill: #ffffff;
+  }
+  100% {
+    fill: #53aa46;
+  }
+}
+/* Donate Page */
+#header-donate .icon-donate {
+  font-size: 216px;
+  line-height: 216px;
+  color: #be1c21;
+}
+#header-donate .icon-logo.big {
+  font-size: 216px;
+  line-height: 216px;
+}
+.donate-input {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.donate-dollar {
+  margin-top: 18px;
+  margin-right: 6px;
+  font-size: 24px;
+  line-height: 24px;
+  display: inline-block;
+}
+.donate-input input {
+  width: 95px;
+  display: inline-block;
+}
+/* FAQ */
+#faq-search {
+  display: none;
+  width: 400px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  font-size: 21px;
+  line-height: 21px;
+}
+#faq-search:focus {
+  outline: none;
+  border-color: #aaa;
+}
+.list {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px 0 0;
+}
+.list > li {
+  display: block;
+  background-color: #eee;
+  padding: 10px;
+}
+#answers li {
+  margin: 25px 0px;
+}
+li.faq-section-title {
+  background: #ffffff;
+}
+li.faq-section-title h2 {
+  font-family: Mailpile-700;
+  margin: 20px 0px 20px 15px;
+}
+li.faq-item {
+  border-radius: 10px;
+  cursor: pointer;
+}
+li.faq-item:hover {
+  background: #337fb2;
+}
+li.faq-item:hover h3.faq-title {
+  color: #ffffff;
+}
+li.faq-item h3.faq-title {
+  margin: 15px 15px;
+  font-family: Mailpile-500;
+  font-size: 24px;
+  line-height: 24px;
+}
+li.faq-item span.faq-section {
+  display: none;
+}
+li.faq-item p {
+  width: 85%;
+  margin: 0px 15px 10px 20px;
+  color: #555555;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 21px;
+}
+li.faq-item.open:hover {
+  background: #eee;
+}
+li.faq-item.open:hover h3.faq-title {
+  color: #be1c21;
+}
 /* Roadmap */
 #form-community-login input {
   display: inline-block;
@@ -2980,7 +3225,7 @@ ul.labels > li.label {
 ol.issues {
   margin: 20px 0px 0px 0px;
   list-style: decimal inside;
-  font-size: 18px;
+  font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 21px;
@@ -3001,11 +3246,25 @@ ol.issues li.issue:hover {
 ol.issues li.issue:active {
   border: 1px solid #b3b3b3;
 }
-ol.issues li.issue a {
-  font-size: 18px;
+ol.issues li.issue h6.title {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+ol.issues li.issue span.summary {
+  display: none;
+  margin: 10px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 21px;
+}
+ol.issues li.issue a.more {
+  font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 21px;
+  display: block;
+  margin-left: 20px;
 }
 body.dragging,
 body.dragging * {
@@ -3021,7 +3280,7 @@ ol.issues li.dragging-placeholder {
   border: 1px solid #cccccc;
   border-radius: 4px;
   padding: 15px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 21px;
@@ -3044,7 +3303,7 @@ span.issue-title {
   display: block;
 }
 span.issue-title a {
-  font-size: 18px;
+  font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 21px;
