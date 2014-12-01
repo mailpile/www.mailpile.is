@@ -5,7 +5,7 @@
   }
 
   @roadmap-item-margin: 15px;
-  @roadmap-item-padding: 15px;
+  @roadmap-item-padding: 10px 15px;
 
   .roadmap-item-font() {
   	font-size: 16px;
@@ -46,7 +46,7 @@
     .roadmap-item-font();
   }
 
-  ol.issues li.issue {
+  ol.issues > li.issue {
   	margin: 10px 0px;
   	padding: @roadmap-item-padding;
     border: 1px solid @white;
@@ -54,21 +54,24 @@
     background: @white;
   }
 
-  ol.issues li.issue:hover {
+  ol.issues > li.issue:hover {
     border: 1px solid @gray;
     background: @white;
     cursor: move;
 	  transition-duration: 0.3s;
   }
 
-  ol.issues li.issue:active {
+  ol.issues > li.issue:active {
     border: 1px solid @gray;
   }
 
   ol.issues li.issue h6.title {
+    width: 85%;
+    display: inline-block;
     font-family: @text-font-family-bold;
     font-weight: bold;
-    margin-bottom: 5px;
+    font-size: @text-font-size;
+    margin-bottom: 0px;
   }
 
   ol.issues li.issue span.summary {
@@ -79,15 +82,29 @@
     line-height: @text-line-height;
   }
 
+  ol.issues li.issue a.rank,
+  ol.issues li.issue a.comment,
   ol.issues li.issue a.more {
-    .roadmap-item-font();
-    display: block;
+    display: inline-block;
     margin-left: 20px;
+    margin-bottom: 5px;
+    .text-detail();
+    color: @gray;
   }
 
-  ol.issues li.issue .issue-details {
-
+  ol.issues li.issue a.more {
+    float: right;
+    position: relative;
+    top: -16px;
+    right: 0px;
   }
+
+  ol.issues li.issue a.rank:hover,
+  ol.issues li.issue a.comment:hover,
+  ol.issues li.issue a.more:hover {
+    color: @grayDark;
+  }
+
     
   body.dragging, body.dragging * {
     cursor: move !important;
