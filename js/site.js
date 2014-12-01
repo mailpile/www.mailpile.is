@@ -60,25 +60,33 @@ jQuery(document).ready(function($){
       e.preventDefault();
       var item = $(this).parent();
       var summary = $(this).parent().find('span.summary');
+      var link = $(this);
 
       if (summary.css('display') === 'none') {
         
         summary.css('display', 'block');
+        link.html('hide details');
 
+        // Rank
+        item.append('<a id="issue-' + item.data('issue') + '-rank" href="#" class="rank"><span class="icon-star"></span> Ranked ' + item.data('rank') + ' by Community</a>');
+
+        // Add Github Link
         if (item.data('comments')) {
-
-          $(this).html(item.data('comments') + ' Comments on Github');
-
+          item.append('<a id="issue-' + item.data('issue') + '-comments" href="' + link.attr('href') + '" class="comment" target="_blank"><span class="icon-comment"></span> ' + item.data('comments') + ' Comments on Github</a>');
         } else {
-          $(this).html('Comment on Github');
-          
+          item.append('<a id="issue-' + item.data('issue') + '-comments" href="' + link.attr('href') + '" class="comment" target="_blank"><span class="icon-comment"></span> Comment on Github</a>');
         }
+
+        // Adjust CSS
+        link.css({'top': '3px'});
 
       } else {
 
-        summary.fadeOut();
-        $(this).html('See Details');
-
+        summary.hide();
+        link.html('see details');
+        $('#issue-' + item.data('issue') + '-comments').remove();
+        $('#issue-' + item.data('issue') + '-rank').remove();
+        link.css({'top': '-16px'});
       }
 
     });
