@@ -3115,3 +3115,17 @@ a.vote.selected.vote-no {
 .icon-vote-no:before {
   content: "\e611";
 }
+li.state-closed, li.state-closed h6 {
+  color: #aaa;
+}
+li.state-closed h6:after {
+  color: #070;
+  font-size: 1.3em;
+  content: " \2714";
+}
+li.state-closed span.summary:before {
+  color: #070;
+  font-weight: bold;
+  content: "Completed: ";
+}
+
