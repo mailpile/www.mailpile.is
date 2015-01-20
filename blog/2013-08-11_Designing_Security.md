@@ -8,7 +8,7 @@ Type: blog
 <p>&nbsp;</p>
 
 <p>In this inaugural Mailpile Conversations video, two of our team members: Smari McCarthy & Brennan Novak discuss some of the importances and challenges of getting encryption right in an email interface!</p>
-<p>There is currently an active thread about this fun challenge, Follow along or participate at the Mailpile <a href="github.com/pagekite/Mailpile/issues/59" target="_blank">Github Issues</a></p>
+<p>There is currently an active thread about this fun challenge, Follow along or participate at the Mailpile <a href="github.com/pagekite/Mailpile/issues/59" target="_blank">GitHub Issues</a></p>
 
 <p>Music by:<br>
 "Dark Horizon" by <a href="http://mezmedallion.com" target="_blank">Mez Medallion</a><br>

@@ -15,7 +15,7 @@ really close to having a working product for you guys.
 
 But you're hungry now, and it's high time for another appetizer.  So
 without further ado, we present **Mailpile Alpha II - The Dogfood Edition!**
-Yummy! This savoury mass of source code has been tagged in Github
+Yummy! This savoury mass of source code has been tagged in GitHub
 ([release 0.2.0](https://github.com/pagekite/Mailpile/releases))
 and we have updated our [live demos](/demos/). It's a little hard
 to summarize what all has changed (it would be easier to summarize what

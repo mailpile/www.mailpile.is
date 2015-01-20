@@ -76,7 +76,7 @@ but it is an interesting one for sure and we do have a bunch of ideas:
 A lot of us get so much e-mail, that we think of even legitimate mail as
 a form of "spam".
 
-Newsletters, Twitter notifications, Github issues, messages from our
+Newsletters, Twitter notifications, GitHub issues, messages from our
 banks... e-mail is the only real standard for delivering messages to
 people over the Internet and it is used for literally everything.
 Flagging those messages as spam would be wrong, but it would still be

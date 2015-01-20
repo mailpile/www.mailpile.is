@@ -70,11 +70,11 @@ jQuery(document).ready(function($){
         // Rank
         item.append('<a id="issue-' + item.data('issue') + '-rank" href="#" class="rank"><span class="icon-star"></span> Ranked ' + item.data('rank') + ' by Community</a>');
 
-        // Add Github Link
+        // Add GitHub Link
         if (item.data('comments')) {
-          item.append('<a id="issue-' + item.data('issue') + '-comments" href="' + link.attr('href') + '" class="comment" target="_blank"><span class="icon-comment"></span> ' + item.data('comments') + ' Comments on Github</a>');
+          item.append('<a id="issue-' + item.data('issue') + '-comments" href="' + link.attr('href') + '" class="comment" target="_blank"><span class="icon-comment"></span> ' + item.data('comments') + ' Comments on GitHub</a>');
         } else {
-          item.append('<a id="issue-' + item.data('issue') + '-comments" href="' + link.attr('href') + '" class="comment" target="_blank"><span class="icon-comment"></span> Comment on Github</a>');
+          item.append('<a id="issue-' + item.data('issue') + '-comments" href="' + link.attr('href') + '" class="comment" target="_blank"><span class="icon-comment"></span> Comment on GitHub</a>');
         }
 
         // Adjust CSS
