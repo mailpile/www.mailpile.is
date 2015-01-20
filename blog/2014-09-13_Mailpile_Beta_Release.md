@@ -68,7 +68,7 @@ Download via: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer
 
 <div class="add-bottom">
 <h5 class="half-bottom"><img src="/img/os-linux.png" border="0" style="height:24px;"> Linux</h5>
-As a <a href="https://github.com/pagekite/Mailpile/releases" target="_blank">tagged source release on Github</a>
+As a <a href="https://github.com/pagekite/Mailpile/releases" target="_blank">tagged source release on GitHub</a>
 </div>
 
 So give it a spin, seed our torrents and let us know what you think. :-)

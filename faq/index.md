@@ -493,7 +493,7 @@ $(document).ready(function() {
 </li>
 <li class="faq-section-title" id="dev"><h2>Contributing, Helping, Developing</h2></li>
 <li class="faq-item" id="dev-1"> <h3 class="faq-title">I am a developer, how can I help?</h3> <span class="faq-section">dev</span>
-<p>You can take a look at our Github page and figure out if there's something to do there. </p>
+<p>You can take a look at our GitHub page and figure out if there's something to do there. </p>
 </li>
 <li class="faq-item" id="dev-2"> <h3 class="faq-title">I am not a techie, how can I help?</h3> <span class="faq-section">dev</span>
 <p>You can spread the word about the awesomeness of Mailpile! </p>

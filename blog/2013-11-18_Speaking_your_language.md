@@ -27,6 +27,6 @@ We have designated a translation freeze for our first alpha release for January 
 
 ### Getting Involved
 
-If you're interested in contributing language translations to Mailpile, checkout the project [on Transifex](https://www.transifex.com/projects/p/mailpile/) and submit a pull request to our [Github](http://github.com/pagekite/mailpile) or get in touch with [Ovnicraft](http://github.com/Ovnicraft) who has been awesomely spearheading the endeavor.
+If you're interested in contributing language translations to Mailpile, checkout the project [on Transifex](https://www.transifex.com/projects/p/mailpile/) and submit a pull request to our [GitHub](http://github.com/pagekite/mailpile) or get in touch with [Ovnicraft](http://github.com/Ovnicraft) who has been awesomely spearheading the endeavor.
 
 Thanks again!
