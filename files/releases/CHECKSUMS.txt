@@ -2,3 +2,5 @@ d7708be629e37d6a66ac3af7374a5169  Mailpile-Installer-Beta.dmg
 84c177de09cc662a676f7f2d27d13aa0  Mailpile-Installer-Beta.exe
 7202880c3e13aae7355ae48ab9bacbd8d1ea819c  Mailpile-Installer-Beta.dmg
 1b065aef299c25f76116b09d2c59f6caf12d6464  Mailpile-Installer-Beta.exe
+82cb79e2602de183a10303a9f38ca69ed2b84e72f17339c275bae79b3ebd5cfd  Mailpile-Installer-Beta-II.dmg
+e1c6f7d909d7eb611eeccb8ca20a8e7079dba3c818cf05d7cbc10c044416f666  Mailpile-Installer-Beta-II.exe
