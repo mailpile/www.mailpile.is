@@ -4,6 +4,153 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>Mailpile Beta II - the 4096 bit release</title>
+    <link>http://www.mailpile.is/blog/2015-01-20_Mailpile_Beta_II_4096_bits.html</link>
+    <description>&lt;p&gt;&lt;img src=&#34;/files/Beta-II.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Hello world and Happy New Year!&lt;/p&gt;
+&lt;p&gt;The Mailpile team is happy to announce our second Beta release:
+&lt;strong&gt;Mailpile Beta II&lt;/strong&gt; (version 0.4.2). We&#39;re still not at 1.0 (sorry...),
+but much progress has been made and it is high time to update our public
+offerings again.&lt;/p&gt;
+&lt;p&gt;There was also a little security bug in the Beta, that we need to talk
+about and address... but first, the good stuff!&lt;/p&gt;
+&lt;h2&gt;Where Can You Get It?&lt;/h2&gt;
+&lt;p&gt;The new release is availble from &lt;a href=&#34;/download/&#34;&gt;the Mailpile download
+page&lt;/a&gt;, and the source is &lt;a href=&#34;https://github.com/mailpile/Mailpile/releases&#34;&gt;on
+github&lt;/a&gt; as always.&lt;/p&gt;
+&lt;p&gt;Please read &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Release-Notes-201501-Beta-II&#34;&gt;the release
+notes&lt;/a&gt;
+and check our &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;security
+roadmap&lt;/a&gt; so
+you know what to expect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; People upgrading from the older Mac or Windows packages may
+want to uninstall the old Mailpile Beta before installing Beta II. Your
+data should all remain intact.&lt;/p&gt;
+&lt;h2&gt;What&#39;s New?&lt;/h2&gt;
+&lt;p&gt;Since our last beta, work has been focused on three things: fixing bugs,
+improving the usability of PGP and speeding up the web interface.&lt;/p&gt;
+&lt;p&gt;We have made great progress on all of these fronts.&lt;/p&gt;
+&lt;p&gt;In particular, many of the bugs in our IMAP implementation have been
+ironed out, as has the notorious bug whereby &lt;code&gt;openssl&lt;/code&gt; processes stick
+around consuming large amounts of CPU after Mailpile had supposedly been
+shut down. Most of the bugs that made the command line interface
+unusable were fixed and of course that security issue which we&#39;ll
+discuss at the end of this post.&lt;/p&gt;
+&lt;p&gt;The usability of our PGP interface was given some serious scrutiny, with
+the help of our friends at the Open Internet Tools project. The amazing
+&lt;a href=&#34;https://openitp.org/sup/&#34;&gt;Gus Andrews&lt;/a&gt; conducted a series of usability
+studies with various types of users, the results of which were &lt;a href=&#34;https://openitp.org/field-notes/user-tests-mailpile-features.html&#34;&gt;posted
+on the OpenITP&#39;s
+blog&lt;/a&gt;.
+Brennan has been working on solutions based on this feedback and many
+improvements in Mailpile Beta II are a result of this work. Thank you
+Gus and OpenITP! We hope to work more with them in the future - this is
+just the beginning!&lt;/p&gt;
+&lt;p&gt;Finally, Bjarni went into hiding in Italy to focus on improving the
+performance of our web interface. As a result the Beta II release is
+noticably snappier than the first Beta, and we expect more improvements
+on this front in the near future.&lt;/p&gt;
+&lt;p&gt;Many other things are still in progress, including a more &#34;AJAXy&#34; user
+interface, a way to safely read HTML mail, a redesign of the way
+Mailpile stores its data, reductions in Mailpile&#39;s RAM requirements and
+code cleanups to make Mailpile more amenable to Linux distro packaging.
+Those features may not be visible in the Beta II user interface, but
+people who look under the hood will find traces in the code.&lt;/p&gt;
+&lt;h2&gt;Our PGP key size bug&lt;/h2&gt;
+&lt;p&gt;That brings us to the security issue which forced us to get our act
+together and push this release out the door:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The Mailpile Beta was misconfigured to generate weak PGP keys during
+setup.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To be exact, if a user installed Mailpile and did not already have a PGP
+key in their GnuPG keychain, then Mailpile would automatically generate
+a new key. Instead of generating a 4096 bit encryption key as we had
+planned, we actually generated a 1024 bit key. Oops!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How did this happen?&lt;/strong&gt;&lt;br /&gt;
+  Human error. The key size was lowered to facilitate debugging, and we forgot to raise it again.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Who is affected?&lt;/strong&gt;&lt;br /&gt;
+  People who did not already have a PGP key and installed the Mailpile Beta, or installed from github before Jan 5, 2015.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What is the impact?&lt;/strong&gt;&lt;br /&gt;
+  Unless you have powerful enemies, a 1024 bit key is still probably okay. See below for more details.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How does one fix it?&lt;/strong&gt;&lt;br /&gt;
+  Generate a new key, revoke the old one. We have added code to Mailpile to assist with this process. Details below...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We&#39;d like to give special thanks to Matt Drollette for sending us a pull
+request on github to fix the issue.&lt;/p&gt;
+&lt;h3&gt;So how bad is it really?&lt;/h3&gt;
+&lt;p&gt;Realistically, there still aren&#39;t many organizations in the world that
+can factor 1024 bit keys within a reasonable amount of time. The NSA
+certainly can. Its partners probably. Some other large organizations
+maybe. There are some attacks that have worked to reduce the keyspace,
+but they&#39;re more common on SSL than PGP. So unless your attacker is a
+large powerful government, 1024 is probably okay-ish at the moment. And
+using a 1024 bit key is certainly far, far better than not using
+encryption at all.&lt;/p&gt;
+&lt;p&gt;On the other hand, PGP encrypted data tends to stay encrypted that way
+for long periods of time, so there is a possibility that somebody could
+intercept the encrypted message, store it until factoring 1024 bit RSA
+keys is easy, and then decrypt it. That could be anything between years
+or decades.&lt;/p&gt;
+&lt;p&gt;A lot of people still use 1024 bit RSA keys, but &lt;a href=&#34;http://www.symantec.com/page.jsp?id=1024-bit-migration-faq&#34;&gt;Certificate
+Authorities stopped selling new 1024 bit certificates at the end of
+2013&lt;/a&gt;,
+because they&#39;re simply not good enough.&lt;/p&gt;
+&lt;p&gt;Long story short: This isn&#39;t the end of the world, but we recommend you
+upgrade your keys as soon as possible.&lt;/p&gt;
+&lt;h3&gt;How do you fix it?&lt;/h3&gt;
+&lt;p&gt;For that matter, how do you even know if you have a weak key?&lt;/p&gt;
+&lt;p&gt;These two questions are closely related, and just writing instructions
+for all the different operating systems out there seemed like a daunting
+task. So, in order to simplify the process, the Mailpile Beta II
+includes code which will evaluate your keychain and suggest improvements
+if it finds problems.&lt;/p&gt;
+&lt;p&gt;These problems are not limited to weak 1024 bit keys, the checker will
+also detect other problems, such as using a key that is scheduled to
+expire in the near future, or neglecting to create a key for one of your
+outgoing e-mail addresses.&lt;/p&gt;
+&lt;p&gt;To give the tool a try, visit the Mailpile command-line interface and
+run the &lt;code&gt;crypto/gpg/check_keys&lt;/code&gt; command. It should produce output
+similar to this:&lt;/p&gt;
+&lt;pre class=&#34;add-bottom&#34;&gt;
+mailpile&gt; crypto/gpg/check_keys
+
+Sanity checked: 4 keys in GPG keyring, 1 profiles.
+ - 61A015763D28D410A87B197328191D9B3B4199B4: OK: 4096 bits, looks good!
+ - 85EE5D9223806DFCBA630E39EABBE96FD521D78C: --- Disabled.
+ - 20FF41634DF6F90ECA4452203CAC6CA6E4D9C373: Bad: expired on 2015-01-16
+ - 9858665AC3CA84FEAE2BCAD1E623001E05CE8B43: --- Disabled.
+
+Proposed fixes:
+ - Revoke bad keys:
+    * Run: `gpg --gen-revoke 20FF41634DF6F90ECA4452203CAC6CA6E4D9C373`
+    * Follow the instructions given
+    * A block of text will be shown on your screen.
+    * Send that block to contacts that have your key.
+    * You can search for `is:encrypted to:me` to find people who have it.
+- Disable bad keys:
+    * Run: `gpg --edit-key 20FF41634DF6F90ECA4452203CAC6CA6E4D9C373`
+    * Type `disable`
+    * Type `save`
+    * You&#39;re done!
+&lt;/pre&gt;
+
+&lt;p&gt;The recommended &lt;code&gt;gpg&lt;/code&gt; commands can be run either from a bash shell (or
+C: prompt on Windows), or from within Mailpile itself - in order to
+allow the instructions to work cross-platform we provide direct access
+to &lt;code&gt;gpg&lt;/code&gt; from within the Mailpile command-line itself.&lt;/p&gt;
+&lt;p&gt;We are sorry this is not more user friendly, but we had to strike a
+balance between making things easy, and getting the word out as soon as
+posible. Future versions of Mailpile will hopefully automate more of
+this process, detect more problems, and make our &#34;GPG keychain Doctor&#34;
+more accessible to people not used to using the command-line.&lt;/p&gt;
+&lt;p&gt;It&#39;s a start!&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Thanks for reading this far, and thank you again for all of your
+support.&lt;/p&gt;
+&lt;p&gt;Now go &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Release-Notes-201501-Beta-II&#34;&gt;check out Mailpile Beta II&lt;/a&gt;!&lt;/p&gt;</description>
+    <pubDate>Tue, 20 Jan 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>To PGP/MIME or not to PGP/MIME</title>
     <link>http://www.mailpile.is/blog/2014-11-21_To_PGP_MIME_Or_Not.html</link>
     <description>&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: PGP/MIME has some serious flaws. I propose specifying an
@@ -545,13 +692,5 @@ post to discuss!&lt;/p&gt;</description>
 &lt;p&gt;Sincerely,&lt;/p&gt;
 &lt;p&gt;Your Mailpile Team&lt;/p&gt;</description>
     <pubDate>Wed, 20 Aug 2014 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Our Upcoming Beta Release</title>
-    <link>http://www.mailpile.is/blog/2014-08-08_Our_Upcoming_Beta_Release.html</link>
-    <description>&lt;p&gt;We planed to release our Beta today, but because we wanted the Beta to be a little less like an Alpha, we postponed it for a bit. Don&#39;t worry, it won&#39;t be long! We&#39;re hard at work. Bugs are being fixed, functionality is being added, people are losing sleep. Our Beta release is forthcoming. In fact, you&#39;ll be shocked when you figure out how few days it is until it gets released. Hint: it&#39;s less than 10 days and more than 5 days away, give or take a couple depending on your timezone ;)&lt;/p&gt;
-&lt;p&gt;We recently attended the &lt;a href=&#34;http://cups.cs.cmu.edu/soups/2014/workshops/effcup.html&#34;&gt;EFF Crypto Usability Price Workshop&lt;/a&gt; in Menlo Park, California in July 2014. We presented many aspects of our encryption &amp;amp; security interface which was received enthusiastically. We met and befriended the people behind some fascinating projects like &lt;a href=&#34;http://okturtles.com&#34;&gt;OkTurtles&lt;/a&gt;, &lt;a href=&#34;https://kinko.me&#34;&gt;Kinko.me&lt;/a&gt;, &lt;a href=&#34;https://github.com/warner/petmail/&#34;&gt;PetMail&lt;/a&gt;, &lt;a href=&#34;https://gpgtools.org&#34;&gt;GPG Tools&lt;/a&gt;, &lt;a href=&#34;https://github.com/open-keychain/open-keychain&#34;&gt;Open Keychain&lt;/a&gt;, and &lt;a href=&#34;https://github.com/cryptosphere/confusion&#34;&gt;Confusion&lt;/a&gt;. We formed a working group with a couple other PGP related projects to harmonize UI aspects across multiple PGP related projects- a blog post about all of this is forthcoming shortly after our beta!&lt;/p&gt;
-&lt;p&gt;Oh, as per our planned beta, we mailed stickers to the nice &lt;a href=&#34;http://eff.org&#34;&gt;EFF&lt;/a&gt; people to pass out at the &lt;a href=&#34;http://cryptovillage.org&#34;&gt;DEFCON CryptoVillage&lt;/a&gt; table, so if you&#39;re at DEFCON swing on by and say hi :)&lt;/p&gt;</description>
-    <pubDate>Fri, 08 Aug 2014 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

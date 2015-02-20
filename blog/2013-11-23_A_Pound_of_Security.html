@@ -126,6 +126,8 @@ configure it with the following sections and restart:</p>
              ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AES:
              RSA+3DES:!ADH:!AECDH:!MD5:!DSS"
     SSLHonorCipherOrder 1
+    Disable SSLv3
+    Disable SSLv2
 
     Service
             BackEnd
@@ -152,23 +154,31 @@ It looks a bit like this:</p>
 <pre><code>#!/bin/bash
 set -e
 
-# Download Pound and set up debian packaging config
-curl http://www.apsis.ch/pound/Pound-2.6.tgz &gt;pound_2.6.orig.tar.gz
-tar xvfz pound_2.6.orig.tar.gz
-cp -a pound-2.6-debian Pound-2.6/debian
+# Download Pound and signature
+curl http://www.apsis.ch/pound/Pound-2.7.tgz &gt;pound_2.7.orig.tar.gz
+curl http://www.apsis.ch/pound/Pound-2.7.asc &gt;pound_2.7.orig.tar.gz.asc
+
+# Verify signature
+gpg --verify pound_2.7.orig.tar.gz.asc
+
+# Unpack
+rm -rf Pound-2.7
+tar xvfz pound_2.7.orig.tar.gz
+cp -a pound-2.7-debian Pound-2.7/debian
 
 # Build it!
-cd Pound-2.6
+cd Pound-2.7
 debuild -us -uc
 cd ..
 
 # Cleanup
-rm -rf Pound-2.6
+rm -rf Pound-2.7
 </code></pre>
-<p>The magic is actually in the <code>pound-2.6-debian</code> folder, the contents of which
-you can <a href="/files/pound-2.6-debian-builder.tar.gz">download from here</a>.</p>
+<p>The magic is actually in the <code>pound-2.7-debian</code> folder, the contents of which
+you can <a href="/files/pound-2.7-debian-builder.tar.gz">download from here</a>.</p>
 <p>Hopefully these tips will help others secure their own websites. Thanks for
 reading!</p>
+<p><strong>Updated 2015-02-20</strong>: Moved to Pound 2.7, disabled SSLv3.</p>
 <!-- Page content ends -->
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
                 <hr>
