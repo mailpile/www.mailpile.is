@@ -224,6 +224,9 @@ GnuPG is important and great in many ways, but it is also deeply broken and down
 
 Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I'm sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?
 
+**Update:** [We have written a follow-up
+post](/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html).
+
 
  [1]: http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html
  [2]: http://secushare.org/PGP
