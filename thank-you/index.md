@@ -20,19 +20,19 @@ Type: full
       <div class="row">
   			<div class="one-third">
   				<a href="http://bre.klaki.net" target="_blank"><img src="/img/Bjarni_1.png"></a>
-  				<h4>Bjarni Einarsson<br><small>Tech Lead</small></h4>
+  				<h4>Bjarni Einarsson<br><small><a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></small></h4>
   				<p><a href="http://bre.klaki.net" target="_blank">Bjarni</a> has been writing code and slinging servers since the mid-90s, including a 6 year stint fighting spam and viruses and 3 years behind the scenes on Google's site reliability team.</p>
   				<p>All this time Bjarni's passion has been Free Software and Digital Freedom and in 2010 he received the Nordic Free Software award for his dedication.</p>
   			</div>
   			<div class="one-third">
   				<a href="http://smarimccarthy.is" target="_blank"><img src="/img/Smari_1.png"></a>
-  				<h4>Smári McCarthy<br><small>Privacy & Security</small></h4>
+  				<h4>Smári McCarthy<br><small><a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></small></h4>
   				<p><a href="http://smarimccarthy.is" target="_blank">Smári</a> is on the board of the <a href="https://immi.is/" target="_blank">International Modern Media Institute</a>, a skilled programmer and a prominent member of the Icelandic Pirate Party.</p>
   				<p>He is also a sought after speaker who travels to far away lands, teaching journalists and activists how to communicate securely on-line.</p>
   			</div>
   			<div class="one-third">
   				<a href="https://brennannovak.com" target="_blank"><img src="/img/Brennan_1.png"></a>
-  				<h4>Brennan Novak<br><small>Design & Front-end</small></h4>
+  				<h4>Brennan Novak<br><small><a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></small></h4>
   				<p><a href="https://brennannovak.com" target="_blank">Brennan Novak</a> thrives on solving challenging interface design & user experience design problems.</p><p>Brennan has contracted for large companies like Nike & Intel, but prefers contributing his design & engineering talents to interesting startups like LittleBird & meaningful open source movements like the <a href="http://indiewebcamp.com" target="_blank">IndieWeb</a>. Fixing email is right up his alley.</p>
   			</div>
       </div>
