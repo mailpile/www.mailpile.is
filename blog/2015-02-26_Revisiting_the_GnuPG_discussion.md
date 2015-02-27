@@ -204,4 +204,6 @@ worth doing. Some specific ideas that I think could help:
 
 There are probably more, but those are my top three!
 
-Thanks for reading, I look forward to further discussions.
+Thanks for reading, I look forward to further discussions (most likley
+[on the GnuPG Users mailing
+list](https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052771.html)).

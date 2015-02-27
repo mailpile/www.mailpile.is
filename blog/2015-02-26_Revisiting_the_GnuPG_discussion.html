@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS - CHANGE URL when making live
+    ================================================== -->
+    <link rel="stylesheet" href="/css/mailpile.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+    <title>Mailpile: More thoughts on working with GnuPG</title>
+
+    <!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+</head><body>
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link">About</a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/demos/" class="scroll-link">Demos</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+
+    <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div id="content" class="container">
+        <div id="header" class="clearfix">
+            <div class="col-2 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+<!-- Page content begins -->
+
+    <a href="/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html"><h1>More thoughts on working with GnuPG</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on February 26, 2015</strong></p>
+
+<p>Smári's <a href="/blog/2014-10-07_Some_Thoughts_on_GnuPG.html">blog post on working with
+GnuPG</a> got a fair bit of
+attention and continues to be referenced in various posts and
+discussions online.</p>
+<p>Responses have varied, from vehement agreement, to a <a href="https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052401.html">friendly and
+thoughtful response from Werner
+himself</a>,
+to random folks on the Internet people calling us incompetent for using
+the GnuPG command-line tool directly instead of some library or other.</p>
+<p>I would like to address that last group specifically:</p>
+<ol>
+<li>
+<p>If you think a command-line interface is not an API, then you are
+   ignoring the millions of lines of shell scripts that keep the Internet
+   running. You are wrong. Please consult your nearest sysadmin for an
+   attitude readjustment.</p>
+</li>
+<li>
+<p>Process separation is one of the cornerstones of good security
+   design. Heartbleed and many other vulnerabilities are direct results
+   of crypto and keys living the same process space as protocol and
+   application logic. We initially chose to invoke GnuPG (and OpenSSL
+   as well) as external tools for such security reasons, even though we
+   knew it would cost us some performance.</p>
+</li>
+<li>
+<p>We looked at the libraries, encountered an apalling lack of
+   documentation and hoped the command-line interface would be nicer to
+   work with. Learning one API beats having to learn two, and there was
+   no way we could do this <em>without</em> the GnuPG CLI - if only for
+   debugging and tech support reasons.</p>
+</li>
+</ol>
+<p>Phew.</p>
+<p>Now that I've gotten that off my chest... let's move on to some more
+productive discussions!</p>
+<h2>Utility or Application?</h2>
+<p>Although I appreciated Werner's response to our post, I am afraid he
+missed the forest for the trees. Probably because Smári wrote a lot
+about some interesting, funky trees... :-)</p>
+<p>Fundamentally, I think Mailpile's difficulties stem from the fact that
+GnuPG was not written with automation in mind. The tool is not written
+as a unix utility, it is very much written as a user facing application,
+a tool for humans.</p>
+<p>As such, it is a fantastic piece of engineering. If you understand how
+public/private key encryption works and know what you want to do, odds
+are GnuPG will help you get the job done. GnuPG's security track record
+is solid and it is a tool people can rely on, as long as they take the
+time to learn the basics and get used to the CLI.</p>
+<p>However, as a result of this design focus, many of GnuPG's automation
+interfaces appear to be an afterthought. They are incomplete and often
+difficult to work with. Consider that "commands to create and sign keys
+without any user interaction" were brand new <a href="http://lists.gnupg.org/pipermail/gnupg-announce/2014q4/000358.html">in GnuPG 2.1 last
+November</a>.
+GnuPG 2.1 is the development version of GnuPG and is not shipped by any
+of the mainstream Linux distributions yet. I do applaud the fact that
+these features are being added, but the fact that it happened 3 months
+ago only supports my hypothesis: automation has to a great extent been
+an afterthought to the GnuPG project.</p>
+<p>This has gotten worse over time, not better. In GnuPG 2.0, use of
+<code>gpg-agent</code> and <code>pinentry</code> became mandatory and the assumption that the
+tool is running in a desktop environment under human oversight pervades.
+This is why Linux distros still keep shipping GnuPG 1.4.x - they rely on
+automated PGP processing for package verification and other things which
+GnuPG 2.0 just isn't suitable for.</p>
+<p>I worry that GnuPG 2.1 takes this even further still, <a href="https://www.gnupg.org/faq/whats-new-in-2.1.html">moving key
+managment operations into the
+agent</a>. Also, as far
+as I can tell, it doesn't matter whether we use the <code>gpgme</code> library or
+the command-line tool, those assumptions and behaviors are shared
+throughout.</p>
+<p>Much of this is understandable, given GnuPG's historic roots and the
+fact that it inherits many things from it's predecessor, PGP, which
+itself predated modern graphical desktops and web apps. It is also
+understandable, given the culture around PGP, where keys and passphrases
+are magical holy talismans, so special that you need to constantly ask
+the user for permission before invoking them.  GnuPG enforces this
+culture by preventing apps from interfering with the flow of this
+critical information, refusing to work without trusted pinentry.</p>
+<p>However, while GnuPG insists on controlling this part of the user
+interface and treats automation as a 2nd class citizen, a side effect is
+that the project actively thwarts efforts of others that want or need
+alternate user interfaces.</p>
+<p>Mailpile is one such project.</p>
+<h2>Mailpile's pinentry woes</h2>
+<p>One of the cool things about Mailpile, is it functions not only in a
+desktop environment, but also as a background process (receiving,
+decrypting and indexing mail), and also as a remote web server which
+allows the user to leave their mail and keys on a secure box in their
+home, which they then access remotely over the network.</p>
+<p>This flexibility is key to our overall goals of providing people with
+something that can match "cloud based" e-mail providers on features,
+without compromising privacy and security.</p>
+<p>Unfortunately, the entire pinentry concept, where <code>gpg</code> (via the
+<code>gnupg-agent</code>) displays a window prompting the user to enter a
+passphrase, is completely and utterly incompatible with this. Popping up
+a dialog on the user's Raspberry Pi, when the owner tries to read
+encrypted mail from halfway across the world using his Android phone's
+web browser, is never going to work.</p>
+<p>And even if it somehow did work, using a side-channel to authenticate
+has very serious problems of its own.</p>
+<p>Consider the situation where a user wants to access Mailpile both
+locally, and remotely: on the desktop, the "just use pinentry" dogma
+tells us we should just trust GnuPG there (and GnuPG 2.x enforces this
+policy).</p>
+<p>Well, what then happens when Mailpile is accessed remotely?</p>
+<p>Things fail.</p>
+<p>The benign failure mode is the user can't read encrypted mail because
+they can't see the pinentry dialog. This makes the app unusable, but the
+bug is still "benign" because it doesn't leak confidential data.</p>
+<p>There is another catastrophic (and real) failure mode: If the legitimate
+user is logged on at the desktop and an attacker can access Mailpile's
+web interface at the same time, then the attacker will be able to read
+encrypted mail (or compose fraudulent signed mail) because the
+<code>gpg-agent</code> has keys cached and Mailpile has no way to communicate to
+GnuPG that the remote access is somehow different from what happens
+locally.</p>
+<p>This is really, really bad.</p>
+<p>This is why Mailpile only supports GnuPG 1.4.x at the moment: we haven´t
+figured out how to make GnuPG 2.x operate in a secure fashion, since it
+won't let us disable the agent.</p>
+<p>This whole issue has us scratching our heads and wondering what to do.
+We've gone from frustration to righteous anger, to just being rather
+worried. If the GnuPG project is moving aggressively in a direction
+which is fundamentally incompatible with projects like ours, what should
+we do?  Drop PGP and try to implement S/MIME? Switch to something
+interesting but unproven, like
+<a href="http://www.tedunangst.com/flak/post/reop">reop</a>?</p>
+<p>I just don't know.</p>
+<p>I could come up with some clever hacks to work around GnuPG's core
+design; I could implement my own agent, I could try to cripple GnuPG
+with weird environment variables or a custom GNUPG_HOME and config, or I
+could even fork the project - but those <em>all</em> feel like last resorts.</p>
+<p>I am currently revisiting whether I can get <code>gpgme</code>-based code to avoid
+the problems caused by the agent and side-channel auth. I am not too
+optimistic. If that fails, then it's last resort time, or time to drop
+PGP.</p>
+<h2>Is this fixable?</h2>
+<p>For the record, Mailpile is not the only project having problems -
+questions about related issues are common <a href="https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052754.html">on the GnuPG-users mailing
+list</a>
+and <a href="https://stackoverflow.com/questions/8671099/how-to-bypass-pinentry-passphrase-screen-while-decrypting-a-file-using-gpgme">elsewhere</a>.</p>
+<p>However, I have yet to hear any of the GnuPG developers acknowledge that
+this is even a concern, which is why I have taken the time to write this
+post. I would like to humbly request that Werner and GnuPG consider
+these issues, now that <a href="http://www.propublica.org/article/the-worlds-email-encryption-software-relies-on-one-guy-who-is-going-broke">they finally have a
+budget</a>.
+(Congrats, by the way, you deserve it!)</p>
+<p>I really do think this can be fixed, if the GnuPG project agrees it is
+worth doing. Some specific ideas that I think could help:</p>
+<ol>
+<li>
+<p>Clearly separate the user interface aspects of GnuPG from the crypto
+   and keychain management, so projects can use one without the other.
+   Do not assume all apps interacting with a particular keychain want the
+   same UI for authentication.</p>
+</li>
+<li>
+<p>Treat the command-line interface of <code>gpg</code> as if it were an API; keep
+   it stable and machine friendly. There should be command-line
+   alternatives to all of the interactive dialogs.</p>
+</li>
+<li>
+<p>Make <code>gpgme-tool</code> (which implements an API very similar to the JSON
+   API requested by Smári in his post) a mandatory 1st class citizen of
+   all GnuPG bundles (instead of <a href="https://lists.gnupg.org/pipermail/gnupg-devel/2014-December/029196.html">doing this</a>).
+   We had no idea this tool existed, and I still can't find it for my
+   distro (Ubuntu 14.04). Consider rolling this functionality into the
+   <code>gpg</code> binary itself to facilitate scripting and automation.</p>
+</li>
+</ol>
+<p>There are probably more, but those are my top three!</p>
+<p>Thanks for reading, I look forward to further discussions (most likley
+<a href="https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052771.html">on the GnuPG Users mailing
+list</a>).</p>
+<!-- Page content ends -->
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+                <hr>
+            </div>
+        </div>
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
+                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                    <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+                </ul>
+                <ul>
+                    <li>Bjarni: <a href="https://twitter.com/HerraBRE" target="_blank">@HerraBRE</a></li>
+                    <li>Smári: <a href="https://twitter.com/smarimc" target="_blank">@smarimc</a></li>
+                    <li>Brennan: <a href="https://twitter.com/brennannovak" target="_blank">@brennannovak</a></li>
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Downloads</h3>
+                <ul class="add-bottom">
+                    <li>Source Code: <a href="https://github.com/pagekite/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs, Issues: <a href="https://github.com/pagekite/Mailpile/issues/new" target="_blank">Go Here</a></li>
+          <li>Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
+          <li>Plugin Ideas: <a href="https://github.com/pagekite/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
+                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+        </ul>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Picture of: <a href="/img/Bjarni_1.png" target="_blank">Bjarni</a></li>
+                    <li>Picture of: <a href="/img/Brennan_1.png" target="_blank">Brennan</a></li>
+                    <li>Picture of: <a href="/img/Smari_1.png" target="_blank">Smári</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="add-top add-bottom"></div>
+
+
+    </div><!-- container -->
+
+</body>
+</html>

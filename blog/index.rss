@@ -4,6 +4,186 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>More thoughts on working with GnuPG</title>
+    <link>http://www.mailpile.is/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html</link>
+    <description>&lt;p&gt;Smári&#39;s &lt;a href=&#34;/blog/2014-10-07_Some_Thoughts_on_GnuPG.html&#34;&gt;blog post on working with
+GnuPG&lt;/a&gt; got a fair bit of
+attention and continues to be referenced in various posts and
+discussions online.&lt;/p&gt;
+&lt;p&gt;Responses have varied, from vehement agreement, to a &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052401.html&#34;&gt;friendly and
+thoughtful response from Werner
+himself&lt;/a&gt;,
+to random folks on the Internet people calling us incompetent for using
+the GnuPG command-line tool directly instead of some library or other.&lt;/p&gt;
+&lt;p&gt;I would like to address that last group specifically:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If you think a command-line interface is not an API, then you are
+   ignoring the millions of lines of shell scripts that keep the Internet
+   running. You are wrong. Please consult your nearest sysadmin for an
+   attitude readjustment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Process separation is one of the cornerstones of good security
+   design. Heartbleed and many other vulnerabilities are direct results
+   of crypto and keys living the same process space as protocol and
+   application logic. We initially chose to invoke GnuPG (and OpenSSL
+   as well) as external tools for such security reasons, even though we
+   knew it would cost us some performance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We looked at the libraries, encountered an apalling lack of
+   documentation and hoped the command-line interface would be nicer to
+   work with. Learning one API beats having to learn two, and there was
+   no way we could do this &lt;em&gt;without&lt;/em&gt; the GnuPG CLI - if only for
+   debugging and tech support reasons.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Phew.&lt;/p&gt;
+&lt;p&gt;Now that I&#39;ve gotten that off my chest... let&#39;s move on to some more
+productive discussions!&lt;/p&gt;
+&lt;h2&gt;Utility or Application?&lt;/h2&gt;
+&lt;p&gt;Although I appreciated Werner&#39;s response to our post, I am afraid he
+missed the forest for the trees. Probably because Smári wrote a lot
+about some interesting, funky trees... :-)&lt;/p&gt;
+&lt;p&gt;Fundamentally, I think Mailpile&#39;s difficulties stem from the fact that
+GnuPG was not written with automation in mind. The tool is not written
+as a unix utility, it is very much written as a user facing application,
+a tool for humans.&lt;/p&gt;
+&lt;p&gt;As such, it is a fantastic piece of engineering. If you understand how
+public/private key encryption works and know what you want to do, odds
+are GnuPG will help you get the job done. GnuPG&#39;s security track record
+is solid and it is a tool people can rely on, as long as they take the
+time to learn the basics and get used to the CLI.&lt;/p&gt;
+&lt;p&gt;However, as a result of this design focus, many of GnuPG&#39;s automation
+interfaces appear to be an afterthought. They are incomplete and often
+difficult to work with. Consider that &#34;commands to create and sign keys
+without any user interaction&#34; were brand new &lt;a href=&#34;http://lists.gnupg.org/pipermail/gnupg-announce/2014q4/000358.html&#34;&gt;in GnuPG 2.1 last
+November&lt;/a&gt;.
+GnuPG 2.1 is the development version of GnuPG and is not shipped by any
+of the mainstream Linux distributions yet. I do applaud the fact that
+these features are being added, but the fact that it happened 3 months
+ago only supports my hypothesis: automation has to a great extent been
+an afterthought to the GnuPG project.&lt;/p&gt;
+&lt;p&gt;This has gotten worse over time, not better. In GnuPG 2.0, use of
+&lt;code&gt;gpg-agent&lt;/code&gt; and &lt;code&gt;pinentry&lt;/code&gt; became mandatory and the assumption that the
+tool is running in a desktop environment under human oversight pervades.
+This is why Linux distros still keep shipping GnuPG 1.4.x - they rely on
+automated PGP processing for package verification and other things which
+GnuPG 2.0 just isn&#39;t suitable for.&lt;/p&gt;
+&lt;p&gt;I worry that GnuPG 2.1 takes this even further still, &lt;a href=&#34;https://www.gnupg.org/faq/whats-new-in-2.1.html&#34;&gt;moving key
+managment operations into the
+agent&lt;/a&gt;. Also, as far
+as I can tell, it doesn&#39;t matter whether we use the &lt;code&gt;gpgme&lt;/code&gt; library or
+the command-line tool, those assumptions and behaviors are shared
+throughout.&lt;/p&gt;
+&lt;p&gt;Much of this is understandable, given GnuPG&#39;s historic roots and the
+fact that it inherits many things from it&#39;s predecessor, PGP, which
+itself predated modern graphical desktops and web apps. It is also
+understandable, given the culture around PGP, where keys and passphrases
+are magical holy talismans, so special that you need to constantly ask
+the user for permission before invoking them.  GnuPG enforces this
+culture by preventing apps from interfering with the flow of this
+critical information, refusing to work without trusted pinentry.&lt;/p&gt;
+&lt;p&gt;However, while GnuPG insists on controlling this part of the user
+interface and treats automation as a 2nd class citizen, a side effect is
+that the project actively thwarts efforts of others that want or need
+alternate user interfaces.&lt;/p&gt;
+&lt;p&gt;Mailpile is one such project.&lt;/p&gt;
+&lt;h2&gt;Mailpile&#39;s pinentry woes&lt;/h2&gt;
+&lt;p&gt;One of the cool things about Mailpile, is it functions not only in a
+desktop environment, but also as a background process (receiving,
+decrypting and indexing mail), and also as a remote web server which
+allows the user to leave their mail and keys on a secure box in their
+home, which they then access remotely over the network.&lt;/p&gt;
+&lt;p&gt;This flexibility is key to our overall goals of providing people with
+something that can match &#34;cloud based&#34; e-mail providers on features,
+without compromising privacy and security.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the entire pinentry concept, where &lt;code&gt;gpg&lt;/code&gt; (via the
+&lt;code&gt;gnupg-agent&lt;/code&gt;) displays a window prompting the user to enter a
+passphrase, is completely and utterly incompatible with this. Popping up
+a dialog on the user&#39;s Raspberry Pi, when the owner tries to read
+encrypted mail from halfway across the world using his Android phone&#39;s
+web browser, is never going to work.&lt;/p&gt;
+&lt;p&gt;And even if it somehow did work, using a side-channel to authenticate
+has very serious problems of its own.&lt;/p&gt;
+&lt;p&gt;Consider the situation where a user wants to access Mailpile both
+locally, and remotely: on the desktop, the &#34;just use pinentry&#34; dogma
+tells us we should just trust GnuPG there (and GnuPG 2.x enforces this
+policy).&lt;/p&gt;
+&lt;p&gt;Well, what then happens when Mailpile is accessed remotely?&lt;/p&gt;
+&lt;p&gt;Things fail.&lt;/p&gt;
+&lt;p&gt;The benign failure mode is the user can&#39;t read encrypted mail because
+they can&#39;t see the pinentry dialog. This makes the app unusable, but the
+bug is still &#34;benign&#34; because it doesn&#39;t leak confidential data.&lt;/p&gt;
+&lt;p&gt;There is another catastrophic (and real) failure mode: If the legitimate
+user is logged on at the desktop and an attacker can access Mailpile&#39;s
+web interface at the same time, then the attacker will be able to read
+encrypted mail (or compose fraudulent signed mail) because the
+&lt;code&gt;gpg-agent&lt;/code&gt; has keys cached and Mailpile has no way to communicate to
+GnuPG that the remote access is somehow different from what happens
+locally.&lt;/p&gt;
+&lt;p&gt;This is really, really bad.&lt;/p&gt;
+&lt;p&gt;This is why Mailpile only supports GnuPG 1.4.x at the moment: we haven´t
+figured out how to make GnuPG 2.x operate in a secure fashion, since it
+won&#39;t let us disable the agent.&lt;/p&gt;
+&lt;p&gt;This whole issue has us scratching our heads and wondering what to do.
+We&#39;ve gone from frustration to righteous anger, to just being rather
+worried. If the GnuPG project is moving aggressively in a direction
+which is fundamentally incompatible with projects like ours, what should
+we do?  Drop PGP and try to implement S/MIME? Switch to something
+interesting but unproven, like
+&lt;a href=&#34;http://www.tedunangst.com/flak/post/reop&#34;&gt;reop&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;I just don&#39;t know.&lt;/p&gt;
+&lt;p&gt;I could come up with some clever hacks to work around GnuPG&#39;s core
+design; I could implement my own agent, I could try to cripple GnuPG
+with weird environment variables or a custom GNUPG_HOME and config, or I
+could even fork the project - but those &lt;em&gt;all&lt;/em&gt; feel like last resorts.&lt;/p&gt;
+&lt;p&gt;I am currently revisiting whether I can get &lt;code&gt;gpgme&lt;/code&gt;-based code to avoid
+the problems caused by the agent and side-channel auth. I am not too
+optimistic. If that fails, then it&#39;s last resort time, or time to drop
+PGP.&lt;/p&gt;
+&lt;h2&gt;Is this fixable?&lt;/h2&gt;
+&lt;p&gt;For the record, Mailpile is not the only project having problems -
+questions about related issues are common &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052754.html&#34;&gt;on the GnuPG-users mailing
+list&lt;/a&gt;
+and &lt;a href=&#34;https://stackoverflow.com/questions/8671099/how-to-bypass-pinentry-passphrase-screen-while-decrypting-a-file-using-gpgme&#34;&gt;elsewhere&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, I have yet to hear any of the GnuPG developers acknowledge that
+this is even a concern, which is why I have taken the time to write this
+post. I would like to humbly request that Werner and GnuPG consider
+these issues, now that &lt;a href=&#34;http://www.propublica.org/article/the-worlds-email-encryption-software-relies-on-one-guy-who-is-going-broke&#34;&gt;they finally have a
+budget&lt;/a&gt;.
+(Congrats, by the way, you deserve it!)&lt;/p&gt;
+&lt;p&gt;I really do think this can be fixed, if the GnuPG project agrees it is
+worth doing. Some specific ideas that I think could help:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clearly separate the user interface aspects of GnuPG from the crypto
+   and keychain management, so projects can use one without the other.
+   Do not assume all apps interacting with a particular keychain want the
+   same UI for authentication.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Treat the command-line interface of &lt;code&gt;gpg&lt;/code&gt; as if it were an API; keep
+   it stable and machine friendly. There should be command-line
+   alternatives to all of the interactive dialogs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make &lt;code&gt;gpgme-tool&lt;/code&gt; (which implements an API very similar to the JSON
+   API requested by Smári in his post) a mandatory 1st class citizen of
+   all GnuPG bundles (instead of &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-devel/2014-December/029196.html&#34;&gt;doing this&lt;/a&gt;).
+   We had no idea this tool existed, and I still can&#39;t find it for my
+   distro (Ubuntu 14.04). Consider rolling this functionality into the
+   &lt;code&gt;gpg&lt;/code&gt; binary itself to facilitate scripting and automation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There are probably more, but those are my top three!&lt;/p&gt;
+&lt;p&gt;Thanks for reading, I look forward to further discussions (most likley
+&lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052771.html&#34;&gt;on the GnuPG Users mailing
+list&lt;/a&gt;).&lt;/p&gt;</description>
+    <pubDate>Thu, 26 Feb 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>Mailpile Beta II - the 4096 bit release</title>
     <link>http://www.mailpile.is/blog/2015-01-20_Mailpile_Beta_II_4096_bits.html</link>
     <description>&lt;p&gt;&lt;img src=&#34;/files/Beta-II.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
@@ -606,7 +786,9 @@ $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA
 &lt;p&gt;Somebody might ask, what about PGPME? Frankly, PGPME is great for a particular subset of GnuPG users. They can keep using it if they want. But if &lt;code&gt;--json&lt;/code&gt; exists and is consistent and comprehensive, everybody will use that. Trust me.&lt;/p&gt;
 &lt;h3&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;GnuPG is important and great in many ways, but it is also deeply broken and downright dangerous. The sooner it becomes a consistent tool, the sooner it will become something other than a fool&#39;s errand to attempt to interface with it. I&#39;m happy to be on the caravan of fools for now, but only if there is something worthwhile at the end of this quest.&lt;/p&gt;
-&lt;p&gt;Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I&#39;m sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?&lt;/p&gt;</description>
+&lt;p&gt;Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I&#39;m sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; &lt;a href=&#34;/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html&#34;&gt;We have written a follow-up
+post&lt;/a&gt;.&lt;/p&gt;</description>
     <pubDate>Tue, 07 Oct 2014 12:00:00 +0000</pubDate>
   </item>
   <item>
@@ -673,24 +855,5 @@ As a &lt;a href=&#34;https://github.com/pagekite/Mailpile/releases&#34; target=&
 &lt;p&gt;P.S. Check out &lt;a href=&#34;https://news.ycombinator.com/item?id=8315086&#34;&gt;this Hacker News&lt;/a&gt;
 post to discuss!&lt;/p&gt;</description>
     <pubDate>Sat, 13 Sep 2014 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Our Upcoming Beta Release: Part II</title>
-    <link>http://www.mailpile.is/blog/2014-08-20_Upcoming_Beta_Release_Part_II.html</link>
-    <description>&lt;p&gt;Initially, we planned to release our Beta (this is sounding familiar) back on August 8th. A few days before this date, we realized we were no where near ready. We thought we could polish everything off if we gave ourselves roughly an extra week, so we did. We also told you about this deadline, dear supporters. As we neared the end of that extended date, some of these bugs were still not resolved and we joyfully discovered some wonderful new bugs as we got further into user testing.&lt;/p&gt;
-&lt;p&gt;After taking a serious look at what the user experience was going to be like for people setting up Mailpile for the first time, we realized for many Mailpile would have been largely unsuable to nontechnical users, and tricky for others.  Considering our commitment to making a great email client with easy to use encryption, this was  entirely unacceptable. Some of these bugs are silly things out of our control, like Gmail&#39;s insistance on blocking IMAP &amp;amp; SMTP access unless you configure special security settings in your Google Account - meaning that for GMail users, Mailpile wouldn&#39;t be easy to use. Other bugs include email attachments not being handled correctly by GPG. A larger bug is Mailpile running on a Windows machine, we have a few known issues with interacting with GPG that are blocking further testing - as many of you know, Windows is weird. Another aspect of the app which needs improving is unifying the native OS app launcher, the Python backend, and the web browser instance with the UI.&lt;/p&gt;
-&lt;p&gt;Solutions to all of these are being worked on at the moment. However, by the end of last week the team was a bit frayed after pulling quite a lot of 14+ hr days trying to ship on schedule. Due to the gravity of some of these bugs, we decided not to push a Beta out into the world. We&#39;re taking a couple of calm days before returning to battle, although in those calm days we&#39;re still working on squishing bugs.&lt;/p&gt;
-&lt;p&gt;By now you&#39;re probably wondering &lt;em&gt;&#34;So... uh... ok... when is the Beta going to be released?&#34;&lt;/em&gt; The only clear answer to that is &lt;em&gt;&#34;we don&#39;t know.&#34;&lt;/em&gt;  We wish we had a more clear answer. A couple options that we are considering are:&lt;/p&gt;
-&lt;ul class=&#34;square&#34;&gt;
- &lt;li&gt;Pushing out a &#34;Developer Beta&#34; ASAP&lt;/li&gt;
- &lt;li&gt;Waiting and doing our Beta in September (when we had planned our 1.0)&lt;/li&gt;
- &lt;li&gt;Following that up with our 1.0 later in the fall&lt;/li&gt;
- &lt;li&gt;Give up and run for the hills, woods, a deserted island / arctic tundra, etc...&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The last option is totally a joke. Despite being as frustrated &amp;amp; disappointed as you are about the state of things, we are not giving up. We are commited as ever to shipping an easy to use encrypted email client and doing so as soon as possible. We would love to hear your thoughts. Would you rather see a rougher Developer Beta with some bugs or would you rather wait until things are more polished? Let us know. Also, if you are of a more technical disposition, this might be a good time to start testing things out: poke around, see if you can clear up some bugs. Every little bit helps :)&lt;/p&gt;
-&lt;p&gt;Sincerely,&lt;/p&gt;
-&lt;p&gt;Your Mailpile Team&lt;/p&gt;</description>
-    <pubDate>Wed, 20 Aug 2014 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>
