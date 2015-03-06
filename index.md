@@ -17,7 +17,7 @@ Type: full
         <h6><b>THANKS FOR TESTING!</b><br>
             We didn't get a passing grade, but
             <a href="/blog/">we learned a lot</a>.
-            Back to the drawing board!</h6>
+            Back to work we go!</h6>
         <a class="button-secondary" href="/download/">Download & Install Anyway</a> &nbsp;&nbsp;&nbsp;
         <a class="button-primary" href="/demos/">Try Demo</a>
       </div>

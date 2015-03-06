@@ -20,7 +20,7 @@ feedback and fix the issues that were discovered.
 Obviously we had hoped things were almost ready for public consumption,
 that we were close to making a proper release. The testing did it's job
 alright: we know now we were a tad overoptimistic. Just a tad! So we're
-going back to the drawing board.
+going back to work instead of pushing for a 1.0 right away.
 
 <img src='/img/rejection-stamp.png' style='float: right;'>
 
