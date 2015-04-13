@@ -4,6 +4,96 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>Back to Work!</title>
+    <link>http://www.mailpile.is/blog/2015-04-13_Back_to_Work.html</link>
+    <description>&lt;p&gt;After a month&#39;s break, it&#39;s time to resume work on Mailpile again. Some
+time away is always useful to give perspective and get some much needed
+rest, and now that I have returned I plan to make a few log overdue
+changes to how I work on Mailpile.&lt;/p&gt;
+&lt;p&gt;I&#39;ll discuss the rest later, but the first change is to improve
+communication by publishing a weekly blog post describing what has been
+done recently and what is ahead. In order to distract as little as
+possible from actual development, these posts will be kept relatively
+short most of the time. This is the first such post!&lt;/p&gt;
+&lt;p&gt;Think of it as a virtual &#34;stand up&#34;, just to set the tone for the next
+few days of work:&lt;/p&gt;
+&lt;h3&gt;Last week&lt;/h3&gt;
+&lt;p&gt;Nothing to report, I was on holidays!&lt;/p&gt;
+&lt;h3&gt;Next week&lt;/h3&gt;
+&lt;p&gt;This week is dedicated to getting back to work. An event I am attending
+next weekend will helpfully provide focus...&lt;/p&gt;
+&lt;p&gt;Next weekend I will be attending a small summit in Germany, meeting
+various other developers from open source projects that also work with
+OpenPGP and GnuPG.&lt;/p&gt;
+&lt;p&gt;The summit is a private, very tech-focused event attended by developers
+from most of the open source projects using GnuPG today; a real who&#39;s
+who of GnuPG and e-mail security. To make the most of this opportunity,
+this week I will refresh my own memory on the current state of GnuPG and
+Mailpile and try to identify points where I could use advice or help, as
+well as points where I may be able to contribute and help the other
+projects.&lt;/p&gt;
+&lt;p&gt;Topics I will explore this week and consider for presentation at the
+summit are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Mailpile itself&lt;/li&gt;
+&lt;li&gt;Mailpile&#39;s proposed trust model&lt;/li&gt;
+&lt;li&gt;A method for generating beautiful avatars from PGP key fingerprints&lt;/li&gt;
+&lt;li&gt;Enhanced e-mail signatures (manifests)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That&#39;s the plan! Next week&#39;s update will tell you how it went.&lt;/p&gt;</description>
+    <pubDate>Mon, 13 Apr 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Beta Rejected!</title>
+    <link>http://www.mailpile.is/blog/2015-03-06_Beta_Rejected.html</link>
+    <description>&lt;p&gt;I would like to thank everyone who took the time download the Mailpile
+Beta releases and give us valuable feedback. &lt;strong&gt;Thank you, thank you,
+thank you!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It&#39;s always exciting and scary to put your work out there for everyone
+to see, but our early adopters have been universally supportive and
+gracious, even when Mailpile didn&#39;t quite work as well as they had
+hoped.&lt;/p&gt;
+&lt;p&gt;But now that a bunch of people have taken the time to download Mailpile,
+poke it with a stick and put it through it&#39;s paces, it is time to
+declare the beta test period over for now. We need to respond to the
+feedback and fix the issues that were discovered.&lt;/p&gt;
+&lt;p&gt;Obviously we had hoped things were almost ready for public consumption,
+that we were close to making a proper release. The testing did it&#39;s job
+alright: we know now we were a tad overoptimistic. Just a tad! So we&#39;re
+going back to work instead of pushing for a 1.0 right away.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#39;/img/rejection-stamp.png&#39; style=&#39;float: right;&#39;&gt;&lt;/p&gt;
+&lt;p&gt;Some of the key take-aways from our beta tests were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We bit off more than we can chew in our 1.0 plans. The app needs to
+   be simplified so we can ship something really stable.&lt;/li&gt;
+&lt;li&gt;Our IMAP support still needs work so it can interoperate with all
+   the different mail servers out there. The Internet is a big and
+   diverse place!&lt;/li&gt;
+&lt;li&gt;Our GnuPG strategy and code isn&#39;t ready. We need to either make all
+   that crypto stuff completely seamless, or improve the tools we expose
+   to the user for manual work. Preferably both.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Those are the really big issues, but there are a very large number of
+other smaller bugs and loose ends that need work. Almost all of these
+are in the &#34;back end&#34; of the app, the low level plumbing, gears and
+turbines and closures and APIs that work behind the scenes. The back-end
+has been playing catch up to the user interface for a while, it needs
+some focus and attention before we can ship a real product.  We fooled
+even ourselves by making something that &lt;em&gt;looked&lt;/em&gt; almost ready, even
+though under the hood it just wasn&#39;t.&lt;/p&gt;
+&lt;p&gt;So I (Bjarni the backend guy) am going to be doubling down on that stuff
+... just as soon as I&#39;m finished marrying the most amazing woman I know
+later this month. So don&#39;t worry if the github repo is quiet until early
+April. I&#39;ll be back!&lt;/p&gt;
+&lt;p&gt;Since most of Mailpile&#39;s current limitations are low level back-end
+problems, Brennan (our awesome front-end developer) has moved on to
+other things for now. I&#39;d like to thank him for all his hard work so far
+and encourage you all to stay tuned for news about his ongoing efforts
+to improve the usability of crypto apps and modernize PGP.&lt;/p&gt;
+&lt;p&gt;See you in April!&lt;/p&gt;</description>
+    <pubDate>Fri, 06 Mar 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>More thoughts on working with GnuPG</title>
     <link>http://www.mailpile.is/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html</link>
     <description>&lt;p&gt;Smári&#39;s &lt;a href=&#34;/blog/2014-10-07_Some_Thoughts_on_GnuPG.html&#34;&gt;blog post on working with
@@ -629,231 +719,5 @@ insights to share.&lt;/p&gt;
 &lt;p&gt;We&#39;ll also be following &lt;a href=&#34;https://news.ycombinator.com/item?id=8648587&#34;&gt;comments on Hacker News&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Thanks!&lt;/p&gt;</description>
     <pubDate>Fri, 21 Nov 2014 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Some thoughts on working with GnuPG</title>
-    <link>http://www.mailpile.is/blog/2014-10-07_Some_Thoughts_on_GnuPG.html</link>
-    <description>&lt;p&gt;A lot of people have complained about OpenPGP for a number of valid cryptographical reasons&lt;a href=&#34;http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html&#34;&gt;1&lt;/a&gt;,&lt;a href=&#34;http://secushare.org/PGP&#34;&gt;2&lt;/a&gt;. It doesn&#39;t change the fact that it is widely used, and wildly useful. It urgently needs to be replaced with something more sensible, but for now we&#39;re stuck with it. In practice, this also means that we are stuck with GnuPG, the most common and by far the best implementation of OpenPGP.&lt;/p&gt;
-&lt;p&gt;GnuPG is the one and only reference implementation of &lt;a href=&#34;http://tools.ietf.org/html/rfc4880&#34;&gt;RFC 4880&lt;/a&gt;, and despite thousands of companies making use of OpenPGP in their infrastructre there is for all intents and purposes a solitary dude in Germany trying to keep it all together. &lt;a href=&#34;http://werner.eifelkommune.de/&#34;&gt;Werner Koch&lt;/a&gt; is an absolute hero for managing to do that, and deserves our respect and support. Financially supporting the GnuPG project is also something people should be doing. &lt;/p&gt;
-&lt;p&gt;The following is however neccessary and hopefully constructive criticism of GnuPG.&lt;/p&gt;
-&lt;p&gt;One of the things I&#39;m largely to blame for in Mailpile is the GnuPG interface. It&#39;s a chunk of Python code that executes the GnuPG binary, tosses information at it, and figures out what to do with the output. There are lots of libraries for doing this, but after a great deal of exploration I found that all of the Python libraries that did this were insufficient for our needs, and the only thing crazier than manually forking out GnuPG in our situation would be to use the PGPME library.&lt;/p&gt;
-&lt;p&gt;PGPME is almost as confusing and annoying as calling GnuPG directly, but it also requires us to ship architecture-specific libraries to everybody, something we&#39;re actively avoiding. Having to ship GnuPG binaries to Windows and MacOS users is bad enough, but dependency hell is a place we want to stay out of. If we were writing Mailpile in, say, C or C++, then PGPME would definitely be the library of choice, but we&#39;re not, so it isn&#39;t. On top of that, the available &lt;a href=&#34;http://pyme.sourceforge.net/&#34;&gt;Python bindings for PGPME&lt;/a&gt; are very flaky (last updated in 2008!), and not developed or maintained by the GnuPG team.&lt;/p&gt;
-&lt;p&gt;As a result, we&#39;ve got a roughly 1200 line chunk of code in Mailpile that has the fun and useful task of chatting with GnuPG, and the stupifyingly annoying task of working around all of GnuPG&#39;s inconsistencies.&lt;/p&gt;
-&lt;p&gt;The problems with GnuPG seem to fall roughly into two broad categories: inconsistent output structure, inconsistent interfaces. These are both ripe with surprising behaviour and confusing failure modes. In addition to these categories, it appears that the larger meta problem is that no single statement about its problems is going to remain a stable statement, as these problems disappear and reappear at odd intervals as new versions are being built. The number of moving parts essentially leads to a lot of confusion about whether a particular bug exists in a particular version or not, and whether it is affected by wind speed. To wit, I have over the course of Mailpile development added, removed, and readded a workaround for a bug, although I think I&#39;m safe to say that it does not exist post GnuPG 2.1. The comment of that workaround in the code illustrates the issue perfectly:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-def list_secret_keys(self):
-       #
-       # Note: The &#34;.&#34; parameter that is passed is to work around a bug
-       #       in GnuPG &lt; 2.1, where --list-secret-keys does not list
-       #       details about key capabilities or expiry for
-       #       --list-secret-keys unless a selector is provided. A dot
-       #       is reasonably likely to appear in all PGP keys, as it is
-       #       a common component of e-mail addresses (and @ does not
-       #       work as a selector for some reason...)
-       #
-       #       The downside of this workaround is that keys with no e-mail
-       #       address or an address like alice@localhost won&#39;t be found.
-       #       Therefore, this paramter should be removed when GnuPG &gt;= 2.1
-       #       becomes commonplace.
-       #
-       #       (This is a better workaround than doing an additional
-       #       --list-keys and trying to aggregate it though...)
-       #
-       #       BRE: Put --fingerprint at the front and added selectors
-       #            for the worlds MOST POPULAR LETTERS!  Yaaay!
-       #
-       retvals = self.run([&#34;--fingerprint&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;.&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;a&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;e&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;i&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;p&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;t&#34;,
-                           &#34;--list-secret-keys&#34;, &#34;k&#34;])
-       return self.parse_keylist(retvals[1][&#34;stdout&#34;])
-&lt;/pre&gt;
-
-&lt;p&gt;This bug exists in the first category:&lt;/p&gt;
-&lt;h3&gt;Inconsistent output structure&lt;/h3&gt;
-&lt;p&gt;GnuPG &lt;em&gt;generally&lt;/em&gt; accepts command line parameters, uses these to perform actions, and returns output. The output generally takes two forms:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Line by line descriptive output, such as when listing keys&lt;/li&gt;
-&lt;li&gt;Bulk output, such as when encrypting, decrypting, or signing&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The line-by-line output has two modes, the normal mode where the data is tabulated with spaces into mostly nice, if somewhat confusing columns, and the &lt;code&gt;--with-colons&lt;/code&gt; mode, where the spaces are replaced with colons, for easy parsing. This is quite clever and good. The problem arises when one intends to start parsing this data.&lt;/p&gt;
-&lt;p&gt;First, a word on discoverability. If you ever intend to do anything with GnuPG, you first need to read and internalize a document aptly titled &lt;code&gt;DETAILS&lt;/code&gt;, which contains a lot of the details about what&#39;s going on with GnuPG output. I have dutifully read, memorized chunks of, and bookmarked this file for posterity. It is immensely helpful. For example, it gives an example of GnuPG&#39;s output:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-$ gpg --with-colons --list-keys \
-      --with-fingerprint --with-fingerprint wk@gnupg.org
-pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
-fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-uid:f::::::::Werner Koch &lt;wk@g10code.com&gt;:
-uid:f::::::::Werner Koch &lt;wk@gnupg.org&gt;:
-sub:f:1536:16:06AD222CADF6A6E1:919537416:1036177416:::::e:
-fpr:::::::::CF8BCC4B18DE08FCD8A1615906AD222CADF6A6E1:
-sub:r:1536:20:5CE086B5B5A18FF4:899817788:1025961788:::::esc:
-fpr:::::::::AB059359A3B81F410FCFF97F5CE086B5B5A18FF4:
-&lt;/pre&gt;
-
-&lt;p&gt;In order to decipher what this all means, you need to refer to rest of the document. This shows the &lt;code&gt;--with-colons&lt;/code&gt; format, which is the way we want to be working with it.&lt;/p&gt;
-&lt;p&gt;Now here comes issue the first: this is essentially a colon separated value (CSV!) data structure, but the data being provided is a) inconsistent, and b) structured.&lt;/p&gt;
-&lt;p&gt;Notably, the first output line says &#34;there is a public key,&#34; and the line after it says &#34;here is a fingerprint.&#34; Naively one might think that these are unrelated. But in fact, all of the lines from the one starting with &lt;code&gt;pub&lt;/code&gt; up to the next one that starts with either &lt;code&gt;pub&lt;/code&gt; or &lt;code&gt;sec&lt;/code&gt; are actually details about the nature of the public key mentioned in the &lt;code&gt;pub&lt;/code&gt; line - although to make things worse, the &lt;code&gt;fpr&lt;/code&gt; lines after the &lt;code&gt;sub&lt;/code&gt; lines refer to the &lt;code&gt;sub&lt;/code&gt; line but not the &lt;code&gt;pub&lt;/code&gt; line. Confused yet?&lt;/p&gt;
-&lt;p&gt;In reality, parsing this isn&#39;t too terrible, but it can only be done in a reasonable way if you understand the structure of PGP keys and the output format of GnuPG. These are &lt;em&gt;not&lt;/em&gt; reasonable assumptions for GnuPG to be making. Even armed with knowledge about the structure of keys and the handy &lt;code&gt;DETAILS&lt;/code&gt; document, my first version of a parser was overly generic and terribly inefficient, because I kept trying to avoid inconsistencies.&lt;/p&gt;
-&lt;p&gt;Now, the inconsistencies start to get exciting around about here.&lt;/p&gt;
-&lt;p&gt;Notice these two lines:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
-fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-&lt;/pre&gt;
-
-&lt;p&gt;These both follow the same output format, according to &lt;code&gt;DETAILS&lt;/code&gt;. But look what happens when I add spaces to align the columns:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:                                        ::scESC:
-fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-&lt;/pre&gt;
-
-&lt;p&gt;Some of the columns are meaningless for some of the output lines, but more shockingly, some of the columns are MISSING sometimes. Three of the columns just simply evaporate if the line is an &lt;code&gt;fpr&lt;/code&gt;-type line. On top of that, there&#39;s no really good reason why the fingerprint needs to be a separate output line rather than just being added in at the right place. According to the &lt;code&gt;DETAILS&lt;/code&gt; file, field 10 is for &#34;User ID&#34; - which is to say, the name, e-mail address, and comment associated with the key. Things that the fingerprint emphatically is not.&lt;/p&gt;
-&lt;p&gt;It this point you&#39;ll notice that field 5 contains the Key ID. And for added pain, the key ID is variously the last 8 or the last 16 nibbles (hexadecimal digits) of the fingerprint.&lt;/p&gt;
-&lt;p&gt;Frustrated yet? Me too. But let&#39;s just wave the rest of this category away, and move on to the next:&lt;/p&gt;
-&lt;h3&gt;Inconsistent interfaces&lt;/h3&gt;
-&lt;p&gt;So let&#39;s imagine you want to generate a key. Sounds like a reasonable thing to do, right? So we&#39;re all hip and cool and want to do so programatically with our shiny command line interface to GnuPG, so naturally we think it&#39;ll look something like:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-$ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA --keysize 4096 --expires 2017-10-06
-&lt;/pre&gt;
-
-&lt;p&gt;... or something to that effect. And have sensible defaults for any parameters that are skipped, or otherwise make them required. Right?&lt;/p&gt;
-&lt;p&gt;Wrong.&lt;/p&gt;
-&lt;p&gt;GnuPG does have a &lt;code&gt;--gen-key&lt;/code&gt; flag, but when you call it you are dropped into an interactive interface where you are forced to answer questions, one at a time. In varying order, depending on the version, it seems.&lt;/p&gt;
-&lt;p&gt;The only sensible programmatic way to deal with this is to use &#34;expect&#34; style scripts, where your script captures the output and provides programmatic input depending on what the application last said. These used to be used a lot in the 80&#39;s, but have fallen out of favour because: a) they make internationalization a nightmare, b) they make changing versions of software a nightmare, and c) they are almost never the right way to do anything.&lt;/p&gt;
-&lt;p&gt;They do work though. Kind of. Until they break, and it&#39;ll be hell to debug them.&lt;/p&gt;
-&lt;p&gt;Now, avid users of GnuPG will at this point mention the &lt;code&gt;--batch&lt;/code&gt; option, which allows in this case for providing options to the key generator in yet another format. Except, of course, that if you want to do something entirely reasonable like add more than one UID (for instance if you have multiple e-mail addresses) to a new key, you can&#39;t. &lt;code&gt;--batch&lt;/code&gt; just doesn&#39;t support it.&lt;/p&gt;
-&lt;p&gt;So your options are to either painfully generate through using expect-style scripts, or use batch and then edit the key afterwards to add uids. Except that the &lt;code&gt;--edit-key&lt;/code&gt; also relies on an interface which requires the use of expect-style scripts, so you just gained nothing.&lt;/p&gt;
-&lt;p&gt;Another thing that frequently happens when using encryption software with slow algorithms (such as secure pseudorandom number generation or RSA) is that you have to wait a long time for things to happen. When you&#39;re making software with nice user interfaces, you sometimes start thinking that showing some kind of intermediate progress would be a nice thing to do. This is where we get to GnuPG&#39;s wonderful status file descriptor.&lt;/p&gt;
-&lt;p&gt;Really, the status descriptor is awesome. It gives me lots of information that is valuable and can make life a lot better. There are however a few shortcomings. First, contrary to all other file descriptors that you may work with in GnuPG, the status descriptor is not guaranteed to give you a newline character at the end of a status, which renders a bunch of sensible methods of reading input from it unreliable and requires that I handle that descriptor with special magic. Nor are you strictly guaranteed to only get statuses. I have on occasion run into blank lines and other weirdness that needs to be stripped. Once those quirks are all managed, the status descriptor is actually invaluable and should not be overlooked -- specially when mixed with the &lt;code&gt;--enable-progress-filter&lt;/code&gt; flag.&lt;/p&gt;
-&lt;p&gt;The biggest complaint about the status descriptor is that it cannot be relied upon as a flow control mechanism. It does not always give output, or indicate the appropriate sequence of things, so an interface can use it for the purpose of increasing their information about the current situation, but not as a replacement for constant reading and parsing of the STDOUT and STDERR handles, and certainly not as a replacement for in-depth understanding of which order things happen in.&lt;/p&gt;
-&lt;p&gt;Actually, it should also be mentioned that as nice as it is to have all these descriptors, heavy use of descriptors turns into a world of problems on Windows. Windows is finicky enough as it is. Our solution was passing the status through to STDERR, which really works kind of fine.&lt;/p&gt;
-&lt;p&gt;Speaking of order, consider this handling of the passphrase descriptor -- a special descriptor for accepting a passphrase sent by the user as part of a wrapper-mediated communication (because nobody ever uses pipes like that on the command line), from GnuPG&#39;s &lt;code&gt;gpg.c&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-    ...
-    if( pwfd != -1 )  /* Read the passphrase now. */
-    read_passphrase_from_fd( pwfd );
-    ...
-    switch (cmd)
-      {
-      case aPrimegen:
-      case aPrintMD:
-      ...
-&lt;/pre&gt;
-
-&lt;p&gt;The interesting thing (aside from the annoying and dangerous lack of indentation on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase &lt;em&gt;must&lt;/em&gt; be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before &lt;em&gt;anything&lt;/em&gt; else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG&#39;s internal state, which would be absolutely insane, even if it weren&#39;t version dependent. &lt;/p&gt;
-&lt;p&gt;This behaviour is not obvious, or particularly reasonable, let alone documented. Figuring this out took a long time. &lt;/p&gt;
-&lt;p&gt;If you&#39;ve seen Mailpile&#39;s Windows and MacOS releases, you&#39;ll have noticed that we are shipping slightly old versions of GnuPG. The reason for this is that we figured out pretty late that the passphrase-fd is not the correct way to do things and has been disabled in more recent versions of GnuPG in favour of expanded use of things that implement the gpg-agent mechanism. So Mailpile should be a gpg-agent. &lt;/p&gt;
-&lt;p&gt;(It is notable that several distributions still have GnuPG 1.4 as the default instead of GnuPG 2.x...)&lt;/p&gt;
-&lt;p&gt;The reason for this is that Mailpile provides a web interface, and in some of its use cases, it will do so from a server which is not necessarily capable of rendering a GTK window or provide a terminal prompt on the user&#39;s device. So despite all of the reasons why people might not want to shift a PGP passphrase over a SSL connection, it might still be something people will want to do, and we need to be ready for that contingency. So we need to accept the passphrase through a web form, and pass it back to GnuPG one way or another. (Note: the generic case is Mailpile running on localhost, which is always a fine thing to do. Even over HTTP. Normal threat model limitations apply.)&lt;/p&gt;
-&lt;p&gt;All of this is weird and annoyingly inconsistent. This category of problems probably doubled our interface in size and complexity, and made error handling an absolute nightmare. &lt;/p&gt;
-&lt;h3&gt;The Error Handling Issue&lt;/h3&gt;
-&lt;p&gt;When writing a library like this, we need to be able to anticipate errors from GnuPG and respond appropriately. The number of different and confusing ways of receiving information also means that there are a number of different and confusing ways to receive error statuses and such. Sometimes the return value is useful, but frequently it is not. Sometimes there is something on the status descriptor, or on STDERR. Often both, sometimes neither. The entire thing is maddening.&lt;/p&gt;
-&lt;p&gt;The approach we&#39;ve had to take is the opposite of what would be preferable. It is simply to check if the positive output we&#39;re getting from GnuPG is roughly of the sort that we were expecting, and assume that if it isn&#39;t, an error has occurred. As a general error handling strategy this is idiotic, we know, and we&#39;d like it to stop.&lt;/p&gt;
-&lt;h3&gt;What can be done?&lt;/h3&gt;
-&lt;p&gt;The short answer is the same as &lt;a href=&#34;http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html&#34;&gt;Matt Green&#39;s answer&lt;/a&gt;: It is time for PGP to die -- or rather, RFC 4880 needs to be cleaned up, simplified, and replaced. PGP in its current form needs to evolve. There are a lot of very good reasons why, which &lt;a href=&#34;http://secushare.org/PGP&#34;&gt;Carlos has neatly catalogued&lt;/a&gt;. But realistically, PGP is what people use for e-mail, and until we have widespread adoption of crypto in e-mail &lt;em&gt;at all&lt;/em&gt;, trying to replace PGP is just going to cause painful fragmentation. Since one of Mailpile&#39;s goals is to get millions of people encrypting their e-mail by default, we can&#39;t risk this fragmentation right now. If we round to the closest &lt;a href=&#34;http://en.wikipedia.org/wiki/Lakh&#34;&gt;lakh&lt;/a&gt;, zero people currently encrypt their e-mail. This is &lt;a href=&#34;http://smarimccarthy.is/blog/2014/05/27/big-silos-small-privacy/&#34;&gt;scary&lt;/a&gt; and &lt;a href=&#34;http://smarimccarthy.is/blog/2014/05/28/engineering-our-way-out-of-fascism/&#34;&gt;bad&lt;/a&gt;. The way forward is not to throw PGP out, but to start thinking seriously about what replaces RFC 4880.&lt;/p&gt;
-&lt;p&gt;But we&#39;re stuck with RFC 4880. For now. A standard that is, for better or worse, being maintained entirely by one man.&lt;/p&gt;
-&lt;p&gt;Which gives us four options:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Stick with GnuPG and improve it substantially.&lt;/li&gt;
-&lt;li&gt;Fork GnuPG and improve it substantially.&lt;/li&gt;
-&lt;li&gt;Replace GnuPG with something simpler and more consistent.&lt;/li&gt;
-&lt;li&gt;Give up.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;None of those approaches is good. I&#39;m going to take option four off the table immediately because we&#39;re not going to give up.&lt;/p&gt;
-&lt;p&gt;Option two is essentially the hostile version of option one, so I&#39;ll write it off immediately. The people who&#39;ve been developing GnuPG are great and we really like them. So we won&#39;t be forking GnuPG anytime soon -- heck, even if we did want to do that, we&#39;d still not have any time to actually work on it.&lt;/p&gt;
-&lt;p&gt;Option three sounds most sensible long-term. Cruft is unavoidable, but Google&#39;s End-to-End might potentially serve as the basis for &#34;minimum viable PGP&#34;. But End-to-End is also written in Javascript, and while people are entirely free to call me old-fashioned, I&#39;d like the GnuPG replacement to be written in a compiled systems language.&lt;/p&gt;
-&lt;p&gt;But long term is long term. Short term, the only option is to stick with GnuPG.&lt;/p&gt;
-&lt;p&gt;I&#39;d therefore like to propose the following:&lt;/p&gt;
-&lt;h3&gt;GnuPG JSON Mode&lt;/h3&gt;
-&lt;p&gt;As I mentioned, a lot of GnuPG&#39;s output is actually structured a lot more than the output format supports. In our work so far, we&#39;ve managed to build reasonable JSON structures out of that output for a lot of things. Completing that work and expanding on it, it would be possible to support something like this:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
- $ gpg --json &#39;{query}&#39;
- {response1}
- {response2}
- ...
- {responseN}
-&lt;/pre&gt;
-
-&lt;p&gt;This would be relatively easy to build atop of GnuPG&#39;s current source code, making the &lt;code&gt;--json&lt;/code&gt; flag preempt all else in the way &lt;code&gt;--batch&lt;/code&gt; currently does. Then it uses a well supported library to parse the query, figure out what it is doing, call the appropriate internal functionality, and return the right data structures, also JSON encoded.&lt;/p&gt;
-&lt;p&gt;In order to support intermediate results, status descriptor style, an arbitrary number of results is allowed. They need not be comma separated, because we want our input parser to be able to pick them up one by one. Rather, just end each response block with a newline.&lt;/p&gt;
-&lt;p&gt;Have GnuPG exit after the last response.&lt;/p&gt;
-&lt;p&gt;With this, anybody implementing a GnuPG interface will be able to do all the magic relatively easily. The data structures can be well documented. Everything can become easy. I will stop losing my hair.&lt;/p&gt;
-&lt;p&gt;Somebody might ask, what about PGPME? Frankly, PGPME is great for a particular subset of GnuPG users. They can keep using it if they want. But if &lt;code&gt;--json&lt;/code&gt; exists and is consistent and comprehensive, everybody will use that. Trust me.&lt;/p&gt;
-&lt;h3&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;GnuPG is important and great in many ways, but it is also deeply broken and downright dangerous. The sooner it becomes a consistent tool, the sooner it will become something other than a fool&#39;s errand to attempt to interface with it. I&#39;m happy to be on the caravan of fools for now, but only if there is something worthwhile at the end of this quest.&lt;/p&gt;
-&lt;p&gt;Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I&#39;m sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; &lt;a href=&#34;/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html&#34;&gt;We have written a follow-up
-post&lt;/a&gt;.&lt;/p&gt;</description>
-    <pubDate>Tue, 07 Oct 2014 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>One Year Later: Mailpile Beta</title>
-    <link>http://www.mailpile.is/blog/2014-09-13_Mailpile_Beta_Release.html</link>
-    <description>&lt;p&gt;&lt;img src=&#34;/files/Beta-Time-Icons.png&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
-&lt;p&gt;It&#39;s been almost exactly a year since our crowdfunding campaign ended and we realized that building Mailpile really would become our full time job. We are very grateful to be given this chance and have been working hard ever since.&lt;/p&gt;
-&lt;p&gt;It&#39;s been a busy year, with ups and downs, highs and lows, stickers and t-shirts and hackathons and conferences. If you&#39;ve been following Mailpile&#39;s development over the past year, you&#39;ll have seen the codebase mature from a rough prototype into a usable app, the protocol support grow and expand, and the UI mature by leaps and bounds. You&#39;ll also have seen blog posts about delays and long stretches of silence as we doubled down and immersed ourselves in hard work.&lt;/p&gt;
-&lt;p&gt;Since we started development last fall, we&#39;ve released two Alpha versions. The first one was a very rough technology preview focusing on the basic capabilities - our built in webserver, the core Mailpile commands, a REST API, the search engine, and basic support for sending and reading encrypted email. We released an updated Alpha II this summer, which featured advanced UI, support for mail sources, and more.&lt;/p&gt;
-&lt;p&gt;Now, it&#39;s time for our Beta release!&lt;/p&gt;
-&lt;h3&gt;What&#39;s in a Beta?&lt;/h3&gt;
-&lt;p&gt;We believe in the old-fashioned kind of beta-release - a release that has most of the features of a 1.0, but may lack polish and maturity. Polish and maturity can only come from exposure to a wider range of users than the core team of developers and our friends. So although we are a little bashful about how many bugs remain and how many exciting features didn&#39;t make the cut-off, we feel it is time to share our work with a wider audience.&lt;/p&gt;
-&lt;p&gt;So please give it a try and let us know how it works. But please understand that this is still not a finished product.&lt;/p&gt;
-&lt;p&gt;Our &lt;a href=&#34;https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta&#34;&gt;Release Notes&lt;/a&gt; cover some of the technicalities, as does our &lt;a href=&#34;https://github.com/pagekite/Mailpile/wiki/Security-roadmap&#34;&gt;Security Roadmap&lt;/a&gt;. Please read them!  In particular, it&#39;s worth taking a look at the list of known issues, so you aren&#39;t caught off guard by one of our many known bugs. Taking a look at the known issues list will also help reduce the load on us developers - the fewer people file bugs for stuff we already know about, the less time we have to spend curating our bug tracker and the more time we can spend actually fixing things!&lt;/p&gt;
-&lt;h3&gt;The good news and...&lt;/h3&gt;
-&lt;p&gt;For those of you too busy to read the full release notes, here is the good news:&lt;/p&gt;
-&lt;ul class=&#34;square&#34;&gt;
-  &lt;li&gt;Getting started is easy: Mailpile now sports a user-friendly interactive setup flow&lt;/li&gt;
-  &lt;li&gt;Reading and writing e-mail works, including attachments&lt;/li&gt;
-  &lt;li&gt;Our searching and tagging engine can handle hundreds of thousands of messages&lt;/li&gt;
-  &lt;li&gt;The user interface is clean and elegant, and our font now looks great in all browsers &amp; weights&lt;/li&gt;
-  &lt;li&gt;The spam filter works well (as long as you correct its mistakes now and then)&lt;/li&gt;
-  &lt;li&gt;Our OpenPGP support is convenient and easy to work with, including searching for &amp; importing keys&lt;/li&gt;
-  &lt;li&gt;We have packages for Windows and the Mac!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some of the things that still need work:&lt;/p&gt;
-&lt;ul class=&#34;square&#34;&gt;
-  &lt;li&gt;The user interface has not been optimized, so it can be quite slow now and then&lt;/li&gt;
-  &lt;li&gt;The user interface needs some improvements to work well on smaller screens&lt;/li&gt;
-  &lt;li&gt;We need to integrate Tor to better protect our users&#39; privacy&lt;/li&gt;
-  &lt;li&gt;We wrote code too fast and our translators couldn&#39;t really keep up&lt;/li&gt;
-  &lt;li&gt;There are still lots of bugs that need fixing!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Where can I get it?&lt;/h3&gt;
-&lt;p&gt;The Mailpile beta is released in 4 forms:&lt;/p&gt;
-&lt;div class=&#34;add-bottom&#34;&gt;
-&lt;h5 class=&#34;half-bottom&#34;&gt;Online Demo&lt;/h5&gt;
-View our &lt;a href=&#34;https://www.mailpile.is/demos/&#34;&gt;online demo here&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;add-bottom&#34;&gt;
-&lt;h5 class=&#34;half-bottom&#34;&gt;&lt;img src=&#34;/img/os-windows.png&#34; border=&#34;0&#34; style=&#34;height:24px;&#34;&gt; Windows Installer&lt;/h5&gt;
-Download via: &lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe&#34;&gt;HTTPS&lt;/a&gt; or &lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.torrent&#34;&gt;Bittorrent&lt;/a&gt; (faster)&lt;br&gt;
-&lt;em&gt;Checksums: &lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.sha1&#34;&gt;sha1&lt;/a&gt; &amp;nbsp;&lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.md5&#34;&gt;md5&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;add-bottom&#34;&gt;
-&lt;h5 class=&#34;half-bottom&#34;&gt;&lt;img src=&#34;/img/os-mac.png&#34; border=&#34;0&#34; style=&#34;height:24px;&#34;&gt; Mac OS Installer&lt;/h5&gt;
-Download via: &lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg&#34;&gt;HTTPS&lt;/a&gt; or &lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.torrent&#34;&gt;Bittorrent&lt;/a&gt; (faster)&lt;br&gt;
-&lt;em&gt;Checksums: &lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.sha1&#34;&gt;sha1&lt;/a&gt; &amp;nbsp;&lt;a href=&#34;https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.md5&#34;&gt;md5&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;add-bottom&#34;&gt;
-&lt;h5 class=&#34;half-bottom&#34;&gt;&lt;img src=&#34;/img/os-linux.png&#34; border=&#34;0&#34; style=&#34;height:24px;&#34;&gt; Linux&lt;/h5&gt;
-As a &lt;a href=&#34;https://github.com/pagekite/Mailpile/releases&#34; target=&#34;_blank&#34;&gt;tagged source release on Github&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;So give it a spin, seed our torrents and let us know what you think. :-)&lt;/p&gt;
-&lt;p&gt;In the meantime, we&#39;re going to get back to work. We still have 3-4 months worth of money in the bank, which should be exactly the right amount to get our 1.0 shipped in time for the New Year. Fingers crossed!&lt;/p&gt;
-&lt;p&gt;Hugs and ciphers,&lt;br /&gt;
-  ~The Mailpile team&lt;/p&gt;
-&lt;p&gt;P.S. Check out &lt;a href=&#34;https://news.ycombinator.com/item?id=8315086&#34;&gt;this Hacker News&lt;/a&gt;
-post to discuss!&lt;/p&gt;</description>
-    <pubDate>Sat, 13 Sep 2014 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

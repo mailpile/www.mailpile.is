@@ -77,6 +77,94 @@
             <div class="col-13">
 <!-- Page content begins -->
 
+    <a href="2015-04-13_Back_to_Work.html"><h1>Back to Work!</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a>
+               on April 13, 2015</strong></p>
+    <p>After a month's break, it's time to resume work on Mailpile again. Some
+time away is always useful to give perspective and get some much needed
+rest, and now that I have returned I plan to make a few log overdue
+changes to how I work on Mailpile.</p>
+<p>I'll discuss the rest later, but the first change is to improve
+communication by publishing a weekly blog post describing what has been
+done recently and what is ahead. In order to distract as little as
+possible from actual development, these posts will be kept relatively
+short most of the time. This is the first such post!</p>
+<p>Think of it as a virtual "stand up", just to set the tone for the next
+few days of work:</p>
+<h3>Last week</h3>
+<p>Nothing to report, I was on holidays!</p>
+<h3>Next week</h3>
+<p>This week is dedicated to getting back to work. An event I am attending
+next weekend will helpfully provide focus...</p>
+<p>Next weekend I will be attending a small summit in Germany, meeting
+various other developers from open source projects that also work with
+OpenPGP and GnuPG.</p>
+<p>The summit is a private, very tech-focused event attended by developers
+from most of the open source projects using GnuPG today; a real who's
+who of GnuPG and e-mail security. To make the most of this opportunity,
+this week I will refresh my own memory on the current state of GnuPG and
+Mailpile and try to identify points where I could use advice or help, as
+well as points where I may be able to contribute and help the other
+projects.</p>
+<p>Topics I will explore this week and consider for presentation at the
+summit are:</p>
+<ol>
+<li>Mailpile itself</li>
+<li>Mailpile's proposed trust model</li>
+<li>A method for generating beautiful avatars from PGP key fingerprints</li>
+<li>Enhanced e-mail signatures (manifests)</li>
+</ol>
+<p>That's the plan! Next week's update will tell you how it went.</p>
+  <hr>
+    <a href="2015-03-06_Beta_Rejected.html"><h1>Beta Rejected!</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a>
+               on March 6, 2015</strong></p>
+    <p>I would like to thank everyone who took the time download the Mailpile
+Beta releases and give us valuable feedback. <strong>Thank you, thank you,
+thank you!</strong></p>
+<p>It's always exciting and scary to put your work out there for everyone
+to see, but our early adopters have been universally supportive and
+gracious, even when Mailpile didn't quite work as well as they had
+hoped.</p>
+<p>But now that a bunch of people have taken the time to download Mailpile,
+poke it with a stick and put it through it's paces, it is time to
+declare the beta test period over for now. We need to respond to the
+feedback and fix the issues that were discovered.</p>
+<p>Obviously we had hoped things were almost ready for public consumption,
+that we were close to making a proper release. The testing did it's job
+alright: we know now we were a tad overoptimistic. Just a tad! So we're
+going back to work instead of pushing for a 1.0 right away.</p>
+<p><img src='/img/rejection-stamp.png' style='float: right;'></p>
+<p>Some of the key take-aways from our beta tests were:</p>
+<ol>
+<li>We bit off more than we can chew in our 1.0 plans. The app needs to
+   be simplified so we can ship something really stable.</li>
+<li>Our IMAP support still needs work so it can interoperate with all
+   the different mail servers out there. The Internet is a big and
+   diverse place!</li>
+<li>Our GnuPG strategy and code isn't ready. We need to either make all
+   that crypto stuff completely seamless, or improve the tools we expose
+   to the user for manual work. Preferably both.</li>
+</ol>
+<p>Those are the really big issues, but there are a very large number of
+other smaller bugs and loose ends that need work. Almost all of these
+are in the "back end" of the app, the low level plumbing, gears and
+turbines and closures and APIs that work behind the scenes. The back-end
+has been playing catch up to the user interface for a while, it needs
+some focus and attention before we can ship a real product.  We fooled
+even ourselves by making something that <em>looked</em> almost ready, even
+though under the hood it just wasn't.</p>
+<p>So I (Bjarni the backend guy) am going to be doubling down on that stuff
+... just as soon as I'm finished marrying the most amazing woman I know
+later this month. So don't worry if the github repo is quiet until early
+April. I'll be back!</p>
+<p>Since most of Mailpile's current limitations are low level back-end
+problems, Brennan (our awesome front-end developer) has moved on to
+other things for now. I'd like to thank him for all his hard work so far
+and encourage you all to stay tuned for news about his ongoing efforts
+to improve the usability of crypto apps and modernize PGP.</p>
+<p>See you in April!</p>
+  <hr>
     <a href="2015-02-26_Revisiting_the_GnuPG_discussion.html"><h1>More thoughts on working with GnuPG</h1></a>
     <p><strong>Posted by <a href="#">Bjarni</a>
                on February 26, 2015</strong></p>
@@ -402,468 +490,11 @@ more accessible to people not used to using the command-line.</p>
 support.</p>
 <p>Now go <a href="https://github.com/mailpile/Mailpile/wiki/Release-Notes-201501-Beta-II">check out Mailpile Beta II</a>!</p>
   <hr>
-    <a href="2014-11-21_To_PGP_MIME_Or_Not.html"><h1>To PGP/MIME or not to PGP/MIME</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on November 21, 2014</strong></p>
-    <p><strong>TL;DR</strong>: PGP/MIME has some serious flaws. I propose specifying an
-alternative method for PGP-encrypting e-mail (including attachments)
-which improves security while being backwards compatible with legacy
-ad-hoc PGP encryption, air-gaps and webmail plugins.</p>
-<h3>How does e-mail encryption work?</h3>
-<p>The world of e-mail encryption can be surprisingly complicated and
-convoluted.</p>
-<p>The two standards that we have concentrated on the most in Mailpile, are
-OpenPGP (<a href="https://tools.ietf.org/html/rfc4880">RFC4880</a>) and the
-PGP/MIME (<a href="https://tools.ietf.org/html/rfc3156">RFC3156</a>) standard which
-describes how to encrypt multi-part e-mail messages using OpenPGP.</p>
-<p>In addition to PGP/MIME, there is also the older "ad-hoc" way of sending
-encrypted content, which is to simply attach PGP-encrypted files as
-attachments or to paste ASCII-armored blobs of encrypted text into the
-message body itself.</p>
-<p>To illustrate the difference, a PGP/MIME encrypted message with a single
-attachment looks a bit like this:</p>
-<pre class="add-bottom">
-  |  From: Alice &lt;a1234@wonderland.com&gt;
-  |  To: Bob &lt;b9973@builders.com&gt;
-  |  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
-  |  Subject: I have a secret
-  |  Content-Type: multipart/encrypted;
-  |                protocol="application/pgp-encrypted";
-  |                boundary="==12345=="
-  |
-  |  --==12345==
-  |  Content-Type: application/pgp-encrypted
-  |  Content-Disposition: attachment
-  |
-  |  Version: 1
-  |
-  |  --==12345==
-  |  Content-Type: application/octet-stream
-  |  Content-Disposition: attachment; filename="msg.asc"
-  |
-  |  -----BEGIN PGP MESSAGE-----
-  |  Version: GnuPG v1
-  |
-  E  Content-Type: multipart/mixed; boundary="==67890=="
-  E
-  E  --==67890==
-  E  Content-Type: text/plain; charset='utf-8'
-  E
-  E  I am not wearing any socks!!
-  E
-  E  --==67890==
-  E  Content-Type: image/jpeg
-  E  Content-Disposition: attachment; filename="my-toes.jpg"
-  E
-  E  [BASE64 ENCODED PICTURE OF NAUGHTY TOES]
-  E  --==67890==--
-  |  -----END PGP MESSAGE-----
-  |
-  |  --==12345==--
-</pre>
-
-<p>The clear-text bits are preceded with a '|' and the contents of the
-encrypted part with an 'E'. The same message, sent using ad-hoc
-encryption, might look like this:</p>
-<pre class="add-bottom">
-  |  From: Alice &lt;a1234@wonderland.com&gt;
-  |  To: Bob &lt;b9973@builders.com&gt;
-  |  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
-  |  Subject: I have a secret
-  |  Content-Type: multipart/mixed; boundary="==12345=="
-  |
-  |  --==12345==
-  |  Content-Type: text/plain; charset='utf-8'
-  |
-  |  -----BEGIN PGP MESSAGE----
-  |  Digest: sha-1
-  |
-  E  I am not wearing any socks!!
-  |  -----END PGP MESSAGE----
-  |
-  |  --==67890==
-  |  Content-Type: application/octet-stream
-  |  Content-Disposition: attachment; filename="my-toes.jpg.pgp"
-  |
-  E  [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-  |  --==67890==--
-</pre>
-
-<p>There are noticable differences here:</p>
-<ol>
-<li>The PGP/MIME encrypted data is formatted as a fragment of MIME data</li>
-<li>The PGP/MIME encrypted message hides how many parts the message has
-   and any metadata about them: an outsider cannot tell whether there
-   is an attachment or not.</li>
-<li>In the ad-hoc scheme, only the payloads are encrypted</li>
-<li>The ad-hoc scheme loses the mime-type of the attachment</li>
-<li>The ad-hoc scheme leaks the name of the attachment in the clear (or
-   loses it, if it gives the attachment a nondescript name)</li>
-<li>The ad-hoc scheme does not protect the integrity of the message, an
-   attacher can inject parts or remove parts without Bob being able to
-   detect that anything happened.</li>
-</ol>
-<h3>What does this all mean?</h3>
-<p>When the technical characteristics of the two formats are compared, there
-are two major considerations - security and compatibility.</p>
-<p>For ad-hoc encryption, we find:</p>
-<ol>
-<li>Ad-hoc encryption is not very secure: it leaks or loses metadata, and
-   message integrity is not guaranteed.</li>
-<li>Ad-hoc encryption is comptible with legacy mail clients, in that it
-   allows the recipient to manually copy all the encrypted parts and
-   decrypt "offline", giving them the opportunity to communicate with some
-   security even though their mail client does not understand PGP.</li>
-</ol>
-<p>Conversely:</p>
-<ol>
-<li>PGP/MIME encryption protects attachment metadata and message structure,
-   only the message header is sent in the clear.</li>
-<li>In practice, PGP/MIME is not compatible with legacy mail clients. If
-   a user saves and manually decrypts the payload, they will end up with
-   a fragment of MIME-encoded data. Tools for working with fragments of
-   MIME are not widely available, so for non-technical users the data is
-   effectively worthless.</li>
-</ol>
-<h4>What does this mean for Mailpile?</h4>
-<p>When trying to design and deploy a user-friendly e-mail encryption tool,
-we can't just consider the interface we present to our own users, we
-also have to consider the experience of people receiving our mail. If
-it's illegible, then we have a problem - and that is exactly what is
-happening here. If we stick with the more secure PGP/MIME, then it's
-guaranteed that our outgoing messages will be unreadable by a
-significant number of users, even if they have PGP keys and know how to
-use them.</p>
-<p>Just to clarify, Mailpile absolutely needs to be able to receive and
-correctly parse PGP/MIME formatted mail. That is not up for debate - all
-secure mail clients should do this, just like all web browsers should
-parse and display GIF images. But if better alternatives are available
-to us, we probably should avoid creating new content using a format that
-is known to have fundamental flaws.</p>
-<h4>What is the impact?</h4>
-<p>Most desktop and some mobile mail clients do support PGP/MIME, but few
-do so natively - most require a 3rd party plugin, which is a usability
-concern in and of itself.</p>
-<p>When we consider the vast number of webmail users, the situation is much
-more grim - there a recipient's only option is a variation of the manual
-download scenario; save attachments and decrypt offline. Webmail
-encryption plugins, Mailvelope and Google's End-To-End being the most
-promising at the moment, are merely automating that process and generally
-<a href="https://code.google.com/p/end-to-end/#Which_RFCs_does_End-To-End_support?">do not support PGP/MIME</a>.
-Although <a href="https://code.google.com/p/end-to-end/issues/detail?id=32">Google's engineers have expressed interest in supporting
-PGP/MIME eventually</a>,
-<a href="https://github.com/mailvelope/mailvelope/issues/41">as have Mailvelope's</a>,
-it is not an easy problem and they make no promises about when or how.</p>
-<p>Finally, there is a very small, but disproportionatly important, set of
-users (whistle-blowers, activists, spies) who have a need to run their
-Internet tools and their encryption tools on separate machines.  An "air
-gap" is a low-tech, widely understood method of protecting secret key
-material from being compromised. If we send PGP/MIME formatted mail,
-air-gapping becomes inconvenient to the point of being infeasible.</p>
-<p>Since usable crypto is our goal, and Mailpile users need to be able to
-communicate with people using other mail clients, I feel that real-world
-compatibility is marginally more important than dogmatically adhering to
-standards and protocols.</p>
-<p>And by that logic, the question changes...</p>
-<h3>Can ad-hoc PGP encryption be made as secure as PGP/MIME?</h3>
-<p>I think maybe it can.</p>
-<p>The problems with ad-hoc encryption (aside from the fact that it is
-not very elegant), are as follows:</p>
-<ul>
-<li>Metadata is leaked or lost</li>
-<li>Message integrity is not guaranteed</li>
-</ul>
-<p>Here are a couple strategies to deal with this:</p>
-<ol>
-<li>Put all attachments in a ZIP archive, and encrypt that.</li>
-<li>Add an encrypted "Email Manifest" which verifies message integrity
-   and carries metadata.</li>
-</ol>
-<p>These methods could be combined, or used separately. They are
-complementary, but the Email Manifest is actually the more important of
-the two.</p>
-<p>Putting attachments in an archive would largely be a matter of
-convenience for the recipient, as it allows us to stop transmitting
-file-names in the clear, while allowing the user to use standard, well
-understood tools to interact with the contents. Without such an archive,
-we either have to transmit file names in the clear, or ask users to
-rename files by hand.</p>
-<p>The Email Manifest is the more interesting part of this proposal. It not
-only allows us to verify the integrity of the message, it also gives us
-the opportunity to correct some of the more egregious deficiencies of
-PGP/MIME - namely the fact that PGP/MIME transmits the Subject, From,
-To, CC and many other critical headers in the clear. PGP/MIME is also
-annoyingly picky and ambiguous about how to treat white-space when
-verifying signatures.</p>
-<p>Mail clients implementing some sort of "Email Manifest protocol" could
-agree to move critical headers out of the main message and into the
-encrypted manifest as often as possible, and then reverse the same
-process upon decryption. We can make sure the Email Manifest's
-specification deals with white-space in a clear and easy to implement
-manner.</p>
-<h4>Another example</h4>
-<p>To revisit our example, an e-mail sent using an Email Manifest approach
-might look like this:</p>
-<pre class="add-bottom">
-  |  From: a1234@wonderland.com
-  |  To: b9973@builders.com
-  |  Cc: omgwtf@lucasfilm.com
-  |  Subject: Encrypted Message
-  |  Content-Type: multipart/mixed; boundary="==12345=="
-  |
-  |  --==12345==
-  |  Content-Type: text/plain; charset='utf-8'
-  |
-  |  -----BEGIN PGP MESSAGE----
-  |  Digest: sha-1
-  |
-  E  From: Alice
-  E  To: Bob
-  E  Cc: Jar Jar Binks
-  E  Subject: I have a secret
-  E
-  E  I am not wearing any socks!!
-  E
-  E  Note: this message should have 1 attachment and a manifest.
-  |  -----END PGP MESSAGE----
-  |
-  |  --==67890==
-  |  Content-Type: application/octet-stream
-  |  Content-Disposition: attachment; filename="attachment-1.pgp"
-  |
-  E  [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-  |  --==67890==
-  |  Content-Type: application/pgp-manifest
-  |  Content-Disposition: attachment; filename="manifest.pgp"
-  |
-  E  Manifest-Version: 1.0
-  E  From: Alice &lt;a1234@wonderland.com&gt;
-  E  To: Bob &lt;b9973@builders.com&gt;
-  E  Cc: Jar Jar Binks &lt;omgwtf@lucasfilm.com&gt;
-  E  Subject: I have a secret
-  E
-  E  Inline: text/plain; sha2sum="..."; has-pgp; pgp-has-hints
-  E  Attachment-1: image/jpeg; filename="my-toes.jpg"; sha2sum="..."
-  |  --==67890==--
-</pre>
-
-<p>This sample demonstrates how both the message structure and sensitive
-headers could be moved into the Email Manifest.</p>
-<p>This example does not use a ZIP archive, so it leaks how many
-attachments the mail has and how big they are; building an example
-which does use a ZIP archive is left as an exercise for the reader.</p>
-<p>For the benefit of PGP-enabled mail clients unaware of the Manifest,
-some important header data and human readable integrity hints could be
-injected into the text part itself, while an Email Manifest-aware
-client could suppress the duplicate information automatically to avoid
-clutter.</p>
-<h4>What does the recipient see?</h4>
-<p>If a recipient's mail client understands Email Manifests, the message
-can be rendered just as nicely as if it were sent using PGP/MIME, with
-the added benefit that protected headers can be marked as secure.</p>
-<p>A PGP-aware mail client that doesn't understand the Manifest will see
-simplified headers, and the text-part of the e-mail will have some extra
-clutter at the top, From, To, Subject etc, and a notice at the bottom.
-The attachments may need to be renamed or extracted from a ZIP archive
-before they are useful. They will also see the Email Manifest itself as
-an attachment, which they can decrypt and read if they would like to
-manually confirm the message was delivered intact.</p>
-<p>A mail client with no support for PGP, will present the user with
-encrypted text and attachments they can save to disk for offline
-processing.</p>
-<p>So compared to PGP/MIME, this approach improves the security of Mailpile
-users (or others supporting Email Manifests), makes life somewhat less
-convenient for the users of other PGP/MIME-aware mail software, and
-dramatically improves interoperability with mail clients and plugins
-that do not understand PGP/MIME, including webmail users.</p>
-<h3>Conclusion</h3>
-<p>It is definitely possible to transmit PGP-encrypted messages and
-attachments over e-mail in a way which is both more interoperable and
-more secure than the PGP/MIME format.</p>
-<p>The question remains - should we?</p>
-<p>This is not a standard, but perhaps it could become one. Messages sent
-this way have the potential to be more secure than PGP/MIME, but some of
-the features of PGP/MIME will be lost; namely mail-client awareness of
-attachment types and probably also support for HTML mail. However, that
-may only be a short-term problem, until PGP plugins are upgraded to
-understand Email Manifests.</p>
-<p>Is the ZIP archive idea good or bad? It makes some things easier and
-both hides and preserves more metadata, but it complicates
-implementation and may add extra steps for the recipent. On the other
-hand, manually renaming files is no fun and ZIP files may be the lesser
-of two evils if we assume we are indeed abandoning PGP/MIME.</p>
-<p>We would like to get feedback on this from people who work with
-encrypted e-mail on a day to day basis, security trainers and such
-folks, and from folks writing secure e-mail tools. What do you think?
-Please mail us at <a href="mailto:team@mailpile.is">team@mailpile.is</a> or tweet
-at <a href="https://twitter.com/MailpileTeam">@MailpileTeam</a> if you have
-insights to share.</p>
-<p>We'll also be following <a href="https://news.ycombinator.com/item?id=8648587">comments on Hacker News</a>.</p>
-<p>Thanks!</p>
-  <hr>
-    <a href="2014-10-07_Some_Thoughts_on_GnuPG.html"><h1>Some thoughts on working with GnuPG</h1></a>
-    <p><strong>Posted by <a href="#">Smári</a>
-               on October 7, 2014</strong></p>
-    <p>A lot of people have complained about OpenPGP for a number of valid cryptographical reasons<a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">1</a>,<a href="http://secushare.org/PGP">2</a>. It doesn't change the fact that it is widely used, and wildly useful. It urgently needs to be replaced with something more sensible, but for now we're stuck with it. In practice, this also means that we are stuck with GnuPG, the most common and by far the best implementation of OpenPGP.</p>
-<p>GnuPG is the one and only reference implementation of <a href="http://tools.ietf.org/html/rfc4880">RFC 4880</a>, and despite thousands of companies making use of OpenPGP in their infrastructre there is for all intents and purposes a solitary dude in Germany trying to keep it all together. <a href="http://werner.eifelkommune.de/">Werner Koch</a> is an absolute hero for managing to do that, and deserves our respect and support. Financially supporting the GnuPG project is also something people should be doing. </p>
-<p>The following is however neccessary and hopefully constructive criticism of GnuPG.</p>
-<p>One of the things I'm largely to blame for in Mailpile is the GnuPG interface. It's a chunk of Python code that executes the GnuPG binary, tosses information at it, and figures out what to do with the output. There are lots of libraries for doing this, but after a great deal of exploration I found that all of the Python libraries that did this were insufficient for our needs, and the only thing crazier than manually forking out GnuPG in our situation would be to use the PGPME library.</p>
-<p>PGPME is almost as confusing and annoying as calling GnuPG directly, but it also requires us to ship architecture-specific libraries to everybody, something we're actively avoiding. Having to ship GnuPG binaries to Windows and MacOS users is bad enough, but dependency hell is a place we want to stay out of. If we were writing Mailpile in, say, C or C++, then PGPME would definitely be the library of choice, but we're not, so it isn't. On top of that, the available <a href="http://pyme.sourceforge.net/">Python bindings for PGPME</a> are very flaky (last updated in 2008!), and not developed or maintained by the GnuPG team.</p>
-<p>As a result, we've got a roughly 1200 line chunk of code in Mailpile that has the fun and useful task of chatting with GnuPG, and the stupifyingly annoying task of working around all of GnuPG's inconsistencies.</p>
-<p>The problems with GnuPG seem to fall roughly into two broad categories: inconsistent output structure, inconsistent interfaces. These are both ripe with surprising behaviour and confusing failure modes. In addition to these categories, it appears that the larger meta problem is that no single statement about its problems is going to remain a stable statement, as these problems disappear and reappear at odd intervals as new versions are being built. The number of moving parts essentially leads to a lot of confusion about whether a particular bug exists in a particular version or not, and whether it is affected by wind speed. To wit, I have over the course of Mailpile development added, removed, and readded a workaround for a bug, although I think I'm safe to say that it does not exist post GnuPG 2.1. The comment of that workaround in the code illustrates the issue perfectly:</p>
-<pre class="add-bottom">
-def list_secret_keys(self):
-       #
-       # Note: The "." parameter that is passed is to work around a bug
-       #       in GnuPG < 2.1, where --list-secret-keys does not list
-       #       details about key capabilities or expiry for
-       #       --list-secret-keys unless a selector is provided. A dot
-       #       is reasonably likely to appear in all PGP keys, as it is
-       #       a common component of e-mail addresses (and @ does not
-       #       work as a selector for some reason...)
-       #
-       #       The downside of this workaround is that keys with no e-mail
-       #       address or an address like alice@localhost won't be found.
-       #       Therefore, this paramter should be removed when GnuPG >= 2.1
-       #       becomes commonplace.
-       #
-       #       (This is a better workaround than doing an additional
-       #       --list-keys and trying to aggregate it though...)
-       #
-       #       BRE: Put --fingerprint at the front and added selectors
-       #            for the worlds MOST POPULAR LETTERS!  Yaaay!
-       #
-       retvals = self.run(["--fingerprint",
-                           "--list-secret-keys", ".",
-                           "--list-secret-keys", "a",
-                           "--list-secret-keys", "e",
-                           "--list-secret-keys", "i",
-                           "--list-secret-keys", "p",
-                           "--list-secret-keys", "t",
-                           "--list-secret-keys", "k"])
-       return self.parse_keylist(retvals[1]["stdout"])
-</pre>
-
-<p>This bug exists in the first category:</p>
-<h3>Inconsistent output structure</h3>
-<p>GnuPG <em>generally</em> accepts command line parameters, uses these to perform actions, and returns output. The output generally takes two forms:</p>
-<ol>
-<li>Line by line descriptive output, such as when listing keys</li>
-<li>Bulk output, such as when encrypting, decrypting, or signing</li>
-</ol>
-<p>The line-by-line output has two modes, the normal mode where the data is tabulated with spaces into mostly nice, if somewhat confusing columns, and the <code>--with-colons</code> mode, where the spaces are replaced with colons, for easy parsing. This is quite clever and good. The problem arises when one intends to start parsing this data.</p>
-<p>First, a word on discoverability. If you ever intend to do anything with GnuPG, you first need to read and internalize a document aptly titled <code>DETAILS</code>, which contains a lot of the details about what's going on with GnuPG output. I have dutifully read, memorized chunks of, and bookmarked this file for posterity. It is immensely helpful. For example, it gives an example of GnuPG's output:</p>
-<pre class="add-bottom">
-$ gpg --with-colons --list-keys \
-      --with-fingerprint --with-fingerprint wk@gnupg.org
-pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
-fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-uid:f::::::::Werner Koch <wk@g10code.com>:
-uid:f::::::::Werner Koch <wk@gnupg.org>:
-sub:f:1536:16:06AD222CADF6A6E1:919537416:1036177416:::::e:
-fpr:::::::::CF8BCC4B18DE08FCD8A1615906AD222CADF6A6E1:
-sub:r:1536:20:5CE086B5B5A18FF4:899817788:1025961788:::::esc:
-fpr:::::::::AB059359A3B81F410FCFF97F5CE086B5B5A18FF4:
-</pre>
-
-<p>In order to decipher what this all means, you need to refer to rest of the document. This shows the <code>--with-colons</code> format, which is the way we want to be working with it.</p>
-<p>Now here comes issue the first: this is essentially a colon separated value (CSV!) data structure, but the data being provided is a) inconsistent, and b) structured.</p>
-<p>Notably, the first output line says "there is a public key," and the line after it says "here is a fingerprint." Naively one might think that these are unrelated. But in fact, all of the lines from the one starting with <code>pub</code> up to the next one that starts with either <code>pub</code> or <code>sec</code> are actually details about the nature of the public key mentioned in the <code>pub</code> line - although to make things worse, the <code>fpr</code> lines after the <code>sub</code> lines refer to the <code>sub</code> line but not the <code>pub</code> line. Confused yet?</p>
-<p>In reality, parsing this isn't too terrible, but it can only be done in a reasonable way if you understand the structure of PGP keys and the output format of GnuPG. These are <em>not</em> reasonable assumptions for GnuPG to be making. Even armed with knowledge about the structure of keys and the handy <code>DETAILS</code> document, my first version of a parser was overly generic and terribly inefficient, because I kept trying to avoid inconsistencies.</p>
-<p>Now, the inconsistencies start to get exciting around about here.</p>
-<p>Notice these two lines:</p>
-<pre class="add-bottom">
-pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:::scESC:
-fpr:::::::::ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-</pre>
-
-<p>These both follow the same output format, according to <code>DETAILS</code>. But look what happens when I add spaces to align the columns:</p>
-<pre class="add-bottom">
-pub:f:1024:17:6C7EE1B8621CC013:899817715:1055898235::m:                                        ::scESC:
-fpr: :    :  :                :         :          :: :ECAF7590EB3443B5C7CF3ACB6C7EE1B8621CC013:
-</pre>
-
-<p>Some of the columns are meaningless for some of the output lines, but more shockingly, some of the columns are MISSING sometimes. Three of the columns just simply evaporate if the line is an <code>fpr</code>-type line. On top of that, there's no really good reason why the fingerprint needs to be a separate output line rather than just being added in at the right place. According to the <code>DETAILS</code> file, field 10 is for "User ID" - which is to say, the name, e-mail address, and comment associated with the key. Things that the fingerprint emphatically is not.</p>
-<p>It this point you'll notice that field 5 contains the Key ID. And for added pain, the key ID is variously the last 8 or the last 16 nibbles (hexadecimal digits) of the fingerprint.</p>
-<p>Frustrated yet? Me too. But let's just wave the rest of this category away, and move on to the next:</p>
-<h3>Inconsistent interfaces</h3>
-<p>So let's imagine you want to generate a key. Sounds like a reasonable thing to do, right? So we're all hip and cool and want to do so programatically with our shiny command line interface to GnuPG, so naturally we think it'll look something like:</p>
-<pre class="add-bottom">
-$ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA --keysize 4096 --expires 2017-10-06
-</pre>
-
-<p>... or something to that effect. And have sensible defaults for any parameters that are skipped, or otherwise make them required. Right?</p>
-<p>Wrong.</p>
-<p>GnuPG does have a <code>--gen-key</code> flag, but when you call it you are dropped into an interactive interface where you are forced to answer questions, one at a time. In varying order, depending on the version, it seems.</p>
-<p>The only sensible programmatic way to deal with this is to use "expect" style scripts, where your script captures the output and provides programmatic input depending on what the application last said. These used to be used a lot in the 80's, but have fallen out of favour because: a) they make internationalization a nightmare, b) they make changing versions of software a nightmare, and c) they are almost never the right way to do anything.</p>
-<p>They do work though. Kind of. Until they break, and it'll be hell to debug them.</p>
-<p>Now, avid users of GnuPG will at this point mention the <code>--batch</code> option, which allows in this case for providing options to the key generator in yet another format. Except, of course, that if you want to do something entirely reasonable like add more than one UID (for instance if you have multiple e-mail addresses) to a new key, you can't. <code>--batch</code> just doesn't support it.</p>
-<p>So your options are to either painfully generate through using expect-style scripts, or use batch and then edit the key afterwards to add uids. Except that the <code>--edit-key</code> also relies on an interface which requires the use of expect-style scripts, so you just gained nothing.</p>
-<p>Another thing that frequently happens when using encryption software with slow algorithms (such as secure pseudorandom number generation or RSA) is that you have to wait a long time for things to happen. When you're making software with nice user interfaces, you sometimes start thinking that showing some kind of intermediate progress would be a nice thing to do. This is where we get to GnuPG's wonderful status file descriptor.</p>
-<p>Really, the status descriptor is awesome. It gives me lots of information that is valuable and can make life a lot better. There are however a few shortcomings. First, contrary to all other file descriptors that you may work with in GnuPG, the status descriptor is not guaranteed to give you a newline character at the end of a status, which renders a bunch of sensible methods of reading input from it unreliable and requires that I handle that descriptor with special magic. Nor are you strictly guaranteed to only get statuses. I have on occasion run into blank lines and other weirdness that needs to be stripped. Once those quirks are all managed, the status descriptor is actually invaluable and should not be overlooked -- specially when mixed with the <code>--enable-progress-filter</code> flag.</p>
-<p>The biggest complaint about the status descriptor is that it cannot be relied upon as a flow control mechanism. It does not always give output, or indicate the appropriate sequence of things, so an interface can use it for the purpose of increasing their information about the current situation, but not as a replacement for constant reading and parsing of the STDOUT and STDERR handles, and certainly not as a replacement for in-depth understanding of which order things happen in.</p>
-<p>Actually, it should also be mentioned that as nice as it is to have all these descriptors, heavy use of descriptors turns into a world of problems on Windows. Windows is finicky enough as it is. Our solution was passing the status through to STDERR, which really works kind of fine.</p>
-<p>Speaking of order, consider this handling of the passphrase descriptor -- a special descriptor for accepting a passphrase sent by the user as part of a wrapper-mediated communication (because nobody ever uses pipes like that on the command line), from GnuPG's <code>gpg.c</code>:</p>
-<pre class="add-bottom">
-    ...
-    if( pwfd != -1 )  /* Read the passphrase now. */
-    read_passphrase_from_fd( pwfd );
-    ...
-    switch (cmd)
-      {
-      case aPrimegen:
-      case aPrintMD:
-      ...
-</pre>
-
-<p>The interesting thing (aside from the annoying and dangerous lack of indentation on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase <em>must</em> be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before <em>anything</em> else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG's internal state, which would be absolutely insane, even if it weren't version dependent. </p>
-<p>This behaviour is not obvious, or particularly reasonable, let alone documented. Figuring this out took a long time. </p>
-<p>If you've seen Mailpile's Windows and MacOS releases, you'll have noticed that we are shipping slightly old versions of GnuPG. The reason for this is that we figured out pretty late that the passphrase-fd is not the correct way to do things and has been disabled in more recent versions of GnuPG in favour of expanded use of things that implement the gpg-agent mechanism. So Mailpile should be a gpg-agent. </p>
-<p>(It is notable that several distributions still have GnuPG 1.4 as the default instead of GnuPG 2.x...)</p>
-<p>The reason for this is that Mailpile provides a web interface, and in some of its use cases, it will do so from a server which is not necessarily capable of rendering a GTK window or provide a terminal prompt on the user's device. So despite all of the reasons why people might not want to shift a PGP passphrase over a SSL connection, it might still be something people will want to do, and we need to be ready for that contingency. So we need to accept the passphrase through a web form, and pass it back to GnuPG one way or another. (Note: the generic case is Mailpile running on localhost, which is always a fine thing to do. Even over HTTP. Normal threat model limitations apply.)</p>
-<p>All of this is weird and annoyingly inconsistent. This category of problems probably doubled our interface in size and complexity, and made error handling an absolute nightmare. </p>
-<h3>The Error Handling Issue</h3>
-<p>When writing a library like this, we need to be able to anticipate errors from GnuPG and respond appropriately. The number of different and confusing ways of receiving information also means that there are a number of different and confusing ways to receive error statuses and such. Sometimes the return value is useful, but frequently it is not. Sometimes there is something on the status descriptor, or on STDERR. Often both, sometimes neither. The entire thing is maddening.</p>
-<p>The approach we've had to take is the opposite of what would be preferable. It is simply to check if the positive output we're getting from GnuPG is roughly of the sort that we were expecting, and assume that if it isn't, an error has occurred. As a general error handling strategy this is idiotic, we know, and we'd like it to stop.</p>
-<h3>What can be done?</h3>
-<p>The short answer is the same as <a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">Matt Green's answer</a>: It is time for PGP to die -- or rather, RFC 4880 needs to be cleaned up, simplified, and replaced. PGP in its current form needs to evolve. There are a lot of very good reasons why, which <a href="http://secushare.org/PGP">Carlos has neatly catalogued</a>. But realistically, PGP is what people use for e-mail, and until we have widespread adoption of crypto in e-mail <em>at all</em>, trying to replace PGP is just going to cause painful fragmentation. Since one of Mailpile's goals is to get millions of people encrypting their e-mail by default, we can't risk this fragmentation right now. If we round to the closest <a href="http://en.wikipedia.org/wiki/Lakh">lakh</a>, zero people currently encrypt their e-mail. This is <a href="http://smarimccarthy.is/blog/2014/05/27/big-silos-small-privacy/">scary</a> and <a href="http://smarimccarthy.is/blog/2014/05/28/engineering-our-way-out-of-fascism/">bad</a>. The way forward is not to throw PGP out, but to start thinking seriously about what replaces RFC 4880.</p>
-<p>But we're stuck with RFC 4880. For now. A standard that is, for better or worse, being maintained entirely by one man.</p>
-<p>Which gives us four options:</p>
-<ol>
-<li>Stick with GnuPG and improve it substantially.</li>
-<li>Fork GnuPG and improve it substantially.</li>
-<li>Replace GnuPG with something simpler and more consistent.</li>
-<li>Give up.</li>
-</ol>
-<p>None of those approaches is good. I'm going to take option four off the table immediately because we're not going to give up.</p>
-<p>Option two is essentially the hostile version of option one, so I'll write it off immediately. The people who've been developing GnuPG are great and we really like them. So we won't be forking GnuPG anytime soon -- heck, even if we did want to do that, we'd still not have any time to actually work on it.</p>
-<p>Option three sounds most sensible long-term. Cruft is unavoidable, but Google's End-to-End might potentially serve as the basis for "minimum viable PGP". But End-to-End is also written in Javascript, and while people are entirely free to call me old-fashioned, I'd like the GnuPG replacement to be written in a compiled systems language.</p>
-<p>But long term is long term. Short term, the only option is to stick with GnuPG.</p>
-<p>I'd therefore like to propose the following:</p>
-<h3>GnuPG JSON Mode</h3>
-<p>As I mentioned, a lot of GnuPG's output is actually structured a lot more than the output format supports. In our work so far, we've managed to build reasonable JSON structures out of that output for a lot of things. Completing that work and expanding on it, it would be possible to support something like this:</p>
-<pre class="add-bottom">
- $ gpg --json '{query}'
- {response1}
- {response2}
- ...
- {responseN}
-</pre>
-
-<p>This would be relatively easy to build atop of GnuPG's current source code, making the <code>--json</code> flag preempt all else in the way <code>--batch</code> currently does. Then it uses a well supported library to parse the query, figure out what it is doing, call the appropriate internal functionality, and return the right data structures, also JSON encoded.</p>
-<p>In order to support intermediate results, status descriptor style, an arbitrary number of results is allowed. They need not be comma separated, because we want our input parser to be able to pick them up one by one. Rather, just end each response block with a newline.</p>
-<p>Have GnuPG exit after the last response.</p>
-<p>With this, anybody implementing a GnuPG interface will be able to do all the magic relatively easily. The data structures can be well documented. Everything can become easy. I will stop losing my hair.</p>
-<p>Somebody might ask, what about PGPME? Frankly, PGPME is great for a particular subset of GnuPG users. They can keep using it if they want. But if <code>--json</code> exists and is consistent and comprehensive, everybody will use that. Trust me.</p>
-<h3>Conclusion</h3>
-<p>GnuPG is important and great in many ways, but it is also deeply broken and downright dangerous. The sooner it becomes a consistent tool, the sooner it will become something other than a fool's errand to attempt to interface with it. I'm happy to be on the caravan of fools for now, but only if there is something worthwhile at the end of this quest.</p>
-<p>Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I'm sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?</p>
-<p><strong>Update:</strong> <a href="/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html">We have written a follow-up
-post</a>.</p>
-  <hr>
 
   <h3>Older stuff</h3>
   <ul>
+    <li><a href="2014-11-21_To_PGP_MIME_Or_Not.html">To PGP/MIME or not to PGP/MIME</a></li>
+    <li><a href="2014-10-07_Some_Thoughts_on_GnuPG.html">Some thoughts on working with GnuPG</a></li>
     <li><a href="2014-09-13_Mailpile_Beta_Release.html">One Year Later: Mailpile Beta</a></li>
     <li><a href="2014-08-20_Upcoming_Beta_Release_Part_II.html">Our Upcoming Beta Release: Part II</a></li>
     <li><a href="2014-08-08_Our_Upcoming_Beta_Release.html">Our Upcoming Beta Release</a></li>
