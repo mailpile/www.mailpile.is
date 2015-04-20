@@ -4,6 +4,66 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>The First OpenPGP E-mail Summit</title>
+    <link>http://www.mailpile.is/blog/2015-04-20_OpenPGP_Email_Summit.html</link>
+    <description>&lt;p&gt;This weekend I attended the first OpenPGP e-mail summit, mostly
+organized by Nico of the Enigmail project, generously hosted by
+&lt;a href=&#34;http://www.giepa.de/&#34;&gt;Giegerich &amp;amp; Partner&lt;/a&gt; in Dreieich, Germany.&lt;/p&gt;
+&lt;p&gt;At the summit I met folks from &lt;a href=&#34;https://www.enigmail.net/&#34;&gt;Enigmail&lt;/a&gt;,
+&lt;a href=&#34;https://www.whiteout.io/&#34;&gt;Whiteout&lt;/a&gt;,
+&lt;a href=&#34;https://www.mailvelope.com/&#34;&gt;Mailvelope&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/google/end-to-end&#34;&gt;Google End-to-End&lt;/a&gt;
+and many other projects, including our very own Brennan Novak who
+presented his &lt;a href=&#34;http://modernpgp.org&#34;&gt;Modern PGP&lt;/a&gt; initiative and of
+course Werner and &lt;a href=&#34;https://www.gnupg.org/&#34;&gt;GnuPG&lt;/a&gt; itself. That was
+actually the main theme of the first day; presenting our respective
+projects and just getting to know each other. Most of us had never met
+before in person and I am pretty sure everyone learned something new.&lt;/p&gt;
+&lt;p&gt;The second day was more work focused. Common topics of interest were
+identified and then we split up into discussion groups to strategize and
+identify common problems and potential solutions. The groups I attended
+discussed the following issues:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A proposal to encrypt or sign e-mail headers (Subject, From, To, ...)&lt;/li&gt;
+&lt;li&gt;Searching encrypted mail&lt;/li&gt;
+&lt;li&gt;Possible improvements to the PGP/MIME standard&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There seemed to be a common consensus that there are some very real
+problems we should aim to solve together and standardize. As we have
+&lt;a href=&#34;2014-11-21_To_PGP_MIME_Or_Not.html&#34;&gt;blogged about before&lt;/a&gt;, these are
+issues which Mailpile cares deeply about, so I was very happy to get a
+chance to share our experience, ideas and learn from the others. Further
+steps will be taken online, in code and on mailing lists.&lt;/p&gt;
+&lt;p&gt;Sessions I was unable to attend discussed topics such as key discovery,
+key certification, key synchronization, next-generation key servers,
+terminology and user-facing vocabulary and fostering ongoing
+collaboration between the attending projects.&lt;/p&gt;
+&lt;p&gt;All in all, the summit greatly exceeded my expectations. There was very
+little bickering or bike-shedding, and all attendees seemed happy to set
+aside their political differences in the interest of collaboration and
+improving the e-mail encryption ecosystem.&lt;/p&gt;
+&lt;p&gt;I look forward to working with all of them in the future.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;h2&gt;Weekly Status Summary&lt;/h2&gt;
+&lt;h3&gt;Done last week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Started writing code again (fixing PGP-related bugs) in my
+   local repository&lt;/li&gt;
+&lt;li&gt;Responded to issues and pull requests on Github&lt;/li&gt;
+&lt;li&gt;Exchanged e-mails with potential financial backers of the project&lt;/li&gt;
+&lt;li&gt;Prepared a presentation and ideas for the OpenPGP summit&lt;/li&gt;
+&lt;li&gt;Attended the OpenPGP summit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OpenPGP summit follow-up work&lt;/li&gt;
+&lt;li&gt;Continue communicating with potential backers&lt;/li&gt;
+&lt;li&gt;Drafting work plans for the summer, aiming to release Mailpile 1.0
+   this fall&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Mon, 20 Apr 2015 12:00:00 +0200</pubDate>
+  </item>
+  <item>
     <title>Back to Work!</title>
     <link>http://www.mailpile.is/blog/2015-04-13_Back_to_Work.html</link>
     <description>&lt;p&gt;After a month&#39;s break, it&#39;s time to resume work on Mailpile again. Some
@@ -41,7 +101,7 @@ summit are:&lt;/p&gt;
 &lt;li&gt;Enhanced e-mail signatures (manifests)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;That&#39;s the plan! Next week&#39;s update will tell you how it went.&lt;/p&gt;</description>
-    <pubDate>Mon, 13 Apr 2015 12:00:00 +0000</pubDate>
+    <pubDate>Mon, 13 Apr 2015 12:00:00 +0200</pubDate>
   </item>
   <item>
     <title>Beta Rejected!</title>
@@ -91,7 +151,7 @@ other things for now. I&#39;d like to thank him for all his hard work so far
 and encourage you all to stay tuned for news about his ongoing efforts
 to improve the usability of crypto apps and modernize PGP.&lt;/p&gt;
 &lt;p&gt;See you in April!&lt;/p&gt;</description>
-    <pubDate>Fri, 06 Mar 2015 12:00:00 +0000</pubDate>
+    <pubDate>Fri, 06 Mar 2015 12:00:00 +0100</pubDate>
   </item>
   <item>
     <title>More thoughts on working with GnuPG</title>
@@ -271,7 +331,7 @@ worth doing. Some specific ideas that I think could help:&lt;/p&gt;
 &lt;p&gt;Thanks for reading, I look forward to further discussions (most likley
 &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052771.html&#34;&gt;on the GnuPG Users mailing
 list&lt;/a&gt;).&lt;/p&gt;</description>
-    <pubDate>Thu, 26 Feb 2015 12:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Feb 2015 12:00:00 +0100</pubDate>
   </item>
   <item>
     <title>Mailpile Beta II - the 4096 bit release</title>
@@ -418,306 +478,6 @@ more accessible to people not used to using the command-line.&lt;/p&gt;
 &lt;p&gt;Thanks for reading this far, and thank you again for all of your
 support.&lt;/p&gt;
 &lt;p&gt;Now go &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Release-Notes-201501-Beta-II&#34;&gt;check out Mailpile Beta II&lt;/a&gt;!&lt;/p&gt;</description>
-    <pubDate>Tue, 20 Jan 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>To PGP/MIME or not to PGP/MIME</title>
-    <link>http://www.mailpile.is/blog/2014-11-21_To_PGP_MIME_Or_Not.html</link>
-    <description>&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: PGP/MIME has some serious flaws. I propose specifying an
-alternative method for PGP-encrypting e-mail (including attachments)
-which improves security while being backwards compatible with legacy
-ad-hoc PGP encryption, air-gaps and webmail plugins.&lt;/p&gt;
-&lt;h3&gt;How does e-mail encryption work?&lt;/h3&gt;
-&lt;p&gt;The world of e-mail encryption can be surprisingly complicated and
-convoluted.&lt;/p&gt;
-&lt;p&gt;The two standards that we have concentrated on the most in Mailpile, are
-OpenPGP (&lt;a href=&#34;https://tools.ietf.org/html/rfc4880&#34;&gt;RFC4880&lt;/a&gt;) and the
-PGP/MIME (&lt;a href=&#34;https://tools.ietf.org/html/rfc3156&#34;&gt;RFC3156&lt;/a&gt;) standard which
-describes how to encrypt multi-part e-mail messages using OpenPGP.&lt;/p&gt;
-&lt;p&gt;In addition to PGP/MIME, there is also the older &#34;ad-hoc&#34; way of sending
-encrypted content, which is to simply attach PGP-encrypted files as
-attachments or to paste ASCII-armored blobs of encrypted text into the
-message body itself.&lt;/p&gt;
-&lt;p&gt;To illustrate the difference, a PGP/MIME encrypted message with a single
-attachment looks a bit like this:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-  |  From: Alice &amp;lt;a1234@wonderland.com&amp;gt;
-  |  To: Bob &amp;lt;b9973@builders.com&amp;gt;
-  |  Cc: Jar Jar Binks &amp;lt;omgwtf@lucasfilm.com&amp;gt;
-  |  Subject: I have a secret
-  |  Content-Type: multipart/encrypted;
-  |                protocol=&#34;application/pgp-encrypted&#34;;
-  |                boundary=&#34;==12345==&#34;
-  |
-  |  --==12345==
-  |  Content-Type: application/pgp-encrypted
-  |  Content-Disposition: attachment
-  |
-  |  Version: 1
-  |
-  |  --==12345==
-  |  Content-Type: application/octet-stream
-  |  Content-Disposition: attachment; filename=&#34;msg.asc&#34;
-  |
-  |  -----BEGIN PGP MESSAGE-----
-  |  Version: GnuPG v1
-  |
-  E  Content-Type: multipart/mixed; boundary=&#34;==67890==&#34;
-  E
-  E  --==67890==
-  E  Content-Type: text/plain; charset=&#39;utf-8&#39;
-  E
-  E  I am not wearing any socks!!
-  E
-  E  --==67890==
-  E  Content-Type: image/jpeg
-  E  Content-Disposition: attachment; filename=&#34;my-toes.jpg&#34;
-  E
-  E  [BASE64 ENCODED PICTURE OF NAUGHTY TOES]
-  E  --==67890==--
-  |  -----END PGP MESSAGE-----
-  |
-  |  --==12345==--
-&lt;/pre&gt;
-
-&lt;p&gt;The clear-text bits are preceded with a &#39;|&#39; and the contents of the
-encrypted part with an &#39;E&#39;. The same message, sent using ad-hoc
-encryption, might look like this:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-  |  From: Alice &amp;lt;a1234@wonderland.com&amp;gt;
-  |  To: Bob &amp;lt;b9973@builders.com&amp;gt;
-  |  Cc: Jar Jar Binks &amp;lt;omgwtf@lucasfilm.com&amp;gt;
-  |  Subject: I have a secret
-  |  Content-Type: multipart/mixed; boundary=&#34;==12345==&#34;
-  |
-  |  --==12345==
-  |  Content-Type: text/plain; charset=&#39;utf-8&#39;
-  |
-  |  -----BEGIN PGP MESSAGE----
-  |  Digest: sha-1
-  |
-  E  I am not wearing any socks!!
-  |  -----END PGP MESSAGE----
-  |
-  |  --==67890==
-  |  Content-Type: application/octet-stream
-  |  Content-Disposition: attachment; filename=&#34;my-toes.jpg.pgp&#34;
-  |
-  E  [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-  |  --==67890==--
-&lt;/pre&gt;
-
-&lt;p&gt;There are noticable differences here:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;The PGP/MIME encrypted data is formatted as a fragment of MIME data&lt;/li&gt;
-&lt;li&gt;The PGP/MIME encrypted message hides how many parts the message has
-   and any metadata about them: an outsider cannot tell whether there
-   is an attachment or not.&lt;/li&gt;
-&lt;li&gt;In the ad-hoc scheme, only the payloads are encrypted&lt;/li&gt;
-&lt;li&gt;The ad-hoc scheme loses the mime-type of the attachment&lt;/li&gt;
-&lt;li&gt;The ad-hoc scheme leaks the name of the attachment in the clear (or
-   loses it, if it gives the attachment a nondescript name)&lt;/li&gt;
-&lt;li&gt;The ad-hoc scheme does not protect the integrity of the message, an
-   attacher can inject parts or remove parts without Bob being able to
-   detect that anything happened.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;What does this all mean?&lt;/h3&gt;
-&lt;p&gt;When the technical characteristics of the two formats are compared, there
-are two major considerations - security and compatibility.&lt;/p&gt;
-&lt;p&gt;For ad-hoc encryption, we find:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Ad-hoc encryption is not very secure: it leaks or loses metadata, and
-   message integrity is not guaranteed.&lt;/li&gt;
-&lt;li&gt;Ad-hoc encryption is comptible with legacy mail clients, in that it
-   allows the recipient to manually copy all the encrypted parts and
-   decrypt &#34;offline&#34;, giving them the opportunity to communicate with some
-   security even though their mail client does not understand PGP.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Conversely:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;PGP/MIME encryption protects attachment metadata and message structure,
-   only the message header is sent in the clear.&lt;/li&gt;
-&lt;li&gt;In practice, PGP/MIME is not compatible with legacy mail clients. If
-   a user saves and manually decrypts the payload, they will end up with
-   a fragment of MIME-encoded data. Tools for working with fragments of
-   MIME are not widely available, so for non-technical users the data is
-   effectively worthless.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4&gt;What does this mean for Mailpile?&lt;/h4&gt;
-&lt;p&gt;When trying to design and deploy a user-friendly e-mail encryption tool,
-we can&#39;t just consider the interface we present to our own users, we
-also have to consider the experience of people receiving our mail. If
-it&#39;s illegible, then we have a problem - and that is exactly what is
-happening here. If we stick with the more secure PGP/MIME, then it&#39;s
-guaranteed that our outgoing messages will be unreadable by a
-significant number of users, even if they have PGP keys and know how to
-use them.&lt;/p&gt;
-&lt;p&gt;Just to clarify, Mailpile absolutely needs to be able to receive and
-correctly parse PGP/MIME formatted mail. That is not up for debate - all
-secure mail clients should do this, just like all web browsers should
-parse and display GIF images. But if better alternatives are available
-to us, we probably should avoid creating new content using a format that
-is known to have fundamental flaws.&lt;/p&gt;
-&lt;h4&gt;What is the impact?&lt;/h4&gt;
-&lt;p&gt;Most desktop and some mobile mail clients do support PGP/MIME, but few
-do so natively - most require a 3rd party plugin, which is a usability
-concern in and of itself.&lt;/p&gt;
-&lt;p&gt;When we consider the vast number of webmail users, the situation is much
-more grim - there a recipient&#39;s only option is a variation of the manual
-download scenario; save attachments and decrypt offline. Webmail
-encryption plugins, Mailvelope and Google&#39;s End-To-End being the most
-promising at the moment, are merely automating that process and generally
-&lt;a href=&#34;https://code.google.com/p/end-to-end/#Which_RFCs_does_End-To-End_support?&#34;&gt;do not support PGP/MIME&lt;/a&gt;.
-Although &lt;a href=&#34;https://code.google.com/p/end-to-end/issues/detail?id=32&#34;&gt;Google&#39;s engineers have expressed interest in supporting
-PGP/MIME eventually&lt;/a&gt;,
-&lt;a href=&#34;https://github.com/mailvelope/mailvelope/issues/41&#34;&gt;as have Mailvelope&#39;s&lt;/a&gt;,
-it is not an easy problem and they make no promises about when or how.&lt;/p&gt;
-&lt;p&gt;Finally, there is a very small, but disproportionatly important, set of
-users (whistle-blowers, activists, spies) who have a need to run their
-Internet tools and their encryption tools on separate machines.  An &#34;air
-gap&#34; is a low-tech, widely understood method of protecting secret key
-material from being compromised. If we send PGP/MIME formatted mail,
-air-gapping becomes inconvenient to the point of being infeasible.&lt;/p&gt;
-&lt;p&gt;Since usable crypto is our goal, and Mailpile users need to be able to
-communicate with people using other mail clients, I feel that real-world
-compatibility is marginally more important than dogmatically adhering to
-standards and protocols.&lt;/p&gt;
-&lt;p&gt;And by that logic, the question changes...&lt;/p&gt;
-&lt;h3&gt;Can ad-hoc PGP encryption be made as secure as PGP/MIME?&lt;/h3&gt;
-&lt;p&gt;I think maybe it can.&lt;/p&gt;
-&lt;p&gt;The problems with ad-hoc encryption (aside from the fact that it is
-not very elegant), are as follows:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Metadata is leaked or lost&lt;/li&gt;
-&lt;li&gt;Message integrity is not guaranteed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here are a couple strategies to deal with this:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Put all attachments in a ZIP archive, and encrypt that.&lt;/li&gt;
-&lt;li&gt;Add an encrypted &#34;Email Manifest&#34; which verifies message integrity
-   and carries metadata.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;These methods could be combined, or used separately. They are
-complementary, but the Email Manifest is actually the more important of
-the two.&lt;/p&gt;
-&lt;p&gt;Putting attachments in an archive would largely be a matter of
-convenience for the recipient, as it allows us to stop transmitting
-file-names in the clear, while allowing the user to use standard, well
-understood tools to interact with the contents. Without such an archive,
-we either have to transmit file names in the clear, or ask users to
-rename files by hand.&lt;/p&gt;
-&lt;p&gt;The Email Manifest is the more interesting part of this proposal. It not
-only allows us to verify the integrity of the message, it also gives us
-the opportunity to correct some of the more egregious deficiencies of
-PGP/MIME - namely the fact that PGP/MIME transmits the Subject, From,
-To, CC and many other critical headers in the clear. PGP/MIME is also
-annoyingly picky and ambiguous about how to treat white-space when
-verifying signatures.&lt;/p&gt;
-&lt;p&gt;Mail clients implementing some sort of &#34;Email Manifest protocol&#34; could
-agree to move critical headers out of the main message and into the
-encrypted manifest as often as possible, and then reverse the same
-process upon decryption. We can make sure the Email Manifest&#39;s
-specification deals with white-space in a clear and easy to implement
-manner.&lt;/p&gt;
-&lt;h4&gt;Another example&lt;/h4&gt;
-&lt;p&gt;To revisit our example, an e-mail sent using an Email Manifest approach
-might look like this:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-  |  From: a1234@wonderland.com
-  |  To: b9973@builders.com
-  |  Cc: omgwtf@lucasfilm.com
-  |  Subject: Encrypted Message
-  |  Content-Type: multipart/mixed; boundary=&#34;==12345==&#34;
-  |
-  |  --==12345==
-  |  Content-Type: text/plain; charset=&#39;utf-8&#39;
-  |
-  |  -----BEGIN PGP MESSAGE----
-  |  Digest: sha-1
-  |
-  E  From: Alice
-  E  To: Bob
-  E  Cc: Jar Jar Binks
-  E  Subject: I have a secret
-  E
-  E  I am not wearing any socks!!
-  E
-  E  Note: this message should have 1 attachment and a manifest.
-  |  -----END PGP MESSAGE----
-  |
-  |  --==67890==
-  |  Content-Type: application/octet-stream
-  |  Content-Disposition: attachment; filename=&#34;attachment-1.pgp&#34;
-  |
-  E  [BASE64 ENCODED, PGP-ENCRYPTED PICTURE OF NAUGHTY TOES]
-  |  --==67890==
-  |  Content-Type: application/pgp-manifest
-  |  Content-Disposition: attachment; filename=&#34;manifest.pgp&#34;
-  |
-  E  Manifest-Version: 1.0
-  E  From: Alice &amp;lt;a1234@wonderland.com&amp;gt;
-  E  To: Bob &amp;lt;b9973@builders.com&amp;gt;
-  E  Cc: Jar Jar Binks &amp;lt;omgwtf@lucasfilm.com&amp;gt;
-  E  Subject: I have a secret
-  E
-  E  Inline: text/plain; sha2sum=&#34;...&#34;; has-pgp; pgp-has-hints
-  E  Attachment-1: image/jpeg; filename=&#34;my-toes.jpg&#34;; sha2sum=&#34;...&#34;
-  |  --==67890==--
-&lt;/pre&gt;
-
-&lt;p&gt;This sample demonstrates how both the message structure and sensitive
-headers could be moved into the Email Manifest.&lt;/p&gt;
-&lt;p&gt;This example does not use a ZIP archive, so it leaks how many
-attachments the mail has and how big they are; building an example
-which does use a ZIP archive is left as an exercise for the reader.&lt;/p&gt;
-&lt;p&gt;For the benefit of PGP-enabled mail clients unaware of the Manifest,
-some important header data and human readable integrity hints could be
-injected into the text part itself, while an Email Manifest-aware
-client could suppress the duplicate information automatically to avoid
-clutter.&lt;/p&gt;
-&lt;h4&gt;What does the recipient see?&lt;/h4&gt;
-&lt;p&gt;If a recipient&#39;s mail client understands Email Manifests, the message
-can be rendered just as nicely as if it were sent using PGP/MIME, with
-the added benefit that protected headers can be marked as secure.&lt;/p&gt;
-&lt;p&gt;A PGP-aware mail client that doesn&#39;t understand the Manifest will see
-simplified headers, and the text-part of the e-mail will have some extra
-clutter at the top, From, To, Subject etc, and a notice at the bottom.
-The attachments may need to be renamed or extracted from a ZIP archive
-before they are useful. They will also see the Email Manifest itself as
-an attachment, which they can decrypt and read if they would like to
-manually confirm the message was delivered intact.&lt;/p&gt;
-&lt;p&gt;A mail client with no support for PGP, will present the user with
-encrypted text and attachments they can save to disk for offline
-processing.&lt;/p&gt;
-&lt;p&gt;So compared to PGP/MIME, this approach improves the security of Mailpile
-users (or others supporting Email Manifests), makes life somewhat less
-convenient for the users of other PGP/MIME-aware mail software, and
-dramatically improves interoperability with mail clients and plugins
-that do not understand PGP/MIME, including webmail users.&lt;/p&gt;
-&lt;h3&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;It is definitely possible to transmit PGP-encrypted messages and
-attachments over e-mail in a way which is both more interoperable and
-more secure than the PGP/MIME format.&lt;/p&gt;
-&lt;p&gt;The question remains - should we?&lt;/p&gt;
-&lt;p&gt;This is not a standard, but perhaps it could become one. Messages sent
-this way have the potential to be more secure than PGP/MIME, but some of
-the features of PGP/MIME will be lost; namely mail-client awareness of
-attachment types and probably also support for HTML mail. However, that
-may only be a short-term problem, until PGP plugins are upgraded to
-understand Email Manifests.&lt;/p&gt;
-&lt;p&gt;Is the ZIP archive idea good or bad? It makes some things easier and
-both hides and preserves more metadata, but it complicates
-implementation and may add extra steps for the recipent. On the other
-hand, manually renaming files is no fun and ZIP files may be the lesser
-of two evils if we assume we are indeed abandoning PGP/MIME.&lt;/p&gt;
-&lt;p&gt;We would like to get feedback on this from people who work with
-encrypted e-mail on a day to day basis, security trainers and such
-folks, and from folks writing secure e-mail tools. What do you think?
-Please mail us at &lt;a href=&#34;mailto:team@mailpile.is&#34;&gt;team@mailpile.is&lt;/a&gt; or tweet
-at &lt;a href=&#34;https://twitter.com/MailpileTeam&#34;&gt;@MailpileTeam&lt;/a&gt; if you have
-insights to share.&lt;/p&gt;
-&lt;p&gt;We&#39;ll also be following &lt;a href=&#34;https://news.ycombinator.com/item?id=8648587&#34;&gt;comments on Hacker News&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Thanks!&lt;/p&gt;</description>
-    <pubDate>Fri, 21 Nov 2014 12:00:00 +0000</pubDate>
+    <pubDate>Tue, 20 Jan 2015 12:00:00 +0100</pubDate>
   </item>
 </channel></rss>
