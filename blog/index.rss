@@ -4,6 +4,239 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>A Roadmap to Version 1.0</title>
+    <link>http://www.mailpile.is/blog/2015-04-27_Roadmap_to_v1.html</link>
+    <description>&lt;p&gt;My dear Mailpile backers, I am going to go out on a limb here and
+publish a Roadmap to Version 1.0. I feel it is important to share the
+current direction of things.&lt;/p&gt;
+&lt;p&gt;I am hesitant, because I have drafted plans like this twice before and
+in neither case did the plans work out. Project management and planning
+is very hard! So please keep that in mind during the coming months and
+as you read through this post. This roadmap is written with the best
+intentions, but I may well have overlooked something critical or
+something unforseen may come up.&lt;/p&gt;
+&lt;p&gt;That said, there are quite a few tasks on this list which volunteers
+might be able to help out with. In particular, the Short Setup, Autoajax
+and Security themes all contain multiple tasks which could be done in
+parallel and may be relatively low hanging fruit. If something from this
+list strikes your fancy, please get in touch on IRC and let me know!&lt;/p&gt;
+&lt;p&gt;So without further ado, I give to you... a GANTT chart:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/files/2015-Summer-Roadmap.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This chart shows the weeks ahead along the top, and the tasks I have
+chosen to focus on along the left. Filled in boxes in the area below
+show roughly when I expect to work on things. Not all the boxes have
+been filled in, but all the top-level tasks have time allocated. I have
+also labeled when I plan to be in Iceland for the summer, some of which
+will be vacation time.&lt;/p&gt;
+&lt;p&gt;The tasks of course are the most important part of this roadmap. Why
+these tasks, and not others? That is what the rest of this blog post is
+about. The order of things and the timing are less important, but when
+there are specific concerns they are mentioned.&lt;/p&gt;
+&lt;p&gt;The tasks fall into a few main themes: Website, Short Setup Flow,
+Simplified UI, Fast Startup, Autoajax, Security 1.0 and the actual
+releases. I will dedicate a few words to each of those themes.&lt;/p&gt;
+&lt;p&gt;Although there are admittedly quite a few new features in this plan, the
+team has actually been working on most of these things for months
+already. The intent is to not only address symptoms and fix shallow
+bugs, but to actually fix some of the root causes of our previous
+releases being so problematic. Our 1.0 will certainly not be bug-free,
+but it would be nice to ship it without any major known design flaws.&lt;/p&gt;
+&lt;h3&gt;Website&lt;/h3&gt;
+&lt;p&gt;The project website needs to be updated so it does a better job
+answering the following main questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What is Mailpile?&lt;/li&gt;
+&lt;li&gt;Where can I get it?&lt;/li&gt;
+&lt;li&gt;How can I help?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A very basic community site, long promised as one of the initial
+fundraising campaign perks, has actually been built! It just needs
+updated content and a launch.&lt;/p&gt;
+&lt;p&gt;Also, our hosting provider GreenQloud &lt;a href=&#34;https://www.greenqloud.com/truly-green-public-qloud/&#34;&gt;has announced that they are
+shutting down their public cloud
+service&lt;/a&gt;, so we
+need to move before the end of the summer. Although not strictly a
+1.0-related task, this is critical work that needs to be done before the
+release.&lt;/p&gt;
+&lt;h3&gt;Short Setup Flow&lt;/h3&gt;
+&lt;p&gt;Although the current setup flow is quite nice, this theme aims to
+shorten it to only two steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose your language&lt;/li&gt;
+&lt;li&gt;Choose a password for your Mailpile&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Although this is a very simple goal, making this possible requires
+adding functionality elsewhere in the app, resulting in the largest
+change planned for the summer.&lt;/p&gt;
+&lt;p&gt;After these two basic configuration steps, people would be taken
+directly to the app&#39;s &lt;strong&gt;home page&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The home page is a new concept. It is the starting point whenever the
+user logs on or start the app, presenting to the user an overview over
+the current state of their Mailpile. This would include a list of
+&lt;strong&gt;accounts&lt;/strong&gt; and basic statistics about each, options to add or remove
+accounts, and links to a &lt;strong&gt;browsing interface&lt;/strong&gt;. There will probably
+also be hints on this page, prompting the user towards the next steps
+needed to configure and use their Mailpile.&lt;/p&gt;
+&lt;p&gt;The browsing interface allows the user to explore either Mailpile&#39;s
+internal data, the local file system or the mailboxes and contacts
+associated with a particular account. It will be possible to read mail
+using this interface, but more importantly the user will be given the
+option to enable (or disable) background copying, syncing or just
+indexing of their mailboxes. When browsing other types of data, other
+appropriate configuration options should be presented instead.&lt;/p&gt;
+&lt;h4&gt;Technicalites&lt;/h4&gt;
+&lt;p&gt;Most of the tasks in this theme have to do with implementing a way to
+browse local mail or remote servers, adding the concept of &lt;strong&gt;accounts&lt;/strong&gt;
+and building a nice landing page.&lt;/p&gt;
+&lt;p&gt;Mailpile currently separates what most users think of as an account
+into Mail Sources, Profiles and Sending Routes. This division will be
+maintained internally, but does not necessarily need to be exposed to
+the end user.&lt;/p&gt;
+&lt;p&gt;The browsing feature depends on another new internal concept: a &#34;virtual
+file system&#34; (VFS) which abstracts away the differences between
+different types of data sources, making them all browsable using the
+same metaphors and same user interface.&lt;/p&gt;
+&lt;h4&gt;Justification&lt;/h4&gt;
+&lt;p&gt;This theme attempts to address a few key bits of feedback from early
+adopters:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;One of the first questions we got was: &#34;Where is the home page?&#34;&lt;/li&gt;
+&lt;li&gt;The current setup flow is rather long.&lt;/li&gt;
+&lt;li&gt;The setup UI for mapping IMAP folders to Mailpile tags is confusing.&lt;/li&gt;
+&lt;li&gt;There is no way to browse remote mail, short of importing it and
+   adding to the search engine. This can take a very long time and
+   discourages users.&lt;/li&gt;
+&lt;li&gt;Many reports of IMAP bugs were actually configuration problems, which
+   speaks to poor visibility into what the app is doing. Fixing this is
+   key to addressing point #2 in the
+   &lt;a href=&#34;/blog/2015-03-06_Beta_Rejected.html&#34;&gt;Beta Rejected&lt;/a&gt; blog post.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Other concerns which may also benefit from the VFS concept include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Some administrators would like to store data in a database instead
+   of the local file system.&lt;/li&gt;
+&lt;li&gt;Mailpile will need to write data to the user&#39;s remote IMAP server to
+   implement backups or key syncing.&lt;/li&gt;
+&lt;li&gt;A lot of Mailpile&#39;s internal data structures are hard to discover and
+   configure at the moment; a browsable VFS is a very simple way to
+   address this in the near term. This will be useful for debugging and
+   will provide stop-gap functionality until more specialized user
+   interfaces can be developed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As this is a major change to the user experience, this theme is the 1st
+priority on the roadmap. It is important to get it shipped to users as
+soon as possible, so we can perform basic usability tests and get
+feedback on whether it really is an improvement or not. If people don&#39;t
+like (or understand) it, then there should still be time to respond to
+their feedback before launching.&lt;/p&gt;
+&lt;h3&gt;Simplified UI&lt;/h3&gt;
+&lt;p&gt;This theme is quite simply about removing unfinished elements from
+Mailpile&#39;s current user interface.&lt;/p&gt;
+&lt;p&gt;Many such elements would benefit from being split out into external
+plugins, so they can be developed outside the Mailpile core and have
+their own independent release cycles. As an example, Mailpile 1.0 may
+not include an address book. Instead, the current address book interface
+should be moved to a plugin which users will be able to add to their
+Mailpile without upgrading at a later date.&lt;/p&gt;
+&lt;p&gt;This theme addresses point #1 from our &lt;a href=&#34;/blog/2015-03-06_Beta_Rejected.html&#34;&gt;Beta
+Rejected&lt;/a&gt; post.&lt;/p&gt;
+&lt;h3&gt;Fast Startup&lt;/h3&gt;
+&lt;p&gt;This theme is about improving the startup-time and reducing the RAM
+usage of Mailpile.&lt;/p&gt;
+&lt;p&gt;If a user has a lot of mail, it can take a few minutes to start Mailpile
+on a slow computer. This is due to the fact that the metadata index
+(information about subjects, senders, dates, etc.) has to be loaded into
+RAM before the app can start up. In addition to annoying heavy users,
+the resulting RAM requirements also causes problems for providers
+interested in hosting Mailpile for other people.&lt;/p&gt;
+&lt;p&gt;This component of Mailpile has been largely rewritten already to use an
+alternate strategy, but the work needs to be finished, published and a
+migration process needs to be created for our existing users.&lt;/p&gt;
+&lt;p&gt;A side-benefit of this work will be to improve the encryption of the
+search index, and reduce the risk of data loss when the app crashes or
+is shut down uncleanly.&lt;/p&gt;
+&lt;p&gt;This is the most technically risky part of the roadmap, which is why it
+is the 2nd theme after the simplified setup flow. Once this works, we
+release Beta III and ask our users for testing and feedback.&lt;/p&gt;
+&lt;h3&gt;Autoajax&lt;/h3&gt;
+&lt;p&gt;This theme is about improving the performance of the web interface.&lt;/p&gt;
+&lt;p&gt;Once everything is up and running, the single most annoying thing (IMHO)
+about Mailpile is how slow the web interface is. This is embarrassing,
+since from the start we&#39;ve boasted about performance and being able to
+outperform many cloud-based web-mail solutions.&lt;/p&gt;
+&lt;p&gt;This theme will:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reduce the number of full-page loads&lt;/li&gt;
+&lt;li&gt;Slim down the templates so full pages load faster&lt;/li&gt;
+&lt;li&gt;Implement better in-app notifications and live updates&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&#34;Autoajax&#34; is the internal code name for the progressive enhancement
+work which has already been done on this front. It just needs to get
+finished and shipped! A stretch goal for this theme is to make the web
+interface more responsive, so it becomes more usable on larger monitors
+or mobile devices.&lt;/p&gt;
+&lt;p&gt;This theme is very low risk; the worst that can happen is not all of
+the app gets updated and the UI performance stays unchanged for those
+pages.&lt;/p&gt;
+&lt;h3&gt;Security 1.0&lt;/h3&gt;
+&lt;p&gt;This part of the roadmap is admittedly incomplete.&lt;/p&gt;
+&lt;p&gt;In general, this theme is about fixing as many issues as possible which
+pertain to our published &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;Security
+Roadmap&lt;/a&gt;, as
+well as addressing point #3 from the &lt;a href=&#34;/blog/2015-03-06_Beta_Rejected.html&#34;&gt;Beta
+Rejected&lt;/a&gt; post.&lt;/p&gt;
+&lt;p&gt;The riskiest part of this theme will be to communicate the end result to
+our users, so they know whether the software is &#34;fit for purpose&#34;, given
+their individual security needs.&lt;/p&gt;
+&lt;h3&gt;Releases&lt;/h3&gt;
+&lt;p&gt;Finally, the roadmap has four releases on it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Beta III&lt;/li&gt;
+&lt;li&gt;Linux 1.0&lt;/li&gt;
+&lt;li&gt;Windows 1.0&lt;/li&gt;
+&lt;li&gt;Mac OS X 1.0&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The time allocated to each release will be used for bugfixes and fixes
+not covered by the other themes; namely packaging work and OS integration.&lt;/p&gt;
+&lt;p&gt;The purpose of the Beta III release is to solicit feedback on the two
+largest changes: Short Setup and Fast Startup. It should launch very
+soon after as those two themes complete.&lt;/p&gt;
+&lt;p&gt;The 1.0 releases are of course contigent on tests giving positive
+results and development going relatively smoothly over the course of the
+summer. &lt;/p&gt;
+&lt;p&gt;Unlike our previous releases, we are considering the idea of launching
+on different platforms at different times. This reflects the fact that
+although most of the code is shared, the packaging and OS integration
+work is not. Making our Linux users wait while we finish fixing our
+klunky OS X integration is probably undesirable, except perhaps from
+a marketing oriented point of view.&lt;/p&gt;
+&lt;h3&gt;What do you think?&lt;/h3&gt;
+&lt;p&gt;That&#39;s it! Mailpile&#39;s future, for the next few months at least.&lt;/p&gt;
+&lt;p&gt;Feedback is most welcome. Please find us on IRC (Freenode, #mailpile) or
+&lt;a href=&#34;https://twitter.com/mailpileteam&#34;&gt;on Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</description>
+    <pubDate>Mon, 27 Apr 2015 12:00:00 +0100</pubDate>
+  </item>
+  <item>
+    <title>Weekly Status Update</title>
+    <link>http://www.mailpile.is/blog/2015-04-26_Weekly_Report.html</link>
+    <description>&lt;h3&gt;Done last week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;The &lt;a href=&#34;/blog/2015-04-27_Roadmap_to_v1.html&#34;&gt;Summer Roadmap&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Refactored e-mail encryption logic, made encryption schemes pluggable.&lt;/li&gt;
+&lt;li&gt;Created a plugin for developing the Memory Hole header-protection
+   scheme from last weekend&#39;s
+   &lt;a href=&#34;/blog/2015-04-20_OpenPGP_Email_Summit.html&#34;&gt;OpenPGP summit&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Finish fixing the key discovery flows.&lt;/li&gt;
+&lt;li&gt;Bring public Github repo up to date with local VFS and home page
+   works-in-progress, in case anyone wants to pitch in and help.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Sun, 26 Apr 2015 12:00:00 +0100</pubDate>
+  </item>
+  <item>
     <title>The First OpenPGP E-mail Summit</title>
     <link>http://www.mailpile.is/blog/2015-04-20_OpenPGP_Email_Summit.html</link>
     <description>&lt;p&gt;This weekend I attended the first OpenPGP e-mail summit, mostly
@@ -61,7 +294,7 @@ improving the e-mail encryption ecosystem.&lt;/p&gt;
 &lt;li&gt;Drafting work plans for the summer, aiming to release Mailpile 1.0
    this fall&lt;/li&gt;
 &lt;/ol&gt;</description>
-    <pubDate>Mon, 20 Apr 2015 12:00:00 +0200</pubDate>
+    <pubDate>Mon, 20 Apr 2015 12:00:00 +0100</pubDate>
   </item>
   <item>
     <title>Back to Work!</title>
@@ -101,7 +334,7 @@ summit are:&lt;/p&gt;
 &lt;li&gt;Enhanced e-mail signatures (manifests)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;That&#39;s the plan! Next week&#39;s update will tell you how it went.&lt;/p&gt;</description>
-    <pubDate>Mon, 13 Apr 2015 12:00:00 +0200</pubDate>
+    <pubDate>Mon, 13 Apr 2015 12:00:00 +0100</pubDate>
   </item>
   <item>
     <title>Beta Rejected!</title>
@@ -151,333 +384,6 @@ other things for now. I&#39;d like to thank him for all his hard work so far
 and encourage you all to stay tuned for news about his ongoing efforts
 to improve the usability of crypto apps and modernize PGP.&lt;/p&gt;
 &lt;p&gt;See you in April!&lt;/p&gt;</description>
-    <pubDate>Fri, 06 Mar 2015 12:00:00 +0100</pubDate>
-  </item>
-  <item>
-    <title>More thoughts on working with GnuPG</title>
-    <link>http://www.mailpile.is/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html</link>
-    <description>&lt;p&gt;Smári&#39;s &lt;a href=&#34;/blog/2014-10-07_Some_Thoughts_on_GnuPG.html&#34;&gt;blog post on working with
-GnuPG&lt;/a&gt; got a fair bit of
-attention and continues to be referenced in various posts and
-discussions online.&lt;/p&gt;
-&lt;p&gt;Responses have varied, from vehement agreement, to a &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052401.html&#34;&gt;friendly and
-thoughtful response from Werner
-himself&lt;/a&gt;,
-to random folks on the Internet people calling us incompetent for using
-the GnuPG command-line tool directly instead of some library or other.&lt;/p&gt;
-&lt;p&gt;I would like to address that last group specifically:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;If you think a command-line interface is not an API, then you are
-   ignoring the millions of lines of shell scripts that keep the Internet
-   running. You are wrong. Please consult your nearest sysadmin for an
-   attitude readjustment.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Process separation is one of the cornerstones of good security
-   design. Heartbleed and many other vulnerabilities are direct results
-   of crypto and keys living the same process space as protocol and
-   application logic. We initially chose to invoke GnuPG (and OpenSSL
-   as well) as external tools for such security reasons, even though we
-   knew it would cost us some performance.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;We looked at the libraries, encountered an apalling lack of
-   documentation and hoped the command-line interface would be nicer to
-   work with. Learning one API beats having to learn two, and there was
-   no way we could do this &lt;em&gt;without&lt;/em&gt; the GnuPG CLI - if only for
-   debugging and tech support reasons.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Phew.&lt;/p&gt;
-&lt;p&gt;Now that I&#39;ve gotten that off my chest... let&#39;s move on to some more
-productive discussions!&lt;/p&gt;
-&lt;h2&gt;Utility or Application?&lt;/h2&gt;
-&lt;p&gt;Although I appreciated Werner&#39;s response to our post, I am afraid he
-missed the forest for the trees. Probably because Smári wrote a lot
-about some interesting, funky trees... :-)&lt;/p&gt;
-&lt;p&gt;Fundamentally, I think Mailpile&#39;s difficulties stem from the fact that
-GnuPG was not written with automation in mind. The tool is not written
-as a unix utility, it is very much written as a user facing application,
-a tool for humans.&lt;/p&gt;
-&lt;p&gt;As such, it is a fantastic piece of engineering. If you understand how
-public/private key encryption works and know what you want to do, odds
-are GnuPG will help you get the job done. GnuPG&#39;s security track record
-is solid and it is a tool people can rely on, as long as they take the
-time to learn the basics and get used to the CLI.&lt;/p&gt;
-&lt;p&gt;However, as a result of this design focus, many of GnuPG&#39;s automation
-interfaces appear to be an afterthought. They are incomplete and often
-difficult to work with. Consider that &#34;commands to create and sign keys
-without any user interaction&#34; were brand new &lt;a href=&#34;http://lists.gnupg.org/pipermail/gnupg-announce/2014q4/000358.html&#34;&gt;in GnuPG 2.1 last
-November&lt;/a&gt;.
-GnuPG 2.1 is the development version of GnuPG and is not shipped by any
-of the mainstream Linux distributions yet. I do applaud the fact that
-these features are being added, but the fact that it happened 3 months
-ago only supports my hypothesis: automation has to a great extent been
-an afterthought to the GnuPG project.&lt;/p&gt;
-&lt;p&gt;This has gotten worse over time, not better. In GnuPG 2.0, use of
-&lt;code&gt;gpg-agent&lt;/code&gt; and &lt;code&gt;pinentry&lt;/code&gt; became mandatory and the assumption that the
-tool is running in a desktop environment under human oversight pervades.
-This is why Linux distros still keep shipping GnuPG 1.4.x - they rely on
-automated PGP processing for package verification and other things which
-GnuPG 2.0 just isn&#39;t suitable for.&lt;/p&gt;
-&lt;p&gt;I worry that GnuPG 2.1 takes this even further still, &lt;a href=&#34;https://www.gnupg.org/faq/whats-new-in-2.1.html&#34;&gt;moving key
-managment operations into the
-agent&lt;/a&gt;. Also, as far
-as I can tell, it doesn&#39;t matter whether we use the &lt;code&gt;gpgme&lt;/code&gt; library or
-the command-line tool, those assumptions and behaviors are shared
-throughout.&lt;/p&gt;
-&lt;p&gt;Much of this is understandable, given GnuPG&#39;s historic roots and the
-fact that it inherits many things from it&#39;s predecessor, PGP, which
-itself predated modern graphical desktops and web apps. It is also
-understandable, given the culture around PGP, where keys and passphrases
-are magical holy talismans, so special that you need to constantly ask
-the user for permission before invoking them.  GnuPG enforces this
-culture by preventing apps from interfering with the flow of this
-critical information, refusing to work without trusted pinentry.&lt;/p&gt;
-&lt;p&gt;However, while GnuPG insists on controlling this part of the user
-interface and treats automation as a 2nd class citizen, a side effect is
-that the project actively thwarts efforts of others that want or need
-alternate user interfaces.&lt;/p&gt;
-&lt;p&gt;Mailpile is one such project.&lt;/p&gt;
-&lt;h2&gt;Mailpile&#39;s pinentry woes&lt;/h2&gt;
-&lt;p&gt;One of the cool things about Mailpile, is it functions not only in a
-desktop environment, but also as a background process (receiving,
-decrypting and indexing mail), and also as a remote web server which
-allows the user to leave their mail and keys on a secure box in their
-home, which they then access remotely over the network.&lt;/p&gt;
-&lt;p&gt;This flexibility is key to our overall goals of providing people with
-something that can match &#34;cloud based&#34; e-mail providers on features,
-without compromising privacy and security.&lt;/p&gt;
-&lt;p&gt;Unfortunately, the entire pinentry concept, where &lt;code&gt;gpg&lt;/code&gt; (via the
-&lt;code&gt;gnupg-agent&lt;/code&gt;) displays a window prompting the user to enter a
-passphrase, is completely and utterly incompatible with this. Popping up
-a dialog on the user&#39;s Raspberry Pi, when the owner tries to read
-encrypted mail from halfway across the world using his Android phone&#39;s
-web browser, is never going to work.&lt;/p&gt;
-&lt;p&gt;And even if it somehow did work, using a side-channel to authenticate
-has very serious problems of its own.&lt;/p&gt;
-&lt;p&gt;Consider the situation where a user wants to access Mailpile both
-locally, and remotely: on the desktop, the &#34;just use pinentry&#34; dogma
-tells us we should just trust GnuPG there (and GnuPG 2.x enforces this
-policy).&lt;/p&gt;
-&lt;p&gt;Well, what then happens when Mailpile is accessed remotely?&lt;/p&gt;
-&lt;p&gt;Things fail.&lt;/p&gt;
-&lt;p&gt;The benign failure mode is the user can&#39;t read encrypted mail because
-they can&#39;t see the pinentry dialog. This makes the app unusable, but the
-bug is still &#34;benign&#34; because it doesn&#39;t leak confidential data.&lt;/p&gt;
-&lt;p&gt;There is another catastrophic (and real) failure mode: If the legitimate
-user is logged on at the desktop and an attacker can access Mailpile&#39;s
-web interface at the same time, then the attacker will be able to read
-encrypted mail (or compose fraudulent signed mail) because the
-&lt;code&gt;gpg-agent&lt;/code&gt; has keys cached and Mailpile has no way to communicate to
-GnuPG that the remote access is somehow different from what happens
-locally.&lt;/p&gt;
-&lt;p&gt;This is really, really bad.&lt;/p&gt;
-&lt;p&gt;This is why Mailpile only supports GnuPG 1.4.x at the moment: we haven´t
-figured out how to make GnuPG 2.x operate in a secure fashion, since it
-won&#39;t let us disable the agent.&lt;/p&gt;
-&lt;p&gt;This whole issue has us scratching our heads and wondering what to do.
-We&#39;ve gone from frustration to righteous anger, to just being rather
-worried. If the GnuPG project is moving aggressively in a direction
-which is fundamentally incompatible with projects like ours, what should
-we do?  Drop PGP and try to implement S/MIME? Switch to something
-interesting but unproven, like
-&lt;a href=&#34;http://www.tedunangst.com/flak/post/reop&#34;&gt;reop&lt;/a&gt;?&lt;/p&gt;
-&lt;p&gt;I just don&#39;t know.&lt;/p&gt;
-&lt;p&gt;I could come up with some clever hacks to work around GnuPG&#39;s core
-design; I could implement my own agent, I could try to cripple GnuPG
-with weird environment variables or a custom GNUPG_HOME and config, or I
-could even fork the project - but those &lt;em&gt;all&lt;/em&gt; feel like last resorts.&lt;/p&gt;
-&lt;p&gt;I am currently revisiting whether I can get &lt;code&gt;gpgme&lt;/code&gt;-based code to avoid
-the problems caused by the agent and side-channel auth. I am not too
-optimistic. If that fails, then it&#39;s last resort time, or time to drop
-PGP.&lt;/p&gt;
-&lt;h2&gt;Is this fixable?&lt;/h2&gt;
-&lt;p&gt;For the record, Mailpile is not the only project having problems -
-questions about related issues are common &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052754.html&#34;&gt;on the GnuPG-users mailing
-list&lt;/a&gt;
-and &lt;a href=&#34;https://stackoverflow.com/questions/8671099/how-to-bypass-pinentry-passphrase-screen-while-decrypting-a-file-using-gpgme&#34;&gt;elsewhere&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;However, I have yet to hear any of the GnuPG developers acknowledge that
-this is even a concern, which is why I have taken the time to write this
-post. I would like to humbly request that Werner and GnuPG consider
-these issues, now that &lt;a href=&#34;http://www.propublica.org/article/the-worlds-email-encryption-software-relies-on-one-guy-who-is-going-broke&#34;&gt;they finally have a
-budget&lt;/a&gt;.
-(Congrats, by the way, you deserve it!)&lt;/p&gt;
-&lt;p&gt;I really do think this can be fixed, if the GnuPG project agrees it is
-worth doing. Some specific ideas that I think could help:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Clearly separate the user interface aspects of GnuPG from the crypto
-   and keychain management, so projects can use one without the other.
-   Do not assume all apps interacting with a particular keychain want the
-   same UI for authentication.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Treat the command-line interface of &lt;code&gt;gpg&lt;/code&gt; as if it were an API; keep
-   it stable and machine friendly. There should be command-line
-   alternatives to all of the interactive dialogs.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Make &lt;code&gt;gpgme-tool&lt;/code&gt; (which implements an API very similar to the JSON
-   API requested by Smári in his post) a mandatory 1st class citizen of
-   all GnuPG bundles (instead of &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-devel/2014-December/029196.html&#34;&gt;doing this&lt;/a&gt;).
-   We had no idea this tool existed, and I still can&#39;t find it for my
-   distro (Ubuntu 14.04). Consider rolling this functionality into the
-   &lt;code&gt;gpg&lt;/code&gt; binary itself to facilitate scripting and automation.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;There are probably more, but those are my top three!&lt;/p&gt;
-&lt;p&gt;Thanks for reading, I look forward to further discussions (most likley
-&lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052771.html&#34;&gt;on the GnuPG Users mailing
-list&lt;/a&gt;).&lt;/p&gt;</description>
-    <pubDate>Thu, 26 Feb 2015 12:00:00 +0100</pubDate>
-  </item>
-  <item>
-    <title>Mailpile Beta II - the 4096 bit release</title>
-    <link>http://www.mailpile.is/blog/2015-01-20_Mailpile_Beta_II_4096_bits.html</link>
-    <description>&lt;p&gt;&lt;img src=&#34;/files/Beta-II.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Hello world and Happy New Year!&lt;/p&gt;
-&lt;p&gt;The Mailpile team is happy to announce our second Beta release:
-&lt;strong&gt;Mailpile Beta II&lt;/strong&gt; (version 0.4.2). We&#39;re still not at 1.0 (sorry...),
-but much progress has been made and it is high time to update our public
-offerings again.&lt;/p&gt;
-&lt;p&gt;There was also a little security bug in the Beta, that we need to talk
-about and address... but first, the good stuff!&lt;/p&gt;
-&lt;h2&gt;Where Can You Get It?&lt;/h2&gt;
-&lt;p&gt;The new release is availble from &lt;a href=&#34;/download/&#34;&gt;the Mailpile download
-page&lt;/a&gt;, and the source is &lt;a href=&#34;https://github.com/mailpile/Mailpile/releases&#34;&gt;on
-github&lt;/a&gt; as always.&lt;/p&gt;
-&lt;p&gt;Please read &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Release-Notes-201501-Beta-II&#34;&gt;the release
-notes&lt;/a&gt;
-and check our &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;security
-roadmap&lt;/a&gt; so
-you know what to expect.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; People upgrading from the older Mac or Windows packages may
-want to uninstall the old Mailpile Beta before installing Beta II. Your
-data should all remain intact.&lt;/p&gt;
-&lt;h2&gt;What&#39;s New?&lt;/h2&gt;
-&lt;p&gt;Since our last beta, work has been focused on three things: fixing bugs,
-improving the usability of PGP and speeding up the web interface.&lt;/p&gt;
-&lt;p&gt;We have made great progress on all of these fronts.&lt;/p&gt;
-&lt;p&gt;In particular, many of the bugs in our IMAP implementation have been
-ironed out, as has the notorious bug whereby &lt;code&gt;openssl&lt;/code&gt; processes stick
-around consuming large amounts of CPU after Mailpile had supposedly been
-shut down. Most of the bugs that made the command line interface
-unusable were fixed and of course that security issue which we&#39;ll
-discuss at the end of this post.&lt;/p&gt;
-&lt;p&gt;The usability of our PGP interface was given some serious scrutiny, with
-the help of our friends at the Open Internet Tools project. The amazing
-&lt;a href=&#34;https://openitp.org/sup/&#34;&gt;Gus Andrews&lt;/a&gt; conducted a series of usability
-studies with various types of users, the results of which were &lt;a href=&#34;https://openitp.org/field-notes/user-tests-mailpile-features.html&#34;&gt;posted
-on the OpenITP&#39;s
-blog&lt;/a&gt;.
-Brennan has been working on solutions based on this feedback and many
-improvements in Mailpile Beta II are a result of this work. Thank you
-Gus and OpenITP! We hope to work more with them in the future - this is
-just the beginning!&lt;/p&gt;
-&lt;p&gt;Finally, Bjarni went into hiding in Italy to focus on improving the
-performance of our web interface. As a result the Beta II release is
-noticably snappier than the first Beta, and we expect more improvements
-on this front in the near future.&lt;/p&gt;
-&lt;p&gt;Many other things are still in progress, including a more &#34;AJAXy&#34; user
-interface, a way to safely read HTML mail, a redesign of the way
-Mailpile stores its data, reductions in Mailpile&#39;s RAM requirements and
-code cleanups to make Mailpile more amenable to Linux distro packaging.
-Those features may not be visible in the Beta II user interface, but
-people who look under the hood will find traces in the code.&lt;/p&gt;
-&lt;h2&gt;Our PGP key size bug&lt;/h2&gt;
-&lt;p&gt;That brings us to the security issue which forced us to get our act
-together and push this release out the door:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;The Mailpile Beta was misconfigured to generate weak PGP keys during
-setup.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;To be exact, if a user installed Mailpile and did not already have a PGP
-key in their GnuPG keychain, then Mailpile would automatically generate
-a new key. Instead of generating a 4096 bit encryption key as we had
-planned, we actually generated a 1024 bit key. Oops!&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;How did this happen?&lt;/strong&gt;&lt;br /&gt;
-  Human error. The key size was lowered to facilitate debugging, and we forgot to raise it again.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Who is affected?&lt;/strong&gt;&lt;br /&gt;
-  People who did not already have a PGP key and installed the Mailpile Beta, or installed from github before Jan 5, 2015.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;What is the impact?&lt;/strong&gt;&lt;br /&gt;
-  Unless you have powerful enemies, a 1024 bit key is still probably okay. See below for more details.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How does one fix it?&lt;/strong&gt;&lt;br /&gt;
-  Generate a new key, revoke the old one. We have added code to Mailpile to assist with this process. Details below...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We&#39;d like to give special thanks to Matt Drollette for sending us a pull
-request on github to fix the issue.&lt;/p&gt;
-&lt;h3&gt;So how bad is it really?&lt;/h3&gt;
-&lt;p&gt;Realistically, there still aren&#39;t many organizations in the world that
-can factor 1024 bit keys within a reasonable amount of time. The NSA
-certainly can. Its partners probably. Some other large organizations
-maybe. There are some attacks that have worked to reduce the keyspace,
-but they&#39;re more common on SSL than PGP. So unless your attacker is a
-large powerful government, 1024 is probably okay-ish at the moment. And
-using a 1024 bit key is certainly far, far better than not using
-encryption at all.&lt;/p&gt;
-&lt;p&gt;On the other hand, PGP encrypted data tends to stay encrypted that way
-for long periods of time, so there is a possibility that somebody could
-intercept the encrypted message, store it until factoring 1024 bit RSA
-keys is easy, and then decrypt it. That could be anything between years
-or decades.&lt;/p&gt;
-&lt;p&gt;A lot of people still use 1024 bit RSA keys, but &lt;a href=&#34;http://www.symantec.com/page.jsp?id=1024-bit-migration-faq&#34;&gt;Certificate
-Authorities stopped selling new 1024 bit certificates at the end of
-2013&lt;/a&gt;,
-because they&#39;re simply not good enough.&lt;/p&gt;
-&lt;p&gt;Long story short: This isn&#39;t the end of the world, but we recommend you
-upgrade your keys as soon as possible.&lt;/p&gt;
-&lt;h3&gt;How do you fix it?&lt;/h3&gt;
-&lt;p&gt;For that matter, how do you even know if you have a weak key?&lt;/p&gt;
-&lt;p&gt;These two questions are closely related, and just writing instructions
-for all the different operating systems out there seemed like a daunting
-task. So, in order to simplify the process, the Mailpile Beta II
-includes code which will evaluate your keychain and suggest improvements
-if it finds problems.&lt;/p&gt;
-&lt;p&gt;These problems are not limited to weak 1024 bit keys, the checker will
-also detect other problems, such as using a key that is scheduled to
-expire in the near future, or neglecting to create a key for one of your
-outgoing e-mail addresses.&lt;/p&gt;
-&lt;p&gt;To give the tool a try, visit the Mailpile command-line interface and
-run the &lt;code&gt;crypto/gpg/check_keys&lt;/code&gt; command. It should produce output
-similar to this:&lt;/p&gt;
-&lt;pre class=&#34;add-bottom&#34;&gt;
-mailpile&gt; crypto/gpg/check_keys
-
-Sanity checked: 4 keys in GPG keyring, 1 profiles.
- - 61A015763D28D410A87B197328191D9B3B4199B4: OK: 4096 bits, looks good!
- - 85EE5D9223806DFCBA630E39EABBE96FD521D78C: --- Disabled.
- - 20FF41634DF6F90ECA4452203CAC6CA6E4D9C373: Bad: expired on 2015-01-16
- - 9858665AC3CA84FEAE2BCAD1E623001E05CE8B43: --- Disabled.
-
-Proposed fixes:
- - Revoke bad keys:
-    * Run: `gpg --gen-revoke 20FF41634DF6F90ECA4452203CAC6CA6E4D9C373`
-    * Follow the instructions given
-    * A block of text will be shown on your screen.
-    * Send that block to contacts that have your key.
-    * You can search for `is:encrypted to:me` to find people who have it.
-- Disable bad keys:
-    * Run: `gpg --edit-key 20FF41634DF6F90ECA4452203CAC6CA6E4D9C373`
-    * Type `disable`
-    * Type `save`
-    * You&#39;re done!
-&lt;/pre&gt;
-
-&lt;p&gt;The recommended &lt;code&gt;gpg&lt;/code&gt; commands can be run either from a bash shell (or
-C: prompt on Windows), or from within Mailpile itself - in order to
-allow the instructions to work cross-platform we provide direct access
-to &lt;code&gt;gpg&lt;/code&gt; from within the Mailpile command-line itself.&lt;/p&gt;
-&lt;p&gt;We are sorry this is not more user friendly, but we had to strike a
-balance between making things easy, and getting the word out as soon as
-posible. Future versions of Mailpile will hopefully automate more of
-this process, detect more problems, and make our &#34;GPG keychain Doctor&#34;
-more accessible to people not used to using the command-line.&lt;/p&gt;
-&lt;p&gt;It&#39;s a start!&lt;/p&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Thanks for reading this far, and thank you again for all of your
-support.&lt;/p&gt;
-&lt;p&gt;Now go &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Release-Notes-201501-Beta-II&#34;&gt;check out Mailpile Beta II&lt;/a&gt;!&lt;/p&gt;</description>
-    <pubDate>Tue, 20 Jan 2015 12:00:00 +0100</pubDate>
+    <pubDate>Fri, 06 Mar 2015 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

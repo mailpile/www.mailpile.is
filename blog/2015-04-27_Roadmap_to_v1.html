@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Blog</title>
+    <title>Mailpile: A Roadmap to Version 1.0</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -77,10 +77,10 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="2015-04-27_Roadmap_to_v1.html"><h1>A Roadmap to Version 1.0</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on April 27, 2015</strong></p>
-    <p>My dear Mailpile backers, I am going to go out on a limb here and
+    <a href="/blog/2015-04-27_Roadmap_to_v1.html"><h1>A Roadmap to Version 1.0</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on April 27, 2015</strong></p>
+
+<p>My dear Mailpile backers, I am going to go out on a limb here and
 publish a Roadmap to Version 1.0. I feel it is important to share the
 current direction of things.</p>
 <p>I am hesitant, because I have drafted plans like this twice before and
@@ -289,162 +289,6 @@ a marketing oriented point of view.</p>
 <p>Feedback is most welcome. Please find us on IRC (Freenode, #mailpile) or
 <a href="https://twitter.com/mailpileteam">on Twitter</a>.</p>
 <p>Thanks for reading!</p>
-  <hr>
-    <a href="2015-04-26_Weekly_Report.html"><h1>Weekly Status Update</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on April 26, 2015</strong></p>
-    <h3>Done last week</h3>
-<ol>
-<li>The <a href="/blog/2015-04-27_Roadmap_to_v1.html">Summer Roadmap</a>.</li>
-<li>Refactored e-mail encryption logic, made encryption schemes pluggable.</li>
-<li>Created a plugin for developing the Memory Hole header-protection
-   scheme from last weekend's
-   <a href="/blog/2015-04-20_OpenPGP_Email_Summit.html">OpenPGP summit</a>.</li>
-</ol>
-<h3>Plans for this week</h3>
-<ol>
-<li>Finish fixing the key discovery flows.</li>
-<li>Bring public Github repo up to date with local VFS and home page
-   works-in-progress, in case anyone wants to pitch in and help.</li>
-</ol>
-  <hr>
-    <a href="2015-04-20_OpenPGP_Email_Summit.html"><h1>The First OpenPGP E-mail Summit</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on April 20, 2015</strong></p>
-    <p>This weekend I attended the first OpenPGP e-mail summit, mostly
-organized by Nico of the Enigmail project, generously hosted by
-<a href="http://www.giepa.de/">Giegerich &amp; Partner</a> in Dreieich, Germany.</p>
-<p>At the summit I met folks from <a href="https://www.enigmail.net/">Enigmail</a>,
-<a href="https://www.whiteout.io/">Whiteout</a>,
-<a href="https://www.mailvelope.com/">Mailvelope</a>,
-<a href="https://github.com/google/end-to-end">Google End-to-End</a>
-and many other projects, including our very own Brennan Novak who
-presented his <a href="http://modernpgp.org">Modern PGP</a> initiative and of
-course Werner and <a href="https://www.gnupg.org/">GnuPG</a> itself. That was
-actually the main theme of the first day; presenting our respective
-projects and just getting to know each other. Most of us had never met
-before in person and I am pretty sure everyone learned something new.</p>
-<p>The second day was more work focused. Common topics of interest were
-identified and then we split up into discussion groups to strategize and
-identify common problems and potential solutions. The groups I attended
-discussed the following issues:</p>
-<ol>
-<li>A proposal to encrypt or sign e-mail headers (Subject, From, To, ...)</li>
-<li>Searching encrypted mail</li>
-<li>Possible improvements to the PGP/MIME standard</li>
-</ol>
-<p>There seemed to be a common consensus that there are some very real
-problems we should aim to solve together and standardize. As we have
-<a href="2014-11-21_To_PGP_MIME_Or_Not.html">blogged about before</a>, these are
-issues which Mailpile cares deeply about, so I was very happy to get a
-chance to share our experience, ideas and learn from the others. Further
-steps will be taken online, in code and on mailing lists.</p>
-<p>Sessions I was unable to attend discussed topics such as key discovery,
-key certification, key synchronization, next-generation key servers,
-terminology and user-facing vocabulary and fostering ongoing
-collaboration between the attending projects.</p>
-<p>All in all, the summit greatly exceeded my expectations. There was very
-little bickering or bike-shedding, and all attendees seemed happy to set
-aside their political differences in the interest of collaboration and
-improving the e-mail encryption ecosystem.</p>
-<p>I look forward to working with all of them in the future.</p>
-<p>...</p>
-<h2>Weekly Status Summary</h2>
-<h3>Done last week</h3>
-<ol>
-<li>Started writing code again (fixing PGP-related bugs) in my
-   local repository</li>
-<li>Responded to issues and pull requests on Github</li>
-<li>Exchanged e-mails with potential financial backers of the project</li>
-<li>Prepared a presentation and ideas for the OpenPGP summit</li>
-<li>Attended the OpenPGP summit</li>
-</ol>
-<h3>Plans for this week</h3>
-<ol>
-<li>OpenPGP summit follow-up work</li>
-<li>Continue communicating with potential backers</li>
-<li>Drafting work plans for the summer, aiming to release Mailpile 1.0
-   this fall</li>
-</ol>
-  <hr>
-    <a href="2015-04-13_Back_to_Work.html"><h1>Back to Work!</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on April 13, 2015</strong></p>
-    <p>After a month's break, it's time to resume work on Mailpile again. Some
-time away is always useful to give perspective and get some much needed
-rest, and now that I have returned I plan to make a few log overdue
-changes to how I work on Mailpile.</p>
-<p>I'll discuss the rest later, but the first change is to improve
-communication by publishing a weekly blog post describing what has been
-done recently and what is ahead. In order to distract as little as
-possible from actual development, these posts will be kept relatively
-short most of the time. This is the first such post!</p>
-<p>Think of it as a virtual "stand up", just to set the tone for the next
-few days of work:</p>
-<h3>Last week</h3>
-<p>Nothing to report, I was on holidays!</p>
-<h3>Next week</h3>
-<p>This week is dedicated to getting back to work. An event I am attending
-next weekend will helpfully provide focus...</p>
-<p>Next weekend I will be attending a small summit in Germany, meeting
-various other developers from open source projects that also work with
-OpenPGP and GnuPG.</p>
-<p>The summit is a private, very tech-focused event attended by developers
-from most of the open source projects using GnuPG today; a real who's
-who of GnuPG and e-mail security. To make the most of this opportunity,
-this week I will refresh my own memory on the current state of GnuPG and
-Mailpile and try to identify points where I could use advice or help, as
-well as points where I may be able to contribute and help the other
-projects.</p>
-<p>Topics I will explore this week and consider for presentation at the
-summit are:</p>
-<ol>
-<li>Mailpile itself</li>
-<li>Mailpile's proposed trust model</li>
-<li>A method for generating beautiful avatars from PGP key fingerprints</li>
-<li>Enhanced e-mail signatures (manifests)</li>
-</ol>
-<p>That's the plan! Next week's update will tell you how it went.</p>
-  <hr>
-
-  <h3>Older stuff</h3>
-  <ul>
-    <li><a href="2015-03-06_Beta_Rejected.html">Beta Rejected!</a></li>
-    <li><a href="2015-02-26_Revisiting_the_GnuPG_discussion.html">More thoughts on working with GnuPG</a></li>
-    <li><a href="2015-01-20_Mailpile_Beta_II_4096_bits.html">Mailpile Beta II - the 4096 bit release</a></li>
-    <li><a href="2014-11-21_To_PGP_MIME_Or_Not.html">To PGP/MIME or not to PGP/MIME</a></li>
-    <li><a href="2014-10-07_Some_Thoughts_on_GnuPG.html">Some thoughts on working with GnuPG</a></li>
-    <li><a href="2014-09-13_Mailpile_Beta_Release.html">One Year Later: Mailpile Beta</a></li>
-    <li><a href="2014-08-20_Upcoming_Beta_Release_Part_II.html">Our Upcoming Beta Release: Part II</a></li>
-    <li><a href="2014-08-08_Our_Upcoming_Beta_Release.html">Our Upcoming Beta Release</a></li>
-    <li><a href="2014-06-03_Mailpile_Alpha_II.html">Mailpile Alpha II - The Dogfood Edition</a></li>
-    <li><a href="2014-04-30_Where_is_the_Community_Site.html">Where is the Community Site?</a></li>
-    <li><a href="2014-04-07_Workshop_in_London.html">Mailpile Workshop in London</a></li>
-    <li><a href="2014-02-07_IndieGoGo_Update_8.html">Development, Perks, and Alpha (IGG Update #8)</a></li>
-    <li><a href="2014-01-31_Alpha_Release_Shipping_Bits_and_Atoms.html">Alpha Release: Shipping Bits and Atoms</a></li>
-    <li><a href="2014-01-12_A_Plan_For_Spam.html">A Plan For Spam ... and Bacon!</a></li>
-    <li><a href="2013-11-23_A_Pound_of_Security.html">A Pound of Security</a></li>
-    <li><a href="2013-11-18_Speaking_your_language.html">Speaking Your Language</a></li>
-    <li><a href="2013-11-01_IndieGoGo_Update_7.html">Perks? What perks? (IGG Update #7)</a></li>
-    <li><a href="2013-10-31_DarkMail_and_Secure_Protocols.html">DarkMail and Secure Protocols</a></li>
-    <li><a href="2013-10-11_The_Month_of_Dog_Fooding.html">The Month of Dog Fooding</a></li>
-    <li><a href="2013-09-12_IndieGoGo_Update_6.html">Thank you! (IGG Update #6)</a></li>
-    <li><a href="2013-09-11_Budget_and_Roadmap.html">A Rough Budget and Alpha Roadmap</a></li>
-    <li><a href="2013-09-10_Surveillance_Centralization.html">Surveillance And Centralization (video)</a></li>
-    <li><a href="2013-09-10_IndieGoGo_Update_5.html">The Home Stretch (IGG Update #5)</a></li>
-    <li><a href="2013-09-06_IndieGoGo_Update_4.html">PayPal News (IGG Update #4)</a></li>
-    <li><a href="2013-09-05_PayPal_Freezes_Campaign_Funds.html">PayPal Freezes Campaign Funds</a></li>
-    <li><a href="2013-09-05_IndieGoGo_Update_3.html">PayPal News (IGG Update #3)</a></li>
-    <li><a href="2013-08-30_Fonts_and_Copyright_Licenses.html">Fonts and Copyright Licenses</a></li>
-    <li><a href="2013-08-21_IndieGoGo_Update_2.html">We are funded! (IGG update #2)</a></li>
-    <li><a href="2013-08-20_Turning_Money_Into_Code.html">Turning Money Into Code</a></li>
-    <li><a href="2013-08-15_Digging_Through_the_Details.html">Digging Through the Details</a></li>
-    <li><a href="2013-08-11_IndieGoGo_Update_1.html">Our first week (IGG update #1)</a></li>
-    <li><a href="2013-08-11_Designing_Security.html">Designing Security (video)</a></li>
-    <li><a href="2013-08-08_Mailpile_Launched.html">Mailpile Launched</a></li>
-  </ul>
-
-
 <!-- Page content ends -->
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
                 <hr>
