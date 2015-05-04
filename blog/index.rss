@@ -4,6 +4,32 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>Weekly Status Update</title>
+    <link>http://www.mailpile.is/blog/2015-05-04_Weekly_Report.html</link>
+    <description>&lt;h3&gt;Done last week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Published back-log of changes to Github, including: VFS code, low level
+   VCard fixes, improvements to how the GnuPG keyring and Mailpile contacts
+   are kept in sync, and various bug-fixes.&lt;/li&gt;
+&lt;li&gt;Merged &lt;a href=&#34;https://github.com/mailpile/Mailpile/pull/1035&#34;&gt;a pull-request&lt;/a&gt;
+   from the &lt;a href=&#34;https://cloudfleet.io/&#34;&gt;Cloudfleet&lt;/a&gt; folks, which allows the
+   Mailpile web interface to run under an arbitrary path (e.g.
+   http://localhost:33411/mailpile/in/inbox/).This will make it easier to
+   integrate Mailpile into existing web servers and domains.&lt;/li&gt;
+&lt;li&gt;Finished the back-end PGP key discovery code; the front-end still needs
+   updating.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Update the Mailpile website&lt;/li&gt;
+&lt;li&gt;Update the content of the still-hidden community site and invite the
+   first batch of backers to take a look. The launch will happen in
+   stages, so don&#39;t get worried if you aren&#39;t in the first batch!&lt;/li&gt;
+&lt;li&gt;Update the PGP key discovery front-end code&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Mon, 04 May 2015 12:00:00 +0100</pubDate>
+  </item>
+  <item>
     <title>A Roadmap to Version 1.0</title>
     <link>http://www.mailpile.is/blog/2015-04-27_Roadmap_to_v1.html</link>
     <description>&lt;p&gt;My dear Mailpile backers, I am going to go out on a limb here and
@@ -335,55 +361,5 @@ summit are:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;That&#39;s the plan! Next week&#39;s update will tell you how it went.&lt;/p&gt;</description>
     <pubDate>Mon, 13 Apr 2015 12:00:00 +0100</pubDate>
-  </item>
-  <item>
-    <title>Beta Rejected!</title>
-    <link>http://www.mailpile.is/blog/2015-03-06_Beta_Rejected.html</link>
-    <description>&lt;p&gt;I would like to thank everyone who took the time download the Mailpile
-Beta releases and give us valuable feedback. &lt;strong&gt;Thank you, thank you,
-thank you!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;It&#39;s always exciting and scary to put your work out there for everyone
-to see, but our early adopters have been universally supportive and
-gracious, even when Mailpile didn&#39;t quite work as well as they had
-hoped.&lt;/p&gt;
-&lt;p&gt;But now that a bunch of people have taken the time to download Mailpile,
-poke it with a stick and put it through it&#39;s paces, it is time to
-declare the beta test period over for now. We need to respond to the
-feedback and fix the issues that were discovered.&lt;/p&gt;
-&lt;p&gt;Obviously we had hoped things were almost ready for public consumption,
-that we were close to making a proper release. The testing did it&#39;s job
-alright: we know now we were a tad overoptimistic. Just a tad! So we&#39;re
-going back to work instead of pushing for a 1.0 right away.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#39;/img/rejection-stamp.png&#39; style=&#39;float: right;&#39;&gt;&lt;/p&gt;
-&lt;p&gt;Some of the key take-aways from our beta tests were:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;We bit off more than we can chew in our 1.0 plans. The app needs to
-   be simplified so we can ship something really stable.&lt;/li&gt;
-&lt;li&gt;Our IMAP support still needs work so it can interoperate with all
-   the different mail servers out there. The Internet is a big and
-   diverse place!&lt;/li&gt;
-&lt;li&gt;Our GnuPG strategy and code isn&#39;t ready. We need to either make all
-   that crypto stuff completely seamless, or improve the tools we expose
-   to the user for manual work. Preferably both.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Those are the really big issues, but there are a very large number of
-other smaller bugs and loose ends that need work. Almost all of these
-are in the &#34;back end&#34; of the app, the low level plumbing, gears and
-turbines and closures and APIs that work behind the scenes. The back-end
-has been playing catch up to the user interface for a while, it needs
-some focus and attention before we can ship a real product.  We fooled
-even ourselves by making something that &lt;em&gt;looked&lt;/em&gt; almost ready, even
-though under the hood it just wasn&#39;t.&lt;/p&gt;
-&lt;p&gt;So I (Bjarni the backend guy) am going to be doubling down on that stuff
-... just as soon as I&#39;m finished marrying the most amazing woman I know
-later this month. So don&#39;t worry if the github repo is quiet until early
-April. I&#39;ll be back!&lt;/p&gt;
-&lt;p&gt;Since most of Mailpile&#39;s current limitations are low level back-end
-problems, Brennan (our awesome front-end developer) has moved on to
-other things for now. I&#39;d like to thank him for all his hard work so far
-and encourage you all to stay tuned for news about his ongoing efforts
-to improve the usability of crypto apps and modernize PGP.&lt;/p&gt;
-&lt;p&gt;See you in April!&lt;/p&gt;</description>
-    <pubDate>Fri, 06 Mar 2015 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>
