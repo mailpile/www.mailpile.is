@@ -1,0 +1,30 @@
+jQuery(document).ready(function($){
+
+  var posts = [{%- for fn in ls('.', '\.md$') %}
+{% set url = '/blog/' + fn|replace('.md', '.html') -%}
+{% set post = cat(fn)|from_rfc822
+                     |without(['body', 'type'])
+                     |set('url', url)
+                     |date -%}
+{{ post|to_json }}{% if not loop.last %},{% endif %}
+{%- endfor %}];
+
+  var prev = -1;
+  var next = -1;
+  for (var i = 0; i < posts.length; i++) {
+      if (window.location.pathname == posts[i].url) {
+          prev = i-1;
+          next = i+1;
+      }
+  }
+  if (prev >= 0) {
+    $('.prev').html('Previous: <a href="'
+                    + posts[prev].url + '">'
+                    + posts[prev].subject+'</a>');    
+  }
+  if (next >= 0 && next < posts.length) {
+    $('.next').html('Next: <a href="'
+                    + posts[next].url + '">'
+                    + posts[next].subject+'</a>');
+  }
+});

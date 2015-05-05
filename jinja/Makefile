@@ -10,6 +10,8 @@ TARGETS = find . -name \*.jinja* -o -name \*.md \
             |grep -v -e '.swp$$' -e '.py$$' -e '~$$' |sort \
             |sed -e 's/md$$/html/g' \
                  -e 's/jinja-rss$$/rss/g' \
+                 -e 's/jinja-json$$/json/g' \
+                 -e 's/jinja-js$$/js/g' \
                  -e 's/jinja$$/html/g'
 
 
@@ -29,6 +31,12 @@ loop: depend
 %.rss: %.jinja-rss
 	LC_ALL=C $(JINJATOOL) $<:$@
 
+%.json: %.jinja-json
+	LC_ALL=C $(JINJATOOL) $<:$@
+
+%.js: %.jinja-js
+	LC_ALL=C $(JINJATOOL) $<:$@
+
 %.html: %.jinja
 	LC_ALL=C $(JINJATOOL) $<:$@
 
@@ -42,6 +50,12 @@ loop: depend
 	@touch $@
 
 %.jinja-rss:
+	@touch $@
+
+%.jinja-json:
+	@touch $@
+
+%.jinja-js:
 	@touch $@
 
 %.md: %.md.py

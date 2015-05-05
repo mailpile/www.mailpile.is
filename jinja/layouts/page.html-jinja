@@ -42,6 +42,9 @@
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
     <script src="/js/site.js"></script>
+{%- if page and page.type == 'blog' %}
+    <script src="/blog/nav.js"></script>
+{% endif -%}
 {%- block head_extra %}{% endblock %}
 {%- endblock %}
 </head><body>
@@ -88,10 +91,20 @@
 {% block content %}{% endblock %}
 <!-- Page content ends -->
 {%- if not page or not page.type == 'full' %}
+<!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
-                <hr>
+-->
             </div>
         </div>
+  {%- if page and page.type == 'blog' %}
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
+  {%- else %}
+        <hr>
+  {%- endif %}
 {%- endif %}
 {%- block page_bottom %}
         <!-- Contact & Media -->

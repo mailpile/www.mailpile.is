@@ -2564,6 +2564,32 @@ h5 a {
 #header h6 {
   line-height: 24px;
 }
+div.blog-nav {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.blog-nav p {
+  margin: 2px;
+  padding: 2px 2px 4px 2px;
+}
+.blog-nav p.next {
+  display: inline;
+  float: right;
+}
+.blog-nav p.prev {
+  display: inline;
+  float: left;
+}
+.blog-nav hr.above {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.blog-nav hr.below {
+  margin-top: 5px;
+  margin-bottom: 45px;
+}
 hr.blog-hr {
   margin-top: 25px;
 }

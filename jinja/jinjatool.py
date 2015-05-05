@@ -61,7 +61,9 @@ class JinjaToolExtension(Extension):
         Extension.__init__(self, env)
         env.globals['cat'] = self._cat
         env.globals['ls'] = self._ls
+        env.filters['set'] = self._set
         env.filters['date'] = self._date
+        env.filters['without'] = self._without
         env.filters['markdown'] = self._markdown
         env.filters['to_json'] = self._to_json
         env.filters['from_json'] = self._from_json
@@ -81,7 +83,11 @@ class JinjaToolExtension(Extension):
         except (OSError, IOError):
             return None
 
-    def _date(self, data, fmt='%Y-%m-%d'):
+    def _date(self, data, fmt='%Y-%m-%d', field='date'):
+        if isinstance(data, dict):
+            d = copy.copy(data)
+            d[field] = self._date(d[field], fmt=fmt)
+            return d
         try:
             if fmt[:1] not in ('-', '+'):
                 fmt = '+%s' % fmt
@@ -92,6 +98,19 @@ class JinjaToolExtension(Extension):
                                            ).decode('utf-8').strip()
         except (OSError, IOError, subprocess.CalledProcessError):
             return data
+
+    def _set(self, data, field, var):
+        d = copy.copy(data)
+        d[field] = var
+        return d
+
+    def _without(self, data, skip=[]):
+        d = {}
+        skip = set([s.lower() for s in skip])
+        for k, v in data.iteritems():
+            if k.lower() not in skip:
+                d[k] = v
+        return d
 
     def _markdown(self, text):
         return jinja2.Markup(markdown(text))
