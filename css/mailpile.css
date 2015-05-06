@@ -2943,8 +2943,30 @@ ul.backers li {
 #answers li {
   margin: 25px 0px;
 }
+a.anchor {
+  position: absolute;
+  padding-top: 100px;
+  margin-top: -100px;
+}
 li.faq-section-title {
   background: #ffffff;
+}
+#faq #toc {
+  max-width: 750px;
+  display: block;
+  margin: 20px auto;
+}
+#faq #toc ul li ul {
+  list-style: circle;
+  margin-top: 10px;
+}
+#faq #toc ul li ul li {
+  line-height: 1.1em;
+  padding: 1px 0;
+  margin: 1px 0;
+}
+#faq #toc ul li ul li a {
+  font-weight: normal;
 }
 li.faq-section-title h2 {
   font-family: Mailpile-700;

@@ -1,0 +1,84 @@
+<script type="text/javascript">
+$(document).ready(function() {
+
+  $('#faq-search').show();
+  $('#show-toc').css('opacity', '0.2');
+  $('li.faq-item p').hide();
+
+  var options = {
+    valueNames: [ 'faq-section', 'faq-title' ]
+  };
+
+  var questionList = new List('faq', options);
+
+  $('#filter-category').change(function() {			
+    var category = $(this).val().toString();
+
+    if (category == 'none') {
+      questionList.filter();
+    }
+    else {
+      questionList.filter(function(item) {
+        if (item.values().question_category == category) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      });
+    }
+    return false;  	
+  });
+
+
+  function hide_toc() {
+    $('#show-toc').data('state', 'closed').removeClass('open');
+    $('#show-toc').css('opacity', '1.0');
+    $('#toc').hide();
+    return true;
+  }
+  function show_toc() {
+      $('#show-toc').data('state', 'open').addClass('open');
+      $('#show-toc').css('opacity', '0.2');
+      $('#toc').fadeIn();
+      questionList.search();
+  }
+  function open_item(i) {
+    i.data('state', 'open').addClass('open');
+    return i.find('p');
+  }
+
+  $(document).on('click', '.toc-go', function() {
+    open_item($($(this).attr('href')).parent()).show();
+    return true;
+  });
+
+  $(document).on('click', '#show-toc', function() {
+    if ($(this).data('state') === 'open') {
+      hide_toc();
+    }
+    else {
+      show_toc();
+    }
+  });
+
+  $(document).on('click', '#faq-search', hide_toc);
+
+  $(document).on('click', 'li.faq-item', function() {
+    if ($(this).data('state') === 'open') {
+      $(this).data('state', 'closed').removeClass('open');
+      $(this).find('p').hide();
+    }
+    else {
+      open_item($(this)).fadeIn();
+    }
+  });
+});
+</script>
+
+<h1 class="text-center">Frequently Asked Questions</h1>
+
+<div class="text-center">
+  <input id="faq-search" class="search" placeholder="Search Questions">
+  <a id='show-toc' href="#top">... <big>or browse</big></a>
+</div>
