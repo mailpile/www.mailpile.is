@@ -5,9 +5,11 @@ from markdown import markdown
 
 DOCS = "/Users/brennannovak/MailPileCode/doc/"
 if not os.path.exists(DOCS):
-    DOCS = '../../Mailpile/doc/'
-if not os.path.exists(DOCS):
     DOCS = '../../Code/doc/'
+if not os.path.exists(DOCS):
+    DOCS = '../Mailpile/doc/'
+if not os.path.exists(DOCS):
+    DOCS = '../../Mailpile/doc/'
 if not os.path.exists(DOCS):
     raise ValueError('Could not find wiki')
 
