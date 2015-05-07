@@ -15,6 +15,14 @@ jQuery(document).ready(function($){
         }
     });
 
+    // Scroll helper hints
+    var $shint = $(".scroll-hint");
+    jQuery(document).scroll(function() {
+      var scrolltop = $(this).scrollTop();
+      $shint.css({display: scrolltop > 10 ? "block" : "none",
+                  opacity: (scrolltop-10) / 500});
+    });
+
     // Flexnav
     $(".flexnav").flexNav();
 
@@ -63,7 +71,7 @@ jQuery(document).ready(function($){
       var link = $(this);
 
       if (summary.css('display') === 'none') {
-        
+
         summary.css('display', 'block');
         link.html('hide details');
 

@@ -2532,6 +2532,9 @@ h5 a {
 .color-blue {
   color: #337fb2;
 }
+.scroll-hint {
+  display: none;
+}
 #content {
   margin-top: 75px;
 }
