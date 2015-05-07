@@ -60,7 +60,12 @@
             </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
-            <li><a href="/roadmap/" class="scroll-link">Roadmap</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
             <li><a href="/download/" class="scroll-link">Download</a></li>
             <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>

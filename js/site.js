@@ -42,12 +42,14 @@ jQuery(document).ready(function($){
         callback_login_ok: function() {
           $('#roadmap-details').slideDown();
           $('#community-perks').slideDown();
+          $('.login-hint').css('display', 'block');
         },
         callback_login_error: function() {
           alert('Unfortunately we could not log you in :( please double check your email');
         },
         callback_logged_out: function() {
           window.location.reload(true);
+          $('.login-hint').css('display', 'none');
         },
         callback_ranked_vote_ok: function() {
         },
@@ -61,7 +63,9 @@ jQuery(document).ready(function($){
           alert('Oops, could not vote on that');
         }
     });
-
+    if (hoipoi.username) {
+      $('.login-hint').css('display', 'block');
+    }
 
     $('a.more').on('click', function(e) {
 
