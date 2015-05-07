@@ -3161,6 +3161,8 @@ a.vote.selected.vote-no {
   background: #be1c21;
   color: #ffffff;
 }
+.icon-vote-AGPLv3:before,
+.icon-vote-Apache2:before,
 .icon-vote-yes:before {
   content: "\e626";
 }
