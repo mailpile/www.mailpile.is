@@ -37,8 +37,17 @@
     <hr>
       <div class="row">
         <div class="two-thirds">
-          <h5><strong>mail</strong>pile is an e-mail client</h5>
+         <div style="margin: 0 3em; padding: 10px;
+                     border: 2px dashed #fff; background: #eee;">
+          <h5>
+            Subject: <strong>mail</strong>pile is an e-mail client
+            <small>
+              <br>From: Mailpile Team &lt;team@mailpile.is&gt;
+              <br>To: The Internet :-)
+            </small>
+          </h5>
           <p>
+            Mailpile is an e-mail client!<br>
             Mailpile is a search engine and a personal webmail server.<br>
             Mailpile is an easy way to encrypt your e-mail.<br>
             Mailpile is software you run yourself, on your own computer.
@@ -67,8 +76,10 @@
             Thanks and welcome,<br>
             &nbsp; &nbsp; - Bjarni &amp; the team
           </p>
+         </div>
         </div>
         <div class="one-third">
+         <div style="padding: 10px 0; margin: 0;">
           <h5>Vitals:</h5>
           <ul>
             <li><a href="/blog/2015-04-27_Roadmap_to_v1.html">Next Milestone</a>: Beta III
@@ -77,13 +88,14 @@
           </ul>
           <h5>From the blog:</h5>
           <ul>
-          {%- for fn in ls('blog', '\.md$')[-4:]|reverse %}
+          {%- for fn in ls('blog', '\.md$')[-6:]|reverse %}
             {% set post = cat('blog/' + fn)|from_rfc822 -%}
             {% set url = fn|replace('.md', '.html') -%}
             <li><a href="/blog/{{url}}">{{ post.date|date('%B %e') }}</a>: {{ post.subject }}</li>
           {%- endfor %}
             <li><i><a href="/blog/">more posts ...</a></i></li>
           </ul>
+         </div>
         </div>
       </div>
     <hr>
