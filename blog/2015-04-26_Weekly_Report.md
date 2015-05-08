@@ -1,4 +1,4 @@
-Subject: Weekly Status Update
+Subject: Last week: Roadmap, Memory Hole, refactoring
 Date: April 26, 2015
 Author: Bjarni
 Type: blog

@@ -1,4 +1,4 @@
-Subject: Weekly Status Update
+Subject: Last week: code pushed, Cloudfleet, key discovery
 Date: May 4, 2015
 Author: Bjarni
 Type: blog
