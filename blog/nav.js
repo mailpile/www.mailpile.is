@@ -214,7 +214,7 @@ jQuery(document).ready(function($){
 {
   "author": "Bjarni", 
   "date": "2015-04-26", 
-  "subject": "Weekly Status Update", 
+  "subject": "Last week: Roadmap, Memory Hole, refactoring", 
   "url": "/blog/2015-04-26_Weekly_Report.html"
 },
 {
@@ -226,8 +226,14 @@ jQuery(document).ready(function($){
 {
   "author": "Bjarni", 
   "date": "2015-05-04", 
-  "subject": "Weekly Status Update", 
+  "subject": "Last week: code pushed, Cloudfleet, key discovery", 
   "url": "/blog/2015-05-04_Weekly_Report.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-05-08", 
+  "subject": "Choosing a License for Mailpile 1.0", 
+  "url": "/blog/2015-05-08_Choosing_a_License.html"
 }];
 
   var prev = -1;

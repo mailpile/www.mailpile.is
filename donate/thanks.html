@@ -47,15 +47,25 @@
     <div id="navigation">
       <div class="menu-button">Menu</div>
         <ul data-breakpoint="800" class="flexnav">
-            <li><a href="/" class="scroll-link">About</a></li>
-            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
-            <li><a href="/demos/" class="scroll-link">Demos</a></li>
-            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
     </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
 
     <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
@@ -73,6 +83,9 @@
 <!-- Page content ends -->
 
     </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>

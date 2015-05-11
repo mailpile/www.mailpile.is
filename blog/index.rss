@@ -4,7 +4,122 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
-    <title>Weekly Status Update</title>
+    <title>Choosing a License for Mailpile 1.0</title>
+    <link>http://www.mailpile.is/blog/2015-05-08_Choosing_a_License.html</link>
+    <description>&lt;p&gt;Dear Mailpile backers and supporters!&lt;/p&gt;
+&lt;p&gt;The time has come for us to make a decision. Back when the project first
+got off the ground, we had some difficulty deciding which Open Source
+license we should use for our work. We narrowed it down to two licenses:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/licenses/agpl-3.0.txt&#34;&gt;The GNU Affero General Public License,
+    version 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;The Apache License, version
+    2.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Mailpile development code, the Alphas and the Betas have all been
+released under &lt;em&gt;both&lt;/em&gt; of these licenses. This was a legal hack to avoid
+having to choose right away, without having to ask contributors to sign
+copyright waivers before sharing code with the project.&lt;/p&gt;
+&lt;p&gt;However, before the 1.0, we need to make a decision and settle upon one
+license or the other.&lt;/p&gt;
+&lt;p&gt;We have decided to let our community decide, and are in the process of
+sending out invitations to &lt;a href=&#34;/roadmap/&#34;&gt;our community governance page&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Why do licenses matter?&lt;/h3&gt;
+&lt;p&gt;Although a bit boring, licensing is actually very important.&lt;/p&gt;
+&lt;p&gt;The license is what grants exemptions from the rule of international
+copyright law. Without a free and open license, our backers would not be
+guaranteed the right to download, use, modify and share the results of
+our work - the work they paid for.&lt;/p&gt;
+&lt;p&gt;The license also helps define the community around the software, and
+this is where things get tricky.&lt;/p&gt;
+&lt;p&gt;Some licenses, especially those championed by our friends at the &lt;a href=&#34;https://www.fsf.org/&#34;&gt;Free
+Software Foundation&lt;/a&gt;, are designed to protect the
+rights of the end-user and ensure that community efforts remain with the
+community. The AGPLv3 is the most modern and powerful such license,
+designed for software like Mailpile.&lt;/p&gt;
+&lt;p&gt;Other licenses (such as the Apache license) are more permissive,
+allowing corporations to make use of community code in traditional,
+commercial software products. This fosters collaboration and motivates
+companies to contribute valuable time and effort, but does so at the
+expense of end-user freedom since many users of the software will end up
+using proprietary derivitives.&lt;/p&gt;
+&lt;h3&gt;Permissive licensing: Webkit&lt;/h3&gt;
+&lt;p&gt;An excellent example of permissive licensing, is the Webkit project.&lt;/p&gt;
+&lt;p&gt;Webkit is based on KHTML, which was published under a relatively
+permissive license (the GNU Lesser General Public License). I say
+relatively permissive, because although the LGPL allows use within
+proprietary products it does require that motifications to KHTML itself
+be given back to the community. This balance allowed Apple to create
+Safari, a proprietary browser, while forcing them to publish the engine
+they derived from KHTML - an engine which we know today as Webkit.&lt;/p&gt;
+&lt;p&gt;Webkit was then chosen by Google for use in their Chrome project, and
+the rest is history: Webkit, daughter of KHTML and Apple, has taken the
+lead as the world&#39;s fastest and most powerful HTML5 rendering engine. It
+is now not only at the heart of both Safari and Chrome, but is used in a
+wide range of other smaller browsers and open source projects.&lt;/p&gt;
+&lt;p&gt;This is a fantastic open source success story, and it&#39;s worth
+remembering that this would probably never have happened if KHTML had
+been licensed using a more permissive license, such as MIT, BSD or
+Apache - those license would have allowed Apple to keep their
+improvements to themselves.&lt;/p&gt;
+&lt;p&gt;But there are more lessons to be learned here!&lt;/p&gt;
+&lt;p&gt;Today Safari and Chrome are both provided free of charge, but they are
+proprietary programs and the community does not have access to their
+inner workings. Amongst other things, this means &lt;strong&gt;the community cannot
+easily inspect or audit&lt;/strong&gt; how and when these browsers &#34;phone home&#34; and
+share private data with the companies that wrote them.&lt;/p&gt;
+&lt;p&gt;It can also be argued Webkit&#39;s license &lt;strong&gt;perpetuates the status quo&lt;/strong&gt;
+and unfairly skews the market against truly free software. Compared with
+these truly free alternatives, Chrome and Safari will always have a head
+start because Google and Apple can keep some of their innovations to
+themselves.&lt;/p&gt;
+&lt;p&gt;Of course the counter-argument is, that without the motivation for big
+companies to collaborate, Webkit probably wouldn&#39;t exist at all.&lt;/p&gt;
+&lt;h3&gt;What about Mailpile?&lt;/h3&gt;
+&lt;p&gt;Although there are lessons to be learned, Mailpile is different from
+Webkit. Webkit is a technical tool, one building block of many that
+developers use when writing a browser. Mailpile on the other hand, is a
+stand-alone end-user application, and (when it is finished) Mailpile can
+be used directly to provide service online.&lt;/p&gt;
+&lt;p&gt;Theoretically, a company could use Mailpile&#39;s code to build a service
+which competes directly with GMail and Hotmail - but if Mailpile&#39;s
+license does not require they share their changes, the users of these
+competing services will be no more free than they were before. There is
+also no guarantee that these companies will contribute to the community
+version of Mailpile.&lt;/p&gt;
+&lt;p&gt;On the other hand, many companies (and some individuals) strongly
+dislike the AGPL and avoid all software which uses it. These people will
+be excluded from our community and will not help us improve Mailpile if
+we use that license.&lt;/p&gt;
+&lt;p&gt;So that becomes the crux of the question.&lt;/p&gt;
+&lt;p&gt;Do we want to compell companies to share their changes to our code,
+which is what the AGPL does, or do we want to take a more trusting
+approach and rely on enlightened self interest and good-will - by
+releasing under the Apache license?&lt;/p&gt;
+&lt;p&gt;For some, this is an idealogical question, a matter of &lt;em&gt;right&lt;/em&gt; or
+&lt;em&gt;wrong&lt;/em&gt;. Is it morally acceptable to allow people to benefit from
+Mailpile&#39;s work without contributing back? Is it morally acceptable for
+Mailpile&#39;s authors to tie the hands of other businesses?&lt;/p&gt;
+&lt;p&gt;For others, this is merely a matter of strategy and tactics. What is
+most likely to improve end-user freedom in the long run? What is most
+likely to help Mailpile itself develop and thrive? Will chosing a
+restrictive license marginalize the project and prevent us from
+affecting wide-spread improvements to how people use e-mail? Will a
+permissive license make it easier for abusive companies to launch new
+webmail services as honey-pots to harvest and collect private e-mail
+data?&lt;/p&gt;
+&lt;p&gt;Those are the questions we need to answer!&lt;/p&gt;
+&lt;p&gt;If you have an opinion, one way or another, I encourage you to write
+blog post explaining your position (or send links you feel are
+relevant). If you prefer to publish yourself I&#39;ll be happy to link to
+your website - or we can publish guest posts here on this blog.&lt;/p&gt;
+&lt;p&gt;Hopefully a few people will express their opinions and help our
+community &lt;a href=&#34;/roadmap/&#34;&gt;vote&lt;/a&gt; one way or another.&lt;/p&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;</description>
+    <pubDate>Fri, 08 May 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Last week: code pushed, Cloudfleet, key discovery</title>
     <link>http://www.mailpile.is/blog/2015-05-04_Weekly_Report.html</link>
     <description>&lt;h3&gt;Done last week&lt;/h3&gt;
 &lt;ol&gt;
@@ -244,7 +359,7 @@ a marketing oriented point of view.&lt;/p&gt;
     <pubDate>Mon, 27 Apr 2015 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Weekly Status Update</title>
+    <title>Last week: Roadmap, Memory Hole, refactoring</title>
     <link>http://www.mailpile.is/blog/2015-04-26_Weekly_Report.html</link>
     <description>&lt;h3&gt;Done last week&lt;/h3&gt;
 &lt;ol&gt;
@@ -321,45 +436,5 @@ improving the e-mail encryption ecosystem.&lt;/p&gt;
    this fall&lt;/li&gt;
 &lt;/ol&gt;</description>
     <pubDate>Mon, 20 Apr 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Back to Work!</title>
-    <link>http://www.mailpile.is/blog/2015-04-13_Back_to_Work.html</link>
-    <description>&lt;p&gt;After a month&#39;s break, it&#39;s time to resume work on Mailpile again. Some
-time away is always useful to give perspective and get some much needed
-rest, and now that I have returned I plan to make a few log overdue
-changes to how I work on Mailpile.&lt;/p&gt;
-&lt;p&gt;I&#39;ll discuss the rest later, but the first change is to improve
-communication by publishing a weekly blog post describing what has been
-done recently and what is ahead. In order to distract as little as
-possible from actual development, these posts will be kept relatively
-short most of the time. This is the first such post!&lt;/p&gt;
-&lt;p&gt;Think of it as a virtual &#34;stand up&#34;, just to set the tone for the next
-few days of work:&lt;/p&gt;
-&lt;h3&gt;Last week&lt;/h3&gt;
-&lt;p&gt;Nothing to report, I was on holidays!&lt;/p&gt;
-&lt;h3&gt;Next week&lt;/h3&gt;
-&lt;p&gt;This week is dedicated to getting back to work. An event I am attending
-next weekend will helpfully provide focus...&lt;/p&gt;
-&lt;p&gt;Next weekend I will be attending a small summit in Germany, meeting
-various other developers from open source projects that also work with
-OpenPGP and GnuPG.&lt;/p&gt;
-&lt;p&gt;The summit is a private, very tech-focused event attended by developers
-from most of the open source projects using GnuPG today; a real who&#39;s
-who of GnuPG and e-mail security. To make the most of this opportunity,
-this week I will refresh my own memory on the current state of GnuPG and
-Mailpile and try to identify points where I could use advice or help, as
-well as points where I may be able to contribute and help the other
-projects.&lt;/p&gt;
-&lt;p&gt;Topics I will explore this week and consider for presentation at the
-summit are:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Mailpile itself&lt;/li&gt;
-&lt;li&gt;Mailpile&#39;s proposed trust model&lt;/li&gt;
-&lt;li&gt;A method for generating beautiful avatars from PGP key fingerprints&lt;/li&gt;
-&lt;li&gt;Enhanced e-mail signatures (manifests)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;That&#39;s the plan! Next week&#39;s update will tell you how it went.&lt;/p&gt;</description>
-    <pubDate>Mon, 13 Apr 2015 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

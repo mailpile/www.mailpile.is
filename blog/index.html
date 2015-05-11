@@ -47,15 +47,25 @@
     <div id="navigation">
       <div class="menu-button">Menu</div>
         <ul data-breakpoint="800" class="flexnav">
-            <li><a href="/" class="scroll-link">About</a></li>
-            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
-            <li><a href="/demos/" class="scroll-link">Demos</a></li>
-            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
     </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
 
     <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
@@ -77,7 +87,121 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="2015-05-04_Weekly_Report.html"><h1>Weekly Status Update</h1></a>
+    <a href="2015-05-08_Choosing_a_License.html"><h1>Choosing a License for Mailpile 1.0</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a>
+               on May 8, 2015</strong></p>
+    <p>Dear Mailpile backers and supporters!</p>
+<p>The time has come for us to make a decision. Back when the project first
+got off the ground, we had some difficulty deciding which Open Source
+license we should use for our work. We narrowed it down to two licenses:</p>
+<ol>
+<li><a href="https://www.gnu.org/licenses/agpl-3.0.txt">The GNU Affero General Public License,
+    version 3</a></li>
+<li><a href="https://www.apache.org/licenses/LICENSE-2.0.html">The Apache License, version
+    2.0</a></li>
+</ol>
+<p>The Mailpile development code, the Alphas and the Betas have all been
+released under <em>both</em> of these licenses. This was a legal hack to avoid
+having to choose right away, without having to ask contributors to sign
+copyright waivers before sharing code with the project.</p>
+<p>However, before the 1.0, we need to make a decision and settle upon one
+license or the other.</p>
+<p>We have decided to let our community decide, and are in the process of
+sending out invitations to <a href="/roadmap/">our community governance page</a>.</p>
+<h3>Why do licenses matter?</h3>
+<p>Although a bit boring, licensing is actually very important.</p>
+<p>The license is what grants exemptions from the rule of international
+copyright law. Without a free and open license, our backers would not be
+guaranteed the right to download, use, modify and share the results of
+our work - the work they paid for.</p>
+<p>The license also helps define the community around the software, and
+this is where things get tricky.</p>
+<p>Some licenses, especially those championed by our friends at the <a href="https://www.fsf.org/">Free
+Software Foundation</a>, are designed to protect the
+rights of the end-user and ensure that community efforts remain with the
+community. The AGPLv3 is the most modern and powerful such license,
+designed for software like Mailpile.</p>
+<p>Other licenses (such as the Apache license) are more permissive,
+allowing corporations to make use of community code in traditional,
+commercial software products. This fosters collaboration and motivates
+companies to contribute valuable time and effort, but does so at the
+expense of end-user freedom since many users of the software will end up
+using proprietary derivitives.</p>
+<h3>Permissive licensing: Webkit</h3>
+<p>An excellent example of permissive licensing, is the Webkit project.</p>
+<p>Webkit is based on KHTML, which was published under a relatively
+permissive license (the GNU Lesser General Public License). I say
+relatively permissive, because although the LGPL allows use within
+proprietary products it does require that motifications to KHTML itself
+be given back to the community. This balance allowed Apple to create
+Safari, a proprietary browser, while forcing them to publish the engine
+they derived from KHTML - an engine which we know today as Webkit.</p>
+<p>Webkit was then chosen by Google for use in their Chrome project, and
+the rest is history: Webkit, daughter of KHTML and Apple, has taken the
+lead as the world's fastest and most powerful HTML5 rendering engine. It
+is now not only at the heart of both Safari and Chrome, but is used in a
+wide range of other smaller browsers and open source projects.</p>
+<p>This is a fantastic open source success story, and it's worth
+remembering that this would probably never have happened if KHTML had
+been licensed using a more permissive license, such as MIT, BSD or
+Apache - those license would have allowed Apple to keep their
+improvements to themselves.</p>
+<p>But there are more lessons to be learned here!</p>
+<p>Today Safari and Chrome are both provided free of charge, but they are
+proprietary programs and the community does not have access to their
+inner workings. Amongst other things, this means <strong>the community cannot
+easily inspect or audit</strong> how and when these browsers "phone home" and
+share private data with the companies that wrote them.</p>
+<p>It can also be argued Webkit's license <strong>perpetuates the status quo</strong>
+and unfairly skews the market against truly free software. Compared with
+these truly free alternatives, Chrome and Safari will always have a head
+start because Google and Apple can keep some of their innovations to
+themselves.</p>
+<p>Of course the counter-argument is, that without the motivation for big
+companies to collaborate, Webkit probably wouldn't exist at all.</p>
+<h3>What about Mailpile?</h3>
+<p>Although there are lessons to be learned, Mailpile is different from
+Webkit. Webkit is a technical tool, one building block of many that
+developers use when writing a browser. Mailpile on the other hand, is a
+stand-alone end-user application, and (when it is finished) Mailpile can
+be used directly to provide service online.</p>
+<p>Theoretically, a company could use Mailpile's code to build a service
+which competes directly with GMail and Hotmail - but if Mailpile's
+license does not require they share their changes, the users of these
+competing services will be no more free than they were before. There is
+also no guarantee that these companies will contribute to the community
+version of Mailpile.</p>
+<p>On the other hand, many companies (and some individuals) strongly
+dislike the AGPL and avoid all software which uses it. These people will
+be excluded from our community and will not help us improve Mailpile if
+we use that license.</p>
+<p>So that becomes the crux of the question.</p>
+<p>Do we want to compell companies to share their changes to our code,
+which is what the AGPL does, or do we want to take a more trusting
+approach and rely on enlightened self interest and good-will - by
+releasing under the Apache license?</p>
+<p>For some, this is an idealogical question, a matter of <em>right</em> or
+<em>wrong</em>. Is it morally acceptable to allow people to benefit from
+Mailpile's work without contributing back? Is it morally acceptable for
+Mailpile's authors to tie the hands of other businesses?</p>
+<p>For others, this is merely a matter of strategy and tactics. What is
+most likely to improve end-user freedom in the long run? What is most
+likely to help Mailpile itself develop and thrive? Will chosing a
+restrictive license marginalize the project and prevent us from
+affecting wide-spread improvements to how people use e-mail? Will a
+permissive license make it easier for abusive companies to launch new
+webmail services as honey-pots to harvest and collect private e-mail
+data?</p>
+<p>Those are the questions we need to answer!</p>
+<p>If you have an opinion, one way or another, I encourage you to write
+blog post explaining your position (or send links you feel are
+relevant). If you prefer to publish yourself I'll be happy to link to
+your website - or we can publish guest posts here on this blog.</p>
+<p>Hopefully a few people will express their opinions and help our
+community <a href="/roadmap/">vote</a> one way or another.</p>
+<p>Thanks!</p>
+  <hr>
+    <a href="2015-05-04_Weekly_Report.html"><h1>Last week: code pushed, Cloudfleet, key discovery</h1></a>
     <p><strong>Posted by <a href="#">Bjarni</a>
                on May 4, 2015</strong></p>
     <h3>Done last week</h3>
@@ -315,7 +439,7 @@ a marketing oriented point of view.</p>
 <a href="https://twitter.com/mailpileteam">on Twitter</a>.</p>
 <p>Thanks for reading!</p>
   <hr>
-    <a href="2015-04-26_Weekly_Report.html"><h1>Weekly Status Update</h1></a>
+    <a href="2015-04-26_Weekly_Report.html"><h1>Last week: Roadmap, Memory Hole, refactoring</h1></a>
     <p><strong>Posted by <a href="#">Bjarni</a>
                on April 26, 2015</strong></p>
     <h3>Done last week</h3>
@@ -333,68 +457,10 @@ a marketing oriented point of view.</p>
    works-in-progress, in case anyone wants to pitch in and help.</li>
 </ol>
   <hr>
-    <a href="2015-04-20_OpenPGP_Email_Summit.html"><h1>The First OpenPGP E-mail Summit</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on April 20, 2015</strong></p>
-    <p>This weekend I attended the first OpenPGP e-mail summit, mostly
-organized by Nico of the Enigmail project, generously hosted by
-<a href="http://www.giepa.de/">Giegerich &amp; Partner</a> in Dreieich, Germany.</p>
-<p>At the summit I met folks from <a href="https://www.enigmail.net/">Enigmail</a>,
-<a href="https://www.whiteout.io/">Whiteout</a>,
-<a href="https://www.mailvelope.com/">Mailvelope</a>,
-<a href="https://github.com/google/end-to-end">Google End-to-End</a>
-and many other projects, including our very own Brennan Novak who
-presented his <a href="http://modernpgp.org">Modern PGP</a> initiative and of
-course Werner and <a href="https://www.gnupg.org/">GnuPG</a> itself. That was
-actually the main theme of the first day; presenting our respective
-projects and just getting to know each other. Most of us had never met
-before in person and I am pretty sure everyone learned something new.</p>
-<p>The second day was more work focused. Common topics of interest were
-identified and then we split up into discussion groups to strategize and
-identify common problems and potential solutions. The groups I attended
-discussed the following issues:</p>
-<ol>
-<li>A proposal to encrypt or sign e-mail headers (Subject, From, To, ...)</li>
-<li>Searching encrypted mail</li>
-<li>Possible improvements to the PGP/MIME standard</li>
-</ol>
-<p>There seemed to be a common consensus that there are some very real
-problems we should aim to solve together and standardize. As we have
-<a href="2014-11-21_To_PGP_MIME_Or_Not.html">blogged about before</a>, these are
-issues which Mailpile cares deeply about, so I was very happy to get a
-chance to share our experience, ideas and learn from the others. Further
-steps will be taken online, in code and on mailing lists.</p>
-<p>Sessions I was unable to attend discussed topics such as key discovery,
-key certification, key synchronization, next-generation key servers,
-terminology and user-facing vocabulary and fostering ongoing
-collaboration between the attending projects.</p>
-<p>All in all, the summit greatly exceeded my expectations. There was very
-little bickering or bike-shedding, and all attendees seemed happy to set
-aside their political differences in the interest of collaboration and
-improving the e-mail encryption ecosystem.</p>
-<p>I look forward to working with all of them in the future.</p>
-<p>...</p>
-<h2>Weekly Status Summary</h2>
-<h3>Done last week</h3>
-<ol>
-<li>Started writing code again (fixing PGP-related bugs) in my
-   local repository</li>
-<li>Responded to issues and pull requests on Github</li>
-<li>Exchanged e-mails with potential financial backers of the project</li>
-<li>Prepared a presentation and ideas for the OpenPGP summit</li>
-<li>Attended the OpenPGP summit</li>
-</ol>
-<h3>Plans for this week</h3>
-<ol>
-<li>OpenPGP summit follow-up work</li>
-<li>Continue communicating with potential backers</li>
-<li>Drafting work plans for the summer, aiming to release Mailpile 1.0
-   this fall</li>
-</ol>
-  <hr>
 
   <h3>Older stuff</h3>
   <ul>
+    <li><a href="2015-04-20_OpenPGP_Email_Summit.html">The First OpenPGP E-mail Summit</a></li>
     <li><a href="2015-04-13_Back_to_Work.html">Back to Work!</a></li>
     <li><a href="2015-03-06_Beta_Rejected.html">Beta Rejected!</a></li>
     <li><a href="2015-02-26_Revisiting_the_GnuPG_discussion.html">More thoughts on working with GnuPG</a></li>
@@ -443,7 +509,8 @@ improving the e-mail encryption ecosystem.</p>
         <div id="footer" class="clearfix">
             <div class="one-third">
                 <h3>Please Donate</h3>
-                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
                 <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
             </div>
             <div class="one-third">
@@ -451,23 +518,29 @@ improving the e-mail encryption ecosystem.</p>
                 <ul class="add-bottom">
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
-                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
-                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
                 </ul>
             </div>
             <div class="one-third">
-                <h3>Downloads</h3>
+                <h3>Resources</h3>
                 <ul class="add-bottom">
-                    <li>Source Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
-                    <li>Bugs, Issues: <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Go Here</a></li>
-          <li>Ideas: <a href="https://github.com/mailpile/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
-          <li>Plugin Ideas: <a href="https://github.com/mailpile/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
-                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
-        </ul>
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
                 <ul>
-                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
-                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
                 </ul>
             </div>
         </div>
@@ -476,6 +549,9 @@ improving the e-mail encryption ecosystem.</p>
 
 
     </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
 
 </body>
 </html>

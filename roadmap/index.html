@@ -47,15 +47,25 @@
     <div id="navigation">
       <div class="menu-button">Menu</div>
         <ul data-breakpoint="800" class="flexnav">
-            <li><a href="/" class="scroll-link">About</a></li>
-            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
-            <li><a href="/demos/" class="scroll-link">Demos</a></li>
-            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
     </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
 
     <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
@@ -74,6 +84,7 @@
     <button id="login" class="button-primary">Log in</button>
   </form>
   <p>Don't have a login? All you need to do is <a href="/donate/"><span class="icon-donate"></span> Donate $23.00 or more</a> per year to support the creation of Mailpile :)</p>
+  <p><i>Donated already? Your invitation should arrive at some point in May 2015.</i></p>
 </div>
 <div id="logout-form" class="hide text-center clearfix">
   <h6 class="remove-bottom">Halló <strong class="login-nickname"></strong>, thanks for being part of our community <button class="button-primary logout">Log out</button></h6>
@@ -86,52 +97,60 @@
 
   <div id="roadmap-details" class="row clearfix hide">
     <div class="col-10">
-      <h3>Prioritize our Roadmap</h3>
-      <p>Our roadmap consists of new features, ideas, and known bugs that we are aware of. Drag items in list to let us know what issues are of the highest priority to you and what you'd like to see fixed the fastest. To add an item please <a href="https://github.com/pagekite/mailpile/issues/new" target="_blank">file an issue on Github.</a></p>
+      <h3>Prioritize our Roadmap
+          <img alt="" style="width: 30px;" src="/img/happy-star.png"></h3>
+      <p>Our roadmap consists of new features, ideas, and known bugs that we
+         are aware of. Drag items in list to let us know what issues are of
+         the highest priority to you and what you'd like to see fixed the
+         fastest. To propose a new item, please
+         <a href="https://github.com/pagekite/mailpile/issues/new" target="_blank">file
+         an issue on Github.</a></p>
     </div>
     <div class="col-6">
-      <h3>Vote on Decisions</h3>
-      <p>There are decisions we need to make as a company & project. Cast your vote yes or no to decide the outcome of each. You can also <a href="https://github.com/pagekite/mailpile/issues/new" target="_blank">submit new items</a> to the list.</p>
+      <h3>Vote on Decisions
+          <img alt="" style="width: 30px;" src="/img/happy-star.png"></h3>
+      <p>There are decisions we need to make as a company & project. Cast
+         your vote yes or no to decide the outcome of each.</p>
     </div>
   </div>
 
   <div class="row clearfix">
     <div class="col-10">
-    <ul class="milestones vote-list ">
-   <li class="milestone milestone-1_0_release">1.0 Release    <ul class="labels ">
-      <li class="label label-tasks">Tasks       <ol class="issues ranked-election " data-election="all-1_0_release-tasks-issues">
-         <li class="issue state-open label-stretch label-tasks" data-rank="1" data-state="open" data-labels="stretch, tasks" data-comments="0" data-issue="998"><h6 class="title">Create web UI for Filters</h6> <span class="summary">Mailpile has a built-in filter system, where messages that match certain search terms can automatically be tagged as they are received so the user does not have to sort his mail by hand. This is particularly useful for managing mailing lists. The web interface needs to expose this functionality.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/998">see details</a></li>
-         <li class="issue state-open label-tasks" data-rank="2" data-state="open" data-labels="tasks" data-comments="9" data-issue="996"><h6 class="title">Create Debian and RPM packages for Linux</h6> <span class="summary">We should provide binary packages of Mailpile for all the major Linux distributions.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/996">see details</a></li>
-         <li class="issue state-open label-stretch label-tasks" data-rank="3" data-state="open" data-labels="stretch, tasks" data-comments="0" data-issue="1004"><h6 class="title">Fix our support for bare PGP-encrypted attachments</h6> <span class="summary">Currently if a Mailpile user is sent an attachment encrypted using PGP, in an otherwise unencrypted message (not using PGP/MIME), we do not automatically decrypt the attachment for the user. This should be fixed.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1004">see details</a></li>
-         <li class="issue state-open label-stretch label-tasks" data-rank="4" data-state="open" data-labels="stretch, tasks" data-comments="1" data-issue="967"><h6 class="title">Manual PGP key selection</h6> <span class="summary">Some people do not include their email address in their PGP key. Being able to manually assign a PGP key to a contact by key ID would allow encrypted email to be sent to them.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/967">see details</a></li>
-         <li class="issue state-open label-tasks" data-rank="5" data-state="open" data-labels="tasks" data-comments="1" data-issue="994"><h6 class="title">Implement POP3 mail sources</h6> <span class="summary">POP3 is the older standard for downloading e-mail from a mail server, predating even IMAP. For users who just want to download all their mail and do not wish to keep a remote server up to date, this is still the most efficient option. We should implement it.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/994">see details</a></li>
-         <li class="issue state-open label-tasks" data-rank="6" data-state="open" data-labels="tasks" data-comments="1" data-issue="995"><h6 class="title">Improve overall speed of the web UI</h6> <span class="summary">The current HTML interface can be slow at times and does not auto-update information. We should use more "AJAX" style methods to speed things up and show timely information.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/995">see details</a></li>
-         <li class="issue state-closed label-stretch label-tasks" data-rank="7" data-state="closed" data-labels="stretch, tasks" data-comments="15" data-issue="60"><h6 class="title">Make it easy to use multiple e-mail accounts</h6> <span class="summary">Are you supporting mutiple imap accounts within one ui?</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/60">see details</a></li>
-         <li class="issue state-open label-stretch label-tasks" data-rank="8" data-state="open" data-labels="stretch, tasks" data-comments="0" data-issue="1003"><h6 class="title">Implement web UI for enabling/disabling autotagging</h6> <span class="summary">The Mailpile autotagger is good for more than just classifying spam; it can learn to automatically apply any tag. We should expose this feature in the app's user interface so people can use it.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1003">see details</a></li>
-         <li class="issue state-open label-stretch label-tasks" data-rank="9" data-state="open" data-labels="stretch, tasks" data-comments="0" data-issue="1001"><h6 class="title">Implement IMAP IDLE support</h6> <span class="summary">IMAP IDLE provides a mechanism whereby the remote mail server can notify Mailpile that a new message has arrived, as soon as it is available. If Mailpile's IMAP mail sources supported this feature, then IMAP users would experience almost immediate delivery of mail.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1001">see details</a></li>
-         <li class="issue state-closed label-tasks" data-rank="10" data-state="closed" data-labels="tasks" data-comments="1" data-issue="997"><h6 class="title">Improve overall speed of Indexing of new mail</h6> <span class="summary">When mail gets downloaded it is slow and takes a bit of time (5 - 30 mins) before it surfaces in your inbox. We are aware of this.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/997">see details</a></li>
-         <li class="issue state-open label-tasks" data-rank="11" data-state="open" data-labels="tasks" data-comments="1" data-issue="897"><h6 class="title">Implement Thunderbird mail sources</h6> <span class="summary">Mailpile has support for the native Thunderbird mailbox format. However, we are currently lacking a Mail Source implementation to take care of importing, discovering new mail and keeping Mailpile up to date as time passes. This should be fixed.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/897">see details</a></li>
-         <li class="issue state-open label-tasks" data-rank="12" data-state="open" data-labels="tasks" data-comments="0" data-issue="993"><h6 class="title">Implement MacMail sources</h6> <span class="summary">Mailpile has support for the native Mac Mail mailbox format. However, we are currently lacking a Mail Source implementation to take care of importing, discovering new mail and keeping Mailpile up to date as time passes. This should be fixed.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/993">see details</a></li>
-         <li class="issue state-open label-tasks" data-rank="13" data-state="open" data-labels="tasks" data-comments="1" data-issue="487"><h6 class="title">Implement smart per-contact "crypto policy"</h6> <span class="summary">Mailpile should automatically figure out what is the best way to communicate with someone, based on the history of how they have communicated in the recent past. This should allow us to, by default, offer the highest level of security that doesn't become a nuisance during everyday use.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/487">see details</a></li>
-         <li class="issue state-open label-stretch label-tasks" data-rank="14" data-state="open" data-labels="stretch, tasks" data-comments="1" data-issue="999"><h6 class="title">Implement support for viewing &amp; editing Contacts</h6> <span class="summary">Currently one can only add a contact but not edit them from the web UI. We need to add support for editing of contacts (adding &amp; removing addresses), as well as polish the existing Contact View page!</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/999">see details</a></li>
-      </ol></li>
-   </ul></li>
+      <h4>Beta III and the 1.0 Release</h4>
+      <div class="roadmap-single-choices add-bottom">
+        <p>The 1.0 roadmap has been decided!</p>
+        <p>Don't be disappointed if you did not get to vote on this, there
+           was not really much to discuss. We will quite simply be shipping
+           the <i>simplest thing possible</i> that fulfills the basic goals
+           stated in our fundraising campaign.</p>
+        <p>Here it is, in all it's pointy-haired-boss glory:</p>
+        <p><img src="/files/2015-Summer-Roadmap.jpg" border="0"></p>
+        <p>For details about what that chart actually means, check out
+           <a href="/blog/2015-04-27_Roadmap_to_v1.html">Bjarni's blog post
+           about the roadmap</a>.</p>
+      </div>
+      <ul class="milestones vote-list ">
    <li class="milestone milestone-post_1_0_roadmap">Post 1.0 Roadmap    <ul class="labels ">
       <li class="label label-high_level_goals">High level goals       <ol class="issues ranked-election " data-election="all-post_1_0_roadmap-high_level_goals-issues">
-         <li class="issue state-open label-high_level_goals" data-rank="1" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1126"><h6 class="title">Forge partnerships with personal cloud projects</h6> <span class="summary">There are numerous projects out there, aiming to provide general consumers with personal servers or "personal clouds" that will help them be more independent and private online. Mailpile should work with these projects both on technical and potentially business fronts, as their goals are strongly aligned with ours and the technology complementary.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1126">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="2" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1125"><h6 class="title">Forge partnerships with e-mail hosting providers</h6> <span class="summary">Mailpile should forge partnerships with existing e-mail hosting providers, in order to guarantee Mailpile is available to their customers and their customers have a smooth and pleasant user experience. This may also be a potential source of revenue for the project and a way to fund ongoing development, depending on what sort of agreements are made.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1125">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="1" data-state="open" data-labels="high_level_goals" data-comments="1" data-issue="547"><h6 class="title">Make it easy for 3rd parties to develop plugins for Mailpile</h6> <span class="summary">Plugins make it possible for 3rd party developers to contribute features and improvements to Mailpile, without needing to coordinate or seek permission. This is an important part of making Mailpile less dependent on the core team in the long-run, while making it easy for our wider community to add features that are tailored to their specific e-mail needs.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/547">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="2" data-state="open" data-labels="high_level_goals" data-comments="1" data-issue="811"><h6 class="title">Make it easy to backup and restore e-mail, contacts, settings and metadata</h6> <span class="summary">People's e-mail contains large amounts of valuable personal information. Considering that part of Mailpile's mission is to make it easy for people to self-host and remove their private data from the corporate clouds, it is vitally important that we take steps to ensure this valuable data does not get lost due hardware malfunction, software bugs or human error. Mailpile needs to help people make secure backups of their mail, whether to removable physical media or to remote online storage.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/811">see details</a></li>
          <li class="issue state-open label-high_level_goals" data-rank="3" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1132"><h6 class="title">Implement protection against viruses and phishing</h6> <span class="summary">In addition to spam, viruses and phishing are serious risks that come with receiving e-mail over the Internet. Although Mailpile's built-in spam filter provides a degree of protection against these threats, further steps are necessary, many of which are outlined in our security roadmap.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1132">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="4" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1130"><h6 class="title">Improve end-user documentation</h6> <span class="summary">There is a large amount of work that should be done in terms of explaining how Mailpile and it's many components work. This covers everything from context-sensitive hints within the app itself, to long-form manuals, to video tutorials, to the website presenting Mailpile to the world. In addition, the most critical parts of the end-user documentation will need to be translated to multiple languages. The core team will not be able to do all of this work ourselves, but we need to be sure infrastructure is in place to work with our community on this important task and it might be worth spending a portion of our budget on hiring tech writers, editors or translators.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1130">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="5" data-state="open" data-labels="high_level_goals" data-comments="8" data-issue="820"><h6 class="title">Make Mailpile useful in shared-hosting and multiuser environments</h6> <span class="summary">Mailpile is currently a personal webmail client, which only handles e-mail for one person. The project should be expanded so Mailpile can be used in shared-hosting and multiuser environments, such as small to medium businesses and organizations. This will further our mission to bring user-friendly encryption to a wider audience, and make the project more sustainable as larger organizations become motivated to contribute resources to the development and upkeep of Mailpile.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/820">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="6" data-state="open" data-labels="high_level_goals" data-comments="1" data-issue="547"><h6 class="title">Make it easy for 3rd parties to develop plugins for Mailpile</h6> <span class="summary">Plugins make it possible for 3rd party developers to contribute features and improvements to Mailpile, without needing to coordinate or seek permission. This is an important part of making Mailpile less dependent on the core team in the long-run, while making it easy for our wider community to add features that are tailored to their specific e-mail needs.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/547">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="7" data-state="open" data-labels="high_level_goals" data-comments="1" data-issue="811"><h6 class="title">Make it easy to backup and restore e-mail, contacts, settings and metadata</h6> <span class="summary">People's e-mail contains large amounts of valuable personal information. Considering that part of Mailpile's mission is to make it easy for people to self-host and remove their private data from the corporate clouds, it is vitally important that we take steps to ensure this valuable data does not get lost due hardware malfunction, software bugs or human error. Mailpile needs to help people make secure backups of their mail, whether to removable physical media or to remote online storage.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/811">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="8" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1131"><h6 class="title">Make it easy to send e-mail over the Tor network instead of SMTP</h6> <span class="summary">When an e-mail is sent, generally it is relayed from mail server to mail server in multiple hops. At each step, the people operating the servers have access to information about senders, recipients, IP addresses, the subject of the message and various other metadata - even if the body of the mail is PGP encrypted. In order to avoid this privacy leak, we should make it possible for Mailpile users to send each other mail directly over the Tor network. This eliminates the middle-men and may also improve the user experience, since when e-mail is delivered directly there is no longer any doubt as to whether it has been delivered or not: no more uncertainty as to whether it is stuck half-way on some intermediate mail server somewhere, perhaps wrongly blocked as spam.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1131">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="4" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1131"><h6 class="title">Make it easy to send e-mail over the Tor network instead of SMTP</h6> <span class="summary">When an e-mail is sent, generally it is relayed from mail server to mail server in multiple hops. At each step, the people operating the servers have access to information about senders, recipients, IP addresses, the subject of the message and various other metadata - even if the body of the mail is PGP encrypted. In order to avoid this privacy leak, we should make it possible for Mailpile users to send each other mail directly over the Tor network. This eliminates the middle-men and may also improve the user experience, since when e-mail is delivered directly there is no longer any doubt as to whether it has been delivered or not: no more uncertainty as to whether it is stuck half-way on some intermediate mail server somewhere, perhaps wrongly blocked as spam.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1131">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="5" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1126"><h6 class="title">Forge partnerships with personal cloud projects</h6> <span class="summary">There are numerous projects out there, aiming to provide general consumers with personal servers or "personal clouds" that will help them be more independent and private online. Mailpile should work with these projects both on technical and potentially business fronts, as their goals are strongly aligned with ours and the technology complementary.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1126">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="6" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1125"><h6 class="title">Forge partnerships with e-mail hosting providers</h6> <span class="summary">Mailpile should forge partnerships with existing e-mail hosting providers, in order to guarantee Mailpile is available to their customers and their customers have a smooth and pleasant user experience. This may also be a potential source of revenue for the project and a way to fund ongoing development, depending on what sort of agreements are made.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1125">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="7" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1130"><h6 class="title">Improve end-user documentation</h6> <span class="summary">There is a large amount of work that should be done in terms of explaining how Mailpile and it's many components work. This covers everything from context-sensitive hints within the app itself, to long-form manuals, to video tutorials, to the website presenting Mailpile to the world. In addition, the most critical parts of the end-user documentation will need to be translated to multiple languages. The core team will not be able to do all of this work ourselves, but we need to be sure infrastructure is in place to work with our community on this important task and it might be worth spending a portion of our budget on hiring tech writers, editors or translators.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1130">see details</a></li>
+         <li class="issue state-open label-high_level_goals" data-rank="8" data-state="open" data-labels="high_level_goals" data-comments="8" data-issue="820"><h6 class="title">Make Mailpile useful in shared-hosting and multiuser environments</h6> <span class="summary">Mailpile is currently a personal webmail client, which only handles e-mail for one person. The project should be expanded so Mailpile can be used in shared-hosting and multiuser environments, such as small to medium businesses and organizations. This will further our mission to bring user-friendly encryption to a wider audience, and make the project more sustainable as larger organizations become motivated to contribute resources to the development and upkeep of Mailpile.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/820">see details</a></li>
          <li class="issue state-open label-high_level_goals" data-rank="9" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1124"><h6 class="title">Make it possible to create custom themes for Mailpile</h6> <span class="summary">It would be nice if web developers and designers could customize the look and feel of Mailpile. This will allow Mailpile to appeal to a broader audience and involve more design-minded people in the project. E-mail is such a large part of people's lives, that it is important that people feel comfortable and at ease in their mail client. It should be beautiful, as well as functional. In addition, there are certain communities with special needs that are best addressed with custom designs, whether for branding reasons, to foster a sense of community or to alleviate a disability.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1124">see details</a></li>
          <li class="issue state-open label-high_level_goals" data-rank="10" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1128"><h6 class="title">Perform usability studies on e-mail search and organization</h6> <span class="summary">Performing usability studies, where people with diverse backgrounds and varying levels of technical skill, use the program can provide valuable insights into what needs to be improved and how. We should perform such studies with a focus on how to find and organize e-mail using Mailpile.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1128">see details</a></li>
          <li class="issue state-open label-high_level_goals" data-rank="11" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1127"><h6 class="title">Perform usability studies on encryption and e-mail</h6> <span class="summary">Performing usability studies, where people with diverse backgrounds and varying levels of technical skill, use the program can provide valuable insights into what needs to be improved and how. We should perform such studies with a focus on encryption, digital signatures and the other "crypto" related capabilities of Mailpile.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1127">see details</a></li>
          <li class="issue state-open label-high_level_goals" data-rank="12" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1129"><h6 class="title">Perform usability studies on the setup and configuration</h6> <span class="summary">Performing usability studies, where people with diverse backgrounds and varying levels of technical skill, use the program can provide valuable insights into what needs to be improved and how. We should perform such studies with a focus on how to get started and how to configure Mailpile.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1129">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="13" data-state="open" data-labels="high_level_goals" data-comments="0" data-issue="1133"><h6 class="title">Upgrade to GnuPG 2.1 or later</h6> <span class="summary">Mailpile currently relies on GnuPG 1.4. This is a tried and tested implementation of PGP, but it is slowly becoming obsolete. In particular, we need to upgrade to GnuPG 2.1 in order to allow Mailpile users to take advantage of Elliptic Curve Cryptograpy which will be a requirement in order to exchange secure messages with users of Google's End-to-End encrypted e-mail solution.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1133">see details</a></li>
-         <li class="issue state-open label-high_level_goals" data-rank="14" data-state="open" data-labels="high_level_goals" data-comments="12" data-issue="160"><h6 class="title">Upgrade to Python 3.3 or newer</h6> <span class="summary">Mailpile is currently written in Python 2.7, which is no longer being actively developed and improved by the Python community. In order to stay current with the state of the art and reap the benefits of ongoing developments, Mailpile should upgrade to Python 3.3 (or newer).</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/160">see details</a></li>
+      </ol></li>
+      <li class="label label-tasks">Tasks       <ol class="issues ranked-election " data-election="all-post_1_0_roadmap-tasks-issues">
+         <li class="issue state-open label-stretch label-tasks" data-rank="1" data-state="open" data-labels="stretch, tasks" data-comments="0" data-issue="998"><h6 class="title">Create web UI for Filters</h6> <span class="summary">Mailpile has a built-in filter system, where messages that match certain search terms can automatically be tagged as they are received so the user does not have to sort his mail by hand. This is particularly useful for managing mailing lists. The web interface needs to expose this functionality.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/998">see details</a></li>
+         <li class="issue state-open label-stretch label-tasks" data-rank="2" data-state="open" data-labels="stretch, tasks" data-comments="1" data-issue="999"><h6 class="title">Implement support for viewing &amp; editing Contacts</h6> <span class="summary">Currently one can only add a contact but not edit them from the web UI. We need to add support for editing of contacts (adding &amp; removing addresses), as well as polish the existing Contact View page!</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/999">see details</a></li>
+         <li class="issue state-open label-stretch label-tasks" data-rank="3" data-state="open" data-labels="stretch, tasks" data-comments="0" data-issue="1003"><h6 class="title">Implement web UI for enabling/disabling autotagging</h6> <span class="summary">The Mailpile autotagger is good for more than just classifying spam; it can learn to automatically apply any tag. We should expose this feature in the app's user interface so people can use it.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1003">see details</a></li>
+         <li class="issue state-open label-tasks" data-rank="4" data-state="open" data-labels="tasks" data-comments="0" data-issue="1133"><h6 class="title">Upgrade to GnuPG 2.1 or later</h6> <span class="summary">Mailpile currently relies on GnuPG 1.4. This is a tried and tested implementation of PGP, but it is slowly becoming obsolete. In particular, we need to upgrade to GnuPG 2.1 in order to allow Mailpile users to take advantage of Elliptic Curve Cryptograpy which will be a requirement in order to exchange secure messages with users of Google's End-to-End encrypted e-mail solution.</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/1133">see details</a></li>
+         <li class="issue state-open label-tasks" data-rank="5" data-state="open" data-labels="tasks" data-comments="13" data-issue="160"><h6 class="title">Upgrade to Python 3.3 or newer</h6> <span class="summary">Mailpile is currently written in Python 2.7, which is no longer being actively developed and improved by the Python community. In order to stay current with the state of the art and reap the benefits of ongoing developments, Mailpile should upgrade to Python 3.3 (or newer).</span> <a class="more" href="https://github.com/mailpile/Mailpile/issues/160">see details</a></li>
       </ol></li>
    </ul></li>
 </ul>
@@ -141,33 +160,42 @@
       <h4>Current Decisions</h4>
       <div class="roadmap-single-choices add-bottom">
         <div class="single-choice-election">
-          <div class="issue" data-issue="30201" data-options="yes,no">
-            <span class="issue-title"><a href="https://github.com/pagekite/Mailpile/issues/30201">Drop the Apache 2 license</a></span>
-            <span class="issue-details">Dropping the Apache 2 license makes Mailpile keeps it more focused on remaining Free software... someone else write this out.</span>
+          <div class="issue" data-issue="30201" data-options="AGPLv3,Apache2">
+            <span class="issue-title">
+              <a href="/blog/2015-05-08_Choosing_a_License.html">Help choose a license for Mailpile 1.0</a></span>
+            <span class="issue-details">
+              Should Mailpile 1.0 be published under the Free Software
+              Foundation's GNU AGPL version 3, or the more liberal Apache
+              License version 2.0? Confused? So are we! Some links:
+              <ul class="circle" style="margin-top: 1em;">
+                <li><a target=_blank href="http://choosealicense.com/licenses/">Licenses at a glance</a></li>
+                <li><a target=_blank href="https://www.gnu.org/philosophy/license-list.html">The FSF on Licenses</a></li>
+                <li><a target=_blank href="http://oss-watch.ac.uk/resources/licdiff">OSS Watch on Licenses</a></li>
+                <li><a target=_blank href="http://www.theregister.co.uk/2011/03/31/google_on_open_source_licenses/">Why Google avoids AGPLv3 code</a></li>
+                <li><a href="/blog/2015-05-08_Choosing_a_License.html">Mailpile blog on licensing</a></li>
+              </ul>
+            </span>
             <div class="vote-options"></div>
           </div>
         </div>
         <div class="single-choice-election">
-          <div class="issue" data-issue="30221" data-options="yes,no">
-            <span class="issue-title"><a href="https://github.com/pagekite/Mailpile/issues/30201">Drop the AGPL 3 license</a></span>
-            <span class="issue-details">Dropping the AGPL 3 license would make Mailpile more friendly to companies that are not fully open source and have more commericial applications in mind.</span>
-          <div class="vote-options"></div>
+          <div class="issue" data-issue="30231" data-options="yes,no">
+            <span class="issue-title"><a href="/files/the-mailpiles.jpg">Should the Mailpile team get new haircuts?</a></span>
+            <span class="issue-details">Some people have complained. So, we wanted to put it to vote for you, dear community supporters, since after all we are using money you graciously donated.</span>
+            <div class="vote-options"></div>
+          </div>
         </div>
       </div>
-      <div class="single-choice-election">
-        <div class="issue" data-issue="30231" data-options="yes,no">
-          <span class="issue-title"><a href="https://github.com/pagekite/Mailpile/issues/30201">Should the Mailpile team get new haircuts?</a></span>
-          <span class="issue-details">Some people have complained. So, we wanted to put it to vote for you, dear community supporters, since after all we are using money you graciously donated.</span>
-          <div class="vote-options"></div>
+      <div id="community-perks" class="hide">
+        <h4>Community Perks</h4>
+        <div class="roadmap-single-choices">
+          <p class="remove-bottom">
+            Want to get the most bleeding edge build of Mailpile? Download a
+            daily snapshot to get the newest hotness, but beware of (and)
+            report bugs, takk!
+            <a href="https://www.mailpile.is/files/snapshots/" class="button-primary button-small add-top"><span class="icon-links"></span> Download Daily Snapshots</a>
+          </p>
         </div>
-      </div>
-    </div>
-    <div id="community-perks" class="hide">
-      <h4>Community Perks</h4>
-      <div class="roadmap-single-choices">
-        <p class="remove-bottom">Want to get the most bleeding edge build of Mailpile? Download a daily snapshot to get the newest hotness, but beware of (and) report bugs, takk!
-          <a href="https://www.mailpile.is/files/snapshots/" class="button-primary button-small add-top"><span class="icon-links"></span> Download Daily Snapshots</a>
-        </p>
       </div>
     </div>
   </div>
@@ -180,7 +208,8 @@
         <div id="footer" class="clearfix">
             <div class="one-third">
                 <h3>Please Donate</h3>
-                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
                 <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
             </div>
             <div class="one-third">
@@ -188,23 +217,29 @@
                 <ul class="add-bottom">
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
-                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
-                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
                 </ul>
             </div>
             <div class="one-third">
-                <h3>Downloads</h3>
+                <h3>Resources</h3>
                 <ul class="add-bottom">
-                    <li>Source Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
-                    <li>Bugs, Issues: <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Go Here</a></li>
-          <li>Ideas: <a href="https://github.com/mailpile/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
-          <li>Plugin Ideas: <a href="https://github.com/mailpile/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
-                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
-        </ul>
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
                 <ul>
-                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
-                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
                 </ul>
             </div>
         </div>
@@ -213,6 +248,9 @@
 
 
     </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
 
 </body>
 </html>

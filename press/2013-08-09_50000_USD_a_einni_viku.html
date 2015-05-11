@@ -49,15 +49,25 @@
     <div id="navigation">
       <div class="menu-button">Menu</div>
         <ul data-breakpoint="800" class="flexnav">
-            <li><a href="/" class="scroll-link">About</a></li>
-            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
-            <li><a href="/demos/" class="scroll-link">Demos</a></li>
-            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
     </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
 
     <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
@@ -119,7 +129,8 @@ tölvupósti til <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#
         <div id="footer" class="clearfix">
             <div class="one-third">
                 <h3>Please Donate</h3>
-                <p>To ensure future development and growth of Mailpile and our community!</p>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
                 <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
             </div>
             <div class="one-third">
@@ -127,23 +138,29 @@ tölvupósti til <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#
                 <ul class="add-bottom">
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
-                    <li>Facebook: <a href="https://facebook.com/mailpile" target="_blank">Mailpile</a></li>
-                    <li>IRC freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
                 </ul>
             </div>
             <div class="one-third">
-                <h3>Downloads</h3>
+                <h3>Resources</h3>
                 <ul class="add-bottom">
-                    <li>Source Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
-                    <li>Bugs, Issues: <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Go Here</a></li>
-          <li>Ideas: <a href="https://github.com/mailpile/Mailpile/issues?milestone=2&state=open" target="_blank"> Go Here</a></li>
-          <li>Plugin Ideas: <a href="https://github.com/mailpile/Mailpile/issues?milestone=6&state=open" target="_blank"> Go Here</a></li>
-                    <li>Original Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
-        </ul>
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
                 <ul>
-                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector (SVG)</a></li>
-                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color (PNG)</a></li>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
                 </ul>
             </div>
         </div>
@@ -152,6 +169,9 @@ tölvupósti til <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#
 
 
     </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
 
 </body>
 </html>

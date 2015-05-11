@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 <div class="text-center">
   <input id="faq-search" class="search" placeholder="Search Questions">
-  <a id='show-toc' href="#top">... <big>or browse</big></a>
+  &nbsp; <a id='show-toc' href="#top"><big>contents</big></a> &nbsp;
 </div>
 
 <div id="toc"><ul>
