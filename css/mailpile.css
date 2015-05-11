@@ -3153,6 +3153,8 @@ a.vote:hover {
   color: #4d4d4d;
   cursor: pointer;
 }
+a.vote.selected.vote-AGPLv3,
+a.vote.selected.vote-Apache2,
 a.vote.selected.vote-yes {
   background: #4b9441;
   color: #ffffff;

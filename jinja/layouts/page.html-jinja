@@ -132,11 +132,13 @@
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
                     <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
                     <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
                         <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
                         4161 CD18 CCA1 1A0B 1F4C<br>
                         3EA0 AAD9 65A4 7077 75F9
                     </a></li>
+-->
                 </ul>
             </div>
             <div class="one-third">
