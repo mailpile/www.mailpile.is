@@ -4,6 +4,245 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>Roadmap Reality Check</title>
+    <link>http://www.mailpile.is/blog/2015-06-01_Roadmap_Reality_Check.html</link>
+    <description>&lt;p&gt;First, an announcment:&lt;/p&gt;
+&lt;h3&gt;Invitations to the voting page have been sent!&lt;/h3&gt;
+&lt;p&gt;All 3015 of them!&lt;/p&gt;
+&lt;p&gt;If you donated $23 USD (or more) to the project and haven&#39;t yet received
+an invitation, please &lt;strong&gt;check your spam&lt;/strong&gt;. If nothing&#39;s there, please
+&lt;a href=&#34;mailto:team@mailpile.is?subject=Community+Site&#34;&gt;get in touch&lt;/a&gt;. We might
+not have a valid e-mail address for you on file, or it may be that
+things just got lost in the shuffle.&lt;/p&gt;
+&lt;p&gt;Voting on the license will continue &lt;strong&gt;until July 1&lt;/strong&gt;, at which point I will
+call the results.&lt;/p&gt;
+&lt;p&gt;Hooray!&lt;/p&gt;
+&lt;h3&gt;Roadmap Distractions&lt;/h3&gt;
+&lt;p&gt;In addition to getting the invitations sent out this last week has been
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/commits/master&#34;&gt;very productive on a the code
+front&lt;/a&gt;... just not
+entirely on the stuff I was &lt;em&gt;supposed&lt;/em&gt; to be working on.&lt;/p&gt;
+&lt;p&gt;Distractions included:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Going over the settings of our Twitter and Facebook accounts&lt;/li&gt;
+&lt;li&gt;Making the app less pretty (temporarily, to manage expectations)&lt;/li&gt;
+&lt;li&gt;Adding in-app instructions on how best to report bugs&lt;/li&gt;
+&lt;li&gt;Responding to some Github issues, fixed some buglets&lt;/li&gt;
+&lt;li&gt;Implementing working proxy support (HTTP, SOCKS and Tor)&lt;/li&gt;
+&lt;li&gt;Implementing &#34;select all matching this search&#34;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The last two in particular are both awesome milestones in their own
+right, things which had been languishing at 90% in our code-base for
+&lt;em&gt;months&lt;/em&gt; now.&lt;/p&gt;
+&lt;p&gt;The proxy support allows us to start testing some of the main points
+from &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;the security
+roadmap&lt;/a&gt;,
+with respect to anonymous access to SMTP, IMAP servers and Gravatar.&lt;/p&gt;
+&lt;p&gt;Being able to &#34;select all&#34; makes the app an order of magnitude more
+powerful when it comes to organizing and extracting value from e-mail.
+Basic operations like &#34;&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/1027&#34;&gt;mark all messages as
+read&lt;/a&gt;&#34; depend on this,
+as did more advanced use cases, such as using
+&lt;a href=&#34;2015-05-18_Digging_for_Data.html&#34;&gt;Datadig&lt;/a&gt; to convert hundreds of
+PayPal notifications into a spreadsheet of Mailpile backers...&lt;/p&gt;
+&lt;h3&gt;Why you no focus?&lt;/h3&gt;
+&lt;p&gt;So this is the third week in a row with some pretty major, exciting
+distractions. Great progress, but not necessarily on things which were
+due according to the roadmap. What&#39;s going on?&lt;/p&gt;
+&lt;p&gt;I would hate to be my manager, but this is relatively normal; business
+as usual.&lt;/p&gt;
+&lt;p&gt;I don&#39;t know if this works the same way for other software developers,
+but after 20 years of coding for fun and profit I have learned that I am
+most productive if I have goals and deadlines, balanced with the freedom
+to frequently give in to inspiration and obsession. The above work falls
+squarely into the latter category; I got inspired and could visualize
+exactly how to solve each problem. Rather than put it off, I harnessed
+that creative energy and just &lt;em&gt;got things done&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It&#39;s all necessary, useful work. It&#39;s just not happening in the order
+laid out in the original plan.&lt;/p&gt;
+&lt;p&gt;But that does beg the question: how is &lt;a href=&#34;2015-04-27_Roadmap_to_v1.html&#34;&gt;the roadmap
+itself&lt;/a&gt; holding up?&lt;/p&gt;
+&lt;h3&gt;Roadmap Reality Check&lt;/h3&gt;
+&lt;p&gt;According to the roadmap, the &#34;Short Setup Flow&#34; theme should be complete now.
+It is not, I &lt;em&gt;am&lt;/em&gt; behind schedule. This is roughly where various
+roadmap-related tasks stand at the moment:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;90%&lt;/strong&gt; - Browse FS: Works! Is a bit ugly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;90%&lt;/strong&gt; - Accounts: The design is now pretty solid (in my head).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;80%&lt;/strong&gt; - Key discovery: results need to be injected back into the composer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;80%&lt;/strong&gt; - Browse Mailboxes: mail can be read without being added to the
+             search index first, but is buggy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;75%&lt;/strong&gt; - Account creation: almost works! This replaces the crypto,
+             profile, route and source setup pages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;60%&lt;/strong&gt; - Simplified UI: More cleanup is needed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;40%&lt;/strong&gt; - Home Page: is live, but unfinished.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10%&lt;/strong&gt; - Browsing IMAP/POP3: should be easy, but barely started.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All in all, I figure I&#39;m about a week or two behind.&lt;/p&gt;
+&lt;p&gt;Could be worse, releasing Beta III in about a month&#39;s time is still
+feasible. A bit crazy, but feasible...&lt;/p&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Admin work: Taxes and pay my own salary.&lt;/li&gt;
+&lt;li&gt;Finish the Add Account tool.&lt;/li&gt;
+&lt;li&gt;Upgrade the Add Account code so it also functions as Edit Account.&lt;/li&gt;
+&lt;li&gt;Either IMAP browsing work or start merging the new storage code
+   required for faster startup.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Mon, 01 Jun 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>An AMA with the Localization Lab</title>
+    <link>http://www.mailpile.is/blog/2015-05-25_Localization_Lab_AMA.html</link>
+    <description>&lt;p&gt;Last week&#39;s big event was a very entertaining &#34;Ask Me Anything&#34;
+session with the folks from the Open Technology Fund&#39;s &lt;a href=&#34;http://www.localizationlab.org/&#34;&gt;Localization
+Lab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It was a friendly and productive session which hopefully helped
+strengthen the ties between the coding side of the Mailpile project and
+the very important community of volunteers that translate our software
+to languages other than English. There were two main take-aways from the
+meeting, aside from getting to know each other a bit better:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Mailpile&#39;s core includes a plug-in designed to help translators,
+   which can be enabled with &lt;code&gt;mailpile&amp;gt; plugins/load i18nhelper&lt;/code&gt;. It
+   would be useful to develop this further and get feedback from the
+   translators themselves on how it could be improved.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The efforts of our translators are valuable and deserve to be
+   publicly recognized, just like the efforts of our other backers.
+   The Localization Lab folks were going to see what they could do
+   to compile a list of contributors, and I was going to make sure
+   that list found its way onto our &lt;a href=&#34;/thank-you/&#34;&gt;thank you page&lt;/a&gt;
+   and into an appropriate page within the app itself.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The rest of the week was business-as-usual. We sent out over 1000
+invitations to &lt;a href=&#34;/roadmap/&#34;&gt;the Mailpile community site&lt;/a&gt;, continued
+discussions with potential financial backers and related projects and
+created &lt;a href=&#34;https://github.com/mailpile/HoiPoi/issues&#34;&gt;a couple of detailed task descriptions on the Hoi Poi
+bug-tracker&lt;/a&gt;, in case
+friendly coders want to help improve the community site faster than
+I&#39;ll be able to do on my own.&lt;/p&gt;
+&lt;p&gt;On the tech front, I implemented a &#34;Save this search&#34; feature, which
+exposes some of the back-end&#39;s automated mail filter functionality in
+a (hopefully!) user-friendly way. I also made progress on the actual
+roadmap tasks- the VFS and the ability to browse the contents of a
+mailbox (local or remote) without having to add it to the search index
+first. These are still works in progress and have not been pushed up
+to github yet.&lt;/p&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Send out the rest of the invitations to community site&lt;/li&gt;
+&lt;li&gt;Revisit the settings of our Twitter and Facebook accounts. Should we
+   even have a Facebook account?&lt;/li&gt;
+&lt;li&gt;Keep on hacking...&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Mon, 25 May 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Digging for Data</title>
+    <link>http://www.mailpile.is/blog/2015-05-18_Digging_for_Data.html</link>
+    <description>&lt;p&gt;Last week mostly went according to plan: backers e-mails were found,
+invitations were sent, VFS work commenced.&lt;/p&gt;
+&lt;p&gt;Not quite as many invitations got sent out as I had hoped though,
+because I was overcome by a debilitating bout of productive
+procrastination. Inspired by the need to compile a list of backers on
+the one hand, and a desire to refresh my memory on front-end development
+work on the other, I ended up creating a new plugin that makes it easy
+to run custom data mining operations on your own e-mail.&lt;/p&gt;
+&lt;p&gt;This is what the result looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/files/2015-05-Datadig-Demo.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The text is all blurry, because data is being extracted so fast it
+makes your head spin! Right?&lt;/p&gt;
+&lt;p&gt;If you follow the S-shaped path of the green arrows, starting in the
+upper right-hand corner, the tool works like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Search and select messages&lt;/li&gt;
+&lt;li&gt;Click the grid icon (top-right arrow)&lt;/li&gt;
+&lt;li&gt;Add columns describing the desired data&lt;/li&gt;
+&lt;li&gt;Click the Preview button to see if it works&lt;/li&gt;
+&lt;li&gt;Download the results as a CSV file&lt;/li&gt;
+&lt;li&gt;Profit!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you want to extract information which has already been defined as one
+of the built-in recipes, this kind of personal data-mining becomes a
+mere matter of pointing and clicking (the rows of the &lt;em&gt;Data Source&lt;/em&gt;
+table are clickable). If the pre-existing recipes do not suffice, clever
+geeks can search for virtually anything by using regular expressions.&lt;/p&gt;
+&lt;p&gt;Hopefully, over time, Mailpile community members will create and share
+recipes for common things like invoice amounts or flight itineraries,
+bank statements or stock market alerts... if you&#39;ve ever wanted to graph
+the frequency of your Twitter mentions, this plugin (combined with any
+old spreadsheet application) makes that easy to do.&lt;/p&gt;
+&lt;p&gt;The plugin is named &lt;strong&gt;Datadig&lt;/strong&gt;, and to give it a try you will need to
+pull the latest Mailpile from Github and run the following command on
+the Mailpile CLI, &lt;code&gt;mailpile&amp;gt; plugins/load datadig&lt;/code&gt; - and yes, a GUI for
+this is in the works.  Quit Mailpile, restart and the Datadig grid icon
+should now appear whenever you select messages!&lt;/p&gt;
+&lt;p&gt;It seems only fitting that Mailpile will not only protect privacy, but
+will also help people datamine their own e-mail for their own personal
+benefit. The tabular spreadsheet format is universal and widely
+understood, making this sort of thing potentially useful to a very wide
+audience - not just hackers and coders.&lt;/p&gt;
+&lt;p&gt;Who would have thought CSV files could be so exciting?&lt;/p&gt;
+&lt;p&gt;The code lives in &lt;a href=&#34;https://github.com/mailpile/Mailpile/tree/master/mailpile/contrib/datadig&#34;&gt;.../mailpile/contrib/datadig/&lt;/a&gt;
+and I look forward to your pull requests. ;-)&lt;/p&gt;
+&lt;p&gt;In other news...&lt;/p&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Continue sending out invitations to &lt;a href=&#34;/roadmap/&#34;&gt;the voting page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More work on the VFS layer&lt;/li&gt;
+&lt;li&gt;Take part in the &lt;a href=&#34;https://twitter.com/L10nLab/status/597827047654842369&#34;&gt;Localization Lab&#39;s 2nd
+   AMA&lt;/a&gt;,
+   this Thursday!&lt;/li&gt;
+&lt;li&gt;Mystery meetings with mysterious people&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Mon, 18 May 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Site updates and community roadmap launched</title>
+    <link>http://www.mailpile.is/blog/2015-05-11_Weekly_Report.html</link>
+    <description>&lt;p&gt;This is the weekly report!  I&#39;m changing the format ever so slightly to
+ensure the headlines displayed on the front-page and in compact RSS
+readers are more informative.&lt;/p&gt;
+&lt;h3&gt;Done last week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Updated the public website. The &lt;a href=&#34;/faq/&#34;&gt;FAQ&lt;/a&gt; and &lt;a href=&#34;/&#34;&gt;front-page&lt;/a&gt; content
+   was reviewed, updated and cleaned up. Individual &lt;a href=&#34;/blog/&#34;&gt;blog&lt;/a&gt; posts now
+   have &#34;next&#34; and &#34;previous&#34; links. Minor tweaks were made to the site
+   design to help with navigation of large pages: an up arrow in the lower
+   right corner and a table-of-contents overview of the FAQ.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Unveiled &lt;a href=&#34;/roadmap/&#34;&gt;the Community Roadmap&lt;/a&gt;; votable content includes
+   the licensing question and the post-1.0 roadmap.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Published &lt;a href=&#34;/blog/2015-05-08_Choosing_a_License.html&#34;&gt;a detailed blog-post explaining the AGPLv3 vs. Apache licensing
+   question&lt;/a&gt; we need to resolve,
+   publicized on Twitter and Hacker News. Took part in discussions on both
+   venues.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Plans for this week&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Compile an up-to-date list of backers and their e-mail addresses, for
+   sending out invitations to the community voting page.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Send out the first 750 invitations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Back to coding: Key discovery front-end and VFS work are next!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    <pubDate>Mon, 11 May 2015 12:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>Choosing a License for Mailpile 1.0</title>
     <link>http://www.mailpile.is/blog/2015-05-08_Choosing_a_License.html</link>
     <description>&lt;p&gt;Dear Mailpile backers and supporters!&lt;/p&gt;
@@ -117,324 +356,5 @@ your website - or we can publish guest posts here on this blog.&lt;/p&gt;
 community &lt;a href=&#34;/roadmap/&#34;&gt;vote&lt;/a&gt; one way or another.&lt;/p&gt;
 &lt;p&gt;Thanks!&lt;/p&gt;</description>
     <pubDate>Fri, 08 May 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Last week: code pushed, Cloudfleet, key discovery</title>
-    <link>http://www.mailpile.is/blog/2015-05-04_Weekly_Report.html</link>
-    <description>&lt;h3&gt;Done last week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Published back-log of changes to Github, including: VFS code, low level
-   VCard fixes, improvements to how the GnuPG keyring and Mailpile contacts
-   are kept in sync, and various bug-fixes.&lt;/li&gt;
-&lt;li&gt;Merged &lt;a href=&#34;https://github.com/mailpile/Mailpile/pull/1035&#34;&gt;a pull-request&lt;/a&gt;
-   from the &lt;a href=&#34;https://cloudfleet.io/&#34;&gt;Cloudfleet&lt;/a&gt; folks, which allows the
-   Mailpile web interface to run under an arbitrary path (e.g.
-   http://localhost:33411/mailpile/in/inbox/).This will make it easier to
-   integrate Mailpile into existing web servers and domains.&lt;/li&gt;
-&lt;li&gt;Finished the back-end PGP key discovery code; the front-end still needs
-   updating.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Plans for this week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Update the Mailpile website&lt;/li&gt;
-&lt;li&gt;Update the content of the still-hidden community site and invite the
-   first batch of backers to take a look. The launch will happen in
-   stages, so don&#39;t get worried if you aren&#39;t in the first batch!&lt;/li&gt;
-&lt;li&gt;Update the PGP key discovery front-end code&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Mon, 04 May 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>A Roadmap to Version 1.0</title>
-    <link>http://www.mailpile.is/blog/2015-04-27_Roadmap_to_v1.html</link>
-    <description>&lt;p&gt;My dear Mailpile backers, I am going to go out on a limb here and
-publish a Roadmap to Version 1.0. I feel it is important to share the
-current direction of things.&lt;/p&gt;
-&lt;p&gt;I am hesitant, because I have drafted plans like this twice before and
-in neither case did the plans work out. Project management and planning
-is very hard! So please keep that in mind during the coming months and
-as you read through this post. This roadmap is written with the best
-intentions, but I may well have overlooked something critical or
-something unforseen may come up.&lt;/p&gt;
-&lt;p&gt;That said, there are quite a few tasks on this list which volunteers
-might be able to help out with. In particular, the Short Setup, Autoajax
-and Security themes all contain multiple tasks which could be done in
-parallel and may be relatively low hanging fruit. If something from this
-list strikes your fancy, please get in touch on IRC and let me know!&lt;/p&gt;
-&lt;p&gt;So without further ado, I give to you... a GANTT chart:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/files/2015-Summer-Roadmap.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
-&lt;p&gt;This chart shows the weeks ahead along the top, and the tasks I have
-chosen to focus on along the left. Filled in boxes in the area below
-show roughly when I expect to work on things. Not all the boxes have
-been filled in, but all the top-level tasks have time allocated. I have
-also labeled when I plan to be in Iceland for the summer, some of which
-will be vacation time.&lt;/p&gt;
-&lt;p&gt;The tasks of course are the most important part of this roadmap. Why
-these tasks, and not others? That is what the rest of this blog post is
-about. The order of things and the timing are less important, but when
-there are specific concerns they are mentioned.&lt;/p&gt;
-&lt;p&gt;The tasks fall into a few main themes: Website, Short Setup Flow,
-Simplified UI, Fast Startup, Autoajax, Security 1.0 and the actual
-releases. I will dedicate a few words to each of those themes.&lt;/p&gt;
-&lt;p&gt;Although there are admittedly quite a few new features in this plan, the
-team has actually been working on most of these things for months
-already. The intent is to not only address symptoms and fix shallow
-bugs, but to actually fix some of the root causes of our previous
-releases being so problematic. Our 1.0 will certainly not be bug-free,
-but it would be nice to ship it without any major known design flaws.&lt;/p&gt;
-&lt;h3&gt;Website&lt;/h3&gt;
-&lt;p&gt;The project website needs to be updated so it does a better job
-answering the following main questions:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;What is Mailpile?&lt;/li&gt;
-&lt;li&gt;Where can I get it?&lt;/li&gt;
-&lt;li&gt;How can I help?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;A very basic community site, long promised as one of the initial
-fundraising campaign perks, has actually been built! It just needs
-updated content and a launch.&lt;/p&gt;
-&lt;p&gt;Also, our hosting provider GreenQloud &lt;a href=&#34;https://www.greenqloud.com/truly-green-public-qloud/&#34;&gt;has announced that they are
-shutting down their public cloud
-service&lt;/a&gt;, so we
-need to move before the end of the summer. Although not strictly a
-1.0-related task, this is critical work that needs to be done before the
-release.&lt;/p&gt;
-&lt;h3&gt;Short Setup Flow&lt;/h3&gt;
-&lt;p&gt;Although the current setup flow is quite nice, this theme aims to
-shorten it to only two steps:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Choose your language&lt;/li&gt;
-&lt;li&gt;Choose a password for your Mailpile&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Although this is a very simple goal, making this possible requires
-adding functionality elsewhere in the app, resulting in the largest
-change planned for the summer.&lt;/p&gt;
-&lt;p&gt;After these two basic configuration steps, people would be taken
-directly to the app&#39;s &lt;strong&gt;home page&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The home page is a new concept. It is the starting point whenever the
-user logs on or start the app, presenting to the user an overview over
-the current state of their Mailpile. This would include a list of
-&lt;strong&gt;accounts&lt;/strong&gt; and basic statistics about each, options to add or remove
-accounts, and links to a &lt;strong&gt;browsing interface&lt;/strong&gt;. There will probably
-also be hints on this page, prompting the user towards the next steps
-needed to configure and use their Mailpile.&lt;/p&gt;
-&lt;p&gt;The browsing interface allows the user to explore either Mailpile&#39;s
-internal data, the local file system or the mailboxes and contacts
-associated with a particular account. It will be possible to read mail
-using this interface, but more importantly the user will be given the
-option to enable (or disable) background copying, syncing or just
-indexing of their mailboxes. When browsing other types of data, other
-appropriate configuration options should be presented instead.&lt;/p&gt;
-&lt;h4&gt;Technicalites&lt;/h4&gt;
-&lt;p&gt;Most of the tasks in this theme have to do with implementing a way to
-browse local mail or remote servers, adding the concept of &lt;strong&gt;accounts&lt;/strong&gt;
-and building a nice landing page.&lt;/p&gt;
-&lt;p&gt;Mailpile currently separates what most users think of as an account
-into Mail Sources, Profiles and Sending Routes. This division will be
-maintained internally, but does not necessarily need to be exposed to
-the end user.&lt;/p&gt;
-&lt;p&gt;The browsing feature depends on another new internal concept: a &#34;virtual
-file system&#34; (VFS) which abstracts away the differences between
-different types of data sources, making them all browsable using the
-same metaphors and same user interface.&lt;/p&gt;
-&lt;h4&gt;Justification&lt;/h4&gt;
-&lt;p&gt;This theme attempts to address a few key bits of feedback from early
-adopters:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;One of the first questions we got was: &#34;Where is the home page?&#34;&lt;/li&gt;
-&lt;li&gt;The current setup flow is rather long.&lt;/li&gt;
-&lt;li&gt;The setup UI for mapping IMAP folders to Mailpile tags is confusing.&lt;/li&gt;
-&lt;li&gt;There is no way to browse remote mail, short of importing it and
-   adding to the search engine. This can take a very long time and
-   discourages users.&lt;/li&gt;
-&lt;li&gt;Many reports of IMAP bugs were actually configuration problems, which
-   speaks to poor visibility into what the app is doing. Fixing this is
-   key to addressing point #2 in the
-   &lt;a href=&#34;/blog/2015-03-06_Beta_Rejected.html&#34;&gt;Beta Rejected&lt;/a&gt; blog post.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Other concerns which may also benefit from the VFS concept include:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Some administrators would like to store data in a database instead
-   of the local file system.&lt;/li&gt;
-&lt;li&gt;Mailpile will need to write data to the user&#39;s remote IMAP server to
-   implement backups or key syncing.&lt;/li&gt;
-&lt;li&gt;A lot of Mailpile&#39;s internal data structures are hard to discover and
-   configure at the moment; a browsable VFS is a very simple way to
-   address this in the near term. This will be useful for debugging and
-   will provide stop-gap functionality until more specialized user
-   interfaces can be developed.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;As this is a major change to the user experience, this theme is the 1st
-priority on the roadmap. It is important to get it shipped to users as
-soon as possible, so we can perform basic usability tests and get
-feedback on whether it really is an improvement or not. If people don&#39;t
-like (or understand) it, then there should still be time to respond to
-their feedback before launching.&lt;/p&gt;
-&lt;h3&gt;Simplified UI&lt;/h3&gt;
-&lt;p&gt;This theme is quite simply about removing unfinished elements from
-Mailpile&#39;s current user interface.&lt;/p&gt;
-&lt;p&gt;Many such elements would benefit from being split out into external
-plugins, so they can be developed outside the Mailpile core and have
-their own independent release cycles. As an example, Mailpile 1.0 may
-not include an address book. Instead, the current address book interface
-should be moved to a plugin which users will be able to add to their
-Mailpile without upgrading at a later date.&lt;/p&gt;
-&lt;p&gt;This theme addresses point #1 from our &lt;a href=&#34;/blog/2015-03-06_Beta_Rejected.html&#34;&gt;Beta
-Rejected&lt;/a&gt; post.&lt;/p&gt;
-&lt;h3&gt;Fast Startup&lt;/h3&gt;
-&lt;p&gt;This theme is about improving the startup-time and reducing the RAM
-usage of Mailpile.&lt;/p&gt;
-&lt;p&gt;If a user has a lot of mail, it can take a few minutes to start Mailpile
-on a slow computer. This is due to the fact that the metadata index
-(information about subjects, senders, dates, etc.) has to be loaded into
-RAM before the app can start up. In addition to annoying heavy users,
-the resulting RAM requirements also causes problems for providers
-interested in hosting Mailpile for other people.&lt;/p&gt;
-&lt;p&gt;This component of Mailpile has been largely rewritten already to use an
-alternate strategy, but the work needs to be finished, published and a
-migration process needs to be created for our existing users.&lt;/p&gt;
-&lt;p&gt;A side-benefit of this work will be to improve the encryption of the
-search index, and reduce the risk of data loss when the app crashes or
-is shut down uncleanly.&lt;/p&gt;
-&lt;p&gt;This is the most technically risky part of the roadmap, which is why it
-is the 2nd theme after the simplified setup flow. Once this works, we
-release Beta III and ask our users for testing and feedback.&lt;/p&gt;
-&lt;h3&gt;Autoajax&lt;/h3&gt;
-&lt;p&gt;This theme is about improving the performance of the web interface.&lt;/p&gt;
-&lt;p&gt;Once everything is up and running, the single most annoying thing (IMHO)
-about Mailpile is how slow the web interface is. This is embarrassing,
-since from the start we&#39;ve boasted about performance and being able to
-outperform many cloud-based web-mail solutions.&lt;/p&gt;
-&lt;p&gt;This theme will:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Reduce the number of full-page loads&lt;/li&gt;
-&lt;li&gt;Slim down the templates so full pages load faster&lt;/li&gt;
-&lt;li&gt;Implement better in-app notifications and live updates&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&#34;Autoajax&#34; is the internal code name for the progressive enhancement
-work which has already been done on this front. It just needs to get
-finished and shipped! A stretch goal for this theme is to make the web
-interface more responsive, so it becomes more usable on larger monitors
-or mobile devices.&lt;/p&gt;
-&lt;p&gt;This theme is very low risk; the worst that can happen is not all of
-the app gets updated and the UI performance stays unchanged for those
-pages.&lt;/p&gt;
-&lt;h3&gt;Security 1.0&lt;/h3&gt;
-&lt;p&gt;This part of the roadmap is admittedly incomplete.&lt;/p&gt;
-&lt;p&gt;In general, this theme is about fixing as many issues as possible which
-pertain to our published &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;Security
-Roadmap&lt;/a&gt;, as
-well as addressing point #3 from the &lt;a href=&#34;/blog/2015-03-06_Beta_Rejected.html&#34;&gt;Beta
-Rejected&lt;/a&gt; post.&lt;/p&gt;
-&lt;p&gt;The riskiest part of this theme will be to communicate the end result to
-our users, so they know whether the software is &#34;fit for purpose&#34;, given
-their individual security needs.&lt;/p&gt;
-&lt;h3&gt;Releases&lt;/h3&gt;
-&lt;p&gt;Finally, the roadmap has four releases on it:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Beta III&lt;/li&gt;
-&lt;li&gt;Linux 1.0&lt;/li&gt;
-&lt;li&gt;Windows 1.0&lt;/li&gt;
-&lt;li&gt;Mac OS X 1.0&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The time allocated to each release will be used for bugfixes and fixes
-not covered by the other themes; namely packaging work and OS integration.&lt;/p&gt;
-&lt;p&gt;The purpose of the Beta III release is to solicit feedback on the two
-largest changes: Short Setup and Fast Startup. It should launch very
-soon after as those two themes complete.&lt;/p&gt;
-&lt;p&gt;The 1.0 releases are of course contigent on tests giving positive
-results and development going relatively smoothly over the course of the
-summer. &lt;/p&gt;
-&lt;p&gt;Unlike our previous releases, we are considering the idea of launching
-on different platforms at different times. This reflects the fact that
-although most of the code is shared, the packaging and OS integration
-work is not. Making our Linux users wait while we finish fixing our
-klunky OS X integration is probably undesirable, except perhaps from
-a marketing oriented point of view.&lt;/p&gt;
-&lt;h3&gt;What do you think?&lt;/h3&gt;
-&lt;p&gt;That&#39;s it! Mailpile&#39;s future, for the next few months at least.&lt;/p&gt;
-&lt;p&gt;Feedback is most welcome. Please find us on IRC (Freenode, #mailpile) or
-&lt;a href=&#34;https://twitter.com/mailpileteam&#34;&gt;on Twitter&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Thanks for reading!&lt;/p&gt;</description>
-    <pubDate>Mon, 27 Apr 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Last week: Roadmap, Memory Hole, refactoring</title>
-    <link>http://www.mailpile.is/blog/2015-04-26_Weekly_Report.html</link>
-    <description>&lt;h3&gt;Done last week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;The &lt;a href=&#34;/blog/2015-04-27_Roadmap_to_v1.html&#34;&gt;Summer Roadmap&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Refactored e-mail encryption logic, made encryption schemes pluggable.&lt;/li&gt;
-&lt;li&gt;Created a plugin for developing the Memory Hole header-protection
-   scheme from last weekend&#39;s
-   &lt;a href=&#34;/blog/2015-04-20_OpenPGP_Email_Summit.html&#34;&gt;OpenPGP summit&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Plans for this week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Finish fixing the key discovery flows.&lt;/li&gt;
-&lt;li&gt;Bring public Github repo up to date with local VFS and home page
-   works-in-progress, in case anyone wants to pitch in and help.&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Sun, 26 Apr 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>The First OpenPGP E-mail Summit</title>
-    <link>http://www.mailpile.is/blog/2015-04-20_OpenPGP_Email_Summit.html</link>
-    <description>&lt;p&gt;This weekend I attended the first OpenPGP e-mail summit, mostly
-organized by Nico of the Enigmail project, generously hosted by
-&lt;a href=&#34;http://www.giepa.de/&#34;&gt;Giegerich &amp;amp; Partner&lt;/a&gt; in Dreieich, Germany.&lt;/p&gt;
-&lt;p&gt;At the summit I met folks from &lt;a href=&#34;https://www.enigmail.net/&#34;&gt;Enigmail&lt;/a&gt;,
-&lt;a href=&#34;https://www.whiteout.io/&#34;&gt;Whiteout&lt;/a&gt;,
-&lt;a href=&#34;https://www.mailvelope.com/&#34;&gt;Mailvelope&lt;/a&gt;,
-&lt;a href=&#34;https://github.com/google/end-to-end&#34;&gt;Google End-to-End&lt;/a&gt;
-and many other projects, including our very own Brennan Novak who
-presented his &lt;a href=&#34;http://modernpgp.org&#34;&gt;Modern PGP&lt;/a&gt; initiative and of
-course Werner and &lt;a href=&#34;https://www.gnupg.org/&#34;&gt;GnuPG&lt;/a&gt; itself. That was
-actually the main theme of the first day; presenting our respective
-projects and just getting to know each other. Most of us had never met
-before in person and I am pretty sure everyone learned something new.&lt;/p&gt;
-&lt;p&gt;The second day was more work focused. Common topics of interest were
-identified and then we split up into discussion groups to strategize and
-identify common problems and potential solutions. The groups I attended
-discussed the following issues:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;A proposal to encrypt or sign e-mail headers (Subject, From, To, ...)&lt;/li&gt;
-&lt;li&gt;Searching encrypted mail&lt;/li&gt;
-&lt;li&gt;Possible improvements to the PGP/MIME standard&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;There seemed to be a common consensus that there are some very real
-problems we should aim to solve together and standardize. As we have
-&lt;a href=&#34;2014-11-21_To_PGP_MIME_Or_Not.html&#34;&gt;blogged about before&lt;/a&gt;, these are
-issues which Mailpile cares deeply about, so I was very happy to get a
-chance to share our experience, ideas and learn from the others. Further
-steps will be taken online, in code and on mailing lists.&lt;/p&gt;
-&lt;p&gt;Sessions I was unable to attend discussed topics such as key discovery,
-key certification, key synchronization, next-generation key servers,
-terminology and user-facing vocabulary and fostering ongoing
-collaboration between the attending projects.&lt;/p&gt;
-&lt;p&gt;All in all, the summit greatly exceeded my expectations. There was very
-little bickering or bike-shedding, and all attendees seemed happy to set
-aside their political differences in the interest of collaboration and
-improving the e-mail encryption ecosystem.&lt;/p&gt;
-&lt;p&gt;I look forward to working with all of them in the future.&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
-&lt;h2&gt;Weekly Status Summary&lt;/h2&gt;
-&lt;h3&gt;Done last week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Started writing code again (fixing PGP-related bugs) in my
-   local repository&lt;/li&gt;
-&lt;li&gt;Responded to issues and pull requests on Github&lt;/li&gt;
-&lt;li&gt;Exchanged e-mails with potential financial backers of the project&lt;/li&gt;
-&lt;li&gt;Prepared a presentation and ideas for the OpenPGP summit&lt;/li&gt;
-&lt;li&gt;Attended the OpenPGP summit&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Plans for this week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OpenPGP summit follow-up work&lt;/li&gt;
-&lt;li&gt;Continue communicating with potential backers&lt;/li&gt;
-&lt;li&gt;Drafting work plans for the summer, aiming to release Mailpile 1.0
-   this fall&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Mon, 20 Apr 2015 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

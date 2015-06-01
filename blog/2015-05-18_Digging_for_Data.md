@@ -8,7 +8,7 @@ invitations were sent, VFS work commenced.
 
 Not quite as many invitations got sent out as I had hoped though,
 because I was overcome by a debilitating bout of productive
-procrastionation. Inspired by the need to compile a list of backers on
+procrastination. Inspired by the need to compile a list of backers on
 the one hand, and a desire to refresh my memory on front-end development
 work on the other, I ended up creating a new plugin that makes it easy
 to run custom data mining operations on your own e-mail.

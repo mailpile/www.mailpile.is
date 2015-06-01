@@ -234,6 +234,30 @@ jQuery(document).ready(function($){
   "date": "2015-05-08", 
   "subject": "Choosing a License for Mailpile 1.0", 
   "url": "/blog/2015-05-08_Choosing_a_License.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-05-11", 
+  "subject": "Site updates and community roadmap launched", 
+  "url": "/blog/2015-05-11_Weekly_Report.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-05-18", 
+  "subject": "Digging for Data", 
+  "url": "/blog/2015-05-18_Digging_for_Data.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-05-25", 
+  "subject": "An AMA with the Localization Lab", 
+  "url": "/blog/2015-05-25_Localization_Lab_AMA.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-06-01", 
+  "subject": "Roadmap Reality Check", 
+  "url": "/blog/2015-06-01_Roadmap_Reality_Check.html"
 }];
 
   var prev = -1;

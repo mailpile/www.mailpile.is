@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Blog</title>
+    <title>Mailpile: Roadmap Reality Check</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -42,6 +42,8 @@
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
     <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
 </head><body>
 
     <div id="navigation">
@@ -87,10 +89,10 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="2015-06-01_Roadmap_Reality_Check.html"><h1>Roadmap Reality Check</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on June 1, 2015</strong></p>
-    <p>First, an announcment:</p>
+    <a href="/blog/2015-06-01_Roadmap_Reality_Check.html"><h1>Roadmap Reality Check</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on June  1, 2015</strong></p>
+
+<p>First, an announcment:</p>
 <h3>Invitations to the voting page have been sent!</h3>
 <p>All 3015 of them!</p>
 <p>If you donated $23 USD (or more) to the project and haven't yet received
@@ -173,207 +175,17 @@ feasible. A bit crazy, but feasible...</p>
 <li>Either IMAP browsing work or start merging the new storage code
    required for faster startup.</li>
 </ol>
-  <hr>
-    <a href="2015-05-25_Localization_Lab_AMA.html"><h1>An AMA with the Localization Lab</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on May 25, 2015</strong></p>
-    <p>Last week's big event was a very entertaining "Ask Me Anything"
-session with the folks from the Open Technology Fund's <a href="http://www.localizationlab.org/">Localization
-Lab</a>.</p>
-<p>It was a friendly and productive session which hopefully helped
-strengthen the ties between the coding side of the Mailpile project and
-the very important community of volunteers that translate our software
-to languages other than English. There were two main take-aways from the
-meeting, aside from getting to know each other a bit better:</p>
-<ol>
-<li>
-<p>Mailpile's core includes a plug-in designed to help translators,
-   which can be enabled with <code>mailpile&gt; plugins/load i18nhelper</code>. It
-   would be useful to develop this further and get feedback from the
-   translators themselves on how it could be improved.</p>
-</li>
-<li>
-<p>The efforts of our translators are valuable and deserve to be
-   publicly recognized, just like the efforts of our other backers.
-   The Localization Lab folks were going to see what they could do
-   to compile a list of contributors, and I was going to make sure
-   that list found its way onto our <a href="/thank-you/">thank you page</a>
-   and into an appropriate page within the app itself.</p>
-</li>
-</ol>
-<p>The rest of the week was business-as-usual. We sent out over 1000
-invitations to <a href="/roadmap/">the Mailpile community site</a>, continued
-discussions with potential financial backers and related projects and
-created <a href="https://github.com/mailpile/HoiPoi/issues">a couple of detailed task descriptions on the Hoi Poi
-bug-tracker</a>, in case
-friendly coders want to help improve the community site faster than
-I'll be able to do on my own.</p>
-<p>On the tech front, I implemented a "Save this search" feature, which
-exposes some of the back-end's automated mail filter functionality in
-a (hopefully!) user-friendly way. I also made progress on the actual
-roadmap tasks- the VFS and the ability to browse the contents of a
-mailbox (local or remote) without having to add it to the search index
-first. These are still works in progress and have not been pushed up
-to github yet.</p>
-<h3>Plans for this week</h3>
-<ol>
-<li>Send out the rest of the invitations to community site</li>
-<li>Revisit the settings of our Twitter and Facebook accounts. Should we
-   even have a Facebook account?</li>
-<li>Keep on hacking...</li>
-</ol>
-  <hr>
-    <a href="2015-05-18_Digging_for_Data.html"><h1>Digging for Data</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on May 18, 2015</strong></p>
-    <p>Last week mostly went according to plan: backers e-mails were found,
-invitations were sent, VFS work commenced.</p>
-<p>Not quite as many invitations got sent out as I had hoped though,
-because I was overcome by a debilitating bout of productive
-procrastination. Inspired by the need to compile a list of backers on
-the one hand, and a desire to refresh my memory on front-end development
-work on the other, I ended up creating a new plugin that makes it easy
-to run custom data mining operations on your own e-mail.</p>
-<p>This is what the result looks like:</p>
-<p><img src="/files/2015-05-Datadig-Demo.jpg" border="0"></p>
-<p>The text is all blurry, because data is being extracted so fast it
-makes your head spin! Right?</p>
-<p>If you follow the S-shaped path of the green arrows, starting in the
-upper right-hand corner, the tool works like this:</p>
-<ol>
-<li>Search and select messages</li>
-<li>Click the grid icon (top-right arrow)</li>
-<li>Add columns describing the desired data</li>
-<li>Click the Preview button to see if it works</li>
-<li>Download the results as a CSV file</li>
-<li>Profit!</li>
-</ol>
-<p>If you want to extract information which has already been defined as one
-of the built-in recipes, this kind of personal data-mining becomes a
-mere matter of pointing and clicking (the rows of the <em>Data Source</em>
-table are clickable). If the pre-existing recipes do not suffice, clever
-geeks can search for virtually anything by using regular expressions.</p>
-<p>Hopefully, over time, Mailpile community members will create and share
-recipes for common things like invoice amounts or flight itineraries,
-bank statements or stock market alerts... if you've ever wanted to graph
-the frequency of your Twitter mentions, this plugin (combined with any
-old spreadsheet application) makes that easy to do.</p>
-<p>The plugin is named <strong>Datadig</strong>, and to give it a try you will need to
-pull the latest Mailpile from Github and run the following command on
-the Mailpile CLI, <code>mailpile&gt; plugins/load datadig</code> - and yes, a GUI for
-this is in the works.  Quit Mailpile, restart and the Datadig grid icon
-should now appear whenever you select messages!</p>
-<p>It seems only fitting that Mailpile will not only protect privacy, but
-will also help people datamine their own e-mail for their own personal
-benefit. The tabular spreadsheet format is universal and widely
-understood, making this sort of thing potentially useful to a very wide
-audience - not just hackers and coders.</p>
-<p>Who would have thought CSV files could be so exciting?</p>
-<p>The code lives in <a href="https://github.com/mailpile/Mailpile/tree/master/mailpile/contrib/datadig">.../mailpile/contrib/datadig/</a>
-and I look forward to your pull requests. ;-)</p>
-<p>In other news...</p>
-<h3>Plans for this week</h3>
-<ol>
-<li>Continue sending out invitations to <a href="/roadmap/">the voting page</a></li>
-<li>More work on the VFS layer</li>
-<li>Take part in the <a href="https://twitter.com/L10nLab/status/597827047654842369">Localization Lab's 2nd
-   AMA</a>,
-   this Thursday!</li>
-<li>Mystery meetings with mysterious people</li>
-</ol>
-  <hr>
-    <a href="2015-05-11_Weekly_Report.html"><h1>Site updates and community roadmap launched</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on May 11, 2015</strong></p>
-    <p>This is the weekly report!  I'm changing the format ever so slightly to
-ensure the headlines displayed on the front-page and in compact RSS
-readers are more informative.</p>
-<h3>Done last week</h3>
-<ol>
-<li>
-<p>Updated the public website. The <a href="/faq/">FAQ</a> and <a href="/">front-page</a> content
-   was reviewed, updated and cleaned up. Individual <a href="/blog/">blog</a> posts now
-   have "next" and "previous" links. Minor tweaks were made to the site
-   design to help with navigation of large pages: an up arrow in the lower
-   right corner and a table-of-contents overview of the FAQ.</p>
-</li>
-<li>
-<p>Unveiled <a href="/roadmap/">the Community Roadmap</a>; votable content includes
-   the licensing question and the post-1.0 roadmap.</p>
-</li>
-<li>
-<p>Published <a href="/blog/2015-05-08_Choosing_a_License.html">a detailed blog-post explaining the AGPLv3 vs. Apache licensing
-   question</a> we need to resolve,
-   publicized on Twitter and Hacker News. Took part in discussions on both
-   venues.</p>
-</li>
-</ol>
-<h3>Plans for this week</h3>
-<ol>
-<li>
-<p>Compile an up-to-date list of backers and their e-mail addresses, for
-   sending out invitations to the community voting page.</p>
-</li>
-<li>
-<p>Send out the first 750 invitations.</p>
-</li>
-<li>
-<p>Back to coding: Key discovery front-end and VFS work are next!</p>
-</li>
-</ol>
-  <hr>
-
-  <h3>Older stuff</h3>
-  <ul>
-    <li><a href="2015-05-08_Choosing_a_License.html">Choosing a License for Mailpile 1.0</a></li>
-    <li><a href="2015-05-04_Weekly_Report.html">Last week: code pushed, Cloudfleet, key discovery</a></li>
-    <li><a href="2015-04-27_Roadmap_to_v1.html">A Roadmap to Version 1.0</a></li>
-    <li><a href="2015-04-26_Weekly_Report.html">Last week: Roadmap, Memory Hole, refactoring</a></li>
-    <li><a href="2015-04-20_OpenPGP_Email_Summit.html">The First OpenPGP E-mail Summit</a></li>
-    <li><a href="2015-04-13_Back_to_Work.html">Back to Work!</a></li>
-    <li><a href="2015-03-06_Beta_Rejected.html">Beta Rejected!</a></li>
-    <li><a href="2015-02-26_Revisiting_the_GnuPG_discussion.html">More thoughts on working with GnuPG</a></li>
-    <li><a href="2015-01-20_Mailpile_Beta_II_4096_bits.html">Mailpile Beta II - the 4096 bit release</a></li>
-    <li><a href="2014-11-21_To_PGP_MIME_Or_Not.html">To PGP/MIME or not to PGP/MIME</a></li>
-    <li><a href="2014-10-07_Some_Thoughts_on_GnuPG.html">Some thoughts on working with GnuPG</a></li>
-    <li><a href="2014-09-13_Mailpile_Beta_Release.html">One Year Later: Mailpile Beta</a></li>
-    <li><a href="2014-08-20_Upcoming_Beta_Release_Part_II.html">Our Upcoming Beta Release: Part II</a></li>
-    <li><a href="2014-08-08_Our_Upcoming_Beta_Release.html">Our Upcoming Beta Release</a></li>
-    <li><a href="2014-06-03_Mailpile_Alpha_II.html">Mailpile Alpha II - The Dogfood Edition</a></li>
-    <li><a href="2014-04-30_Where_is_the_Community_Site.html">Where is the Community Site?</a></li>
-    <li><a href="2014-04-07_Workshop_in_London.html">Mailpile Workshop in London</a></li>
-    <li><a href="2014-02-07_IndieGoGo_Update_8.html">Development, Perks, and Alpha (IGG Update #8)</a></li>
-    <li><a href="2014-01-31_Alpha_Release_Shipping_Bits_and_Atoms.html">Alpha Release: Shipping Bits and Atoms</a></li>
-    <li><a href="2014-01-12_A_Plan_For_Spam.html">A Plan For Spam ... and Bacon!</a></li>
-    <li><a href="2013-11-23_A_Pound_of_Security.html">A Pound of Security</a></li>
-    <li><a href="2013-11-18_Speaking_your_language.html">Speaking Your Language</a></li>
-    <li><a href="2013-11-01_IndieGoGo_Update_7.html">Perks? What perks? (IGG Update #7)</a></li>
-    <li><a href="2013-10-31_DarkMail_and_Secure_Protocols.html">DarkMail and Secure Protocols</a></li>
-    <li><a href="2013-10-11_The_Month_of_Dog_Fooding.html">The Month of Dog Fooding</a></li>
-    <li><a href="2013-09-12_IndieGoGo_Update_6.html">Thank you! (IGG Update #6)</a></li>
-    <li><a href="2013-09-11_Budget_and_Roadmap.html">A Rough Budget and Alpha Roadmap</a></li>
-    <li><a href="2013-09-10_Surveillance_Centralization.html">Surveillance And Centralization (video)</a></li>
-    <li><a href="2013-09-10_IndieGoGo_Update_5.html">The Home Stretch (IGG Update #5)</a></li>
-    <li><a href="2013-09-06_IndieGoGo_Update_4.html">PayPal News (IGG Update #4)</a></li>
-    <li><a href="2013-09-05_PayPal_Freezes_Campaign_Funds.html">PayPal Freezes Campaign Funds</a></li>
-    <li><a href="2013-09-05_IndieGoGo_Update_3.html">PayPal News (IGG Update #3)</a></li>
-    <li><a href="2013-08-30_Fonts_and_Copyright_Licenses.html">Fonts and Copyright Licenses</a></li>
-    <li><a href="2013-08-21_IndieGoGo_Update_2.html">We are funded! (IGG update #2)</a></li>
-    <li><a href="2013-08-20_Turning_Money_Into_Code.html">Turning Money Into Code</a></li>
-    <li><a href="2013-08-15_Digging_Through_the_Details.html">Digging Through the Details</a></li>
-    <li><a href="2013-08-11_IndieGoGo_Update_1.html">Our first week (IGG update #1)</a></li>
-    <li><a href="2013-08-11_Designing_Security.html">Designing Security (video)</a></li>
-    <li><a href="2013-08-08_Mailpile_Launched.html">Mailpile Launched</a></li>
-  </ul>
-
-
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
 -->
             </div>
         </div>
-        <hr>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
         <!-- Contact & Media -->
         <div id="footer" class="clearfix">
             <div class="one-third">

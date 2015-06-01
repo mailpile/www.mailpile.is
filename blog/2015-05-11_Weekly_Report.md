@@ -1,5 +1,5 @@
 Subject: Site updates and community roadmap launched
-Date: May 4, 2015
+Date: May 11, 2015
 Author: Bjarni
 Type: blog
 
