@@ -24,7 +24,7 @@ Hooray!
 ### Roadmap Distractions
 
 In addition to getting the invitations sent out this last week has been
-[very productive on a the code
+[very productive on the code
 front](https://github.com/mailpile/Mailpile/commits/master)... just not
 entirely on the stuff I was *supposed* to be working on.
 
@@ -33,7 +33,7 @@ Distractions included:
 1. Going over the settings of our Twitter and Facebook accounts
 2. Making the app less pretty (temporarily, to manage expectations)
 3. Adding in-app instructions on how best to report bugs
-4. Responding to some Github issues, fixed some buglets
+4. Responding to some Github issues, fixing some buglets
 4. Implementing working proxy support (HTTP, SOCKS and Tor)
 5. Implementing "select all matching this search"
 
@@ -64,8 +64,8 @@ due according to the roadmap. What's going on?
 I would hate to be my manager, but this is relatively normal; business
 as usual.
 
-I don't know if this works the same way for other software developers,
-but after 20 years of coding for fun and profit I have learned that I am
+I don't know if this works the same way for other software developers
+but, after 20 years of coding for fun and profit, I have learned that I am
 most productive if I have goals and deadlines, balanced with the freedom
 to frequently give in to inspiration and obsession. The above work falls
 squarely into the latter category; I got inspired and could visualize
