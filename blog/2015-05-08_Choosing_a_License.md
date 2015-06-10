@@ -116,7 +116,7 @@ we use that license.
 
 So that becomes the crux of the question.
 
-Do we want to compell companies to share their changes to our code,
+Do we want to compel companies to share their changes to our code,
 which is what the AGPL does, or do we want to take a more trusting
 approach and rely on enlightened self interest and good-will - by
 releasing under the Apache license?
