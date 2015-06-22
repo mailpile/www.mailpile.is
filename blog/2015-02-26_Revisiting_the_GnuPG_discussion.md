@@ -160,13 +160,19 @@ I just don't know.
 
 I could come up with some clever hacks to work around GnuPG's core
 design; I could implement my own agent, I could try to cripple GnuPG
-with weird environment variables or a custom GNUPG_HOME and config, or I
+with weird environment variables or a custom $GNUPGHOME and config, or I
 could even fork the project - but those *all* feel like last resorts.
 
 I am currently revisiting whether I can get `gpgme`-based code to avoid
 the problems caused by the agent and side-channel auth. I am not too
 optimistic. If that fails, then it's last resort time, or time to drop
 PGP.
+
+**Update, 2015-06-22:** After discussing in person with Werner of GnuPG,
+the current strategy is indeed one of the "last resorts". Mailpile will
+use a custom configuration file and avoid GnuPG entirely for certain
+local encryption and authentication operations. PGP, via GnuPG, will
+still be supported for incoming and outgoing e-mail.
 
 
 ## Is this fixable?
@@ -207,3 +213,4 @@ There are probably more, but those are my top three!
 Thanks for reading, I look forward to further discussions (most likley
 [on the GnuPG Users mailing
 list](https://lists.gnupg.org/pipermail/gnupg-users/2015-February/052771.html)).
+

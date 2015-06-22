@@ -227,6 +227,8 @@ Software is hard. Security software is harder. Werner is doing great at managing
 **Update:** [We have written a follow-up
 post](/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html).
 
+**Update II:** Note that the GnuPG project is somewhat stuck between a rock and a hard place with respect to the interface of the gpg tool; because other tools rely on GnuPG, many of these interfaces cannot easily be fixed without breaking other things. The official recommendation from the authors of GnuPG, is for developers to use the GPGME library. GPGME is itself a wrapper around gpg that glosses over or works around many of these problems. If it works for you, you should probably use it.
+
 
  [1]: http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html
  [2]: http://secushare.org/PGP
