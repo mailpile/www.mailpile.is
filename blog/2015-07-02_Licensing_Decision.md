@@ -65,8 +65,8 @@ we could reach a conclusion everyone could abide by.
 Although these results clearly don't really meet that bar, all we can do
 is look for a silver lining.
 
-The fact is, voter participation in this election was quite low. The
-total number of voters was 3041, but we only had about 16.5% turnout.
+The fact is, voter participation in this election was quite low. 3041
+people in total were eligible for voting, but we only had about 16.5% turnout.
 Considering the subject matter (licensing, how dull!), it seems quite
 reasonable to assume this means most of our backers just don't care, one
 way or another. Even Stallman himself [commented](http://b.pagekite.me/blog/2015-06-15_Community_License_Feedback.html)
