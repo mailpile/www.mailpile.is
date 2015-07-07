@@ -1,6 +1,6 @@
 Subject: Beta III preparations
 Author: Bjarni
-Date: July 6, 2015
+Date: July 7, 2015
 Type: blog
 
 Last week's big news was of course [the licensing

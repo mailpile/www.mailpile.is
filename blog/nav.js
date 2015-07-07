@@ -291,7 +291,7 @@ jQuery(document).ready(function($){
 },
 {
   "author": "Bjarni", 
-  "date": "2015-07-06", 
+  "date": "2015-07-07", 
   "subject": "Beta III preparations", 
   "url": "/blog/2015-07-07_Beta_III_prep.html"
 }];
