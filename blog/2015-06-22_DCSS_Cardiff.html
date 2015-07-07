@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Roadmap Reality Check</title>
+    <title>Mailpile: The DCSS Conference in Cardiff</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -89,91 +89,49 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="/blog/2015-06-01_Roadmap_Reality_Check.html"><h1>Roadmap Reality Check</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a> on June  1, 2015</strong></p>
+    <a href="/blog/2015-06-22_DCSS_Cardiff.html"><h1>The DCSS Conference in Cardiff</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on June 22, 2015</strong></p>
 
-<p>First, an announcment:</p>
-<h3>Invitations to the voting page have been sent!</h3>
-<p>All 3015 of them!</p>
-<p>If you donated $23 USD (or more) to the project and haven't yet received
-an invitation, please <strong>check your spam</strong>. If nothing's there, please
-<a href="mailto:team@mailpile.is?subject=Community+Site">get in touch</a>. We might
-not have a valid e-mail address for you on file, or it may be that
-things just got lost in the shuffle.</p>
-<p>Voting on the license will continue <strong>until July 1</strong>, at which point I will
-call the results.</p>
-<p>Hooray!</p>
-<h3>Roadmap Distractions</h3>
-<p>In addition to getting the invitations sent out this last week has been
-<a href="https://github.com/mailpile/Mailpile/commits/master">very productive on the code
-front</a>... just not
-entirely on the stuff I was <em>supposed</em> to be working on.</p>
-<p>Distractions included:</p>
+<p>This weekly report covers two weeks of work, because last week's post was
+dedicated to community feedback on the licensing debate. Here are some of
+the tech issues that got resolved in the meantime:</p>
 <ol>
-<li>Going over the settings of our Twitter and Facebook accounts</li>
-<li>Making the app less pretty (temporarily, to manage expectations)</li>
-<li>Adding in-app instructions on how best to report bugs</li>
-<li>Responding to some Github issues, fixing some buglets</li>
-<li>Implementing working proxy support (HTTP, SOCKS and Tor)</li>
-<li>Implementing "select all matching this search"</li>
+<li>IMAP: Improved download speed and Dovecot compatibility</li>
+<li>Security: Fixed serious bug in local data encryption</li>
+<li>Security: Implemented basic PGP passphrase manager</li>
+<li>Fast setup: Editing accounts now works</li>
+<li>Fast setup: Usability tests at DCSS, found and fixed some issues</li>
+<li>UI: Tag creation and editing were revamped</li>
+<li>Composer: Fixed bugs, started refactor to handle key discovery</li>
+<li>Packaging: Prepared the packaging robot for Beta III builds</li>
 </ol>
-<p>The last two in particular are both awesome milestones in their own
-right, things which had been languishing at 90% in our code-base for
-<em>months</em> now.</p>
-<p>The proxy support allows us to start testing some of the main points
-from <a href="https://github.com/mailpile/Mailpile/wiki/Security-roadmap">the security
-roadmap</a>,
-with respect to anonymous access to SMTP, IMAP servers and Gravatar.</p>
-<p>Being able to "select all" makes the app an order of magnitude more
-powerful when it comes to organizing and extracting value from e-mail.
-Basic operations like "<a href="https://github.com/mailpile/Mailpile/issues/1027">mark all messages as
-read</a>" depend on this,
-as did more advanced use cases, such as using
-<a href="2015-05-18_Digging_for_Data.html">Datadig</a> to convert hundreds of
-PayPal notifications into a spreadsheet of Mailpile backers...</p>
-<h3>Why you no focus?</h3>
-<p>So this is the third week in a row with some pretty major, exciting
-distractions. Great progress, but not necessarily on things which were
-due according to the roadmap. What's going on?</p>
-<p>I would hate to be my manager, but this is relatively normal; business
-as usual.</p>
-<p>I don't know if this works the same way for other software developers
-but, after 20 years of coding for fun and profit, I have learned that I am
-most productive if I have goals and deadlines, balanced with the freedom
-to frequently give in to inspiration and obsession. The above work falls
-squarely into the latter category; I got inspired and could visualize
-exactly how to solve each problem. Rather than put it off, I harnessed
-that creative energy and just <em>got things done</em>.</p>
-<p>It's all necessary, useful work. It's just not happening in the order
-laid out in the original plan.</p>
-<p>But that does beg the question: how is <a href="2015-04-27_Roadmap_to_v1.html">the roadmap
-itself</a> holding up?</p>
-<h3>Roadmap Reality Check</h3>
-<p>According to the roadmap, the "Short Setup Flow" theme should be complete now.
-It is not, I <em>am</em> behind schedule. This is roughly where various
-roadmap-related tasks stand at the moment:</p>
-<ol>
-<li><strong>90%</strong> - Browse FS: Works! Is a bit ugly.</li>
-<li><strong>90%</strong> - Accounts: The design is now pretty solid (in my head).</li>
-<li><strong>80%</strong> - Key discovery: results need to be injected back into the composer.</li>
-<li><strong>80%</strong> - Browse Mailboxes: mail can be read without being added to the
-             search index first, but is buggy.</li>
-<li><strong>75%</strong> - Account creation: almost works! This replaces the crypto,
-             profile, route and source setup pages.</li>
-<li><strong>60%</strong> - Simplified UI: More cleanup is needed.</li>
-<li><strong>40%</strong> - Home Page: is live, but unfinished.</li>
-<li><strong>10%</strong> - Browsing IMAP/POP3: should be easy, but barely started.</li>
-</ol>
-<p>All in all, I figure I'm about a week or two behind.</p>
-<p>Could be worse, releasing Beta III in about a month's time is still
-feasible. A bit crazy, but feasible...</p>
+<p>Last week I took some much needed days off and then attended the <a href="http://www.dcssproject.net/">Digital
+Citizenship and Surveillance Society</a>
+conference in Cardiff.  It was a very inspiring conference and the
+organizers' goal of getting techies to rub shoulders with academics and
+usability people was, as far as Mailpile goes, a complete success.</p>
+<p>The first day was mainly dedicated to presentations and interesting
+conversations, including a well received lightning talk about Mailpile
+itself.</p>
+<p>On the second day I performed two small usability tests with non-technical
+volunteers from the conference and discussed overall UI strategy with some
+of the experts from <a href="https://www.headlondon.com/">Head London</a>. Actionable
+results were filed as <a href="https://github.com/mailpile/Mailpile/issues">issues in our bug
+tracker</a>.</p>
+<p>On both days I did a fair bit of brainstorming with developers from the
+<a href="https://leap.se/">Leap</a> and <a href="https://pixelated-project.org/">Pixelated</a>
+projects, in particular helping them get up to speed with the e-mail header
+protection work that was done at <a href="2015-04-20_OpenPGP_Email_Summit.html">April's GnuPG e-mail
+summit</a>. I summarized those
+discussions in <a href="https://lists.gnupg.org/pipermail/gnupg-devel/2015-June/030036.html">a post to the GnuPG-devel mailing
+list</a>.</p>
+<p>All in all, it was an excellent conference. I had fun and came home
+feeling inspired and motivated.</p>
+<p>Just what the doctor ordered!</p>
 <h3>Plans for this week</h3>
 <ol>
-<li>Admin work: Taxes and pay my own salary.</li>
-<li>Finish the Add Account tool.</li>
-<li>Upgrade the Add Account code so it also functions as Edit Account.</li>
-<li>Either IMAP browsing work or start merging the new storage code
-   required for faster startup.</li>
+<li>Finish refactoring the composer and key discovery code</li>
+<li>Migrate metadata index to new storage format</li>
 </ol>
 <!-- Page content ends -->
 <!--

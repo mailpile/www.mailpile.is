@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Roadmap Reality Check</title>
+    <title>Mailpile: Licensing: Your Feedback So Far</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -89,92 +89,118 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="/blog/2015-06-01_Roadmap_Reality_Check.html"><h1>Roadmap Reality Check</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a> on June  1, 2015</strong></p>
+    <a href="/blog/2015-06-15_Community_License_Feedback.html"><h1>Licensing: Your Feedback So Far</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on June 15, 2015</strong></p>
 
-<p>First, an announcment:</p>
-<h3>Invitations to the voting page have been sent!</h3>
-<p>All 3015 of them!</p>
-<p>If you donated $23 USD (or more) to the project and haven't yet received
-an invitation, please <strong>check your spam</strong>. If nothing's there, please
-<a href="mailto:team@mailpile.is?subject=Community+Site">get in touch</a>. We might
-not have a valid e-mail address for you on file, or it may be that
-things just got lost in the shuffle.</p>
-<p>Voting on the license will continue <strong>until July 1</strong>, at which point I will
-call the results.</p>
-<p>Hooray!</p>
-<h3>Roadmap Distractions</h3>
-<p>In addition to getting the invitations sent out this last week has been
-<a href="https://github.com/mailpile/Mailpile/commits/master">very productive on the code
-front</a>... just not
-entirely on the stuff I was <em>supposed</em> to be working on.</p>
-<p>Distractions included:</p>
-<ol>
-<li>Going over the settings of our Twitter and Facebook accounts</li>
-<li>Making the app less pretty (temporarily, to manage expectations)</li>
-<li>Adding in-app instructions on how best to report bugs</li>
-<li>Responding to some Github issues, fixing some buglets</li>
-<li>Implementing working proxy support (HTTP, SOCKS and Tor)</li>
-<li>Implementing "select all matching this search"</li>
-</ol>
-<p>The last two in particular are both awesome milestones in their own
-right, things which had been languishing at 90% in our code-base for
-<em>months</em> now.</p>
-<p>The proxy support allows us to start testing some of the main points
-from <a href="https://github.com/mailpile/Mailpile/wiki/Security-roadmap">the security
-roadmap</a>,
-with respect to anonymous access to SMTP, IMAP servers and Gravatar.</p>
-<p>Being able to "select all" makes the app an order of magnitude more
-powerful when it comes to organizing and extracting value from e-mail.
-Basic operations like "<a href="https://github.com/mailpile/Mailpile/issues/1027">mark all messages as
-read</a>" depend on this,
-as did more advanced use cases, such as using
-<a href="2015-05-18_Digging_for_Data.html">Datadig</a> to convert hundreds of
-PayPal notifications into a spreadsheet of Mailpile backers...</p>
-<h3>Why you no focus?</h3>
-<p>So this is the third week in a row with some pretty major, exciting
-distractions. Great progress, but not necessarily on things which were
-due according to the roadmap. What's going on?</p>
-<p>I would hate to be my manager, but this is relatively normal; business
-as usual.</p>
-<p>I don't know if this works the same way for other software developers
-but, after 20 years of coding for fun and profit, I have learned that I am
-most productive if I have goals and deadlines, balanced with the freedom
-to frequently give in to inspiration and obsession. The above work falls
-squarely into the latter category; I got inspired and could visualize
-exactly how to solve each problem. Rather than put it off, I harnessed
-that creative energy and just <em>got things done</em>.</p>
-<p>It's all necessary, useful work. It's just not happening in the order
-laid out in the original plan.</p>
-<p>But that does beg the question: how is <a href="2015-04-27_Roadmap_to_v1.html">the roadmap
-itself</a> holding up?</p>
-<h3>Roadmap Reality Check</h3>
-<p>According to the roadmap, the "Short Setup Flow" theme should be complete now.
-It is not, I <em>am</em> behind schedule. This is roughly where various
-roadmap-related tasks stand at the moment:</p>
-<ol>
-<li><strong>90%</strong> - Browse FS: Works! Is a bit ugly.</li>
-<li><strong>90%</strong> - Accounts: The design is now pretty solid (in my head).</li>
-<li><strong>80%</strong> - Key discovery: results need to be injected back into the composer.</li>
-<li><strong>80%</strong> - Browse Mailboxes: mail can be read without being added to the
-             search index first, but is buggy.</li>
-<li><strong>75%</strong> - Account creation: almost works! This replaces the crypto,
-             profile, route and source setup pages.</li>
-<li><strong>60%</strong> - Simplified UI: More cleanup is needed.</li>
-<li><strong>40%</strong> - Home Page: is live, but unfinished.</li>
-<li><strong>10%</strong> - Browsing IMAP/POP3: should be easy, but barely started.</li>
-</ol>
-<p>All in all, I figure I'm about a week or two behind.</p>
-<p>Could be worse, releasing Beta III in about a month's time is still
-feasible. A bit crazy, but feasible...</p>
-<h3>Plans for this week</h3>
-<ol>
-<li>Admin work: Taxes and pay my own salary.</li>
-<li>Finish the Add Account tool.</li>
-<li>Upgrade the Add Account code so it also functions as Edit Account.</li>
-<li>Either IMAP browsing work or start merging the new storage code
-   required for faster startup.</li>
-</ol>
+<p>[ <em>Note: I'm taking most of the week off to recharge my batteries and attend
+the <a href="http://www.dcssproject.net/conference/">Digital Citizenship and Surveillance Society conference and
+hackathon</a>
+- the next weekly update will happen next Monday.</em> ]</p>
+<p>There are now <strong>2 weeks left</strong> until we close <a href="/roadmap/">the polls</a> and
+choose a license for Mailpile 1.0. Some members of our community have
+written blog posts about what they would prefer, others have tweeted,
+and still others have sent us e-mail.</p>
+<p>We may not agree with all of the points made, but it's a complex issue and
+your feedback matters. Thank you all!</p>
+<p>This post is dedicated to preserving and publicizing your thoughts.</p>
+<h4>Blog Posts</h4>
+<p>Geir Freysson writes: <a href="http://www.geirfreysson.com/2015/06/why-the-crypto-email-client-mailpile-should-use-the-apache-software-license/">Mailpile should use the Apache software
+license</a></p>
+<blockquote>
+<p>The idea behind the Apache license is to, quoting Chairman Mao, “let a thousand flowers bloom” and allow as many people and companies as possible to build on the software regardless of whether the incentive is commercial or altruistic.
+<em><a href="http://www.geirfreysson.com/2015/06/why-the-crypto-email-client-mailpile-should-use-the-apache-software-license/">read more</a></em></p>
+</blockquote>
+<p>Franklin M. Siler writes: <a href="http://franksiler.com/on-choosing-open-licenses/">On choosing open licenses</a></p>
+<blockquote>
+<p>The essential idea here is that I want my projects to contribute back, but I want to do so voluntarily. I particularly want to avoid a situation where I need to implement “special sauce” in a component, but then may have to release that code out into the marketplace- there’s no particularly good reason I would want to take on, say, a virally licensed webserver.</p>
+<p>In terms of choosing feedstock, it’s often hit or miss, but I always look at the licenses before I start, particularly for “scaffolding code” that will wind up being the core of an app.
+<em><a href="http://franksiler.com/on-choosing-open-licenses/">read more</a></em></p>
+</blockquote>
+<h4>E-mail</h4>
+<p><strong>From: Richard Stallman</strong></p>
+<blockquote>
+<p>I read your posting about the question of which license to use on your
+source code henceforth. I urge you to use the GNU Affero GPL.</p>
+<p>The reason is simple: so that companies that improve Mailpile and put
+their versions into public use will make their improvements available to
+the Mailpile community.  The AGPL would achieve this.  The Apache
+license, which is a weak, permissive license, would not try.</p>
+<p>Both of these licenses qualify as free/libre; neither of them is
+unethical.  Given a choice between two ethically valid options, you
+should choose the one that is better in practice, and that is the GNU
+AGPL.</p>
+<p>See <a href="http://gnu.org/licenses/license-recommendations.html">http://gnu.org/licenses/license-recommendations.html</a>
+and <a href="http://gnu.org/licenses/license-list.html">http://gnu.org/licenses/license-list.html</a></p>
+<p>-- <br />
+Dr Richard Stallman<br />
+President, Free Software Foundation (gnu.org, fsf.org)<br />
+Internet Hall-of-Famer (&lt;internethalloffame.org)<br />
+Skype: No way! See stallman.org/skype.html.<br />
+</p>
+</blockquote>
+<p><strong> From: Maxim Cournoyer</strong></p>
+<blockquote>
+<p>Dear mailpile team,</p>
+<p>As stated on the mailpile homepage:</p>
+<blockquote>
+<p>Mailpile is an effort to reclaim private communication on the
+Internet. A project to rescue our personal lives from the proprietary
+cloud and prevent our conversations from being strip-mined for corporate
+profit and government surveillance. Mailpile is taking e-mail back.</p>
+</blockquote>
+<p>It is my opinion that the license that would better support these goals
+would be the GNU Affero GPLv3 license as it protects the freedom for
+anyone to audit the source of the software, no matter where and how it
+is deployed. From a security perspective this is a must.</p>
+<p>Thanks for hearing my voice,</p>
+<p>Maxim Cournoyer</p>
+</blockquote>
+<p><strong>From: Phil Hughes</strong></p>
+<blockquote>
+<p>First, about your tweet about being accused of bias. Yeah, when people
+bitch about your bias but in different directions, I do think it means
+you are in the middle. Being a Linux guy for 20+ years and ex-publisher
+of Linux Journal, this situation has happened to me many, many times.</p>
+<p>My intent was to comment on "which is the better license" but, after
+reading your blog I really don't have "the right answer". Hopefully
+others will offer more thoughts so that the decision will become
+obvious.</p>
+<p>My "bias" is that the GPL irritates me -- mostly because of RMS's "this
+is the only answer" attitude. I am 100% behind the goal of the GPL (and
+I think he knows that) but I also recognize the down-sides. For example,
+at one point Linus was asked what was his biggest error with Linux and
+he said "licensing it under the GPL".</p>
+<p>His comment was about the "politics" of the GPL rather than the concept.
+That's pretty much my issue as well. It is hard to get those "afraid" of
+the GPL on board when you are put in a position where you need to defend
+RMS's politics.</p>
+<p>We know that Apple picked a "we can do what we want" license for its
+base software. If BSD and Linux has both been under the same license,
+things probably would have been different. But, better? It is hard to
+say.  Those who are actually there to innovate seem OK with the GPL. GPL
+or not, it is still hard to measure which license actually produces more
+innovation. I expect there are big wins for each.</p>
+<p>So, now you see my bias and you also see that it didn't produce a
+decision.</p>
+<p>Hopefully others will chip in.</p>
+<p>-- <br />
+Phil Hughes<br />
+</p>
+</blockquote>
+<p><strong>From: Tim Herklots</strong></p>
+<blockquote>
+<p>The "Network Use is Distribution" feature of AGPL plus the
+no-sublicensing makes it much easier to detect license abuse.</p>
+<p>If the code is detected somewhere in the wild, and source isn't
+available, AGPL is always violated.</p>
+<p>The threat model that concerns me is someone big like Microsoft, Google,
+Facebook, Yahoo forking the cord and including an government-breakable
+alternative encryption type/method that their installs use by default or
+by rollback at the mailserver end. Mailpile would be forced to include
+this alternative for compatibility reasons, and the bad encryption
+becomes standardised with most people thinking that it is good.</p>
+<p>Tim</p>
+</blockquote>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>

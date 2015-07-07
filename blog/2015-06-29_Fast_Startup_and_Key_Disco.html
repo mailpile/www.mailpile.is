@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Roadmap Reality Check</title>
+    <title>Mailpile: Fast Startup and Key Discovery</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -89,91 +89,88 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="/blog/2015-06-01_Roadmap_Reality_Check.html"><h1>Roadmap Reality Check</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a> on June  1, 2015</strong></p>
+    <a href="/blog/2015-06-29_Fast_Startup_and_Key_Disco.html"><h1>Fast Startup and Key Discovery</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on June 29, 2015</strong></p>
 
-<p>First, an announcment:</p>
-<h3>Invitations to the voting page have been sent!</h3>
-<p>All 3015 of them!</p>
-<p>If you donated $23 USD (or more) to the project and haven't yet received
-an invitation, please <strong>check your spam</strong>. If nothing's there, please
-<a href="mailto:team@mailpile.is?subject=Community+Site">get in touch</a>. We might
-not have a valid e-mail address for you on file, or it may be that
-things just got lost in the shuffle.</p>
-<p>Voting on the license will continue <strong>until July 1</strong>, at which point I will
-call the results.</p>
-<p>Hooray!</p>
-<h3>Roadmap Distractions</h3>
-<p>In addition to getting the invitations sent out this last week has been
-<a href="https://github.com/mailpile/Mailpile/commits/master">very productive on the code
-front</a>... just not
-entirely on the stuff I was <em>supposed</em> to be working on.</p>
-<p>Distractions included:</p>
-<ol>
-<li>Going over the settings of our Twitter and Facebook accounts</li>
-<li>Making the app less pretty (temporarily, to manage expectations)</li>
-<li>Adding in-app instructions on how best to report bugs</li>
-<li>Responding to some Github issues, fixing some buglets</li>
-<li>Implementing working proxy support (HTTP, SOCKS and Tor)</li>
-<li>Implementing "select all matching this search"</li>
-</ol>
-<p>The last two in particular are both awesome milestones in their own
-right, things which had been languishing at 90% in our code-base for
-<em>months</em> now.</p>
-<p>The proxy support allows us to start testing some of the main points
-from <a href="https://github.com/mailpile/Mailpile/wiki/Security-roadmap">the security
-roadmap</a>,
-with respect to anonymous access to SMTP, IMAP servers and Gravatar.</p>
-<p>Being able to "select all" makes the app an order of magnitude more
-powerful when it comes to organizing and extracting value from e-mail.
-Basic operations like "<a href="https://github.com/mailpile/Mailpile/issues/1027">mark all messages as
-read</a>" depend on this,
-as did more advanced use cases, such as using
-<a href="2015-05-18_Digging_for_Data.html">Datadig</a> to convert hundreds of
-PayPal notifications into a spreadsheet of Mailpile backers...</p>
-<h3>Why you no focus?</h3>
-<p>So this is the third week in a row with some pretty major, exciting
-distractions. Great progress, but not necessarily on things which were
-due according to the roadmap. What's going on?</p>
-<p>I would hate to be my manager, but this is relatively normal; business
-as usual.</p>
-<p>I don't know if this works the same way for other software developers
-but, after 20 years of coding for fun and profit, I have learned that I am
-most productive if I have goals and deadlines, balanced with the freedom
-to frequently give in to inspiration and obsession. The above work falls
-squarely into the latter category; I got inspired and could visualize
-exactly how to solve each problem. Rather than put it off, I harnessed
-that creative energy and just <em>got things done</em>.</p>
-<p>It's all necessary, useful work. It's just not happening in the order
-laid out in the original plan.</p>
-<p>But that does beg the question: how is <a href="2015-04-27_Roadmap_to_v1.html">the roadmap
-itself</a> holding up?</p>
-<h3>Roadmap Reality Check</h3>
-<p>According to the roadmap, the "Short Setup Flow" theme should be complete now.
-It is not, I <em>am</em> behind schedule. This is roughly where various
-roadmap-related tasks stand at the moment:</p>
-<ol>
-<li><strong>90%</strong> - Browse FS: Works! Is a bit ugly.</li>
-<li><strong>90%</strong> - Accounts: The design is now pretty solid (in my head).</li>
-<li><strong>80%</strong> - Key discovery: results need to be injected back into the composer.</li>
-<li><strong>80%</strong> - Browse Mailboxes: mail can be read without being added to the
-             search index first, but is buggy.</li>
-<li><strong>75%</strong> - Account creation: almost works! This replaces the crypto,
-             profile, route and source setup pages.</li>
-<li><strong>60%</strong> - Simplified UI: More cleanup is needed.</li>
-<li><strong>40%</strong> - Home Page: is live, but unfinished.</li>
-<li><strong>10%</strong> - Browsing IMAP/POP3: should be easy, but barely started.</li>
-</ol>
-<p>All in all, I figure I'm about a week or two behind.</p>
-<p>Could be worse, releasing Beta III in about a month's time is still
-feasible. A bit crazy, but feasible...</p>
+<p>Last week was a very successful one here in Mailpile-code-land.
+A whole bunch of loose ends got tied off, so this week Mailpile
+is actually leaps and bounds more powerful than it was just a few
+days ago.</p>
+<p>I've been a bit behind schedule working towards Beta III, but
+this week has been so good that I am now mostly caught up.</p>
+<p>The highlights are described below. Just please, don't expect me
+to always be this productive!</p>
+<h4>Memory Hole</h4>
+<p>Discussions about "Memory Hole" picked up some steam this week.
+Memory Hole is the proposal to extend PGP/MIME to sign and possibly
+encrypt some e-mail message headers, the Subject being the most
+obvious candidate. This is a collaborative effort between multiple
+e-mail security tools, and this week test messages were exchanged
+with the developers of Enigmail, R2Mail2, Lavaboom and gpg4o.</p>
+<p>Although Memory Hole does not address all of <a href="2014-11-21_To_PGP_MIME_Or_Not.html">the issues I have with
+PGP/MIME</a>, it is a massive step in
+the right direction. The fact that it is already getting support from
+so many projects is very encouraging!</p>
+<h4>Key Discovery and Crypto Policies</h4>
+<p>This week I completed the "Key Discovery" milestone from <a href="/roadmap/">the 1.0
+roadmap</a>! It is now possible to search for PGP keys,
+import and use while composing a message.</p>
+<p>This completes the work started by Brennan last October, which he
+was unable to finish because the back-end (my domain) didn't
+provide him with the data and APIs that he needed.</p>
+<p>In the process of wrapping that up I also finished implementing
+smart "crypto policies", whereby the app will suggest signing or
+encrypting of outgoing mail depending on what we have received
+from the recipients in the past. This is a critical part of
+Mailpile's overall strategy to gradually ramp up the security of
+e-mail without getting in people's way.</p>
+<p>Once more user interface work has been done it will also be
+possible to configure custom policies for individual contacts. So
+you will be able to tell Mailpile that Alice always wants to
+receive encrypted mail, but Bob hates digital signatures...</p>
+<h4>Fast Startup Progress</h4>
+<p>The Fast Startup milestone for 1.0 (and Beta III) involves
+completely revamping how Mailpile stores metadata and the search
+index.</p>
+<p>This is a big and scary task, but luckily most of the research
+and code was done last January. I spent a few days this week
+dusting off the code and finished integrating it. The good news
+is that it works: this weekend I started up a fully functioning
+Mailpile using the new storage systems.</p>
+<p>I have yet to migrate the contacts over and write a migration
+tool to help existing users make the switch, but the riskiest
+parts of the job are now done. Because this is not a backwards
+compatible change, this code won't be merged with the main branch
+until the migration tool is written but will instead live on a
+branch of its own:
+<a href="https://github.com/mailpile/Mailpile/tree/features/metadata.ng">features/metadata.ng</a></p>
+<h4>Working with Mailing Lists</h4>
+<p>Another small improvement made this week involves how Mailpile
+handles mailing lists.</p>
+<p>In response to some feedback (a.k.a. friendly complaints) on our
+IRC channel (#mailpile), I've made the search keyword generation
+for mailing lists both less spammy and more precise. The metadata
+store now also records which mailing list a message came from.</p>
+<p>Now that I'm a bit more used to working with Mailpile's user
+interface, I was also able to make these improvements bubble all
+the way up so people can make use of them! If you select a single
+message in the search view, Mailpile's tool bar will now display
+a link to search for other messages from the same person - or
+from the same mailing list, based on these improved keywords.</p>
+<p>This is an attempt to educate users on the possibility and syntax
+of searching by sender or by mailing list.  But it is also
+directly functional, because once you are looking at a search
+result page dedicated to a particular mailing list, the "Save
+Search" button makes it trivially easy to convert that into a
+dedicated Tag with a behind-the-scenes Filter classifying future
+e-mail automatically.</p>
+<p>Powerful features, made discoverable and clickable...</p>
 <h3>Plans for this week</h3>
 <ol>
-<li>Admin work: Taxes and pay my own salary.</li>
-<li>Finish the Add Account tool.</li>
-<li>Upgrade the Add Account code so it also functions as Edit Account.</li>
-<li>Either IMAP browsing work or start merging the new storage code
-   required for faster startup.</li>
+<li>Tally votes and announce our license!</li>
+<li>Finish Fast Startup for contacts and migration</li>
+<li>Find someone to review the crypto used by new storage systems</li>
+<li>Begin work on Beta III packaging</li>
 </ol>
 <!-- Page content ends -->
 <!--

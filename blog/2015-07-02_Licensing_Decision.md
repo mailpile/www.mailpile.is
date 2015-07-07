@@ -69,7 +69,7 @@ The fact is, voter participation in this election was quite low. 3041
 people in total were eligible for voting, but we only had about 16.5% turnout.
 Considering the subject matter (licensing, how dull!), it seems quite
 reasonable to assume this means most of our backers just don't care, one
-way or another. Even Stallman himself [commented](http://b.pagekite.me/blog/2015-06-15_Community_License_Feedback.html)
+way or another. Even Stallman himself [commented](2015-06-15_Community_License_Feedback.html)
 that both licenses were acceptable, although he of course prefers the
 AGPL.
 
@@ -92,7 +92,7 @@ That's not too bad!
 So, what's next?
 
 We could extend the deadline, hope more people vote and a stronger
-conensus emerges... but I don't really think that will work. The ratios
+consensus emerges... but I don't really think that will work. The ratios
 haven't really changed much since the first few days of the campaign.
 I know, I've been peeking.
 

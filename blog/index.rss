@@ -4,357 +4,387 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
-    <title>Roadmap Reality Check</title>
-    <link>http://www.mailpile.is/blog/2015-06-01_Roadmap_Reality_Check.html</link>
-    <description>&lt;p&gt;First, an announcment:&lt;/p&gt;
-&lt;h3&gt;Invitations to the voting page have been sent!&lt;/h3&gt;
-&lt;p&gt;All 3015 of them!&lt;/p&gt;
-&lt;p&gt;If you donated $23 USD (or more) to the project and haven&#39;t yet received
-an invitation, please &lt;strong&gt;check your spam&lt;/strong&gt;. If nothing&#39;s there, please
-&lt;a href=&#34;mailto:team@mailpile.is?subject=Community+Site&#34;&gt;get in touch&lt;/a&gt;. We might
-not have a valid e-mail address for you on file, or it may be that
-things just got lost in the shuffle.&lt;/p&gt;
-&lt;p&gt;Voting on the license will continue &lt;strong&gt;until July 1&lt;/strong&gt;, at which point I will
-call the results.&lt;/p&gt;
-&lt;p&gt;Hooray!&lt;/p&gt;
-&lt;h3&gt;Roadmap Distractions&lt;/h3&gt;
-&lt;p&gt;In addition to getting the invitations sent out this last week has been
-&lt;a href=&#34;https://github.com/mailpile/Mailpile/commits/master&#34;&gt;very productive on a the code
-front&lt;/a&gt;... just not
-entirely on the stuff I was &lt;em&gt;supposed&lt;/em&gt; to be working on.&lt;/p&gt;
-&lt;p&gt;Distractions included:&lt;/p&gt;
+    <title>Beta III preparations</title>
+    <link>http://www.mailpile.is/blog/2015-07-07_Beta_III_prep.html</link>
+    <description>&lt;p&gt;Last week&#39;s big news was of course &lt;a href=&#34;2015-07-02_Licensing_Decision.html&#34;&gt;the licensing
+decision&lt;/a&gt; - the vote completed and the
+project&#39;s license is now officially the &lt;a href=&#34;https://www.gnu.org/licenses/agpl-3.0.en.html&#34;&gt;GNU Affero General Public
+License&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The vote was very close, but the slight majority from the community reflects
+both the wishes of the original project founders and matches the political
+goals of the project itself.&lt;/p&gt;
+&lt;p&gt;Thanks again to everyone who voted!&lt;/p&gt;
+&lt;p&gt;On the technical front, it was a slow week. I spent some time reflecting on the
+original road-map and decided to make one major change to the Beta III plans:
+the &#34;Fast Startup&#34; milestone will be postponed until later this summer.&lt;/p&gt;
+&lt;p&gt;The reason for this change is that although the code appears to work, it got
+done too late to get reviewed by any 3rd parties. For many other aspects of
+Mailpile that would be OK, but our encrypted on-disk storage is a bit different.
+It&#39;s both difficult and error prone to change storage formats after the fact,
+so it is of particular importance to get this done right the first time around.&lt;/p&gt;
+&lt;p&gt;Delaying Beta III is also not an option, because I need feedback on the
+usability of all the new setup interfaces and composer improvements so the
+worst problems can be fixed before 1.0.&lt;/p&gt;
+&lt;p&gt;This decision scuppered most of the technical plans for the week, so instead
+I have been tying off loose ends and fixing bugs. The biggest milestone was
+probably making it possible to browse remote IMAP servers using the Browse
+tool, which paves the way for interactive configuration of import/index
+policies when users don&#39;t want to rely on Mailpile&#39;s auto-detection (or need
+to correct the auto-detector&#39;s mistakes).&lt;/p&gt;
+&lt;h2&gt;Plans for this week&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;Going over the settings of our Twitter and Facebook accounts&lt;/li&gt;
-&lt;li&gt;Making the app less pretty (temporarily, to manage expectations)&lt;/li&gt;
-&lt;li&gt;Adding in-app instructions on how best to report bugs&lt;/li&gt;
-&lt;li&gt;Responding to some Github issues, fixed some buglets&lt;/li&gt;
-&lt;li&gt;Implementing working proxy support (HTTP, SOCKS and Tor)&lt;/li&gt;
-&lt;li&gt;Implementing &#34;select all matching this search&#34;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The last two in particular are both awesome milestones in their own
-right, things which had been languishing at 90% in our code-base for
-&lt;em&gt;months&lt;/em&gt; now.&lt;/p&gt;
-&lt;p&gt;The proxy support allows us to start testing some of the main points
-from &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;the security
-roadmap&lt;/a&gt;,
-with respect to anonymous access to SMTP, IMAP servers and Gravatar.&lt;/p&gt;
-&lt;p&gt;Being able to &#34;select all&#34; makes the app an order of magnitude more
-powerful when it comes to organizing and extracting value from e-mail.
-Basic operations like &#34;&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/1027&#34;&gt;mark all messages as
-read&lt;/a&gt;&#34; depend on this,
-as did more advanced use cases, such as using
-&lt;a href=&#34;2015-05-18_Digging_for_Data.html&#34;&gt;Datadig&lt;/a&gt; to convert hundreds of
-PayPal notifications into a spreadsheet of Mailpile backers...&lt;/p&gt;
-&lt;h3&gt;Why you no focus?&lt;/h3&gt;
-&lt;p&gt;So this is the third week in a row with some pretty major, exciting
-distractions. Great progress, but not necessarily on things which were
-due according to the roadmap. What&#39;s going on?&lt;/p&gt;
-&lt;p&gt;I would hate to be my manager, but this is relatively normal; business
-as usual.&lt;/p&gt;
-&lt;p&gt;I don&#39;t know if this works the same way for other software developers,
-but after 20 years of coding for fun and profit I have learned that I am
-most productive if I have goals and deadlines, balanced with the freedom
-to frequently give in to inspiration and obsession. The above work falls
-squarely into the latter category; I got inspired and could visualize
-exactly how to solve each problem. Rather than put it off, I harnessed
-that creative energy and just &lt;em&gt;got things done&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;It&#39;s all necessary, useful work. It&#39;s just not happening in the order
-laid out in the original plan.&lt;/p&gt;
-&lt;p&gt;But that does beg the question: how is &lt;a href=&#34;2015-04-27_Roadmap_to_v1.html&#34;&gt;the roadmap
-itself&lt;/a&gt; holding up?&lt;/p&gt;
-&lt;h3&gt;Roadmap Reality Check&lt;/h3&gt;
-&lt;p&gt;According to the roadmap, the &#34;Short Setup Flow&#34; theme should be complete now.
-It is not, I &lt;em&gt;am&lt;/em&gt; behind schedule. This is roughly where various
-roadmap-related tasks stand at the moment:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;90%&lt;/strong&gt; - Browse FS: Works! Is a bit ugly.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;90%&lt;/strong&gt; - Accounts: The design is now pretty solid (in my head).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;80%&lt;/strong&gt; - Key discovery: results need to be injected back into the composer.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;80%&lt;/strong&gt; - Browse Mailboxes: mail can be read without being added to the
-             search index first, but is buggy.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;75%&lt;/strong&gt; - Account creation: almost works! This replaces the crypto,
-             profile, route and source setup pages.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;60%&lt;/strong&gt; - Simplified UI: More cleanup is needed.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;40%&lt;/strong&gt; - Home Page: is live, but unfinished.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;10%&lt;/strong&gt; - Browsing IMAP/POP3: should be easy, but barely started.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;All in all, I figure I&#39;m about a week or two behind.&lt;/p&gt;
-&lt;p&gt;Could be worse, releasing Beta III in about a month&#39;s time is still
-feasible. A bit crazy, but feasible...&lt;/p&gt;
-&lt;h3&gt;Plans for this week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Admin work: Taxes and pay my own salary.&lt;/li&gt;
-&lt;li&gt;Finish the Add Account tool.&lt;/li&gt;
-&lt;li&gt;Upgrade the Add Account code so it also functions as Edit Account.&lt;/li&gt;
-&lt;li&gt;Either IMAP browsing work or start merging the new storage code
-   required for faster startup.&lt;/li&gt;
+&lt;li&gt;Add missing configuration dialogues&lt;/li&gt;
+&lt;li&gt;Fix easy buglets, hide features too hard to fix&lt;/li&gt;
+&lt;li&gt;Tag and startg packaging Beta III&lt;/li&gt;
 &lt;/ol&gt;</description>
-    <pubDate>Mon, 01 Jun 2015 12:00:00 +0000</pubDate>
+    <pubDate>Mon, 06 Jul 2015 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>An AMA with the Localization Lab</title>
-    <link>http://www.mailpile.is/blog/2015-05-25_Localization_Lab_AMA.html</link>
-    <description>&lt;p&gt;Last week&#39;s big event was a very entertaining &#34;Ask Me Anything&#34;
-session with the folks from the Open Technology Fund&#39;s &lt;a href=&#34;http://www.localizationlab.org/&#34;&gt;Localization
-Lab&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It was a friendly and productive session which hopefully helped
-strengthen the ties between the coding side of the Mailpile project and
-the very important community of volunteers that translate our software
-to languages other than English. There were two main take-aways from the
-meeting, aside from getting to know each other a bit better:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Mailpile&#39;s core includes a plug-in designed to help translators,
-   which can be enabled with &lt;code&gt;mailpile&amp;gt; plugins/load i18nhelper&lt;/code&gt;. It
-   would be useful to develop this further and get feedback from the
-   translators themselves on how it could be improved.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The efforts of our translators are valuable and deserve to be
-   publicly recognized, just like the efforts of our other backers.
-   The Localization Lab folks were going to see what they could do
-   to compile a list of contributors, and I was going to make sure
-   that list found its way onto our &lt;a href=&#34;/thank-you/&#34;&gt;thank you page&lt;/a&gt;
-   and into an appropriate page within the app itself.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The rest of the week was business-as-usual. We sent out over 1000
-invitations to &lt;a href=&#34;/roadmap/&#34;&gt;the Mailpile community site&lt;/a&gt;, continued
-discussions with potential financial backers and related projects and
-created &lt;a href=&#34;https://github.com/mailpile/HoiPoi/issues&#34;&gt;a couple of detailed task descriptions on the Hoi Poi
-bug-tracker&lt;/a&gt;, in case
-friendly coders want to help improve the community site faster than
-I&#39;ll be able to do on my own.&lt;/p&gt;
-&lt;p&gt;On the tech front, I implemented a &#34;Save this search&#34; feature, which
-exposes some of the back-end&#39;s automated mail filter functionality in
-a (hopefully!) user-friendly way. I also made progress on the actual
-roadmap tasks- the VFS and the ability to browse the contents of a
-mailbox (local or remote) without having to add it to the search index
-first. These are still works in progress and have not been pushed up
-to github yet.&lt;/p&gt;
-&lt;h3&gt;Plans for this week&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Send out the rest of the invitations to community site&lt;/li&gt;
-&lt;li&gt;Revisit the settings of our Twitter and Facebook accounts. Should we
-   even have a Facebook account?&lt;/li&gt;
-&lt;li&gt;Keep on hacking...&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Mon, 25 May 2015 12:00:00 +0000</pubDate>
+    <title>License: The Python&#39;s Tongue</title>
+    <link>http://www.mailpile.is/blog/2015-07-02_Licensing_Decision.html</link>
+    <description>&lt;p&gt;It has been an interesting month!&lt;/p&gt;
+&lt;p&gt;I finally put the team&#39;s original plan into action, launching a vote
+on our new &lt;a href=&#34;/roadmap/&#34;&gt;roadmap site&lt;/a&gt;, asking our community of backers
+to help us choose a single license for the project.&lt;/p&gt;
+&lt;p&gt;There were discussions on Twitter, &lt;a href=&#34;2015-06-15_Community_License_Feedback.html&#34;&gt;thoughtful blog posts and insightful
+e-mails&lt;/a&gt;. And people voted.&lt;/p&gt;
+&lt;p&gt;Finally, while I was fast asleep my trusty robots disabled the voting
+and made a snapshot of the voting database at midnight
+California-time, July 1st. I got up the next morning and before making
+breakfast I ran a quick &lt;em&gt;grep&lt;/em&gt; to get a hint of the results. I was not
+happy with what I saw.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Not happy at all...&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Raw, Cooked and Baked Results&lt;/h2&gt;
+&lt;p&gt;This is what I saw:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;51.39% in 258 votes for the GNU AGPL v3&lt;/li&gt;
+&lt;li&gt;48.61% in 244 votes for the Apache License 2.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So we have a winner! Sort of. Barely...&lt;/p&gt;
+&lt;p&gt;I mulled it over for most of the day and recalculated that evening, this
+time weighing each ballot by the USD amount donated by the voter,
+excluding the project founders because putting a dollar amount on our
+contributions is not trivial math. This balloting method led to Apache
+winning by a surprisingly large margin. However, when I dug into the
+results, it turns out the difference was down to a single four-figure
+backer who voted for Apache.&lt;/p&gt;
+&lt;p&gt;Reversing the results on the basis of one man&#39;s generosity would not
+seem right at all... particularly when I had just excluded the
+founding team (whose opinions I know quite well) and I know for a fact
+that very vocal advocates of the winning license backed us by just as
+much but neglected to cast their votes.&lt;/p&gt;
+&lt;p&gt;So I recalculated a third time, this time using the natural logarithm of
+USD amounts. This rewards generosity while recognizing that wealth is
+not evenly distributed. This time the AGPLv3 won again, albeit by an
+even smaller margin than before: 50.81% vs 49.19%&lt;/p&gt;
+&lt;p&gt;I gave up.&lt;/p&gt;
+&lt;h2&gt;The Python&#39;s Tongue&lt;/h2&gt;
+&lt;p&gt;On the surface of it, this is the worst possible outcome of our
+license elections.&lt;/p&gt;
+&lt;p&gt;The whole point of the vote was to reach a consensus. Licensing tends to
+be very divisive in the Free and Open Source Software community and the
+Mailpile Team hoped that by using a transparent, open and fair process
+we could reach a conclusion everyone could abide by.&lt;/p&gt;
+&lt;p&gt;Although these results clearly don&#39;t really meet that bar, all we can do
+is look for a silver lining.&lt;/p&gt;
+&lt;p&gt;The fact is, voter participation in this election was quite low. 3041
+people in total were eligible for voting, but we only had about 16.5% turnout.
+Considering the subject matter (licensing, how dull!), it seems quite
+reasonable to assume this means most of our backers just don&#39;t care, one
+way or another. Even Stallman himself &lt;a href=&#34;2015-06-15_Community_License_Feedback.html&#34;&gt;commented&lt;/a&gt;
+that both licenses were acceptable, although he of course prefers the
+AGPL.&lt;/p&gt;
+&lt;p&gt;With that interpretation, the results look like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;8.5% in 258 votes for the GNU AGPL v3&lt;/li&gt;
+&lt;li&gt;8.0% in 244 votes for the Apache License 2.0&lt;/li&gt;
+&lt;li&gt;83.5% don&#39;t care enough to vote or were unaware of the elections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So our community is indeed divided. But it&#39;s not divided right down the
+middle, it&#39;s divided like a python&#39;s tongue. Mostly united in just
+wanting Mailpile to exist, with an small split at the tip regarding the
+license.&lt;/p&gt;
+&lt;p&gt;That&#39;s not too bad!&lt;/p&gt;
+&lt;h2&gt;Choosing a License&lt;/h2&gt;
+&lt;p&gt;So, what&#39;s next?&lt;/p&gt;
+&lt;p&gt;We could extend the deadline, hope more people vote and a stronger
+consensus emerges... but I don&#39;t really think that will work. The ratios
+haven&#39;t really changed much since the first few days of the campaign.
+I know, I&#39;ve been peeking.&lt;/p&gt;
+&lt;p&gt;Since we really can&#39;t live with two licenses forever, a choice has to be
+made. I am writing the bulk of the code these days and have no-one but
+the community to answer to, so ultimately the decision sits with me.
+Without a clear mandate from the election, I am going to have to take
+responsibility and make the choice myself. People who don&#39;t like it will
+know exactly who to blame...&lt;/p&gt;
+&lt;p&gt;That&#39;s a scary thought, but what the heck.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I choose the GNU Affero General Public License. Version 3.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;That will be the license I apply to all future code I commit to the
+Mailpile project and that is the license future contributors to the main
+repo will have to agree to as well.&lt;/p&gt;
+&lt;p&gt;Sorry Apache backers, I really hope we can still be friends! If you&#39;re
+really bummed you do have the right to fork yesterday&#39;s code and carry
+on without me. But I would much rather we worked together.&lt;/p&gt;
+&lt;h2&gt;But... why?&lt;/h2&gt;
+&lt;p&gt;I choose the AGPLv3, because I think it is the right license for this
+project.&lt;/p&gt;
+&lt;p&gt;Not because it won the elections by a tiny margin, although that was of
+course a factor. Not because my co-conspirators, Smári and Brennan, both
+prefer it, although that also matters. I choose the AGPLv3 because I
+think it fits.&lt;/p&gt;
+&lt;p&gt;Mailpile is a project about freedom. It is not a popularity contest or a
+startup, it&#39;s not &#34;industry infrastructure&#34;, nor does it aim to be.
+Mailpile is a political project which aims to improve the privacy and
+digital independence of individuals everywhere.&lt;/p&gt;
+&lt;p&gt;The Apache License is a wonderful thing, an open, generous, pragmatic,
+apolitical license. The AGPLv3 on the other hand, is a political and
+ethical line in the sand.&lt;/p&gt;
+&lt;p&gt;And so is Mailpile.&lt;/p&gt;</description>
+    <pubDate>Thu, 02 Jul 2015 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Digging for Data</title>
-    <link>http://www.mailpile.is/blog/2015-05-18_Digging_for_Data.html</link>
-    <description>&lt;p&gt;Last week mostly went according to plan: backers e-mails were found,
-invitations were sent, VFS work commenced.&lt;/p&gt;
-&lt;p&gt;Not quite as many invitations got sent out as I had hoped though,
-because I was overcome by a debilitating bout of productive
-procrastination. Inspired by the need to compile a list of backers on
-the one hand, and a desire to refresh my memory on front-end development
-work on the other, I ended up creating a new plugin that makes it easy
-to run custom data mining operations on your own e-mail.&lt;/p&gt;
-&lt;p&gt;This is what the result looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/files/2015-05-Datadig-Demo.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The text is all blurry, because data is being extracted so fast it
-makes your head spin! Right?&lt;/p&gt;
-&lt;p&gt;If you follow the S-shaped path of the green arrows, starting in the
-upper right-hand corner, the tool works like this:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Search and select messages&lt;/li&gt;
-&lt;li&gt;Click the grid icon (top-right arrow)&lt;/li&gt;
-&lt;li&gt;Add columns describing the desired data&lt;/li&gt;
-&lt;li&gt;Click the Preview button to see if it works&lt;/li&gt;
-&lt;li&gt;Download the results as a CSV file&lt;/li&gt;
-&lt;li&gt;Profit!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;If you want to extract information which has already been defined as one
-of the built-in recipes, this kind of personal data-mining becomes a
-mere matter of pointing and clicking (the rows of the &lt;em&gt;Data Source&lt;/em&gt;
-table are clickable). If the pre-existing recipes do not suffice, clever
-geeks can search for virtually anything by using regular expressions.&lt;/p&gt;
-&lt;p&gt;Hopefully, over time, Mailpile community members will create and share
-recipes for common things like invoice amounts or flight itineraries,
-bank statements or stock market alerts... if you&#39;ve ever wanted to graph
-the frequency of your Twitter mentions, this plugin (combined with any
-old spreadsheet application) makes that easy to do.&lt;/p&gt;
-&lt;p&gt;The plugin is named &lt;strong&gt;Datadig&lt;/strong&gt;, and to give it a try you will need to
-pull the latest Mailpile from Github and run the following command on
-the Mailpile CLI, &lt;code&gt;mailpile&amp;gt; plugins/load datadig&lt;/code&gt; - and yes, a GUI for
-this is in the works.  Quit Mailpile, restart and the Datadig grid icon
-should now appear whenever you select messages!&lt;/p&gt;
-&lt;p&gt;It seems only fitting that Mailpile will not only protect privacy, but
-will also help people datamine their own e-mail for their own personal
-benefit. The tabular spreadsheet format is universal and widely
-understood, making this sort of thing potentially useful to a very wide
-audience - not just hackers and coders.&lt;/p&gt;
-&lt;p&gt;Who would have thought CSV files could be so exciting?&lt;/p&gt;
-&lt;p&gt;The code lives in &lt;a href=&#34;https://github.com/mailpile/Mailpile/tree/master/mailpile/contrib/datadig&#34;&gt;.../mailpile/contrib/datadig/&lt;/a&gt;
-and I look forward to your pull requests. ;-)&lt;/p&gt;
-&lt;p&gt;In other news...&lt;/p&gt;
+    <title>Fast Startup and Key Discovery</title>
+    <link>http://www.mailpile.is/blog/2015-06-29_Fast_Startup_and_Key_Disco.html</link>
+    <description>&lt;p&gt;Last week was a very successful one here in Mailpile-code-land.
+A whole bunch of loose ends got tied off, so this week Mailpile
+is actually leaps and bounds more powerful than it was just a few
+days ago.&lt;/p&gt;
+&lt;p&gt;I&#39;ve been a bit behind schedule working towards Beta III, but
+this week has been so good that I am now mostly caught up.&lt;/p&gt;
+&lt;p&gt;The highlights are described below. Just please, don&#39;t expect me
+to always be this productive!&lt;/p&gt;
+&lt;h4&gt;Memory Hole&lt;/h4&gt;
+&lt;p&gt;Discussions about &#34;Memory Hole&#34; picked up some steam this week.
+Memory Hole is the proposal to extend PGP/MIME to sign and possibly
+encrypt some e-mail message headers, the Subject being the most
+obvious candidate. This is a collaborative effort between multiple
+e-mail security tools, and this week test messages were exchanged
+with the developers of Enigmail, R2Mail2, Lavaboom and gpg4o.&lt;/p&gt;
+&lt;p&gt;Although Memory Hole does not address all of &lt;a href=&#34;2014-11-21_To_PGP_MIME_Or_Not.html&#34;&gt;the issues I have with
+PGP/MIME&lt;/a&gt;, it is a massive step in
+the right direction. The fact that it is already getting support from
+so many projects is very encouraging!&lt;/p&gt;
+&lt;h4&gt;Key Discovery and Crypto Policies&lt;/h4&gt;
+&lt;p&gt;This week I completed the &#34;Key Discovery&#34; milestone from &lt;a href=&#34;/roadmap/&#34;&gt;the 1.0
+roadmap&lt;/a&gt;! It is now possible to search for PGP keys,
+import and use while composing a message.&lt;/p&gt;
+&lt;p&gt;This completes the work started by Brennan last October, which he
+was unable to finish because the back-end (my domain) didn&#39;t
+provide him with the data and APIs that he needed.&lt;/p&gt;
+&lt;p&gt;In the process of wrapping that up I also finished implementing
+smart &#34;crypto policies&#34;, whereby the app will suggest signing or
+encrypting of outgoing mail depending on what we have received
+from the recipients in the past. This is a critical part of
+Mailpile&#39;s overall strategy to gradually ramp up the security of
+e-mail without getting in people&#39;s way.&lt;/p&gt;
+&lt;p&gt;Once more user interface work has been done it will also be
+possible to configure custom policies for individual contacts. So
+you will be able to tell Mailpile that Alice always wants to
+receive encrypted mail, but Bob hates digital signatures...&lt;/p&gt;
+&lt;h4&gt;Fast Startup Progress&lt;/h4&gt;
+&lt;p&gt;The Fast Startup milestone for 1.0 (and Beta III) involves
+completely revamping how Mailpile stores metadata and the search
+index.&lt;/p&gt;
+&lt;p&gt;This is a big and scary task, but luckily most of the research
+and code was done last January. I spent a few days this week
+dusting off the code and finished integrating it. The good news
+is that it works: this weekend I started up a fully functioning
+Mailpile using the new storage systems.&lt;/p&gt;
+&lt;p&gt;I have yet to migrate the contacts over and write a migration
+tool to help existing users make the switch, but the riskiest
+parts of the job are now done. Because this is not a backwards
+compatible change, this code won&#39;t be merged with the main branch
+until the migration tool is written but will instead live on a
+branch of its own:
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/tree/features/metadata.ng&#34;&gt;features/metadata.ng&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Working with Mailing Lists&lt;/h4&gt;
+&lt;p&gt;Another small improvement made this week involves how Mailpile
+handles mailing lists.&lt;/p&gt;
+&lt;p&gt;In response to some feedback (a.k.a. friendly complaints) on our
+IRC channel (#mailpile), I&#39;ve made the search keyword generation
+for mailing lists both less spammy and more precise. The metadata
+store now also records which mailing list a message came from.&lt;/p&gt;
+&lt;p&gt;Now that I&#39;m a bit more used to working with Mailpile&#39;s user
+interface, I was also able to make these improvements bubble all
+the way up so people can make use of them! If you select a single
+message in the search view, Mailpile&#39;s tool bar will now display
+a link to search for other messages from the same person - or
+from the same mailing list, based on these improved keywords.&lt;/p&gt;
+&lt;p&gt;This is an attempt to educate users on the possibility and syntax
+of searching by sender or by mailing list.  But it is also
+directly functional, because once you are looking at a search
+result page dedicated to a particular mailing list, the &#34;Save
+Search&#34; button makes it trivially easy to convert that into a
+dedicated Tag with a behind-the-scenes Filter classifying future
+e-mail automatically.&lt;/p&gt;
+&lt;p&gt;Powerful features, made discoverable and clickable...&lt;/p&gt;
 &lt;h3&gt;Plans for this week&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Continue sending out invitations to &lt;a href=&#34;/roadmap/&#34;&gt;the voting page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;More work on the VFS layer&lt;/li&gt;
-&lt;li&gt;Take part in the &lt;a href=&#34;https://twitter.com/L10nLab/status/597827047654842369&#34;&gt;Localization Lab&#39;s 2nd
-   AMA&lt;/a&gt;,
-   this Thursday!&lt;/li&gt;
-&lt;li&gt;Mystery meetings with mysterious people&lt;/li&gt;
+&lt;li&gt;Tally votes and announce our license!&lt;/li&gt;
+&lt;li&gt;Finish Fast Startup for contacts and migration&lt;/li&gt;
+&lt;li&gt;Find someone to review the crypto used by new storage systems&lt;/li&gt;
+&lt;li&gt;Begin work on Beta III packaging&lt;/li&gt;
 &lt;/ol&gt;</description>
-    <pubDate>Mon, 18 May 2015 12:00:00 +0000</pubDate>
+    <pubDate>Mon, 29 Jun 2015 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Site updates and community roadmap launched</title>
-    <link>http://www.mailpile.is/blog/2015-05-11_Weekly_Report.html</link>
-    <description>&lt;p&gt;This is the weekly report!  I&#39;m changing the format ever so slightly to
-ensure the headlines displayed on the front-page and in compact RSS
-readers are more informative.&lt;/p&gt;
-&lt;h3&gt;Done last week&lt;/h3&gt;
+    <title>The DCSS Conference in Cardiff</title>
+    <link>http://www.mailpile.is/blog/2015-06-22_DCSS_Cardiff.html</link>
+    <description>&lt;p&gt;This weekly report covers two weeks of work, because last week&#39;s post was
+dedicated to community feedback on the licensing debate. Here are some of
+the tech issues that got resolved in the meantime:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Updated the public website. The &lt;a href=&#34;/faq/&#34;&gt;FAQ&lt;/a&gt; and &lt;a href=&#34;/&#34;&gt;front-page&lt;/a&gt; content
-   was reviewed, updated and cleaned up. Individual &lt;a href=&#34;/blog/&#34;&gt;blog&lt;/a&gt; posts now
-   have &#34;next&#34; and &#34;previous&#34; links. Minor tweaks were made to the site
-   design to help with navigation of large pages: an up arrow in the lower
-   right corner and a table-of-contents overview of the FAQ.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Unveiled &lt;a href=&#34;/roadmap/&#34;&gt;the Community Roadmap&lt;/a&gt;; votable content includes
-   the licensing question and the post-1.0 roadmap.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Published &lt;a href=&#34;/blog/2015-05-08_Choosing_a_License.html&#34;&gt;a detailed blog-post explaining the AGPLv3 vs. Apache licensing
-   question&lt;/a&gt; we need to resolve,
-   publicized on Twitter and Hacker News. Took part in discussions on both
-   venues.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;IMAP: Improved download speed and Dovecot compatibility&lt;/li&gt;
+&lt;li&gt;Security: Fixed serious bug in local data encryption&lt;/li&gt;
+&lt;li&gt;Security: Implemented basic PGP passphrase manager&lt;/li&gt;
+&lt;li&gt;Fast setup: Editing accounts now works&lt;/li&gt;
+&lt;li&gt;Fast setup: Usability tests at DCSS, found and fixed some issues&lt;/li&gt;
+&lt;li&gt;UI: Tag creation and editing were revamped&lt;/li&gt;
+&lt;li&gt;Composer: Fixed bugs, started refactor to handle key discovery&lt;/li&gt;
+&lt;li&gt;Packaging: Prepared the packaging robot for Beta III builds&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;Last week I took some much needed days off and then attended the &lt;a href=&#34;http://www.dcssproject.net/&#34;&gt;Digital
+Citizenship and Surveillance Society&lt;/a&gt;
+conference in Cardiff.  It was a very inspiring conference and the
+organizers&#39; goal of getting techies to rub shoulders with academics and
+usability people was, as far as Mailpile goes, a complete success.&lt;/p&gt;
+&lt;p&gt;The first day was mainly dedicated to presentations and interesting
+conversations, including a well received lightning talk about Mailpile
+itself.&lt;/p&gt;
+&lt;p&gt;On the second day I performed two small usability tests with non-technical
+volunteers from the conference and discussed overall UI strategy with some
+of the experts from &lt;a href=&#34;https://www.headlondon.com/&#34;&gt;Head London&lt;/a&gt;. Actionable
+results were filed as &lt;a href=&#34;https://github.com/mailpile/Mailpile/issues&#34;&gt;issues in our bug
+tracker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On both days I did a fair bit of brainstorming with developers from the
+&lt;a href=&#34;https://leap.se/&#34;&gt;Leap&lt;/a&gt; and &lt;a href=&#34;https://pixelated-project.org/&#34;&gt;Pixelated&lt;/a&gt;
+projects, in particular helping them get up to speed with the e-mail header
+protection work that was done at &lt;a href=&#34;2015-04-20_OpenPGP_Email_Summit.html&#34;&gt;April&#39;s GnuPG e-mail
+summit&lt;/a&gt;. I summarized those
+discussions in &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-devel/2015-June/030036.html&#34;&gt;a post to the GnuPG-devel mailing
+list&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All in all, it was an excellent conference. I had fun and came home
+feeling inspired and motivated.&lt;/p&gt;
+&lt;p&gt;Just what the doctor ordered!&lt;/p&gt;
 &lt;h3&gt;Plans for this week&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Compile an up-to-date list of backers and their e-mail addresses, for
-   sending out invitations to the community voting page.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Send out the first 750 invitations.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Back to coding: Key discovery front-end and VFS work are next!&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Finish refactoring the composer and key discovery code&lt;/li&gt;
+&lt;li&gt;Migrate metadata index to new storage format&lt;/li&gt;
 &lt;/ol&gt;</description>
-    <pubDate>Mon, 11 May 2015 12:00:00 +0000</pubDate>
+    <pubDate>Mon, 22 Jun 2015 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Choosing a License for Mailpile 1.0</title>
-    <link>http://www.mailpile.is/blog/2015-05-08_Choosing_a_License.html</link>
-    <description>&lt;p&gt;Dear Mailpile backers and supporters!&lt;/p&gt;
-&lt;p&gt;The time has come for us to make a decision. Back when the project first
-got off the ground, we had some difficulty deciding which Open Source
-license we should use for our work. We narrowed it down to two licenses:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/licenses/agpl-3.0.txt&#34;&gt;The GNU Affero General Public License,
-    version 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.apache.org/licenses/LICENSE-2.0.html&#34;&gt;The Apache License, version
-    2.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The Mailpile development code, the Alphas and the Betas have all been
-released under &lt;em&gt;both&lt;/em&gt; of these licenses. This was a legal hack to avoid
-having to choose right away, without having to ask contributors to sign
-copyright waivers before sharing code with the project.&lt;/p&gt;
-&lt;p&gt;However, before the 1.0, we need to make a decision and settle upon one
-license or the other.&lt;/p&gt;
-&lt;p&gt;We have decided to let our community decide, and are in the process of
-sending out invitations to &lt;a href=&#34;/roadmap/&#34;&gt;our community governance page&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Why do licenses matter?&lt;/h3&gt;
-&lt;p&gt;Although a bit boring, licensing is actually very important.&lt;/p&gt;
-&lt;p&gt;The license is what grants exemptions from the rule of international
-copyright law. Without a free and open license, our backers would not be
-guaranteed the right to download, use, modify and share the results of
-our work - the work they paid for.&lt;/p&gt;
-&lt;p&gt;The license also helps define the community around the software, and
-this is where things get tricky.&lt;/p&gt;
-&lt;p&gt;Some licenses, especially those championed by our friends at the &lt;a href=&#34;https://www.fsf.org/&#34;&gt;Free
-Software Foundation&lt;/a&gt;, are designed to protect the
-rights of the end-user and ensure that community efforts remain with the
-community. The AGPLv3 is the most modern and powerful such license,
-designed for software like Mailpile.&lt;/p&gt;
-&lt;p&gt;Other licenses (such as the Apache license) are more permissive,
-allowing corporations to make use of community code in traditional,
-commercial software products. This fosters collaboration and motivates
-companies to contribute valuable time and effort, but does so at the
-expense of end-user freedom since many users of the software will end up
-using proprietary derivitives.&lt;/p&gt;
-&lt;h3&gt;Permissive licensing: Webkit&lt;/h3&gt;
-&lt;p&gt;An excellent example of permissive licensing, is the Webkit project.&lt;/p&gt;
-&lt;p&gt;Webkit is based on KHTML, which was published under a relatively
-permissive license (the GNU Lesser General Public License). I say
-relatively permissive, because although the LGPL allows use within
-proprietary products it does require that motifications to KHTML itself
-be given back to the community. This balance allowed Apple to create
-Safari, a proprietary browser, while forcing them to publish the engine
-they derived from KHTML - an engine which we know today as Webkit.&lt;/p&gt;
-&lt;p&gt;Webkit was then chosen by Google for use in their Chrome project, and
-the rest is history: Webkit, daughter of KHTML and Apple, has taken the
-lead as the world&#39;s fastest and most powerful HTML5 rendering engine. It
-is now not only at the heart of both Safari and Chrome, but is used in a
-wide range of other smaller browsers and open source projects.&lt;/p&gt;
-&lt;p&gt;This is a fantastic open source success story, and it&#39;s worth
-remembering that this would probably never have happened if KHTML had
-been licensed using a more permissive license, such as MIT, BSD or
-Apache - those license would have allowed Apple to keep their
-improvements to themselves.&lt;/p&gt;
-&lt;p&gt;But there are more lessons to be learned here!&lt;/p&gt;
-&lt;p&gt;Today Safari and Chrome are both provided free of charge, but they are
-proprietary programs and the community does not have access to their
-inner workings. Amongst other things, this means &lt;strong&gt;the community cannot
-easily inspect or audit&lt;/strong&gt; how and when these browsers &#34;phone home&#34; and
-share private data with the companies that wrote them.&lt;/p&gt;
-&lt;p&gt;It can also be argued Webkit&#39;s license &lt;strong&gt;perpetuates the status quo&lt;/strong&gt;
-and unfairly skews the market against truly free software. Compared with
-these truly free alternatives, Chrome and Safari will always have a head
-start because Google and Apple can keep some of their innovations to
-themselves.&lt;/p&gt;
-&lt;p&gt;Of course the counter-argument is, that without the motivation for big
-companies to collaborate, Webkit probably wouldn&#39;t exist at all.&lt;/p&gt;
-&lt;h3&gt;What about Mailpile?&lt;/h3&gt;
-&lt;p&gt;Although there are lessons to be learned, Mailpile is different from
-Webkit. Webkit is a technical tool, one building block of many that
-developers use when writing a browser. Mailpile on the other hand, is a
-stand-alone end-user application, and (when it is finished) Mailpile can
-be used directly to provide service online.&lt;/p&gt;
-&lt;p&gt;Theoretically, a company could use Mailpile&#39;s code to build a service
-which competes directly with GMail and Hotmail - but if Mailpile&#39;s
-license does not require they share their changes, the users of these
-competing services will be no more free than they were before. There is
-also no guarantee that these companies will contribute to the community
-version of Mailpile.&lt;/p&gt;
-&lt;p&gt;On the other hand, many companies (and some individuals) strongly
-dislike the AGPL and avoid all software which uses it. These people will
-be excluded from our community and will not help us improve Mailpile if
-we use that license.&lt;/p&gt;
-&lt;p&gt;So that becomes the crux of the question.&lt;/p&gt;
-&lt;p&gt;Do we want to compell companies to share their changes to our code,
-which is what the AGPL does, or do we want to take a more trusting
-approach and rely on enlightened self interest and good-will - by
-releasing under the Apache license?&lt;/p&gt;
-&lt;p&gt;For some, this is an idealogical question, a matter of &lt;em&gt;right&lt;/em&gt; or
-&lt;em&gt;wrong&lt;/em&gt;. Is it morally acceptable to allow people to benefit from
-Mailpile&#39;s work without contributing back? Is it morally acceptable for
-Mailpile&#39;s authors to tie the hands of other businesses?&lt;/p&gt;
-&lt;p&gt;For others, this is merely a matter of strategy and tactics. What is
-most likely to improve end-user freedom in the long run? What is most
-likely to help Mailpile itself develop and thrive? Will chosing a
-restrictive license marginalize the project and prevent us from
-affecting wide-spread improvements to how people use e-mail? Will a
-permissive license make it easier for abusive companies to launch new
-webmail services as honey-pots to harvest and collect private e-mail
-data?&lt;/p&gt;
-&lt;p&gt;Those are the questions we need to answer!&lt;/p&gt;
-&lt;p&gt;If you have an opinion, one way or another, I encourage you to write
-blog post explaining your position (or send links you feel are
-relevant). If you prefer to publish yourself I&#39;ll be happy to link to
-your website - or we can publish guest posts here on this blog.&lt;/p&gt;
-&lt;p&gt;Hopefully a few people will express their opinions and help our
-community &lt;a href=&#34;/roadmap/&#34;&gt;vote&lt;/a&gt; one way or another.&lt;/p&gt;
-&lt;p&gt;Thanks!&lt;/p&gt;</description>
-    <pubDate>Fri, 08 May 2015 12:00:00 +0000</pubDate>
+    <title>Licensing: Your Feedback So Far</title>
+    <link>http://www.mailpile.is/blog/2015-06-15_Community_License_Feedback.html</link>
+    <description>&lt;p&gt;[ &lt;em&gt;Note: I&#39;m taking most of the week off to recharge my batteries and attend
+the &lt;a href=&#34;http://www.dcssproject.net/conference/&#34;&gt;Digital Citizenship and Surveillance Society conference and
+hackathon&lt;/a&gt;
+- the next weekly update will happen next Monday.&lt;/em&gt; ]&lt;/p&gt;
+&lt;p&gt;There are now &lt;strong&gt;2 weeks left&lt;/strong&gt; until we close &lt;a href=&#34;/roadmap/&#34;&gt;the polls&lt;/a&gt; and
+choose a license for Mailpile 1.0. Some members of our community have
+written blog posts about what they would prefer, others have tweeted,
+and still others have sent us e-mail.&lt;/p&gt;
+&lt;p&gt;We may not agree with all of the points made, but it&#39;s a complex issue and
+your feedback matters. Thank you all!&lt;/p&gt;
+&lt;p&gt;This post is dedicated to preserving and publicizing your thoughts.&lt;/p&gt;
+&lt;h4&gt;Blog Posts&lt;/h4&gt;
+&lt;p&gt;Geir Freysson writes: &lt;a href=&#34;http://www.geirfreysson.com/2015/06/why-the-crypto-email-client-mailpile-should-use-the-apache-software-license/&#34;&gt;Mailpile should use the Apache software
+license&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The idea behind the Apache license is to, quoting Chairman Mao, “let a thousand flowers bloom” and allow as many people and companies as possible to build on the software regardless of whether the incentive is commercial or altruistic.
+&lt;em&gt;&lt;a href=&#34;http://www.geirfreysson.com/2015/06/why-the-crypto-email-client-mailpile-should-use-the-apache-software-license/&#34;&gt;read more&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Franklin M. Siler writes: &lt;a href=&#34;http://franksiler.com/on-choosing-open-licenses/&#34;&gt;On choosing open licenses&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The essential idea here is that I want my projects to contribute back, but I want to do so voluntarily. I particularly want to avoid a situation where I need to implement “special sauce” in a component, but then may have to release that code out into the marketplace- there’s no particularly good reason I would want to take on, say, a virally licensed webserver.&lt;/p&gt;
+&lt;p&gt;In terms of choosing feedstock, it’s often hit or miss, but I always look at the licenses before I start, particularly for “scaffolding code” that will wind up being the core of an app.
+&lt;em&gt;&lt;a href=&#34;http://franksiler.com/on-choosing-open-licenses/&#34;&gt;read more&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;E-mail&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;From: Richard Stallman&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I read your posting about the question of which license to use on your
+source code henceforth. I urge you to use the GNU Affero GPL.&lt;/p&gt;
+&lt;p&gt;The reason is simple: so that companies that improve Mailpile and put
+their versions into public use will make their improvements available to
+the Mailpile community.  The AGPL would achieve this.  The Apache
+license, which is a weak, permissive license, would not try.&lt;/p&gt;
+&lt;p&gt;Both of these licenses qualify as free/libre; neither of them is
+unethical.  Given a choice between two ethically valid options, you
+should choose the one that is better in practice, and that is the GNU
+AGPL.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;http://gnu.org/licenses/license-recommendations.html&#34;&gt;http://gnu.org/licenses/license-recommendations.html&lt;/a&gt;
+and &lt;a href=&#34;http://gnu.org/licenses/license-list.html&#34;&gt;http://gnu.org/licenses/license-list.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;-- &lt;br /&gt;
+Dr Richard Stallman&lt;br /&gt;
+President, Free Software Foundation (gnu.org, fsf.org)&lt;br /&gt;
+Internet Hall-of-Famer (&amp;lt;internethalloffame.org)&lt;br /&gt;
+Skype: No way! See stallman.org/skype.html.&lt;br /&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt; From: Maxim Cournoyer&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dear mailpile team,&lt;/p&gt;
+&lt;p&gt;As stated on the mailpile homepage:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mailpile is an effort to reclaim private communication on the
+Internet. A project to rescue our personal lives from the proprietary
+cloud and prevent our conversations from being strip-mined for corporate
+profit and government surveillance. Mailpile is taking e-mail back.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It is my opinion that the license that would better support these goals
+would be the GNU Affero GPLv3 license as it protects the freedom for
+anyone to audit the source of the software, no matter where and how it
+is deployed. From a security perspective this is a must.&lt;/p&gt;
+&lt;p&gt;Thanks for hearing my voice,&lt;/p&gt;
+&lt;p&gt;Maxim Cournoyer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;From: Phil Hughes&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First, about your tweet about being accused of bias. Yeah, when people
+bitch about your bias but in different directions, I do think it means
+you are in the middle. Being a Linux guy for 20+ years and ex-publisher
+of Linux Journal, this situation has happened to me many, many times.&lt;/p&gt;
+&lt;p&gt;My intent was to comment on &#34;which is the better license&#34; but, after
+reading your blog I really don&#39;t have &#34;the right answer&#34;. Hopefully
+others will offer more thoughts so that the decision will become
+obvious.&lt;/p&gt;
+&lt;p&gt;My &#34;bias&#34; is that the GPL irritates me -- mostly because of RMS&#39;s &#34;this
+is the only answer&#34; attitude. I am 100% behind the goal of the GPL (and
+I think he knows that) but I also recognize the down-sides. For example,
+at one point Linus was asked what was his biggest error with Linux and
+he said &#34;licensing it under the GPL&#34;.&lt;/p&gt;
+&lt;p&gt;His comment was about the &#34;politics&#34; of the GPL rather than the concept.
+That&#39;s pretty much my issue as well. It is hard to get those &#34;afraid&#34; of
+the GPL on board when you are put in a position where you need to defend
+RMS&#39;s politics.&lt;/p&gt;
+&lt;p&gt;We know that Apple picked a &#34;we can do what we want&#34; license for its
+base software. If BSD and Linux has both been under the same license,
+things probably would have been different. But, better? It is hard to
+say.  Those who are actually there to innovate seem OK with the GPL. GPL
+or not, it is still hard to measure which license actually produces more
+innovation. I expect there are big wins for each.&lt;/p&gt;
+&lt;p&gt;So, now you see my bias and you also see that it didn&#39;t produce a
+decision.&lt;/p&gt;
+&lt;p&gt;Hopefully others will chip in.&lt;/p&gt;
+&lt;p&gt;-- &lt;br /&gt;
+Phil Hughes&lt;br /&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;From: Tim Herklots&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &#34;Network Use is Distribution&#34; feature of AGPL plus the
+no-sublicensing makes it much easier to detect license abuse.&lt;/p&gt;
+&lt;p&gt;If the code is detected somewhere in the wild, and source isn&#39;t
+available, AGPL is always violated.&lt;/p&gt;
+&lt;p&gt;The threat model that concerns me is someone big like Microsoft, Google,
+Facebook, Yahoo forking the cord and including an government-breakable
+alternative encryption type/method that their installs use by default or
+by rollback at the mailserver end. Mailpile would be forced to include
+this alternative for compatibility reasons, and the bad encryption
+becomes standardised with most people thinking that it is good.&lt;/p&gt;
+&lt;p&gt;Tim&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    <pubDate>Mon, 15 Jun 2015 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

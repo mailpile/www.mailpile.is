@@ -248,6 +248,7 @@ $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA
 <p>Software is hard. Security software is harder. Werner is doing great at managing a very shit situation, created by RFC 4880. I think there is a real possibility to make GnuPG way better. For now, we need JSON mode. I'm sure crowdfunding this work is possible, because we need it. I for one will put some cash down for this bounty. Join me?</p>
 <p><strong>Update:</strong> <a href="/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html">We have written a follow-up
 post</a>.</p>
+<p><strong>Update II:</strong> Note that the GnuPG project is somewhat stuck between a rock and a hard place with respect to the interface of the gpg tool; because other tools rely on GnuPG, many of these interfaces cannot easily be fixed without breaking other things. The official recommendation from the authors of GnuPG, is for developers to use the GPGME library. GPGME is itself a wrapper around gpg that glosses over or works around many of these problems. If it works for you, you should probably use it.</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>

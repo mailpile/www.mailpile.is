@@ -258,6 +258,42 @@ jQuery(document).ready(function($){
   "date": "2015-06-01", 
   "subject": "Roadmap Reality Check", 
   "url": "/blog/2015-06-01_Roadmap_Reality_Check.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-06-08", 
+  "subject": "Multiple PGP Key Support!", 
+  "url": "/blog/2015-06-08_Multiple_PGP_Key_Support.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-06-15", 
+  "subject": "Licensing: Your Feedback So Far", 
+  "url": "/blog/2015-06-15_Community_License_Feedback.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-06-22", 
+  "subject": "The DCSS Conference in Cardiff", 
+  "url": "/blog/2015-06-22_DCSS_Cardiff.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-06-29", 
+  "subject": "Fast Startup and Key Discovery", 
+  "url": "/blog/2015-06-29_Fast_Startup_and_Key_Disco.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-07-02", 
+  "subject": "License: The Python's Tongue", 
+  "url": "/blog/2015-07-02_Licensing_Decision.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-07-06", 
+  "subject": "Beta III preparations", 
+  "url": "/blog/2015-07-07_Beta_III_prep.html"
 }];
 
   var prev = -1;
