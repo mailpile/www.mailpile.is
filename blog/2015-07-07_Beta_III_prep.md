@@ -39,5 +39,5 @@ to correct the auto-detector's mistakes).
 
 1. Add missing configuration dialogues
 2. Fix easy buglets, hide features too hard to fix
-3. Tag and startg packaging Beta III
+3. Tag and start packaging Beta III
 
