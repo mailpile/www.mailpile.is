@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Beta III Demo</title>
+    <title>Mailpile: Github Issue Cleanup Frenzy</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -42,6 +42,8 @@
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
     <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
 </head><body>
 
     <div id="navigation">
@@ -70,31 +72,82 @@
     <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 
     <div id="content" class="container">
+        <div id="header" class="clearfix">
+            <div class="col-2 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
 <!-- Page content begins -->
 
-<h4 class="text-center half-bottom">Explore a demo version of the <img src="/img/icon-48x48.png" style="margin-left: 10px; position: relative; top:15px"> <strong>mail</strong>pile</h4>
-<h1 class="text-center">Beta III Release</h1>
+    <a href="/blog/2015-08-10_Issue_Cleanup_Frenzy.html"><h1>Github Issue Cleanup Frenzy</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on August 10, 2015</strong></p>
 
-<div class="row add-bottom text-center">
-  <a class="button-primary center" href="http://demo.mailpile.is/in/inbox/">Try Mailpile in English (US)</a>
-</div>
-
-
-
-<div class="row"></div>
-
-
-<div class="row add-top add-bottom">
-  <div class="col-offset-3 col-10 text-center">
-    <p>Demos for other languages will be added soon, as our community of translators catches up with all the changes!</p>
-    <p>Interested in helping Mailpile exist in your language? Please <a href="https://www.transifex.com/projects/p/mailpile/" target="_blank">join the project on Transifex</a> to help with translations or reviewing already submitted translations.</p>
-  </div>
-</div>
-
-<hr>
-
-
+<p>The last week was mostly dedicated to administration work.</p>
+<p>The most important task was communicating with our new accountants. The
+firm that did our taxes last year actually went out of business a couple
+of months ago... never a good sign!  So one of my top-priority tasks
+while I was in Iceland was to finda a new accountant. I succeeded, went
+with a medium-sized company that actually has a web-site but has been in
+business since 1995 and they seem quite solid; last week I spent some
+time communicating with them so they could get to work filing the
+project's annual return.</p>
+<p>Then there was another money related task: Mailpile has a grant
+application in the pipes with the <a href="https://www.opentechfund.org/">OTF</a>
+for quite some time now. Due to personal work overload, I have been
+putting off responding to questions they had for far too long.  Last
+week I finally restarted the conversation and started revising the
+application.</p>
+<p>The third administration task was the most time consuming: I set out to
+clean up and curate our <a href="https://github.com/mailpile/Mailpile/issues">giant pile of Github
+issues</a>. I am ashamed to
+say that many bug reports and support requests never got answered,
+because there were simply too many for us to keep up. So I spent a fair
+bit of time last week reading issue after issue after issue, typing
+responses and sorting, or simply writing code when the fix was obvious
+and straightforward.</p>
+<p>This also will be an on-going task; I don't actually expect to ever
+close all the issues, as many are discussions or ideas for plug-ins or
+spin-off projects. But before our 1.0 I'd like to have responded to
+every single bug-report, filed it appropriately and removed any that are
+duplicates or obsolete. You can see my frenzy in action on the <a href="https://github.com/mailpile/Mailpile/pulse/monthly">project
+pulse dashboard</a>.</p>
+<p>Finally, I recently discovered that <a href="https://www.transifex.com/projects/p/mailpile/">our Transifex account</a>
+has not updated the translation source strings for <em>months</em>. This is
+not yet fixed, but will be soon...</p>
+<p>That's a lot of admin work!</p>
+<p>On the code front, I fixed a bunch of minor bugs, merged them into the
+beta branch and updated our <a href="/download/">downloadable packages</a>.</p>
+<p>I also made a lot of progress on speeding up the apps web user
+interface. Hopefully I'll be able to include the fruits of that work in
+another update to the beta branch next week. Fingers crossed!</p>
+<h2>Tasks for this week</h2>
+<ol>
+<li>Finish updating the OTF grant proposal</li>
+<li>Keep cleaning up the Github issue tracker</li>
+<li>Get the Transifex source strings updated!</li>
+<li>Autoajax: speed up the web UI</li>
+</ol>
 <!-- Page content ends -->
+<!--
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+-->
+            </div>
+        </div>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
         <!-- Contact & Media -->
         <div id="footer" class="clearfix">
             <div class="one-third">

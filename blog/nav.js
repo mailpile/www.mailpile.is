@@ -294,6 +294,36 @@ jQuery(document).ready(function($){
   "date": "2015-07-07", 
   "subject": "Beta III preparations", 
   "url": "/blog/2015-07-07_Beta_III_prep.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-07-20", 
+  "subject": "Mailpile Beta III: WYSIWYG", 
+  "url": "/blog/2015-07-20_Mailpile_Beta_III.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-08-03", 
+  "subject": "Vacation over; Back to work!", 
+  "url": "/blog/2015-08-03_Back_to_Work.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-08-10", 
+  "subject": "Github Issue Cleanup Frenzy", 
+  "url": "/blog/2015-08-10_Issue_Cleanup_Frenzy.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-08-18", 
+  "subject": "On Crowdfunding and Burnout", 
+  "url": "/blog/2015-08-18_On_Crowdfunding_and_Burnout.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-08-24", 
+  "subject": "Thank you!", 
+  "url": "/blog/2015-08-24_Thank_You.html"
 }];
 
   var prev = -1;

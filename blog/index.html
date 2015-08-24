@@ -87,275 +87,173 @@
             <div class="col-13">
 <!-- Page content begins -->
 
-    <a href="2015-07-07_Beta_III_prep.html"><h1>Beta III preparations</h1></a>
+    <a href="2015-08-24_Thank_You.html"><h1>Thank you!</h1></a>
     <p><strong>Posted by <a href="#">Bjarni</a>
-               on July 7, 2015</strong></p>
-    <p>Last week's big news was of course <a href="2015-07-02_Licensing_Decision.html">the licensing
-decision</a> - the vote completed and the
-project's license is now officially the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public
-License</a>.</p>
-<p>The vote was very close, but the slight majority from the community reflects
-both the wishes of the original project founders and matches the political
-goals of the project itself.</p>
-<p>Thanks again to everyone who voted!</p>
-<p>On the technical front, it was a slow week. I spent some time reflecting on the
-original road-map and decided to make one major change to the Beta III plans:
-the "Fast Startup" milestone will be postponed until later this summer.</p>
-<p>The reason for this change is that although the code appears to work, it got
-done too late to get reviewed by any 3rd parties. For many other aspects of
-Mailpile that would be OK, but our encrypted on-disk storage is a bit different.
-It's both difficult and error prone to change storage formats after the fact,
-so it is of particular importance to get this done right the first time around.</p>
-<p>Delaying Beta III is also not an option, because I need feedback on the
-usability of all the new setup interfaces and composer improvements so the
-worst problems can be fixed before 1.0.</p>
-<p>This decision scuppered most of the technical plans for the week, so instead
-I have been tying off loose ends and fixing bugs. The biggest milestone was
-probably making it possible to browse remote IMAP servers using the Browse
-tool, which paves the way for interactive configuration of import/index
-policies when users don't want to rely on Mailpile's auto-detection (or need
-to correct the auto-detector's mistakes).</p>
+               on 24 August, 2015</strong></p>
+    <p>After posting last week about fatigue and burnout, a lot of people
+reached out and offered encouragement or support.</p>
+<p>I really appreciate it: thank you all!</p>
+<p>On the code front things have been mostly quiet since last week,
+because I have been trying to get some rest. I'm not very good at
+that, to be honest, but I try. In spite of myself, I made some
+progress on speeding up the web UI (in my private branch) and some
+friendly volunteers from our community of translators have both found
+and fixed a bunch of typos.</p>
+<p>Grant work progresses, slowly.</p>
+<h2>Tasks for this week</h2>
+<p>Tasks for this week are the same as last week:</p>
+<ol>
+<li>Not burn out</li>
+<li>Really finish the OTF grant proposal for real</li>
+<li>Write some code</li>
+</ol>
+  <hr>
+    <a href="2015-08-18_On_Crowdfunding_and_Burnout.html"><h1>On Crowdfunding and Burnout</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a>
+               on 18 August, 2015</strong></p>
+    <p>Being on fire isn't always awesome.</p>
+<p>On fire and burnout are two sides of the same coin.</p>
+<p>And to be completely honest with you, dear backers, I'm on the verge of
+burnout over here. I have been pushing myself too hard this summer,
+trying to make 1.0 happen. I'm cranky on the IRC channel, prickly with
+my friends. The smallest set-backs trigger overreactions: rage, sadness,
+or the worst - apathy.</p>
+<p>I've been here before; it means I've been working too hard.</p>
+<p>I've been on fire this summer, in the good sense. An amazing amount of
+progress has been made. But lately this whole thing has felt more like
+trying to burn a wet newspaper. No flames, just a soggy mess. I light
+the match and nothing happens. If I keep at it, I'll just burn myself.</p>
+<p>So I need to take it easy for a bit. My July vacation in Iceland ended
+up being mostly work and I'm paying the price for that now.</p>
+<h2>The Dark Side of Crowdfunding</h2>
+<p>Crowd-funding has a dark side to it.</p>
+<p>As wonderful as it may be to have a large group of people rooting for
+you, the more people backed a project, the more people will be let down
+if you fail to ship. The more people trusted your vision enough to give
+you money, the greater the pressure not to betray their trust.</p>
+<p>Many startup founders buckle under the pressure of keeping a business
+afloat and meeting the expectations of their investors. <a href="http://startupdepression.com/">Startup
+depression</a> is a thing.</p>
+<p>Crowd-funding adds another dimension to that; investors understand risks
+and they accept they may lose their money. But when the general public
+backs a project, that isn't necessarily the case. They're not pros.
+They're a bunch of <em>really nice people who decided to support your
+vision</em>.</p>
+<p>You really don't want to let them down!</p>
+<p>Mailpile may not be a startup in the normal sense of the word, but we do
+share many of the same issues. We - you, me, all the project's backers -
+are creating something new, something ambitious. Running out of money is
+always a concern; everyone has to eat. We may not expect to make
+millions of dollars, but we do hope to have millions of users. We're not
+out to "disrupt e-mail" for financial gain, but we do want to have an
+impact. Our reputations are at stake. And although we may not have taken
+money from investors, we did take money from our community of backers
+and supporters.</p>
+<p>So when I read about startup founders struggling to cope, I know exactly
+what they're talking about.</p>
+<p>I'm not quite sure what do do about it though. Except try and take it
+easy and try to keep making progress. One without the other doesn't
+seem to work, deadlines be damned.</p>
+<h3>The Weekly Report</h3>
+<p>This last week has been slow, for all of the above reasons.</p>
+<p>I made some progress on the OTF grant proposal, but it's a tricky beast.</p>
+<p>I finally implemented the auto-configuration tool that will try very
+hard to guess all your settings when you add a new account. It's
+actually pretty awesome, so that's something!</p>
+<p>I got the Transifex source strings updated, so Mailpile 1.0 will exist
+in more languages than just English.</p>
+<p>Most importantly, I decided to take steps to avoid burning out. Writing
+this has been cathartic. I'm going to get some rest. And I'm going to
+try and get more face-time with friendly people.</p>
+<p>So <a href="http://www.pyconuk.org/">see you at PyCon</a>! :-)</p>
+<h2>Tasks for this week</h2>
+<ol>
+<li>Not burn out</li>
+<li>Work on the OTF grant proposal</li>
+<li>Write some code</li>
+</ol>
+  <hr>
+    <a href="2015-08-10_Issue_Cleanup_Frenzy.html"><h1>Github Issue Cleanup Frenzy</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a>
+               on 10 August, 2015</strong></p>
+    <p>The last week was mostly dedicated to administration work.</p>
+<p>The most important task was communicating with our new accountants. The
+firm that did our taxes last year actually went out of business a couple
+of months ago... never a good sign!  So one of my top-priority tasks
+while I was in Iceland was to finda a new accountant. I succeeded, went
+with a medium-sized company that actually has a web-site but has been in
+business since 1995 and they seem quite solid; last week I spent some
+time communicating with them so they could get to work filing the
+project's annual return.</p>
+<p>Then there was another money related task: Mailpile has a grant
+application in the pipes with the <a href="https://www.opentechfund.org/">OTF</a>
+for quite some time now. Due to personal work overload, I have been
+putting off responding to questions they had for far too long.  Last
+week I finally restarted the conversation and started revising the
+application.</p>
+<p>The third administration task was the most time consuming: I set out to
+clean up and curate our <a href="https://github.com/mailpile/Mailpile/issues">giant pile of Github
+issues</a>. I am ashamed to
+say that many bug reports and support requests never got answered,
+because there were simply too many for us to keep up. So I spent a fair
+bit of time last week reading issue after issue after issue, typing
+responses and sorting, or simply writing code when the fix was obvious
+and straightforward.</p>
+<p>This also will be an on-going task; I don't actually expect to ever
+close all the issues, as many are discussions or ideas for plug-ins or
+spin-off projects. But before our 1.0 I'd like to have responded to
+every single bug-report, filed it appropriately and removed any that are
+duplicates or obsolete. You can see my frenzy in action on the <a href="https://github.com/mailpile/Mailpile/pulse/monthly">project
+pulse dashboard</a>.</p>
+<p>Finally, I recently discovered that <a href="https://www.transifex.com/projects/p/mailpile/">our Transifex account</a>
+has not updated the translation source strings for <em>months</em>. This is
+not yet fixed, but will be soon...</p>
+<p>That's a lot of admin work!</p>
+<p>On the code front, I fixed a bunch of minor bugs, merged them into the
+beta branch and updated our <a href="/download/">downloadable packages</a>.</p>
+<p>I also made a lot of progress on speeding up the apps web user
+interface. Hopefully I'll be able to include the fruits of that work in
+another update to the beta branch next week. Fingers crossed!</p>
+<h2>Tasks for this week</h2>
+<ol>
+<li>Finish updating the OTF grant proposal</li>
+<li>Keep cleaning up the Github issue tracker</li>
+<li>Get the Transifex source strings updated!</li>
+<li>Autoajax: speed up the web UI</li>
+</ol>
+  <hr>
+    <a href="2015-08-03_Back_to_Work.html"><h1>Vacation over; Back to work!</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a>
+               on Aug 3, 2015</strong></p>
+    <p>Time for the weekly update!</p>
+<p>Updates have been a bit less frequent of late, as I have spent a fair
+bit of the last month on holidays; spending time with family in Iceland
+and catching up with friends.</p>
+<p>Some Mailpile work got done as well:</p>
+<ol>
+<li>The Beta III was release</li>
+<li>A brainstorming and hack session with CloudFleet</li>
+<li>Work began on accelerating the Mailpile web UI</li>
+</ol>
+<p>I also began exploring more seriously the possibility of shipping a
+webkit-based container along with the desktop version of Mailpile. This
+would go a long way towards fixing the largest outstanding usability
+concerns of Beta III. We'll see how that goes!</p>
 <h2>Plans for this week</h2>
 <ol>
-<li>Add missing configuration dialogues</li>
-<li>Fix easy buglets, hide features too hard to fix</li>
-<li>Tag and startg packaging Beta III</li>
+<li>More Mailpile UI work</li>
+<li>Update Beta III with minor bugfixes and improvements</li>
 </ol>
-  <hr>
-    <a href="2015-07-02_Licensing_Decision.html"><h1>License: The Python&#39;s Tongue</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on July 2, 2015</strong></p>
-    <p>It has been an interesting month!</p>
-<p>I finally put the team's original plan into action, launching a vote
-on our new <a href="/roadmap/">roadmap site</a>, asking our community of backers
-to help us choose a single license for the project.</p>
-<p>There were discussions on Twitter, <a href="2015-06-15_Community_License_Feedback.html">thoughtful blog posts and insightful
-e-mails</a>. And people voted.</p>
-<p>Finally, while I was fast asleep my trusty robots disabled the voting
-and made a snapshot of the voting database at midnight
-California-time, July 1st. I got up the next morning and before making
-breakfast I ran a quick <em>grep</em> to get a hint of the results. I was not
-happy with what I saw.</p>
-<p><em>Not happy at all...</em></p>
-<h2>Raw, Cooked and Baked Results</h2>
-<p>This is what I saw:</p>
-<ul>
-<li>51.39% in 258 votes for the GNU AGPL v3</li>
-<li>48.61% in 244 votes for the Apache License 2.0</li>
-</ul>
-<p>So we have a winner! Sort of. Barely...</p>
-<p>I mulled it over for most of the day and recalculated that evening, this
-time weighing each ballot by the USD amount donated by the voter,
-excluding the project founders because putting a dollar amount on our
-contributions is not trivial math. This balloting method led to Apache
-winning by a surprisingly large margin. However, when I dug into the
-results, it turns out the difference was down to a single four-figure
-backer who voted for Apache.</p>
-<p>Reversing the results on the basis of one man's generosity would not
-seem right at all... particularly when I had just excluded the
-founding team (whose opinions I know quite well) and I know for a fact
-that very vocal advocates of the winning license backed us by just as
-much but neglected to cast their votes.</p>
-<p>So I recalculated a third time, this time using the natural logarithm of
-USD amounts. This rewards generosity while recognizing that wealth is
-not evenly distributed. This time the AGPLv3 won again, albeit by an
-even smaller margin than before: 50.81% vs 49.19%</p>
-<p>I gave up.</p>
-<h2>The Python's Tongue</h2>
-<p>On the surface of it, this is the worst possible outcome of our
-license elections.</p>
-<p>The whole point of the vote was to reach a consensus. Licensing tends to
-be very divisive in the Free and Open Source Software community and the
-Mailpile Team hoped that by using a transparent, open and fair process
-we could reach a conclusion everyone could abide by.</p>
-<p>Although these results clearly don't really meet that bar, all we can do
-is look for a silver lining.</p>
-<p>The fact is, voter participation in this election was quite low. 3041
-people in total were eligible for voting, but we only had about 16.5% turnout.
-Considering the subject matter (licensing, how dull!), it seems quite
-reasonable to assume this means most of our backers just don't care, one
-way or another. Even Stallman himself <a href="2015-06-15_Community_License_Feedback.html">commented</a>
-that both licenses were acceptable, although he of course prefers the
-AGPL.</p>
-<p>With that interpretation, the results look like this:</p>
-<ul>
-<li>8.5% in 258 votes for the GNU AGPL v3</li>
-<li>8.0% in 244 votes for the Apache License 2.0</li>
-<li>83.5% don't care enough to vote or were unaware of the elections</li>
-</ul>
-<p>So our community is indeed divided. But it's not divided right down the
-middle, it's divided like a python's tongue. Mostly united in just
-wanting Mailpile to exist, with an small split at the tip regarding the
-license.</p>
-<p>That's not too bad!</p>
-<h2>Choosing a License</h2>
-<p>So, what's next?</p>
-<p>We could extend the deadline, hope more people vote and a stronger
-consensus emerges... but I don't really think that will work. The ratios
-haven't really changed much since the first few days of the campaign.
-I know, I've been peeking.</p>
-<p>Since we really can't live with two licenses forever, a choice has to be
-made. I am writing the bulk of the code these days and have no-one but
-the community to answer to, so ultimately the decision sits with me.
-Without a clear mandate from the election, I am going to have to take
-responsibility and make the choice myself. People who don't like it will
-know exactly who to blame...</p>
-<p>That's a scary thought, but what the heck.</p>
-<p><strong>I choose the GNU Affero General Public License. Version 3.</strong></p>
-<p>That will be the license I apply to all future code I commit to the
-Mailpile project and that is the license future contributors to the main
-repo will have to agree to as well.</p>
-<p>Sorry Apache backers, I really hope we can still be friends! If you're
-really bummed you do have the right to fork yesterday's code and carry
-on without me. But I would much rather we worked together.</p>
-<h2>But... why?</h2>
-<p>I choose the AGPLv3, because I think it is the right license for this
-project.</p>
-<p>Not because it won the elections by a tiny margin, although that was of
-course a factor. Not because my co-conspirators, Smári and Brennan, both
-prefer it, although that also matters. I choose the AGPLv3 because I
-think it fits.</p>
-<p>Mailpile is a project about freedom. It is not a popularity contest or a
-startup, it's not "industry infrastructure", nor does it aim to be.
-Mailpile is a political project which aims to improve the privacy and
-digital independence of individuals everywhere.</p>
-<p>The Apache License is a wonderful thing, an open, generous, pragmatic,
-apolitical license. The AGPLv3 on the other hand, is a political and
-ethical line in the sand.</p>
-<p>And so is Mailpile.</p>
-  <hr>
-    <a href="2015-06-29_Fast_Startup_and_Key_Disco.html"><h1>Fast Startup and Key Discovery</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on June 29, 2015</strong></p>
-    <p>Last week was a very successful one here in Mailpile-code-land.
-A whole bunch of loose ends got tied off, so this week Mailpile
-is actually leaps and bounds more powerful than it was just a few
-days ago.</p>
-<p>I've been a bit behind schedule working towards Beta III, but
-this week has been so good that I am now mostly caught up.</p>
-<p>The highlights are described below. Just please, don't expect me
-to always be this productive!</p>
-<h4>Memory Hole</h4>
-<p>Discussions about "Memory Hole" picked up some steam this week.
-Memory Hole is the proposal to extend PGP/MIME to sign and possibly
-encrypt some e-mail message headers, the Subject being the most
-obvious candidate. This is a collaborative effort between multiple
-e-mail security tools, and this week test messages were exchanged
-with the developers of Enigmail, R2Mail2, Lavaboom and gpg4o.</p>
-<p>Although Memory Hole does not address all of <a href="2014-11-21_To_PGP_MIME_Or_Not.html">the issues I have with
-PGP/MIME</a>, it is a massive step in
-the right direction. The fact that it is already getting support from
-so many projects is very encouraging!</p>
-<h4>Key Discovery and Crypto Policies</h4>
-<p>This week I completed the "Key Discovery" milestone from <a href="/roadmap/">the 1.0
-roadmap</a>! It is now possible to search for PGP keys,
-import and use while composing a message.</p>
-<p>This completes the work started by Brennan last October, which he
-was unable to finish because the back-end (my domain) didn't
-provide him with the data and APIs that he needed.</p>
-<p>In the process of wrapping that up I also finished implementing
-smart "crypto policies", whereby the app will suggest signing or
-encrypting of outgoing mail depending on what we have received
-from the recipients in the past. This is a critical part of
-Mailpile's overall strategy to gradually ramp up the security of
-e-mail without getting in people's way.</p>
-<p>Once more user interface work has been done it will also be
-possible to configure custom policies for individual contacts. So
-you will be able to tell Mailpile that Alice always wants to
-receive encrypted mail, but Bob hates digital signatures...</p>
-<h4>Fast Startup Progress</h4>
-<p>The Fast Startup milestone for 1.0 (and Beta III) involves
-completely revamping how Mailpile stores metadata and the search
-index.</p>
-<p>This is a big and scary task, but luckily most of the research
-and code was done last January. I spent a few days this week
-dusting off the code and finished integrating it. The good news
-is that it works: this weekend I started up a fully functioning
-Mailpile using the new storage systems.</p>
-<p>I have yet to migrate the contacts over and write a migration
-tool to help existing users make the switch, but the riskiest
-parts of the job are now done. Because this is not a backwards
-compatible change, this code won't be merged with the main branch
-until the migration tool is written but will instead live on a
-branch of its own:
-<a href="https://github.com/mailpile/Mailpile/tree/features/metadata.ng">features/metadata.ng</a></p>
-<h4>Working with Mailing Lists</h4>
-<p>Another small improvement made this week involves how Mailpile
-handles mailing lists.</p>
-<p>In response to some feedback (a.k.a. friendly complaints) on our
-IRC channel (#mailpile), I've made the search keyword generation
-for mailing lists both less spammy and more precise. The metadata
-store now also records which mailing list a message came from.</p>
-<p>Now that I'm a bit more used to working with Mailpile's user
-interface, I was also able to make these improvements bubble all
-the way up so people can make use of them! If you select a single
-message in the search view, Mailpile's tool bar will now display
-a link to search for other messages from the same person - or
-from the same mailing list, based on these improved keywords.</p>
-<p>This is an attempt to educate users on the possibility and syntax
-of searching by sender or by mailing list.  But it is also
-directly functional, because once you are looking at a search
-result page dedicated to a particular mailing list, the "Save
-Search" button makes it trivially easy to convert that into a
-dedicated Tag with a behind-the-scenes Filter classifying future
-e-mail automatically.</p>
-<p>Powerful features, made discoverable and clickable...</p>
-<h3>Plans for this week</h3>
-<ol>
-<li>Tally votes and announce our license!</li>
-<li>Finish Fast Startup for contacts and migration</li>
-<li>Find someone to review the crypto used by new storage systems</li>
-<li>Begin work on Beta III packaging</li>
-</ol>
-  <hr>
-    <a href="2015-06-22_DCSS_Cardiff.html"><h1>The DCSS Conference in Cardiff</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni</a>
-               on June 22, 2015</strong></p>
-    <p>This weekly report covers two weeks of work, because last week's post was
-dedicated to community feedback on the licensing debate. Here are some of
-the tech issues that got resolved in the meantime:</p>
-<ol>
-<li>IMAP: Improved download speed and Dovecot compatibility</li>
-<li>Security: Fixed serious bug in local data encryption</li>
-<li>Security: Implemented basic PGP passphrase manager</li>
-<li>Fast setup: Editing accounts now works</li>
-<li>Fast setup: Usability tests at DCSS, found and fixed some issues</li>
-<li>UI: Tag creation and editing were revamped</li>
-<li>Composer: Fixed bugs, started refactor to handle key discovery</li>
-<li>Packaging: Prepared the packaging robot for Beta III builds</li>
-</ol>
-<p>Last week I took some much needed days off and then attended the <a href="http://www.dcssproject.net/">Digital
-Citizenship and Surveillance Society</a>
-conference in Cardiff.  It was a very inspiring conference and the
-organizers' goal of getting techies to rub shoulders with academics and
-usability people was, as far as Mailpile goes, a complete success.</p>
-<p>The first day was mainly dedicated to presentations and interesting
-conversations, including a well received lightning talk about Mailpile
-itself.</p>
-<p>On the second day I performed two small usability tests with non-technical
-volunteers from the conference and discussed overall UI strategy with some
-of the experts from <a href="https://www.headlondon.com/">Head London</a>. Actionable
-results were filed as <a href="https://github.com/mailpile/Mailpile/issues">issues in our bug
-tracker</a>.</p>
-<p>On both days I did a fair bit of brainstorming with developers from the
-<a href="https://leap.se/">Leap</a> and <a href="https://pixelated-project.org/">Pixelated</a>
-projects, in particular helping them get up to speed with the e-mail header
-protection work that was done at <a href="2015-04-20_OpenPGP_Email_Summit.html">April's GnuPG e-mail
-summit</a>. I summarized those
-discussions in <a href="https://lists.gnupg.org/pipermail/gnupg-devel/2015-June/030036.html">a post to the GnuPG-devel mailing
-list</a>.</p>
-<p>All in all, it was an excellent conference. I had fun and came home
-feeling inspired and motivated.</p>
-<p>Just what the doctor ordered!</p>
-<h3>Plans for this week</h3>
-<ol>
-<li>Finish refactoring the composer and key discovery code</li>
-<li>Migrate metadata index to new storage format</li>
-</ol>
+<p>See you next week!</p>
   <hr>
 
   <h3>Older stuff</h3>
   <ul>
+    <li><a href="2015-07-20_Mailpile_Beta_III.html">Mailpile Beta III: WYSIWYG</a></li>
+    <li><a href="2015-07-07_Beta_III_prep.html">Beta III preparations</a></li>
+    <li><a href="2015-07-02_Licensing_Decision.html">License: The Python&#39;s Tongue</a></li>
+    <li><a href="2015-06-29_Fast_Startup_and_Key_Disco.html">Fast Startup and Key Discovery</a></li>
+    <li><a href="2015-06-22_DCSS_Cardiff.html">The DCSS Conference in Cardiff</a></li>
     <li><a href="2015-06-15_Community_License_Feedback.html">Licensing: Your Feedback So Far</a></li>
     <li><a href="2015-06-08_Multiple_PGP_Key_Support.html">Multiple PGP Key Support!</a></li>
     <li><a href="2015-06-01_Roadmap_Reality_Check.html">Roadmap Reality Check</a></li>
