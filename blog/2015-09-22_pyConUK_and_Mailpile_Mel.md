@@ -114,7 +114,7 @@ discovery of [a one-ton unexploded WWII
 bomb](http://www.coventrytelegraph.net/news/wwii-bomb-unexploded-device-found-10107192)
 next door...
 
-I would like to thank Ed Singleton, Duncan Sheddon, Matthew Power,
+I would like to thank Ed Singleton, Duncan Sneddon, Matthew Power,
 Padraic Harley and the nice Raspberry PI hacker/web developer whose name
 I neglected to write down (get in touch if you read this!) for their
 awesome contributions and excellent company. I will consider us very
