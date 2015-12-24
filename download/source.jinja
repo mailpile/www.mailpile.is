@@ -1,0 +1,32 @@
+{% extends "layouts/page.html-jinja" %}
+{% set page = {'type': 'full'} %}
+{% block title %}Source downloads{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center">Source downloads</h1>
+
+{%
+set archives = [
+    ("0.5.2", "https://github.com/mailpile/Mailpile/archive/0.5.2.tar.gz"),
+    ("0.5.1", "https://github.com/mailpile/Mailpile/archive/0.5.1.tar.gz"),
+    ("0.5.0", "https://github.com/mailpile/Mailpile/archive/0.5.0.tar.gz"),
+    ("0.4.3", "https://github.com/mailpile/Mailpile/archive/0.4.3.tar.gz"),
+    ("0.4.2", "https://github.com/mailpile/Mailpile/archive/0.4.2.tar.gz"),
+    ("0.4.1", "https://github.com/mailpile/Mailpile/archive/0.4.1.tar.gz"),
+    ("0.4.0", "https://github.com/mailpile/Mailpile/archive/0.4.0.tar.gz"),
+    ("0.3.0", "https://github.com/mailpile/Mailpile/archive/0.3.0.tar.gz"),
+    ("0.2.0", "https://github.com/mailpile/Mailpile/archive/0.2.0.tar.gz"),
+    ("0.1.0", "https://github.com/mailpile/Mailpile/archive/0.1.0.tar.gz"),
+]
+%}
+
+<div class="text-center">
+    <ul>
+        {% for archive in archives %}
+            <li>mailpile-{{ archive[0] }} (<a href="{{ archive[1] }}">tarball</a>)</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
