@@ -16,8 +16,8 @@ again one of my top priorities.
 
 I've warmed up by responding to a few issues
 [on Github](https://github.com/mailpile/Mailpile),
-fixing a couple of simple bugs and reconnecting with people on the
-#mailpile IRC channel on Freenode.
+fixing a couple of simple bugs and reconnecting with people on
+the #mailpile IRC channel on Freenode.
 
 Taking a break is almost always healthy for a project, as it makes
 room for new insights and perspective.
