@@ -155,7 +155,7 @@ does not provide any utilities for decoding the contents.
 
 #### ssl.SSLError
 
-This method is raised when a certificate fails to validate.
+This exception is raised when a certificate fails to validate.
 However, it doesn't tell you anything about the certificate
 itself.
 
