@@ -4,237 +4,439 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
-    <title>Thank you!</title>
-    <link>http://www.mailpile.is/blog/2015-08-24_Thank_You.html</link>
-    <description>&lt;p&gt;After posting last week about fatigue and burnout, a lot of people
-reached out and offered encouragement or support.&lt;/p&gt;
-&lt;p&gt;I really appreciate it: thank you all!&lt;/p&gt;
-&lt;p&gt;On the code front things have been mostly quiet since last week,
-because I have been trying to get some rest. I&#39;m not very good at
-that, to be honest, but I try. In spite of myself, I made some
-progress on speeding up the web UI (in my private branch) and some
-friendly volunteers from our community of translators have both found
-and fixed a bunch of typos.&lt;/p&gt;
-&lt;p&gt;Grant work progresses, slowly.&lt;/p&gt;
-&lt;h2&gt;Tasks for this week&lt;/h2&gt;
-&lt;p&gt;Tasks for this week are the same as last week:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Not burn out&lt;/li&gt;
-&lt;li&gt;Really finish the OTF grant proposal for real&lt;/li&gt;
-&lt;li&gt;Write some code&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Mon, 24 Aug 2015 12:00:00 +0000</pubDate>
+    <title>Rebooting the Mailpile Development Process</title>
+    <link>http://www.mailpile.is/blog/2016-09-23_Rebooting_Mailpile_Development.html</link>
+    <description>&lt;p&gt;Hello again!&lt;/p&gt;
+&lt;p&gt;As warned about in our last blog post, development has been on hiatus
+for the last few months as I moved to (and from) Iceland, bought and
+sold a house and helped the Icelandic Pirate Party prepare for the
+up-coming parliamentary elections. It was frankly, an exhausting summer
+and I was sad not to have any time for Mailpile.&lt;/p&gt;
+&lt;p&gt;But it&#39;s the summer is well and truly over, and I&#39;m back. Mailpile is
+again one of my top priorities.&lt;/p&gt;
+&lt;p&gt;I&#39;ve warmed up by responding to a few issues
+&lt;a href=&#34;https://github.com/mailpile/Mailpile&#34;&gt;on Github&lt;/a&gt;,
+fixing a couple of simple bugs and reconnecting with people on
+the #mailpile IRC channel on Freenode.&lt;/p&gt;
+&lt;p&gt;Taking a break is almost always healthy for a project, as it makes
+room for new insights and perspective.&lt;/p&gt;
+&lt;p&gt;I&#39;m still in the process of &#34;rebooting&#34; the development effort, but I&#39;ve
+already decided to make at least one change - I will take advantage of
+&lt;a href=&#34;https://help.github.com/articles/reviewing-changes-in-pull-requests/&#34;&gt;Github&#39;s new code-review
+tools&lt;/a&gt;
+to get community members to review my own work. This should improve the
+code quality in Mailpile, while helping spread knowledge and
+understanding of the code to a wider group of people - over time
+improving the project&#39;s
+&#34;&lt;a href=&#34;https://en.wikipedia.org/wiki/Bus_factor&#34;&gt;bus factor&lt;/a&gt;&#34;. A long-time
+contributor, Jocelyn Delande, has volunteered to be my first reviewer,
+and hopefully more people will pitch in over time.&lt;/p&gt;
+&lt;p&gt;More soon. It&#39;s good to be back!&lt;/p&gt;</description>
+    <pubDate>Fri, 23 Sep 2016 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>On Crowdfunding and Burnout</title>
-    <link>http://www.mailpile.is/blog/2015-08-18_On_Crowdfunding_and_Burnout.html</link>
-    <description>&lt;p&gt;Being on fire isn&#39;t always awesome.&lt;/p&gt;
-&lt;p&gt;On fire and burnout are two sides of the same coin.&lt;/p&gt;
-&lt;p&gt;And to be completely honest with you, dear backers, I&#39;m on the verge of
-burnout over here. I have been pushing myself too hard this summer,
-trying to make 1.0 happen. I&#39;m cranky on the IRC channel, prickly with
-my friends. The smallest set-backs trigger overreactions: rage, sadness,
-or the worst - apathy.&lt;/p&gt;
-&lt;p&gt;I&#39;ve been here before; it means I&#39;ve been working too hard.&lt;/p&gt;
-&lt;p&gt;I&#39;ve been on fire this summer, in the good sense. An amazing amount of
-progress has been made. But lately this whole thing has felt more like
-trying to burn a wet newspaper. No flames, just a soggy mess. I light
-the match and nothing happens. If I keep at it, I&#39;ll just burn myself.&lt;/p&gt;
-&lt;p&gt;So I need to take it easy for a bit. My July vacation in Iceland ended
-up being mostly work and I&#39;m paying the price for that now.&lt;/p&gt;
-&lt;h2&gt;The Dark Side of Crowdfunding&lt;/h2&gt;
-&lt;p&gt;Crowd-funding has a dark side to it.&lt;/p&gt;
-&lt;p&gt;As wonderful as it may be to have a large group of people rooting for
-you, the more people backed a project, the more people will be let down
-if you fail to ship. The more people trusted your vision enough to give
-you money, the greater the pressure not to betray their trust.&lt;/p&gt;
-&lt;p&gt;Many startup founders buckle under the pressure of keeping a business
-afloat and meeting the expectations of their investors. &lt;a href=&#34;http://startupdepression.com/&#34;&gt;Startup
-depression&lt;/a&gt; is a thing.&lt;/p&gt;
-&lt;p&gt;Crowd-funding adds another dimension to that; investors understand risks
-and they accept they may lose their money. But when the general public
-backs a project, that isn&#39;t necessarily the case. They&#39;re not pros.
-They&#39;re a bunch of &lt;em&gt;really nice people who decided to support your
-vision&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;You really don&#39;t want to let them down!&lt;/p&gt;
-&lt;p&gt;Mailpile may not be a startup in the normal sense of the word, but we do
-share many of the same issues. We - you, me, all the project&#39;s backers -
-are creating something new, something ambitious. Running out of money is
-always a concern; everyone has to eat. We may not expect to make
-millions of dollars, but we do hope to have millions of users. We&#39;re not
-out to &#34;disrupt e-mail&#34; for financial gain, but we do want to have an
-impact. Our reputations are at stake. And although we may not have taken
-money from investors, we did take money from our community of backers
-and supporters.&lt;/p&gt;
-&lt;p&gt;So when I read about startup founders struggling to cope, I know exactly
-what they&#39;re talking about.&lt;/p&gt;
-&lt;p&gt;I&#39;m not quite sure what do do about it though. Except try and take it
-easy and try to keep making progress. One without the other doesn&#39;t
-seem to work, deadlines be damned.&lt;/p&gt;
-&lt;h3&gt;The Weekly Report&lt;/h3&gt;
-&lt;p&gt;This last week has been slow, for all of the above reasons.&lt;/p&gt;
-&lt;p&gt;I made some progress on the OTF grant proposal, but it&#39;s a tricky beast.&lt;/p&gt;
-&lt;p&gt;I finally implemented the auto-configuration tool that will try very
-hard to guess all your settings when you add a new account. It&#39;s
-actually pretty awesome, so that&#39;s something!&lt;/p&gt;
-&lt;p&gt;I got the Transifex source strings updated, so Mailpile 1.0 will exist
-in more languages than just English.&lt;/p&gt;
-&lt;p&gt;Most importantly, I decided to take steps to avoid burning out. Writing
-this has been cathartic. I&#39;m going to get some rest. And I&#39;m going to
-try and get more face-time with friendly people.&lt;/p&gt;
-&lt;p&gt;So &lt;a href=&#34;http://www.pyconuk.org/&#34;&gt;see you at PyCon&lt;/a&gt;! :-)&lt;/p&gt;
-&lt;h2&gt;Tasks for this week&lt;/h2&gt;
+    <title>Delegate, Automate, Collaborate, Pirate</title>
+    <link>http://www.mailpile.is/blog/2016-04-18_GUI-o-Matic_Automation_GnuPG_Piracy.html</link>
+    <description>&lt;p&gt;Avast! Be welcome to this latest irregular Mailpile status update!&lt;/p&gt;
+&lt;p&gt;In this episode, I will discuss:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Not burn out&lt;/li&gt;
-&lt;li&gt;Work on the OTF grant proposal&lt;/li&gt;
-&lt;li&gt;Write some code&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Tue, 18 Aug 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Github Issue Cleanup Frenzy</title>
-    <link>http://www.mailpile.is/blog/2015-08-10_Issue_Cleanup_Frenzy.html</link>
-    <description>&lt;p&gt;The last week was mostly dedicated to administration work.&lt;/p&gt;
-&lt;p&gt;The most important task was communicating with our new accountants. The
-firm that did our taxes last year actually went out of business a couple
-of months ago... never a good sign!  So one of my top-priority tasks
-while I was in Iceland was to finda a new accountant. I succeeded, went
-with a medium-sized company that actually has a web-site but has been in
-business since 1995 and they seem quite solid; last week I spent some
-time communicating with them so they could get to work filing the
-project&#39;s annual return.&lt;/p&gt;
-&lt;p&gt;Then there was another money related task: Mailpile has a grant
-application in the pipes with the &lt;a href=&#34;https://www.opentechfund.org/&#34;&gt;OTF&lt;/a&gt;
-for quite some time now. Due to personal work overload, I have been
-putting off responding to questions they had for far too long.  Last
-week I finally restarted the conversation and started revising the
-application.&lt;/p&gt;
-&lt;p&gt;The third administration task was the most time consuming: I set out to
-clean up and curate our &lt;a href=&#34;https://github.com/mailpile/Mailpile/issues&#34;&gt;giant pile of Github
-issues&lt;/a&gt;. I am ashamed to
-say that many bug reports and support requests never got answered,
-because there were simply too many for us to keep up. So I spent a fair
-bit of time last week reading issue after issue after issue, typing
-responses and sorting, or simply writing code when the fix was obvious
-and straightforward.&lt;/p&gt;
-&lt;p&gt;This also will be an on-going task; I don&#39;t actually expect to ever
-close all the issues, as many are discussions or ideas for plug-ins or
-spin-off projects. But before our 1.0 I&#39;d like to have responded to
-every single bug-report, filed it appropriately and removed any that are
-duplicates or obsolete. You can see my frenzy in action on the &lt;a href=&#34;https://github.com/mailpile/Mailpile/pulse/monthly&#34;&gt;project
-pulse dashboard&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Finally, I recently discovered that &lt;a href=&#34;https://www.transifex.com/projects/p/mailpile/&#34;&gt;our Transifex account&lt;/a&gt;
-has not updated the translation source strings for &lt;em&gt;months&lt;/em&gt;. This is
-not yet fixed, but will be soon...&lt;/p&gt;
-&lt;p&gt;That&#39;s a lot of admin work!&lt;/p&gt;
-&lt;p&gt;On the code front, I fixed a bunch of minor bugs, merged them into the
-beta branch and updated our &lt;a href=&#34;/download/&#34;&gt;downloadable packages&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I also made a lot of progress on speeding up the apps web user
-interface. Hopefully I&#39;ll be able to include the fruits of that work in
-another update to the beta branch next week. Fingers crossed!&lt;/p&gt;
-&lt;h2&gt;Tasks for this week&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Finish updating the OTF grant proposal&lt;/li&gt;
-&lt;li&gt;Keep cleaning up the Github issue tracker&lt;/li&gt;
-&lt;li&gt;Get the Transifex source strings updated!&lt;/li&gt;
-&lt;li&gt;Autoajax: speed up the web UI&lt;/li&gt;
-&lt;/ol&gt;</description>
-    <pubDate>Mon, 10 Aug 2015 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Vacation over; Back to work!</title>
-    <link>http://www.mailpile.is/blog/2015-08-03_Back_to_Work.html</link>
-    <description>&lt;p&gt;Time for the weekly update!&lt;/p&gt;
-&lt;p&gt;Updates have been a bit less frequent of late, as I have spent a fair
-bit of the last month on holidays; spending time with family in Iceland
-and catching up with friends.&lt;/p&gt;
-&lt;p&gt;Some Mailpile work got done as well:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;The Beta III was release&lt;/li&gt;
-&lt;li&gt;A brainstorming and hack session with CloudFleet&lt;/li&gt;
-&lt;li&gt;Work began on accelerating the Mailpile web UI&lt;/li&gt;
+&lt;li&gt;A Strategic Spin-Off Project&lt;/li&gt;
+&lt;li&gt;Deletion and Tag Automation&lt;/li&gt;
+&lt;li&gt;GnuPG Collaboration&lt;/li&gt;
+&lt;li&gt;Piracy in Iceland&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I also began exploring more seriously the possibility of shipping a
-webkit-based container along with the desktop version of Mailpile. This
-would go a long way towards fixing the largest outstanding usability
-concerns of Beta III. We&#39;ll see how that goes!&lt;/p&gt;
-&lt;h2&gt;Plans for this week&lt;/h2&gt;
+&lt;p&gt;Progress towards a release has been very slow. This is entirely due to
+me being busy with other work - things that pay the bills, looking
+after my lovely baby daughter, buying an apartment and moving to
+Iceland. I&#39;m swamped!&lt;/p&gt;
+&lt;p&gt;As I am often exhausted and pressed for time, I have had a hard time
+sticking to anything resembling a schedule and have basically indulged
+any vaguely productive impulses, rather than worry about roadmaps.&lt;/p&gt;
+&lt;p&gt;So if this doesn&#39;t look like progress towards a release, you&#39;re probably
+right. I&#39;ve been very distracted. But it&#39;s progress all the same!&lt;/p&gt;
+&lt;h2&gt;A Strategic Spin-Off Project&lt;/h2&gt;
+&lt;p&gt;As mentioned before, Mailpile&#39;s desktop integration on Mac OS X and
+Windows is currently unacceptable and needs a lot of work.&lt;/p&gt;
+&lt;p&gt;We do have some code, however, and &lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/1514&#34;&gt;a rough
+design&lt;/a&gt;. In order to
+encourage people to help out (and maximize the utility of the code
+we&#39;ve already written), I spun off the existing GUI code into a separate
+project: &lt;a href=&#34;https://github.com/mailpile/gui-o-matic&#34;&gt;GUI-o-Matic&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This should both lower the barrier to entry and encourage contributions;
+You no longer need to check out all of Mailpile to hack on the
+GUI-o-Matic. And because it&#39;s a stand-alone utility, it&#39;s more likely
+that other projects will want to make use of it. We hope!&lt;/p&gt;
+&lt;p&gt;If you&#39;ve ever wanted an easy way to add a cross-platform desktop
+graphical user-interface to your code (not just Python!), take a look:
+&lt;a href=&#34;https://github.com/mailpile/gui-o-matic&#34;&gt;GUI-o-Matic&lt;/a&gt; is a bit like
+&#34;&lt;a href=&#34;https://www.linuxjournal.com/article/2807&#34;&gt;dialog&lt;/a&gt;&#34; for modern desktop
+environments.&lt;/p&gt;
+&lt;p&gt;Old farts will understand.&lt;/p&gt;
+&lt;h2&gt;Deletion and Tag Automation&lt;/h2&gt;
+&lt;p&gt;Did you know the current incarnation of Mailpile cannot actually delete
+e-mail?  It&#39;s true. This was actually a deliberate, conservative choice
+to avoid losing valuable data during development. It was never meant to
+be permanent, but temporary hacks do tend to outstay their welcome...&lt;/p&gt;
+&lt;p&gt;In the context of shipping 1.0... well, a mail client isn&#39;t really a
+mail client if it cannot delete mail, is it? More pressingly, a tool
+which aims to safeguard user privacy has to support the most basic
+privacy feature of all: deleting unwanted data.&lt;/p&gt;
+&lt;p&gt;So I decided to (yet again) break the feature freeze and implement
+message deletion.&lt;/p&gt;
+&lt;p&gt;This had a knock-on effect. Mailpile&#39;s deletion strategy was supposed
+to be similar to that of other webmail: once things have sat in the
+Trash for a while, they get deleted automatically. Similarly, messages
+should automatically move from Spam to Trash after a while and blank
+drafts should get purged and deleted.&lt;/p&gt;
+&lt;p&gt;So Mailpile needed a way to a) detect messages had been untouched for a
+period of time and b) a way to trigger actions once a) was satisfied for
+a message carrying a particular tag.&lt;/p&gt;
+&lt;p&gt;So now Mailpile has exactly that!&lt;/p&gt;
+&lt;p&gt;The search-engine is used to keep a record of when a message tags were
+last modified, and each tag now has an automation section which
+specifies a number of days and an action to perform. A few times a day,
+Mailpile will search for idle messages in tags with automation enabled
+and either retag or delete the matching messages.&lt;/p&gt;
+&lt;p&gt;While I was implementing the configuration interface for this, I also
+added an option to enable statistical auto-tagging for any tag, as
+described in &lt;a href=&#34;2014-01-12_A_Plan_For_Spam.html&#34;&gt;A Plan for Spam ... and
+Bacon!&lt;/a&gt;, and exposed a few more of the
+technical tag settings in the Tag settings editor. All features that
+already existed, but weren&#39;t really accessible.&lt;/p&gt;
+&lt;p&gt;So there we go, tags now have automation and you don&#39;t need any
+command-line black magic to create your own statistical tagging or
+time-based workflows.&lt;/p&gt;
+&lt;p&gt;These capability are now available to all tags, including user-created
+ones. Some of the potential use-cases include:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;More Mailpile UI work&lt;/li&gt;
-&lt;li&gt;Update Beta III with minor bugfixes and improvements&lt;/li&gt;
+&lt;li&gt;Deleting Trash after a while&lt;/li&gt;
+&lt;li&gt;Moving Spam to Trash&lt;/li&gt;
+&lt;li&gt;Moving untouched blank drafts to Trash&lt;/li&gt;
+&lt;li&gt;Creating statistical categories for promotions or paperwork&lt;/li&gt;
+&lt;li&gt;Creating a &#34;Postponed&#34; tag which hides mail from view for a few days&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;See you next week!&lt;/p&gt;</description>
-    <pubDate>Mon, 03 Aug 2015 12:00:00 +0000</pubDate>
+&lt;p&gt;Now we just need an auto-responder and Mailpile will be able to
+automatically recognize and reply to tech support requests that have
+been unanswered for more than a week...&lt;/p&gt;
+&lt;p&gt;(In the process I also fixed bugs in the bayesian auto-trainer, the
+periodic scheduler that triggers it and the tag editing tools the UI -
+proper release work after all!)&lt;/p&gt;
+&lt;h2&gt;GnuPG Collaboration&lt;/h2&gt;
+&lt;p&gt;I write this, sitting on a train back home from London.&lt;/p&gt;
+&lt;p&gt;I was in London today to meet with Neal of &lt;a href=&#34;https://www.gnupg.org/&#34;&gt;the GnuPG
+project&lt;/a&gt;. We discussed how the projects could
+collaborate more closely in the future and some of the
+&lt;a href=&#34;2015-02-26_Revisiting_the_GnuPG_discussion.html&#34;&gt;difficulties&lt;/a&gt; Mailpile
+has had integrating with GnuPG.&lt;/p&gt;
+&lt;p&gt;It was an excellent meeting and I&#39;m optimistic that once GnuPG 2.1 (or
+2.2) becomes widespread, Mailpile will be able to make full use of it
+without any horrible hacks.&lt;/p&gt;
+&lt;p&gt;Conversations will continue!&lt;/p&gt;
+&lt;h2&gt;Piracy in Iceland&lt;/h2&gt;
+&lt;p&gt;Finally, some bad news.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://grapevine.is/mag/column-opinion/2016/04/10/600-silver-lions-how-iceland-was-betrayed-again/&#34;&gt;Iceland&#39;s government is
+broken&lt;/a&gt;
+and I feel an obligation to help fix it. I will be dedicating some time
+this summer to helping &lt;a href=&#34;http://www.piratar.is/&#34;&gt;the local Pirate Party&lt;/a&gt;
+prepare for our next elections. Mostly I&#39;ll be working behind the scenes
+on internal party tools, but this inevitably means I will continue being
+distracted from Mailpile work. But don&#39;t worry, I&#39;m &lt;em&gt;not&lt;/em&gt; running for a
+seat in parliament. ;-)&lt;/p&gt;
+&lt;p&gt;If you can help out in some way to help pick up the slack, please get
+in touch on #mailpile on Freenode.&lt;/p&gt;
+&lt;p&gt;That&#39;s it for now, thanks for reading.&lt;/p&gt;
+&lt;p&gt;Time to pack some boxes and move to Iceland!&lt;/p&gt;</description>
+    <pubDate>Mon, 18 Apr 2016 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Mailpile Beta III: WYSIWYG</title>
-    <link>http://www.mailpile.is/blog/2015-07-20_Mailpile_Beta_III.html</link>
-    <description>&lt;p&gt;Hello world!&lt;/p&gt;
-&lt;p&gt;We are proud to announce the our third Beta release:
-&lt;strong&gt;Mailpile Beta III&lt;/strong&gt; (v0.5.1)&lt;/p&gt;
-&lt;p&gt;This release&#39;s code name is &#34;What You See Is What You Get - WYSIWYG&#34;.
-The main focus of this release is simplicity and stability.&lt;/p&gt;
-&lt;h2&gt;Where Can You Get It?&lt;/h2&gt;
-&lt;p&gt;The new release is availble from &lt;a href=&#34;/download/&#34;&gt;the Mailpile download
-page&lt;/a&gt;, and the source is &lt;a href=&#34;https://github.com/mailpile/Mailpile/releases&#34;&gt;on
-github&lt;/a&gt; as always.&lt;/p&gt;
-&lt;p&gt;Please read &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Release-Notes-201507-Beta-III&#34;&gt;the release
-notes&lt;/a&gt;
-and check our &lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Security-roadmap&#34;&gt;security
-roadmap&lt;/a&gt; so
-you know what to expect.&lt;/p&gt;
-&lt;h2&gt;What&#39;s New?&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Setup is simpler and multiple account support is much improved.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Initial setup was slimmed down to a mere two steps: choose your language
-and choose your password. We are a bit sad that this rendered obsolete
-the quirky silly hints we provided while folks waited for their e-mail
-to start downloading, but maybe we&#39;ll be able to make use of that
-elsewhere.&lt;/p&gt;
-&lt;p&gt;In recognition of our users&#39; need to manage multiple e-mail accounts
-and play different roles, accounts are now a core feature and the app
-sports a new &#34;Home Page&#34; which highlights which accounts you have
-configured and provides shortcuts for reading or composing mail within
-the scope of each one. When configuring a new account we now make use of
-the Mozilla ISPDB (Internet Service Provider Database) to avoid the need
-to manually enter settings for most larger e-mail providers. &lt;/p&gt;
-&lt;p&gt;Finally, for the geeks in the room that already have piles of e-mail on
-their local machines, we&#39;ve added the &lt;strong&gt;Browse&lt;/strong&gt; tool which lets you
-find local mailboxes and interactively add them to your pile. Unix mbox,
-Maildir and Mac Mail formats are currently supported out of the box.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Key discovery works.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Searching for encryption keys, both in local mail and on remote key
-servers should now work reasonably well.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;What you see is what you get!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Most of the unfinished and half-baked user-interface elements have been
-removed. The dedicated Tags and Contacts pages are gone for now, as are
-many buttons and links which seemed like good ideas but never quite
-worked.&lt;/p&gt;
-&lt;p&gt;There are still some loose ends, but for the most part the Mailpile user
-interface now keeps its implicit promises: what you see is what you get!&lt;/p&gt;
-&lt;h2&gt;What&#39;s still broken?&lt;/h2&gt;
-&lt;p&gt;The app is still very slow to start up if you have a large amount of
-e-mail or many contacts, and still relies on the external &lt;code&gt;openssl&lt;/code&gt;
-process which has proven buggy in some critical cases.&lt;/p&gt;
-&lt;p&gt;The web interface is slow.&lt;/p&gt;
-&lt;p&gt;Remote access to a running Mailpile still requires advanced tech skills.&lt;/p&gt;
-&lt;p&gt;The app&#39;s communiction with the outside world needs to be better
-secured; SSL certificates need to be varified and our Tor integration
-for anonymizing keyserver lookups is unfinished.&lt;/p&gt;
-&lt;p&gt;Starting the app is still a confusing experience for most Windows and
-Mac users.&lt;/p&gt;
-&lt;p&gt;When preparing the Beta, we discovered that our translation teams on
-Transifex hadn&#39;t received updated strings to work with in quite some
-time, so most translations are woefully out of date.&lt;/p&gt;
-&lt;h2&gt;What&#39;s next?&lt;/h2&gt;
-&lt;p&gt;Fixing all of the above!&lt;/p&gt;
-&lt;p&gt;This week I am going to update our &lt;a href=&#34;2015-04-27_Roadmap_to_v1.html&#34;&gt;Roadmap to Version
-1.0&lt;/a&gt; and spend some time working with the
-fine fellows from &lt;a href=&#34;https://cloudfleet.io/&#34;&gt;Cloudfleet&lt;/a&gt; who are coming to
-visit Iceland.&lt;/p&gt;
-&lt;p&gt;One thing however has been decided: until the 1.0 is released, the Beta
-III packages will be updated roughly once every two weeks. So watch
-those version numbers!&lt;/p&gt;
-&lt;p&gt;Thanks and happy mailing!&lt;/p&gt;</description>
-    <pubDate>Mon, 20 Jul 2015 12:00:00 +0000</pubDate>
+    <title>Python SSL Woes</title>
+    <link>http://www.mailpile.is/blog/2016-03-24_Python_SSL_Woes.html</link>
+    <description>&lt;p&gt;There&#39;s not much to say about progress this week; things have been slow,
+but most of my hacking time has been spent getting frustrated by SSL and
+Python.&lt;/p&gt;
+&lt;p&gt;So following in our Grand Tradition of biting the hand that feeds us and
+publicly complaining about libraries and tools we rely upon, I am going to
+write a few words about the state of SSL/TLS support in Python.&lt;/p&gt;
+&lt;p&gt;This rant was (sort of) requested by Christian, one of the maintainers
+of the Python SSL module. Hi Christian, thanks for all your hard work! ;-)&lt;/p&gt;
+&lt;h3&gt;Why We Care&lt;/h3&gt;
+&lt;p&gt;SSL (or TLS) is the technology used to secure how Mailpile communicates with
+online mail servers, and is also used when downloading data from the web,
+whether for key discovery or things like user avatars and icons.&lt;/p&gt;
+&lt;p&gt;The e-mail world is a bit different from the web, in that the use of encryption
+is somewhat less mature. Self-signed certificates for mail servers are more
+common than on the web and use of encryption for e-mail in transit tends to be
+more opportunistic, so the &#34;standard&#34; SSL key management strategies employed by
+web-servers and web-browsers don&#39;t really apply.&lt;/p&gt;
+&lt;p&gt;The current iteration of the Mailpile code-base doesn&#39;t validate SSL
+certificate at all when connecting to SMTP or IMAP servers; this means any
+motivated attacker can easily perform a man-in-the-middle attack to listen
+in on, or modify, sent or downloaded e-mail.&lt;/p&gt;
+&lt;p&gt;Fixing this requires validating the server certificates somehow; for those
+that have a certificate issued by one of the known certificate authorities,
+this is largely the same process as on the web. However, a large number of
+e-mail servers use self-signed certificates, particularly within the
+enthusiast community which is a significant part of the people we expect
+to adopt Mailpile. So we need to handle those certificates gracefully as
+well.&lt;/p&gt;
+&lt;p&gt;While working on this, I yet again encountered limitations and bugs in
+Python&#39;s standard ssl code.&lt;/p&gt;
+&lt;h3&gt;Issue 1: Python 2.6, 2.7.3, ...&lt;/h3&gt;
+&lt;p&gt;It is incredibly frustrating that Python 2.7.9 was the first release of
+Python that had semi-functional SSL support in the standard library.
+Previous versions were almost completely insecure and did not expose the
+API hooks required to improve the situation.&lt;/p&gt;
+&lt;p&gt;Since I&#39;m pretty sure nobody in the Python community has a time machine,
+there&#39;s not much the Python community can do about this.  All we can do
+is thank the people that are working to fix things today - and get those
+fixes used!&lt;/p&gt;
+&lt;p&gt;On that note: distributions that are shipping Python 2.7 but refuse to
+issue a security fix to upgrade to the latest point release are
+&lt;strong&gt;failing to protect their users&lt;/strong&gt;. At least back-port the affected
+modules, for crying out loud!&lt;/p&gt;
+&lt;h3&gt;Angry Tweeting&lt;/h3&gt;
+&lt;p&gt;In a moment of drama, I tweeted the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The more I use Python&#39;s ssl module, the more obvious it is that
+nobody ever used it for anything serious. Even the 2.7/3.x code
+just fails.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Those are fighting words and I&#39;m sorry if they offended anyone.
+Christian responded with a very level-headed request for details, which
+in turn prompted this post.&lt;/p&gt;
+&lt;p&gt;The frustration I expressed there, was to a large degree related to
+Issue 1 above, but the comment on 2.7 and 3.x needs explaining. I&#39;ll
+talk about the big picture first, with critiques of individual methods
+further down.&lt;/p&gt;
+&lt;p&gt;This should by no means be considered an exhaustive review of the Python
+ssl module; but I hope at least some of my suggestions are actionable
+and constructive.&lt;/p&gt;
+&lt;p&gt;One caveat: I haven&#39;t checked the Python 2.7.11 code, this critique is
+based on reading the sources from 2.7.10 as installed by my distro&#39;s
+package manager. Some of these issues may have been fixed, which would
+bring me back to Issue 1.&lt;/p&gt;
+&lt;h3&gt;Issue 2: import ssl, poplib, smtplib, imaplib&lt;/h3&gt;
+&lt;p&gt;I am going to charitably assume that the ssl backport in 2.7.9 took care
+to preserve compatibility and that is why imaplib, poplib and smtplib
+(all used by Mailpile) still make insecure SSLv3 connections.&lt;/p&gt;
+&lt;p&gt;Unless I am reading the code completely wrong, the more secure new
+&#34;default SSL contexts&#34; are not actually used (see below for more
+details). This is fixed in Python 3.x.&lt;/p&gt;
+&lt;p&gt;Fair enough, backwards compatibility is important! When forced to choose
+between fixing a security hole and suddenly breaking apps that used to
+work, it&#39;s not obvious that security should always come first.&lt;/p&gt;
+&lt;p&gt;Unless this was a mistake?&lt;/p&gt;
+&lt;p&gt;Either way, the backported ssl module provides &lt;strong&gt;no mechanism for
+changing this behaviour&lt;/strong&gt;, short of monkey-patching. That seems like a
+pretty serious oversight, and one easily corrected with a global module
+variable or two.&lt;/p&gt;
+&lt;p&gt;More generally, the ssl module would benefit greatly from an API that
+would allow an app to specify default behaviours and callbacks or hooks
+for &#34;interesting events&#34;; allow more control and more introspection
+without forcing all the other libraries to complicate their APIs.&lt;/p&gt;
+&lt;h3&gt;Issue 3: Certificate Management&lt;/h3&gt;
+&lt;p&gt;An e-mail client needs to be able to manage SSL certificates, including
+self-signed ones.&lt;/p&gt;
+&lt;p&gt;Showing my ignorance here, I couldn&#39;t figure out how to do this with the
+Python ssl module until I got some helpful replies to my angry tweet.
+Even then, the APIs I will need to work with if I stick with the
+standard python ssl module are very awkward.&lt;/p&gt;
+&lt;p&gt;I think it would be time very well spent to improve both the
+documentation and the APIs (see below) for this use-case.&lt;/p&gt;
+&lt;p&gt;Googling for Python ssl examples will in the vast majority of cases show
+people disabling certificate verification entirely.  Surely that is not
+what we want people to do!  The official API documentation is the most
+effective place to combat these bad examples.&lt;/p&gt;
+&lt;h3&gt;Issues 4..N&lt;/h3&gt;
+&lt;p&gt;These are random warts in the ssl API. Some major, some minor.&lt;/p&gt;
+&lt;h4&gt;pydoc ssl&lt;/h4&gt;
+&lt;p&gt;A typo: the method &#34;fetch_server_certificate&#34; does not exist.&lt;/p&gt;
+&lt;h4&gt;ssl.get_server_certificate&lt;/h4&gt;
+&lt;p&gt;If asked to validate, this method may throw an exception instead
+of returning the certificate. This is unhelpful.&lt;/p&gt;
+&lt;p&gt;The data returned by this method is a binary blob; the library
+does not provide any utilities for decoding the contents.&lt;/p&gt;
+&lt;h4&gt;ssl.SSLError&lt;/h4&gt;
+&lt;p&gt;This exception is raised when a certificate fails to validate.
+However, it doesn&#39;t tell you anything about the certificate
+itself.&lt;/p&gt;
+&lt;p&gt;Including the certificate as an attribute of the exception would
+allow for more nuanced and meaningful error handling.&lt;/p&gt;
+&lt;p&gt;Details as to why the validation failed would be nice too.&lt;/p&gt;
+&lt;h4&gt;ssl.SSLSocket.getpeercert&lt;/h4&gt;
+&lt;p&gt;As far as I can tell, this is the only method provided which
+parses an SSL certificate, making any certificate handling code
+reliant on the network. This is bad, but isn&#39;t the only problem
+here.&lt;/p&gt;
+&lt;p&gt;Aside from crypto geeks, few consumers of this API are likely to
+care about the details of a validated certificate. It&#39;s trusted,
+let&#39;s get on with things! It&#39;s the certificate that fails to
+validate that you need to know more about, so you can tell the
+user something useful.&lt;/p&gt;
+&lt;p&gt;Unfortunately, this method completely refuses to return
+structured information about a certificate unless it has been
+validated first. And of course, if validation is enabled then an
+exception will be thrown before this method can be called.&lt;/p&gt;
+&lt;p&gt;It appears the workaround is to first use
+&lt;code&gt;ssl.get_server_certificate&lt;/code&gt; and then provide the certificate as
+CA to &lt;code&gt;ssl.SSLContext&lt;/code&gt; or &lt;code&gt;ssl.wrap_socket&lt;/code&gt;, so &lt;code&gt;getpeercert&lt;/code&gt;
+will return actual information.&lt;/p&gt;
+&lt;p&gt;This is both non-obvious and quite convoluted.&lt;/p&gt;
+&lt;p&gt;This method should always return structured data when requested,
+but backwards compatibility concerns will probably preclude that.
+:-(&lt;/p&gt;
+&lt;p&gt;Either way, an standalone method that just parses certificates
+would be very nice to have.&lt;/p&gt;
+&lt;h4&gt;ssl.create_default_context&lt;/h4&gt;
+&lt;p&gt;This method confused me.&lt;/p&gt;
+&lt;p&gt;At first I thought this method would be used by various Python libraries
+that support the SSL protocol... and wanted to figure out how to
+customize the output of this so my app would have control over how SSL
+was done.&lt;/p&gt;
+&lt;p&gt;Turns out I was completely wrong on all counts.&lt;/p&gt;
+&lt;p&gt;I read the ssl library source and found that the stdlib modules are
+expected to use the undocumented variable &lt;code&gt;_create_stdlib_context&lt;/code&gt; which
+maps to the undocumented method named &lt;code&gt;_create_unverified_context&lt;/code&gt;.
+Except for http.client, which should use &lt;code&gt;_create_default_https_context&lt;/code&gt;
+which maps to &lt;code&gt;ssl.create_default_context&lt;/code&gt; after all...&lt;/p&gt;
+&lt;p&gt;Feeling somewhat confused, I read the Python 2.7.10 sources for imaplib,
+smtplib and poplib. Turns out none of them use SSL contexts at all! They
+all just call &lt;code&gt;ssl.wrap_socket&lt;/code&gt;, which in turn uses none of the above
+methods...&lt;/p&gt;
+&lt;p&gt;Argh. Okay. :-(&lt;/p&gt;
+&lt;p&gt;It looks like those comments were just back-ported from 3.x, without the
+libraries themselves getting updated. It&#39;s confusing, but the main
+take-away is that the backport appears to have failed to secure any of
+the standard libraries except for httplib (and ftplib).&lt;/p&gt;
+&lt;p&gt;I raise this issue to illustrate how hard it is for an app developer to
+truly understand &lt;em&gt;how&lt;/em&gt; SSL/TLS is being used within their app, let alone
+have control over it. It&#39;s frustrating, to say the least.&lt;/p&gt;
+&lt;p&gt;My original wish, to be able to control the default context returned by
+this method, would be a great feature request if this method were
+actually used! It&#39;s not. However, I think the feature request still
+makes sense - it&#39;s just more work!&lt;/p&gt;
+&lt;h3&gt;What is Mailpile Doing About it?&lt;/h3&gt;
+&lt;p&gt;We are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Talking to the Python devs (complaining)&lt;/li&gt;
+&lt;li&gt;Planning to publish a TOFU-for-TLS module&lt;/li&gt;
+&lt;li&gt;Planning to publish our monkey-patching magic&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Step 1 is pretty much done; I submitted an early draft of this blog post
+to the current maintainers of the Python ssl module. In spite of the
+fact that it contained an extended and distracting rant about the SSL
+community in general (which I in the end decided not to post), they
+responded well to the technical points and gave constructive feedback.&lt;/p&gt;
+&lt;p&gt;The main take-away was that apps like Mailpile, that need control over
+how SSL connections are made and want to implement non-standard
+(non-web) certificate verification models, are not well served by the
+standard Python modules. So we&#39;ll be using pyOpenSSL instead and
+patching or subclassing the protocol libraries.&lt;/p&gt;
+&lt;p&gt;The TOFU code and policy management logic will be released separately
+from Mailpile and under a liberal license, so the community can benefit
+or point and laugh, whichever seems more appropriate. I don&#39;t know
+whether this will happen before or after 1.0.&lt;/p&gt;
+&lt;p&gt;Stay tuned. :-)&lt;/p&gt;</description>
+    <pubDate>Thu, 24 Mar 2016 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Status Update and PyCon SK report</title>
+    <link>http://www.mailpile.is/blog/2016-03-16_PyCon_SK.html</link>
+    <description>&lt;p&gt;Apologies for how quiet this blog has been lately; the last couple of
+months I have been very busy with fatherhood, preparing to move countries
+and making sure &lt;a href=&#34;https://pagekite.net/&#34;&gt;my other job&lt;/a&gt; gets done.&lt;/p&gt;
+&lt;p&gt;I do expect development on Mailpile to pick up again over the next few
+weeks and this blog will start getting regular updates again as well.
+There will be a lull again in the latter half of April, when my little
+family and I move back to Iceland.&lt;/p&gt;
+&lt;h3&gt;Release Candidate Progress&lt;/h3&gt;
+&lt;p&gt;During the first few weeks of 2016, quite a lot of progress was made on
+the release. My focus has been to first complete the tasks most likely
+to generate new text in the interface, so that our translation teams
+would have enough time to do their jobs.&lt;/p&gt;
+&lt;ul class=&#34;square&#34;&gt;
+&lt;li&gt;We are now very close to having working Debian packages that comply with
+    offcial Debian policies, thanks to the heroic efforts of Alexandre Viau.
+    This means Mailpile 1.0 should be in Debian-testing almost from day
+    one!&lt;/li&gt;
+&lt;li&gt;The most important privacy and security settings are now explained and can
+    be configured by the user. This includes Tor support and expressing
+    preferences on what is encrypted and whether external services like
+    Gravatar are used or not.&lt;/li&gt;
+&lt;li&gt;Improvements were made to the Event Log and a network activity viewer
+    was exposed to facilitate troubleshooting.&lt;/li&gt;
+&lt;li&gt;Jack Dodds contributed support for parsing stand-alone PGP encrypted and
+    signed attachments.&lt;/li&gt;
+&lt;li&gt;Many bugs got fixed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of this work may have slightly circumvented the feature-freeze, but
+these are important enough features that I&#39;m not too fussed about it.&lt;/p&gt;
+&lt;p&gt;I think I am almost done with the strings work and aim to declare a
+string freeze this week or next. The next task will then be bug hunting,
+putting the last touches on our Debian package and set up a build-bot to
+autogenerate packages.&lt;/p&gt;
+&lt;h3&gt;PyCon SK&lt;/h3&gt;
+&lt;p&gt;Last weekend I was happy to attend Slovakia&#39;s first PyCon.&lt;/p&gt;
+&lt;p&gt;I had been invited to speak about some of the challenges involved in making
+Free Software development a full time job; one of the stories I told was of
+course the story of Mailpile so far. The talk was well received and I had many
+excellent conversations afterwards.&lt;/p&gt;
+&lt;p&gt;I was very impressed with how professional the conference was, considering it
+was their first ever PyCon. The organizers should be proud of themselves!&lt;/p&gt;
+&lt;p&gt;As usual, I made sure to perform some usability tests, answer questions,
+demonstrate Mailpile and help people set up the app. Our
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/wiki/Getting-started-on-linux&#34;&gt;getting-started-on-linux&lt;/a&gt;
+wiki page now mentions Fedora! And of course I gave away lots of stickers.&lt;/p&gt;
+&lt;p&gt;Fixes suggested by the usability tests are already in Github.&lt;/p&gt;</description>
+    <pubDate>Wed, 16 Mar 2016 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Happy Frozen New Year!</title>
+    <link>http://www.mailpile.is/blog/2016-01-01_Happy_Frozen_New_Year.html</link>
+    <description>&lt;p&gt;Happy New Year everyone, and thank you for all the support and good
+times in 2015!&lt;/p&gt;
+&lt;p&gt;This fall, we announced that we would try and get Mailpile 1.0 for Linux
+released in 2015. We&#39;re not quite there, but we&#39;re so close we can smell
+it...&lt;/p&gt;
+&lt;h2&gt;Everybody Freeze!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#39;/files/2016-01-Mailpile-on-Ice.jpg&#39;&gt;&lt;/p&gt;
+&lt;p&gt;Mailpile is now in a state of &lt;strong&gt;Feature Freeze&lt;/strong&gt;, which means the only
+development expected until 1.0 is bugfixes, &#34;sweeping things under the
+rug&#34; (hiding features if they have bugs that need more than 1-2 hours of
+work to fix), packaging work, translations and documentation.&lt;/p&gt;
+&lt;p&gt;How long we stay in this state depends on how many showstopper bugs we
+find, which is impossible to predict. But the work I know needs to be
+done should be doable in January.&lt;/p&gt;
+&lt;p&gt;Progress is being made!&lt;/p&gt;
+&lt;h3&gt;New Year News&lt;/h3&gt;
+&lt;p&gt;Some random news and updates unrelated to the Big Freeze:&lt;/p&gt;
+&lt;h4&gt;Hackathon - thanks!&lt;/h4&gt;
+&lt;p&gt;We&#39;d like to thank everyone who took part in our hackathon at the 32C3
+conference in Hamburg last week!&lt;/p&gt;
+&lt;p&gt;In particular, thanks to Daniel for organizing, and the &lt;a href=&#34;http://www.ccc.de&#34;&gt;Chaos Computer
+Club&lt;/a&gt; for organizing on such an amazing event - my
+wife and I followed along from home using the live streams.&lt;/p&gt;
+&lt;p&gt;If you would like to organize a Mailpile hackathon at your local LUG,
+get in touch - we&#39;re happy to mail out swag kits (T-shirts and stickers)
+to folks who are willing to help expand our community.&lt;/p&gt;
+&lt;h4&gt;Mac support&lt;/h4&gt;
+&lt;p&gt;Many people have asked for an ETA for Mac support. The short answer is: we
+don&#39;t know. We don&#39;t know because a) we&#39;re terrible at plans and deadlines
+(sorry!) and b) nobody has volunteered to help yet.&lt;/p&gt;
+&lt;p&gt;Unless someone offers to help, Mac work waits until I have time after the 1.0
+for Linux. This means work will &lt;em&gt;begin&lt;/em&gt; in February &lt;em&gt;at the earliest&lt;/em&gt;.&lt;/p&gt;
+&lt;h4&gt;CloudFleet on IndieGoGo&lt;/h4&gt;
+&lt;p&gt;Our friends at &lt;a href=&#34;https://www.cloudfleet.io/&#34;&gt;CloudFleet&lt;/a&gt; are running &lt;a href=&#34;https://www.indiegogo.com/projects/cloudfleet-your-private-encrypted-cloud-at-home&#34;&gt;a
+crowdfunding campaign&lt;/a&gt;
+for their hardware + online services autonomous personal cloud solution.
+&lt;a href=&#34;https://www.indiegogo.com/projects/cloudfleet-your-private-encrypted-cloud-at-home&#34;&gt;Check it out!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We have a vested interest: CloudFleet have been one of the most active
+supporters of Mailpile so far, both contributing cash and code; the
+Apache integration I announced in the last post was to a large degree
+based on their work. CloudFleet are also likely to be the first
+consumer-focused product to bring Mailpile to a general audience. So
+give them your support if you can!&lt;/p&gt;</description>
+    <pubDate>Fri, 01 Jan 2016 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

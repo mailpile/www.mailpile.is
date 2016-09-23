@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS - CHANGE URL when making live
+    ================================================== -->
+    <link rel="stylesheet" href="/css/mailpile.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+    <title>Mailpile: Status Update and PyCon SK report</title>
+
+    <!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
+</head><body>
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
+
+    <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div id="content" class="container">
+        <div id="header" class="clearfix">
+            <div class="col-2 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+<!-- Page content begins -->
+
+    <a href="/blog/2016-03-16_PyCon_SK.html"><h1>Status Update and PyCon SK report</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on March 16, 2016</strong></p>
+
+<p>Apologies for how quiet this blog has been lately; the last couple of
+months I have been very busy with fatherhood, preparing to move countries
+and making sure <a href="https://pagekite.net/">my other job</a> gets done.</p>
+<p>I do expect development on Mailpile to pick up again over the next few
+weeks and this blog will start getting regular updates again as well.
+There will be a lull again in the latter half of April, when my little
+family and I move back to Iceland.</p>
+<h3>Release Candidate Progress</h3>
+<p>During the first few weeks of 2016, quite a lot of progress was made on
+the release. My focus has been to first complete the tasks most likely
+to generate new text in the interface, so that our translation teams
+would have enough time to do their jobs.</p>
+<ul class="square">
+<li>We are now very close to having working Debian packages that comply with
+    offcial Debian policies, thanks to the heroic efforts of Alexandre Viau.
+    This means Mailpile 1.0 should be in Debian-testing almost from day
+    one!</li>
+<li>The most important privacy and security settings are now explained and can
+    be configured by the user. This includes Tor support and expressing
+    preferences on what is encrypted and whether external services like
+    Gravatar are used or not.</li>
+<li>Improvements were made to the Event Log and a network activity viewer
+    was exposed to facilitate troubleshooting.</li>
+<li>Jack Dodds contributed support for parsing stand-alone PGP encrypted and
+    signed attachments.</li>
+<li>Many bugs got fixed.</li>
+</ul>
+
+<p>Some of this work may have slightly circumvented the feature-freeze, but
+these are important enough features that I'm not too fussed about it.</p>
+<p>I think I am almost done with the strings work and aim to declare a
+string freeze this week or next. The next task will then be bug hunting,
+putting the last touches on our Debian package and set up a build-bot to
+autogenerate packages.</p>
+<h3>PyCon SK</h3>
+<p>Last weekend I was happy to attend Slovakia's first PyCon.</p>
+<p>I had been invited to speak about some of the challenges involved in making
+Free Software development a full time job; one of the stories I told was of
+course the story of Mailpile so far. The talk was well received and I had many
+excellent conversations afterwards.</p>
+<p>I was very impressed with how professional the conference was, considering it
+was their first ever PyCon. The organizers should be proud of themselves!</p>
+<p>As usual, I made sure to perform some usability tests, answer questions,
+demonstrate Mailpile and help people set up the app. Our
+<a href="https://github.com/mailpile/Mailpile/wiki/Getting-started-on-linux">getting-started-on-linux</a>
+wiki page now mentions Fedora! And of course I gave away lots of stickers.</p>
+<p>Fixes suggested by the usability tests are already in Github.</p>
+<!-- Page content ends -->
+<!--
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+-->
+            </div>
+        </div>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Resources</h3>
+                <ul class="add-bottom">
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="add-top add-bottom"></div>
+
+
+    </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
+
+</body>
+</html>

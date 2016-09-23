@@ -324,6 +324,78 @@ jQuery(document).ready(function($){
   "date": "2015-08-24", 
   "subject": "Thank you!", 
   "url": "/blog/2015-08-24_Thank_You.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-09-07", 
+  "subject": "Quiet days; new people", 
+  "url": "/blog/2015-09-07_Quiet.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-09-14", 
+  "subject": "Goals and Releases", 
+  "url": "/blog/2015-09-14_Goals_and_Releases.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-09-22", 
+  "subject": "PyCon UK and Mailpile Mel", 
+  "url": "/blog/2015-09-22_pyConUK_and_Mailpile_Mel.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-10-06", 
+  "subject": "Fall FAQs", 
+  "url": "/blog/2015-10-06_Fall_FAQ.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-10-19", 
+  "subject": "UI Updates, OTF news", 
+  "url": "/blog/2015-10-19_Major_UI_Updates.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-12-03", 
+  "subject": "Why so quiet?", 
+  "url": "/blog/2015-12-03_Why_so_Quiet.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2015-12-24", 
+  "subject": "Merry Christmas, Hello 32c3!", 
+  "url": "/blog/2015-12-24_Merry_Christmas.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2016-01-01", 
+  "subject": "Happy Frozen New Year!", 
+  "url": "/blog/2016-01-01_Happy_Frozen_New_Year.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2016-03-16", 
+  "subject": "Status Update and PyCon SK report", 
+  "url": "/blog/2016-03-16_PyCon_SK.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2016-03-24", 
+  "subject": "Python SSL Woes", 
+  "url": "/blog/2016-03-24_Python_SSL_Woes.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2016-04-18", 
+  "subject": "Delegate, Automate, Collaborate, Pirate", 
+  "url": "/blog/2016-04-18_GUI-o-Matic_Automation_GnuPG_Piracy.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2016-09-23", 
+  "subject": "Rebooting the Mailpile Development Process", 
+  "url": "/blog/2016-09-23_Rebooting_Mailpile_Development.html"
 }];
 
   var prev = -1;

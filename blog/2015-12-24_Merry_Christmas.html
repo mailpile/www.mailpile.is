@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS - CHANGE URL when making live
+    ================================================== -->
+    <link rel="stylesheet" href="/css/mailpile.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+    <title>Mailpile: Merry Christmas, Hello 32c3!</title>
+
+    <!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
+</head><body>
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
+
+    <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div id="content" class="container">
+        <div id="header" class="clearfix">
+            <div class="col-2 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+<!-- Page content begins -->
+
+    <a href="/blog/2015-12-24_Merry_Christmas.html"><h1>Merry Christmas, Hello 32c3!</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on December 24, 2015</strong></p>
+
+<p><img src="/files/2015-12-Merry-Xmas.jpg"></p>
+<p>Merry Christmas, Mailpile people!</p>
+<p>And for those of you who don't happen to celebrate Christmas: please
+also have a happy solstice and a happy new year! :-)</p>
+<p>My gift to everyone (aside from this amazing clip-art christmas e-card)
+is that I have now cleared my back-log of pending Mailpile
+user-interface changes and bugfixes. Some of the highlights are
+discussed below. If people want to give me gifts in return, I've listed
+and linked some of the low hanging fruit issues relating to this push...</p>
+<p>Also, please find a short note Mailpile's presence at 32c3 (the Chaos
+Communication Congress in Hamburg) at the end of this post.</p>
+<h2>Revamped message display</h2>
+<p>The way individual messages are displayed has been reworked. Messages
+are now displayed inline in the search results and include details about
+conversation threading.</p>
+<p>The new approach is a little less "elegant" than the old one, from a
+visual point of view, but it has the following benefits which I believe
+more than justify the change:</p>
+<ol>
+<li>Conversation structure is now visible, including forks and subject changes
+   and message snippets (on hover)</li>
+<li>All e-mail addresses of senders and recipients are visible and copy-paste
+   friendly</li>
+<li>Next/Previous buttons are available for navigating between messages</li>
+<li>The context of the message within the search remains visible, so there
+   is no confusion about what Next/Previous means (as it depends on the
+   search)</li>
+<li>It is now possible to tag and untag a message or draft while reading/writing</li>
+<li>HTML works! See below for details.</li>
+<li>Encryption/signature status for headers is now discoverable (on hover),
+   which paves the way for implementing Memory Hole header protection</li>
+<li>Any message within a thread can be easily replied to, not just the last one</li>
+</ol>
+<p><strong>Unfinished work:</strong> The old composer was shoe-horned in, it needs to be
+redesigned to match the new layout (and rewritten to get rid of
+select2).</p>
+<p><strong>Known issues:</strong> <a href="https://github.com/mailpile/Mailpile/issues/1477">messy wrap/overflow in From/To/CC lists</a></p>
+<h2>HTML support</h2>
+<p>Mailpile now has decent support for HTML mail, including the ability to
+load remote images (and warn the user about the risks of doing so) and
+the ability to remember display settings by sender.</p>
+<p><strong>Unfinished work:</strong> Tor support will make loading images over the
+network a bit more privacy preserving. The default style (fonts etc) of
+the HTML frame could use some work.</p>
+<p><strong>Known issues:</strong> <a href="https://github.com/mailpile/Mailpile/issues/1476">inline images (attachments) are not displayed</a></p>
+<h2>Apache integration and admin tool</h2>
+<p>I have created the first draft of a Mailpile administration tool:
+<strong>mailpile-admin.py</strong> (located in <strong>scripts/</strong>).</p>
+<p>The main feature of this tool is the ability to automatically configure
+Apache for multi-user Mailpile hosting, by leveraging <strong>mod_rewrite</strong>
+and <strong>mod_proxy</strong>.  The tool itself then functions as a CGI script which
+takes care of launching Mailpile for users, as long as they type in
+their username and password.</p>
+<p><strong>Unfinished work:</strong> Support for other web servers, such as nginx. More
+useful admin ops; more useful login/mailpile creation options. Support
+for setting the $MAILPILE_PROFILE environment variable, support for
+multiple mailpiles per person.</p>
+<p><strong>Known issues:</strong> <a href="https://github.com/mailpile/Mailpile/issues/1478">rewriting .htaccess is a bad idea</a></p>
+<h2>32c3</h2>
+<p>Sadly, <a href="2015-12-03_Why_so_Quiet.html">due to fatherhood</a> I will be
+unable to attend 32c3 myself this year.</p>
+<p>However, Daniel Yeow has been helping me with various community related
+tasks lately, and he will be there. We are probably going to try and put
+together a small informal hackathon, where we'll give away t-shirts and
+stickers in exchange for feedback and pull requests. If possible I will
+join in using some sort of futuristic robotic telepresence (a.k.a. a
+smartphone on a stick).</p>
+<p>Watch this space (and <a href="https://twitter.com/MailpileTeam">Twitter</a>) for
+updates.</p>
+<p>Happy holidays and happy hacking, everyone!</p>
+<!-- Page content ends -->
+<!--
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+-->
+            </div>
+        </div>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Resources</h3>
+                <ul class="add-bottom">
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="add-top add-bottom"></div>
+
+
+    </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
+
+</body>
+</html>

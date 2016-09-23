@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS - CHANGE URL when making live
+    ================================================== -->
+    <link rel="stylesheet" href="/css/mailpile.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+    <title>Mailpile: PyCon UK and Mailpile Mel</title>
+
+    <!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
+</head><body>
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
+
+    <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div id="content" class="container">
+        <div id="header" class="clearfix">
+            <div class="col-2 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-13">
+<!-- Page content begins -->
+
+    <a href="/blog/2015-09-22_pyConUK_and_Mailpile_Mel.html"><h1>PyCon UK and Mailpile Mel</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on September 22, 2015</strong></p>
+
+<p>For the last four days (Friday-Monday) I have been enjoying the <a href="http://www.pyconuk.org/">UK
+Python Conference</a>, here in Coventry.</p>
+<p>The conference itself was fantastic; big enough to support a wide range
+of topics and activities, small enough to foster a sense of community,
+mature enough to have a code of conduct and recognize the importance of
+diversity, while still retaining an informal, laid-back and friendly
+vibe. The organizers and volunteers should all pat themselves on the
+back!</p>
+<p>I was a little bit too disorganized to propose a proper talk about
+Mailpile in time for the conference deadline, but I made up for it by
+presenting at their Saturday poster session and hosting a Mailpile
+sprint on the Monday.</p>
+<h3>Introducing Mailpile Mel</h3>
+<p>A recurring theme of the usability studies we have done with
+non-technical Mailpile users, has been an element of confusion about
+where Mailpile sits in relation to the rest of the e-mail ecosystem.
+This is understandable, as web-mail, "the cloud" and mobile apps have
+all blurred the lines between local and remote computing. I think these
+days <em>most</em> of us, techies included, are bit confused and uncertain
+about where our data really lives and what that means.</p>
+<p>Since the Mailpile approach to networking and data storage underpins how
+we hope to improve end-user privacy, answering this question is key to
+helping users decide whether Mailpile is right for them or not.</p>
+<p>The PyCon UK poster session was a perfect opportunity to finally do
+something about this; I commissioned drawings which can be used to
+illustrate some of the expected use-cases of Mailpile, where data
+resides and what paths the information follows.</p>
+<p>The main character of these illustrations is a young viking woman named Mel,
+who had her debut on <a href="/files/2015-09-PyConUK-Poster.jpg">the Mailpile PyCon UK
+poster</a>. These illustrations (and more)
+will be re-used over time on the web-site and in the app itself, as Mel
+tells us stories about e-mail privacy and how Mailpile can help.</p>
+<p><a title="Click for full poster" href="/files/2015-09-PyConUK-Poster.jpg">
+  <img src="/files/2015-09-Mailpile-Mel.jpg" border=0>
+</a></p>
+<p>I'd like to thank the talented <a href="http://www.telese.net/">Emilia Telese</a>
+for creating Mailpile Mel.</p>
+<h3>The Monday Sprint</h3>
+<p>On Monday morning I bicycled in the rain to the conference venue,
+arriving a bit soaked and a bit late - just barely on time to pitch the
+Mailpile sprint to a room full of eager Pythonistas.</p>
+<p>By 10am I had a team of 5 volunteers, all eager to give Mailpile a try
+and lend a hand. Since my cardboard box of swag had disintegrated in the
+rain, I kicked off the session by giving each sprinter a Mailpile
+t-shirt and dumping a mountain of stickers in the middle of the table.
+After trying on shirts and getting to know each other a bit, we got to
+work.</p>
+<p>These are the tasks I had proposed for the sprint:</p>
+<ul class="square">
+<li>Check out the code and get it up and running for development
+<li>Identify bugs in our "getting started" documentation
+<li>Impromptu usability tests: your confusion can make Mailpile better!
+<li>Explore the fledgeling Mailpile plug-in API
+</ul>
+
+<p>These are the things that got done:</p>
+<ul class="square">
+<li>The Windows package was tested: it worked
+<li>The OS X package was tested: <b>it failed</b>
+<li>Mailpile on a Raspberry PI was tested: it worked
+<li>A plugin for libravatar (a free Gravatar replacement) was completed
+<li>A plugin for speed-reading of e-mail was prepared
+<li>A script for building Debian packages was written
+<li>Our automated tests were fixed; they had been broken by the release of
+    Coverage 4.0.
+<li>Our getting-started docs were fixed and updated to recommend use of
+    virtualenv
+</ul>
+
+<p>In addition, I collected the following feedback from impromptu usability
+testing and discussions:</p>
+<ul class="square">
+<li>During Account setup: "what password is this?"
+<li>Editing settings during key generation may cause problems
+<li>It is confusing when a new Account does not start downloading mail
+    right away
+<li>When e-mailing oneself as a brand-new user, the encryption policy
+    chooser is overly optimistic about whether to encrypt or not
+<li>The CLI prompt is invisible in some terminals
+<li>On a Raspberry PI, the default of only listening for HTTP requests
+    on localhost is confusing
+<li>We should probably use Python logging instead of rolling our own
+<li>Developers find submodules and capitalized repo names annoying
+</ul>
+
+<p>By my count, we accomplished every task I proposed and then some! It was
+a fantastic session and I learned a lot about how both Mailpile and my
+Python skills could improve. The only disappointment was not getting to
+present our results to the conference; proceedings were cut short by the
+discovery of <a href="http://www.coventrytelegraph.net/news/wwii-bomb-unexploded-device-found-10107192">a one-ton unexploded WWII
+bomb</a>
+next door...</p>
+<p>I would like to thank Ed Singleton, Duncan Sneddon, Matthew Power,
+Padraic Harley and the nice Raspberry PI hacker/web developer whose name
+I neglected to write down (get in touch if you read this!) for their
+awesome contributions and excellent company. I will consider us very
+fortunate indeed if they continue participating in the Mailpile
+community!</p>
+<h2>Plans for this week</h2>
+<ol>
+<li>Fix (some) issues identified in the pyConUK sprint</li>
+<li>Carry on refactoring the Mailpile web interface</li>
+</ol>
+<!-- Page content ends -->
+<!--
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+-->
+            </div>
+        </div>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Resources</h3>
+                <ul class="add-bottom">
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="add-top add-bottom"></div>
+
+
+    </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
+
+</body>
+</html>
