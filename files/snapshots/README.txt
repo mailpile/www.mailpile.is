@@ -1,4 +1,12 @@
 
+
+
+=========================================================================
+SNAPSHOTS ARE TEMPORARILY DISABLED, WHILE WE PREPARE A RELEASE CANDIDATE.
+=========================================================================
+
+
+
 These are automatically built snapshots of Mailpile, based on the latest
 code from github and rebuilt once per hour.
 
