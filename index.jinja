@@ -81,22 +81,26 @@
          </div>
         </div>
         <div class="one-third">
-         <div style="padding: 10px 0; margin: 0;">
+         <div class="status smaller">
           <h5>Vitals:</h5>
           <ul>
-            <li><a href="/download/">Current release</a>: Beta III
-            <li><a href="/blog/2015-04-27_Roadmap_to_v1.html">Next Milestone</a>: 1.0
+            <li><a href="/download/">Current release</a>: <del>Beta III</del>
+            <li><a href="/blog/2015-04-27_Roadmap_to_v1.html">Next Milestone</a>: 1.0rc1
             <li><a href="https://github.com/mailpile/Mailpile/blob/master/COPYING.md">License</a>: AGPLv3
             <li><a href="https://github.com/mailpile/Mailpile">Code</a>: Python, JS, HTML5
           </ul>
-          <h5>From the blog:</h5>
+          <h5>From the blog: <a href="/blog/">more posts</a></h5>
           <ul>
-          {%- for fn in ls('blog', '\.md$')[-6:]|reverse %}
+          {%- for fn in ls('blog', '\.md$')[-4:]|reverse %}
             {% set post = cat('blog/' + fn)|from_rfc822 -%}
             {% set url = fn|replace('.md', '.html') -%}
             <li><a href="/blog/{{url}}">{{ post.date|date('%B %e') }}</a>: {{ post.subject }}</li>
           {%- endfor %}
-            <li><i><a href="/blog/">more posts ...</a></i></li>
+          </ul>
+          <h5>Latest tweet:</h5>
+          {%- set tweets = cat('blog/tweets/tweets.json')|from_json %}
+          <ul>
+            {{ tweets.0.html_tweet|safe }}
           </ul>
          </div>
         </div>

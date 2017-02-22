@@ -11,7 +11,7 @@ import tweepy
 
 # Parameters.
 me = 'MailpileTeam'
-maxtweets = 25
+maxtweets = 20
 homedir = os.path.dirname(__file__)
 tweetjson = os.path.join(homedir, 'tweets.json')
 relativize = 'https://www.mailpile.is'
@@ -82,7 +82,7 @@ try:
   # Write Tweets to STDOUT as Markdown
   data = []
   output = [
-    '# Recent tweets from @%s' % me,
+    '# Twitter',
     '']
   for t in tweets:
     ts = pytz.utc.localize(t.created_at).astimezone(homeTZ)
@@ -99,14 +99,15 @@ try:
       'tweet': txt.replace('\n', '\n '),
       'urls': urlmap,
       'expanded_tweet': et}
-    tweet['markdown_tweet'] = '>' + markdown_urls(et, urlmap).strip().replace('\n', '  \n> ')
+    tweet['markdown_tweet'] = markdown_urls(et, urlmap).strip().replace('\n', '  \n')
     tweet['markdown_tweet'] = ("""\
-[@%(from)s](https://twitter.com/%(from)s) at [%(date)s](%(link)s):
-%(markdown_tweet)s
+%(markdown_tweet)s  
+*[@%(from)s](https://twitter.com/%(from)s), [%(date)s](%(link)s)*  
 """) % tweet
-    tweet['html_tweet'] = markdown.markdown(tweet['markdown_tweet'])
+    tweet['html_tweet'] = ('<div class="tweet">%s</div>\n'
+      % markdown.markdown(tweet['markdown_tweet']))
     data.append(tweet)
-    output.append(tweet['markdown_tweet'])
+    output.append(tweet['html_tweet'])
 
   # Write tweets out to the JSON file.
   json.dump(data, open(tweetjson, 'wb'), indent=2)

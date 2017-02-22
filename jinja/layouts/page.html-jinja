@@ -92,10 +92,9 @@
         <hr class="blog-hr">
         <div class="row"></div>
 {%- endblock %}
-
         <!-- Content -->
         <div id="pages" class="clearfix">
-            <div class="col-13">
+            <div class="col-11">
 {%- endif %}
 <!-- Page content begins -->
 {% block content %}{% endblock %}
@@ -105,6 +104,8 @@
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
 -->
             </div>
+            <div class="col-1"></div>
+            <div class="col-4">{%- block page_sidebar %}{% endblock %}</div>
         </div>
   {%- if page and page.type == 'blog' %}
         <div class='blog-nav'>

@@ -140,18 +140,18 @@ Actually, it should also be mentioned that as nice as it is to have all these de
 Speaking of order, consider this handling of the passphrase descriptor -- a special descriptor for accepting a passphrase sent by the user as part of a wrapper-mediated communication (because nobody ever uses pipes like that on the command line), from GnuPG's `gpg.c`:
 
 <pre class="add-bottom">
-	...
+    ...
     if( pwfd != -1 )  /* Read the passphrase now. */
-    read_passphrase_from_fd( pwfd );
-	...
+      read_passphrase_from_fd( pwfd );
+    ...
     switch (cmd)
       {
       case aPrimegen:
       case aPrintMD:
-      ...
+    ...
 </pre>
 
-The interesting thing (aside from the annoying and dangerous lack of indentation on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase *must* be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before *anything* else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG's internal state, which would be absolutely insane, even if it weren't version dependent. 
+The interesting thing (aside from the annoying and dangerous lack of <del>indentation</del> braces on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase *must* be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before *anything* else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG's internal state, which would be absolutely insane, even if it weren't version dependent. 
 
 This behaviour is not obvious, or particularly reasonable, let alone documented. Figuring this out took a long time. 
 
@@ -228,6 +228,8 @@ Software is hard. Security software is harder. Werner is doing great at managing
 post](/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html).
 
 **Update II:** Note that the GnuPG project is somewhat stuck between a rock and a hard place with respect to the interface of the gpg tool; because other tools rely on GnuPG, many of these interfaces cannot easily be fixed without breaking other things. The official recommendation from the authors of GnuPG, is for developers to use the GPGME library. GPGME is itself a wrapper around gpg that glosses over or works around many of these problems. If it works for you, you should probably use it.
+
+**Update III:** Replaced the word "indentation" with "braces", because it was wrong.
 
 
  [1]: http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html

@@ -1430,7 +1430,6 @@ img.scale-with-grid {
 ================================================== */
 a,
 a:visited {
-  font-size: 16px;
   color: #be1c21;
   font-weight: bold;
   text-decoration: none;
@@ -3184,4 +3183,37 @@ li.state-closed span.summary:before {
   font-weight: bold;
   content: "Completed: ";
 }
-
+.smaller p {
+  font-size: 90%;
+}
+div.tweet {
+  max-width: 30em;
+  font-size: 0.9em;
+}
+a.morelink,
+.tweet em,
+.tweet em a {
+  color: #999;
+  font-weight: normal;
+}
+.tweet em:before {
+  padding-left: 0.5em;
+  content: "- ";
+}
+.tweets .tweet em {
+  font-size: 0.8em;
+}
+div.status {
+  padding: 10px;
+  margin: 0;
+}
+div.status ul {
+  margin: 20px
+}
+div.status h5 a {
+  float: right;
+  font-size: 0.5em;
+  color: #999;
+  font-weight: normal; 
+  font-style: italic;
+}
