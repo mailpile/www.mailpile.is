@@ -81,399 +81,450 @@
         </div>
         <hr class="blog-hr">
         <div class="row"></div>
-
         <!-- Content -->
         <div id="pages" class="clearfix">
-            <div class="col-13">
+            <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="2016-09-23_Rebooting_Mailpile_Development.html"><h1>Rebooting the Mailpile Development Process</h1></a>
+    <a href="2017-01-30_A_Plan_for_2017.html"><h1>A Plan for 2017</h1></a>
     <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
-               on September 23, 2016</strong></p>
-    <p>Hello again!</p>
-<p>As warned about in our last blog post, development has been on hiatus
-for the last few months as I moved to (and from) Iceland, bought and
-sold a house and helped the Icelandic Pirate Party prepare for the
-up-coming parliamentary elections. It was frankly, an exhausting summer
-and I was sad not to have any time for Mailpile.</p>
-<p>But it's the summer is well and truly over, and I'm back. Mailpile is
-again one of my top priorities.</p>
-<p>I've warmed up by responding to a few issues
-<a href="https://github.com/mailpile/Mailpile">on Github</a>,
-fixing a couple of simple bugs and reconnecting with people on
-the #mailpile IRC channel on Freenode.</p>
-<p>Taking a break is almost always healthy for a project, as it makes
-room for new insights and perspective.</p>
-<p>I'm still in the process of "rebooting" the development effort, but I've
-already decided to make at least one change - I will take advantage of
-<a href="https://help.github.com/articles/reviewing-changes-in-pull-requests/">Github's new code-review
-tools</a>
-to get community members to review my own work. This should improve the
-code quality in Mailpile, while helping spread knowledge and
-understanding of the code to a wider group of people - over time
-improving the project's
-"<a href="https://en.wikipedia.org/wiki/Bus_factor">bus factor</a>". A long-time
-contributor, Jocelyn Delande, has volunteered to be my first reviewer,
-and hopefully more people will pitch in over time.</p>
-<p>More soon. It's good to be back!</p>
+               on January 30, 2017</strong></p>
+    <p>Happy Belated New Year!</p>
+<p>Thank you for your ongoing support and encouragement in 2016. Although there
+was no "big news" from Mailpile in 2016, development continued and I was happy
+to see a whole bunch of new contributors submitting patches, reporting bugs
+and chatting with us on IRC. It's wonderful to have a community.</p>
+<p>As any reader of this blog knows, my track record when it comes to predictions
+and planning, is absolutely abysmal. I'm sorry.</p>
+<p>However, I still want 2017 to be the year Mailpile hits 1.0. The project will
+be 4 years old this summer and we <em>need</em> to make a release. Here is how I hope
+to accomplish that:</p>
+<ol>
+<li>
+<p>Over the next few months, I will (with help from the community) chip
+      away at <a href="https://github.com/mailpile/Mailpile/milestone/4">the list of 1.0-blocking
+      issues</a>.</p>
+</li>
+<li>
+<p>Once (most of) the blocking issues are resolved, a <em>release candidate</em>
+      will be tagged, packaged and made conveniently (apt-get install ...)
+      available for Debian and Ubuntu Linux users.</p>
+</li>
+<li>
+<p>At this point, I will use some of the remaining Mailpile funds to
+      hire specialized help to work on the Mac OS X and Windows integration
+      and packaging efforts. With a couple of exceptions, I have been
+      self-funding my Mailpile work since the beginning of 2015, so in spite
+      of our failures to raise grant money, we do still have some cash in the
+      bank (and our bitcoin wallets).</p>
+</li>
+<li>
+<p>Once a release candidate has been published, we will ask our community
+      of international translators to finish their work and try and get some
+      "QA" work done to ensure the translations are accurate.</p>
+</li>
+<li>
+<p>At this point, we will also encourage other Linux distributions to
+      contribute build recipes so we can build packages for them as well.</p>
+</li>
+<li>
+<p>Feedback from early Linux adoptors will be used to squash bugs, polish
+      the code and clean up the translations, eventually leading to a 1.0
+      release. Whether the 1.0 release will be simultaneous for all three
+      platforms is undecided.</p>
+</li>
+</ol>
+<p>I think all, or most, of these things can happen within the next 11 months.</p>
+<p>Especially with your help...</p>
   <hr>
-    <a href="2016-04-18_GUI-o-Matic_Automation_GnuPG_Piracy.html"><h1>Delegate, Automate, Collaborate, Pirate</h1></a>
+    <a href="2016-12-13_Too_Cool_for_PGP.html"><h1>Too Cool for PGP</h1></a>
     <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
-               on April 18, 2016</strong></p>
-    <p>Avast! Be welcome to this latest irregular Mailpile status update!</p>
-<p>In this episode, I will discuss:</p>
-<ol>
-<li>A Strategic Spin-Off Project</li>
-<li>Deletion and Tag Automation</li>
-<li>GnuPG Collaboration</li>
-<li>Piracy in Iceland</li>
-</ol>
-<p>Progress towards a release has been very slow. This is entirely due to
-me being busy with other work - things that pay the bills, looking
-after my lovely baby daughter, buying an apartment and moving to
-Iceland. I'm swamped!</p>
-<p>As I am often exhausted and pressed for time, I have had a hard time
-sticking to anything resembling a schedule and have basically indulged
-any vaguely productive impulses, rather than worry about roadmaps.</p>
-<p>So if this doesn't look like progress towards a release, you're probably
-right. I've been very distracted. But it's progress all the same!</p>
-<h2>A Strategic Spin-Off Project</h2>
-<p>As mentioned before, Mailpile's desktop integration on Mac OS X and
-Windows is currently unacceptable and needs a lot of work.</p>
-<p>We do have some code, however, and <a href="https://github.com/mailpile/Mailpile/issues/1514">a rough
-design</a>. In order to
-encourage people to help out (and maximize the utility of the code
-we've already written), I spun off the existing GUI code into a separate
-project: <a href="https://github.com/mailpile/gui-o-matic">GUI-o-Matic</a>.</p>
-<p>This should both lower the barrier to entry and encourage contributions;
-You no longer need to check out all of Mailpile to hack on the
-GUI-o-Matic. And because it's a stand-alone utility, it's more likely
-that other projects will want to make use of it. We hope!</p>
-<p>If you've ever wanted an easy way to add a cross-platform desktop
-graphical user-interface to your code (not just Python!), take a look:
-<a href="https://github.com/mailpile/gui-o-matic">GUI-o-Matic</a> is a bit like
-"<a href="https://www.linuxjournal.com/article/2807">dialog</a>" for modern desktop
-environments.</p>
-<p>Old farts will understand.</p>
-<h2>Deletion and Tag Automation</h2>
-<p>Did you know the current incarnation of Mailpile cannot actually delete
-e-mail?  It's true. This was actually a deliberate, conservative choice
-to avoid losing valuable data during development. It was never meant to
-be permanent, but temporary hacks do tend to outstay their welcome...</p>
-<p>In the context of shipping 1.0... well, a mail client isn't really a
-mail client if it cannot delete mail, is it? More pressingly, a tool
-which aims to safeguard user privacy has to support the most basic
-privacy feature of all: deleting unwanted data.</p>
-<p>So I decided to (yet again) break the feature freeze and implement
-message deletion.</p>
-<p>This had a knock-on effect. Mailpile's deletion strategy was supposed
-to be similar to that of other webmail: once things have sat in the
-Trash for a while, they get deleted automatically. Similarly, messages
-should automatically move from Spam to Trash after a while and blank
-drafts should get purged and deleted.</p>
-<p>So Mailpile needed a way to a) detect messages had been untouched for a
-period of time and b) a way to trigger actions once a) was satisfied for
-a message carrying a particular tag.</p>
-<p>So now Mailpile has exactly that!</p>
-<p>The search-engine is used to keep a record of when a message tags were
-last modified, and each tag now has an automation section which
-specifies a number of days and an action to perform. A few times a day,
-Mailpile will search for idle messages in tags with automation enabled
-and either retag or delete the matching messages.</p>
-<p>While I was implementing the configuration interface for this, I also
-added an option to enable statistical auto-tagging for any tag, as
-described in <a href="2014-01-12_A_Plan_For_Spam.html">A Plan for Spam ... and
-Bacon!</a>, and exposed a few more of the
-technical tag settings in the Tag settings editor. All features that
-already existed, but weren't really accessible.</p>
-<p>So there we go, tags now have automation and you don't need any
-command-line black magic to create your own statistical tagging or
-time-based workflows.</p>
-<p>These capability are now available to all tags, including user-created
-ones. Some of the potential use-cases include:</p>
-<ol>
-<li>Deleting Trash after a while</li>
-<li>Moving Spam to Trash</li>
-<li>Moving untouched blank drafts to Trash</li>
-<li>Creating statistical categories for promotions or paperwork</li>
-<li>Creating a "Postponed" tag which hides mail from view for a few days</li>
-</ol>
-<p>Now we just need an auto-responder and Mailpile will be able to
-automatically recognize and reply to tech support requests that have
-been unanswered for more than a week...</p>
-<p>(In the process I also fixed bugs in the bayesian auto-trainer, the
-periodic scheduler that triggers it and the tag editing tools the UI -
-proper release work after all!)</p>
-<h2>GnuPG Collaboration</h2>
-<p>I write this, sitting on a train back home from London.</p>
-<p>I was in London today to meet with Neal of <a href="https://www.gnupg.org/">the GnuPG
-project</a>. We discussed how the projects could
-collaborate more closely in the future and some of the
-<a href="2015-02-26_Revisiting_the_GnuPG_discussion.html">difficulties</a> Mailpile
-has had integrating with GnuPG.</p>
-<p>It was an excellent meeting and I'm optimistic that once GnuPG 2.1 (or
-2.2) becomes widespread, Mailpile will be able to make full use of it
-without any horrible hacks.</p>
-<p>Conversations will continue!</p>
-<h2>Piracy in Iceland</h2>
-<p>Finally, some bad news.</p>
-<p><a href="http://grapevine.is/mag/column-opinion/2016/04/10/600-silver-lions-how-iceland-was-betrayed-again/">Iceland's government is
-broken</a>
-and I feel an obligation to help fix it. I will be dedicating some time
-this summer to helping <a href="http://www.piratar.is/">the local Pirate Party</a>
-prepare for our next elections. Mostly I'll be working behind the scenes
-on internal party tools, but this inevitably means I will continue being
-distracted from Mailpile work. But don't worry, I'm <em>not</em> running for a
-seat in parliament. ;-)</p>
-<p>If you can help out in some way to help pick up the slack, please get
-in touch on #mailpile on Freenode.</p>
-<p>That's it for now, thanks for reading.</p>
-<p>Time to pack some boxes and move to Iceland!</p>
+               on 12 December, 2016</strong></p>
+    <p>Some kids are just too cool for school.</p>
+<p>And some security experts are too cool for OpenPGP.</p>
+<p>It's almost become a rite of passage for security folks: work in the
+trenches, build a reputation, climb the ivory tower, write a
+<a href="https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/">detailed</a>
+<a href="https://moxie.org/blog/gpg-and-me/">epiphany</a> about
+<a href="http://secushare.org/PGP">why</a> you've
+<a href="https://blog.filippo.io/giving-up-on-long-term-pgp/">given up on PGP</a>.
+Suggest we all <a href="https://www.lawfareblog.com/iphones-fbi-and-going-dark">buy an iPhone</a>
+and use Signal, start giving people phone numbers instead of e-mail
+addresses...</p>
+<p>Wait, what?</p>
+<p>Please take a moment to go ask any young woman if she thinks giving random
+strangers her phone number will improve her security. I'll wait.</p>
+<p>...</p>
+<p>Of course, the experts are right about many things. OpenPGP is <em>old</em> and
+more recent tools with more modern designs have a lot going for them. But
+I still think they're mostly wrong.</p>
+<p>The experts, by and large, have yet to offer any credible replacements for
+PGP. And when they suggest abandoning PGP, what they're really saying is we
+should give up on secure e-mail and just use something else. That doesn't
+fly. Many people <em>have to use e-mail</em>. E-mail is <em>everywhere</em>. Not improving
+the security of e-mail and instead expecting people to just use other tools
+(or go without), is the security elite proclaiming from their ivory tower:
+"<a href="https://en.wikipedia.org/wiki/Let_them_eat_cake">Let them eat cake!</a>"</p>
+<p>Furthermore, if that "something else" also requires people use their phone
+number for everything... well, that's the messaging world's equivalent of
+the widely despised <a href="https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy">Facebook Real Name
+Policy</a>.
+If you ever needed a clear example of why the lack of diversity (and
+empathy) in tech is a problem, there it is!</p>
+<p>Compartmentalization, presenting different identities in different contexts,
+is a fundamental, necessary part of human behaviour. It's one of the basics.
+If you think taking that away and offering fancy crypto, forward secrecy,
+deniability instead is a win... well, I think your threat models need some
+work! You have failed and people will just keep on using insecure e-mail for
+their accounting, their work, their hobbies, their doctor visits and their
+interaction with local government. Because people know their needs better
+than you do.</p>
+<p>But I digress.</p>
+<p>The ridiculous phone number thing aside, I also take issue with the fact
+that when our opinionated experts do suggest replacements, the things they
+recommend are proprietary, centralized and controlled by for-profit
+companies. Some of them (mostly the underdogs) may be open source, but even
+<a href="https://whispersystems.org/blog/the-ecosystem-is-moving/">the best of those use a centralized design and are hostile to
+federation</a>. In
+pursuit of security and convenience (and, let's be honest, control, power
+and money), openness has been hung out to dry.</p>
+<p>This is short-sighted at best.</p>
+<p>These cool new apps may be secure today. But what about tomorrow? Odds
+are, they will be <a href="https://www.wired.com/2007/11/encrypted-e-mai/">compromised</a> by
+<a href="http://www.theregister.co.uk/2016/11/30/investigatory_powers_act_backdoors/">government mandate</a>,
+<a href="https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook">blocked</a>
+or <a href="https://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email">shut down</a>.
+Or just dead because messaging is a cut-throat business and the money
+runs out. Anyone remember ICQ? MSN? GChat? Sprinkling these new messaging
+apps in security pixie dust doesn't make them qualified to replace e-mail.</p>
+<p>But what if I'm wrong? What if one of these businesses succeeds, e-mail dies
+and all our comms become dependent on proprietary protocols mediated by
+for-profit monopolies? Is that a problem?</p>
+<p>Here, <a href="https://lmgtfy.com/?q=why+are+monopolies+bad">let me google that for you</a>. </p>
+<p>I really hope it doesn't happen.</p>
+<h2>Interlude</h2>
+<p>Please, if you are at risk, if you have powerful adversaries, follow the
+advice of the cool kids. The experts are absolutely right when they say PGP
+is too confusing and messy <em>today</em> for most people to use safely. It takes
+training, practice and diligence.</p>
+<p>So sure, get an iPhone if you can afford it. Use Signal or iMessage. Use
+Tor, <a href="https://www.hackerfactor.com/blog/index.php?/archives/721-TOR-and-Trust.html">carefully</a>.
+For e-mail, create as many GMail accounts as you need to blend in with the
+crowd and not draw attention to yourself; their security team is the best in
+the world, let them protect you! Enable two-factor auth, use HTTPS.</p>
+<p>But most importantly; if you can avoid digitizing incriminating
+information, <em>do that</em>. <a href="https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis">Rubber hose cryptanalysis is
+real</a> and it's
+much easier to avoid creating data in the first place, than it is to
+keep it secure after the fact.</p>
+<h2>Mental Models and Deniability</h2>
+<p>A rule of thumb for creating usable software, is <em>don't make me think</em>.</p>
+<p>What this means in practice, is software should match the mental models of
+its users as closely as possible. If it doesn't, users will inevitably make
+mistakes. If your tool is a security tool, those mistakes may compromise
+their security.</p>
+<p>PGP in e-mail has failed this on many fronts. The lack of protection for
+message headers (the subject line) is one, as is pretty much anything to do
+with encryption keys (too much math). But it's not all bad! OpenPGP gets
+other things right, and actually <em>corrects</em> some of the things insecure
+e-mail gets wrong.</p>
+<p>One of the most vexing things about e-mail, is people actually think e-mail
+is <em>already secure</em>. They just assume e-mail is like regular mail, in an
+opaque envelope that will prevent tampering and keep postal workers from
+reading it. Encryption and signatures bring e-mail closer to user
+expectations, which means if we can get it working smoothly, users won't
+have to think as much to make good security choices.</p>
+<p>One thing people <em>don't</em> expect from e-mail, is deniability. Deniability
+means after a message has been delivered, it can no longer be strongly
+linked to the sender. It's like an anti-signature... which most sane people
+would consider a horrible misfeature in any communication system. Explicitly
+designing a system so people can disavow their statements and go back on
+their word? What is this, a system for assholes??</p>
+<p>And yet, all the cool kids in the security world seem to want exactly that.
+They keep bringing up the lack of deniability (and forward secrecy) in PGP
+as if it were some sort of fatal flaw.</p>
+<p>Why? Are security people all assholes? I don't <em>think</em> that's it.</p>
+<p>I think they're quite enamoured with the elegant math, and really, really
+pissed off with certain Three Letter Agencies. There is good reason to
+believe major governments plan to, or already have been <a href="https://www.wired.com/2012/03/ff_nsadatacenter/">recording all our
+encrypted communications</a>
+in the hope of being able to decrypt them later. Forward secrecy
+(deniability's more attractive twin sister) prevents that sort of thing. But
+OpenPGP doesn't need to provide forward secrecy to thwart mass surveillance.
+If we just use TLS (with the right ciphers) for SMTP, IMAP and web-mail then
+that does the job just fine.</p>
+<p>So I agree forward secrecy in transit is a good thing. Let's do that!</p>
+<p>Let's put our mail in secure envelopes, and let's <em>also</em> drive it from place to
+place in nice, secure vehicles. Users don't expect the cops to routinely stop
+the mailman and photocopy all the mail, so let's make sure that doesn't happen
+to e-mail either. Let the mental models be our guide.</p>
+<p>But we don't need or want deniability. Deniability for individual messages
+is, quite simply, a horrible misfeature to be avoided. People already assume
+e-mail is <strong>on the record</strong>; trying to change that means going against their
+mental models and setting them up for failure in new and exciting ways. The
+fact that OpenPGP wasn't designed to empower assholes is a feature, not a
+bug.</p>
+<p><em>(Yes, there are other arguments for forward secrecy and deniability. They
+are in my oh-so-humble opinion, mostly bunk. And this post is already too
+long...)</em></p>
+<h2>Making Progress</h2>
+<p>Anyway, like it or not, e-mail is important.</p>
+<p>E-mail is the most successful open messaging standard we've got and OpenPGP
+is the best tech we have to secure our mail. OpenPGP may be dated and a bit
+clunky, but <em><a href="http://www.theverge.com/2014/12/28/7458159/encryption-standards-the-nsa-cant-crack-pgp-tor-otr-snowden">it's a hell of a lot better than
+nothing</a></em>.</p>
+<p>Folks like myself, implementors who are not cryptographers, have long been
+admonished to not invent our own crypto. Over and over again, we are told to
+use tried and tested solutions. OpenPGP is that. It may have baggage, it may
+not be perfect, but it is mature and it solves certain problems. Most of the
+flaws can be avoided and worked around. If the security community really wants
+us to use something else, you're going to have to step up and provide something
+a bit more tangible than rants on the Internet.</p>
+<p>OpenPGP is also not standing still, OpenPGP is still developing. The
+community is well aware that the technology is flawed and needs work. An
+<a href="https://tools.ietf.org/html/draft-ietf-openpgp-rfc4880bis-00">update to the standard is in the works</a>
+and there are multiple projects working on improving both the
+<a href="http://modernpgp.org/memoryhole/">security</a> and
+<a href="https://inbome.readthedocs.io/">usability</a> side of things.</p>
+<p><a href="/">Mailpile</a> is one such project, but we're in good company:
+<a href="https://pep.foundation/">PEP</a>,
+<a href="https://leap.se/">LEAP</a>,
+<a href="https://www.openkeychain.org/">OpenKeychain for Android</a>,
+<a href="https://www.mailvelope.com/">Mailvelope</a>, and more.
+Even <a href="https://github.com/google/end-to-end">Google</a> and
+<a href="https://github.com/yahoo/end-to-end">Yahoo</a> are developing solutions
+based on OpenPGP. There's actually quite a lot going on!</p>
+<p>As an industry, we should be
+<a href="https://gnupg.org/donate/">supporting these efforts</a>, not writing
+and promoting self indulgent posts on how we've given up and moved on.</p>
+<p>Oh, and stay in school kids! It's worth it!</p>
   <hr>
-    <a href="2016-03-24_Python_SSL_Woes.html"><h1>Python SSL Woes</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
-               on March 24, 2016</strong></p>
-    <p>There's not much to say about progress this week; things have been slow,
-but most of my hacking time has been spent getting frustrated by SSL and
-Python.</p>
-<p>So following in our Grand Tradition of biting the hand that feeds us and
-publicly complaining about libraries and tools we rely upon, I am going to
-write a few words about the state of SSL/TLS support in Python.</p>
-<p>This rant was (sort of) requested by Christian, one of the maintainers
-of the Python SSL module. Hi Christian, thanks for all your hard work! ;-)</p>
-<h3>Why We Care</h3>
-<p>SSL (or TLS) is the technology used to secure how Mailpile communicates with
-online mail servers, and is also used when downloading data from the web,
-whether for key discovery or things like user avatars and icons.</p>
-<p>The e-mail world is a bit different from the web, in that the use of encryption
-is somewhat less mature. Self-signed certificates for mail servers are more
-common than on the web and use of encryption for e-mail in transit tends to be
-more opportunistic, so the "standard" SSL key management strategies employed by
-web-servers and web-browsers don't really apply.</p>
-<p>The current iteration of the Mailpile code-base doesn't validate SSL
-certificate at all when connecting to SMTP or IMAP servers; this means any
-motivated attacker can easily perform a man-in-the-middle attack to listen
-in on, or modify, sent or downloaded e-mail.</p>
-<p>Fixing this requires validating the server certificates somehow; for those
-that have a certificate issued by one of the known certificate authorities,
-this is largely the same process as on the web. However, a large number of
-e-mail servers use self-signed certificates, particularly within the
-enthusiast community which is a significant part of the people we expect
-to adopt Mailpile. So we need to handle those certificates gracefully as
-well.</p>
-<p>While working on this, I yet again encountered limitations and bugs in
-Python's standard ssl code.</p>
-<h3>Issue 1: Python 2.6, 2.7.3, ...</h3>
-<p>It is incredibly frustrating that Python 2.7.9 was the first release of
-Python that had semi-functional SSL support in the standard library.
-Previous versions were almost completely insecure and did not expose the
-API hooks required to improve the situation.</p>
-<p>Since I'm pretty sure nobody in the Python community has a time machine,
-there's not much the Python community can do about this.  All we can do
-is thank the people that are working to fix things today - and get those
-fixes used!</p>
-<p>On that note: distributions that are shipping Python 2.7 but refuse to
-issue a security fix to upgrade to the latest point release are
-<strong>failing to protect their users</strong>. At least back-port the affected
-modules, for crying out loud!</p>
-<h3>Angry Tweeting</h3>
-<p>In a moment of drama, I tweeted the following:</p>
-<blockquote>
-<p>The more I use Python's ssl module, the more obvious it is that
-nobody ever used it for anything serious. Even the 2.7/3.x code
-just fails.</p>
-</blockquote>
-<p>Those are fighting words and I'm sorry if they offended anyone.
-Christian responded with a very level-headed request for details, which
-in turn prompted this post.</p>
-<p>The frustration I expressed there, was to a large degree related to
-Issue 1 above, but the comment on 2.7 and 3.x needs explaining. I'll
-talk about the big picture first, with critiques of individual methods
-further down.</p>
-<p>This should by no means be considered an exhaustive review of the Python
-ssl module; but I hope at least some of my suggestions are actionable
-and constructive.</p>
-<p>One caveat: I haven't checked the Python 2.7.11 code, this critique is
-based on reading the sources from 2.7.10 as installed by my distro's
-package manager. Some of these issues may have been fixed, which would
-bring me back to Issue 1.</p>
-<h3>Issue 2: import ssl, poplib, smtplib, imaplib</h3>
-<p>I am going to charitably assume that the ssl backport in 2.7.9 took care
-to preserve compatibility and that is why imaplib, poplib and smtplib
-(all used by Mailpile) still make insecure SSLv3 connections.</p>
-<p>Unless I am reading the code completely wrong, the more secure new
-"default SSL contexts" are not actually used (see below for more
-details). This is fixed in Python 3.x.</p>
-<p>Fair enough, backwards compatibility is important! When forced to choose
-between fixing a security hole and suddenly breaking apps that used to
-work, it's not obvious that security should always come first.</p>
-<p>Unless this was a mistake?</p>
-<p>Either way, the backported ssl module provides <strong>no mechanism for
-changing this behaviour</strong>, short of monkey-patching. That seems like a
-pretty serious oversight, and one easily corrected with a global module
-variable or two.</p>
-<p>More generally, the ssl module would benefit greatly from an API that
-would allow an app to specify default behaviours and callbacks or hooks
-for "interesting events"; allow more control and more introspection
-without forcing all the other libraries to complicate their APIs.</p>
-<h3>Issue 3: Certificate Management</h3>
-<p>An e-mail client needs to be able to manage SSL certificates, including
-self-signed ones.</p>
-<p>Showing my ignorance here, I couldn't figure out how to do this with the
-Python ssl module until I got some helpful replies to my angry tweet.
-Even then, the APIs I will need to work with if I stick with the
-standard python ssl module are very awkward.</p>
-<p>I think it would be time very well spent to improve both the
-documentation and the APIs (see below) for this use-case.</p>
-<p>Googling for Python ssl examples will in the vast majority of cases show
-people disabling certificate verification entirely.  Surely that is not
-what we want people to do!  The official API documentation is the most
-effective place to combat these bad examples.</p>
-<h3>Issues 4..N</h3>
-<p>These are random warts in the ssl API. Some major, some minor.</p>
-<h4>pydoc ssl</h4>
-<p>A typo: the method "fetch_server_certificate" does not exist.</p>
-<h4>ssl.get_server_certificate</h4>
-<p>If asked to validate, this method may throw an exception instead
-of returning the certificate. This is unhelpful.</p>
-<p>The data returned by this method is a binary blob; the library
-does not provide any utilities for decoding the contents.</p>
-<h4>ssl.SSLError</h4>
-<p>This exception is raised when a certificate fails to validate.
-However, it doesn't tell you anything about the certificate
-itself.</p>
-<p>Including the certificate as an attribute of the exception would
-allow for more nuanced and meaningful error handling.</p>
-<p>Details as to why the validation failed would be nice too.</p>
-<h4>ssl.SSLSocket.getpeercert</h4>
-<p>As far as I can tell, this is the only method provided which
-parses an SSL certificate, making any certificate handling code
-reliant on the network. This is bad, but isn't the only problem
-here.</p>
-<p>Aside from crypto geeks, few consumers of this API are likely to
-care about the details of a validated certificate. It's trusted,
-let's get on with things! It's the certificate that fails to
-validate that you need to know more about, so you can tell the
-user something useful.</p>
-<p>Unfortunately, this method completely refuses to return
-structured information about a certificate unless it has been
-validated first. And of course, if validation is enabled then an
-exception will be thrown before this method can be called.</p>
-<p>It appears the workaround is to first use
-<code>ssl.get_server_certificate</code> and then provide the certificate as
-CA to <code>ssl.SSLContext</code> or <code>ssl.wrap_socket</code>, so <code>getpeercert</code>
-will return actual information.</p>
-<p>This is both non-obvious and quite convoluted.</p>
-<p>This method should always return structured data when requested,
-but backwards compatibility concerns will probably preclude that.
-:-(</p>
-<p>Either way, an standalone method that just parses certificates
-would be very nice to have.</p>
-<h4>ssl.create_default_context</h4>
-<p>This method confused me.</p>
-<p>At first I thought this method would be used by various Python libraries
-that support the SSL protocol... and wanted to figure out how to
-customize the output of this so my app would have control over how SSL
-was done.</p>
-<p>Turns out I was completely wrong on all counts.</p>
-<p>I read the ssl library source and found that the stdlib modules are
-expected to use the undocumented variable <code>_create_stdlib_context</code> which
-maps to the undocumented method named <code>_create_unverified_context</code>.
-Except for http.client, which should use <code>_create_default_https_context</code>
-which maps to <code>ssl.create_default_context</code> after all...</p>
-<p>Feeling somewhat confused, I read the Python 2.7.10 sources for imaplib,
-smtplib and poplib. Turns out none of them use SSL contexts at all! They
-all just call <code>ssl.wrap_socket</code>, which in turn uses none of the above
-methods...</p>
-<p>Argh. Okay. :-(</p>
-<p>It looks like those comments were just back-ported from 3.x, without the
-libraries themselves getting updated. It's confusing, but the main
-take-away is that the backport appears to have failed to secure any of
-the standard libraries except for httplib (and ftplib).</p>
-<p>I raise this issue to illustrate how hard it is for an app developer to
-truly understand <em>how</em> SSL/TLS is being used within their app, let alone
-have control over it. It's frustrating, to say the least.</p>
-<p>My original wish, to be able to control the default context returned by
-this method, would be a great feature request if this method were
-actually used! It's not. However, I think the feature request still
-makes sense - it's just more work!</p>
-<h3>What is Mailpile Doing About it?</h3>
-<p>We are:</p>
-<ol>
-<li>Talking to the Python devs (complaining)</li>
-<li>Planning to publish a TOFU-for-TLS module</li>
-<li>Planning to publish our monkey-patching magic</li>
-</ol>
-<p>Step 1 is pretty much done; I submitted an early draft of this blog post
-to the current maintainers of the Python ssl module. In spite of the
-fact that it contained an extended and distracting rant about the SSL
-community in general (which I in the end decided not to post), they
-responded well to the technical points and gave constructive feedback.</p>
-<p>The main take-away was that apps like Mailpile, that need control over
-how SSL connections are made and want to implement non-standard
-(non-web) certificate verification models, are not well served by the
-standard Python modules. So we'll be using pyOpenSSL instead and
-patching or subclassing the protocol libraries.</p>
-<p>The TOFU code and policy management logic will be released separately
-from Mailpile and under a liberal license, so the community can benefit
-or point and laugh, whichever seems more appropriate. I don't know
-whether this will happen before or after 1.0.</p>
-<p>Stay tuned. :-)</p>
-  <hr>
-    <a href="2016-03-16_PyCon_SK.html"><h1>Status Update and PyCon SK report</h1></a>
+    <a href="2016-11-23_Protecting_Your_Local_Data.html"><h1>Protecting Your Local Data</h1></a>
     <p><strong>Posted by <a href="#">Bjarni</a>
-               on March 16, 2016</strong></p>
-    <p>Apologies for how quiet this blog has been lately; the last couple of
-months I have been very busy with fatherhood, preparing to move countries
-and making sure <a href="https://pagekite.net/">my other job</a> gets done.</p>
-<p>I do expect development on Mailpile to pick up again over the next few
-weeks and this blog will start getting regular updates again as well.
-There will be a lull again in the latter half of April, when my little
-family and I move back to Iceland.</p>
-<h3>Release Candidate Progress</h3>
-<p>During the first few weeks of 2016, quite a lot of progress was made on
-the release. My focus has been to first complete the tasks most likely
-to generate new text in the interface, so that our translation teams
-would have enough time to do their jobs.</p>
-<ul class="square">
-<li>We are now very close to having working Debian packages that comply with
-    offcial Debian policies, thanks to the heroic efforts of Alexandre Viau.
-    This means Mailpile 1.0 should be in Debian-testing almost from day
-    one!</li>
-<li>The most important privacy and security settings are now explained and can
-    be configured by the user. This includes Tor support and expressing
-    preferences on what is encrypted and whether external services like
-    Gravatar are used or not.</li>
-<li>Improvements were made to the Event Log and a network activity viewer
-    was exposed to facilitate troubleshooting.</li>
-<li>Jack Dodds contributed support for parsing stand-alone PGP encrypted and
-    signed attachments.</li>
-<li>Many bugs got fixed.</li>
-</ul>
-
-<p>Some of this work may have slightly circumvented the feature-freeze, but
-these are important enough features that I'm not too fussed about it.</p>
-<p>I think I am almost done with the strings work and aim to declare a
-string freeze this week or next. The next task will then be bug hunting,
-putting the last touches on our Debian package and set up a build-bot to
-autogenerate packages.</p>
-<h3>PyCon SK</h3>
-<p>Last weekend I was happy to attend Slovakia's first PyCon.</p>
-<p>I had been invited to speak about some of the challenges involved in making
-Free Software development a full time job; one of the stories I told was of
-course the story of Mailpile so far. The talk was well received and I had many
-excellent conversations afterwards.</p>
-<p>I was very impressed with how professional the conference was, considering it
-was their first ever PyCon. The organizers should be proud of themselves!</p>
-<p>As usual, I made sure to perform some usability tests, answer questions,
-demonstrate Mailpile and help people set up the app. Our
-<a href="https://github.com/mailpile/Mailpile/wiki/Getting-started-on-linux">getting-started-on-linux</a>
-wiki page now mentions Fedora! And of course I gave away lots of stickers.</p>
-<p>Fixes suggested by the usability tests are already in Github.</p>
+               on November 23, 2016</strong></p>
+    <p>Everyone understands physical security.</p>
+<p>Starting in play-school, we learn that if we don't want the other kids
+to play with our favourite toys, then steps must be taken. Hopefully
+most of us also learned to share and play nice, but that's another
+matter...</p>
+<p>Keeping physical objects safe is such a basic skill that it requires no
+explanation. We all know the importance of keeping our wallets or our
+phones safe, our jewellry, our keys. We may not do a great job all the
+time, some of us are absent minded and maybe we live in a safe place and
+don't worry too much - but we all understand the concept.</p>
+<p>One of Mailpile's main goals is to bring this kind of intuitive security
+to our digital lives, to e-mail. If a physical device in your possession
+stores your mail, then you already know the basics of keeping your
+e-mail secure, private and safe.</p>
+<p>So far, so good!</p>
+<p>But what happens when things go wrong? What happens when your Mailpile
+machine gets lost or stolen? Or dropped on the floor?</p>
+<h3>The Risks</h3>
+<p>When something goes wrong with your Mailpile device, there are two bad
+things that are likely to happen:</p>
+<ol>
+<li>You lose access to your Mailpile data</li>
+<li>Someone who shouldn't gains access to your Mailpile data</li>
+</ol>
+<p>The first case is more common; it can happen when a machine gets lost,
+gets stolen, gets damaged in fire or flood, or malfunctions of its own
+accord. Given enough time, it's almost inevitable.</p>
+<p>The second case is much less common, but when it happens the
+consequences can be dire. If your e-mail contains very sensitive
+material (confidential documents, nude photos, incriminating evidence)
+your job, your relationships or even your life may be at risk.</p>
+<p>So those are the problems. How about some solutions?</p>
+<h3>Avoiding Data Loss: Backups</h3>
+<p>Protecting you from losing access to your Mailpile is conceptually
+simple. You just need backups. That's all.</p>
+<p>Famous last words...</p>
+<p>Making backups available and easy is actually quite hard, because it is
+ultimately a physical problem. The data needs to be copied to another
+device that won't be lost or damaged by the calamity that made you need
+backups in the first place.</p>
+<p>Any local physical solution ultimately relies on user education and user
+action; which means our less skilled or more absent-minded users will
+not end up with working backups. This is unacceptable.</p>
+<p>A much better solution would be to use the network, automatically store
+Mailpile users' backups somewhere else. But where? If Mailpile were to
+directly provide an online backup solution, that would make us stewards
+of your data (a role we would like avoid) and would also cost us a bunch
+of money to do properly - money which the project simply does not have.</p>
+<p>We also need to take care that the backups themselves don't become a
+security risk - we don't want to create a backup solution that
+accidentally grants unauthorized parties access to your mail!</p>
+<p>Our current strategy is simple: we want to encrypt all your data and
+then upload it right back to one of the IMAP servers you already have
+access to.</p>
+<p>Simple right? A mere matter of programming (this will take some time).</p>
+<h3>Avoiding Data Loss part II: Keys, Keys, Keys</h3>
+<p>We have a plan for backups! But what about the encryption keys?</p>
+<p>If those are lost, all is lost.</p>
+<p>If those are stolen, all is stolen.</p>
+<p>Currently, Mailpile requires users log in to their Mailpile with a
+password (or passphrase). Internally, this passphrase unlocks a file
+encrypted using GnuPG, a file which contains the actual encryption key
+used for everything else.</p>
+<p>If we trust GnuPG's security (which we do), it should be perfectly fine
+to store this along with all the other data. Right?</p>
+<p>Unfortunately, no. The problem is, our users may not choose strong
+passwords. No matter how much we try to educate, some will end up using
+the same password for their Mailpile as they used for the IMAP server
+we're uploading the backups to. Since the operator of the IMAP server
+can access that password with relative ease, that would leave the
+backups exposed.</p>
+<p>So this part of the plan requires more thought; the current strategy we
+are leaning towards, is to create an unguessable "recovery key", made up
+of 9-12 dictionary words. This recovery key will be used to encrypt the
+keys to the kingdom, before they too are uploaded to the cloud.</p>
+<p>Once backups are enabled, the app will do the following:</p>
+<ol>
+<li>Ask the user to print out or write down the recovery key, and keep
+      it safe.</li>
+<li>Ask the user to nominate a few trusted friends or family members,
+      and e-mail each of them a part of the recovery key.</li>
+</ol>
+<p>The first option is for people who don't have any friends. The second
+option is for everyone else!</p>
+<p>When a user needs to restore their Mailpile from backups, they will
+either fetch the printout from the shoebox under the bed (or from the
+bank vault), or they will contact their friends asking for help. Either
+way, it's a relatively simple procedure.</p>
+<p>We think... <a href="https://github.com/mailpile/Mailpile/issues/1691">your feedback is most welcome</a>!</p>
+<p>There are of course lots of little details; the length of the recovery
+key, the number of trusted friends who receive key details versus the
+number of friends required to respond for successful recovery, the
+wording of the key fragment e-mails. And so on! But I think the basic
+idea is sound and the implementation should be able to adapt to the
+needs of both casual users and users with strong security requirements.</p>
+<p>Incidentally, this procedure can also serve as a decentralized "password
+reset" feature for people who forget their Mailpile password. They just
+have to remember who their trusted friends were...</p>
+<h3>Keeping Your Data Private</h3>
+<p>The final piece of this puzzle, is keeping data private.</p>
+<p>This is also conceptually simple: we encrypt everything!</p>
+<p>Considering that strong cryptography is available "off the shelf" from
+multiple mature libraries these days, our job is to choose one of the
+industry-standard algorithms from one of the standard libraries, and
+make use of it.</p>
+<p>The main constraints are performance and reliability. We would like the
+encryption to not slow things down <em>too much</em>, and we would like the
+encryption to not increase the odds of data loss.</p>
+<p>Given those two constraints, our current preference is to use <a href="https://en.wikipedia.org/wiki/Cipher_block_chaining#Counter_.28CTR.29">AES in
+CTR (Counter) mode</a>,
+with a SHA256-based MAC to detect data corruption and/or tampering.</p>
+<p>Since CTR mode localizes any damage (unlike AES-CBC which we were
+mistakenly using before), it can be argued that the encryption doesn't
+reduce reliability. Of course in practice this will depend on the what
+the app does when corruption is detected and how easy (and safe) it is
+to recover - but as long as the data is mostly intact, our recovery
+strategies can evolve and improve over time.</p>
+<p>An alternative mode, GCM (Galois Counter Mode) would also be a good
+candidate, but it's currently not as widely available as CTR mode. We
+may switch to it in the future.</p>
+<p>Another item for the long-term wishlist is use of <a href="https://en.wikipedia.org/wiki/Error_detection_and_correction">error correction
+codes</a> to
+automatically recover from minor corruption; potentially making Mailpile
+Encrypted Storage <em>more</em> resiliant than normal unencrypted files.</p>
+<h3>Current State</h3>
+<p>This is all well and good. But we're not there yet!</p>
+<p>Here is a summary of the current state of things in Mailpile and what we
+expect for version 1.0:</p>
+<ol>
+<li>
+<p>Automated backups are not implemented yet and probably will not be
+   ready by version 1.0. We have however laid the groundwork by defining
+   an on-disk storage format which can be easily uploaded to IMAP servers
+   (since the format looks like e-mail).</p>
+</li>
+<li>
+<p>Key backups are not implemented, but are a goal for 1.0 due to their
+   importance and the extreme risk of data loss if they are compromised.
+   <a href="https://github.com/mailpile/Mailpile/issues/1691">Join the discussion here</a>.</p>
+</li>
+<li>
+<p>Local data encryption is implemented. We are in <a href="https://github.com/mailpile/Mailpile/pull/1684">the process of
+   switching encryption algorithms to AES-CTR</a>.</p>
+</li>
+</ol>
+<p>Thanks for reading!</p>
+  <hr>
+    <a href="2016-10-26_Search_as_a_Core_Feature.html"><h1>Search as a Core Feature</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
+               on October 26, 2016</strong></p>
+    <p>One of the main differences between Mailpile and most other Free
+Software e-mail clients has to do with the approach we take to handling
+e-mail.</p>
+<p>The first generation of e-mail clients focused on the e-mail itself and
+provided mailboxes or folders as places to store it. Organizing your
+e-mail meant moving it around, from one mailbox to another. This is how
+most desktop e-mail clients work today.</p>
+<p>Mailpile's approach is different. Inspired by GMail, we decided to make
+search the central metaphor. Organizing mail in Mailpile then became a
+matter of labeling messages in such ways that they could easily be
+searched for; this is how Mailpile's tags work.</p>
+<p>Tags are much more flexible and powerful than mailboxes; once the search
+engine has indexed all your mail it no longer matters in which mailbox
+or folder the mail is stored since you can access and organize any
+combination of messages using a mixture of tags and search terms.
+Searching a well designed index is actually faster (both for the human
+and the computer) than finding and opening the right mailbox.</p>
+<p>So Mailpile is a search engine first and foremost. Most of the other
+features it has are built on top of that foundation.</p>
+<h2>What About Mailboxes?</h2>
+<p>This is all well and good.</p>
+<p>But the fact remains that sometimes we need to open a mailbox and look inside;
+after all, that is where the mail is!</p>
+<p>Mailpile has struggled with this from the beginning. Being built around
+a single search engine meant Mailpile couldn't really do much with the
+contents of a mailbox until it had all been processed and added to the
+search index.</p>
+<p>This led to usability problems. If Mailpile was given a large number of
+mailboxes to process it could take quite some time before it got to the
+one the user was interested in. If the background indexing process had
+a problem, mail would just never appear. Users coming from traditional
+mail clients had expectations which Mailpile could not meet. And last
+but not least, it made troubleshooting very difficult because there were
+so many layers of code, each introducing potential bugs or delays, that
+an e-mail had to travel through before it appeared (or failed to appear)
+in the user interface.</p>
+<p>Sometimes you just want to open up a mailbox and look inside, without
+having to add all the mail to your Mailpile.</p>
+<h2>Embracing Search</h2>
+<p>The solution I have found to this problem wasn't to stop treating
+search as a core feature. It was to embrace it and take it a step
+further: who says there should <em>only be one way to search</em>?</p>
+<p>Many IMAP servers offer search features. We should be able to make use
+of them. Similarly, searching a raw mailbox is relatively
+straightforward - it may not be elegant or as fast as Mailpile's native
+index, but running "grep" or the equivalent very often gives useful
+results. It turns out there are many ways to search mailboxes that
+haven't been fully processed and added to the main Mailpile index.</p>
+<p>So Mailpile now internally supports <strong>multiple search indexes</strong>. At the
+moment it only searches one at a time, and some search indexes are not
+very good at searching yet... but the code is elegant and clean, works
+well and has interesting potential for the future.</p>
+<p>Maybe someday we'll have hybrid search, which searches both remote IMAP
+servers and the local index. Maybe someday we'll be able to pull in
+results from notmuch or some alternate index.</p>
+<p>But for now, at least this approach makes it easy and quick for Mailpile
+to look inside raw mailboxes. That alone clears a major roadblock out of
+the way for a 1.0 release.</p>
+<p>I am still mulling over how best to expose this in the user interface.
+At the very least, it will be the default behaviour when accessing
+mailboxes from the browsing tool. I may also make it accessible via the
+per-mailbox tags in the sidebar; doing so is likely to match user
+expectations better than using Mailpile's internal index. But I'm not
+entirely sure.</p>
+<p>I'll be pushing this up for review once I've finished a few more test.</p>
   <hr>
 
   <h3>Older stuff</h3>
   <ul>
+    <li><a href="2016-09-23_Rebooting_Mailpile_Development.html">Rebooting the Mailpile Development Process</a></li>
+    <li><a href="2016-04-18_GUI-o-Matic_Automation_GnuPG_Piracy.html">Delegate, Automate, Collaborate, Pirate</a></li>
+    <li><a href="2016-03-24_Python_SSL_Woes.html">Python SSL Woes</a></li>
+    <li><a href="2016-03-16_PyCon_SK.html">Status Update and PyCon SK report</a></li>
     <li><a href="2016-01-01_Happy_Frozen_New_Year.html">Happy Frozen New Year!</a></li>
     <li><a href="2015-12-24_Merry_Christmas.html">Merry Christmas, Hello 32c3!</a></li>
     <li><a href="2015-12-03_Why_so_Quiet.html">Why so quiet?</a></li>
@@ -544,6 +595,45 @@ wiki page now mentions Fedora! And of course I gave away lots of stickers.</p>
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
 -->
             </div>
+            <div class="col-1"></div>
+            <div class="col-4">
+  <div class="tweets">
+    <h4>Some Tweets</h4>
+        <div class="tweet"><p>Should we start tweeting links to Mailpile issues our community could help us fix? Or would that be spammy? What do you think?<br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/834430336973012992">Wed, 22 Feb 2017 15:51</a></em>  </p></div>
+
+        <div class="tweet"><p>Mailpile 1.0 will implement Memory Hole, a standard for encrypting or signing e-mail headers. See thread:<br />
+<a href="https://twitter.com/HerraBRE/status/831636607543427072">twitter.com/HerraBRE...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/831847117538938882">Wed, 15 Feb 2017 12:46</a></em>  </p></div>
+
+        <div class="tweet"><p>Many of the things Mailpile will do to protect your privacy depend on Tor. Support them if you can!<br />
+<a href="https://twitter.com/torproject/status/805883327551012867">twitter.com/torproject...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/805884148556697600">Mon, 05 Dec 2016 21:18</a></em>  </p></div>
+
+        <div class="tweet"><p>Our goal: Make Mailpile good enough enough to be mentioned in guides like this. We'll get there eventually!<br />
+<a href="https://twitter.com/arstechnica/status/804296749343010816">twitter.com/arstechnica...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/804378030131003392">Thu, 01 Dec 2016 17:34</a></em>  </p></div>
+
+        <div class="tweet"><p>Nice to see folks are hard at work preparing cool products based on Mailpile, even though we're not at 1.0 yet.<br />
+<a href="https://twitter.com/Own_Mailbox/status/802834860100423680">twitter.com/Own_Mailbox...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/803293129713467392">Mon, 28 Nov 2016 17:43</a></em>  </p></div>
+
+        <div class="tweet"><p>Things may have been quiet lately, but our monthly contributor count is growing! It's great to have a community.<br />
+<a href="https://github.com/mailpile/Mailpile/pulse/monthly">github.com/mailpile...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/799684098729988096">Fri, 18 Nov 2016 18:42</a></em>  </p></div>
+
+        <div class="tweet"><p>Developing a secure e-mail client isn't without risks... ;-)<br />
+<a href="https://twitter.com/HerraBRE/status/798090594413375488">twitter.com/HerraBRE...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/798983734976479232">Wed, 16 Nov 2016 20:19</a></em>  </p></div>
+
+        <div class="tweet"><p>We don't tweet as much as we should. But there are other ways to check out pulse. For example this one: <a href="https://github.com/mailpile/Mailpile/pulse">https://github.com/mailpile/Mailpile/pulse</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/793157591996260352">Mon, 31 Oct 2016 18:28</a></em>  </p></div>
+
+        <div class="tweet"><p>Check out the @cloudfleetio fund-raising campaign! A very promising effort to bring Mailpile to the public: <a href="https://www.indiegogo.com/projects/cloudfleet-your-private-encrypted-cloud-at-home#/">www.indiegogo.com/projects...</a><br />
+<em><a href="https://twitter.com/MailpileTeam">@MailpileTeam</a>, <a href="https://twitter.com/MailpileTeam/status/681870729542025216">Tue, 29 Dec 2015 16:13</a></em>  </p></div>
+
+  </div>
+</div>
         </div>
         <hr>
         <!-- Contact & Media -->

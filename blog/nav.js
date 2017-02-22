@@ -396,6 +396,30 @@ jQuery(document).ready(function($){
   "date": "2016-09-23", 
   "subject": "Rebooting the Mailpile Development Process", 
   "url": "/blog/2016-09-23_Rebooting_Mailpile_Development.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2016-10-26", 
+  "subject": "Search as a Core Feature", 
+  "url": "/blog/2016-10-26_Search_as_a_Core_Feature.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2016-11-23", 
+  "subject": "Protecting Your Local Data", 
+  "url": "/blog/2016-11-23_Protecting_Your_Local_Data.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2016-12-12", 
+  "subject": "Too Cool for PGP", 
+  "url": "/blog/2016-12-13_Too_Cool_for_PGP.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2017-01-30", 
+  "subject": "A Plan for 2017", 
+  "url": "/blog/2017-01-30_A_Plan_for_2017.html"
 }];
 
   var prev = -1;

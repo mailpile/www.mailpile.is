@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS - CHANGE URL when making live
+    ================================================== -->
+    <link rel="stylesheet" href="/css/mailpile.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+    <title>Mailpile: Too Cool for PGP</title>
+
+    <!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
+</head><body>
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
+
+    <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div id="content" class="container">
+        <div id="header" class="clearfix">
+            <div class="col-2 text-center">
+                <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
+            </div>
+            <div class="col-12">
+                <a href="/"><h2><strong>mail</strong>pile : blog</h2></a>
+<!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
+            </div>
+        </div>
+        <hr class="blog-hr">
+        <div class="row"></div>
+        <!-- Content -->
+        <div id="pages" class="clearfix">
+            <div class="col-11">
+<!-- Page content begins -->
+
+    <a href="/blog/2016-12-13_Too_Cool_for_PGP.html"><h1>Too Cool for PGP</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni Rúnar</a> on December 12, 2016</strong></p>
+
+<p>Some kids are just too cool for school.</p>
+<p>And some security experts are too cool for OpenPGP.</p>
+<p>It's almost become a rite of passage for security folks: work in the
+trenches, build a reputation, climb the ivory tower, write a
+<a href="https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/">detailed</a>
+<a href="https://moxie.org/blog/gpg-and-me/">epiphany</a> about
+<a href="http://secushare.org/PGP">why</a> you've
+<a href="https://blog.filippo.io/giving-up-on-long-term-pgp/">given up on PGP</a>.
+Suggest we all <a href="https://www.lawfareblog.com/iphones-fbi-and-going-dark">buy an iPhone</a>
+and use Signal, start giving people phone numbers instead of e-mail
+addresses...</p>
+<p>Wait, what?</p>
+<p>Please take a moment to go ask any young woman if she thinks giving random
+strangers her phone number will improve her security. I'll wait.</p>
+<p>...</p>
+<p>Of course, the experts are right about many things. OpenPGP is <em>old</em> and
+more recent tools with more modern designs have a lot going for them. But
+I still think they're mostly wrong.</p>
+<p>The experts, by and large, have yet to offer any credible replacements for
+PGP. And when they suggest abandoning PGP, what they're really saying is we
+should give up on secure e-mail and just use something else. That doesn't
+fly. Many people <em>have to use e-mail</em>. E-mail is <em>everywhere</em>. Not improving
+the security of e-mail and instead expecting people to just use other tools
+(or go without), is the security elite proclaiming from their ivory tower:
+"<a href="https://en.wikipedia.org/wiki/Let_them_eat_cake">Let them eat cake!</a>"</p>
+<p>Furthermore, if that "something else" also requires people use their phone
+number for everything... well, that's the messaging world's equivalent of
+the widely despised <a href="https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy">Facebook Real Name
+Policy</a>.
+If you ever needed a clear example of why the lack of diversity (and
+empathy) in tech is a problem, there it is!</p>
+<p>Compartmentalization, presenting different identities in different contexts,
+is a fundamental, necessary part of human behaviour. It's one of the basics.
+If you think taking that away and offering fancy crypto, forward secrecy,
+deniability instead is a win... well, I think your threat models need some
+work! You have failed and people will just keep on using insecure e-mail for
+their accounting, their work, their hobbies, their doctor visits and their
+interaction with local government. Because people know their needs better
+than you do.</p>
+<p>But I digress.</p>
+<p>The ridiculous phone number thing aside, I also take issue with the fact
+that when our opinionated experts do suggest replacements, the things they
+recommend are proprietary, centralized and controlled by for-profit
+companies. Some of them (mostly the underdogs) may be open source, but even
+<a href="https://whispersystems.org/blog/the-ecosystem-is-moving/">the best of those use a centralized design and are hostile to
+federation</a>. In
+pursuit of security and convenience (and, let's be honest, control, power
+and money), openness has been hung out to dry.</p>
+<p>This is short-sighted at best.</p>
+<p>These cool new apps may be secure today. But what about tomorrow? Odds
+are, they will be <a href="https://www.wired.com/2007/11/encrypted-e-mai/">compromised</a> by
+<a href="http://www.theregister.co.uk/2016/11/30/investigatory_powers_act_backdoors/">government mandate</a>,
+<a href="https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook">blocked</a>
+or <a href="https://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email">shut down</a>.
+Or just dead because messaging is a cut-throat business and the money
+runs out. Anyone remember ICQ? MSN? GChat? Sprinkling these new messaging
+apps in security pixie dust doesn't make them qualified to replace e-mail.</p>
+<p>But what if I'm wrong? What if one of these businesses succeeds, e-mail dies
+and all our comms become dependent on proprietary protocols mediated by
+for-profit monopolies? Is that a problem?</p>
+<p>Here, <a href="https://lmgtfy.com/?q=why+are+monopolies+bad">let me google that for you</a>. </p>
+<p>I really hope it doesn't happen.</p>
+<h2>Interlude</h2>
+<p>Please, if you are at risk, if you have powerful adversaries, follow the
+advice of the cool kids. The experts are absolutely right when they say PGP
+is too confusing and messy <em>today</em> for most people to use safely. It takes
+training, practice and diligence.</p>
+<p>So sure, get an iPhone if you can afford it. Use Signal or iMessage. Use
+Tor, <a href="https://www.hackerfactor.com/blog/index.php?/archives/721-TOR-and-Trust.html">carefully</a>.
+For e-mail, create as many GMail accounts as you need to blend in with the
+crowd and not draw attention to yourself; their security team is the best in
+the world, let them protect you! Enable two-factor auth, use HTTPS.</p>
+<p>But most importantly; if you can avoid digitizing incriminating
+information, <em>do that</em>. <a href="https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis">Rubber hose cryptanalysis is
+real</a> and it's
+much easier to avoid creating data in the first place, than it is to
+keep it secure after the fact.</p>
+<h2>Mental Models and Deniability</h2>
+<p>A rule of thumb for creating usable software, is <em>don't make me think</em>.</p>
+<p>What this means in practice, is software should match the mental models of
+its users as closely as possible. If it doesn't, users will inevitably make
+mistakes. If your tool is a security tool, those mistakes may compromise
+their security.</p>
+<p>PGP in e-mail has failed this on many fronts. The lack of protection for
+message headers (the subject line) is one, as is pretty much anything to do
+with encryption keys (too much math). But it's not all bad! OpenPGP gets
+other things right, and actually <em>corrects</em> some of the things insecure
+e-mail gets wrong.</p>
+<p>One of the most vexing things about e-mail, is people actually think e-mail
+is <em>already secure</em>. They just assume e-mail is like regular mail, in an
+opaque envelope that will prevent tampering and keep postal workers from
+reading it. Encryption and signatures bring e-mail closer to user
+expectations, which means if we can get it working smoothly, users won't
+have to think as much to make good security choices.</p>
+<p>One thing people <em>don't</em> expect from e-mail, is deniability. Deniability
+means after a message has been delivered, it can no longer be strongly
+linked to the sender. It's like an anti-signature... which most sane people
+would consider a horrible misfeature in any communication system. Explicitly
+designing a system so people can disavow their statements and go back on
+their word? What is this, a system for assholes??</p>
+<p>And yet, all the cool kids in the security world seem to want exactly that.
+They keep bringing up the lack of deniability (and forward secrecy) in PGP
+as if it were some sort of fatal flaw.</p>
+<p>Why? Are security people all assholes? I don't <em>think</em> that's it.</p>
+<p>I think they're quite enamoured with the elegant math, and really, really
+pissed off with certain Three Letter Agencies. There is good reason to
+believe major governments plan to, or already have been <a href="https://www.wired.com/2012/03/ff_nsadatacenter/">recording all our
+encrypted communications</a>
+in the hope of being able to decrypt them later. Forward secrecy
+(deniability's more attractive twin sister) prevents that sort of thing. But
+OpenPGP doesn't need to provide forward secrecy to thwart mass surveillance.
+If we just use TLS (with the right ciphers) for SMTP, IMAP and web-mail then
+that does the job just fine.</p>
+<p>So I agree forward secrecy in transit is a good thing. Let's do that!</p>
+<p>Let's put our mail in secure envelopes, and let's <em>also</em> drive it from place to
+place in nice, secure vehicles. Users don't expect the cops to routinely stop
+the mailman and photocopy all the mail, so let's make sure that doesn't happen
+to e-mail either. Let the mental models be our guide.</p>
+<p>But we don't need or want deniability. Deniability for individual messages
+is, quite simply, a horrible misfeature to be avoided. People already assume
+e-mail is <strong>on the record</strong>; trying to change that means going against their
+mental models and setting them up for failure in new and exciting ways. The
+fact that OpenPGP wasn't designed to empower assholes is a feature, not a
+bug.</p>
+<p><em>(Yes, there are other arguments for forward secrecy and deniability. They
+are in my oh-so-humble opinion, mostly bunk. And this post is already too
+long...)</em></p>
+<h2>Making Progress</h2>
+<p>Anyway, like it or not, e-mail is important.</p>
+<p>E-mail is the most successful open messaging standard we've got and OpenPGP
+is the best tech we have to secure our mail. OpenPGP may be dated and a bit
+clunky, but <em><a href="http://www.theverge.com/2014/12/28/7458159/encryption-standards-the-nsa-cant-crack-pgp-tor-otr-snowden">it's a hell of a lot better than
+nothing</a></em>.</p>
+<p>Folks like myself, implementors who are not cryptographers, have long been
+admonished to not invent our own crypto. Over and over again, we are told to
+use tried and tested solutions. OpenPGP is that. It may have baggage, it may
+not be perfect, but it is mature and it solves certain problems. Most of the
+flaws can be avoided and worked around. If the security community really wants
+us to use something else, you're going to have to step up and provide something
+a bit more tangible than rants on the Internet.</p>
+<p>OpenPGP is also not standing still, OpenPGP is still developing. The
+community is well aware that the technology is flawed and needs work. An
+<a href="https://tools.ietf.org/html/draft-ietf-openpgp-rfc4880bis-00">update to the standard is in the works</a>
+and there are multiple projects working on improving both the
+<a href="http://modernpgp.org/memoryhole/">security</a> and
+<a href="https://inbome.readthedocs.io/">usability</a> side of things.</p>
+<p><a href="/">Mailpile</a> is one such project, but we're in good company:
+<a href="https://pep.foundation/">PEP</a>,
+<a href="https://leap.se/">LEAP</a>,
+<a href="https://www.openkeychain.org/">OpenKeychain for Android</a>,
+<a href="https://www.mailvelope.com/">Mailvelope</a>, and more.
+Even <a href="https://github.com/google/end-to-end">Google</a> and
+<a href="https://github.com/yahoo/end-to-end">Yahoo</a> are developing solutions
+based on OpenPGP. There's actually quite a lot going on!</p>
+<p>As an industry, we should be
+<a href="https://gnupg.org/donate/">supporting these efforts</a>, not writing
+and promoting self indulgent posts on how we've given up and moved on.</p>
+<p>Oh, and stay in school kids! It's worth it!</p>
+<!-- Page content ends -->
+<!--
+                <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
+-->
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Resources</h3>
+                <ul class="add-bottom">
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="add-top add-bottom"></div>
+
+
+    </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
+
+</body>
+</html>

@@ -83,10 +83,9 @@
         </div>
         <hr class="blog-hr">
         <div class="row"></div>
-
         <!-- Content -->
         <div id="pages" class="clearfix">
-            <div class="col-13">
+            <div class="col-11">
 <!-- Page content begins -->
 
     <a href="/blog/2014-10-07_Some_Thoughts_on_GnuPG.html"><h1>Some thoughts on working with GnuPG</h1></a>
@@ -195,16 +194,16 @@ $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA
 <pre class="add-bottom">
     ...
     if( pwfd != -1 )  /* Read the passphrase now. */
-    read_passphrase_from_fd( pwfd );
+      read_passphrase_from_fd( pwfd );
     ...
     switch (cmd)
       {
       case aPrimegen:
       case aPrintMD:
-      ...
+    ...
 </pre>
 
-<p>The interesting thing (aside from the annoying and dangerous lack of indentation on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase <em>must</em> be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before <em>anything</em> else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG's internal state, which would be absolutely insane, even if it weren't version dependent. </p>
+<p>The interesting thing (aside from the annoying and dangerous lack of <del>indentation</del> braces on that if statement) is the way in which the passphrase is read from the password descriptor before the commands are managed. Which is to say, the passphrase <em>must</em> be sent, and, due to the way read_passphrase_from_fd is written, that descriptor closed on the sending end, before <em>anything</em> else happens. Which means that you need to know at the time of execution of the GnuPG binary that you need to send a passphrase, if you are going to do so programatically. This gives you three options: a) Send it every single time (requires storing the passphrase on the calling side, typically in insecure memory), b) Be willing to execute the same command twice, capturing potential errors on the first try and figuring out that they are due to a lack of passphrase -- something the error message will not always be clear about, or c) keep track of the entirety of GnuPG's internal state, which would be absolutely insane, even if it weren't version dependent. </p>
 <p>This behaviour is not obvious, or particularly reasonable, let alone documented. Figuring this out took a long time. </p>
 <p>If you've seen Mailpile's Windows and MacOS releases, you'll have noticed that we are shipping slightly old versions of GnuPG. The reason for this is that we figured out pretty late that the passphrase-fd is not the correct way to do things and has been disabled in more recent versions of GnuPG in favour of expanded use of things that implement the gpg-agent mechanism. So Mailpile should be a gpg-agent. </p>
 <p>(It is notable that several distributions still have GnuPG 1.4 as the default instead of GnuPG 2.x...)</p>
@@ -249,11 +248,14 @@ $ gpg --gen-key --name Smári McCarthy --email smari@mailpile.is --algorithm RSA
 <p><strong>Update:</strong> <a href="/blog/2015-02-26_Revisiting_the_GnuPG_discussion.html">We have written a follow-up
 post</a>.</p>
 <p><strong>Update II:</strong> Note that the GnuPG project is somewhat stuck between a rock and a hard place with respect to the interface of the gpg tool; because other tools rely on GnuPG, many of these interfaces cannot easily be fixed without breaking other things. The official recommendation from the authors of GnuPG, is for developers to use the GPGME library. GPGME is itself a wrapper around gpg that glosses over or works around many of these problems. If it works for you, you should probably use it.</p>
+<p><strong>Update III:</strong> Replaced the word "indentation" with "braces", because it was wrong.</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
 -->
             </div>
+            <div class="col-1"></div>
+            <div class="col-4"></div>
         </div>
         <div class='blog-nav'>
           <hr class='above'>

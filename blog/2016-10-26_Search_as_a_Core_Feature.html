@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Delegate, Automate, Collaborate, Pirate</title>
+    <title>Mailpile: Search as a Core Feature</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -88,118 +88,74 @@
             <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="/blog/2016-04-18_GUI-o-Matic_Automation_GnuPG_Piracy.html"><h1>Delegate, Automate, Collaborate, Pirate</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni Rúnar</a> on April 18, 2016</strong></p>
+    <a href="/blog/2016-10-26_Search_as_a_Core_Feature.html"><h1>Search as a Core Feature</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni Rúnar</a> on October 26, 2016</strong></p>
 
-<p>Avast! Be welcome to this latest irregular Mailpile status update!</p>
-<p>In this episode, I will discuss:</p>
-<ol>
-<li>A Strategic Spin-Off Project</li>
-<li>Deletion and Tag Automation</li>
-<li>GnuPG Collaboration</li>
-<li>Piracy in Iceland</li>
-</ol>
-<p>Progress towards a release has been very slow. This is entirely due to
-me being busy with other work - things that pay the bills, looking
-after my lovely baby daughter, buying an apartment and moving to
-Iceland. I'm swamped!</p>
-<p>As I am often exhausted and pressed for time, I have had a hard time
-sticking to anything resembling a schedule and have basically indulged
-any vaguely productive impulses, rather than worry about roadmaps.</p>
-<p>So if this doesn't look like progress towards a release, you're probably
-right. I've been very distracted. But it's progress all the same!</p>
-<h2>A Strategic Spin-Off Project</h2>
-<p>As mentioned before, Mailpile's desktop integration on Mac OS X and
-Windows is currently unacceptable and needs a lot of work.</p>
-<p>We do have some code, however, and <a href="https://github.com/mailpile/Mailpile/issues/1514">a rough
-design</a>. In order to
-encourage people to help out (and maximize the utility of the code
-we've already written), I spun off the existing GUI code into a separate
-project: <a href="https://github.com/mailpile/gui-o-matic">GUI-o-Matic</a>.</p>
-<p>This should both lower the barrier to entry and encourage contributions;
-You no longer need to check out all of Mailpile to hack on the
-GUI-o-Matic. And because it's a stand-alone utility, it's more likely
-that other projects will want to make use of it. We hope!</p>
-<p>If you've ever wanted an easy way to add a cross-platform desktop
-graphical user-interface to your code (not just Python!), take a look:
-<a href="https://github.com/mailpile/gui-o-matic">GUI-o-Matic</a> is a bit like
-"<a href="https://www.linuxjournal.com/article/2807">dialog</a>" for modern desktop
-environments.</p>
-<p>Old farts will understand.</p>
-<h2>Deletion and Tag Automation</h2>
-<p>Did you know the current incarnation of Mailpile cannot actually delete
-e-mail?  It's true. This was actually a deliberate, conservative choice
-to avoid losing valuable data during development. It was never meant to
-be permanent, but temporary hacks do tend to outstay their welcome...</p>
-<p>In the context of shipping 1.0... well, a mail client isn't really a
-mail client if it cannot delete mail, is it? More pressingly, a tool
-which aims to safeguard user privacy has to support the most basic
-privacy feature of all: deleting unwanted data.</p>
-<p>So I decided to (yet again) break the feature freeze and implement
-message deletion.</p>
-<p>This had a knock-on effect. Mailpile's deletion strategy was supposed
-to be similar to that of other webmail: once things have sat in the
-Trash for a while, they get deleted automatically. Similarly, messages
-should automatically move from Spam to Trash after a while and blank
-drafts should get purged and deleted.</p>
-<p>So Mailpile needed a way to a) detect messages had been untouched for a
-period of time and b) a way to trigger actions once a) was satisfied for
-a message carrying a particular tag.</p>
-<p>So now Mailpile has exactly that!</p>
-<p>The search-engine is used to keep a record of when a message tags were
-last modified, and each tag now has an automation section which
-specifies a number of days and an action to perform. A few times a day,
-Mailpile will search for idle messages in tags with automation enabled
-and either retag or delete the matching messages.</p>
-<p>While I was implementing the configuration interface for this, I also
-added an option to enable statistical auto-tagging for any tag, as
-described in <a href="2014-01-12_A_Plan_For_Spam.html">A Plan for Spam ... and
-Bacon!</a>, and exposed a few more of the
-technical tag settings in the Tag settings editor. All features that
-already existed, but weren't really accessible.</p>
-<p>So there we go, tags now have automation and you don't need any
-command-line black magic to create your own statistical tagging or
-time-based workflows.</p>
-<p>These capability are now available to all tags, including user-created
-ones. Some of the potential use-cases include:</p>
-<ol>
-<li>Deleting Trash after a while</li>
-<li>Moving Spam to Trash</li>
-<li>Moving untouched blank drafts to Trash</li>
-<li>Creating statistical categories for promotions or paperwork</li>
-<li>Creating a "Postponed" tag which hides mail from view for a few days</li>
-</ol>
-<p>Now we just need an auto-responder and Mailpile will be able to
-automatically recognize and reply to tech support requests that have
-been unanswered for more than a week...</p>
-<p>(In the process I also fixed bugs in the bayesian auto-trainer, the
-periodic scheduler that triggers it and the tag editing tools the UI -
-proper release work after all!)</p>
-<h2>GnuPG Collaboration</h2>
-<p>I write this, sitting on a train back home from London.</p>
-<p>I was in London today to meet with Neal of <a href="https://www.gnupg.org/">the GnuPG
-project</a>. We discussed how the projects could
-collaborate more closely in the future and some of the
-<a href="2015-02-26_Revisiting_the_GnuPG_discussion.html">difficulties</a> Mailpile
-has had integrating with GnuPG.</p>
-<p>It was an excellent meeting and I'm optimistic that once GnuPG 2.1 (or
-2.2) becomes widespread, Mailpile will be able to make full use of it
-without any horrible hacks.</p>
-<p>Conversations will continue!</p>
-<h2>Piracy in Iceland</h2>
-<p>Finally, some bad news.</p>
-<p><a href="http://grapevine.is/mag/column-opinion/2016/04/10/600-silver-lions-how-iceland-was-betrayed-again/">Iceland's government is
-broken</a>
-and I feel an obligation to help fix it. I will be dedicating some time
-this summer to helping <a href="http://www.piratar.is/">the local Pirate Party</a>
-prepare for our next elections. Mostly I'll be working behind the scenes
-on internal party tools, but this inevitably means I will continue being
-distracted from Mailpile work. But don't worry, I'm <em>not</em> running for a
-seat in parliament. ;-)</p>
-<p>If you can help out in some way to help pick up the slack, please get
-in touch on #mailpile on Freenode.</p>
-<p>That's it for now, thanks for reading.</p>
-<p>Time to pack some boxes and move to Iceland!</p>
+<p>One of the main differences between Mailpile and most other Free
+Software e-mail clients has to do with the approach we take to handling
+e-mail.</p>
+<p>The first generation of e-mail clients focused on the e-mail itself and
+provided mailboxes or folders as places to store it. Organizing your
+e-mail meant moving it around, from one mailbox to another. This is how
+most desktop e-mail clients work today.</p>
+<p>Mailpile's approach is different. Inspired by GMail, we decided to make
+search the central metaphor. Organizing mail in Mailpile then became a
+matter of labeling messages in such ways that they could easily be
+searched for; this is how Mailpile's tags work.</p>
+<p>Tags are much more flexible and powerful than mailboxes; once the search
+engine has indexed all your mail it no longer matters in which mailbox
+or folder the mail is stored since you can access and organize any
+combination of messages using a mixture of tags and search terms.
+Searching a well designed index is actually faster (both for the human
+and the computer) than finding and opening the right mailbox.</p>
+<p>So Mailpile is a search engine first and foremost. Most of the other
+features it has are built on top of that foundation.</p>
+<h2>What About Mailboxes?</h2>
+<p>This is all well and good.</p>
+<p>But the fact remains that sometimes we need to open a mailbox and look inside;
+after all, that is where the mail is!</p>
+<p>Mailpile has struggled with this from the beginning. Being built around
+a single search engine meant Mailpile couldn't really do much with the
+contents of a mailbox until it had all been processed and added to the
+search index.</p>
+<p>This led to usability problems. If Mailpile was given a large number of
+mailboxes to process it could take quite some time before it got to the
+one the user was interested in. If the background indexing process had
+a problem, mail would just never appear. Users coming from traditional
+mail clients had expectations which Mailpile could not meet. And last
+but not least, it made troubleshooting very difficult because there were
+so many layers of code, each introducing potential bugs or delays, that
+an e-mail had to travel through before it appeared (or failed to appear)
+in the user interface.</p>
+<p>Sometimes you just want to open up a mailbox and look inside, without
+having to add all the mail to your Mailpile.</p>
+<h2>Embracing Search</h2>
+<p>The solution I have found to this problem wasn't to stop treating
+search as a core feature. It was to embrace it and take it a step
+further: who says there should <em>only be one way to search</em>?</p>
+<p>Many IMAP servers offer search features. We should be able to make use
+of them. Similarly, searching a raw mailbox is relatively
+straightforward - it may not be elegant or as fast as Mailpile's native
+index, but running "grep" or the equivalent very often gives useful
+results. It turns out there are many ways to search mailboxes that
+haven't been fully processed and added to the main Mailpile index.</p>
+<p>So Mailpile now internally supports <strong>multiple search indexes</strong>. At the
+moment it only searches one at a time, and some search indexes are not
+very good at searching yet... but the code is elegant and clean, works
+well and has interesting potential for the future.</p>
+<p>Maybe someday we'll have hybrid search, which searches both remote IMAP
+servers and the local index. Maybe someday we'll be able to pull in
+results from notmuch or some alternate index.</p>
+<p>But for now, at least this approach makes it easy and quick for Mailpile
+to look inside raw mailboxes. That alone clears a major roadblock out of
+the way for a 1.0 release.</p>
+<p>I am still mulling over how best to expose this in the user interface.
+At the very least, it will be the default behaviour when accessing
+mailboxes from the browsing tool. I may also make it accessible via the
+per-mailbox tags in the sidebar; doing so is likely to match user
+expectations better than using Mailpile's internal index. But I'm not
+entirely sure.</p>
+<p>I'll be pushing this up for review once I've finished a few more test.</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
