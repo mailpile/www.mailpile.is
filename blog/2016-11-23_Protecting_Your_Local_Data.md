@@ -123,7 +123,7 @@ either fetch the printout from the shoebox under the bed (or from the
 bank vault), or they will contact their friends asking for help. Either
 way, it's a relatively simple procedure.
 
-We think... your feedback is most welcome!
+We think... [your feedback is most welcome](https://github.com/mailpile/Mailpile/issues/1691)!
 
 There are of course lots of little details; the length of the recovery
 key, the number of trusted friends who receive key details versus the
@@ -187,6 +187,7 @@ expect for version 1.0:
 
 2. Key backups are not implemented, but are a goal for 1.0 due to their
    importance and the extreme risk of data loss if they are compromised.
+   [Join the discussion here](https://github.com/mailpile/Mailpile/issues/1691).
 
 3. Local data encryption is implemented. We are in [the process of
    switching encryption algorithms to AES-CTR](https://github.com/mailpile/Mailpile/pull/1684).
