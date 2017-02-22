@@ -1,7 +1,7 @@
 {
-  "timestamp": 1474642780,
+  "timestamp": 1485783585,
   "latest_version": "1.0.0rc0",
-  "en": "Hello world!\n\nThank you for testing Mailpile! Development efforts have resumed after our summer break. Please check our blog for details. Thanks!",
+  "en": "Hello world!\n\nThank you for testing Mailpile! Please check our blog for news and updates.",
   "source": "https://www.mailpile.is/blog/",
   "signed": "www.mailpile.is"
 }
