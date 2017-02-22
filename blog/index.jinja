@@ -3,6 +3,17 @@
 
 {% block title %}Blog{% endblock %}
 
+{% block page_sidebar %}
+  {%- set tweets = cat("tweets/tweets.json")|from_json %}
+  <div class="tweets">
+  {%- for tweet in tweets %}
+    {%- if '/blog/' not in tweet.html_tweet %}
+      {{ tweet.html_tweet|safe }}
+    {%- endif %}
+  {%- endfor %}
+  </div>
+{% endblock %}
+
 {% block content %}
   {%- for fn in ls('.', '\.md$')[-4:]|reverse %}
     {% set page = cat(fn)|from_rfc822 -%}
