@@ -43,7 +43,7 @@ Type: full
 		<div class="row add-bottom"></div>
 		<hr>
 
-    <h3 class="text-center">Icelandophiles & Postmaster Generals</h3>
+    <h3 class="text-center">Icelandophiles & Postmasters General</h3>
     
 		<div class="row add-bottom">
       <div class="one-quarter text-center">
