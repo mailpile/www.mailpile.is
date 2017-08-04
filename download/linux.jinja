@@ -1,0 +1,244 @@
+{% extends "layouts/page.html-jinja" %}
+{% set page = {'type': 'full'} %}
+
+{% block title %}Download and Install: Linux{% endblock %}
+
+{% block content %}
+<h3 class="text-center half-bottom">
+  Download <img src="/img/icon-48x48.png" style="margin-left: 10px; position: relative; top:15px"> <strong>mail</strong>pile
+  for Linux
+</h3>
+
+<br>
+
+<div class="row half-top">
+  <div class="col-12 col-offset-2">
+
+    <h5>Intro</h5>
+    <p>
+      Mailpile packages are currently available for recent
+      <a target=_blank href="https://www.debian.org/">Debian</a>-derived
+      distributions, including
+      <a target=_blank href="https://www.ubuntu.com/">Ubuntu</a>.
+      The packages are architecture-independent and should be compatible
+      with most desktops, servers and embedded hardware (such as the
+      <a target=_blank href="https://www.raspberrypi.org/">Raspberry Pi</a>).
+      They have been tested on Debian 8, Debian 9 and Ubuntu 16.04 LTS.
+    </p>
+    <p>
+      You can download the
+      <a href="#deb">package files</a> directly or use our
+      <a href="#apt">repository</a>.
+      Using the repository is recommended, so you don't miss important
+      security updates or bugfixes.
+    </p>
+    <p>
+      We hope to add support for other package formats in the near future.
+      In the meantime, you can
+      <a target=_blank href="https://github.com/mailpile/Mailpile/wiki/Getting-started-on-Linux">use the source, Luke!</a>
+    </p>
+
+    <h5>Apache Integration: "Multipile"</h5>
+    <p>
+      In addition to the core <b>mailpile</b> package, we currently offer
+      an optional package named <b>mailpile-apache2</b>.
+    </p>
+    <p>
+      This package will add a simple "launch and proxy" configuration to the
+      Apache web server, which will allow any user on the machine to activate
+      and access their Mailpile over the web at
+      <i>https://your.example.com/mailpile/</i>, after providing their username
+      and password.
+    </p>
+    <p>
+      <b>Be careful!</b> We do not recommend exposing Mailpile to the public
+      web without first enabling HTTPS encryption!
+      <a target=_blank href="https://letsencrypt.org/">Lets encrypt</a> helps
+      make that easy.
+    </p>
+
+    <h5>Nightly vs. Release</h5>
+    <p>
+      Two sets of packages are provided, <i>nightly</i> packages which are
+      automatically built from the
+      <a target=_blank href="https://github.com/mailpile/Mailpile">Github
+      master branch</a> and <i>release</i> packages which are updated less
+      frequently and should be more stable.
+    </p>
+    <p>
+      The release packages are recommended, unless you are eager to help
+      debug and test our latest work... which would be most appreciated!
+    </p>
+
+  </div>
+</div>
+
+
+<a name="apt"></a><hr>
+<div class="row half-top">
+  <div class="col-12 col-offset-2">
+
+    <h2>Debian Repository</h2>
+    <p>
+      Using one of our Debian repositories is the recommended way to
+      install Mailpile on Linux, since it makes updates and upgrades
+      quick and easy.
+    </p>
+
+    <h4>Adding the Repository</h4>
+    <p>
+      To use our repositories you will first need to add
+      <a href="https://packages.mailpile.is/deb/key.asc">the packaging
+      signing key</a> using the `apt-key` tool and then add the repository
+      itself to your list of APT sources. Commands for accomplishing this
+      are listed below (for completeness we include commands to install
+      <tt>curl</tt> and the apt tools - you may already have these installed).
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo apt-get update && sudo apt-get install curl apt-transport-https gnupg
+...
+
+$ curl -s https://packages.mailpile.is/deb/key.asc |sudo apt-key add -
+...
+
+$ echo "deb https://packages.mailpile.is/deb <b>release</b> main" |sudo tee /etc/apt/sources.list.d/000-mailpile.list
+...</pre>
+    <p>
+      Note that if you wish to use our nightly builds instead of the release
+      packages, you need to replace the word <b>release</b> with <b>nightly</b>
+      in the APT sources entry.
+    </p>
+
+    <h4>Installing Mailpile</h4>
+    <p>
+      You can now install Mailpile (with or without the Apache integration)
+      with a single command:
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+## Mailpile
+$ sudo apt-get update && sudo apt-get install mailpile
+...
+    
+## Multipile
+$ sudo apt-get update && sudo apt-get install mailpile-apache2
+...</pre>
+    <p>
+      Now you should be able to run <b>mailpile</b> on the command line
+      and join the fun! If you have installed the Apache integration, you
+      can access <i>https://your.example.com/mailpile/</i> and log on that way.
+    </p>
+
+    <h4>Uninstalling</h4>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo apt-get remove mailpile mailpile-apache2
+...
+
+$ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
+...</pre>
+    <p>
+      You may also want to
+      <a target=_blank href="https://github.com/mailpile/Mailpile/wiki/Uninstalling-Mailpile"
+       >consult our Wiki for details about how to remove Mailpile's
+        data files</a>.
+    </p>
+
+  </div>
+</div>
+ 
+
+<a name="deb"></a><hr>
+<div class="row half-top">
+  <div class="col-12 col-offset-2">
+
+    <h2>Debian Packages</h2>
+
+    {%- set packages = cat('deb-packages.json')|from_json %}
+    <table style="width: 100%;">
+    {%- for repo in ('release', 'nightly') %}
+     {%- for package in packages %}
+      {%- set info = packages[package] %}
+      {%- if (package != 'EOF') and (info.repo == repo) %}
+      <tr class="repo-{{ info.repo }} package-{{ info.package }}">
+        <td style="text-align: center;">{{ info.repo }}</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/{{ info.path }}">{{ package }}</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+          {%- if info.package == 'mailpile' %}
+            This is Mailpile!
+          {%- elif info.package == 'mailpile-apache2' %}
+            "Multipile" Multi-user Apache integration.
+          {%- elif info.package == 'python-socksipychain' %}
+            SOCKS5 connection library, not needed on all systems.
+          {%- endif %}
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">{{ info.sha256 }}</span>
+          </tt>
+        </td>
+        <td class="size">{{ info.size }}</td>
+{#      <td class="mtime">{{ info.mtime }}</td> #}
+      </tr>
+      {%- endif %} 
+     {%- endfor %}
+    {%- endfor %}
+    </table><br>
+
+    <h4>Verifying Package Integrity</h4>
+    <p>
+      All packages should be signed with
+      <a href="https://packages.mailpile.is/deb/key.asc">our packaging PGP
+      key</a>.
+    </p>
+    <p>
+      To verify the signature, add our key to your keychain and then use
+      the <tt>dpkg-sig</tt> tool to check the packages, like so:
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ apt-get install curl dpkg-sig
+...
+
+$ curl -s https://packages.mailpile.is/deb/key.asc |gpg --import -
+...
+
+$ dpkg-sig --verify mailpile*.deb
+...</pre>
+
+    <h4>Installation</h4>
+    <p>
+      Installation is straightforward; use the <tt>dpkg</tt> tool to
+      install the downloaded packages themselves, and then use
+      <tt>apt-get</tt> to install any missing dependencies.
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo dpkg -i mailpile*.deb
+...
+
+$ sudo apt-get install -f
+...</pre>
+    <p>
+      Now you should be able to run <b>mailpile</b> on the command line
+      and join the fun! If you have installed the Apache integration, you
+      can access <i>https://your.example.com/mailpile/</i> and log on that way.
+    </p>
+    <p>
+      <b>Note:</b> If <tt>apt-get</tt> complains about missing dependencies,
+      check whether matching packages are provided above.
+    </p>
+
+    <h4>Uninstalling</h4>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo apt-get remove mailpile mailpile-apache2</pre>
+    <p>
+      You may also want to
+      <a target=_blank href="https://github.com/mailpile/Mailpile/wiki/Uninstalling-Mailpile"
+       >consult our Wiki for details about how to remove Mailpile's
+        data files</a>.
+    </p>
+
+  </div>
+</div>
+
+
+<hr>
+
+{% endblock %}
