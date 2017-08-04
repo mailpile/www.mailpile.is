@@ -88,7 +88,7 @@
     <h4>Adding the Repository</h4>
     <p>
       To use our repositories you will first need to add
-      <a href="https://packages.mailpile.is/deb/key.asc">the packaging
+      <a href="deb/key.asc">the packaging
       signing key</a> using the `apt-key` tool and then add the repository
       itself to your list of APT sources. Commands for accomplishing this
       are listed below (for completeness we include commands to install
@@ -185,9 +185,8 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
 
     <h4>Verifying Package Integrity</h4>
     <p>
-      All packages should be signed with
-      <a href="https://packages.mailpile.is/deb/key.asc">our packaging PGP
-      key</a>.
+      All packages should be signed with <a href="deb/key.asc">our
+      packaging PGP key</a>.
     </p>
     <p>
       To verify the signature, add our key to your keychain and then use
