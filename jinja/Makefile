@@ -16,8 +16,8 @@ TARGETS = find . -name \*.jinja* -o -name \*.md \
 
 
 all:
-	@find faq/index.md.py -mmin 15 |xargs touch /tmp/x
-	@find blog/tweets/index.md.py -mmin 15 |xargs touch /tmp/x
+	@find faq/index.md.py -mmin +15 |xargs touch /tmp/x
+	@find blog/tweets/index.md.py -mmin +15 |xargs touch /tmp/x
 	@$(TARGETS) |xargs -r $(MAKE)
 
 clean: cleanMakefile
