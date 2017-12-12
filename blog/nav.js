@@ -420,6 +420,24 @@ jQuery(document).ready(function($){
   "date": "2017-01-30", 
   "subject": "A Plan for 2017", 
   "url": "/blog/2017-01-30_A_Plan_for_2017.html"
+},
+{
+  "author": "Bjarni", 
+  "date": "2017-08-02", 
+  "subject": "SHA2017, Here We Come!", 
+  "url": "/blog/2017-08-02_SHA2017_Here_We_Come.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2017-08-13", 
+  "subject": "Still Hacking Anyway", 
+  "url": "/blog/2017-08-13_SHA2017.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2017-12-12", 
+  "subject": "Holiday Season Updates", 
+  "url": "/blog/2017-12-12_Holiday_Season_Updates.html"
 }];
 
   var prev = -1;

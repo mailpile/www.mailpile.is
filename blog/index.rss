@@ -4,6 +4,120 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>http://www.mailpile.is/blog/</link>
   <item>
+    <title>Holiday Season Updates</title>
+    <link>http://www.mailpile.is/blog/2017-12-12_Holiday_Season_Updates.html</link>
+    <description>&lt;p&gt;Happy holidays, dear readers!&lt;/p&gt;
+&lt;p&gt;It&#39;s been way too long since I updated this blog. Way too long!&lt;/p&gt;
+&lt;p&gt;Back in August, the plan was to quickly post job ads and start looking
+for people to hire for our next stages of work - building minimal
+Windows and Mac GUIs, and installers.&lt;/p&gt;
+&lt;p&gt;That timeline didn&#39;t quite pan out, mostly because I was distracted by
+other work. My &lt;a href=&#34;https://pagekite.net/&#34;&gt;other job&lt;/a&gt; needed my attention,
+then &lt;a href=&#34;https://grapevine.is/news/2017/09/15/icelands-government-collapses-uncertainty-lies-ahead/&#34;&gt;the Icelandic government
+collapsed&lt;/a&gt;,
+so I volunteered some of my time to help the &lt;a href=&#34;https://www.piratar.is/&#34;&gt;Icelandic
+Pirates&lt;/a&gt; campaign. I also moved back to Italy
+from Iceland, which always slows me down for a while.&lt;/p&gt;
+&lt;p&gt;But enough excuses already!&lt;/p&gt;
+&lt;p&gt;After some intensive introspection and deep analysis of the Mailpile
+project&#39;s structure and history, we have identified our biggest problem:
+I am a bottleneck. OK, I made that up. We didn&#39;t perform any analysis,
+it&#39;s been obvious for a while that this is a problem. However, empowered
+by Bitcoin&#39;s latest shenanigans, we have finally done something about
+it.&lt;/p&gt;
+&lt;p&gt;We&#39;ve hired a project manager!&lt;/p&gt;
+&lt;p&gt;The talented &lt;a href=&#34;https://twitter.com/Oktavia&#34;&gt;Oktavía Hrund&lt;/a&gt; has been hired
+to make sure things get done in spite of me. She has a contract in hand,
+a budget to work with and Mailpile installed on her laptop... she&#39;s here
+to kick ass and chew bubblegum.&lt;/p&gt;
+&lt;p&gt;We have changed ownership!&lt;/p&gt;
+&lt;p&gt;Another recent development, is Mailpile ehf, the Icelandic company
+founded around the project has changed ownership. Mailpile ehf used to
+be fully owned by the original project founders: Smári McCarthy, Brennan
+Novak and myself. Since then, Brennan has moved on to other things.
+Recently he sold his shares to &lt;a href=&#34;https://www.danielyeow.com/&#34;&gt;Daniel
+Yeow&lt;/a&gt;. Daniel should be a a familiar face
+to the the speed skaters amongst you (I hear Mailpile is huge in the
+speed skating community... huge!), but he has also been helping out with
+coordination of our Transifex community while researching whether it is
+possible to use Raspberry-Pi-like devices to make a Mailpile hardware
+product.&lt;/p&gt;
+&lt;p&gt;You made this happen!&lt;/p&gt;
+&lt;p&gt;Your encouragement, your belief in our vision and your gracious
+donations (including Bitcoin donations) are what makes Mailpile
+possible. Bitcoin prices have risen dramatically, so much so that we now
+have enough magical Internet money to fund another round or two of work
+after this one - assuming Bitcoin doesn&#39;t collapse completely in the
+meantime! So thank you again for your trust and donations. They have
+given us the motivation and courage we need to keep going and make
+Mailpile available, easy and accessible to you all! We may be late, but
+never isn&#39;t an option.&lt;/p&gt;
+&lt;p&gt;That&#39;s the news for now.&lt;/p&gt;
+&lt;p&gt;I&#39;m sure Okta will make me blog again soon. Until then, I hope you enjoy
+Santaseason, spend some quality time with your loved ones and enter the
+Gregorian Calendar New Year full of joy and optimism...&lt;/p&gt;
+&lt;p&gt;Take care!&lt;/p&gt;</description>
+    <pubDate>Tue, 12 Dec 2017 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Still Hacking Anyway</title>
+    <link>http://www.mailpile.is/blog/2017-08-13_SHA2017.html</link>
+    <description>&lt;p&gt;Last weekend, I happily attended the Dutch SHA2017 Hacker Camp. I slept
+in a tent, gave a talk about Mailpile and had too much beer and almost
+enough interesting conversations.&lt;/p&gt;
+&lt;p&gt;The advertised title of my talk was &#34;Four years later&#34;, because Mailpile
+itself was launched at the last Dutch hacker camp: OHM in 2013. So I
+talked about what Mailpile is, what has happened during the last four
+years and finally I announced &lt;a href=&#34;/download/&#34;&gt;our first 1.0 release candiate&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;However, I sneakily changed the title to &lt;strong&gt;Still Hacking Anyway&lt;/strong&gt;, because
+I just liked that better.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&#34;https://media.ccc.de/about.html&#34;&gt;the Chaos Computer Club media
+project&lt;/a&gt;, you can watch the talk here:&lt;/p&gt;
+&lt;div style=&#34;width: 670px; margin: 0 0 0 20px;&#34;&gt;
+&lt;iframe width=&#34;660&#34; height=&#34;378&#34; style=&#34;margin: 0 0 0 10px;&#34;
+        src=&#34;https://media.ccc.de/v/SHA2017-101-mailpile/oembed&#34;
+        frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;
+ &lt;p style=&#34;text-align: right; margin: -10px 10px 20px 0;&#34;&gt;
+   &lt;a href=&#34;https://media.ccc.de/v/SHA2017-101-mailpile&#34;
+      target=_blank&gt;download the talk here&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After the talk I gave away a bunch of Mailpile t-shirts and stickers,
+but mostly relaxed and enjoyed being surrounded by interesting
+hacktivists at the camp. It was a wonderful event and the organizers
+and volunteers all did a fantastic job.&lt;/p&gt;
+&lt;p&gt;The talk ended with a call for help; funnily enough, I&#39;m roughly on
+schedule and would like to hire a couple of developers to help me
+complete the &lt;a href=&#34;2017-01-30_A_Plan_for_2017.html&#34;&gt;Plan for 2017&lt;/a&gt;. I will
+post more details about the positions later this month: if you know
+Windows or Mac desktop developers that are looking for 3-4 months of
+contract work, watch this space - or just get in touch!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A correction:&lt;/strong&gt; I am aware of one factual error in my talk: I said
+that GnuPG 2.1 was moving towards making TOFU the default trust model.
+This is incorrect. My apologies!&lt;/p&gt;</description>
+    <pubDate>Sun, 13 Aug 2017 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>SHA2017, Here We Come!</title>
+    <link>http://www.mailpile.is/blog/2017-08-02_SHA2017_Here_We_Come.html</link>
+    <description>&lt;p&gt;Hello!&lt;/p&gt;
+&lt;p&gt;Sorry about the long silence. I&#39;ve been so busy writing code and living my
+life, that the blog (and the Twitter account) have both been a bit neglected
+this year.&lt;/p&gt;
+&lt;p&gt;However, this weekend, I will crawl out of my cave and attend the
+&lt;a href=&#34;https://sha2017.org/&#34;&gt;SHA 2017&lt;/a&gt; Hacker Camp! Smári will also
+be there, and I just know a whole bunch of our backers and wider community will
+be as well. In addition to sleeping in a tent and meeting awesome people (you,
+I hope) at SHA, I will be giving a talk to celebrate the Mailpile project&#39;s 4
+year birthday.&lt;/p&gt;
+&lt;p&gt;Yep, Mailpile is turning 4 years old. Happy Birthday Mailpile!&lt;/p&gt;
+&lt;p&gt;For those of you who won&#39;t be able to attend the talk, a small spoiler: a
+huge amount of progress has been made towards a 1.0 release. It&#39;s happening,
+folks.&lt;/p&gt;
+&lt;p&gt;I&#39;ll post more after my talk.&lt;/p&gt;</description>
+    <pubDate>Wed, 02 Aug 2017 12:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>A Plan for 2017</title>
     <link>http://www.mailpile.is/blog/2017-01-30_A_Plan_for_2017.html</link>
     <description>&lt;p&gt;Happy Belated New Year!&lt;/p&gt;
@@ -217,257 +331,5 @@ based on OpenPGP. There&#39;s actually quite a lot going on!&lt;/p&gt;
 and promoting self indulgent posts on how we&#39;ve given up and moved on.&lt;/p&gt;
 &lt;p&gt;Oh, and stay in school kids! It&#39;s worth it!&lt;/p&gt;</description>
     <pubDate>Mon, 12 Dec 2016 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Protecting Your Local Data</title>
-    <link>http://www.mailpile.is/blog/2016-11-23_Protecting_Your_Local_Data.html</link>
-    <description>&lt;p&gt;Everyone understands physical security.&lt;/p&gt;
-&lt;p&gt;Starting in play-school, we learn that if we don&#39;t want the other kids
-to play with our favourite toys, then steps must be taken. Hopefully
-most of us also learned to share and play nice, but that&#39;s another
-matter...&lt;/p&gt;
-&lt;p&gt;Keeping physical objects safe is such a basic skill that it requires no
-explanation. We all know the importance of keeping our wallets or our
-phones safe, our jewellry, our keys. We may not do a great job all the
-time, some of us are absent minded and maybe we live in a safe place and
-don&#39;t worry too much - but we all understand the concept.&lt;/p&gt;
-&lt;p&gt;One of Mailpile&#39;s main goals is to bring this kind of intuitive security
-to our digital lives, to e-mail. If a physical device in your possession
-stores your mail, then you already know the basics of keeping your
-e-mail secure, private and safe.&lt;/p&gt;
-&lt;p&gt;So far, so good!&lt;/p&gt;
-&lt;p&gt;But what happens when things go wrong? What happens when your Mailpile
-machine gets lost or stolen? Or dropped on the floor?&lt;/p&gt;
-&lt;h3&gt;The Risks&lt;/h3&gt;
-&lt;p&gt;When something goes wrong with your Mailpile device, there are two bad
-things that are likely to happen:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;You lose access to your Mailpile data&lt;/li&gt;
-&lt;li&gt;Someone who shouldn&#39;t gains access to your Mailpile data&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The first case is more common; it can happen when a machine gets lost,
-gets stolen, gets damaged in fire or flood, or malfunctions of its own
-accord. Given enough time, it&#39;s almost inevitable.&lt;/p&gt;
-&lt;p&gt;The second case is much less common, but when it happens the
-consequences can be dire. If your e-mail contains very sensitive
-material (confidential documents, nude photos, incriminating evidence)
-your job, your relationships or even your life may be at risk.&lt;/p&gt;
-&lt;p&gt;So those are the problems. How about some solutions?&lt;/p&gt;
-&lt;h3&gt;Avoiding Data Loss: Backups&lt;/h3&gt;
-&lt;p&gt;Protecting you from losing access to your Mailpile is conceptually
-simple. You just need backups. That&#39;s all.&lt;/p&gt;
-&lt;p&gt;Famous last words...&lt;/p&gt;
-&lt;p&gt;Making backups available and easy is actually quite hard, because it is
-ultimately a physical problem. The data needs to be copied to another
-device that won&#39;t be lost or damaged by the calamity that made you need
-backups in the first place.&lt;/p&gt;
-&lt;p&gt;Any local physical solution ultimately relies on user education and user
-action; which means our less skilled or more absent-minded users will
-not end up with working backups. This is unacceptable.&lt;/p&gt;
-&lt;p&gt;A much better solution would be to use the network, automatically store
-Mailpile users&#39; backups somewhere else. But where? If Mailpile were to
-directly provide an online backup solution, that would make us stewards
-of your data (a role we would like avoid) and would also cost us a bunch
-of money to do properly - money which the project simply does not have.&lt;/p&gt;
-&lt;p&gt;We also need to take care that the backups themselves don&#39;t become a
-security risk - we don&#39;t want to create a backup solution that
-accidentally grants unauthorized parties access to your mail!&lt;/p&gt;
-&lt;p&gt;Our current strategy is simple: we want to encrypt all your data and
-then upload it right back to one of the IMAP servers you already have
-access to.&lt;/p&gt;
-&lt;p&gt;Simple right? A mere matter of programming (this will take some time).&lt;/p&gt;
-&lt;h3&gt;Avoiding Data Loss part II: Keys, Keys, Keys&lt;/h3&gt;
-&lt;p&gt;We have a plan for backups! But what about the encryption keys?&lt;/p&gt;
-&lt;p&gt;If those are lost, all is lost.&lt;/p&gt;
-&lt;p&gt;If those are stolen, all is stolen.&lt;/p&gt;
-&lt;p&gt;Currently, Mailpile requires users log in to their Mailpile with a
-password (or passphrase). Internally, this passphrase unlocks a file
-encrypted using GnuPG, a file which contains the actual encryption key
-used for everything else.&lt;/p&gt;
-&lt;p&gt;If we trust GnuPG&#39;s security (which we do), it should be perfectly fine
-to store this along with all the other data. Right?&lt;/p&gt;
-&lt;p&gt;Unfortunately, no. The problem is, our users may not choose strong
-passwords. No matter how much we try to educate, some will end up using
-the same password for their Mailpile as they used for the IMAP server
-we&#39;re uploading the backups to. Since the operator of the IMAP server
-can access that password with relative ease, that would leave the
-backups exposed.&lt;/p&gt;
-&lt;p&gt;So this part of the plan requires more thought; the current strategy we
-are leaning towards, is to create an unguessable &#34;recovery key&#34;, made up
-of 9-12 dictionary words. This recovery key will be used to encrypt the
-keys to the kingdom, before they too are uploaded to the cloud.&lt;/p&gt;
-&lt;p&gt;Once backups are enabled, the app will do the following:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Ask the user to print out or write down the recovery key, and keep
-      it safe.&lt;/li&gt;
-&lt;li&gt;Ask the user to nominate a few trusted friends or family members,
-      and e-mail each of them a part of the recovery key.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The first option is for people who don&#39;t have any friends. The second
-option is for everyone else!&lt;/p&gt;
-&lt;p&gt;When a user needs to restore their Mailpile from backups, they will
-either fetch the printout from the shoebox under the bed (or from the
-bank vault), or they will contact their friends asking for help. Either
-way, it&#39;s a relatively simple procedure.&lt;/p&gt;
-&lt;p&gt;We think... &lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/1691&#34;&gt;your feedback is most welcome&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;There are of course lots of little details; the length of the recovery
-key, the number of trusted friends who receive key details versus the
-number of friends required to respond for successful recovery, the
-wording of the key fragment e-mails. And so on! But I think the basic
-idea is sound and the implementation should be able to adapt to the
-needs of both casual users and users with strong security requirements.&lt;/p&gt;
-&lt;p&gt;Incidentally, this procedure can also serve as a decentralized &#34;password
-reset&#34; feature for people who forget their Mailpile password. They just
-have to remember who their trusted friends were...&lt;/p&gt;
-&lt;h3&gt;Keeping Your Data Private&lt;/h3&gt;
-&lt;p&gt;The final piece of this puzzle, is keeping data private.&lt;/p&gt;
-&lt;p&gt;This is also conceptually simple: we encrypt everything!&lt;/p&gt;
-&lt;p&gt;Considering that strong cryptography is available &#34;off the shelf&#34; from
-multiple mature libraries these days, our job is to choose one of the
-industry-standard algorithms from one of the standard libraries, and
-make use of it.&lt;/p&gt;
-&lt;p&gt;The main constraints are performance and reliability. We would like the
-encryption to not slow things down &lt;em&gt;too much&lt;/em&gt;, and we would like the
-encryption to not increase the odds of data loss.&lt;/p&gt;
-&lt;p&gt;Given those two constraints, our current preference is to use &lt;a href=&#34;https://en.wikipedia.org/wiki/Cipher_block_chaining#Counter_.28CTR.29&#34;&gt;AES in
-CTR (Counter) mode&lt;/a&gt;,
-with a SHA256-based MAC to detect data corruption and/or tampering.&lt;/p&gt;
-&lt;p&gt;Since CTR mode localizes any damage (unlike AES-CBC which we were
-mistakenly using before), it can be argued that the encryption doesn&#39;t
-reduce reliability. Of course in practice this will depend on the what
-the app does when corruption is detected and how easy (and safe) it is
-to recover - but as long as the data is mostly intact, our recovery
-strategies can evolve and improve over time.&lt;/p&gt;
-&lt;p&gt;An alternative mode, GCM (Galois Counter Mode) would also be a good
-candidate, but it&#39;s currently not as widely available as CTR mode. We
-may switch to it in the future.&lt;/p&gt;
-&lt;p&gt;Another item for the long-term wishlist is use of &lt;a href=&#34;https://en.wikipedia.org/wiki/Error_detection_and_correction&#34;&gt;error correction
-codes&lt;/a&gt; to
-automatically recover from minor corruption; potentially making Mailpile
-Encrypted Storage &lt;em&gt;more&lt;/em&gt; resiliant than normal unencrypted files.&lt;/p&gt;
-&lt;h3&gt;Current State&lt;/h3&gt;
-&lt;p&gt;This is all well and good. But we&#39;re not there yet!&lt;/p&gt;
-&lt;p&gt;Here is a summary of the current state of things in Mailpile and what we
-expect for version 1.0:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Automated backups are not implemented yet and probably will not be
-   ready by version 1.0. We have however laid the groundwork by defining
-   an on-disk storage format which can be easily uploaded to IMAP servers
-   (since the format looks like e-mail).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Key backups are not implemented, but are a goal for 1.0 due to their
-   importance and the extreme risk of data loss if they are compromised.
-   &lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/1691&#34;&gt;Join the discussion here&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Local data encryption is implemented. We are in &lt;a href=&#34;https://github.com/mailpile/Mailpile/pull/1684&#34;&gt;the process of
-   switching encryption algorithms to AES-CTR&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Thanks for reading!&lt;/p&gt;</description>
-    <pubDate>Wed, 23 Nov 2016 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Search as a Core Feature</title>
-    <link>http://www.mailpile.is/blog/2016-10-26_Search_as_a_Core_Feature.html</link>
-    <description>&lt;p&gt;One of the main differences between Mailpile and most other Free
-Software e-mail clients has to do with the approach we take to handling
-e-mail.&lt;/p&gt;
-&lt;p&gt;The first generation of e-mail clients focused on the e-mail itself and
-provided mailboxes or folders as places to store it. Organizing your
-e-mail meant moving it around, from one mailbox to another. This is how
-most desktop e-mail clients work today.&lt;/p&gt;
-&lt;p&gt;Mailpile&#39;s approach is different. Inspired by GMail, we decided to make
-search the central metaphor. Organizing mail in Mailpile then became a
-matter of labeling messages in such ways that they could easily be
-searched for; this is how Mailpile&#39;s tags work.&lt;/p&gt;
-&lt;p&gt;Tags are much more flexible and powerful than mailboxes; once the search
-engine has indexed all your mail it no longer matters in which mailbox
-or folder the mail is stored since you can access and organize any
-combination of messages using a mixture of tags and search terms.
-Searching a well designed index is actually faster (both for the human
-and the computer) than finding and opening the right mailbox.&lt;/p&gt;
-&lt;p&gt;So Mailpile is a search engine first and foremost. Most of the other
-features it has are built on top of that foundation.&lt;/p&gt;
-&lt;h2&gt;What About Mailboxes?&lt;/h2&gt;
-&lt;p&gt;This is all well and good.&lt;/p&gt;
-&lt;p&gt;But the fact remains that sometimes we need to open a mailbox and look inside;
-after all, that is where the mail is!&lt;/p&gt;
-&lt;p&gt;Mailpile has struggled with this from the beginning. Being built around
-a single search engine meant Mailpile couldn&#39;t really do much with the
-contents of a mailbox until it had all been processed and added to the
-search index.&lt;/p&gt;
-&lt;p&gt;This led to usability problems. If Mailpile was given a large number of
-mailboxes to process it could take quite some time before it got to the
-one the user was interested in. If the background indexing process had
-a problem, mail would just never appear. Users coming from traditional
-mail clients had expectations which Mailpile could not meet. And last
-but not least, it made troubleshooting very difficult because there were
-so many layers of code, each introducing potential bugs or delays, that
-an e-mail had to travel through before it appeared (or failed to appear)
-in the user interface.&lt;/p&gt;
-&lt;p&gt;Sometimes you just want to open up a mailbox and look inside, without
-having to add all the mail to your Mailpile.&lt;/p&gt;
-&lt;h2&gt;Embracing Search&lt;/h2&gt;
-&lt;p&gt;The solution I have found to this problem wasn&#39;t to stop treating
-search as a core feature. It was to embrace it and take it a step
-further: who says there should &lt;em&gt;only be one way to search&lt;/em&gt;?&lt;/p&gt;
-&lt;p&gt;Many IMAP servers offer search features. We should be able to make use
-of them. Similarly, searching a raw mailbox is relatively
-straightforward - it may not be elegant or as fast as Mailpile&#39;s native
-index, but running &#34;grep&#34; or the equivalent very often gives useful
-results. It turns out there are many ways to search mailboxes that
-haven&#39;t been fully processed and added to the main Mailpile index.&lt;/p&gt;
-&lt;p&gt;So Mailpile now internally supports &lt;strong&gt;multiple search indexes&lt;/strong&gt;. At the
-moment it only searches one at a time, and some search indexes are not
-very good at searching yet... but the code is elegant and clean, works
-well and has interesting potential for the future.&lt;/p&gt;
-&lt;p&gt;Maybe someday we&#39;ll have hybrid search, which searches both remote IMAP
-servers and the local index. Maybe someday we&#39;ll be able to pull in
-results from notmuch or some alternate index.&lt;/p&gt;
-&lt;p&gt;But for now, at least this approach makes it easy and quick for Mailpile
-to look inside raw mailboxes. That alone clears a major roadblock out of
-the way for a 1.0 release.&lt;/p&gt;
-&lt;p&gt;I am still mulling over how best to expose this in the user interface.
-At the very least, it will be the default behaviour when accessing
-mailboxes from the browsing tool. I may also make it accessible via the
-per-mailbox tags in the sidebar; doing so is likely to match user
-expectations better than using Mailpile&#39;s internal index. But I&#39;m not
-entirely sure.&lt;/p&gt;
-&lt;p&gt;I&#39;ll be pushing this up for review once I&#39;ve finished a few more test.&lt;/p&gt;</description>
-    <pubDate>Wed, 26 Oct 2016 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Rebooting the Mailpile Development Process</title>
-    <link>http://www.mailpile.is/blog/2016-09-23_Rebooting_Mailpile_Development.html</link>
-    <description>&lt;p&gt;Hello again!&lt;/p&gt;
-&lt;p&gt;As warned about in our last blog post, development has been on hiatus
-for the last few months as I moved to (and from) Iceland, bought and
-sold a house and helped the Icelandic Pirate Party prepare for the
-up-coming parliamentary elections. It was frankly, an exhausting summer
-and I was sad not to have any time for Mailpile.&lt;/p&gt;
-&lt;p&gt;But it&#39;s the summer is well and truly over, and I&#39;m back. Mailpile is
-again one of my top priorities.&lt;/p&gt;
-&lt;p&gt;I&#39;ve warmed up by responding to a few issues
-&lt;a href=&#34;https://github.com/mailpile/Mailpile&#34;&gt;on Github&lt;/a&gt;,
-fixing a couple of simple bugs and reconnecting with people on
-the #mailpile IRC channel on Freenode.&lt;/p&gt;
-&lt;p&gt;Taking a break is almost always healthy for a project, as it makes
-room for new insights and perspective.&lt;/p&gt;
-&lt;p&gt;I&#39;m still in the process of &#34;rebooting&#34; the development effort, but I&#39;ve
-already decided to make at least one change - I will take advantage of
-&lt;a href=&#34;https://help.github.com/articles/reviewing-changes-in-pull-requests/&#34;&gt;Github&#39;s new code-review
-tools&lt;/a&gt;
-to get community members to review my own work. This should improve the
-code quality in Mailpile, while helping spread knowledge and
-understanding of the code to a wider group of people - over time
-improving the project&#39;s
-&#34;&lt;a href=&#34;https://en.wikipedia.org/wiki/Bus_factor&#34;&gt;bus factor&lt;/a&gt;&#34;. A long-time
-contributor, Jocelyn Delande, has volunteered to be my first reviewer,
-and hopefully more people will pitch in over time.&lt;/p&gt;
-&lt;p&gt;More soon. It&#39;s good to be back!&lt;/p&gt;</description>
-    <pubDate>Fri, 23 Sep 2016 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

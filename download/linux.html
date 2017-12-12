@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Novak">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS - CHANGE URL when making live
+    ================================================== -->
+    <link rel="stylesheet" href="/css/mailpile.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
+
+    <title>Mailpile: Download and Install: Linux</title>
+
+    <!-- JS ================================================== -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.flexnav.min.js"></script>
+    <script src="/js/list.min.js"></script>
+    <script src="/js/jquery.sortable.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script src="/js/sjcl.js"></script>
+    <script src="/js/hoipoi.js"></script>
+    <script src="/js/site.js"></script>
+</head><body>
+
+    <div id="navigation">
+      <div class="menu-button">Menu</div>
+        <ul data-breakpoint="800" class="flexnav">
+            <li><a href="/" class="scroll-link" style="position: relative;">
+              <img class="scroll-hint" src="/img/icon-48x48.png"
+                   style="position: absolute; top:5px; left: 10px;">
+              <strong>mail</strong>pile</big>
+            </a></li>
+            <li><a href="/faq/" class="scroll-link">FAQ</a></li>
+            <li><a href="/blog/" class="scroll-link">Blog</a></li>
+            <li><a href="/roadmap/"
+                   class="scroll-link" style="position: relative;">
+              <img class="login-hint" src="/img/happy-star.png"
+                   style="position: absolute; top:5px; right: 5px;">
+              Roadmap
+            </a></li>
+            <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="/donate/" class="scroll-link">Donate</a></li>
+            <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+        </ul>
+    </div>
+    <a style="position: absolute; top: 0;" name="top"></a>
+
+    <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+    <div id="content" class="container">
+<!-- Page content begins -->
+
+<h3 class="text-center half-bottom">
+  Download <img src="/img/icon-48x48.png" style="margin-left: 10px; position: relative; top:15px"> <strong>mail</strong>pile
+  for Linux
+</h3>
+
+<br>
+
+<div class="row half-top">
+  <div class="col-12 col-offset-2">
+
+    <h5>Intro</h5>
+    <p>
+      Mailpile packages are currently available for recent
+      <a target=_blank href="https://www.debian.org/">Debian</a>-derived
+      distributions, including
+      <a target=_blank href="https://www.ubuntu.com/">Ubuntu</a>.
+      The packages are architecture-independent and should be compatible
+      with most desktops, servers and embedded hardware (such as the
+      <a target=_blank href="https://www.raspberrypi.org/">Raspberry Pi</a>).
+      They have been tested on Debian 8, Debian 9 and Ubuntu 16.04 LTS.
+    </p>
+    <p>
+      You can download the
+      <a href="#deb">package files</a> directly or use our
+      <a href="#apt">repository</a>.
+      Using the repository is recommended, so you don't miss important
+      security updates or bugfixes.
+    </p>
+    <p>
+      We hope to add support for other package formats in the near future.
+      In the meantime, you can
+      <a target=_blank href="https://github.com/mailpile/Mailpile/wiki/Getting-started-on-Linux">use the source, Luke!</a>
+    </p>
+
+    <h5>Apache Integration: "Multipile"</h5>
+    <p>
+      In addition to the core <b>mailpile</b> package, we currently offer
+      an optional package named <b>mailpile-apache2</b>.
+    </p>
+    <p>
+      This package will add a simple "launch and proxy" configuration to the
+      Apache web server, which will allow any user on the machine to activate
+      and access their Mailpile over the web at
+      <i>https://your.example.com/mailpile/</i>, after providing their username
+      and password.
+    </p>
+    <p>
+      <b>Be careful!</b> We do not recommend exposing Mailpile to the public
+      web without first enabling HTTPS encryption!
+      <a target=_blank href="https://letsencrypt.org/">Lets encrypt</a> helps
+      make that easy.
+    </p>
+
+    <h5>Nightly vs. Release</h5>
+    <p>
+      Two sets of packages are provided, <i>nightly</i> packages which are
+      automatically built from the
+      <a target=_blank href="https://github.com/mailpile/Mailpile">Github
+      master branch</a> and <i>release</i> packages which are updated less
+      frequently and should be more stable.
+    </p>
+    <p>
+      The release packages are recommended, unless you are eager to help
+      debug and test our latest work... which would be most appreciated!
+    </p>
+
+    <h5>Version Numbers</h5>
+    <p>
+      Note that the release candidate packages have version numbers in the 0.99.*
+      range. This is done so we can release a 1.0.0 package later on and be sure
+      it will be considered "newer" than the release candidates.
+    </p>
+
+  </div>
+</div>
+
+
+<a name="apt"></a><hr>
+<div class="row half-top">
+  <div class="col-12 col-offset-2">
+
+    <h2>Debian Repository</h2>
+    <p>
+      Using one of our Debian repositories is the recommended way to
+      install Mailpile on Linux, since it makes updates and upgrades
+      quick and easy.
+    </p>
+
+    <h4>Adding the Repository</h4>
+    <p>
+      To use our repositories you will first need to add
+      <a href="deb/key.asc">the packaging
+      signing key</a> using the `apt-key` tool and then add the repository
+      itself to your list of APT sources. Commands for accomplishing this
+      are listed below (for completeness we include commands to install
+      <tt>curl</tt> and the apt tools - you may already have these installed).
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo apt-get update && sudo apt-get install curl apt-transport-https gnupg
+...
+
+$ curl -s https://packages.mailpile.is/deb/key.asc |sudo apt-key add -
+...
+
+$ echo "deb https://packages.mailpile.is/deb <b>release</b> main" |sudo tee /etc/apt/sources.list.d/000-mailpile.list
+...</pre>
+    <p>
+      Note that if you wish to use our nightly builds instead of the release
+      packages, you need to replace the word <b>release</b> with <b>nightly</b>
+      in the APT sources entry.
+    </p>
+
+    <h4>Installing Mailpile</h4>
+    <p>
+      You can now install Mailpile (with or without the Apache integration)
+      with a single command:
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+## Mailpile
+$ sudo apt-get update && sudo apt-get install mailpile
+...
+    
+## Multipile
+$ sudo apt-get update && sudo apt-get install mailpile-apache2
+...</pre>
+    <p>
+      Now you should be able to run <b>mailpile</b> on the command line
+      and join the fun! If you have installed the Apache integration, you
+      can access <i>https://your.example.com/mailpile/</i> and log on that way.
+    </p>
+
+    <h4>Uninstalling</h4>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo apt-get remove mailpile mailpile-apache2
+...
+
+$ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
+...</pre>
+    <p>
+      You may also want to
+      <a target=_blank href="https://github.com/mailpile/Mailpile/wiki/Uninstalling-Mailpile"
+       >consult our Wiki for details about how to remove Mailpile's
+        data files</a>.
+    </p>
+
+  </div>
+</div>
+ 
+
+<a name="deb"></a><hr>
+<div class="row half-top">
+  <div class="col-12 col-offset-2">
+
+    <h2>Debian Packages</h2>
+    <table style="width: 100%;">
+      <tr class="repo-release package-python-socksipychain">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/p/python-socksipychain-2.0.15a0/python-socksipychain_2.0.15a0-1pagekite_all.deb">python-socksipychain_2.0.15a0-1pagekite_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            SOCKS5 connection library, not needed on all systems.
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">d51fea4881d3c8d5443c039fac365e8da91b8964a2a97c84f2d3d2e328a3e217</span>
+          </tt>
+        </td>
+        <td class="size">20K</td>
+
+      </tr>
+      <tr class="repo-release package-mailpile">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile_0.99.1~1.0201708040145-1_all.deb">mailpile_0.99.1~1.0201708040145-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            This is Mailpile!
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">06b619d78b7640c158b79d272d9c287dc18399b0a864d2ee5506935de02e2933</span>
+          </tt>
+        </td>
+        <td class="size">2.2M</td>
+
+      </tr>
+      <tr class="repo-release package-mailpile-apache2">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile-apache2_0.99.1~1.0201708040145-1_all.deb">mailpile-apache2_0.99.1~1.0201708040145-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            "Multipile" Multi-user Apache integration.
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">c488aaeffda91728654af4c5e1c7d67d286cbb4a4bfcd49ce5b5343cf29be781</span>
+          </tt>
+        </td>
+        <td class="size">20K</td>
+
+      </tr>
+      <tr class="repo-nightly package-mailpile">
+        <td style="text-align: center;">nightly</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile_0.99.1~dev201709150350-1_all.deb">mailpile_0.99.1~dev201709150350-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            This is Mailpile!
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">8bb8b1d41cf18f23ca61fc27d937c542a3dab932df867121261b255487aaefda</span>
+          </tt>
+        </td>
+        <td class="size">2.2M</td>
+
+      </tr>
+      <tr class="repo-nightly package-mailpile-apache2">
+        <td style="text-align: center;">nightly</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile-apache2_0.99.1~dev201709150350-1_all.deb">mailpile-apache2_0.99.1~dev201709150350-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            "Multipile" Multi-user Apache integration.
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">421246178d465ce1c32c8bf893ee337603af248e0738699b169b5f4c95d351d3</span>
+          </tt>
+        </td>
+        <td class="size">20K</td>
+
+      </tr>
+    </table><br>
+
+    <h4>Verifying Package Integrity</h4>
+    <p>
+      All packages should be signed with <a href="deb/key.asc">our
+      packaging PGP key</a>.
+    </p>
+    <p>
+      To verify the signature, add our key to your keychain and then use
+      the <tt>dpkg-sig</tt> tool to check the packages, like so:
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ apt-get install curl dpkg-sig
+...
+
+$ curl -s https://packages.mailpile.is/deb/key.asc |gpg --import -
+...
+
+$ dpkg-sig --verify mailpile*.deb
+...</pre>
+
+    <h4>Installation</h4>
+    <p>
+      Installation is straightforward; use the <tt>dpkg</tt> tool to
+      install the downloaded packages themselves, and then use
+      <tt>apt-get</tt> to install any missing dependencies.
+    </p>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo dpkg -i mailpile*.deb
+...
+
+$ sudo apt-get install -f
+...</pre>
+    <p>
+      Now you should be able to run <b>mailpile</b> on the command line
+      and join the fun! If you have installed the Apache integration, you
+      can access <i>https://your.example.com/mailpile/</i> and log on that way.
+    </p>
+    <p>
+      <b>Note:</b> If <tt>apt-get</tt> complains about missing dependencies,
+      check whether matching packages are provided above.
+    </p>
+
+    <h4>Uninstalling</h4>
+    <pre style="width: 100%; margin-bottom: 1.5em;">
+$ sudo apt-get remove mailpile mailpile-apache2</pre>
+    <p>
+      You may also want to
+      <a target=_blank href="https://github.com/mailpile/Mailpile/wiki/Uninstalling-Mailpile"
+       >consult our Wiki for details about how to remove Mailpile's
+        data files</a>.
+    </p>
+
+  </div>
+</div>
+
+
+<hr>
+
+
+<!-- Page content ends -->
+        <!-- Contact & Media -->
+        <div id="footer" class="clearfix">
+            <div class="one-third">
+                <h3>Please Donate</h3>
+                <p>To ensure ongoing development of Mailpile and our community!
+                   <a href="/thank-you/">Thank you!</a></p>
+                <p><a href="/donate/" target="_blank"><img src="/img/donate-button.png" style="width: 60%;"></a></p>
+            </div>
+            <div class="one-third">
+                <h3>Contact Us</h3>
+                <ul class="add-bottom">
+                    <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+                    <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
+<!--
+                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
+                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
+                        4161 CD18 CCA1 1A0B 1F4C<br>
+                        3EA0 AAD9 65A4 7077 75F9
+                    </a></li>
+-->
+                </ul>
+            </div>
+            <div class="one-third">
+                <h3>Resources</h3>
+                <ul class="add-bottom">
+                    <li>Code: <a href="https://github.com/mailpile/Mailpile" target="_blank">Github</a></li>
+                    <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
+                              <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
+                    <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                </ul>
+                <ul>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="add-top add-bottom"></div>
+
+
+    </div><!-- container -->
+    <div class="scroll-hint" style="position: fixed; right: 20px; bottom: 20px; width: 30px;">
+      <a href="#top"><img alt="top" src="/img/arrow-up.png"></a>
+    </div>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="author" content="Mailpile ehf">
+    <meta name="author" content="Brennan Novak">
 
     <!-- Mobile Specific Metas
     ================================================== -->
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/css/mailpile.css">
 
     <!--[if lt IE 9]>
-        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Favicons
@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: One Year Later: Mailpile Beta</title>
+    <title>Mailpile: SHA2017, Here We Come!</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -64,7 +64,7 @@
             </a></li>
             <li><a href="/download/" class="scroll-link">Download</a></li>
             <li><a href="/donate/" class="scroll-link">Donate</a></li>
-            <li class="navigation-github"><a href="https://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
+            <li class="navigation-github"><a href="http://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
     </div>
     <a style="position: absolute; top: 0;" name="top"></a>
@@ -88,69 +88,24 @@
             <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="/blog/2014-09-13_Mailpile_Beta_Release.html"><h1>One Year Later: Mailpile Beta</h1></a>
-    <p><strong>Posted by <a href="#">The Team</a> on September 13, 2014</strong></p>
+    <a href="/blog/2017-08-02_SHA2017_Here_We_Come.html"><h1>SHA2017, Here We Come!</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni</a> on August  2, 2017</strong></p>
 
-<p><img src="/files/Beta-Time-Icons.png" border="0"></p>
-<p>It's been almost exactly a year since our crowdfunding campaign ended and we realized that building Mailpile really would become our full time job. We are very grateful to be given this chance and have been working hard ever since.</p>
-<p>It's been a busy year, with ups and downs, highs and lows, stickers and t-shirts and hackathons and conferences. If you've been following Mailpile's development over the past year, you'll have seen the codebase mature from a rough prototype into a usable app, the protocol support grow and expand, and the UI mature by leaps and bounds. You'll also have seen blog posts about delays and long stretches of silence as we doubled down and immersed ourselves in hard work.</p>
-<p>Since we started development last fall, we've released two Alpha versions. The first one was a very rough technology preview focusing on the basic capabilities - our built in webserver, the core Mailpile commands, a REST API, the search engine, and basic support for sending and reading encrypted email. We released an updated Alpha II this summer, which featured advanced UI, support for mail sources, and more.</p>
-<p>Now, it's time for our Beta release!</p>
-<h3>What's in a Beta?</h3>
-<p>We believe in the old-fashioned kind of beta-release - a release that has most of the features of a 1.0, but may lack polish and maturity. Polish and maturity can only come from exposure to a wider range of users than the core team of developers and our friends. So although we are a little bashful about how many bugs remain and how many exciting features didn't make the cut-off, we feel it is time to share our work with a wider audience.</p>
-<p>So please give it a try and let us know how it works. But please understand that this is still not a finished product.</p>
-<p>Our <a href="https://github.com/pagekite/Mailpile/wiki/Release-Notes-201409-Beta">Release Notes</a> cover some of the technicalities, as does our <a href="https://github.com/pagekite/Mailpile/wiki/Security-roadmap">Security Roadmap</a>. Please read them!  In particular, it's worth taking a look at the list of known issues, so you aren't caught off guard by one of our many known bugs. Taking a look at the known issues list will also help reduce the load on us developers - the fewer people file bugs for stuff we already know about, the less time we have to spend curating our bug tracker and the more time we can spend actually fixing things!</p>
-<h3>The good news and...</h3>
-<p>For those of you too busy to read the full release notes, here is the good news:</p>
-<ul class="square">
-  <li>Getting started is easy: Mailpile now sports a user-friendly interactive setup flow</li>
-  <li>Reading and writing e-mail works, including attachments</li>
-  <li>Our searching and tagging engine can handle hundreds of thousands of messages</li>
-  <li>The user interface is clean and elegant, and our font now looks great in all browsers & weights</li>
-  <li>The spam filter works well (as long as you correct its mistakes now and then)</li>
-  <li>Our OpenPGP support is convenient and easy to work with, including searching for & importing keys</li>
-  <li>We have packages for Windows and the Mac!</li>
-</ul>
-
-<p>Some of the things that still need work:</p>
-<ul class="square">
-  <li>The user interface has not been optimized, so it can be quite slow now and then</li>
-  <li>The user interface needs some improvements to work well on smaller screens</li>
-  <li>We need to integrate Tor to better protect our users' privacy</li>
-  <li>We wrote code too fast and our translators couldn't really keep up</li>
-  <li>There are still lots of bugs that need fixing!</li>
-</ul>
-
-<h3>Where can I get it?</h3>
-<p>The Mailpile beta is released in 4 forms:</p>
-<div class="add-bottom">
-<h5 class="half-bottom">Online Demo</h5>
-View our <a href="https://www.mailpile.is/demos/">online demo here</a>
-</div>
-
-<div class="add-bottom">
-<h5 class="half-bottom"><img src="/img/os-windows.png" border="0" style="height:24px;"> Windows Installer</h5>
-Download via: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe">HTTPS</a> or <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.torrent">Bittorrent</a> (faster)<br>
-<em>Checksums: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.sha1">sha1</a> &nbsp;<a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.exe.md5">md5</a></em>
-</div>
-
-<div class="add-bottom">
-<h5 class="half-bottom"><img src="/img/os-mac.png" border="0" style="height:24px;"> Mac OS Installer</h5>
-Download via: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg">HTTPS</a> or <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.torrent">Bittorrent</a> (faster)<br>
-<em>Checksums: <a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.sha1">sha1</a> &nbsp;<a href="https://www.mailpile.is/files/releases/Mailpile-Installer-Beta.dmg.md5">md5</a></em>
-</div>
-
-<div class="add-bottom">
-<h5 class="half-bottom"><img src="/img/os-linux.png" border="0" style="height:24px;"> Linux</h5>
-As a <a href="https://github.com/pagekite/Mailpile/releases" target="_blank">tagged source release on Github</a>
-</div>
-
-<p>So give it a spin, seed our torrents and let us know what you think. :-)</p>
-<p>In the meantime, we're going to get back to work. We still have 3-4 months worth of money in the bank, which should be exactly the right amount to get our 1.0 shipped in time for the New Year. Fingers crossed!</p>
-<p>Hugs and ciphers,<br />
-  ~The Mailpile team</p>
-<p>P.S. Check out <a href="https://news.ycombinator.com/item?id=8315086">this Hacker News</a>
-post to discuss!</p>
+<p>Hello!</p>
+<p>Sorry about the long silence. I've been so busy writing code and living my
+life, that the blog (and the Twitter account) have both been a bit neglected
+this year.</p>
+<p>However, this weekend, I will crawl out of my cave and attend the
+<a href="https://sha2017.org/">SHA 2017</a> Hacker Camp! Smári will also
+be there, and I just know a whole bunch of our backers and wider community will
+be as well. In addition to sleeping in a tent and meeting awesome people (you,
+I hope) at SHA, I will be giving a talk to celebrate the Mailpile project's 4
+year birthday.</p>
+<p>Yep, Mailpile is turning 4 years old. Happy Birthday Mailpile!</p>
+<p>For those of you who won't be able to attend the talk, a small spoiler: a
+huge amount of progress has been made towards a 1.0 release. It's happening,
+folks.</p>
+<p>I'll post more after my talk.</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
