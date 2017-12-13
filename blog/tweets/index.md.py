@@ -75,7 +75,8 @@ try:
   tweets = []
   tweets.extend(api.user_timeline(me, count=(maxtweets * 2),
                                       include_rts=False,
-                                      exclude_replies=True,))
+                                      exclude_replies=True,
+                                      tweet_mode="extended"))
   tweets.sort(key=lambda t: t.created_at)
   tweets = reversed(tweets[-maxtweets:])
 
@@ -86,11 +87,18 @@ try:
     '']
   for t in tweets:
     ts = pytz.utc.localize(t.created_at).astimezone(homeTZ)
+
     try:
       frm = t.author.screen_name
     except AttributeError:
       frm = me
-    txt = t.text.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
+
+    try:
+      txt = t.full_text
+    except AttributeError:
+      txt = t.text
+
+    txt = txt.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
     urlmap, et = expand_urls(txt)
     tweet = {
       'from': frm,
@@ -113,9 +121,11 @@ try:
   json.dump(data, open(tweetjson, 'wb'), indent=2)
 
   with open(os.path.join(homedir, 'index.bak'), 'w') as fd:
-    fd.write('\n'.join(output))
-  print '\n'.join(output)
+    fd.write('\n'.join(output).encode('utf-8'))
+  print '\n'.join(output).encode('utf-8')
 
 except:
+  import traceback
+  sys.stderr.write(traceback.format_exc())
   with open(os.path.join(homedir, 'index.bak'), 'r') as fd:
     print fd.read() 
