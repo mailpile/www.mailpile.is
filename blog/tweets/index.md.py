@@ -32,6 +32,19 @@ def setup_api():
   return tweepy.API(auth)
 
 
+TWO_RE = re.compile(r'(^|\s+)([#@][A-Za-z0-9_]+)\b')
+
+def expand_twords(text):
+  fmt = '%s<a href="https://twitter.com/%s%s">%s</a>'
+  def replace_tword(m):
+    space, word = m.group(1), m.group(2)
+    if word[0] == '@':
+      return fmt % (space, '', word[1:], word)
+    else:
+      return fmt % (space, 'hashtag/', word[1:], word)
+  return TWO_RE.sub(replace_tword, text)
+
+
 TCO_RE = re.compile(r'(https?://t.co/[A-Za-z0-9_]+)')
 
 def expand_urls(text, mappings=None):
@@ -99,7 +112,7 @@ try:
       txt = t.text
 
     txt = txt.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
-    urlmap, et = expand_urls(txt)
+    urlmap, et = expand_urls(expand_twords(txt))
     tweet = {
       'from': frm,
       'date': ts.strftime(datefmt).decode('utf8'),
