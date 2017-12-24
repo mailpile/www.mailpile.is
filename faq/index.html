@@ -140,8 +140,9 @@ $(document).ready(function() {
 
   $(document).on('click', '#faq-search', hide_toc);
 
-  $(document).on('click', 'li.faq-item', function() {
+  $(document).on('click', 'li.faq-item', function(e) {
     if ($(this).data('state') === 'open') {
+      if ($(e.target).is('a')) return;
       $(this).data('state', 'closed').removeClass('open');
       $(this).find('p').hide();
     }
