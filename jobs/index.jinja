@@ -1,0 +1,82 @@
+{% extends "/layouts/page.html-jinja" %}
+{% set page = {'breadcrumb': 'jobs'} %}
+
+{% block title %}Jobs{% endblock %}
+
+{% block page_sidebar %}
+  {%- set dephack = cat("../blog/tweets/index.md") %}
+  {%- set tweets = cat("../blog/tweets/tweets.json")|from_json %}
+  <div class="tweets">
+    <h4>Some Tweets</h4>
+    {%- for tweet in tweets[:5] %}
+      {{ tweet.html_tweet|safe }}
+    {%- endfor %}
+  </div>
+{% endblock %}
+
+{% block content %}
+  {%- set current = [] %}
+  {%- set obsolete = [] %}
+  {%- for fn in ls('.', '\.md$')|reverse %}
+    {% set page = cat(fn)|from_rfc822 -%}
+    {% set url = fn|replace('.md', '.html') -%}
+    {% if page.deadline|date("%Y-%m-%d") >= "today"|date("%Y-%m-%d") %}
+      {% do current.append((page, url)) %}
+    {% else %}
+      {% do obsolete.append((page, url)) %}
+    {% endif %}
+  {%- endfor %}
+
+  {%- if current %}
+    <h2>We are hiring!</h2>
+    <p>
+      The following positions are open:
+    </p>
+    <ul style="list-style: disc">
+      {%- for page, url in current %}
+        <li><a href="{{ url }}">{{ page.subject }}</a> 
+            - <i>deadline {{ page.deadline }}</i></li>
+      {%- endfor %}
+    </ul>
+  {%- else %}
+    <h3>Nothing to see here...</h3>
+    <p>
+      <i>We are not currently hiring. Check again later!</i>
+    </p>
+  {%- endif %}
+
+  {%- if obsolete %}
+    <h4>Previous listings</h4>
+    <p>
+       These deadline to apply for the following positions has passed.
+       Our heartfelt thanks to all who applied!
+    </p>
+    <ul style="list-style: disc">
+      {% for page, url in obsolete %}
+        <li><a href="{{ url }}">{{ page.subject }}</a> 
+            - <i> expired {{ page.deadline }}</i></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <hr>
+  <p>
+    Mailpile ehf is a small company, founded around our IndieGoGo
+    crowdfunding campaign in 2013. The business has never taken outside
+    investment and work is entirely funded by contributions from backers
+    around the world (and a bit of luck with Bitcoin price developments).
+    The goal of the business is to make Mailpile a viable, sustainable
+    project which is available to as many people as possible.
+  </p>
+  <p>
+    All of the code we write is published as Free Software (Open Source)
+    and we believe that diverse teams are better qualified to write
+    software suitable for a wide audience. We do not have any fixed
+    offices, so all positions are remote and working hours can be both
+    flexible and family friendly.
+  </p>
+    If you share our goals and values, please apply to join our team!
+  <p>
+  </p>
+
+{% endblock %}

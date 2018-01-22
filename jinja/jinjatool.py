@@ -182,7 +182,8 @@ def Main():
             infile, ofile = (':' in arg and arg.split(':') or (arg, None))
             inpath = os.path.abspath(infile)
             inrelpath = os.path.relpath(inpath)
-            assert(os.path.exists(inpath))
+            if not os.path.exists(inpath):
+                raise ValueError("Missing file: %s" % inpath)
 
             # This renders the data, hooray!
             try:

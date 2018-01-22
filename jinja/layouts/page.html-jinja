@@ -85,7 +85,7 @@
                 <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
             </div>
             <div class="col-12">
-                <a href="/"><h2><strong>mail</strong>pile{% if page and page.breadcrumb %} : {{ page.breadcrumb }}{% endif %}</h2></a>
+                <h2 class="breadcrumbs"><a href="/"><strong>mail</strong>pile{% if page and page.breadcrumb %}</a> : <a href="/{{ page.breadcrumb }}/">{{ page.breadcrumb }}{% endif %}</a></h2>
 <!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
             </div>
         </div>
@@ -140,6 +140,9 @@
                         3EA0 AAD9 65A4 7077 75F9
                     </a></li>
 -->
+                </ul>
+                <ul class="add-bottom">
+                   <li>Jobs: <a href="/jobs/">Work for Mailpile!</a></li>
                 </ul>
             </div>
             <div class="one-third">

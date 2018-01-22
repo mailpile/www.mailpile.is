@@ -1444,6 +1444,13 @@ p a,
 p a:visited {
   line-height: inherit;
 }
+.breadcrumbs a,
+.breadcrumbs a.breadcrumbs:visited {
+  color: #000;
+}
+h2.breadcrumbs {
+  padding-top: 14px;
+}
 /* #Lists
 ================================================== */
 ul,

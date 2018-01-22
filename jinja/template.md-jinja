@@ -4,15 +4,22 @@
 {% set url = '/' + MP_RFC822_FILE|replace('.md', '.html') -%}
 {% if page.type == 'blog' -%}
 {%   do page.__setitem__('breadcrumb', 'blog') -%}
+{% elif page.type == 'jobs' -%}
+{%   do page.__setitem__('breadcrumb', 'jobs') -%}
 {% endif -%}
 
 {% block title %}{{ page.subject }}{% endblock %}
 
 {% block content %}
 
-  {%- if page.type == 'blog' %}
+  {%- if page.type in ('blog', 'jobs') %}
     <a href="{{ url }}"><h1>{{ page.subject }}</h1></a>
-    <p><strong>Posted by <a href="#">{{ page.author }}</a> on {{ page.date|date('%B %e, %Y') }}</strong></p>
+    <p>
+      <strong>Posted by <a href="#">{{ page.author }}</a> on {{ page.date|date('%B %e, %Y') }}</strong>
+    {%- if page.deadline %}<br>
+      <strong>Deadline: {{ page.deadline|date('%B %e, %Y') }}</strong>
+    {%- endif %}
+    </p>
   {%- endif %}
 
 {{ page.body|safe -}}
