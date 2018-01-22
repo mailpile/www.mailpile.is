@@ -1,0 +1,7 @@
+{
+  "timestamp": 1515954355,
+  "latest_version": "1.0.0rc2",
+  "en": "Hello world!\n\nOur second 1.0 release candidate is available from Github.\nDebian packages will be available on www.mailpile.is within a few days.\nHappy 2018!",
+  "source": "https://www.mailpile.is/blog/",
+  "signed": "www.mailpile.is"
+}
