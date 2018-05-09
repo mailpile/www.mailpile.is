@@ -55,31 +55,46 @@ jinja2.open = open
 jinja2.utils.open = open
 
 
-# This is a Jinja extension which gives us cat, markdown and json processing
+# A Jinja extension which gives us shell commands, markdown and json processing
 class JinjaToolExtension(Extension):
     def __init__(self, env):
         Extension.__init__(self, env)
+        env.globals['bash'] = self._bash
         env.globals['cat'] = self._cat
         env.globals['ls'] = self._ls
-        env.filters['set'] = self._set
+        env.filters['bash'] = self._bash
         env.filters['date'] = self._date
+        env.filters['set'] = self._set
         env.filters['without'] = self._without
         env.filters['markdown'] = self._markdown
         env.filters['to_json'] = self._to_json
         env.filters['from_json'] = self._from_json
         env.filters['from_rfc822'] = self._from_rfc822
 
-    def _ls(self, dirname, pattern='^[^\.]'):
+    def _bash(self, data=None, command=None):
+        if (data is not None) and (command is None):
+            command, data = data, None
         try:
-            OPENED_FILES.add(os.path.abspath(dirname))
-            return sorted([fn for fn in os.listdir(dirname)
-                           if re.search(pattern, fn)])
+            so, se = subprocess.Popen(['bash', '-c', command],
+                    stdin=subprocess.PIPE,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE
+                ).communicate(input=unicode(data or '').decode('utf-8'))
+            return (so or se or 'FAILED').decode('utf-8').strip()
         except (OSError, IOError):
             return None
 
     def _cat(self, fn):
         try:
             return open(fn, 'r').read().decode('utf-8')
+        except (OSError, IOError):
+            return None
+
+    def _ls(self, dirname, pattern='^[^\.]'):
+        try:
+            OPENED_FILES.add(os.path.abspath(dirname))
+            return sorted([fn for fn in os.listdir(dirname)
+                           if re.search(pattern, fn)])
         except (OSError, IOError):
             return None
 
