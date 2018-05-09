@@ -1,30 +1,33 @@
 #!/usr/bin/python
-#
-# This is a command-line utility that allows one to use the Jinja2 templating
-# engine to work with static files.
-#
-# Usage examples:
-#
-#    # Render to standard output
-#    jinjatool.py input.jinja
-#
-#    # Render to a named file
-#    jinjatool.py input.jinja:output.html
-#
-#    # Render the same template twice using different variables
-#    jinjatool.py title=Great input.jinja:great.html \
-#                 title=Sucks input.jinja:sucks.html
-#
-#    # Calculate Makefile-style dependencies for some templates
-#    jinjatool.py --deps thing.jinja otherthing.jinja
-#
-# The variables provided to the Jinja rendering engine are the Unix
-# environment variables, optionally updated/augmented with foo=bar pairs
-# from the command line as illustrated above.
-#
-# Variable definitions and input/output rendering pairs can be mixed and
-# matched and will be processed in order.
-#
+"""
+This is a command-line utility that allows one to use the Jinja2 templating
+engine to work with static files.
+
+Usage examples:
+
+    # Set the document root
+    export JINJATOOL_ROOT=/path/to/documents
+
+    # Render to standard output
+    jinjatool.py input.jinja
+
+    # Render to a named file
+    jinjatool.py input.jinja:output.html
+
+    # Render the same template twice using different variables
+    jinjatool.py title=Great input.jinja:great.html \\
+                 title=Sucks input.jinja:sucks.html
+
+    # Calculate Makefile-style dependencies for some templates
+    jinjatool.py --deps thing.jinja otherthing.jinja
+
+The variables provided to the Jinja rendering engine are the Unix
+environment variables, optionally updated/augmented with foo=bar pairs
+from the command line as illustrated above.
+
+Variable definitions and input/output rendering pairs can be mixed and
+matched and will be processed in order.
+"""
 import copy
 import jinja2
 import jinja2.utils
@@ -160,10 +163,11 @@ class JinjaToolExtension(Extension):
 def MakeJinjaEnvironment():
     script_path = os.path.dirname(os.path.abspath(__file__))
     script_parent = os.path.abspath(os.path.join(script_path, '..'))
+    searchpath = [script_path, script_parent, '/', '.']
+    if os.getenv('JINJATOOL_ROOT'):
+        searchpath[:0] = [os.getenv('JINJATOOL_ROOT')]
     return jinja2.Environment(
-        loader=jinja2.FileSystemLoader(searchpath=[script_path,
-                                                   script_parent,
-                                                   '/']),
+        loader=jinja2.FileSystemLoader(searchpath=searchpath),
         autoescape=True,
         extensions=['jinja2.ext.with_',
                     'jinja2.ext.do',
@@ -174,6 +178,10 @@ def MakeJinjaEnvironment():
 
 def Main():
     global OPENED_FILES
+
+    if '--help' in sys.argv or len(sys.argv) == 1:
+        print(__doc__)
+        return
 
     jinja_env = MakeJinjaEnvironment()
     variables = copy.copy(os.environ)
@@ -232,6 +240,7 @@ def Main():
                     open(ofile, 'w').write(data)
                 else:
                     sys.stdout.write(data)
-                    sys.stdout.write('<!-- EOF:%s -->\n' % infile)
+                    if '<html' in data[:80]:
+                        sys.stdout.write('\n<!-- EOF:%s -->\n' % infile)
 
 Main()
