@@ -29,6 +29,7 @@ Variable definitions and input/output rendering pairs can be mixed and
 matched and will be processed in order.
 """
 import copy
+import hashlib
 import jinja2
 import jinja2.utils
 import json
@@ -66,6 +67,9 @@ class JinjaToolExtension(Extension):
         env.globals['cat'] = self._cat
         env.globals['ls'] = self._ls
         env.filters['bash'] = self._bash
+        env.filters['max'] = self._max
+        env.filters['min'] = self._min
+        env.filters['hash'] = self._hash
         env.filters['date'] = self._date
         env.filters['set'] = self._set
         env.filters['without'] = self._without
@@ -101,6 +105,20 @@ class JinjaToolExtension(Extension):
         except (OSError, IOError):
             return None
 
+    def _max(self, data):
+        return max(data or [0])
+
+    def _min(self, data):
+        return min(data or [0])
+
+    def _hash(self, data, algo='sha1'):
+        return {
+                'md5': hashlib.md5,
+                'sha1': hashlib.sha1,
+                'sha256': hashlib.sha256,
+                'sha512': hashlib.sha256
+            }[algo.lower()](data).hexdigest()
+
     def _date(self, data, fmt='%Y-%m-%d', field='date'):
         if isinstance(data, dict):
             d = copy.copy(data)
@@ -110,7 +128,7 @@ class JinjaToolExtension(Extension):
             if fmt[:1] not in ('-', '+'):
                 fmt = '+%s' % fmt
             data = data.replace(',', ' ')
-            if ':' not in data:
+            if ':' not in data and data != 'now' and '@' not in data:
                 data += ' 12:00'
             return subprocess.check_output(['date', fmt, '--date', data]
                                            ).decode('utf-8').strip()
