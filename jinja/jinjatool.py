@@ -157,7 +157,10 @@ class JinjaToolExtension(Extension):
         return jinja2.Markup(j)
 
     def _from_json(self, data):
-        return json.loads(data)
+        if data:
+            return json.loads(data)
+        else:
+            return {}
 
     def _from_rfc822(self, text, parse_markdown=True):
         header, body = ((text or '') + '\n\n'

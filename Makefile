@@ -1,1 +1,1 @@
-jinja/Makefile
+jinja/jinjatool-make

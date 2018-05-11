@@ -1,4 +1,4 @@
-{% extends "layouts/page.html-jinja" %}
+{% extends "/jinja/layouts/page.html-jinja" %}
 
 {% set page = cat(MP_RFC822_FILE)|from_rfc822 -%}
 {% set url = '/' + MP_RFC822_FILE|replace('.md', '.html') -%}

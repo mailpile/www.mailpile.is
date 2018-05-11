@@ -9,3 +9,4 @@ files/snapshots/
 tmp/
 jinja/tests/jinja-test.html
 jinja/tests/md-test.html
+.depend
