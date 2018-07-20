@@ -50,8 +50,9 @@
 </head><body>
 {% block body %}
 {%- block navigation %}
-    <div id="navigation">
-      <div class="menu-button">Menu</div>
+    <nav id="navigation">
+        <input id="menu_hidden_check" hidden type="checkbox">
+        <label for="menu_hidden_check" class="menu-button">Menu</label>
         <ul data-breakpoint="800" class="flexnav">
             <li><a href="/" class="scroll-link" style="position: relative;">
               <img class="scroll-hint" src="/img/icon-48x48.png"
@@ -70,7 +71,7 @@
             <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="https://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
-    </div>
+    </nav>
 {%- endblock %}
     <a style="position: absolute; top: 0;" name="top"></a>
 {% block github_banner %}
