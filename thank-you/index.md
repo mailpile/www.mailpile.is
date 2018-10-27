@@ -1125,7 +1125,7 @@ Type: full
  <li>sulliwane</li>
  <li>Susan Allen</li>
  <li>Svad</li>
- <li><a href="https://twitter.com/svavarmelberg">Svavar Melberg</a></li>
+ <li><a href="https://twitter.com/svavarm">Svavar Melberg</a></li>
  <li>Sven "zwaehnn" Wiese</li>
  <li>Sverrir H. Steindórsson</li>
  <li>Swipp Inc.</li>

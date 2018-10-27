@@ -438,6 +438,42 @@ jQuery(document).ready(function($){
   "date": "2017-12-12", 
   "subject": "Holiday Season Updates", 
   "url": "/blog/2017-12-12_Holiday_Season_Updates.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2018-01-07", 
+  "subject": "Containing the Spectre", 
+  "url": "/blog/2018-01-07_Containing_the_Spectre.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2018-01-22", 
+  "subject": "We are Hiring!", 
+  "url": "/blog/2018-01-22_We_are_Hiring.html"
+},
+{
+  "author": "Oktav\u00eda", 
+  "date": "2018-03-29", 
+  "subject": "Building up Steam", 
+  "url": "/blog/2018-03-29_Building_up_Steam.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2018-05-03", 
+  "subject": "Desktop Usability Tests", 
+  "url": "/blog/2018-05-03_Desktop_Usability_Tests.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2018-05-14", 
+  "subject": "PGP Security Alert", 
+  "url": "/blog/2018-05-14_PGP_Security_Alert.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2018-10-27", 
+  "subject": "Progress Report: events, packages, 1.0", 
+  "url": "/blog/2018-10-27_Progress_Report.html"
 }];
 
   var prev = -1;

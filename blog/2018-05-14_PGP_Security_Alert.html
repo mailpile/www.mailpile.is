@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Back to Work!</title>
+    <title>Mailpile: PGP Security Alert</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -88,46 +88,136 @@
             <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="/blog/2015-04-13_Back_to_Work.html"><h1>Back to Work!</h1></a>
+    <a href="/blog/2018-05-14_PGP_Security_Alert.html"><h1>PGP Security Alert</h1></a>
     <p>
-      <strong>Posted by <a href="#">Bjarni</a> on April 13, 2015</strong>
+      <strong>Posted by <a href="#">Bjarni Rúnar</a> on May 14, 2018</strong>
     </p>
 
-<p>After a month's break, it's time to resume work on Mailpile again. Some
-time away is always useful to give perspective and get some much needed
-rest, and now that I have returned I plan to make a few log overdue
-changes to how I work on Mailpile.</p>
-<p>I'll discuss the rest later, but the first change is to improve
-communication by publishing a weekly blog post describing what has been
-done recently and what is ahead. In order to distract as little as
-possible from actual development, these posts will be kept relatively
-short most of the time. This is the first such post!</p>
-<p>Think of it as a virtual "stand up", just to set the tone for the next
-few days of work:</p>
-<h3>Last week</h3>
-<p>Nothing to report, I was on holidays!</p>
-<h3>Next week</h3>
-<p>This week is dedicated to getting back to work. An event I am attending
-next weekend will helpfully provide focus...</p>
-<p>Next weekend I will be attending a small summit in Germany, meeting
-various other developers from open source projects that also work with
-OpenPGP and GnuPG.</p>
-<p>The summit is a private, very tech-focused event attended by developers
-from most of the open source projects using GnuPG today; a real who's
-who of GnuPG and e-mail security. To make the most of this opportunity,
-this week I will refresh my own memory on the current state of GnuPG and
-Mailpile and try to identify points where I could use advice or help, as
-well as points where I may be able to contribute and help the other
-projects.</p>
-<p>Topics I will explore this week and consider for presentation at the
-summit are:</p>
+<p>Dear Mailpile users,</p>
+<p>The <a href="https://www.eff.org/deeplinks/2018/05/attention-pgp-users-new-vulnerabilities-require-you-take-action-now">EFF have publicized advice from a group of security
+researchers</a>,
+who claim there is a serious problem with PGP encrypted e-mail. Users
+are advised to disable automatic decryption of e-mail and exercise
+caution or avoid decrypting e-mails entirely until the vulnerabilities
+have been addressed.</p>
+<h2>Second (and 3rd) Update</h2>
+<p>The actual <a href="https://efail.de/">research is now public</a>.</p>
+<p>As far as I can tell, Mailpile is [mostly] not vulnerable to these flaws and
+the table of tested mail clients in
+<a href="https://efail.de/efail-attack-paper.pdf">the paper itself</a> is misleading
+in that regard. This is unfortunate.</p>
+<p>There are some exceptions though, see below.</p>
+<h4>Why is Mailpile [mostly] not vulnerable?</h4>
+<p>Because of defense in depth.</p>
 <ol>
-<li>Mailpile itself</li>
-<li>Mailpile's proposed trust model</li>
-<li>A method for generating beautiful avatars from PGP key fingerprints</li>
-<li>Enhanced e-mail signatures (manifests)</li>
+<li>Mailpile does not display HTML content by default</li>
+<li>Before displaying HTML, Mailpile cleans up malformed and incomplete tags.</li>
+<li>When displaying HTML, Mailpile does not load remote content by default.</li>
+<li>Mailpile respects the GnuPG error messages which warn of invalid data.</li>
+<li>Mailpile never sends auto-replies to incoming mail.</li>
 </ol>
-<p>That's the plan! Next week's update will tell you how it went.</p>
+<p>The direct exfiltration attack is completely thwarted by #2, and would be
+mitigated in any case by #1, #3 and #5.</p>
+<p>The CBC/CFB Gadget Attack is mostly thwarted by #4, and would also be
+mitigated in any case by #1, #3 and #5.</p>
+<p>As far as I can tell, most Mailpile users will not be vulnerable to
+EFail. Don't let the red mark in the PDF deceive you! Also, it's worth
+mentioning that this isn't a lucky accident - this is a direct
+validation of how we approach security.</p>
+<p>Part of that approach is simply taking these things seriously. If anyone
+disagrees with my analysis or finds other flaws in Mailpile, we want to know
+about it and will do our best to remedy things as quickly as possible.</p>
+<h4>Wait.. mostly? When is Mailpile vulnerable?</h4>
+<p>Mailpile is vulnerable to the CBC/CFB Gadget Attack in the following
+cases:</p>
+<ol>
+<li>Something is obsolete, either:<ol>
+   <li>Mailpile is configured to use an out-of-date version of GnuPG, or
+   <li>The encrypted data being exfiltrated is so old that GnuPG doesn't
+       expect and require it to have a Modification Detection Code (MDC).
+   </ol>
+<li>And:<ol>
+   <li>The user manually displays HTML and loads remote images, or
+   <li>The user has previously enabled HTML and images for the sender
+   </ol>
+</ol>
+
+<p>In practical terms, this means even if you are running up-to-date
+software, then old content (messages that are 10-20 years old, or more)
+could potentially be stolen - but only with a bit of social engineering,
+and only if you still have the keys on your keychain.</p>
+<p>The risk is more serious if you have configured Mailpile to use an
+obsolete version of GnuPG - use of GnuPG 1.4.x is still relatively
+common, and our tests suggest it is probably vulnerable. In this case
+more recent messages may be at risk, but the social engineering is still
+required for attacks to succeed.</p>
+<p>Fixes addressing both of these attack vectors have been pushed to our
+GitHub repository and will be included in our next release candidate.
+They are already present in our <a href="/download/linux.html">nightly Debian packages</a>.</p>
+<h2>First Update</h2>
+<p>Further details have emerged.</p>
+<p>Werner, the lead developer of GnuPG, <a href="https://lists.gnupg.org/pipermail/gnupg-users/2018-May/060315.html">claims that the flaw has to do
+with an interaction between HTML mail and GnuPG error handling in common
+e-mail clients and PGP
+plugins</a>.</p>
+<p>If this is indeed the case, most Mailpile users are not vulnerable since
+HTML messages are not rendered by default - and even when HTML is
+rendered, loading of images and other remote assets are also disabled by
+default.</p>
+<p>If you would rather take the EFF's advice, in spite of Werner's update,
+our original advice is included below.</p>
+<h2>Disabling Automatic Decryption</h2>
+<p><em>This advice is obsolete! It is preserved here for historic reasons.</em></p>
+<p>Within Mailpile, the way to disable automatic decryption is as follows:</p>
+<ol>
+<li>In the web interface, visit the <strong>Settings</strong> page</li>
+<li>Open the <strong>CLI</strong></li>
+<li>Run the following command: <code>set prefs.index_encrypted = false</code></li>
+</ol>
+<p>This will disable automatic decryption of incoming mail. However, manual
+decryption (decryption when messages are read) will still work and it is
+advisable to not read any encrypted mail until we know more about the
+attack and whether Mailpile is actually vulnerable.</p>
+<p>If you <strong>absolutely must read encrypted e-mail</strong>, we recommend taking
+your computer offline before doing so, so as to prevent network-based
+side channels from leaking sensitive key material.</p>
+<p>To re-enable indexing of encrypted messages, perform the same steps
+again, except <code>set prefs.index_encrypted = true</code> at the end.</p>
+<h2>What is going on?</h2>
+<p><em>What follows is idle speculation. Please take it with an appropriately
+sized grain of salt!</em></p>
+<div style="text-decoration: line-through">
+
+I don't know what is going on. However, I trust the EFF. They would not
+be advising we disable such an important tool unless it was of critical
+importance.
+
+The implications of the advisory, are that automatic e-mail decryption
+can leak details of your private key material back to a malicious
+attacker.
+
+The mechanism is unknown, but the common denominator in the EFF's list
+of vulnerable e-mail clients is use of GnuPG - which Mailpile also
+relies upon.
+
+My guess, is that there is a flaw in GnuPG which allows attackers to
+craft encrypted messages that force GnuPG to leak key material back over
+the network to an attacker.
+
+</div>
+
+<p><br></p>
+<p>See updates from myself and Werner above. The situation is not as bad as
+it first appeared - in fact, it appears Mailpile is not vulnerable to this
+problem.</p>
+<p>All the same, because we take these things seriously, I have filed issues
+in our issue tracker for follow-up work and proactive improvements:
+<a href="https://github.com/mailpile/Mailpile/issues/2072">#2072</a>,
+<a href="https://github.com/mailpile/Mailpile/issues/2073">#2073</a>,
+<a href="https://github.com/mailpile/Mailpile/issues/2074">#2074</a>,
+<a href="https://github.com/mailpile/Mailpile/issues/2075">#2075</a>, and
+<a href="https://github.com/mailpile/Mailpile/issues/2077">#2077</a>.</p>
+<p>We will post updates as more information becomes available.</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>

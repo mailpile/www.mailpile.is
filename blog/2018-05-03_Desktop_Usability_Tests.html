@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Back to Work!</title>
+    <title>Mailpile: Desktop Usability Tests</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -88,46 +88,136 @@
             <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="/blog/2015-04-13_Back_to_Work.html"><h1>Back to Work!</h1></a>
+    <a href="/blog/2018-05-03_Desktop_Usability_Tests.html"><h1>Desktop Usability Tests</h1></a>
     <p>
-      <strong>Posted by <a href="#">Bjarni</a> on April 13, 2015</strong>
+      <strong>Posted by <a href="#">Bjarni Rúnar</a> on May  3, 2018</strong>
     </p>
 
-<p>After a month's break, it's time to resume work on Mailpile again. Some
-time away is always useful to give perspective and get some much needed
-rest, and now that I have returned I plan to make a few log overdue
-changes to how I work on Mailpile.</p>
-<p>I'll discuss the rest later, but the first change is to improve
-communication by publishing a weekly blog post describing what has been
-done recently and what is ahead. In order to distract as little as
-possible from actual development, these posts will be kept relatively
-short most of the time. This is the first such post!</p>
-<p>Think of it as a virtual "stand up", just to set the tone for the next
-few days of work:</p>
-<h3>Last week</h3>
-<p>Nothing to report, I was on holidays!</p>
-<h3>Next week</h3>
-<p>This week is dedicated to getting back to work. An event I am attending
-next weekend will helpfully provide focus...</p>
-<p>Next weekend I will be attending a small summit in Germany, meeting
-various other developers from open source projects that also work with
-OpenPGP and GnuPG.</p>
-<p>The summit is a private, very tech-focused event attended by developers
-from most of the open source projects using GnuPG today; a real who's
-who of GnuPG and e-mail security. To make the most of this opportunity,
-this week I will refresh my own memory on the current state of GnuPG and
-Mailpile and try to identify points where I could use advice or help, as
-well as points where I may be able to contribute and help the other
-projects.</p>
-<p>Topics I will explore this week and consider for presentation at the
-summit are:</p>
+<p>Last week was exciting!</p>
+<p>The Mailpile desktop platform team got together for a miniature
+developer summit in Reykjavík, Iceland. Alex, Pétur and myself all flew
+in from our corners of the globe, and Oktavía welcomed us and made sure
+everything went as smoothly as possible.</p>
+<p>We spent some time working at Stofan, my favourite café, and some
+time hanging out at the offices of <a href="https://www.1984.is/">1984</a>, who
+graciously lent us desks and a meeting room. Thank you, 1984!</p>
+<p>It was really nice to have the whole team together in one place.</p>
+<p>We ate some traditional Icelandic food, tasted some Icelandic
+hipster-beer, chatted and just gelled a bit as a team. I got a chance to
+give everyone a bit more insight into Mailpile's background, discussing
+everything from
+<a href="/blog/2013-09-05_PayPal_Freezes_Campaign_Funds.html">PayPal freezing our funds</a> to
+<a href="/blog/2014-10-07_Some_Thoughts_on_GnuPG.html">GnuPG integration challenges</a> to
+<a href="/blog/2015-05-18_Digging_for_Data.html">extracting spreadsheets from e-mail</a>
+to introducing <a href="/blog/2015-09-22_pyConUK_and_Mailpile_Mel.html">Mailpile Mel</a>.</p>
+<p>The main event though, was to get a bunch of helpful humans to come test
+the Mailpile installers and desktop integration.</p>
+<p>Usability testing!</p>
+<p><img src="/files/2018-04-Mailpile-Desktop-Usability.jpg" border="0"></p>
+<h2>Why usability test?</h2>
+<p>The more familiar you are with something, the harder it can be to see it
+clearly. You see what you expect to see.</p>
+<p>In software, this means software developers quickly become blind to the
+flaws of their own code. We literally cannot see them! Getting a fresh
+pair of eyes is invaluable, especially if you are interested in
+understanding which parts of an interface are confusing or unclear.</p>
+<p>To compound matters even further, everyone uses their computer in a
+slightly different way. The way I use Mailpile may work perfectly, but
+if you do things in a different order, use a different mail server, run
+on a different version of Linux ... any of those differences may trigger
+a poorly tested code path and uncover a bug.</p>
+<p>Usability tests can be as simple as asking a friend to try your thing
+and just watching how they do and taking notes. It doesn't have to be
+complicated to provide value and I encourage all software developers
+to just grab a pen and some paper and watch people use their stuff. You
+always learn something!</p>
+<p>In our case, we had some quite specific goals, so we were a little bit
+more methodical.</p>
+<h2>How we tested, and why</h2>
+<p>For this round of tests, these were our main goals:</p>
 <ol>
-<li>Mailpile itself</li>
-<li>Mailpile's proposed trust model</li>
-<li>A method for generating beautiful avatars from PGP key fingerprints</li>
-<li>Enhanced e-mail signatures (manifests)</li>
+<li>To verify that our draft installers actually work.</li>
+<li>To check whether the software "makes sense" to a new user.</li>
 </ol>
-<p>That's the plan! Next week's update will tell you how it went.</p>
+<p>The first goal ws relatively straightforward, technical.</p>
+<p>The latter was much more subtle, and relates to the fact that Mailpile is quite
+complex and in many ways unusual software. The general public is not used to
+running servers on their computers - Mailpile is a web server. The general
+public is not used to interacting with local software using a web browser - but
+that's how Mailpile works.</p>
+<p>As a result, our installation sequence and the initial setup process needs
+to gradually introduce these concepts. We wanted to get a feel for whether
+it was actually succeeding.</p>
+<p>Oktavía scheduled and recruited a moderately diverse group of volunteers
+to come test. All told we had 3 men and 3 women, of mixed ages. Some were
+Windows users, others Mac users. They were all tech-savvy enough to own
+their own laptops, but not necessarily programmers themselves. Some
+digital natives, some less so. Roughly our target demographic for our next
+release.</p>
+<p>The structure of the test itself was relatively simple.</p>
+<p>We tested with one volunteer at a time. Each time we started with
+introductions, explaining roughly what Mailpile was and what we expected
+of our volunteers. We warned them we wouldn't help them much, asked them
+to think out loud if they could. Made sure they understood that failures
+and problems were <em>good</em>, that breaking things would help us identify
+things to fix.</p>
+<p>Next, each person was given a USB stick with an installer on it and
+instructions to attempt to install Mailpile and go through the initial
+setup until we told them to stop. Once stopped, they were to exit and shut
+down the app. We watched over their shoulder and made notes. We tried to
+resist the urge to answer any questions, to see if they could figure
+things out themselves.</p>
+<p>Finally Oktavia asked a few questions about the experience, we thanked
+them, gave them stickers and chocolate and sent them on their way!</p>
+<p>That was it.</p>
+<p>Easy, right?</p>
+<h2>What we learned</h2>
+<p>Even a simple, short test like this has many potential pitfalls.</p>
+<ul>
+<li>Does the installer work?</li>
+<li>Does the app run?</li>
+<li>Does the tester successfully navigate from the installer to the app,
+    and from the app to the browser?</li>
+<li>Does the tester understand that shutting down Mailpile and logging out
+    from the web UI are not the same things?</li>
+<li>Is the process confusing or uncomfortable?</li>
+</ul>
+<p>If the answer to any of these questions is "no", then we would like to
+understand <em>why</em>, so we can fix the problem.</p>
+<p>The answers in this case were mostly good news! Which is refreshing,
+since last time we tested Mailpile in this environment, the result was
+so many failures and so much confusion that we went back to the drawing
+board.</p>
+<p>We found some minor bugs, but everyone managed to install the app and
+complete the first stage of the test. Good news! Nobody was frustrated,
+most confusion was minor. Also good news!</p>
+<p>Shutting down the app was the main failure; most of our participants
+thought they were done when they had logged out of the web interface.
+But, we have ways to address this. And worst-case, we need to make sure
+Mailpile shuts down cleanly when the computer powers down anyway.</p>
+<p>To sum up the main lessons:</p>
+<ul>
+<li>The installers work!</li>
+<li>The app runs!</li>
+<li>People didn't read the text in the GUI: less is probably more here</li>
+<li>Windows users expect the installer to launch the app when done</li>
+<li>Our Mac build process created a broken GnuPG</li>
+<li>Our Mac build was launching the in-browser UI prematurely</li>
+<li>Our desktop notifications on the Mac were spammy</li>
+<li>The logged-out page should explain that the app is still running</li>
+<li>Nobody notices systray or status bar icons on first run</li>
+<li>Our testers were comfortable and happy, most chose to keep the
+     app installed so they could play more at home.</li>
+</ul>
+<p>We learned a lot!</p>
+<p>Watching people use the app and interact with our work was very
+stimulating. The next day we had a (somewhat hung over) brainstorming
+session, discussing how things could be different or better. In the end we
+felt comfortable continuing with a mostly unchanged design. The issues
+were mostly minor and felt fixable.</p>
+<p>So, we're on track! The next step will be to fix the bugs and get some
+"alpha" packages ready for wider testing.</p>
+<p>Exciting!</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>

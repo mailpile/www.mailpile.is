@@ -2,334 +2,425 @@
 <rss version="2.0">
 <channel>
   <title>Mailpile: The Mailpile Blog</title>
-  <link>http://www.mailpile.is/blog/</link>
+  <link>https://www.mailpile.is/blog/</link>
   <item>
-    <title>Holiday Season Updates</title>
-    <link>http://www.mailpile.is/blog/2017-12-12_Holiday_Season_Updates.html</link>
-    <description>&lt;p&gt;Happy holidays, dear readers!&lt;/p&gt;
-&lt;p&gt;It&#39;s been way too long since I updated this blog. Way too long!&lt;/p&gt;
-&lt;p&gt;Back in August, the plan was to quickly post job ads and start looking
-for people to hire for our next stages of work - building minimal
-Windows and Mac GUIs, and installers.&lt;/p&gt;
-&lt;p&gt;That timeline didn&#39;t quite pan out, mostly because I was distracted by
-other work. My &lt;a href=&#34;https://pagekite.net/&#34;&gt;other job&lt;/a&gt; needed my attention,
-then &lt;a href=&#34;https://grapevine.is/news/2017/09/15/icelands-government-collapses-uncertainty-lies-ahead/&#34;&gt;the Icelandic government
-collapsed&lt;/a&gt;,
-so I volunteered some of my time to help the &lt;a href=&#34;https://www.piratar.is/&#34;&gt;Icelandic
-Pirates&lt;/a&gt; campaign. I also moved back to Italy
-from Iceland, which always slows me down for a while.&lt;/p&gt;
-&lt;p&gt;But enough excuses already!&lt;/p&gt;
-&lt;p&gt;After some intensive introspection and deep analysis of the Mailpile
-project&#39;s structure and history, we have identified our biggest problem:
-I am a bottleneck. OK, I made that up. We didn&#39;t perform any analysis,
-it&#39;s been obvious for a while that this is a problem. However, empowered
-by Bitcoin&#39;s latest shenanigans, we have finally done something about
-it.&lt;/p&gt;
-&lt;p&gt;We&#39;ve hired a project manager!&lt;/p&gt;
-&lt;p&gt;The talented &lt;a href=&#34;https://twitter.com/Oktavia&#34;&gt;Oktavía Hrund&lt;/a&gt; has been hired
-to make sure things get done in spite of me. She has a contract in hand,
-a budget to work with and Mailpile installed on her laptop... she&#39;s here
-to kick ass and chew bubblegum.&lt;/p&gt;
-&lt;p&gt;We have changed ownership!&lt;/p&gt;
-&lt;p&gt;Another recent development, is Mailpile ehf, the Icelandic company
-founded around the project has changed ownership. Mailpile ehf used to
-be fully owned by the original project founders: Smári McCarthy, Brennan
-Novak and myself. Since then, Brennan has moved on to other things.
-Recently he sold his shares to &lt;a href=&#34;https://www.danielyeow.com/&#34;&gt;Daniel
-Yeow&lt;/a&gt;. Daniel should be a a familiar face
-to the the speed skaters amongst you (I hear Mailpile is huge in the
-speed skating community... huge!), but he has also been helping out with
-coordination of our Transifex community while researching whether it is
-possible to use Raspberry-Pi-like devices to make a Mailpile hardware
-product.&lt;/p&gt;
-&lt;p&gt;You made this happen!&lt;/p&gt;
-&lt;p&gt;Your encouragement, your belief in our vision and your gracious
-donations (including Bitcoin donations) are what makes Mailpile
-possible. Bitcoin prices have risen dramatically, so much so that we now
-have enough magical Internet money to fund another round or two of work
-after this one - assuming Bitcoin doesn&#39;t collapse completely in the
-meantime! So thank you again for your trust and donations. They have
-given us the motivation and courage we need to keep going and make
-Mailpile available, easy and accessible to you all! We may be late, but
-never isn&#39;t an option.&lt;/p&gt;
-&lt;p&gt;That&#39;s the news for now.&lt;/p&gt;
-&lt;p&gt;I&#39;m sure Okta will make me blog again soon. Until then, I hope you enjoy
-Santaseason, spend some quality time with your loved ones and enter the
-Gregorian Calendar New Year full of joy and optimism...&lt;/p&gt;
-&lt;p&gt;Take care!&lt;/p&gt;</description>
-    <pubDate>Tue, 12 Dec 2017 12:00:00 +0000</pubDate>
+    <title>Progress Report: events, packages, 1.0</title>
+    <link>https://www.mailpile.is/blog/2018-10-27_Progress_Report.html</link>
+    <description>&lt;p&gt;Hello world! How are you?&lt;/p&gt;
+&lt;p&gt;I&#39;m writing this, sitting on a bus in Luxembourg, realizing that we have been
+very quite for quite some time. Our last posts were in May, first a report on
+&lt;a href=&#34;2018-05-03_Desktop_Usability_Tests.html&#34;&gt;the results of our first round of desktop package usability
+testing&lt;/a&gt;, quickly followed by a
+&lt;a href=&#34;2018-05-14_PGP_Security_Alert.html&#34;&gt;statement on how the EFail flaw impacted
+Mailpile&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since then we may have been quiet, but we have not been idle:&lt;/p&gt;
+&lt;ul class=&#34;square&#34;&gt;
+ &lt;li&gt;Many, many bugs have been found and fixed
+ &lt;li&gt;The first round of our desktop packaging project is complete,
+     we have packages and very basic desktop integration for both
+     Windows and the Mac
+ &lt;li&gt;Mailpile&#39;s multi-user Apache integration
+     (&lt;a href=&#34;https://github.com/mailpile/Mailpile/tree/master/shared-data/multipile&#34;
+         target=_blank&gt;Multipile&lt;/a&gt;)
+     has been simplified and reworked
+ &lt;li&gt;Mailpile&#39;s internal (in-memory) master security key is now
+     protected against memory corruption
+ &lt;li&gt;Mailpile is now &lt;i&gt;compatible&lt;/i&gt; with
+     &lt;a target=_blank href=&#34;https://autocrypt.org/&#34;&gt;Autocrypt Level 1&lt;/a&gt;,
+     but not yet fully compliant
+ &lt;li&gt;I attended the OpenPGP e-mail summit in Brussels
+&lt;/ul&gt;
+
+&lt;p&gt;I would like to publicly thank Alex and Pétur for their hard work on the
+Mailpile Desktop packages, and in particular for how they took delays and slow
+responses from my end graciously and in stride.&lt;/p&gt;
+&lt;p&gt;Read on to learn a bit more about the OpenPGP E-mail Summit, our CCC plans, the
+state of the desktop packaging work, and of course the elusive 1.0 release.&lt;/p&gt;
+&lt;h2&gt;The OpenPGP Summit and 35c3&lt;/h2&gt;
+&lt;p&gt;Last weekend I visited the &lt;a href=&#34;https://mailfence.com/&#34;&gt;Mailfence&lt;/a&gt; office in
+Brussels, to attend the annual OpenPGP E-mail Summit.&lt;/p&gt;
+&lt;p&gt;The OpenPGP E-mail Summit is one of my favourite community events. Just
+two days long, it is an informal event focused on getting people from
+the world of e-mail encryption to exchange knowledge and collaborate. &lt;/p&gt;
+&lt;p&gt;This year there were (by my rough guesstimate) about 50 people from over
+20 projects present, including Phil Zimmermann himself, the creator of
+PGP. I was very happy to meet him and shake his hand. We ended up having
+about 20 different sessions, discussing topics ranging from key server
+management, to user interfaces, to updating the OpenPGP standard itself.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wiki.gnupg.org/EmailSummit2018Notes&#34;&gt;Notes from all the sessions have been published.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There was also a dinner and plenty of socializing, the value of which is
+not to be understated. Meeting people face-to-face almost always makes
+collaboration online easier and more productive.&lt;/p&gt;
+&lt;p&gt;For Mailpile, the main outcomes of the summit were the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There seems to be potential for partnerships with 2-3 other businesses in
+      the OpenPGP space, which we look forward to exploring further.&lt;/li&gt;
+&lt;li&gt;The Web Key Directory specification is still evolving in ways which may
+      require we re-evaluate how we use it in Mailpile.&lt;/li&gt;
+&lt;li&gt;Mailpile will aim for Autocrypt Level 1 compliance, soon! Our aim is to
+      get a member of the community to review and confirm our implementation
+      at the &lt;a href=&#34;https://events.ccc.de/2018/09/11/35c3-call-for-participation-and-submission-guidelines/&#34;&gt;35c3&lt;/a&gt;
+      conference. We have a volunteer to perform the review.&lt;/li&gt;
+&lt;li&gt;I have a vouncher and will be representing Mailpile at 35c3. Come say hi!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It was a productive weekend!&lt;/p&gt;
+&lt;h2&gt;When will Mac and Windows packages be available?&lt;/h2&gt;
+&lt;p&gt;If you&#39;ve e-mailed me asking this question; my apologies for not
+answering. I haven&#39;t replied, because I don&#39;t know! If I did, our
+download package would just say so.&lt;/p&gt;
+&lt;p&gt;There are three main tasks we need to complete before we make the
+desktop packages available to the wider Internet:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A short private beta, to reassure ourselves the packages
+      don&#39;t have any blindingly obvious bugs.&lt;/li&gt;
+&lt;li&gt;Launch a Discourse forum, so our users have a venue to help
+      each other out.&lt;/li&gt;
+&lt;li&gt;Finish our &#34;build robot&#34; so packaging becomes an automated
+      process without any human bottlenecks.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I am not going to commit to a time-line for getting this done, but this
+work is are all in progress and won&#39;t take forever. This year? This
+year.&lt;/p&gt;
+&lt;p&gt;It&#39;s worth mentioning that some important tasks have been postponed and
+will not be blocking the availability of packages - so these packages
+will not be &#34;Mailpile 1.0&#34;. But they&#39;re close.&lt;/p&gt;
+&lt;h2&gt;So, what about Mailpile 1.0?&lt;/h2&gt;
+&lt;p&gt;Our current release is 1.0.0rc4, tagged and pushed earlier today.&lt;/p&gt;
+&lt;p&gt;At times it feels like we&#39;re chasing &lt;a href=&#34;https://en.wikipedia.org/wiki/Zeno%27s_paradoxes#Achilles_and_the_tortoise&#34;&gt;the tortoise from one of Zeno&#39;s
+paradoxes&lt;/a&gt;,
+always getting closer but never able to catch up. For every issue we
+close, others are opened...&lt;/p&gt;
+&lt;p&gt;But in spite of that, my to-do list for the elusive &#34;Mailpile 1.0&#34;
+release really is starting to get shorter and the issues that remain are
+not as complex as the ones we&#39;ve resolved. I&#39;ve updated the &lt;a href=&#34;https://github.com/mailpile/Mailpile/milestone/4&#34;&gt;GitHub
+Milestone&lt;/a&gt; to reflect
+the current priority issues. It&#39;s not a long list, mostly relatively
+minor bugfixes.&lt;/p&gt;
+&lt;p&gt;The two big items left on my 1.0 roadmap are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Fully implement Autocrypt Level 1&lt;/li&gt;
+&lt;li&gt;Implement easy remote access (PageKite and Tor Hidden Services)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The former is necessary for an interoperable and complete implementation
+of &#34;PGP for everyone&#34;, and the latter is needed so people can access
+their Mailpiles remotely - in particular to access their Mailpile from
+their smart-phones.&lt;/p&gt;
+&lt;p&gt;Again, I&#39;m not going to make any promises about when these will get
+done.&lt;/p&gt;
+&lt;p&gt;But this mini roadmap is still worth sharing, because if you liked the
+vision behind Mailpile and those two issues aren&#39;t critical for your
+use-case... then maybe Mailpile is already ready for you. Maybe!&lt;/p&gt;
+&lt;p&gt;One-point-oh is an important label, but it&#39;s not everything.&lt;/p&gt;
+&lt;p&gt;Mailpile is already a great e-mail client. Give it a try!&lt;/p&gt;</description>
+    <pubDate>Sat, 27 Oct 2018 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Still Hacking Anyway</title>
-    <link>http://www.mailpile.is/blog/2017-08-13_SHA2017.html</link>
-    <description>&lt;p&gt;Last weekend, I happily attended the Dutch SHA2017 Hacker Camp. I slept
-in a tent, gave a talk about Mailpile and had too much beer and almost
-enough interesting conversations.&lt;/p&gt;
-&lt;p&gt;The advertised title of my talk was &#34;Four years later&#34;, because Mailpile
-itself was launched at the last Dutch hacker camp: OHM in 2013. So I
-talked about what Mailpile is, what has happened during the last four
-years and finally I announced &lt;a href=&#34;/download/&#34;&gt;our first 1.0 release candiate&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;However, I sneakily changed the title to &lt;strong&gt;Still Hacking Anyway&lt;/strong&gt;, because
-I just liked that better.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&#34;https://media.ccc.de/about.html&#34;&gt;the Chaos Computer Club media
-project&lt;/a&gt;, you can watch the talk here:&lt;/p&gt;
-&lt;div style=&#34;width: 670px; margin: 0 0 0 20px;&#34;&gt;
-&lt;iframe width=&#34;660&#34; height=&#34;378&#34; style=&#34;margin: 0 0 0 10px;&#34;
-        src=&#34;https://media.ccc.de/v/SHA2017-101-mailpile/oembed&#34;
-        frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;
- &lt;p style=&#34;text-align: right; margin: -10px 10px 20px 0;&#34;&gt;
-   &lt;a href=&#34;https://media.ccc.de/v/SHA2017-101-mailpile&#34;
-      target=_blank&gt;download the talk here&lt;/a&gt;&lt;/p&gt;
+    <title>PGP Security Alert</title>
+    <link>https://www.mailpile.is/blog/2018-05-14_PGP_Security_Alert.html</link>
+    <description>&lt;p&gt;Dear Mailpile users,&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.eff.org/deeplinks/2018/05/attention-pgp-users-new-vulnerabilities-require-you-take-action-now&#34;&gt;EFF have publicized advice from a group of security
+researchers&lt;/a&gt;,
+who claim there is a serious problem with PGP encrypted e-mail. Users
+are advised to disable automatic decryption of e-mail and exercise
+caution or avoid decrypting e-mails entirely until the vulnerabilities
+have been addressed.&lt;/p&gt;
+&lt;h2&gt;Second (and 3rd) Update&lt;/h2&gt;
+&lt;p&gt;The actual &lt;a href=&#34;https://efail.de/&#34;&gt;research is now public&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As far as I can tell, Mailpile is [mostly] not vulnerable to these flaws and
+the table of tested mail clients in
+&lt;a href=&#34;https://efail.de/efail-attack-paper.pdf&#34;&gt;the paper itself&lt;/a&gt; is misleading
+in that regard. This is unfortunate.&lt;/p&gt;
+&lt;p&gt;There are some exceptions though, see below.&lt;/p&gt;
+&lt;h4&gt;Why is Mailpile [mostly] not vulnerable?&lt;/h4&gt;
+&lt;p&gt;Because of defense in depth.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Mailpile does not display HTML content by default&lt;/li&gt;
+&lt;li&gt;Before displaying HTML, Mailpile cleans up malformed and incomplete tags.&lt;/li&gt;
+&lt;li&gt;When displaying HTML, Mailpile does not load remote content by default.&lt;/li&gt;
+&lt;li&gt;Mailpile respects the GnuPG error messages which warn of invalid data.&lt;/li&gt;
+&lt;li&gt;Mailpile never sends auto-replies to incoming mail.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The direct exfiltration attack is completely thwarted by #2, and would be
+mitigated in any case by #1, #3 and #5.&lt;/p&gt;
+&lt;p&gt;The CBC/CFB Gadget Attack is mostly thwarted by #4, and would also be
+mitigated in any case by #1, #3 and #5.&lt;/p&gt;
+&lt;p&gt;As far as I can tell, most Mailpile users will not be vulnerable to
+EFail. Don&#39;t let the red mark in the PDF deceive you! Also, it&#39;s worth
+mentioning that this isn&#39;t a lucky accident - this is a direct
+validation of how we approach security.&lt;/p&gt;
+&lt;p&gt;Part of that approach is simply taking these things seriously. If anyone
+disagrees with my analysis or finds other flaws in Mailpile, we want to know
+about it and will do our best to remedy things as quickly as possible.&lt;/p&gt;
+&lt;h4&gt;Wait.. mostly? When is Mailpile vulnerable?&lt;/h4&gt;
+&lt;p&gt;Mailpile is vulnerable to the CBC/CFB Gadget Attack in the following
+cases:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Something is obsolete, either:&lt;ol&gt;
+   &lt;li&gt;Mailpile is configured to use an out-of-date version of GnuPG, or
+   &lt;li&gt;The encrypted data being exfiltrated is so old that GnuPG doesn&#39;t
+       expect and require it to have a Modification Detection Code (MDC).
+   &lt;/ol&gt;
+&lt;li&gt;And:&lt;ol&gt;
+   &lt;li&gt;The user manually displays HTML and loads remote images, or
+   &lt;li&gt;The user has previously enabled HTML and images for the sender
+   &lt;/ol&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In practical terms, this means even if you are running up-to-date
+software, then old content (messages that are 10-20 years old, or more)
+could potentially be stolen - but only with a bit of social engineering,
+and only if you still have the keys on your keychain.&lt;/p&gt;
+&lt;p&gt;The risk is more serious if you have configured Mailpile to use an
+obsolete version of GnuPG - use of GnuPG 1.4.x is still relatively
+common, and our tests suggest it is probably vulnerable. In this case
+more recent messages may be at risk, but the social engineering is still
+required for attacks to succeed.&lt;/p&gt;
+&lt;p&gt;Fixes addressing both of these attack vectors have been pushed to our
+GitHub repository and will be included in our next release candidate.
+They are already present in our &lt;a href=&#34;/download/linux.html&#34;&gt;nightly Debian packages&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;First Update&lt;/h2&gt;
+&lt;p&gt;Further details have emerged.&lt;/p&gt;
+&lt;p&gt;Werner, the lead developer of GnuPG, &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2018-May/060315.html&#34;&gt;claims that the flaw has to do
+with an interaction between HTML mail and GnuPG error handling in common
+e-mail clients and PGP
+plugins&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If this is indeed the case, most Mailpile users are not vulnerable since
+HTML messages are not rendered by default - and even when HTML is
+rendered, loading of images and other remote assets are also disabled by
+default.&lt;/p&gt;
+&lt;p&gt;If you would rather take the EFF&#39;s advice, in spite of Werner&#39;s update,
+our original advice is included below.&lt;/p&gt;
+&lt;h2&gt;Disabling Automatic Decryption&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;This advice is obsolete! It is preserved here for historic reasons.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Within Mailpile, the way to disable automatic decryption is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In the web interface, visit the &lt;strong&gt;Settings&lt;/strong&gt; page&lt;/li&gt;
+&lt;li&gt;Open the &lt;strong&gt;CLI&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Run the following command: &lt;code&gt;set prefs.index_encrypted = false&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will disable automatic decryption of incoming mail. However, manual
+decryption (decryption when messages are read) will still work and it is
+advisable to not read any encrypted mail until we know more about the
+attack and whether Mailpile is actually vulnerable.&lt;/p&gt;
+&lt;p&gt;If you &lt;strong&gt;absolutely must read encrypted e-mail&lt;/strong&gt;, we recommend taking
+your computer offline before doing so, so as to prevent network-based
+side channels from leaking sensitive key material.&lt;/p&gt;
+&lt;p&gt;To re-enable indexing of encrypted messages, perform the same steps
+again, except &lt;code&gt;set prefs.index_encrypted = true&lt;/code&gt; at the end.&lt;/p&gt;
+&lt;h2&gt;What is going on?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;What follows is idle speculation. Please take it with an appropriately
+sized grain of salt!&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;text-decoration: line-through&#34;&gt;
+
+I don&#39;t know what is going on. However, I trust the EFF. They would not
+be advising we disable such an important tool unless it was of critical
+importance.
+
+The implications of the advisory, are that automatic e-mail decryption
+can leak details of your private key material back to a malicious
+attacker.
+
+The mechanism is unknown, but the common denominator in the EFF&#39;s list
+of vulnerable e-mail clients is use of GnuPG - which Mailpile also
+relies upon.
+
+My guess, is that there is a flaw in GnuPG which allows attackers to
+craft encrypted messages that force GnuPG to leak key material back over
+the network to an attacker.
+
 &lt;/div&gt;
 
-&lt;p&gt;After the talk I gave away a bunch of Mailpile t-shirts and stickers,
-but mostly relaxed and enjoyed being surrounded by interesting
-hacktivists at the camp. It was a wonderful event and the organizers
-and volunteers all did a fantastic job.&lt;/p&gt;
-&lt;p&gt;The talk ended with a call for help; funnily enough, I&#39;m roughly on
-schedule and would like to hire a couple of developers to help me
-complete the &lt;a href=&#34;2017-01-30_A_Plan_for_2017.html&#34;&gt;Plan for 2017&lt;/a&gt;. I will
-post more details about the positions later this month: if you know
-Windows or Mac desktop developers that are looking for 3-4 months of
-contract work, watch this space - or just get in touch!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A correction:&lt;/strong&gt; I am aware of one factual error in my talk: I said
-that GnuPG 2.1 was moving towards making TOFU the default trust model.
-This is incorrect. My apologies!&lt;/p&gt;</description>
-    <pubDate>Sun, 13 Aug 2017 12:00:00 +0000</pubDate>
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;See updates from myself and Werner above. The situation is not as bad as
+it first appeared - in fact, it appears Mailpile is not vulnerable to this
+problem.&lt;/p&gt;
+&lt;p&gt;All the same, because we take these things seriously, I have filed issues
+in our issue tracker for follow-up work and proactive improvements:
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2072&#34;&gt;#2072&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2073&#34;&gt;#2073&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2074&#34;&gt;#2074&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2075&#34;&gt;#2075&lt;/a&gt;, and
+&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2077&#34;&gt;#2077&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We will post updates as more information becomes available.&lt;/p&gt;</description>
+    <pubDate>Mon, 14 May 2018 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>SHA2017, Here We Come!</title>
-    <link>http://www.mailpile.is/blog/2017-08-02_SHA2017_Here_We_Come.html</link>
-    <description>&lt;p&gt;Hello!&lt;/p&gt;
-&lt;p&gt;Sorry about the long silence. I&#39;ve been so busy writing code and living my
-life, that the blog (and the Twitter account) have both been a bit neglected
-this year.&lt;/p&gt;
-&lt;p&gt;However, this weekend, I will crawl out of my cave and attend the
-&lt;a href=&#34;https://sha2017.org/&#34;&gt;SHA 2017&lt;/a&gt; Hacker Camp! Smári will also
-be there, and I just know a whole bunch of our backers and wider community will
-be as well. In addition to sleeping in a tent and meeting awesome people (you,
-I hope) at SHA, I will be giving a talk to celebrate the Mailpile project&#39;s 4
-year birthday.&lt;/p&gt;
-&lt;p&gt;Yep, Mailpile is turning 4 years old. Happy Birthday Mailpile!&lt;/p&gt;
-&lt;p&gt;For those of you who won&#39;t be able to attend the talk, a small spoiler: a
-huge amount of progress has been made towards a 1.0 release. It&#39;s happening,
-folks.&lt;/p&gt;
-&lt;p&gt;I&#39;ll post more after my talk.&lt;/p&gt;</description>
-    <pubDate>Wed, 02 Aug 2017 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>A Plan for 2017</title>
-    <link>http://www.mailpile.is/blog/2017-01-30_A_Plan_for_2017.html</link>
-    <description>&lt;p&gt;Happy Belated New Year!&lt;/p&gt;
-&lt;p&gt;Thank you for your ongoing support and encouragement in 2016. Although there
-was no &#34;big news&#34; from Mailpile in 2016, development continued and I was happy
-to see a whole bunch of new contributors submitting patches, reporting bugs
-and chatting with us on IRC. It&#39;s wonderful to have a community.&lt;/p&gt;
-&lt;p&gt;As any reader of this blog knows, my track record when it comes to predictions
-and planning, is absolutely abysmal. I&#39;m sorry.&lt;/p&gt;
-&lt;p&gt;However, I still want 2017 to be the year Mailpile hits 1.0. The project will
-be 4 years old this summer and we &lt;em&gt;need&lt;/em&gt; to make a release. Here is how I hope
-to accomplish that:&lt;/p&gt;
+    <title>Desktop Usability Tests</title>
+    <link>https://www.mailpile.is/blog/2018-05-03_Desktop_Usability_Tests.html</link>
+    <description>&lt;p&gt;Last week was exciting!&lt;/p&gt;
+&lt;p&gt;The Mailpile desktop platform team got together for a miniature
+developer summit in Reykjavík, Iceland. Alex, Pétur and myself all flew
+in from our corners of the globe, and Oktavía welcomed us and made sure
+everything went as smoothly as possible.&lt;/p&gt;
+&lt;p&gt;We spent some time working at Stofan, my favourite café, and some
+time hanging out at the offices of &lt;a href=&#34;https://www.1984.is/&#34;&gt;1984&lt;/a&gt;, who
+graciously lent us desks and a meeting room. Thank you, 1984!&lt;/p&gt;
+&lt;p&gt;It was really nice to have the whole team together in one place.&lt;/p&gt;
+&lt;p&gt;We ate some traditional Icelandic food, tasted some Icelandic
+hipster-beer, chatted and just gelled a bit as a team. I got a chance to
+give everyone a bit more insight into Mailpile&#39;s background, discussing
+everything from
+&lt;a href=&#34;/blog/2013-09-05_PayPal_Freezes_Campaign_Funds.html&#34;&gt;PayPal freezing our funds&lt;/a&gt; to
+&lt;a href=&#34;/blog/2014-10-07_Some_Thoughts_on_GnuPG.html&#34;&gt;GnuPG integration challenges&lt;/a&gt; to
+&lt;a href=&#34;/blog/2015-05-18_Digging_for_Data.html&#34;&gt;extracting spreadsheets from e-mail&lt;/a&gt;
+to introducing &lt;a href=&#34;/blog/2015-09-22_pyConUK_and_Mailpile_Mel.html&#34;&gt;Mailpile Mel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The main event though, was to get a bunch of helpful humans to come test
+the Mailpile installers and desktop integration.&lt;/p&gt;
+&lt;p&gt;Usability testing!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/files/2018-04-Mailpile-Desktop-Usability.jpg&#34; border=&#34;0&#34;&gt;&lt;/p&gt;
+&lt;h2&gt;Why usability test?&lt;/h2&gt;
+&lt;p&gt;The more familiar you are with something, the harder it can be to see it
+clearly. You see what you expect to see.&lt;/p&gt;
+&lt;p&gt;In software, this means software developers quickly become blind to the
+flaws of their own code. We literally cannot see them! Getting a fresh
+pair of eyes is invaluable, especially if you are interested in
+understanding which parts of an interface are confusing or unclear.&lt;/p&gt;
+&lt;p&gt;To compound matters even further, everyone uses their computer in a
+slightly different way. The way I use Mailpile may work perfectly, but
+if you do things in a different order, use a different mail server, run
+on a different version of Linux ... any of those differences may trigger
+a poorly tested code path and uncover a bug.&lt;/p&gt;
+&lt;p&gt;Usability tests can be as simple as asking a friend to try your thing
+and just watching how they do and taking notes. It doesn&#39;t have to be
+complicated to provide value and I encourage all software developers
+to just grab a pen and some paper and watch people use their stuff. You
+always learn something!&lt;/p&gt;
+&lt;p&gt;In our case, we had some quite specific goals, so we were a little bit
+more methodical.&lt;/p&gt;
+&lt;h2&gt;How we tested, and why&lt;/h2&gt;
+&lt;p&gt;For this round of tests, these were our main goals:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Over the next few months, I will (with help from the community) chip
-      away at &lt;a href=&#34;https://github.com/mailpile/Mailpile/milestone/4&#34;&gt;the list of 1.0-blocking
-      issues&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Once (most of) the blocking issues are resolved, a &lt;em&gt;release candidate&lt;/em&gt;
-      will be tagged, packaged and made conveniently (apt-get install ...)
-      available for Debian and Ubuntu Linux users.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;At this point, I will use some of the remaining Mailpile funds to
-      hire specialized help to work on the Mac OS X and Windows integration
-      and packaging efforts. With a couple of exceptions, I have been
-      self-funding my Mailpile work since the beginning of 2015, so in spite
-      of our failures to raise grant money, we do still have some cash in the
-      bank (and our bitcoin wallets).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Once a release candidate has been published, we will ask our community
-      of international translators to finish their work and try and get some
-      &#34;QA&#34; work done to ensure the translations are accurate.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;At this point, we will also encourage other Linux distributions to
-      contribute build recipes so we can build packages for them as well.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Feedback from early Linux adoptors will be used to squash bugs, polish
-      the code and clean up the translations, eventually leading to a 1.0
-      release. Whether the 1.0 release will be simultaneous for all three
-      platforms is undecided.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;To verify that our draft installers actually work.&lt;/li&gt;
+&lt;li&gt;To check whether the software &#34;makes sense&#34; to a new user.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;I think all, or most, of these things can happen within the next 11 months.&lt;/p&gt;
-&lt;p&gt;Especially with your help...&lt;/p&gt;</description>
-    <pubDate>Mon, 30 Jan 2017 12:00:00 +0000</pubDate>
+&lt;p&gt;The first goal ws relatively straightforward, technical.&lt;/p&gt;
+&lt;p&gt;The latter was much more subtle, and relates to the fact that Mailpile is quite
+complex and in many ways unusual software. The general public is not used to
+running servers on their computers - Mailpile is a web server. The general
+public is not used to interacting with local software using a web browser - but
+that&#39;s how Mailpile works.&lt;/p&gt;
+&lt;p&gt;As a result, our installation sequence and the initial setup process needs
+to gradually introduce these concepts. We wanted to get a feel for whether
+it was actually succeeding.&lt;/p&gt;
+&lt;p&gt;Oktavía scheduled and recruited a moderately diverse group of volunteers
+to come test. All told we had 3 men and 3 women, of mixed ages. Some were
+Windows users, others Mac users. They were all tech-savvy enough to own
+their own laptops, but not necessarily programmers themselves. Some
+digital natives, some less so. Roughly our target demographic for our next
+release.&lt;/p&gt;
+&lt;p&gt;The structure of the test itself was relatively simple.&lt;/p&gt;
+&lt;p&gt;We tested with one volunteer at a time. Each time we started with
+introductions, explaining roughly what Mailpile was and what we expected
+of our volunteers. We warned them we wouldn&#39;t help them much, asked them
+to think out loud if they could. Made sure they understood that failures
+and problems were &lt;em&gt;good&lt;/em&gt;, that breaking things would help us identify
+things to fix.&lt;/p&gt;
+&lt;p&gt;Next, each person was given a USB stick with an installer on it and
+instructions to attempt to install Mailpile and go through the initial
+setup until we told them to stop. Once stopped, they were to exit and shut
+down the app. We watched over their shoulder and made notes. We tried to
+resist the urge to answer any questions, to see if they could figure
+things out themselves.&lt;/p&gt;
+&lt;p&gt;Finally Oktavia asked a few questions about the experience, we thanked
+them, gave them stickers and chocolate and sent them on their way!&lt;/p&gt;
+&lt;p&gt;That was it.&lt;/p&gt;
+&lt;p&gt;Easy, right?&lt;/p&gt;
+&lt;h2&gt;What we learned&lt;/h2&gt;
+&lt;p&gt;Even a simple, short test like this has many potential pitfalls.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does the installer work?&lt;/li&gt;
+&lt;li&gt;Does the app run?&lt;/li&gt;
+&lt;li&gt;Does the tester successfully navigate from the installer to the app,
+    and from the app to the browser?&lt;/li&gt;
+&lt;li&gt;Does the tester understand that shutting down Mailpile and logging out
+    from the web UI are not the same things?&lt;/li&gt;
+&lt;li&gt;Is the process confusing or uncomfortable?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the answer to any of these questions is &#34;no&#34;, then we would like to
+understand &lt;em&gt;why&lt;/em&gt;, so we can fix the problem.&lt;/p&gt;
+&lt;p&gt;The answers in this case were mostly good news! Which is refreshing,
+since last time we tested Mailpile in this environment, the result was
+so many failures and so much confusion that we went back to the drawing
+board.&lt;/p&gt;
+&lt;p&gt;We found some minor bugs, but everyone managed to install the app and
+complete the first stage of the test. Good news! Nobody was frustrated,
+most confusion was minor. Also good news!&lt;/p&gt;
+&lt;p&gt;Shutting down the app was the main failure; most of our participants
+thought they were done when they had logged out of the web interface.
+But, we have ways to address this. And worst-case, we need to make sure
+Mailpile shuts down cleanly when the computer powers down anyway.&lt;/p&gt;
+&lt;p&gt;To sum up the main lessons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The installers work!&lt;/li&gt;
+&lt;li&gt;The app runs!&lt;/li&gt;
+&lt;li&gt;People didn&#39;t read the text in the GUI: less is probably more here&lt;/li&gt;
+&lt;li&gt;Windows users expect the installer to launch the app when done&lt;/li&gt;
+&lt;li&gt;Our Mac build process created a broken GnuPG&lt;/li&gt;
+&lt;li&gt;Our Mac build was launching the in-browser UI prematurely&lt;/li&gt;
+&lt;li&gt;Our desktop notifications on the Mac were spammy&lt;/li&gt;
+&lt;li&gt;The logged-out page should explain that the app is still running&lt;/li&gt;
+&lt;li&gt;Nobody notices systray or status bar icons on first run&lt;/li&gt;
+&lt;li&gt;Our testers were comfortable and happy, most chose to keep the
+     app installed so they could play more at home.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We learned a lot!&lt;/p&gt;
+&lt;p&gt;Watching people use the app and interact with our work was very
+stimulating. The next day we had a (somewhat hung over) brainstorming
+session, discussing how things could be different or better. In the end we
+felt comfortable continuing with a mostly unchanged design. The issues
+were mostly minor and felt fixable.&lt;/p&gt;
+&lt;p&gt;So, we&#39;re on track! The next step will be to fix the bugs and get some
+&#34;alpha&#34; packages ready for wider testing.&lt;/p&gt;
+&lt;p&gt;Exciting!&lt;/p&gt;</description>
+    <pubDate>Thu, 03 May 2018 12:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>Too Cool for PGP</title>
-    <link>http://www.mailpile.is/blog/2016-12-13_Too_Cool_for_PGP.html</link>
-    <description>&lt;p&gt;Some kids are just too cool for school.&lt;/p&gt;
-&lt;p&gt;And some security experts are too cool for OpenPGP.&lt;/p&gt;
-&lt;p&gt;It&#39;s almost become a rite of passage for security folks: work in the
-trenches, build a reputation, climb the ivory tower, write a
-&lt;a href=&#34;https://blog.cryptographyengineering.com/2014/08/13/whats-matter-with-pgp/&#34;&gt;detailed&lt;/a&gt;
-&lt;a href=&#34;https://moxie.org/blog/gpg-and-me/&#34;&gt;epiphany&lt;/a&gt; about
-&lt;a href=&#34;http://secushare.org/PGP&#34;&gt;why&lt;/a&gt; you&#39;ve
-&lt;a href=&#34;https://blog.filippo.io/giving-up-on-long-term-pgp/&#34;&gt;given up on PGP&lt;/a&gt;.
-Suggest we all &lt;a href=&#34;https://www.lawfareblog.com/iphones-fbi-and-going-dark&#34;&gt;buy an iPhone&lt;/a&gt;
-and use Signal, start giving people phone numbers instead of e-mail
-addresses...&lt;/p&gt;
-&lt;p&gt;Wait, what?&lt;/p&gt;
-&lt;p&gt;Please take a moment to go ask any young woman if she thinks giving random
-strangers her phone number will improve her security. I&#39;ll wait.&lt;/p&gt;
-&lt;p&gt;...&lt;/p&gt;
-&lt;p&gt;Of course, the experts are right about many things. OpenPGP is &lt;em&gt;old&lt;/em&gt; and
-more recent tools with more modern designs have a lot going for them. But
-I still think they&#39;re mostly wrong.&lt;/p&gt;
-&lt;p&gt;The experts, by and large, have yet to offer any credible replacements for
-PGP. And when they suggest abandoning PGP, what they&#39;re really saying is we
-should give up on secure e-mail and just use something else. That doesn&#39;t
-fly. Many people &lt;em&gt;have to use e-mail&lt;/em&gt;. E-mail is &lt;em&gt;everywhere&lt;/em&gt;. Not improving
-the security of e-mail and instead expecting people to just use other tools
-(or go without), is the security elite proclaiming from their ivory tower:
-&#34;&lt;a href=&#34;https://en.wikipedia.org/wiki/Let_them_eat_cake&#34;&gt;Let them eat cake!&lt;/a&gt;&#34;&lt;/p&gt;
-&lt;p&gt;Furthermore, if that &#34;something else&#34; also requires people use their phone
-number for everything... well, that&#39;s the messaging world&#39;s equivalent of
-the widely despised &lt;a href=&#34;https://en.wikipedia.org/wiki/Facebook_real-name_policy_controversy&#34;&gt;Facebook Real Name
-Policy&lt;/a&gt;.
-If you ever needed a clear example of why the lack of diversity (and
-empathy) in tech is a problem, there it is!&lt;/p&gt;
-&lt;p&gt;Compartmentalization, presenting different identities in different contexts,
-is a fundamental, necessary part of human behaviour. It&#39;s one of the basics.
-If you think taking that away and offering fancy crypto, forward secrecy,
-deniability instead is a win... well, I think your threat models need some
-work! You have failed and people will just keep on using insecure e-mail for
-their accounting, their work, their hobbies, their doctor visits and their
-interaction with local government. Because people know their needs better
-than you do.&lt;/p&gt;
-&lt;p&gt;But I digress.&lt;/p&gt;
-&lt;p&gt;The ridiculous phone number thing aside, I also take issue with the fact
-that when our opinionated experts do suggest replacements, the things they
-recommend are proprietary, centralized and controlled by for-profit
-companies. Some of them (mostly the underdogs) may be open source, but even
-&lt;a href=&#34;https://whispersystems.org/blog/the-ecosystem-is-moving/&#34;&gt;the best of those use a centralized design and are hostile to
-federation&lt;/a&gt;. In
-pursuit of security and convenience (and, let&#39;s be honest, control, power
-and money), openness has been hung out to dry.&lt;/p&gt;
-&lt;p&gt;This is short-sighted at best.&lt;/p&gt;
-&lt;p&gt;These cool new apps may be secure today. But what about tomorrow? Odds
-are, they will be &lt;a href=&#34;https://www.wired.com/2007/11/encrypted-e-mai/&#34;&gt;compromised&lt;/a&gt; by
-&lt;a href=&#34;http://www.theregister.co.uk/2016/11/30/investigatory_powers_act_backdoors/&#34;&gt;government mandate&lt;/a&gt;,
-&lt;a href=&#34;https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook&#34;&gt;blocked&lt;/a&gt;
-or &lt;a href=&#34;https://www.theguardian.com/commentisfree/2014/may/20/why-did-lavabit-shut-down-snowden-email&#34;&gt;shut down&lt;/a&gt;.
-Or just dead because messaging is a cut-throat business and the money
-runs out. Anyone remember ICQ? MSN? GChat? Sprinkling these new messaging
-apps in security pixie dust doesn&#39;t make them qualified to replace e-mail.&lt;/p&gt;
-&lt;p&gt;But what if I&#39;m wrong? What if one of these businesses succeeds, e-mail dies
-and all our comms become dependent on proprietary protocols mediated by
-for-profit monopolies? Is that a problem?&lt;/p&gt;
-&lt;p&gt;Here, &lt;a href=&#34;https://lmgtfy.com/?q=why+are+monopolies+bad&#34;&gt;let me google that for you&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;I really hope it doesn&#39;t happen.&lt;/p&gt;
-&lt;h2&gt;Interlude&lt;/h2&gt;
-&lt;p&gt;Please, if you are at risk, if you have powerful adversaries, follow the
-advice of the cool kids. The experts are absolutely right when they say PGP
-is too confusing and messy &lt;em&gt;today&lt;/em&gt; for most people to use safely. It takes
-training, practice and diligence.&lt;/p&gt;
-&lt;p&gt;So sure, get an iPhone if you can afford it. Use Signal or iMessage. Use
-Tor, &lt;a href=&#34;https://www.hackerfactor.com/blog/index.php?/archives/721-TOR-and-Trust.html&#34;&gt;carefully&lt;/a&gt;.
-For e-mail, create as many GMail accounts as you need to blend in with the
-crowd and not draw attention to yourself; their security team is the best in
-the world, let them protect you! Enable two-factor auth, use HTTPS.&lt;/p&gt;
-&lt;p&gt;But most importantly; if you can avoid digitizing incriminating
-information, &lt;em&gt;do that&lt;/em&gt;. &lt;a href=&#34;https://en.wikipedia.org/wiki/Rubber-hose_cryptanalysis&#34;&gt;Rubber hose cryptanalysis is
-real&lt;/a&gt; and it&#39;s
-much easier to avoid creating data in the first place, than it is to
-keep it secure after the fact.&lt;/p&gt;
-&lt;h2&gt;Mental Models and Deniability&lt;/h2&gt;
-&lt;p&gt;A rule of thumb for creating usable software, is &lt;em&gt;don&#39;t make me think&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;What this means in practice, is software should match the mental models of
-its users as closely as possible. If it doesn&#39;t, users will inevitably make
-mistakes. If your tool is a security tool, those mistakes may compromise
-their security.&lt;/p&gt;
-&lt;p&gt;PGP in e-mail has failed this on many fronts. The lack of protection for
-message headers (the subject line) is one, as is pretty much anything to do
-with encryption keys (too much math). But it&#39;s not all bad! OpenPGP gets
-other things right, and actually &lt;em&gt;corrects&lt;/em&gt; some of the things insecure
-e-mail gets wrong.&lt;/p&gt;
-&lt;p&gt;One of the most vexing things about e-mail, is people actually think e-mail
-is &lt;em&gt;already secure&lt;/em&gt;. They just assume e-mail is like regular mail, in an
-opaque envelope that will prevent tampering and keep postal workers from
-reading it. Encryption and signatures bring e-mail closer to user
-expectations, which means if we can get it working smoothly, users won&#39;t
-have to think as much to make good security choices.&lt;/p&gt;
-&lt;p&gt;One thing people &lt;em&gt;don&#39;t&lt;/em&gt; expect from e-mail, is deniability. Deniability
-means after a message has been delivered, it can no longer be strongly
-linked to the sender. It&#39;s like an anti-signature... which most sane people
-would consider a horrible misfeature in any communication system. Explicitly
-designing a system so people can disavow their statements and go back on
-their word? What is this, a system for assholes??&lt;/p&gt;
-&lt;p&gt;And yet, all the cool kids in the security world seem to want exactly that.
-They keep bringing up the lack of deniability (and forward secrecy) in PGP
-as if it were some sort of fatal flaw.&lt;/p&gt;
-&lt;p&gt;Why? Are security people all assholes? I don&#39;t &lt;em&gt;think&lt;/em&gt; that&#39;s it.&lt;/p&gt;
-&lt;p&gt;I think they&#39;re quite enamoured with the elegant math, and really, really
-pissed off with certain Three Letter Agencies. There is good reason to
-believe major governments plan to, or already have been &lt;a href=&#34;https://www.wired.com/2012/03/ff_nsadatacenter/&#34;&gt;recording all our
-encrypted communications&lt;/a&gt;
-in the hope of being able to decrypt them later. Forward secrecy
-(deniability&#39;s more attractive twin sister) prevents that sort of thing. But
-OpenPGP doesn&#39;t need to provide forward secrecy to thwart mass surveillance.
-If we just use TLS (with the right ciphers) for SMTP, IMAP and web-mail then
-that does the job just fine.&lt;/p&gt;
-&lt;p&gt;So I agree forward secrecy in transit is a good thing. Let&#39;s do that!&lt;/p&gt;
-&lt;p&gt;Let&#39;s put our mail in secure envelopes, and let&#39;s &lt;em&gt;also&lt;/em&gt; drive it from place to
-place in nice, secure vehicles. Users don&#39;t expect the cops to routinely stop
-the mailman and photocopy all the mail, so let&#39;s make sure that doesn&#39;t happen
-to e-mail either. Let the mental models be our guide.&lt;/p&gt;
-&lt;p&gt;But we don&#39;t need or want deniability. Deniability for individual messages
-is, quite simply, a horrible misfeature to be avoided. People already assume
-e-mail is &lt;strong&gt;on the record&lt;/strong&gt;; trying to change that means going against their
-mental models and setting them up for failure in new and exciting ways. The
-fact that OpenPGP wasn&#39;t designed to empower assholes is a feature, not a
-bug.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(Yes, there are other arguments for forward secrecy and deniability. They
-are in my oh-so-humble opinion, mostly bunk. And this post is already too
-long...)&lt;/em&gt;&lt;/p&gt;
-&lt;h2&gt;Making Progress&lt;/h2&gt;
-&lt;p&gt;Anyway, like it or not, e-mail is important.&lt;/p&gt;
-&lt;p&gt;E-mail is the most successful open messaging standard we&#39;ve got and OpenPGP
-is the best tech we have to secure our mail. OpenPGP may be dated and a bit
-clunky, but &lt;em&gt;&lt;a href=&#34;http://www.theverge.com/2014/12/28/7458159/encryption-standards-the-nsa-cant-crack-pgp-tor-otr-snowden&#34;&gt;it&#39;s a hell of a lot better than
-nothing&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Folks like myself, implementors who are not cryptographers, have long been
-admonished to not invent our own crypto. Over and over again, we are told to
-use tried and tested solutions. OpenPGP is that. It may have baggage, it may
-not be perfect, but it is mature and it solves certain problems. Most of the
-flaws can be avoided and worked around. If the security community really wants
-us to use something else, you&#39;re going to have to step up and provide something
-a bit more tangible than rants on the Internet.&lt;/p&gt;
-&lt;p&gt;OpenPGP is also not standing still, OpenPGP is still developing. The
-community is well aware that the technology is flawed and needs work. An
-&lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-openpgp-rfc4880bis-00&#34;&gt;update to the standard is in the works&lt;/a&gt;
-and there are multiple projects working on improving both the
-&lt;a href=&#34;http://modernpgp.org/memoryhole/&#34;&gt;security&lt;/a&gt; and
-&lt;a href=&#34;https://inbome.readthedocs.io/&#34;&gt;usability&lt;/a&gt; side of things.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/&#34;&gt;Mailpile&lt;/a&gt; is one such project, but we&#39;re in good company:
-&lt;a href=&#34;https://pep.foundation/&#34;&gt;PEP&lt;/a&gt;,
-&lt;a href=&#34;https://leap.se/&#34;&gt;LEAP&lt;/a&gt;,
-&lt;a href=&#34;https://www.openkeychain.org/&#34;&gt;OpenKeychain for Android&lt;/a&gt;,
-&lt;a href=&#34;https://www.mailvelope.com/&#34;&gt;Mailvelope&lt;/a&gt;, and more.
-Even &lt;a href=&#34;https://github.com/google/end-to-end&#34;&gt;Google&lt;/a&gt; and
-&lt;a href=&#34;https://github.com/yahoo/end-to-end&#34;&gt;Yahoo&lt;/a&gt; are developing solutions
-based on OpenPGP. There&#39;s actually quite a lot going on!&lt;/p&gt;
-&lt;p&gt;As an industry, we should be
-&lt;a href=&#34;https://gnupg.org/donate/&#34;&gt;supporting these efforts&lt;/a&gt;, not writing
-and promoting self indulgent posts on how we&#39;ve given up and moved on.&lt;/p&gt;
-&lt;p&gt;Oh, and stay in school kids! It&#39;s worth it!&lt;/p&gt;</description>
-    <pubDate>Mon, 12 Dec 2016 12:00:00 +0000</pubDate>
+    <title>Building up Steam</title>
+    <link>https://www.mailpile.is/blog/2018-03-29_Building_up_Steam.html</link>
+    <description>&lt;p&gt;Wow, we&#39;ve been so busy making progress we forgot to let you all know
+how we are progressing!&lt;/p&gt;
+&lt;p&gt;So far, Mailpile in 2018 has been all about building up steam for the
+Mailpile train! We hired me (or rather – Bjarni hired me!) and I have
+been working on project management and thinking towards the future,
+including human resource work (I spent a lot of time looking to lessons
+learned on diverse and inclusive hiring practices). This has resulted in
+the hiring of two more persons – &lt;/p&gt;
+&lt;p&gt;Alexander and Pétur who, along side Bjarni and myself, will be taking
+Mailpile to as many users as possible!&lt;/p&gt;
+&lt;p&gt;Who are these new additions to the Mailpile Team? Well, Alex Haase is a
+self-proclaimed generalist, who has a background spanning kernel modules
+to javascript, bare metal to Windows. He lurrvvs tinkering on Open
+Source side projects and refereeing Roller Derby when he‘s not
+Mailpiling. Pétur is all about high level software engineering.
+Specifically modelling and automatic programming. He loves collaborative
+design by prototyping, designing and exploring new ideas using scissors,
+papers, glue and different shades of colour. His favorite movie quote?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&#34;It&#39;s a UNIX system.&#34; — Jurrasic Park :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What will they be doing with us? We&#39;re glad you asked! Their main tasks
+relate to packaging Mailpile for the Mac and Windows platforms, and in
+doing so making Mailpile more accessible to more people! Hooray!&lt;/p&gt;
+&lt;p&gt;Contracts were signed in mid-March and we are on track to deliver
+packages and an improved native user experience within 3-4 months. So
+soon, soon, at long last, &lt;a href=&#34;/download/&#34;&gt;our downloads page&lt;/a&gt; won&#39;t tell
+people our packages are being reworked.  IT will tell people to go forth
+and install what Alex and Pétur have built!&lt;/p&gt;
+&lt;p&gt;We are now well settled in our virtual working space, as our physical
+selves are spread over Europe and the US. We would love a visit, so
+please come by the Mailpile IRC - #mailpile (Freenode, or
+&lt;a href=&#34;https://riot.im/app/#/room/#freenode_#mailpile:matrix.org&#34;&gt;Riot&lt;/a&gt;),
+but bring your own coffee!&lt;/p&gt;</description>
+    <pubDate>Thu, 29 Mar 2018 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>We are Hiring!</title>
+    <link>https://www.mailpile.is/blog/2018-01-22_We_are_Hiring.html</link>
+    <description>&lt;p&gt;Good news!&lt;/p&gt;
+&lt;p&gt;We have secured funding, hired Oktavía to manage things and posted ads for
+the first positions we would like to fill: Windows and Mac OS developers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/jobs/&#34;&gt;Details are on our jobs page.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Please spread the word!&lt;/p&gt;</description>
+    <pubDate>Mon, 22 Jan 2018 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

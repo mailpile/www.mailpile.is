@@ -1,15 +1,175 @@
 [
   {
-    "markdown_tweet": "Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit mor\u2026 [twitter.com/i...](https://twitter.com/i/web/status/930953985858654209)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 16 Nov 2017 00:21](https://twitter.com/MailpileTeam/status/930953985858654209)*  \n", 
+    "markdown_tweet": "Important PGP Security Alert: [www.mailpile.is/blog...](/blog/2018-05-14_PGP_Security_Alert.html)  \n  \nPlease read if you use Mailpile. Thanks!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 14 May 2018 08:09](https://twitter.com/MailpileTeam/status/995939037851652096)*  \n", 
     "from": "MailpileTeam", 
-    "tweet": "Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit mor\u2026 https://t.co/IjO2qiaNE5", 
-    "html_tweet": "<div class=\"tweet\"><p>Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit mor\u2026 <a href=\"https://twitter.com/i/web/status/930953985858654209\">twitter.com/i...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/930953985858654209\">Thu, 16 Nov 2017 00:21</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/930953985858654209", 
+    "tweet": "Important PGP Security Alert: https://t.co/nU8mtfXhdi\n \n Please read if you use Mailpile. Thanks!", 
+    "html_tweet": "<div class=\"tweet\"><p>Important PGP Security Alert: <a href=\"/blog/2018-05-14_PGP_Security_Alert.html\">www.mailpile.is/blog...</a>  </p>\n<p>Please read if you use Mailpile. Thanks!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/995939037851652096\">Mon, 14 May 2018 08:09</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/995939037851652096", 
     "urls": {
-      "https://t.co/IjO2qiaNE5": "https://twitter.com/i/web/status/930953985858654209"
+      "https://t.co/nU8mtfXhdi": "https://www.mailpile.is/blog/2018-05-14_PGP_Security_Alert.html"
     }, 
+    "date": "Mon, 14 May 2018 08:09", 
+    "expanded_tweet": "Important PGP Security Alert: https://www.mailpile.is/blog/2018-05-14_PGP_Security_Alert.html\n\nPlease read if you use Mailpile. Thanks!"
+  }, 
+  {
+    "markdown_tweet": "Happy Friday afternoon twitter! <a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> was deep in usability testing in Reykjav\u00edk last week, so much so that <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>  wrote a blog about our experiences! Please enjoy it along with selfhosted emails & the weekend! /okta  \n[www.mailpile.is/blog...](/blog/2018-05-03_Desktop_Usability_Tests.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 04 May 2018 14:41](https://twitter.com/MailpileTeam/status/992414005301006336)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Happy Friday afternoon twitter! #Mailpile was deep in usability testing in Reykjav\u00edk last week, so much so that @HerraBRE  wrote a blog about our experiences! Please enjoy it along with selfhosted emails & the weekend! /okta\n https://t.co/zsYV39qA74", 
+    "html_tweet": "<div class=\"tweet\"><p>Happy Friday afternoon twitter! <a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> was deep in usability testing in Reykjav\u00edk last week, so much so that <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>  wrote a blog about our experiences! Please enjoy it along with selfhosted emails &amp; the weekend! /okta<br />\n<a href=\"/blog/2018-05-03_Desktop_Usability_Tests.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/992414005301006336\">Fri, 04 May 2018 14:41</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/992414005301006336", 
+    "urls": {
+      "https://t.co/zsYV39qA74": "https://www.mailpile.is/blog/2018-05-03_Desktop_Usability_Tests.html"
+    }, 
+    "date": "Fri, 04 May 2018 14:41", 
+    "expanded_tweet": "Happy Friday afternoon twitter! <a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> was deep in usability testing in Reykjav\u00edk last week, so much so that <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>  wrote a blog about our experiences! Please enjoy it along with selfhosted emails & the weekend! /okta\nhttps://www.mailpile.is/blog/2018-05-03_Desktop_Usability_Tests.html"
+  }, 
+  {
+    "markdown_tweet": "we are back in the virtual office after co-working in Reykjav\u00edk! We are already incorporating the awesome input from our usability study and looking dorky doing it! (as we should)  \nMore soon! /okta [twitter.com/MailpileTeam...](https://twitter.com/MailpileTeam/status/992110048951365632/photo/1)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 03 May 2018 18:34](https://twitter.com/MailpileTeam/status/992110048951365632)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "we are back in the virtual office after co-working in Reykjav\u00edk! We are already incorporating the awesome input from our usability study and looking dorky doing it! (as we should)\n More soon! /okta https://t.co/jadxB0OTg1", 
+    "html_tweet": "<div class=\"tweet\"><p>we are back in the virtual office after co-working in Reykjav\u00edk! We are already incorporating the awesome input from our usability study and looking dorky doing it! (as we should)<br />\nMore soon! /okta <a href=\"https://twitter.com/MailpileTeam/status/992110048951365632/photo/1\">twitter.com/MailpileTeam...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/992110048951365632\">Thu, 03 May 2018 18:34</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/992110048951365632", 
+    "urls": {
+      "https://t.co/jadxB0OTg1": "https://twitter.com/MailpileTeam/status/992110048951365632/photo/1"
+    }, 
+    "date": "Thu, 03 May 2018 18:34", 
+    "expanded_tweet": "we are back in the virtual office after co-working in Reykjav\u00edk! We are already incorporating the awesome input from our usability study and looking dorky doing it! (as we should)\nMore soon! /okta https://twitter.com/MailpileTeam/status/992110048951365632/photo/1"
+  }, 
+  {
+    "markdown_tweet": "Second day of co-working in person for the <a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> team :) Reykjav\u00edk may be cloudy, but team spirits are up as we user-test installers today!  \n<a href=\"https://twitter.com/hashtag/Mailpile4Win\">#Mailpile4Win</a> <a href=\"https://twitter.com/hashtag/returnoftheMac\">#returnoftheMac</a> <a href=\"https://twitter.com/hashtag/okayIwillStopwiththeHashtags\">#okayIwillStopwiththeHashtags</a>  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Tue, 24 Apr 2018 11:43](https://twitter.com/MailpileTeam/status/988745152742256641)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Second day of co-working in person for the #Mailpile team :) Reykjav\u00edk may be cloudy, but team spirits are up as we user-test installers today!\n #Mailpile4Win #returnoftheMac #okayIwillStopwiththeHashtags", 
+    "html_tweet": "<div class=\"tweet\"><p>Second day of co-working in person for the <a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> team :) Reykjav\u00edk may be cloudy, but team spirits are up as we user-test installers today!<br />\n<a href=\"https://twitter.com/hashtag/Mailpile4Win\">#Mailpile4Win</a> <a href=\"https://twitter.com/hashtag/returnoftheMac\">#returnoftheMac</a> <a href=\"https://twitter.com/hashtag/okayIwillStopwiththeHashtags\">#okayIwillStopwiththeHashtags</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/988745152742256641\">Tue, 24 Apr 2018 11:43</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/988745152742256641", 
+    "urls": {}, 
+    "date": "Tue, 24 Apr 2018 11:43", 
+    "expanded_tweet": "Second day of co-working in person for the <a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> team :) Reykjav\u00edk may be cloudy, but team spirits are up as we user-test installers today!\n<a href=\"https://twitter.com/hashtag/Mailpile4Win\">#Mailpile4Win</a> <a href=\"https://twitter.com/hashtag/returnoftheMac\">#returnoftheMac</a> <a href=\"https://twitter.com/hashtag/okayIwillStopwiththeHashtags\">#okayIwillStopwiththeHashtags</a>"
+  }, 
+  {
+    "markdown_tweet": "Hall\u00f3 Reykjav\u00edk residents!  \n  \n<a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> is doing a small usability test tomorrow Tuesday (real Smol!) and we are a couple of folks short. Are you in Reykjav\u00edk, using email, free tomorrow afternoon and interested in privacy? Send us a DM for details!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 23 Apr 2018 10:54](https://twitter.com/MailpileTeam/status/988370512551215106)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Hall\u00f3 Reykjav\u00edk residents!\n \n #Mailpile is doing a small usability test tomorrow Tuesday (real Smol!) and we are a couple of folks short. Are you in Reykjav\u00edk, using email, free tomorrow afternoon and interested in privacy? Send us a DM for details!", 
+    "html_tweet": "<div class=\"tweet\"><p>Hall\u00f3 Reykjav\u00edk residents!  </p>\n<p><a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> is doing a small usability test tomorrow Tuesday (real Smol!) and we are a couple of folks short. Are you in Reykjav\u00edk, using email, free tomorrow afternoon and interested in privacy? Send us a DM for details!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/988370512551215106\">Mon, 23 Apr 2018 10:54</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/988370512551215106", 
+    "urls": {}, 
+    "date": "Mon, 23 Apr 2018 10:54", 
+    "expanded_tweet": "Hall\u00f3 Reykjav\u00edk residents!\n\n<a href=\"https://twitter.com/hashtag/Mailpile\">#Mailpile</a> is doing a small usability test tomorrow Tuesday (real Smol!) and we are a couple of folks short. Are you in Reykjav\u00edk, using email, free tomorrow afternoon and interested in privacy? Send us a DM for details!"
+  }, 
+  {
+    "markdown_tweet": "Wuddyah look at that! The first in-person meeting of the Mailpile Team!  \n  \nWe will be hanging around Reykjav\u00edk the next days - so ping us if you want to come say hi! [twitter.com/MailpileTeam...](https://twitter.com/MailpileTeam/status/988367608327163904/photo/1)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 23 Apr 2018 10:42](https://twitter.com/MailpileTeam/status/988367608327163904)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Wuddyah look at that! The first in-person meeting of the Mailpile Team!\n \n We will be hanging around Reykjav\u00edk the next days - so ping us if you want to come say hi! https://t.co/3IHKr1lHgE", 
+    "html_tweet": "<div class=\"tweet\"><p>Wuddyah look at that! The first in-person meeting of the Mailpile Team!  </p>\n<p>We will be hanging around Reykjav\u00edk the next days - so ping us if you want to come say hi! <a href=\"https://twitter.com/MailpileTeam/status/988367608327163904/photo/1\">twitter.com/MailpileTeam...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/988367608327163904\">Mon, 23 Apr 2018 10:42</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/988367608327163904", 
+    "urls": {
+      "https://t.co/3IHKr1lHgE": "https://twitter.com/MailpileTeam/status/988367608327163904/photo/1"
+    }, 
+    "date": "Mon, 23 Apr 2018 10:42", 
+    "expanded_tweet": "Wuddyah look at that! The first in-person meeting of the Mailpile Team!\n\nWe will be hanging around Reykjav\u00edk the next days - so ping us if you want to come say hi! https://twitter.com/MailpileTeam/status/988367608327163904/photo/1"
+  }, 
+  {
+    "markdown_tweet": "Don't panic: Our website is temporarily unavailable as we migrate to a beefier VPS.  \n  \nIn other news, we successfully hired a couple of clever people to help with our Windows and Mac packaging. Work has begun!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Tue, 13 Mar 2018 16:19](https://twitter.com/MailpileTeam/status/973594524730699776)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Don't panic: Our website is temporarily unavailable as we migrate to a beefier VPS.\n \n In other news, we successfully hired a couple of clever people to help with our Windows and Mac packaging. Work has begun!", 
+    "html_tweet": "<div class=\"tweet\"><p>Don't panic: Our website is temporarily unavailable as we migrate to a beefier VPS.  </p>\n<p>In other news, we successfully hired a couple of clever people to help with our Windows and Mac packaging. Work has begun!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/973594524730699776\">Tue, 13 Mar 2018 16:19</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/973594524730699776", 
+    "urls": {}, 
+    "date": "Tue, 13 Mar 2018 16:19", 
+    "expanded_tweet": "Don't panic: Our website is temporarily unavailable as we migrate to a beefier VPS.\n\nIn other news, we successfully hired a couple of clever people to help with our Windows and Mac packaging. Work has begun!"
+  }, 
+  {
+    "markdown_tweet": "Its Friday afternoon in some parts of the world - your inbox is hassling you & you drift off to better future where you have an email client that is a search engine & a personal webmail server that has email encryption built in!  \nHelp us build that future! [http://mailpile.is/jobs](http://mailpile.is/jobs)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 09 Feb 2018 15:43](https://twitter.com/MailpileTeam/status/961988829413601283)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Its Friday afternoon in some parts of the world - your inbox is hassling you & you drift off to better future where you have an email client that is a search engine & a personal webmail server that has email encryption built in!\n Help us build that future! https://t.co/AeIC2lUKEf", 
+    "html_tweet": "<div class=\"tweet\"><p>Its Friday afternoon in some parts of the world - your inbox is hassling you &amp; you drift off to better future where you have an email client that is a search engine &amp; a personal webmail server that has email encryption built in!<br />\nHelp us build that future! <a href=\"http://mailpile.is/jobs\">http://mailpile.is/jobs</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/961988829413601283\">Fri, 09 Feb 2018 15:43</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/961988829413601283", 
+    "urls": {
+      "https://t.co/AeIC2lUKEf": "http://mailpile.is/jobs"
+    }, 
+    "date": "Fri, 09 Feb 2018 15:43", 
+    "expanded_tweet": "Its Friday afternoon in some parts of the world - your inbox is hassling you & you drift off to better future where you have an email client that is a search engine & a personal webmail server that has email encryption built in!\nHelp us build that future! http://mailpile.is/jobs"
+  }, 
+  {
+    "markdown_tweet": "Iiiitttt\u00b4ssss \"Hump Day\" everybody!  \nDid you know that Mailpile is still looking for developers? we would luurv to get Mailpile out to as many as possible, make it accessible for most! Join us to package for Windows and MacOS! [http://mailpile.is/jobs](http://mailpile.is/jobs)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 07 Feb 2018 15:46](https://twitter.com/MailpileTeam/status/961264977645580289)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Iiiitttt\u00b4ssss \"Hump Day\" everybody!\n Did you know that Mailpile is still looking for developers? we would luurv to get Mailpile out to as many as possible, make it accessible for most! Join us to package for Windows and MacOS! https://t.co/AeIC2lUKEf", 
+    "html_tweet": "<div class=\"tweet\"><p>Iiiitttt\u00b4ssss \"Hump Day\" everybody!<br />\nDid you know that Mailpile is still looking for developers? we would luurv to get Mailpile out to as many as possible, make it accessible for most! Join us to package for Windows and MacOS! <a href=\"http://mailpile.is/jobs\">http://mailpile.is/jobs</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/961264977645580289\">Wed, 07 Feb 2018 15:46</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/961264977645580289", 
+    "urls": {
+      "https://t.co/AeIC2lUKEf": "http://mailpile.is/jobs"
+    }, 
+    "date": "Wed, 07 Feb 2018 15:46", 
+    "expanded_tweet": "Iiiitttt\u00b4ssss \"Hump Day\" everybody!\nDid you know that Mailpile is still looking for developers? we would luurv to get Mailpile out to as many as possible, make it accessible for most! Join us to package for Windows and MacOS! http://mailpile.is/jobs"
+  }, 
+  {
+    "markdown_tweet": "Hey developers! We are still looking for you <3 so much so that we have extended our deadline for MacOS and Windows developers to Feb. 14th <3 <3  \nPing us for questions - more info here: [http://mailpile.is/jobs](http://mailpile.is/jobs)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 01 Feb 2018 12:00](https://twitter.com/MailpileTeam/status/959033761789874181)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Hey developers! We are still looking for you <3 so much so that we have extended our deadline for MacOS and Windows developers to Feb. 14th <3 <3\n Ping us for questions - more info here: https://t.co/AeIC2lUKEf", 
+    "html_tweet": "<div class=\"tweet\"><p>Hey developers! We are still looking for you &lt;3 so much so that we have extended our deadline for MacOS and Windows developers to Feb. 14th &lt;3 &lt;3<br />\nPing us for questions - more info here: <a href=\"http://mailpile.is/jobs\">http://mailpile.is/jobs</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/959033761789874181\">Thu, 01 Feb 2018 12:00</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/959033761789874181", 
+    "urls": {
+      "https://t.co/AeIC2lUKEf": "http://mailpile.is/jobs"
+    }, 
+    "date": "Thu, 01 Feb 2018 12:00", 
+    "expanded_tweet": "Hey developers! We are still looking for you <3 so much so that we have extended our deadline for MacOS and Windows developers to Feb. 14th <3 <3\nPing us for questions - more info here: http://mailpile.is/jobs"
+  }, 
+  {
+    "markdown_tweet": "The Mailpile Team is back after being dormant for a while and we are looking for developers to help us Mailpile out for more people to use! Check out [http://mailpile.is/jobs](http://mailpile.is/jobs) for details  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 29 Jan 2018 09:57](https://twitter.com/MailpileTeam/status/957915509122568192)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "The Mailpile Team is back after being dormant for a while and we are looking for developers to help us Mailpile out for more people to use! Check out https://t.co/AeIC2lUKEf for details", 
+    "html_tweet": "<div class=\"tweet\"><p>The Mailpile Team is back after being dormant for a while and we are looking for developers to help us Mailpile out for more people to use! Check out <a href=\"http://mailpile.is/jobs\">http://mailpile.is/jobs</a> for details<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/957915509122568192\">Mon, 29 Jan 2018 09:57</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/957915509122568192", 
+    "urls": {
+      "https://t.co/AeIC2lUKEf": "http://mailpile.is/jobs"
+    }, 
+    "date": "Mon, 29 Jan 2018 09:57", 
+    "expanded_tweet": "The Mailpile Team is back after being dormant for a while and we are looking for developers to help us Mailpile out for more people to use! Check out http://mailpile.is/jobs for details"
+  }, 
+  {
+    "markdown_tweet": "We are hiring!  \n  \nWe are looking for Windows and Mac OS developers to help us get Mailpile 1.0 in the hands of as many people as possible.  \n  \nCheck out [https://www.mailpile.is/jobs/](/jobs/) and spread the word!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 22 Jan 2018 21:25](https://twitter.com/MailpileTeam/status/955552004838846464)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "We are hiring!\n \n We are looking for Windows and Mac OS developers to help us get Mailpile 1.0 in the hands of as many people as possible.\n \n Check out https://t.co/RIOCC7R7gq and spread the word!", 
+    "html_tweet": "<div class=\"tweet\"><p>We are hiring!  </p>\n<p>We are looking for Windows and Mac OS developers to help us get Mailpile 1.0 in the hands of as many people as possible.  </p>\n<p>Check out <a href=\"/jobs/\">https://www.mailpile.is/jobs/</a> and spread the word!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/955552004838846464\">Mon, 22 Jan 2018 21:25</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/955552004838846464", 
+    "urls": {
+      "https://t.co/RIOCC7R7gq": "https://www.mailpile.is/jobs/"
+    }, 
+    "date": "Mon, 22 Jan 2018 21:25", 
+    "expanded_tweet": "We are hiring!\n\nWe are looking for Windows and Mac OS developers to help us get Mailpile 1.0 in the hands of as many people as possible.\n\nCheck out https://www.mailpile.is/jobs/ and spread the word!"
+  }, 
+  {
+    "markdown_tweet": "In case you missed it, we posted a blog post this week about progress made this fall & what happens next.  \n  \nHighlights: Project manager hired, riding the Bitcoin rocket... and speed skating!  \n  \nAlso: Happy Santaseason!  \n  \n[www.mailpile.is/blog...](/blog/2017-12-12_Holiday_Season_Updates.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 15 Dec 2017 17:57](https://twitter.com/MailpileTeam/status/941728900719235072)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "In case you missed it, we posted a blog post this week about progress made this fall & what happens next.\n \n Highlights: Project manager hired, riding the Bitcoin rocket... and speed skating!\n \n Also: Happy Santaseason!\n \n https://t.co/jAVYSIlW9p", 
+    "html_tweet": "<div class=\"tweet\"><p>In case you missed it, we posted a blog post this week about progress made this fall &amp; what happens next.  </p>\n<p>Highlights: Project manager hired, riding the Bitcoin rocket... and speed skating!  </p>\n<p>Also: Happy Santaseason!  </p>\n<p><a href=\"/blog/2017-12-12_Holiday_Season_Updates.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/941728900719235072\">Fri, 15 Dec 2017 17:57</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/941728900719235072", 
+    "urls": {
+      "https://t.co/jAVYSIlW9p": "https://www.mailpile.is/blog/2017-12-12_Holiday_Season_Updates.html"
+    }, 
+    "date": "Fri, 15 Dec 2017 17:57", 
+    "expanded_tweet": "In case you missed it, we posted a blog post this week about progress made this fall & what happens next.\n\nHighlights: Project manager hired, riding the Bitcoin rocket... and speed skating!\n\nAlso: Happy Santaseason!\n\nhttps://www.mailpile.is/blog/2017-12-12_Holiday_Season_Updates.html"
+  }, 
+  {
+    "markdown_tweet": "Are you wondering what we've been up to lately?  \n  \nCurious about how we used the Bitcoin you donated? Mystified about who owns Mailpile anyway? Worried about speed skating's impact on e-mail security?  \n  \nAll this and more in our Holiday Updates Blog Post:  \n[www.mailpile.is/blog...](/blog/2017-12-12_Holiday_Season_Updates.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Tue, 12 Dec 2017 16:46](https://twitter.com/MailpileTeam/status/940623842040524800)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Are you wondering what we've been up to lately?\n \n Curious about how we used the Bitcoin you donated? Mystified about who owns Mailpile anyway? Worried about speed skating's impact on e-mail security?\n \n All this and more in our Holiday Updates Blog Post:\n https://t.co/jAVYSIlW9p", 
+    "html_tweet": "<div class=\"tweet\"><p>Are you wondering what we've been up to lately?  </p>\n<p>Curious about how we used the Bitcoin you donated? Mystified about who owns Mailpile anyway? Worried about speed skating's impact on e-mail security?  </p>\n<p>All this and more in our Holiday Updates Blog Post:<br />\n<a href=\"/blog/2017-12-12_Holiday_Season_Updates.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/940623842040524800\">Tue, 12 Dec 2017 16:46</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/940623842040524800", 
+    "urls": {
+      "https://t.co/jAVYSIlW9p": "https://www.mailpile.is/blog/2017-12-12_Holiday_Season_Updates.html"
+    }, 
+    "date": "Tue, 12 Dec 2017 16:46", 
+    "expanded_tweet": "Are you wondering what we've been up to lately?\n\nCurious about how we used the Bitcoin you donated? Mystified about who owns Mailpile anyway? Worried about speed skating's impact on e-mail security?\n\nAll this and more in our Holiday Updates Blog Post:\nhttps://www.mailpile.is/blog/2017-12-12_Holiday_Season_Updates.html"
+  }, 
+  {
+    "markdown_tweet": "Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit more visibly again. More news soon.  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 16 Nov 2017 00:21](https://twitter.com/MailpileTeam/status/930953985858654209)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit more visibly again. More news soon.", 
+    "html_tweet": "<div class=\"tweet\"><p>Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit more visibly again. More news soon.<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/930953985858654209\">Thu, 16 Nov 2017 00:21</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/930953985858654209", 
+    "urls": {}, 
     "date": "Thu, 16 Nov 2017 00:21", 
-    "expanded_tweet": "Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit mor\u2026 https://twitter.com/i/web/status/930953985858654209"
+    "expanded_tweet": "Oh, hi! We're not dead. In fact, we're in the process of hiring a project manager to get the ball rolling a bit more visibly again. More news soon."
   }, 
   {
     "markdown_tweet": "Have you tried the Mailpile Debian 1.0rc1 packages? We're looking for feedback on what works and what doesn't.  \n[https://www.mailpile.is/download/linux.html](/download/linux.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 21 Aug 2017 10:45](https://twitter.com/MailpileTeam/status/899583106147135488)*  \n", 
@@ -24,40 +184,40 @@
     "expanded_tweet": "Have you tried the Mailpile Debian 1.0rc1 packages? We're looking for feedback on what works and what doesn't.\nhttps://www.mailpile.is/download/linux.html"
   }, 
   {
-    "markdown_tweet": "Our apologies for incorrectly stating that TOFU would be the default trust model in future @GnuPG versions (see [www.mailpile.is/blog...](/blog/2017-08-13_SHA2017.html)).  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 18 Aug 2017 16:23](https://twitter.com/MailpileTeam/status/898581003488432129)*  \n", 
+    "markdown_tweet": "Our apologies for incorrectly stating that TOFU would be the default trust model in future <a href=\"https://twitter.com/GnuPG\">@GnuPG</a> versions (see [www.mailpile.is/blog...](/blog/2017-08-13_SHA2017.html)).  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 18 Aug 2017 16:23](https://twitter.com/MailpileTeam/status/898581003488432129)*  \n", 
     "from": "MailpileTeam", 
     "tweet": "Our apologies for incorrectly stating that TOFU would be the default trust model in future @GnuPG versions (see https://t.co/oMTWyeQVax).", 
-    "html_tweet": "<div class=\"tweet\"><p>Our apologies for incorrectly stating that TOFU would be the default trust model in future @GnuPG versions (see <a href=\"/blog/2017-08-13_SHA2017.html\">www.mailpile.is/blog...</a>).<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/898581003488432129\">Fri, 18 Aug 2017 16:23</a></em>  </p></div>\n", 
+    "html_tweet": "<div class=\"tweet\"><p>Our apologies for incorrectly stating that TOFU would be the default trust model in future <a href=\"https://twitter.com/GnuPG\">@GnuPG</a> versions (see <a href=\"/blog/2017-08-13_SHA2017.html\">www.mailpile.is/blog...</a>).<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/898581003488432129\">Fri, 18 Aug 2017 16:23</a></em>  </p></div>\n", 
     "link": "https://twitter.com/MailpileTeam/status/898581003488432129", 
     "urls": {
       "https://t.co/oMTWyeQVax": "https://www.mailpile.is/blog/2017-08-13_SHA2017.html"
     }, 
     "date": "Fri, 18 Aug 2017 16:23", 
-    "expanded_tweet": "Our apologies for incorrectly stating that TOFU would be the default trust model in future @GnuPG versions (see https://www.mailpile.is/blog/2017-08-13_SHA2017.html)."
+    "expanded_tweet": "Our apologies for incorrectly stating that TOFU would be the default trust model in future <a href=\"https://twitter.com/GnuPG\">@GnuPG</a> versions (see https://www.mailpile.is/blog/2017-08-13_SHA2017.html)."
   }, 
   {
-    "markdown_tweet": "As announced at #SHA2017, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: [https://www.mailpile.is/download/linux.html](/download/linux.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 16 Aug 2017 16:30](https://twitter.com/MailpileTeam/status/897858002019135488)*  \n", 
+    "markdown_tweet": "As announced at <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a>, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: [https://www.mailpile.is/download/linux.html](/download/linux.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 16 Aug 2017 16:30](https://twitter.com/MailpileTeam/status/897858002019135488)*  \n", 
     "from": "MailpileTeam", 
     "tweet": "As announced at #SHA2017, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: https://t.co/g5AOvTLI5y", 
-    "html_tweet": "<div class=\"tweet\"><p>As announced at #SHA2017, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: <a href=\"/download/linux.html\">https://www.mailpile.is/download/linux.html</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/897858002019135488\">Wed, 16 Aug 2017 16:30</a></em>  </p></div>\n", 
+    "html_tweet": "<div class=\"tweet\"><p>As announced at <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a>, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: <a href=\"/download/linux.html\">https://www.mailpile.is/download/linux.html</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/897858002019135488\">Wed, 16 Aug 2017 16:30</a></em>  </p></div>\n", 
     "link": "https://twitter.com/MailpileTeam/status/897858002019135488", 
     "urls": {
       "https://t.co/g5AOvTLI5y": "https://www.mailpile.is/download/linux.html"
     }, 
     "date": "Wed, 16 Aug 2017 16:30", 
-    "expanded_tweet": "As announced at #SHA2017, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: https://www.mailpile.is/download/linux.html"
+    "expanded_tweet": "As announced at <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a>, we now have a first release candidate for Mailpile 1.0. Linux (deb) packages are here: https://www.mailpile.is/download/linux.html"
   }, 
   {
-    "markdown_tweet": "New blog post by @HerraBRE: Still Hacking Anyway.  \nHis #SHA2017 talk about Mailpile (video, links and a correction).  \n[www.mailpile.is/blog...](/blog/2017-08-13_SHA2017.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 14 Aug 2017 09:59](https://twitter.com/MailpileTeam/status/897034906471215104)*  \n", 
+    "markdown_tweet": "New blog post by <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>: Still Hacking Anyway.  \nHis <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a> talk about Mailpile (video, links and a correction).  \n[www.mailpile.is/blog...](/blog/2017-08-13_SHA2017.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 14 Aug 2017 09:59](https://twitter.com/MailpileTeam/status/897034906471215104)*  \n", 
     "from": "MailpileTeam", 
     "tweet": "New blog post by @HerraBRE: Still Hacking Anyway.\n His #SHA2017 talk about Mailpile (video, links and a correction).\n https://t.co/oMTWyeQVax", 
-    "html_tweet": "<div class=\"tweet\"><p>New blog post by @HerraBRE: Still Hacking Anyway.<br />\nHis #SHA2017 talk about Mailpile (video, links and a correction).<br />\n<a href=\"/blog/2017-08-13_SHA2017.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/897034906471215104\">Mon, 14 Aug 2017 09:59</a></em>  </p></div>\n", 
+    "html_tweet": "<div class=\"tweet\"><p>New blog post by <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>: Still Hacking Anyway.<br />\nHis <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a> talk about Mailpile (video, links and a correction).<br />\n<a href=\"/blog/2017-08-13_SHA2017.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/897034906471215104\">Mon, 14 Aug 2017 09:59</a></em>  </p></div>\n", 
     "link": "https://twitter.com/MailpileTeam/status/897034906471215104", 
     "urls": {
       "https://t.co/oMTWyeQVax": "https://www.mailpile.is/blog/2017-08-13_SHA2017.html"
     }, 
     "date": "Mon, 14 Aug 2017 09:59", 
-    "expanded_tweet": "New blog post by @HerraBRE: Still Hacking Anyway.\nHis #SHA2017 talk about Mailpile (video, links and a correction).\nhttps://www.mailpile.is/blog/2017-08-13_SHA2017.html"
+    "expanded_tweet": "New blog post by <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>: Still Hacking Anyway.\nHis <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a> talk about Mailpile (video, links and a correction).\nhttps://www.mailpile.is/blog/2017-08-13_SHA2017.html"
   }, 
   {
     "markdown_tweet": "Since we've only blogged twice this year, I nominate as second best post so far: SHA 2017, Here We Come!  \n[www.mailpile.is/blog...](/blog/2017-08-02_SHA2017_Here_We_Come.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 03 Aug 2017 14:15](https://twitter.com/MailpileTeam/status/893112972758753280)*  \n", 
@@ -70,161 +230,5 @@
     }, 
     "date": "Thu, 03 Aug 2017 14:15", 
     "expanded_tweet": "Since we've only blogged twice this year, I nominate as second best post so far: SHA 2017, Here We Come!\nhttps://www.mailpile.is/blog/2017-08-02_SHA2017_Here_We_Come.html"
-  }, 
-  {
-    "markdown_tweet": "We finally finished updating our website SSL certs. Big thanks to @letsencrypt - and all the folks that reported issues with the old certs!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 03 Aug 2017 10:44](https://twitter.com/MailpileTeam/status/893059873663062016)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "We finally finished updating our website SSL certs. Big thanks to @letsencrypt - and all the folks that reported issues with the old certs!", 
-    "html_tweet": "<div class=\"tweet\"><p>We finally finished updating our website SSL certs. Big thanks to @letsencrypt - and all the folks that reported issues with the old certs!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/893059873663062016\">Thu, 03 Aug 2017 10:44</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/893059873663062016", 
-    "urls": {}, 
-    "date": "Thu, 03 Aug 2017 10:44", 
-    "expanded_tweet": "We finally finished updating our website SSL certs. Big thanks to @letsencrypt - and all the folks that reported issues with the old certs!"
-  }, 
-  {
-    "markdown_tweet": "~95% of all e-mail goes through the servers of the top ten e-mail providers. Unencrypted. What does that mean for privacy?  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 02 Aug 2017 21:22](https://twitter.com/MailpileTeam/status/892858263682854914)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "~95% of all e-mail goes through the servers of the top ten e-mail providers. Unencrypted. What does that mean for privacy?", 
-    "html_tweet": "<div class=\"tweet\"><p>~95% of all e-mail goes through the servers of the top ten e-mail providers. Unencrypted. What does that mean for privacy?<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/892858263682854914\">Wed, 02 Aug 2017 21:22</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/892858263682854914", 
-    "urls": {}, 
-    "date": "Wed, 02 Aug 2017 21:22", 
-    "expanded_tweet": "~95% of all e-mail goes through the servers of the top ten e-mail providers. Unencrypted. What does that mean for privacy?"
-  }, 
-  {
-    "markdown_tweet": "We're going to @SHA2017Camp! Our @HerraBRE will give a talk about Mailpile on Saturday and @smarimc will be flitting around too. Say hi!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 02 Aug 2017 15:11](https://twitter.com/MailpileTeam/status/892764736055648256)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "We're going to @SHA2017Camp! Our @HerraBRE will give a talk about Mailpile on Saturday and @smarimc will be flitting around too. Say hi!", 
-    "html_tweet": "<div class=\"tweet\"><p>We're going to @SHA2017Camp! Our @HerraBRE will give a talk about Mailpile on Saturday and @smarimc will be flitting around too. Say hi!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/892764736055648256\">Wed, 02 Aug 2017 15:11</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/892764736055648256", 
-    "urls": {}, 
-    "date": "Wed, 02 Aug 2017 15:11", 
-    "expanded_tweet": "We're going to @SHA2017Camp! Our @HerraBRE will give a talk about Mailpile on Saturday and @smarimc will be flitting around too. Say hi!"
-  }, 
-  {
-    "markdown_tweet": "The crypto in Mailpile depends on @GnuPG - please support their work if you can! [https://gnupg.org/donate/](https://gnupg.org/donate/)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Tue, 13 Jun 2017 17:12](https://twitter.com/MailpileTeam/status/874675739861413888)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "The crypto in Mailpile depends on @GnuPG - please support their work if you can! https://t.co/usR7R0wfIV", 
-    "html_tweet": "<div class=\"tweet\"><p>The crypto in Mailpile depends on @GnuPG - please support their work if you can! <a href=\"https://gnupg.org/donate/\">https://gnupg.org/donate/</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/874675739861413888\">Tue, 13 Jun 2017 17:12</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/874675739861413888", 
-    "urls": {
-      "https://t.co/usR7R0wfIV": "https://gnupg.org/donate/"
-    }, 
-    "date": "Tue, 13 Jun 2017 17:12", 
-    "expanded_tweet": "The crypto in Mailpile depends on @GnuPG - please support their work if you can! https://gnupg.org/donate/"
-  }, 
-  {
-    "markdown_tweet": "Ever wondered what sort of work goes into writing a secure e-mail client? We discuss most things in detail on #mailpile on Freenode (IRC).  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 29 Mar 2017 11:03](https://twitter.com/MailpileTeam/status/847041523900448770)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Ever wondered what sort of work goes into writing a secure e-mail client? We discuss most things in detail on #mailpile on Freenode (IRC).", 
-    "html_tweet": "<div class=\"tweet\"><p>Ever wondered what sort of work goes into writing a secure e-mail client? We discuss most things in detail on #mailpile on Freenode (IRC).<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/847041523900448770\">Wed, 29 Mar 2017 11:03</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/847041523900448770", 
-    "urls": {}, 
-    "date": "Wed, 29 Mar 2017 11:03", 
-    "expanded_tweet": "Ever wondered what sort of work goes into writing a secure e-mail client? We discuss most things in detail on #mailpile on Freenode (IRC)."
-  }, 
-  {
-    "markdown_tweet": "Looking for a weekend project? Like e-mail attachments? We could use help with these issues:  \n[github.com/mailpile...](https://github.com/mailpile/Mailpile/issues?q=is%3Aopen%20Attachments%20label%3A%22Low%20Hanging%20Fruit%22)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 24 Mar 2017 12:41](https://twitter.com/MailpileTeam/status/845254327375728640)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Looking for a weekend project? Like e-mail attachments? We could use help with these issues:\n https://t.co/mj3m0J2V7U", 
-    "html_tweet": "<div class=\"tweet\"><p>Looking for a weekend project? Like e-mail attachments? We could use help with these issues:<br />\n<a href=\"https://github.com/mailpile/Mailpile/issues?q=is%3Aopen%20Attachments%20label%3A%22Low%20Hanging%20Fruit%22\">github.com/mailpile...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/845254327375728640\">Fri, 24 Mar 2017 12:41</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/845254327375728640", 
-    "urls": {
-      "https://t.co/mj3m0J2V7U": "https://github.com/mailpile/Mailpile/issues?q=is%3Aopen%20Attachments%20label%3A%22Low%20Hanging%20Fruit%22"
-    }, 
-    "date": "Fri, 24 Mar 2017 12:41", 
-    "expanded_tweet": "Looking for a weekend project? Like e-mail attachments? We could use help with these issues:\nhttps://github.com/mailpile/Mailpile/issues?q=is%3Aopen%20Attachments%20label%3A%22Low%20Hanging%20Fruit%22"
-  }, 
-  {
-    "markdown_tweet": "Our @HerraBRE is in Valencia until Wednesday to work on AutoCrypt and hopefully meet some #InternetFF attendees. Get in touch, say hi!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Sat, 04 Mar 2017 11:15](https://twitter.com/MailpileTeam/status/837984721124618241)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Our @HerraBRE is in Valencia until Wednesday to work on AutoCrypt and hopefully meet some #InternetFF attendees. Get in touch, say hi!", 
-    "html_tweet": "<div class=\"tweet\"><p>Our @HerraBRE is in Valencia until Wednesday to work on AutoCrypt and hopefully meet some #InternetFF attendees. Get in touch, say hi!<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/837984721124618241\">Sat, 04 Mar 2017 11:15</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/837984721124618241", 
-    "urls": {}, 
-    "date": "Sat, 04 Mar 2017 11:15", 
-    "expanded_tweet": "Our @HerraBRE is in Valencia until Wednesday to work on AutoCrypt and hopefully meet some #InternetFF attendees. Get in touch, say hi!"
-  }, 
-  {
-    "markdown_tweet": "Need a weekend project? Mailpile setup fails if the machine is low on disk space; it should be easy to fix:  \n[github.com/mailpile...](https://github.com/mailpile/Mailpile/issues/1730)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Fri, 03 Mar 2017 17:50](https://twitter.com/MailpileTeam/status/837721928878161920)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Need a weekend project? Mailpile setup fails if the machine is low on disk space; it should be easy to fix:\n https://t.co/fnhgzGZ62b", 
-    "html_tweet": "<div class=\"tweet\"><p>Need a weekend project? Mailpile setup fails if the machine is low on disk space; it should be easy to fix:<br />\n<a href=\"https://github.com/mailpile/Mailpile/issues/1730\">github.com/mailpile...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/837721928878161920\">Fri, 03 Mar 2017 17:50</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/837721928878161920", 
-    "urls": {
-      "https://t.co/fnhgzGZ62b": "https://github.com/mailpile/Mailpile/issues/1730"
-    }, 
-    "date": "Fri, 03 Mar 2017 17:50", 
-    "expanded_tweet": "Need a weekend project? Mailpile setup fails if the machine is low on disk space; it should be easy to fix:\nhttps://github.com/mailpile/Mailpile/issues/1730"
-  }, 
-  {
-    "markdown_tweet": "[https://www.mailpile.is/](/) finally mirrors our tweets! We only display static tweet content (no widgets) so Twitter cannot track visits.  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 23 Feb 2017 11:20](https://twitter.com/MailpileTeam/status/834724579029479424)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "https://t.co/XSIl4pNeFn finally mirrors our tweets! We only display static tweet content (no widgets) so Twitter cannot track visits.", 
-    "html_tweet": "<div class=\"tweet\"><p><a href=\"/\">https://www.mailpile.is/</a> finally mirrors our tweets! We only display static tweet content (no widgets) so Twitter cannot track visits.<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/834724579029479424\">Thu, 23 Feb 2017 11:20</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/834724579029479424", 
-    "urls": {
-      "https://t.co/XSIl4pNeFn": "https://www.mailpile.is/"
-    }, 
-    "date": "Thu, 23 Feb 2017 11:20", 
-    "expanded_tweet": "https://www.mailpile.is/ finally mirrors our tweets! We only display static tweet content (no widgets) so Twitter cannot track visits."
-  }, 
-  {
-    "markdown_tweet": "Should we start tweeting links to Mailpile issues our community could help us fix? Or would that be spammy? What do you think?  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 22 Feb 2017 15:51](https://twitter.com/MailpileTeam/status/834430336973012992)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Should we start tweeting links to Mailpile issues our community could help us fix? Or would that be spammy? What do you think?", 
-    "html_tweet": "<div class=\"tweet\"><p>Should we start tweeting links to Mailpile issues our community could help us fix? Or would that be spammy? What do you think?<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/834430336973012992\">Wed, 22 Feb 2017 15:51</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/834430336973012992", 
-    "urls": {}, 
-    "date": "Wed, 22 Feb 2017 15:51", 
-    "expanded_tweet": "Should we start tweeting links to Mailpile issues our community could help us fix? Or would that be spammy? What do you think?"
-  }, 
-  {
-    "markdown_tweet": "Mailpile 1.0 will implement Memory Hole, a standard for encrypting or signing e-mail headers. See thread:  \n[twitter.com/HerraBRE...](https://twitter.com/HerraBRE/status/831636607543427072)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Wed, 15 Feb 2017 12:46](https://twitter.com/MailpileTeam/status/831847117538938882)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Mailpile 1.0 will implement Memory Hole, a standard for encrypting or signing e-mail headers. See thread:\n https://t.co/VQQHkXG6go", 
-    "html_tweet": "<div class=\"tweet\"><p>Mailpile 1.0 will implement Memory Hole, a standard for encrypting or signing e-mail headers. See thread:<br />\n<a href=\"https://twitter.com/HerraBRE/status/831636607543427072\">twitter.com/HerraBRE...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/831847117538938882\">Wed, 15 Feb 2017 12:46</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/831847117538938882", 
-    "urls": {
-      "https://t.co/VQQHkXG6go": "https://twitter.com/HerraBRE/status/831636607543427072"
-    }, 
-    "date": "Wed, 15 Feb 2017 12:46", 
-    "expanded_tweet": "Mailpile 1.0 will implement Memory Hole, a standard for encrypting or signing e-mail headers. See thread:\nhttps://twitter.com/HerraBRE/status/831636607543427072"
-  }, 
-  {
-    "markdown_tweet": "Happy Belated New Year! We've published details about what our current plans are for 2017. Check it out:  \n[www.mailpile.is/blog...](/blog/2017-01-30_A_Plan_for_2017.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 30 Jan 2017 13:59](https://twitter.com/MailpileTeam/status/826067388168822784)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Happy Belated New Year! We've published details about what our current plans are for 2017. Check it out:\n https://t.co/jpqu2l767S", 
-    "html_tweet": "<div class=\"tweet\"><p>Happy Belated New Year! We've published details about what our current plans are for 2017. Check it out:<br />\n<a href=\"/blog/2017-01-30_A_Plan_for_2017.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/826067388168822784\">Mon, 30 Jan 2017 13:59</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/826067388168822784", 
-    "urls": {
-      "https://t.co/jpqu2l767S": "https://www.mailpile.is/blog/2017-01-30_A_Plan_for_2017.html"
-    }, 
-    "date": "Mon, 30 Jan 2017 13:59", 
-    "expanded_tweet": "Happy Belated New Year! We've published details about what our current plans are for 2017. Check it out:\nhttps://www.mailpile.is/blog/2017-01-30_A_Plan_for_2017.html"
-  }, 
-  {
-    "markdown_tweet": "Too Cool for PGP  \n - a friendly rant by @HerraBRE  \n  \n[www.mailpile.is/blog...](/blog/2016-12-13_Too_Cool_for_PGP.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Tue, 13 Dec 2016 11:21](https://twitter.com/MailpileTeam/status/808632951177179136)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Too Cool for PGP\n  - a friendly rant by @HerraBRE\n \n https://t.co/Y3WgTNdA71", 
-    "html_tweet": "<div class=\"tweet\"><p>Too Cool for PGP<br />\n - a friendly rant by @HerraBRE  </p>\n<p><a href=\"/blog/2016-12-13_Too_Cool_for_PGP.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/808632951177179136\">Tue, 13 Dec 2016 11:21</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/808632951177179136", 
-    "urls": {
-      "https://t.co/Y3WgTNdA71": "https://www.mailpile.is/blog/2016-12-13_Too_Cool_for_PGP.html"
-    }, 
-    "date": "Tue, 13 Dec 2016 11:21", 
-    "expanded_tweet": "Too Cool for PGP\n - a friendly rant by @HerraBRE\n\nhttps://www.mailpile.is/blog/2016-12-13_Too_Cool_for_PGP.html"
-  }, 
-  {
-    "markdown_tweet": "Many of the things Mailpile will do to protect your privacy depend on Tor. Support them if you can!  \n[twitter.com/torproject...](https://twitter.com/torproject/status/805883327551012867)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 05 Dec 2016 21:18](https://twitter.com/MailpileTeam/status/805884148556697600)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Many of the things Mailpile will do to protect your privacy depend on Tor. Support them if you can!\n https://t.co/Vy5OgnDeUy", 
-    "html_tweet": "<div class=\"tweet\"><p>Many of the things Mailpile will do to protect your privacy depend on Tor. Support them if you can!<br />\n<a href=\"https://twitter.com/torproject/status/805883327551012867\">twitter.com/torproject...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/805884148556697600\">Mon, 05 Dec 2016 21:18</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/805884148556697600", 
-    "urls": {
-      "https://t.co/Vy5OgnDeUy": "https://twitter.com/torproject/status/805883327551012867"
-    }, 
-    "date": "Mon, 05 Dec 2016 21:18", 
-    "expanded_tweet": "Many of the things Mailpile will do to protect your privacy depend on Tor. Support them if you can!\nhttps://twitter.com/torproject/status/805883327551012867"
   }
 ]

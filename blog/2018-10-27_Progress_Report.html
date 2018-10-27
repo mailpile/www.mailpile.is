@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Back to Work!</title>
+    <title>Mailpile: Progress Report: events, packages, 1.0</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -88,46 +88,117 @@
             <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="/blog/2015-04-13_Back_to_Work.html"><h1>Back to Work!</h1></a>
+    <a href="/blog/2018-10-27_Progress_Report.html"><h1>Progress Report: events, packages, 1.0</h1></a>
     <p>
-      <strong>Posted by <a href="#">Bjarni</a> on April 13, 2015</strong>
+      <strong>Posted by <a href="#">Bjarni Rúnar</a> on October 27, 2018</strong>
     </p>
 
-<p>After a month's break, it's time to resume work on Mailpile again. Some
-time away is always useful to give perspective and get some much needed
-rest, and now that I have returned I plan to make a few log overdue
-changes to how I work on Mailpile.</p>
-<p>I'll discuss the rest later, but the first change is to improve
-communication by publishing a weekly blog post describing what has been
-done recently and what is ahead. In order to distract as little as
-possible from actual development, these posts will be kept relatively
-short most of the time. This is the first such post!</p>
-<p>Think of it as a virtual "stand up", just to set the tone for the next
-few days of work:</p>
-<h3>Last week</h3>
-<p>Nothing to report, I was on holidays!</p>
-<h3>Next week</h3>
-<p>This week is dedicated to getting back to work. An event I am attending
-next weekend will helpfully provide focus...</p>
-<p>Next weekend I will be attending a small summit in Germany, meeting
-various other developers from open source projects that also work with
-OpenPGP and GnuPG.</p>
-<p>The summit is a private, very tech-focused event attended by developers
-from most of the open source projects using GnuPG today; a real who's
-who of GnuPG and e-mail security. To make the most of this opportunity,
-this week I will refresh my own memory on the current state of GnuPG and
-Mailpile and try to identify points where I could use advice or help, as
-well as points where I may be able to contribute and help the other
-projects.</p>
-<p>Topics I will explore this week and consider for presentation at the
-summit are:</p>
+<p>Hello world! How are you?</p>
+<p>I'm writing this, sitting on a bus in Luxembourg, realizing that we have been
+very quite for quite some time. Our last posts were in May, first a report on
+<a href="2018-05-03_Desktop_Usability_Tests.html">the results of our first round of desktop package usability
+testing</a>, quickly followed by a
+<a href="2018-05-14_PGP_Security_Alert.html">statement on how the EFail flaw impacted
+Mailpile</a>.</p>
+<p>Since then we may have been quiet, but we have not been idle:</p>
+<ul class="square">
+ <li>Many, many bugs have been found and fixed
+ <li>The first round of our desktop packaging project is complete,
+     we have packages and very basic desktop integration for both
+     Windows and the Mac
+ <li>Mailpile's multi-user Apache integration
+     (<a href="https://github.com/mailpile/Mailpile/tree/master/shared-data/multipile"
+         target=_blank>Multipile</a>)
+     has been simplified and reworked
+ <li>Mailpile's internal (in-memory) master security key is now
+     protected against memory corruption
+ <li>Mailpile is now <i>compatible</i> with
+     <a target=_blank href="https://autocrypt.org/">Autocrypt Level 1</a>,
+     but not yet fully compliant
+ <li>I attended the OpenPGP e-mail summit in Brussels
+</ul>
+
+<p>I would like to publicly thank Alex and Pétur for their hard work on the
+Mailpile Desktop packages, and in particular for how they took delays and slow
+responses from my end graciously and in stride.</p>
+<p>Read on to learn a bit more about the OpenPGP E-mail Summit, our CCC plans, the
+state of the desktop packaging work, and of course the elusive 1.0 release.</p>
+<h2>The OpenPGP Summit and 35c3</h2>
+<p>Last weekend I visited the <a href="https://mailfence.com/">Mailfence</a> office in
+Brussels, to attend the annual OpenPGP E-mail Summit.</p>
+<p>The OpenPGP E-mail Summit is one of my favourite community events. Just
+two days long, it is an informal event focused on getting people from
+the world of e-mail encryption to exchange knowledge and collaborate. </p>
+<p>This year there were (by my rough guesstimate) about 50 people from over
+20 projects present, including Phil Zimmermann himself, the creator of
+PGP. I was very happy to meet him and shake his hand. We ended up having
+about 20 different sessions, discussing topics ranging from key server
+management, to user interfaces, to updating the OpenPGP standard itself.</p>
+<p><a href="https://wiki.gnupg.org/EmailSummit2018Notes">Notes from all the sessions have been published.</a></p>
+<p>There was also a dinner and plenty of socializing, the value of which is
+not to be understated. Meeting people face-to-face almost always makes
+collaboration online easier and more productive.</p>
+<p>For Mailpile, the main outcomes of the summit were the following:</p>
 <ol>
-<li>Mailpile itself</li>
-<li>Mailpile's proposed trust model</li>
-<li>A method for generating beautiful avatars from PGP key fingerprints</li>
-<li>Enhanced e-mail signatures (manifests)</li>
+<li>There seems to be potential for partnerships with 2-3 other businesses in
+      the OpenPGP space, which we look forward to exploring further.</li>
+<li>The Web Key Directory specification is still evolving in ways which may
+      require we re-evaluate how we use it in Mailpile.</li>
+<li>Mailpile will aim for Autocrypt Level 1 compliance, soon! Our aim is to
+      get a member of the community to review and confirm our implementation
+      at the <a href="https://events.ccc.de/2018/09/11/35c3-call-for-participation-and-submission-guidelines/">35c3</a>
+      conference. We have a volunteer to perform the review.</li>
+<li>I have a vouncher and will be representing Mailpile at 35c3. Come say hi!</li>
 </ol>
-<p>That's the plan! Next week's update will tell you how it went.</p>
+<p>It was a productive weekend!</p>
+<h2>When will Mac and Windows packages be available?</h2>
+<p>If you've e-mailed me asking this question; my apologies for not
+answering. I haven't replied, because I don't know! If I did, our
+download package would just say so.</p>
+<p>There are three main tasks we need to complete before we make the
+desktop packages available to the wider Internet:</p>
+<ol>
+<li>A short private beta, to reassure ourselves the packages
+      don't have any blindingly obvious bugs.</li>
+<li>Launch a Discourse forum, so our users have a venue to help
+      each other out.</li>
+<li>Finish our "build robot" so packaging becomes an automated
+      process without any human bottlenecks.</li>
+</ol>
+<p>I am not going to commit to a time-line for getting this done, but this
+work is are all in progress and won't take forever. This year? This
+year.</p>
+<p>It's worth mentioning that some important tasks have been postponed and
+will not be blocking the availability of packages - so these packages
+will not be "Mailpile 1.0". But they're close.</p>
+<h2>So, what about Mailpile 1.0?</h2>
+<p>Our current release is 1.0.0rc4, tagged and pushed earlier today.</p>
+<p>At times it feels like we're chasing <a href="https://en.wikipedia.org/wiki/Zeno%27s_paradoxes#Achilles_and_the_tortoise">the tortoise from one of Zeno's
+paradoxes</a>,
+always getting closer but never able to catch up. For every issue we
+close, others are opened...</p>
+<p>But in spite of that, my to-do list for the elusive "Mailpile 1.0"
+release really is starting to get shorter and the issues that remain are
+not as complex as the ones we've resolved. I've updated the <a href="https://github.com/mailpile/Mailpile/milestone/4">GitHub
+Milestone</a> to reflect
+the current priority issues. It's not a long list, mostly relatively
+minor bugfixes.</p>
+<p>The two big items left on my 1.0 roadmap are:</p>
+<ol>
+<li>Fully implement Autocrypt Level 1</li>
+<li>Implement easy remote access (PageKite and Tor Hidden Services)</li>
+</ol>
+<p>The former is necessary for an interoperable and complete implementation
+of "PGP for everyone", and the latter is needed so people can access
+their Mailpiles remotely - in particular to access their Mailpile from
+their smart-phones.</p>
+<p>Again, I'm not going to make any promises about when these will get
+done.</p>
+<p>But this mini roadmap is still worth sharing, because if you liked the
+vision behind Mailpile and those two issues aren't critical for your
+use-case... then maybe Mailpile is already ready for you. Maybe!</p>
+<p>One-point-oh is an important label, but it's not everything.</p>
+<p>Mailpile is already a great e-mail client. Give it a try!</p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
