@@ -1,7 +1,7 @@
 Subject: Mac OS Developer
 Author: Oktavía Hrund
 Date: January 22, 2018
-Deadline: February 2, 2018
+Deadline: February 14, 2018
 Type: jobs
 
 Mailpile is looking for a software developer to join a team looking to

@@ -45,10 +45,9 @@
     </p>
     <p>
       This package will add a simple "launch and proxy" configuration to the
-      Apache web server, which will allow any user on the machine to activate
-      and access their Mailpile over the web at
-      <i>https://your.example.com/mailpile/</i>, after providing their username
-      and password.
+      Apache web server, which will allow any user on the machine to access
+      their Mailpile over the web at <i>https://your.example.com/mailpile/</i>.
+      Some administration is required; please consult <a href="https://github.com/mailpile/Mailpile/tree/master/shared-data/multipile">the documentation</a>.
     </p>
     <p>
       <b>Be careful!</b> We do not recommend exposing Mailpile to the public
@@ -164,7 +163,7 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
     {%- for repo in ('release', 'nightly') %}
      {%- for package in packages %}
       {%- set info = packages[package] %}
-      {%- if (package != 'EOF') and (info.repo == repo) %}
+      {%- if (package not in ('EOF', 'NEWEST')) and (info.repo == repo) %}
       <tr class="repo-{{ info.repo }} package-{{ info.package }}">
         <td style="text-align: center;">{{ info.repo }}</td>
         <td style="line-height: 1.2em;">
@@ -174,8 +173,18 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
             This is Mailpile!
           {%- elif info.package == 'mailpile-apache2' %}
             "Multipile" Multi-user Apache integration.
+          {%- elif info.package == 'mailpile-desktop' %}
+            Mailpile Desktop Integration package
           {%- elif info.package == 'python-socksipychain' %}
             SOCKS5 connection library, not needed on all systems.
+          {%- elif info.package == 'python-fasteners' %}
+            File-system locking library, not needed on all systems.
+          {%- elif info.package == 'python-monotonic' %}
+            Monotonic time for Python, not needed on all systems.
+          {%- elif info.package == 'python-gui-o-matic' %}
+            The GUI tool used by our desktop integration package
+          {%- elif info.package == 'python-imgsize' %}
+            Pure-Python image size library, not needed on all systems.
           {%- endif %}
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:

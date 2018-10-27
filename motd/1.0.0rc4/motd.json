@@ -1,7 +1,7 @@
 {
-  "timestamp":1540662311, 
+  "timestamp": 1540662311, 
   "latest_version": "1.0.0rc4",
-  "en": "Our release candidate has been updated with multiple bugfixes and renamed 1.0.0rc4. Updated Debian packages will be available from Sunday, October 28 onwards.",:
+  "en": "Our release candidate has been updated with multiple bugfixes and renamed 1.0.0rc4. Updated Debian packages will be available from Sunday, October 28 onwards.",
   "source": "https://www.mailpile.is/blog/",
   "signed": "www.mailpile.is"
 }

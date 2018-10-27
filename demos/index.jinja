@@ -1,95 +1,47 @@
 {% extends "/jinja/layouts/page.html-jinja" %}
 {% set page = {'type': 'full'} %}
 
-{% block title %}Beta III Demo{% endblock %}
-
+{% block title %}Mailpile Demo{% endblock %}
+{% block head_extra %}
+   <style type='text/css'>
+     ul.languages {
+       margin: 0 auto;
+       max-width: 65%;
+       list-style: none;
+     }
+     ul.languages li {
+       display: inline-block;
+       width: 30%;
+       margin: 0 -5em 5px 5.1em;
+       text-align: left;
+     } 
+     ul.languages li tt {
+       font-weight: normal;
+       font-size: 0.8em;
+     }
+   </style>
+{% endblock %}
 {% block content %}
 <h4 class="text-center half-bottom">Explore a demo version of the <img src="/img/icon-48x48.png" style="margin-left: 10px; position: relative; top:15px"> <strong>mail</strong>pile</h4>
-<h1 class="text-center">Beta III Release</h1>
+<h1 class="text-center">Release Candidate</h1>
 
 <div class="row add-bottom text-center">
-  <a class="button-primary center" href="http://demo.mailpile.is/in/inbox/">Try Mailpile in English (US)</a>
+  <a class="button-primary center" href="https://demo.mailpile.is/C/">Try Mailpile in English (US)</a>
 </div>
-
-{# #########################################################################
 
 <div class="row text-center">
-  <p>Or select one of the 13 other languages we have demos available in:</p>
+  <p>Or select one of the other languages we have demos available in:</p>
 </div>
 
 <div class="row add-bottom">
-  <div class="col-3 col-offset-1 text-center">
-    <a href="http://ar.demo.mailpile.is/in/inbox/"><img src="/img/flags/ar.png"></a><br>
-    <a href="http://ar.demo.mailpile.is/in/inbox/">Arabic</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://ca.demo.mailpile.is/in/inbox/"><img src="/img/flags/cat.png"></a><br>
-    <a href="http://ca.demo.mailpile.is/in/inbox/">Catalan</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://cs-cz.demo.mailpile.is/in/inbox/"><img src="/img/flags/cz.png"></a><br>
-    <a href="http://cs-cz.demo.mailpile.is/in/inbox/">Czech</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://nl-nl.demo.mailpile.is/in/inbox/"><img src="/img/flags/nl.png"></a><br>
-    <a href="http://nl-nl.demo.mailpile.is/in/inbox/">Dutch</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://demo.mailpile.is/in/inbox/"><img src="/img/flags/us.png"></a><br>
-    <a href="http://demo.mailpile.is/in/inbox/">English (US)</a>
-  </div>
+<ul class="languages">{{ cat("languages.html")|safe }}</ul>
 </div>
-
-<div class="row add-bottom">
-  <div class="col-3 col-offset-1 text-center">
-    <a href="http://fr-fr.demo.mailpile.is/in/inbox/"><img src="/img/flags/fr.png"></a><br>
-    <a href="http://fr-fr.demo.mailpile.is/in/inbox/">French</a>
-  </div>
-  <div class="col-3 text-center">    
-    <a href="http://de.demo.mailpile.is/in/inbox/"><img src="/img/flags/de.png"></a><br>
-    <a href="http://de.demo.mailpile.is/in/inbox/">German</a>
-  </div>
-  <div class="col-3 text-center">    
-    <a href="http://is.demo.mailpile.is/in/inbox/"><img src="/img/flags/is.png"></a><br>
-    <a href="http://is.demo.mailpile.is/in/inbox/">Icelandic</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://id.demo.mailpile.is/in/inbox/"><img src="/img/flags/id.png"></a><br>
-    <a href="http://id.demo.mailpile.is/in/inbox/">Indonesian</a>
-  </div>
-  <div class="col-3 text-center">    
-    <a href="http://es-419.demo.mailpile.is/in/inbox/"><img src="/img/flags/laes.png"></a><br>
-    <a href="http://es-419.demo.mailpile.is/in/inbox/">Latin American Spanish</a>
-  </div>
-</div>
-
-<div class="row add-bottom clearfix">
-  <div class="col-3 col-offset-1 text-center">
-    <a href="http://no.demo.mailpile.is/in/inbox/"><img src="/img/flags/no.png"></a><br>
-    <a href="http://no.demo.mailpile.is/in/inbox/">Norwegian</a>
-  </div>
-  <div class="col-3 text-center">    
-    <a href="http://sl-si.demo.mailpile.is/in/inbox/"><img src="/img/flags/si.png"></a><br>
-    <a href="http://sl-si.demo.mailpile.is/in/inbox/">Slovenian</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://es-es.demo.mailpile.is/in/inbox/"><img src="/img/flags/es.png"></a><br>
-    <a href="http://es-es.demo.mailpile.is/in/inbox/">Spanish</a>
-  </div>
-  <div class="col-3 text-center">
-    <a href="http://sv-se.demo.mailpile.is/in/inbox/"><img src="/img/flags/se.png"></a><br>
-    <a href="http://sv-se.demo.mailpile.is/in/inbox/">Swedish</a>
-  </div>
-</div>
-
-########################################################################### #}
 
 <div class="row"></div>
 
-
 <div class="row add-top add-bottom">
   <div class="col-offset-3 col-10 text-center">
-    <p>Demos for other languages will be added soon, as our community of translators catches up with all the changes!</p>
+    <p>Note that some translations may be incomplete. We will update the demos and add new languages as our community of translators catches up with all the changes!</p>
     <p>Interested in helping Mailpile exist in your language? Please <a href="https://www.transifex.com/projects/p/mailpile/" target="_blank">join the project on Transifex</a> to help with translations or reviewing already submitted translations.</p>
   </div>
 </div>

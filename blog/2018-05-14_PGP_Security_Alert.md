@@ -80,6 +80,7 @@ required for attacks to succeed.
 
 Fixes addressing both of these attack vectors have been pushed to our
 GitHub repository and will be included in our next release candidate.
+They are already present in our [nightly Debian packages](/download/linux.html).
 
 
 ## First Update
