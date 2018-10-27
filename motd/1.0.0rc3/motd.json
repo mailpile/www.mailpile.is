@@ -1,7 +1,0 @@
-{
-  "timestamp": 1526285105,
-  "latest_version": "1.0.0rc3",
-  "en": "IMPORTANT!\nPlease see https://www.mailpile.is/blog/ for a critical security advisory.\n\n--\n\nOur third 1.0 release candidate is [almost] available from Github.\nDebian packages will be available on www.mailpile.is within a few days.\nHappy 2018!",
-  "source": "https://www.mailpile.is/blog/",
-  "signed": "www.mailpile.is"
-}
