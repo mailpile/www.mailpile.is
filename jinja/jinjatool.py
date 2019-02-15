@@ -77,6 +77,7 @@ class JinjaToolExtension(Extension):
         env.filters['to_json'] = self._to_json
         env.filters['from_json'] = self._from_json
         env.filters['from_rfc822'] = self._from_rfc822
+        env.filters['from_vars_txt'] = self._from_vars_txt
 
     def _bash(self, data=None, command=None):
         if (data is not None) and (command is None):
@@ -124,6 +125,8 @@ class JinjaToolExtension(Extension):
             d = copy.copy(data)
             d[field] = self._date(d[field], fmt=fmt)
             return d
+        elif isinstance(data, int) or isinstance(data, float):
+            data = '@%d' % data
         try:
             if fmt[:1] not in ('-', '+'):
                 fmt = '+%s' % fmt
@@ -179,6 +182,23 @@ class JinjaToolExtension(Extension):
         else:
             rfc822['body'] = body.rstrip()
         return rfc822
+
+    def _from_vars_txt(self, data):
+        vdict = {}
+        if data:
+            for line in data.splitlines():
+                var, val = [v.strip() for v in line.split(':', 1)]
+                try:
+                    if ' ' in val:
+                        val = [int(v) for v in val.split()]
+                    elif '.' in val:
+                        val = float(val)
+                    else:
+                        val = int(val)
+                except ValueError:
+                    pass
+                vdict[var] = val
+        return vdict
 
 
 def MakeJinjaEnvironment():

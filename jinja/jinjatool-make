@@ -13,6 +13,7 @@ MAKE = make JINJATOOL_ROOT=$(JINJATOOL_ROOT) JINJATOOL=$(JINJATOOL) MP_RFC822=$(
 TARGETS = find . -name \*.jinja* -o -name \*.md \
             |grep -v -e '.swp$$' -e '.py$$' -e '~$$' |sort \
             |sed -e 's/md$$/html/g' \
+                 -e 's/jinja-txt$$/txt/g' \
                  -e 's/jinja-rss$$/rss/g' \
                  -e 's/jinja-json$$/json/g' \
                  -e 's/jinja-js$$/js/g' \
@@ -33,6 +34,9 @@ loop: .depend
             |grep -v 'up to date' \
             || sleep 1; \
          done
+
+%.txt: %.jinja-txt
+	LC_ALL=C JINJATOOL_ROOT=$(JINJATOOL_ROOT) $(JINJATOOL) $<:$@
 
 %.rss: %.jinja-rss
 	LC_ALL=C JINJATOOL_ROOT=$(JINJATOOL_ROOT) $(JINJATOOL) $<:$@
