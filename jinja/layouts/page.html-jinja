@@ -60,13 +60,16 @@
             </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
+{#
             <li><a href="/roadmap/"
                    class="scroll-link" style="position: relative;">
               <img class="login-hint" src="/img/happy-star.png"
                    style="position: absolute; top:5px; right: 5px;">
               Roadmap
             </a></li>
+ #}
             <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="https://community.mailpile.is/categories" class="scroll-link">Community</a></li>
             <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="https://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
@@ -132,6 +135,7 @@
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
                     <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Discourse: <a href="https://community.mailpile.is/categories" target="_blank">community.mailpile.is</a></li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
 <!--
                     <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
@@ -152,6 +156,7 @@
                     <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
                               <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
                     <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                    <li>Support: <a href="https://community.mailpile.is/c/support" target="_blank">Community</a></li>
                 </ul>
                 <ul>
                     <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
