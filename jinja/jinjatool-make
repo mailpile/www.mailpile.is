@@ -5,7 +5,7 @@
 # update itself with whatever rules are necessary.
 #
 JINJATOOL_ROOT ?= $(shell cd $$(find . -name template.md-jinja |head -1 |dirname -) && pwd)
-JINJATOOL ?= /home/mailpile/www/jinja/jinjatool.py
+JINJATOOL ?= $(shell which jinjatool.py || echo /home/mailpile/www/jinja/jinjatool.py)
 MP_RFC822 ?= $(shell find . -name template.md-jinja |head -1)
 
 MAKE = make JINJATOOL_ROOT=$(JINJATOOL_ROOT) JINJATOOL=$(JINJATOOL) MP_RFC822=$(MP_RFC822) \
