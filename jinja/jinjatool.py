@@ -120,7 +120,7 @@ class JinjaToolExtension(Extension):
                 'sha512': hashlib.sha256
             }[algo.lower()](data).hexdigest()
 
-    def _date(self, data, fmt='%Y-%m-%d', field='date'):
+    def _date(self, data, fmt='%Y-%m-%d', field='date', tz=None):
         if isinstance(data, dict):
             d = copy.copy(data)
             d[field] = self._date(d[field], fmt=fmt)
@@ -133,7 +133,8 @@ class JinjaToolExtension(Extension):
             data = data.replace(',', ' ')
             if ':' not in data and data != 'now' and '@' not in data:
                 data += ' 12:00'
-            return subprocess.check_output(['date', fmt, '--date', data]
+            return subprocess.check_output(['date', fmt, '--date', data],
+                                           env={'TZ': tz} if tz else None,
                                            ).decode('utf-8').strip()
         except (OSError, IOError, subprocess.CalledProcessError):
             return data
