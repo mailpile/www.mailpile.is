@@ -1,0 +1,7 @@
+{
+  "timestamp": 1551267750, 
+  "latest_version": "1.0.0rc5",
+  "en": "Our release candidate has been updated with multiple bugfixes\nand renamed 1.0.0rc5. Updated Debian packages will be available\nfrom Friday, March 1 onwards.\nCheck our new Community Discourse for more details.",
+  "source": "https://community.mailpile.is/t/tagged-1-0-0rc5-warning-about-openssl-compatibility/59",
+  "signed": "www.mailpile.is"
+}
