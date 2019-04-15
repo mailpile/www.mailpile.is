@@ -25,7 +25,7 @@ Specifically modelling and automatic programming. He loves collaborative
 design by prototyping, designing and exploring new ideas using scissors,
 papers, glue and different shades of colour. His favorite movie quote?
 
-> "It's a UNIX system." — Jurrasic Park :)
+> "It's a UNIX system." — Jurassic Park :)
 
 What will they be doing with us? We're glad you asked! Their main tasks
 relate to packaging Mailpile for the Mac and Windows platforms, and in
