@@ -67,3 +67,6 @@ Many thanks to [Sebastian](https://sebastian-schinzel.de/) and
 [Vincent](https://twitter.com/valodim) for helping me figure out how to
 improve Mailpile on this front. And thanks to [CCC](https://www.ccc.de/)
 for providing venues for these conversations to take place.
+
+Please feel free to [discuss this post in our Community
+Forum](https://community.mailpile.is/t/blog-post-about-cccamp-19-and-efail/243).
