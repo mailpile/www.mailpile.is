@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 This is a command-line utility that allows one to use the Jinja2 templating
 engine to work with static files.
@@ -87,14 +87,14 @@ class JinjaToolExtension(Extension):
                     stdin=subprocess.PIPE,
                     stdout=subprocess.PIPE,
                     stderr=subprocess.PIPE
-                ).communicate(input=unicode(data or '').decode('utf-8'))
-            return (so or se or 'FAILED').decode('utf-8').strip()
+                ).communicate(input=bytes(data or '', 'utf-8'))
+            return str(so or se or b'FAILED', 'utf-8').strip()
         except (OSError, IOError):
             return None
 
     def _cat(self, fn):
         try:
-            return open(fn, 'r').read().decode('utf-8')
+            return str(open(fn, 'rb').read(), 'utf-8')
         except (OSError, IOError):
             return None
 
@@ -133,9 +133,9 @@ class JinjaToolExtension(Extension):
             data = data.replace(',', ' ')
             if ':' not in data and data != 'now' and '@' not in data:
                 data += ' 12:00'
-            return subprocess.check_output(['date', fmt, '--date', data],
-                                           env={'TZ': tz} if tz else None,
-                                           ).decode('utf-8').strip()
+            return str(subprocess.check_output(['date', fmt, '--date', data],
+                                               env={'TZ': tz} if tz else None,
+                                               ), 'utf-8').strip()
         except (OSError, IOError, subprocess.CalledProcessError):
             return data
 
@@ -254,11 +254,11 @@ def Main():
             try:
                 os.chdir(variables.get('dir', os.path.dirname(inpath)))
                 template = jinja_env.get_template(inpath)
-                data = template.render(variables).encode('utf-8')
+                data = bytes(template.render(variables), 'utf-8')
                 os.chdir(basedir)
             except:
                 if depcheck:
-                    print '# FAILED DEPS: %s' % inpath
+                    print('# FAILED DEPS: %s' % inpath)
                     continue
                 else:
                     raise
@@ -269,20 +269,20 @@ def Main():
                     relofile = os.path.relpath(os.path.abspath(ofile))
                     if relofile in deps:
                         deps.remove(relofile)
-                    print '%s: %s' % (relofile, ' '.join(deps))
+                    print('%s: %s' % (relofile, ' '.join(deps)))
                 else:
                     deps.remove(inrelpath)
-                    print '%s: %s'  % (inrelpath, ' '.join(deps))
+                    print('%s: %s'  % (inrelpath, ' '.join(deps)))
 
                 # Clear caches so each dependency list is correct
                 jinja_env = MakeJinjaEnvironment()
                 OPENED_FILES = set()
             else:
                 if ofile:
-                    open(ofile, 'w').write(data)
+                    open(ofile, 'wb').write(data)
                 else:
-                    sys.stdout.write(data)
-                    if '<html' in data[:80]:
+                    sys.stdout.buffer.write(data)
+                    if b'<html' in data[:80]:
                         sys.stdout.write('\n<!-- EOF:%s -->\n' % infile)
 
 Main()
