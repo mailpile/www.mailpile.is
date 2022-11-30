@@ -103,9 +103,10 @@ $(document).ready(function() {
 <li class="section-wha"><a class="toc-go" href="#wha-9">If anyone can view the code &amp; change Mailpile, doesn't that make it less secure?</a></li>
 </ul></li>
 <li class="section"><a href="#how">How can I help?</a><ul>
-<li class="section-how"><a class="toc-go" href="#how-1">I am a developer, how can I help?</a></li>
-<li class="section-how"><a class="toc-go" href="#how-2">I am not a techie, how can I help?</a></li>
-<li class="section-how"><a class="toc-go" href="#how-3">Do you accept Bitcoin?</a></li>
+<li class="section-how"><a class="toc-go" href="#how-1">I'm a user, how can I help - or get help?</a></li>
+<li class="section-how"><a class="toc-go" href="#how-2">I am a developer, how can I help?</a></li>
+<li class="section-how"><a class="toc-go" href="#how-3">I am not a techie, how can I help?</a></li>
+<li class="section-how"><a class="toc-go" href="#how-4">Do you accept Bitcoin?</a></li>
 </ul></li>
 <li class="section"><a href="#fea">Feature Requests</a><ul>
 <li class="section-fea"><a class="toc-go" href="#fea-1">Can Mailpile filter incoming messages to specific folders?</a></li>
@@ -117,7 +118,7 @@ $(document).ready(function() {
 <li class="section-fea"><a class="toc-go" href="#fea-7">What about backups?</a></li>
 </ul></li>
 <li class="section"><a href="#tec">Technical Questions</a><ul>
-<li class="section-tec"><a class="toc-go" href="#tec-1">Will Mailpile run on Windows 8.1, Mac OSX, Linux etc. etc.?</a></li>
+<li class="section-tec"><a class="toc-go" href="#tec-1">Will Mailpile run on Windows 8.1, macOS, Linux etc. etc.?</a></li>
 <li class="section-tec"><a class="toc-go" href="#tec-2">Will mail sent from Mailpile be compatible with other e-mail clients?</a></li>
 <li class="section-tec"><a class="toc-go" href="#tec-3">Can Mailpile import from Thunderbird, Outlook, Mac Mail, Eudora, etc...?</a></li>
 <li class="section-tec"><a class="toc-go" href="#tec-4">Will Mailpile protect me from spam? Illegal content? Viruses?</a></li>
@@ -211,15 +212,19 @@ $(document).ready(function() {
 <p>Wikipedia has an interesting article on <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">"Security through Obscurity"</a> which discusses these philosophical issues in more depth.</p>
 </li>
 <li class="faq-section-title"><a class="anchor" id="how"></a><h2>How can I help?</h2></li>
-<li class="faq-item"><a class="anchor" id="how-1"></a> <h3 class="faq-title">I am a developer, how can I help?</h3> <span class="faq-section">how</span>
+<li class="faq-item"><a class="anchor" id="how-1"></a> <h3 class="faq-title">I'm a user, how can I help - or get help?</h3> <span class="faq-section">how</span>
+<p>Our <a href="https://community.mailpile.is/">community discourse</a>, has <a href="https://community.mailpile.is/c/support">a support category</a>. Please feel free to ask questions there or volunteer your time to help others.</p>
+<p>You can also use the forum to post tips and tricks, success stories, or discuss potential new features.</p>
+</li>
+<li class="faq-item"><a class="anchor" id="how-2"></a> <h3 class="faq-title">I am a developer, how can I help?</h3> <span class="faq-section">how</span>
 <p>Take a look at our <a href="https://github.com/mailpile/Mailpile">Github page</a>, we have a very long list of open issues.</p>
 </li>
-<li class="faq-item"><a class="anchor" id="how-2"></a> <h3 class="faq-title">I am not a techie, how can I help?</h3> <span class="faq-section">how</span>
+<li class="faq-item"><a class="anchor" id="how-3"></a> <h3 class="faq-title">I am not a techie, how can I help?</h3> <span class="faq-section">how</span>
 <p>You can spread the word about the awesomeness of Mailpile! </p>
 <p>You can <a href="https://www.mailpile.is/donate/">give us lots of money</a>! Or just a little bit, it all helps.</p>
 <p>When we release new versions of the software (there have been a few Alpha and Beta releases already), it is useful for us to get feedback on what works well and what does not. However, note that <em>at the moment</em> we have literally hundreds of outstanding issues and are a bit swamped. As we make progress and fix the obvious things, getting reports about edge cases or things we haven't yet encountered will become more and more important.</p>
 </li>
-<li class="faq-item"><a class="anchor" id="how-3"></a> <h3 class="faq-title">Do you accept Bitcoin?</h3> <span class="faq-section">how</span>
+<li class="faq-item"><a class="anchor" id="how-4"></a> <h3 class="faq-title">Do you accept Bitcoin?</h3> <span class="faq-section">how</span>
 <p>Yes. If you don't want to be anonymous you'll have to get in touch to let us know who to thank!</p>
 </li>
 <li class="faq-section-title"><a class="anchor" id="fea"></a><h2>Feature Requests</h2></li>
@@ -247,8 +252,8 @@ $(document).ready(function() {
 <p>We are considering ideas such as encrypting data and re-uploading to IMAP servers in order to implement secure off-site backups, as well as prompting the user to make backups by hand to USB, external media or even paper in some cases.</p>
 </li>
 <li class="faq-section-title"><a class="anchor" id="tec"></a><h2>Technical Questions</h2></li>
-<li class="faq-item"><a class="anchor" id="tec-1"></a> <h3 class="faq-title">Will Mailpile run on Windows 8.1, Mac OSX, Linux etc. etc.?</h3> <span class="faq-section">tec</span>
-<p>Mailpile 1.0 should run on Linux, Mac OS X and modern versions of Windows.</p>
+<li class="faq-item"><a class="anchor" id="tec-1"></a> <h3 class="faq-title">Will Mailpile run on Windows 8.1, macOS, Linux etc. etc.?</h3> <span class="faq-section">tec</span>
+<p>Mailpile 1.0 should run on Linux, macOS and modern versions of Windows.</p>
 </li>
 <li class="faq-item"><a class="anchor" id="tec-2"></a> <h3 class="faq-title">Will mail sent from Mailpile be compatible with other e-mail clients?</h3> <span class="faq-section">tec</span>
 <p>Yes! We are compliant with all the appropriate internet and e-mail standards.</p>

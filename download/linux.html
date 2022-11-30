@@ -54,13 +54,9 @@
             </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
-            <li><a href="/roadmap/"
-                   class="scroll-link" style="position: relative;">
-              <img class="login-hint" src="/img/happy-star.png"
-                   style="position: absolute; top:5px; right: 5px;">
-              Roadmap
-            </a></li>
+
             <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="https://community.mailpile.is/categories" class="scroll-link">Community</a></li>
             <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="https://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
@@ -226,32 +222,32 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
 
     <h2>Debian Packages</h2>
     <table style="width: 100%;">
-      <tr class="repo-release package-python-socksipychain">
+      <tr class="repo-release package-mailpile">
         <td style="text-align: center;">release</td>
         <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/p/python-socksipychain-2.0.15a0/python-socksipychain_2.0.15a0-1pagekite_all.deb">python-socksipychain_2.0.15a0-1pagekite_all.deb</a>
+          <a href="deb/pool/main/m/mailpile/mailpile_0.99.6~1.0202202242348-1_all.deb">mailpile_0.99.6~1.0202202242348-1_all.deb</a>
           <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            SOCKS5 connection library, not needed on all systems.
+            This is Mailpile!
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">d51fea4881d3c8d5443c039fac365e8da91b8964a2a97c84f2d3d2e328a3e217</span>
+            <span class="sha256">7ad6ea0ac987d14c60dc3b143c6e9e47c9ee7b49a5be339ef35a3f39a0e7fcc1</span>
+          </tt>
+        </td>
+        <td class="size">1.9M</td>
+
+      </tr>
+      <tr class="repo-release package-mailpile-apache2">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile-apache2_0.99.6~1.0202202242348-1_all.deb">mailpile-apache2_0.99.6~1.0202202242348-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            "Multipile" Multi-user Apache integration.
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">d8c438cc9df549a40e6ef88ad2895dd308aa3820d0abd495a0e324208104b808</span>
           </tt>
         </td>
         <td class="size">20K</td>
-
-      </tr>
-      <tr class="repo-release package-mailpile-desktop">
-        <td style="text-align: center;">release</td>
-        <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/m/mailpile/mailpile-desktop_0.99.4~1.0201810271820-1_all.deb">mailpile-desktop_0.99.4~1.0201810271820-1_all.deb</a>
-          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            Mailpile Desktop Integration package
-          </span>
-          <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">d829a7afc9274966404c2ef20c2a81cb1a97bfe5a84b233c18d828fe5b87da4d</span>
-          </tt>
-        </td>
-        <td class="size">456K</td>
 
       </tr>
       <tr class="repo-release package-python-monotonic">
@@ -282,32 +278,72 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
         <td class="size">8.0K</td>
 
       </tr>
-      <tr class="repo-release package-python-gui-o-matic">
+      <tr class="repo-release package-python-socksipychain">
         <td style="text-align: center;">release</td>
         <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/g/gui-o-matic/python-gui-o-matic_0.1.87-1_all.deb">python-gui-o-matic_0.1.87-1_all.deb</a>
+          <a href="deb/pool/main/p/python-socksipychain-2.0.15b/python-socksipychain_2.0.15b-0pagekite_all.deb">python-socksipychain_2.0.15b-0pagekite_all.deb</a>
           <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            The GUI tool used by our desktop integration package
+            SOCKS5 connection library, not needed on all systems.
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">b6d1892f26ccd687df12b9ec51dda3408030b20d853172945b65e1cb9c2a2fd6</span>
+            <span class="sha256">b85f71d1a56a8686abf156bd8797ec8fc9278f264d3b55ca54510ea919154e0a</span>
           </tt>
         </td>
-        <td class="size">28K</td>
+        <td class="size">24K</td>
 
       </tr>
-      <tr class="repo-release package-python-gui-o-matic">
+      <tr class="repo-release package-python-icalendar">
         <td style="text-align: center;">release</td>
         <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/g/gui-o-matic/python-gui-o-matic_0.1.48-1_all.deb">python-gui-o-matic_0.1.48-1_all.deb</a>
+          <a href="deb/pool/main/p/python-icalendar/python-icalendar_4.0.3-2_all.deb">python-icalendar_4.0.3-2_all.deb</a>
           <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            The GUI tool used by our desktop integration package
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">aae61d99be215b14dca34b8aeb4e20e811cc1e6b029937b7116f54923167e19e</span>
+            <span class="sha256">2c485e66cdaccae70ec64be8bfc6169ebd4d412a12dbd791d31d86ca1ae274ff</span>
           </tt>
         </td>
-        <td class="size">16K</td>
+        <td class="size">60K</td>
+
+      </tr>
+      <tr class="repo-release package-pagekite">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/p/pagekite/pagekite_1.0.0.190721_all.deb">pagekite_1.0.0.190721_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            Reverse proxy tunnel, not needed on all systems.
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">da34242d79278ade0517e0dea10e38504f8cdbb6e6de9c0fd54d0fda6160df48</span>
+          </tt>
+        </td>
+        <td class="size">176K</td>
+
+      </tr>
+      <tr class="repo-release package-python-pgp-passtool">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/p/pgp-passtool/python-pgp-passtool_0.0.1-1_all.deb">python-pgp-passtool_0.0.1-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">3f93c486ee2df18b0a5672cf644386bd3615004f5b009d6bde2be2e4428080f2</span>
+          </tt>
+        </td>
+        <td class="size">8.0K</td>
+
+      </tr>
+      <tr class="repo-release package-mailpile-desktop">
+        <td style="text-align: center;">release</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile-desktop_0.99.6~1.0202202242348-1_all.deb">mailpile-desktop_0.99.6~1.0202202242348-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            Mailpile Desktop Integration package
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">845a238f74df88879166d98d30adc2c5782027ab1ccd46e0ea1bbb6b140c3b9f</span>
+          </tt>
+        </td>
+        <td class="size">456K</td>
 
       </tr>
       <tr class="repo-release package-python-fasteners">
@@ -324,71 +360,57 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
         <td class="size">16K</td>
 
       </tr>
-      <tr class="repo-release package-mailpile-apache2">
+      <tr class="repo-release package-python-gui-o-matic">
         <td style="text-align: center;">release</td>
         <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/m/mailpile/mailpile-apache2_0.99.4~1.0201810271820-1_all.deb">mailpile-apache2_0.99.4~1.0201810271820-1_all.deb</a>
+          <a href="deb/pool/main/g/gui-o-matic/python-gui-o-matic_0.1.89-1_all.deb">python-gui-o-matic_0.1.89-1_all.deb</a>
           <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            "Multipile" Multi-user Apache integration.
+            The GUI tool used by our desktop integration package
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">e18cd3f1e176219274e64013e11c03b8d1a3a8ced4370f3e393b16f6860689f1</span>
+            <span class="sha256">a26837c5ed06b595901808991c0680c70929a2bc23db80c7cde260c5d07fe5bd</span>
           </tt>
         </td>
-        <td class="size">20K</td>
-
-      </tr>
-      <tr class="repo-release package-mailpile">
-        <td style="text-align: center;">release</td>
-        <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/m/mailpile/mailpile_0.99.4~1.0201810271820-1_all.deb">mailpile_0.99.4~1.0201810271820-1_all.deb</a>
-          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            This is Mailpile!
-          </span>
-          <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">47408e7817059b347d89d45114c510f0ce2eed64174c047c0bcf954467e98a87</span>
-          </tt>
-        </td>
-        <td class="size">2.5M</td>
-
-      </tr>
-      <tr class="repo-nightly package-mailpile">
-        <td style="text-align: center;">nightly</td>
-        <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/m/mailpile/mailpile_0.99.3~dev201810260351-1_all.deb">mailpile_0.99.3~dev201810260351-1_all.deb</a>
-          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
-            This is Mailpile!
-          </span>
-          <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">3237b58264458287d0808e8f09beb4c08d9bdb5d273ca720761d0b389d489f93</span>
-          </tt>
-        </td>
-        <td class="size">2.4M</td>
+        <td class="size">28K</td>
 
       </tr>
       <tr class="repo-nightly package-mailpile-apache2">
         <td style="text-align: center;">nightly</td>
         <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/m/mailpile/mailpile-apache2_0.99.3~dev201810260351-1_all.deb">mailpile-apache2_0.99.3~dev201810260351-1_all.deb</a>
+          <a href="deb/pool/main/m/mailpile/mailpile-apache2_0.99.6~dev202205190315-1_all.deb">mailpile-apache2_0.99.6~dev202205190315-1_all.deb</a>
           <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
             "Multipile" Multi-user Apache integration.
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">2142b440304beafe2cd9c7058ddfdde7c82456e04e883865dc8303d4341adafb</span>
+            <span class="sha256">6235b4d7513e5efcdaad49c6d40038cddd26ebc224ff34f1563bfbee77733cc5</span>
           </tt>
         </td>
         <td class="size">20K</td>
 
       </tr>
+      <tr class="repo-nightly package-mailpile">
+        <td style="text-align: center;">nightly</td>
+        <td style="line-height: 1.2em;">
+          <a href="deb/pool/main/m/mailpile/mailpile_0.99.6~dev202205190315-1_all.deb">mailpile_0.99.6~dev202205190315-1_all.deb</a>
+          <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
+            This is Mailpile!
+          </span>
+          <br><tt style="font-size: 0.7em;">SHA256:
+            <span class="sha256">57a36a22cf4d2e471dacc47aabc6e26bc206ce2bd5b338127381062acb171c40</span>
+          </tt>
+        </td>
+        <td class="size">2.4M</td>
+
+      </tr>
       <tr class="repo-nightly package-mailpile-desktop">
         <td style="text-align: center;">nightly</td>
         <td style="line-height: 1.2em;">
-          <a href="deb/pool/main/m/mailpile/mailpile-desktop_0.99.3~dev201810260351-1_all.deb">mailpile-desktop_0.99.3~dev201810260351-1_all.deb</a>
+          <a href="deb/pool/main/m/mailpile/mailpile-desktop_0.99.6~dev202205190315-1_all.deb">mailpile-desktop_0.99.6~dev202205190315-1_all.deb</a>
           <br><span class="explain" style="font-size: 0.9em; line-height: 5px;">
             Mailpile Desktop Integration package
           </span>
           <br><tt style="font-size: 0.7em;">SHA256:
-            <span class="sha256">e9235aa91ae9d6310640ffb649e0f26adcdf3c12aa0353abd00dad2657e6500b</span>
+            <span class="sha256">401403957d95e2deb773dbf126b1040e108fb3e8f71e6220e2ad2d96a2fea9d7</span>
           </tt>
         </td>
         <td class="size">456K</td>
@@ -467,19 +489,19 @@ $ sudo apt-get remove mailpile mailpile-apache2</pre>
                 <h3>Contact Us</h3>
                 <ul class="add-bottom">
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>PGP Key: <a href="/files/team@mailpile.is.asc" title="Full fingerprint:
+CB48 4157 EC53 EEE5 3C13
+69C3 C572 8DA5 2242 5313">... C572 8DA5 2242 5313</a>
+                    </a></li>
+                </ul>
+                <ul>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
                     <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Discourse: <a href="https://community.mailpile.is/categories" target="_blank">community.mailpile.is</a></li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
-<!--
-                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
-                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
-                        4161 CD18 CCA1 1A0B 1F4C<br>
-                        3EA0 AAD9 65A4 7077 75F9
-                    </a></li>
--->
                 </ul>
-                <ul class="add-bottom">
-                   <li>Jobs: <a href="/jobs/">Work for Mailpile!</a></li>
+                <ul>
+                    <li><a href="/privacy.html">Privacy &amp; Information Policy</a></li>
                 </ul>
             </div>
             <div class="one-third">
@@ -489,10 +511,11 @@ $ sudo apt-get remove mailpile mailpile-apache2</pre>
                     <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
                               <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
                     <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                    <li>Support: <a href="https://community.mailpile.is/c/support" target="_blank">Community</a></li>
                 </ul>
                 <ul>
-                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
-                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">SVG</a>,
+                              <a href="/img/mailpile-logo.png" target="_blank">PNG</a></li>
                     <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
                 </ul>
             </div>

@@ -177,6 +177,8 @@ $ sudo rm /etc/apt/sources.list.d/000-mailpile.list && sudo apt-get update
             Mailpile Desktop Integration package
           {%- elif info.package == 'python-socksipychain' %}
             SOCKS5 connection library, not needed on all systems.
+          {%- elif info.package == 'pagekite' %}
+            Reverse proxy tunnel, not needed on all systems.
           {%- elif info.package == 'python-fasteners' %}
             File-system locking library, not needed on all systems.
           {%- elif info.package == 'python-monotonic' %}

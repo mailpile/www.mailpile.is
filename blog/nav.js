@@ -474,6 +474,24 @@ jQuery(document).ready(function($){
   "date": "2018-10-27", 
   "subject": "Progress Report: events, packages, 1.0", 
   "url": "/blog/2018-10-27_Progress_Report.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2019-02-15", 
+  "subject": "Community Discourse: Launched!", 
+  "url": "/blog/2019-02-15_Community_Discourse.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2019-04-06", 
+  "subject": "Burned Out and Happy?", 
+  "url": "/blog/2019-04-06_Burnout.html"
+},
+{
+  "author": "Bjarni R\u00fanar", 
+  "date": "2019-08-31", 
+  "subject": "CCCamp19 and further EFail mitigations", 
+  "url": "/blog/2019-08-31_CCCamp_EFail.html"
 }];
 
   var prev = -1;

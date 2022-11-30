@@ -54,13 +54,9 @@
             </a></li>
             <li><a href="/faq/" class="scroll-link">FAQ</a></li>
             <li><a href="/blog/" class="scroll-link">Blog</a></li>
-            <li><a href="/roadmap/"
-                   class="scroll-link" style="position: relative;">
-              <img class="login-hint" src="/img/happy-star.png"
-                   style="position: absolute; top:5px; right: 5px;">
-              Roadmap
-            </a></li>
+
             <li><a href="/download/" class="scroll-link">Download</a></li>
+            <li><a href="https://community.mailpile.is/categories" class="scroll-link">Community</a></li>
             <li><a href="/donate/" class="scroll-link">Donate</a></li>
             <li class="navigation-github"><a href="https://github.com/mailpile/Mailpile" target="_blank" class="scroll-link">Github</a></li>
         </ul>
@@ -86,13 +82,153 @@
             <div class="col-11">
 <!-- Page content begins -->
 
+    <a href="2019-08-31_CCCamp_EFail.html"><h1>CCCamp19 and further EFail mitigations</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
+               on 31 August, 2019</strong></p>
+    <p>Hello world!</p>
+<p>As I write this, I have mostly recovered from the amazing Chaos
+Communication Camp in Germany. I attended the camp mostly as a holiday,
+but there were of course quite a few Mailpile related discussions.</p>
+<p>The most interesting of those related to EFail. I spent a couple of
+afternoons sitting in the shade with researchers and developers who
+work on OpenPGP related things. We discussed <a href="https://efail.de/">EFail</a>.</p>
+<p>For those of you who haven't heard of EFail, it was one of the most
+serious vulnerabilities the OpenPGP community has ever had to deal with:
+by combining flaws in e-mail clients with flaws in legacy PGP (and
+S/MIME) implementations, EFail described multiple ways an attacker could
+turn a vulnerable e-mail client into a decryption oracle and steal the
+cleartext of previously secured communications. Cryptosystem flaws don't
+get much worse than that.</p>
+<p>This was such a serious issue that the EFF recommended people disable
+PGP entirely, at least for a little while. This triggered a rather
+emotional backlash from the PGP community, and unfortunately a lot of
+misinformation and misunderstandings were published. Some of which
+still have not been corrected.</p>
+<p>As a community, we're still coming to terms with some of the
+implications. Those of us who aren't in denial (which is disturbingly
+common) are still mulling over ways to secure our tools and defend
+against similar flaws in the future.</p>
+<p>I have written before about <a href="2018-05-14_PGP_Security_Alert.html">Mailpile and
+EFail</a>: there were a few issues that
+needed fixing, but overall Mailpile weathered EFail relatively well.
+Exfiltrating cleartext from Mailpile was possible, but it was not fully
+automated and required social engineering.</p>
+<p>The social engineering aspects are still quite serious, and some are
+easier to exploit than others. The most trivial EFail exploit is to
+send someone a message they're likely to reply to, with the ciphertext
+you want to exfiltrate appended to the end after a long boring
+boilerplate signature or quoted message. If the mail client decrypts,
+and the recipient replies without reading and pruning their response...
+hey presto, you've exfiltratrated the secret message.</p>
+<p>One of the outcomes of these discussions at camp, were some concrete
+recommendations on how Mailpile could make such social engineering less
+likely to succeed. The guiding principle I ended up with, was:</p>
+<blockquote>
+<p>If the user is probably not going to see the content, do not decrypt.</p>
+</blockquote>
+<p>On the plane home from Germany, I implemented this strategy. So for the
+first time, Mailpile will deliberately decline to decrypt parts of
+incoming e-mail, if the message structure is such that it might might
+provide cover for EFail social engineering attacks.</p>
+<p>The change wasn't huge, but the security impact is significant. We
+welcome any and all feedback: <a href="https://github.com/mailpile/Mailpile/commit/79551b17928a9f990ac5e1336386caab8b183323">the code is here</a>.
+This patch is already in <a href="/download/linux.html">the nightly packages</a>
+and will hit the release branch next time I update it - which should be
+soon, we've got quite a few important fixes queued up by now.</p>
+<p>Many thanks to <a href="https://sebastian-schinzel.de/">Sebastian</a> and
+<a href="https://twitter.com/valodim">Vincent</a> for helping me figure out how to
+improve Mailpile on this front. And thanks to <a href="https://www.ccc.de/">CCC</a>
+for providing venues for these conversations to take place.</p>
+<p>Please feel free to <a href="https://community.mailpile.is/t/blog-post-about-cccamp-19-and-efail/243">discuss this post in our Community
+Forum</a>.</p>
+  <hr>
+    <a href="2019-04-06_Burnout.html"><h1>Burned Out and Happy?</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
+               on 6 April, 2019</strong></p>
+    <p>Dear Mailpile Users and Backers,</p>
+<p>I just wanted to post a short note, to explain why development has been
+so slow for the last year - or longer. The long and the short of it is,
+I'm burned out, and this has been the case for quite some time.</p>
+<p>I care deeply about this project, but it really is too big for one
+person and I haven't successfully built a team to support me. That's not
+to discount the contributions and efforts of our community, but at the
+end of the day I've been the one responsible for keeping the ball
+rolling. I review the pull requests, I respond to issues, I file the tax
+returns, I try to spend your donations wisely... and I write most of the
+code. Doing this well is a lot of work!</p>
+<p>This responsibility, combined with frustration over how slow progress
+has been, has really worn me down. When I'm feeling down, I'm not very
+productive, leading to a vicious cycle of feeling bad about a the lack
+of progress and then becoming incapable of making progress as a result.</p>
+<p>It's not good.</p>
+<p>It took me a while to realize what was going on, to realize I was burned
+out.</p>
+<p>There is also a money dimension here; although I cannot say thank you
+enough for all the donations and support from our community, the fact is
+that Mailpile has not been able to pay me a decent wage for my work,
+<em>ever</em>. I know my value on the job market, and I've been underpaid since
+day one. That was my choice and I don't regret it; but it's still become
+harder and harder for me to justify. I have a family now and I've
+drained most of my savings trying to get 1.0 out the door.</p>
+<p>So, I'm giving myself a break and focusing on other things for a while.</p>
+<p>I've gotten a (part-time) job working with the fine folks at
+<a href="https://isnic.is/">ISNIC</a>, I'm working out regularly at the pool and
+I'm spending more time with friends and family. <em>Life is good!</em></p>
+<p>Now that I've accepted and embraced my burnout, I'm actually feeling
+pretty happy.  Identifying a problem is the first step towards a
+resolution, and I'm already well on my way with steps two and three.</p>
+<p>So to be 100% clear: <strong>Mailpile is not dead!</strong></p>
+<p>Far from it, I'm way too proud of this app to just walk away and let it
+die. But for now, Mailpile has been demoted to a part time job at most,
+and a beloved hobby at worst. Considering how unproductive I had become,
+you may not even notice any difference...</p>
+<p>Finally, if reading this gives you the urge to help out, here are a few
+things you can do for me and for Mailpile:</p>
+<ol>
+<li><a href="/download/">Use Mailpile</a>! It's not perfect, but it's pretty great.
+<li>Tweet or <a href="https://joinmastodon.org/">toot</a> what you like about it...
+    I'm listening!
+<li>Help make our <a href="https://community.mailpile.is/categories">Community Discourse</a>
+    a useful, welcoming place.
+<li><a href="/donate/">Donate</a>: As always, I'll do my best to spend it wisely.
+</ol>
+
+<p>Thanks for reading!</p>
+<p>-- Bjarni</p>
+  <hr>
+    <a href="2019-02-15_Community_Discourse.html"><h1>Community Discourse: Launched!</h1></a>
+    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
+               on 15 February, 2019</strong></p>
+    <p>Hello Mailpile world!</p>
+<p>We have launched a new site for community discussions about Mailpile:
+<a href="https://community.mailpile.is/categories">community.mailpile.is</a></p>
+<p>The site runs the excellent <a href="https://www.discourse.org/">Discourse</a> software,
+which means it's primarily an accessible web-based discussion forum, but it can
+also be used as a mailing list for those who prefer such things. Our Discourse
+was set up by a kind member of our community, <b>Greg Sutcliffe</b>. Thanks
+Greg! And thanks <a href="https://twitter.com/asta_fish">Ásta</a> for helping me launch
+the site properly.</p>
+<p>The purpose of the site is to give people a searchable, "on the record" venue to
+<a href="https://community.mailpile.is/c/uncategorized">discuss Mailpile, provide feedback, exchange tips and
+tricks</a> - and
+<a href="https://community.mailpile.is/c/support">get support</a>. The forum is brand new and
+pretty empty at the moment, so please feel free to post something and start a
+conversation!</p>
+<p>For more ephemeral discussions, we still have
+<a href="https://webchat.freenode.net/?channels=%23mailpile&amp;uio=d4">#mailpile on Freenode</a>,
+and for bug reports we have
+<a href="https://github.com/mailpile/Mailpile/issues">GitHub Issues</a>. The Community site
+is for everything else.</p>
+<p>Including <a href="https://community.mailpile.is/t/community-discourse-launched/31">discussions about our blog
+posts!</a>.</p>
+  <hr>
     <a href="2018-10-27_Progress_Report.html"><h1>Progress Report: events, packages, 1.0</h1></a>
     <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
                on 27 October, 2018</strong></p>
     <p>Hello world! How are you?</p>
-<p>I'm writing this, sitting on a bus in Luxembourg, realizing that we have been
-very quite for quite some time. Our last posts were in May, first a report on
-<a href="2018-05-03_Desktop_Usability_Tests.html">the results of our first round of desktop package usability
+<p>I'm writing this, sitting on a bus in Luxembourg, realizing that we have
+been very quiet for quite some time. Our last posts were in May, first a
+report on <a href="2018-05-03_Desktop_Usability_Tests.html">the results of our first round of desktop package usability
 testing</a>, quickly followed by a
 <a href="2018-05-14_PGP_Security_Alert.html">statement on how the EFail flaw impacted
 Mailpile</a>.</p>
@@ -144,13 +280,13 @@ collaboration online easier and more productive.</p>
       get a member of the community to review and confirm our implementation
       at the <a href="https://events.ccc.de/2018/09/11/35c3-call-for-participation-and-submission-guidelines/">35c3</a>
       conference. We have a volunteer to perform the review.</li>
-<li>I have a vouncher and will be representing Mailpile at 35c3. Come say hi!</li>
+<li>I have a voucher and will be representing Mailpile at 35c3. Come say hi!</li>
 </ol>
 <p>It was a productive weekend!</p>
 <h2>When will Mac and Windows packages be available?</h2>
 <p>If you've e-mailed me asking this question; my apologies for not
 answering. I haven't replied, because I don't know! If I did, our
-download package would just say so.</p>
+download page would just say so.</p>
 <p>There are three main tasks we need to complete before we make the
 desktop packages available to the wider Internet:</p>
 <ol>
@@ -162,8 +298,7 @@ desktop packages available to the wider Internet:</p>
       process without any human bottlenecks.</li>
 </ol>
 <p>I am not going to commit to a time-line for getting this done, but this
-work is are all in progress and won't take forever. This year? This
-year.</p>
+work is all in progress and won't take forever. This year? This year.</p>
 <p>It's worth mentioning that some important tasks have been postponed and
 will not be blocking the availability of packages - so these packages
 will not be "Mailpile 1.0". But they're close.</p>
@@ -196,305 +331,12 @@ use-case... then maybe Mailpile is already ready for you. Maybe!</p>
 <p>One-point-oh is an important label, but it's not everything.</p>
 <p>Mailpile is already a great e-mail client. Give it a try!</p>
   <hr>
-    <a href="2018-05-14_PGP_Security_Alert.html"><h1>PGP Security Alert</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
-               on 14 May, 2018</strong></p>
-    <p>Dear Mailpile users,</p>
-<p>The <a href="https://www.eff.org/deeplinks/2018/05/attention-pgp-users-new-vulnerabilities-require-you-take-action-now">EFF have publicized advice from a group of security
-researchers</a>,
-who claim there is a serious problem with PGP encrypted e-mail. Users
-are advised to disable automatic decryption of e-mail and exercise
-caution or avoid decrypting e-mails entirely until the vulnerabilities
-have been addressed.</p>
-<h2>Second (and 3rd) Update</h2>
-<p>The actual <a href="https://efail.de/">research is now public</a>.</p>
-<p>As far as I can tell, Mailpile is [mostly] not vulnerable to these flaws and
-the table of tested mail clients in
-<a href="https://efail.de/efail-attack-paper.pdf">the paper itself</a> is misleading
-in that regard. This is unfortunate.</p>
-<p>There are some exceptions though, see below.</p>
-<h4>Why is Mailpile [mostly] not vulnerable?</h4>
-<p>Because of defense in depth.</p>
-<ol>
-<li>Mailpile does not display HTML content by default</li>
-<li>Before displaying HTML, Mailpile cleans up malformed and incomplete tags.</li>
-<li>When displaying HTML, Mailpile does not load remote content by default.</li>
-<li>Mailpile respects the GnuPG error messages which warn of invalid data.</li>
-<li>Mailpile never sends auto-replies to incoming mail.</li>
-</ol>
-<p>The direct exfiltration attack is completely thwarted by #2, and would be
-mitigated in any case by #1, #3 and #5.</p>
-<p>The CBC/CFB Gadget Attack is mostly thwarted by #4, and would also be
-mitigated in any case by #1, #3 and #5.</p>
-<p>As far as I can tell, most Mailpile users will not be vulnerable to
-EFail. Don't let the red mark in the PDF deceive you! Also, it's worth
-mentioning that this isn't a lucky accident - this is a direct
-validation of how we approach security.</p>
-<p>Part of that approach is simply taking these things seriously. If anyone
-disagrees with my analysis or finds other flaws in Mailpile, we want to know
-about it and will do our best to remedy things as quickly as possible.</p>
-<h4>Wait.. mostly? When is Mailpile vulnerable?</h4>
-<p>Mailpile is vulnerable to the CBC/CFB Gadget Attack in the following
-cases:</p>
-<ol>
-<li>Something is obsolete, either:<ol>
-   <li>Mailpile is configured to use an out-of-date version of GnuPG, or
-   <li>The encrypted data being exfiltrated is so old that GnuPG doesn't
-       expect and require it to have a Modification Detection Code (MDC).
-   </ol>
-<li>And:<ol>
-   <li>The user manually displays HTML and loads remote images, or
-   <li>The user has previously enabled HTML and images for the sender
-   </ol>
-</ol>
-
-<p>In practical terms, this means even if you are running up-to-date
-software, then old content (messages that are 10-20 years old, or more)
-could potentially be stolen - but only with a bit of social engineering,
-and only if you still have the keys on your keychain.</p>
-<p>The risk is more serious if you have configured Mailpile to use an
-obsolete version of GnuPG - use of GnuPG 1.4.x is still relatively
-common, and our tests suggest it is probably vulnerable. In this case
-more recent messages may be at risk, but the social engineering is still
-required for attacks to succeed.</p>
-<p>Fixes addressing both of these attack vectors have been pushed to our
-GitHub repository and will be included in our next release candidate.
-They are already present in our <a href="/download/linux.html">nightly Debian packages</a>.</p>
-<h2>First Update</h2>
-<p>Further details have emerged.</p>
-<p>Werner, the lead developer of GnuPG, <a href="https://lists.gnupg.org/pipermail/gnupg-users/2018-May/060315.html">claims that the flaw has to do
-with an interaction between HTML mail and GnuPG error handling in common
-e-mail clients and PGP
-plugins</a>.</p>
-<p>If this is indeed the case, most Mailpile users are not vulnerable since
-HTML messages are not rendered by default - and even when HTML is
-rendered, loading of images and other remote assets are also disabled by
-default.</p>
-<p>If you would rather take the EFF's advice, in spite of Werner's update,
-our original advice is included below.</p>
-<h2>Disabling Automatic Decryption</h2>
-<p><em>This advice is obsolete! It is preserved here for historic reasons.</em></p>
-<p>Within Mailpile, the way to disable automatic decryption is as follows:</p>
-<ol>
-<li>In the web interface, visit the <strong>Settings</strong> page</li>
-<li>Open the <strong>CLI</strong></li>
-<li>Run the following command: <code>set prefs.index_encrypted = false</code></li>
-</ol>
-<p>This will disable automatic decryption of incoming mail. However, manual
-decryption (decryption when messages are read) will still work and it is
-advisable to not read any encrypted mail until we know more about the
-attack and whether Mailpile is actually vulnerable.</p>
-<p>If you <strong>absolutely must read encrypted e-mail</strong>, we recommend taking
-your computer offline before doing so, so as to prevent network-based
-side channels from leaking sensitive key material.</p>
-<p>To re-enable indexing of encrypted messages, perform the same steps
-again, except <code>set prefs.index_encrypted = true</code> at the end.</p>
-<h2>What is going on?</h2>
-<p><em>What follows is idle speculation. Please take it with an appropriately
-sized grain of salt!</em></p>
-<div style="text-decoration: line-through">
-
-I don't know what is going on. However, I trust the EFF. They would not
-be advising we disable such an important tool unless it was of critical
-importance.
-
-The implications of the advisory, are that automatic e-mail decryption
-can leak details of your private key material back to a malicious
-attacker.
-
-The mechanism is unknown, but the common denominator in the EFF's list
-of vulnerable e-mail clients is use of GnuPG - which Mailpile also
-relies upon.
-
-My guess, is that there is a flaw in GnuPG which allows attackers to
-craft encrypted messages that force GnuPG to leak key material back over
-the network to an attacker.
-
-</div>
-
-<p><br></p>
-<p>See updates from myself and Werner above. The situation is not as bad as
-it first appeared - in fact, it appears Mailpile is not vulnerable to this
-problem.</p>
-<p>All the same, because we take these things seriously, I have filed issues
-in our issue tracker for follow-up work and proactive improvements:
-<a href="https://github.com/mailpile/Mailpile/issues/2072">#2072</a>,
-<a href="https://github.com/mailpile/Mailpile/issues/2073">#2073</a>,
-<a href="https://github.com/mailpile/Mailpile/issues/2074">#2074</a>,
-<a href="https://github.com/mailpile/Mailpile/issues/2075">#2075</a>, and
-<a href="https://github.com/mailpile/Mailpile/issues/2077">#2077</a>.</p>
-<p>We will post updates as more information becomes available.</p>
-  <hr>
-    <a href="2018-05-03_Desktop_Usability_Tests.html"><h1>Desktop Usability Tests</h1></a>
-    <p><strong>Posted by <a href="#">Bjarni Rúnar</a>
-               on 3 May, 2018</strong></p>
-    <p>Last week was exciting!</p>
-<p>The Mailpile desktop platform team got together for a miniature
-developer summit in Reykjavík, Iceland. Alex, Pétur and myself all flew
-in from our corners of the globe, and Oktavía welcomed us and made sure
-everything went as smoothly as possible.</p>
-<p>We spent some time working at Stofan, my favourite café, and some
-time hanging out at the offices of <a href="https://www.1984.is/">1984</a>, who
-graciously lent us desks and a meeting room. Thank you, 1984!</p>
-<p>It was really nice to have the whole team together in one place.</p>
-<p>We ate some traditional Icelandic food, tasted some Icelandic
-hipster-beer, chatted and just gelled a bit as a team. I got a chance to
-give everyone a bit more insight into Mailpile's background, discussing
-everything from
-<a href="/blog/2013-09-05_PayPal_Freezes_Campaign_Funds.html">PayPal freezing our funds</a> to
-<a href="/blog/2014-10-07_Some_Thoughts_on_GnuPG.html">GnuPG integration challenges</a> to
-<a href="/blog/2015-05-18_Digging_for_Data.html">extracting spreadsheets from e-mail</a>
-to introducing <a href="/blog/2015-09-22_pyConUK_and_Mailpile_Mel.html">Mailpile Mel</a>.</p>
-<p>The main event though, was to get a bunch of helpful humans to come test
-the Mailpile installers and desktop integration.</p>
-<p>Usability testing!</p>
-<p><img src="/files/2018-04-Mailpile-Desktop-Usability.jpg" border="0"></p>
-<h2>Why usability test?</h2>
-<p>The more familiar you are with something, the harder it can be to see it
-clearly. You see what you expect to see.</p>
-<p>In software, this means software developers quickly become blind to the
-flaws of their own code. We literally cannot see them! Getting a fresh
-pair of eyes is invaluable, especially if you are interested in
-understanding which parts of an interface are confusing or unclear.</p>
-<p>To compound matters even further, everyone uses their computer in a
-slightly different way. The way I use Mailpile may work perfectly, but
-if you do things in a different order, use a different mail server, run
-on a different version of Linux ... any of those differences may trigger
-a poorly tested code path and uncover a bug.</p>
-<p>Usability tests can be as simple as asking a friend to try your thing
-and just watching how they do and taking notes. It doesn't have to be
-complicated to provide value and I encourage all software developers
-to just grab a pen and some paper and watch people use their stuff. You
-always learn something!</p>
-<p>In our case, we had some quite specific goals, so we were a little bit
-more methodical.</p>
-<h2>How we tested, and why</h2>
-<p>For this round of tests, these were our main goals:</p>
-<ol>
-<li>To verify that our draft installers actually work.</li>
-<li>To check whether the software "makes sense" to a new user.</li>
-</ol>
-<p>The first goal ws relatively straightforward, technical.</p>
-<p>The latter was much more subtle, and relates to the fact that Mailpile is quite
-complex and in many ways unusual software. The general public is not used to
-running servers on their computers - Mailpile is a web server. The general
-public is not used to interacting with local software using a web browser - but
-that's how Mailpile works.</p>
-<p>As a result, our installation sequence and the initial setup process needs
-to gradually introduce these concepts. We wanted to get a feel for whether
-it was actually succeeding.</p>
-<p>Oktavía scheduled and recruited a moderately diverse group of volunteers
-to come test. All told we had 3 men and 3 women, of mixed ages. Some were
-Windows users, others Mac users. They were all tech-savvy enough to own
-their own laptops, but not necessarily programmers themselves. Some
-digital natives, some less so. Roughly our target demographic for our next
-release.</p>
-<p>The structure of the test itself was relatively simple.</p>
-<p>We tested with one volunteer at a time. Each time we started with
-introductions, explaining roughly what Mailpile was and what we expected
-of our volunteers. We warned them we wouldn't help them much, asked them
-to think out loud if they could. Made sure they understood that failures
-and problems were <em>good</em>, that breaking things would help us identify
-things to fix.</p>
-<p>Next, each person was given a USB stick with an installer on it and
-instructions to attempt to install Mailpile and go through the initial
-setup until we told them to stop. Once stopped, they were to exit and shut
-down the app. We watched over their shoulder and made notes. We tried to
-resist the urge to answer any questions, to see if they could figure
-things out themselves.</p>
-<p>Finally Oktavia asked a few questions about the experience, we thanked
-them, gave them stickers and chocolate and sent them on their way!</p>
-<p>That was it.</p>
-<p>Easy, right?</p>
-<h2>What we learned</h2>
-<p>Even a simple, short test like this has many potential pitfalls.</p>
-<ul>
-<li>Does the installer work?</li>
-<li>Does the app run?</li>
-<li>Does the tester successfully navigate from the installer to the app,
-    and from the app to the browser?</li>
-<li>Does the tester understand that shutting down Mailpile and logging out
-    from the web UI are not the same things?</li>
-<li>Is the process confusing or uncomfortable?</li>
-</ul>
-<p>If the answer to any of these questions is "no", then we would like to
-understand <em>why</em>, so we can fix the problem.</p>
-<p>The answers in this case were mostly good news! Which is refreshing,
-since last time we tested Mailpile in this environment, the result was
-so many failures and so much confusion that we went back to the drawing
-board.</p>
-<p>We found some minor bugs, but everyone managed to install the app and
-complete the first stage of the test. Good news! Nobody was frustrated,
-most confusion was minor. Also good news!</p>
-<p>Shutting down the app was the main failure; most of our participants
-thought they were done when they had logged out of the web interface.
-But, we have ways to address this. And worst-case, we need to make sure
-Mailpile shuts down cleanly when the computer powers down anyway.</p>
-<p>To sum up the main lessons:</p>
-<ul>
-<li>The installers work!</li>
-<li>The app runs!</li>
-<li>People didn't read the text in the GUI: less is probably more here</li>
-<li>Windows users expect the installer to launch the app when done</li>
-<li>Our Mac build process created a broken GnuPG</li>
-<li>Our Mac build was launching the in-browser UI prematurely</li>
-<li>Our desktop notifications on the Mac were spammy</li>
-<li>The logged-out page should explain that the app is still running</li>
-<li>Nobody notices systray or status bar icons on first run</li>
-<li>Our testers were comfortable and happy, most chose to keep the
-     app installed so they could play more at home.</li>
-</ul>
-<p>We learned a lot!</p>
-<p>Watching people use the app and interact with our work was very
-stimulating. The next day we had a (somewhat hung over) brainstorming
-session, discussing how things could be different or better. In the end we
-felt comfortable continuing with a mostly unchanged design. The issues
-were mostly minor and felt fixable.</p>
-<p>So, we're on track! The next step will be to fix the bugs and get some
-"alpha" packages ready for wider testing.</p>
-<p>Exciting!</p>
-  <hr>
-    <a href="2018-03-29_Building_up_Steam.html"><h1>Building up Steam</h1></a>
-    <p><strong>Posted by <a href="#">Oktavía</a>
-               on March 29, 2018</strong></p>
-    <p>Wow, we've been so busy making progress we forgot to let you all know
-how we are progressing!</p>
-<p>So far, Mailpile in 2018 has been all about building up steam for the
-Mailpile train! We hired me (or rather – Bjarni hired me!) and I have
-been working on project management and thinking towards the future,
-including human resource work (I spent a lot of time looking to lessons
-learned on diverse and inclusive hiring practices). This has resulted in
-the hiring of two more persons – </p>
-<p>Alexander and Pétur who, along side Bjarni and myself, will be taking
-Mailpile to as many users as possible!</p>
-<p>Who are these new additions to the Mailpile Team? Well, Alex Haase is a
-self-proclaimed generalist, who has a background spanning kernel modules
-to javascript, bare metal to Windows. He lurrvvs tinkering on Open
-Source side projects and refereeing Roller Derby when he‘s not
-Mailpiling. Pétur is all about high level software engineering.
-Specifically modelling and automatic programming. He loves collaborative
-design by prototyping, designing and exploring new ideas using scissors,
-papers, glue and different shades of colour. His favorite movie quote?</p>
-<blockquote>
-<p>"It's a UNIX system." — Jurrasic Park :)</p>
-</blockquote>
-<p>What will they be doing with us? We're glad you asked! Their main tasks
-relate to packaging Mailpile for the Mac and Windows platforms, and in
-doing so making Mailpile more accessible to more people! Hooray!</p>
-<p>Contracts were signed in mid-March and we are on track to deliver
-packages and an improved native user experience within 3-4 months. So
-soon, soon, at long last, <a href="/download/">our downloads page</a> won't tell
-people our packages are being reworked.  IT will tell people to go forth
-and install what Alex and Pétur have built!</p>
-<p>We are now well settled in our virtual working space, as our physical
-selves are spread over Europe and the US. We would love a visit, so
-please come by the Mailpile IRC - #mailpile (Freenode, or
-<a href="https://riot.im/app/#/room/#freenode_#mailpile:matrix.org">Riot</a>),
-but bring your own coffee!</p>
-  <hr>
 
   <h3>Older stuff</h3>
   <ul>
+    <li><a href="2018-05-14_PGP_Security_Alert.html">PGP Security Alert</a></li>
+    <li><a href="2018-05-03_Desktop_Usability_Tests.html">Desktop Usability Tests</a></li>
+    <li><a href="2018-03-29_Building_up_Steam.html">Building up Steam</a></li>
     <li><a href="2018-01-22_We_are_Hiring.html">We are Hiring!</a></li>
     <li><a href="2018-01-07_Containing_the_Spectre.html">Containing the Spectre</a></li>
     <li><a href="2017-12-12_Holiday_Season_Updates.html">Holiday Season Updates</a></li>
@@ -648,19 +490,19 @@ Ping us for questions - more info here: <a href="http://mailpile.is/jobs">http:/
                 <h3>Contact Us</h3>
                 <ul class="add-bottom">
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>PGP Key: <a href="/files/team@mailpile.is.asc" title="Full fingerprint:
+CB48 4157 EC53 EEE5 3C13
+69C3 C572 8DA5 2242 5313">... C572 8DA5 2242 5313</a>
+                    </a></li>
+                </ul>
+                <ul>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
                     <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+                    <li>Discourse: <a href="https://community.mailpile.is/categories" target="_blank">community.mailpile.is</a></li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
-<!--
-                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
-                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
-                        4161 CD18 CCA1 1A0B 1F4C<br>
-                        3EA0 AAD9 65A4 7077 75F9
-                    </a></li>
--->
                 </ul>
-                <ul class="add-bottom">
-                   <li>Jobs: <a href="/jobs/">Work for Mailpile!</a></li>
+                <ul>
+                    <li><a href="/privacy.html">Privacy &amp; Information Policy</a></li>
                 </ul>
             </div>
             <div class="one-third">
@@ -670,10 +512,11 @@ Ping us for questions - more info here: <a href="http://mailpile.is/jobs">http:/
                     <li>Bugs: <a href="https://github.com/mailpile/Mailpile/issues" target="_blank">Browse</a>,
                               <a href="https://github.com/mailpile/Mailpile/issues/new" target="_blank">Report</a></li>
                     <li>Wiki: <a href="https://github.com/mailpile/Mailpile/wiki" target="_blank">Read &amp; Write</a></li>
+                    <li>Support: <a href="https://community.mailpile.is/c/support" target="_blank">Community</a></li>
                 </ul>
                 <ul>
-                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
-                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">SVG</a>,
+                              <a href="/img/mailpile-logo.png" target="_blank">PNG</a></li>
                     <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
                 </ul>
             </div>

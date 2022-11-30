@@ -133,20 +133,19 @@
                 <h3>Contact Us</h3>
                 <ul class="add-bottom">
                     <li>Email: <a href="mailto:team@mailpile.is">team@mailpile.is</a></li>
+                    <li>PGP Key: <a href="/files/team@mailpile.is.asc" title="Full fingerprint:
+CB48 4157 EC53 EEE5 3C13
+69C3 C572 8DA5 2242 5313">... C572 8DA5 2242 5313</a>
+                    </a></li>
+                </ul>
+                <ul>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
                     <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
                     <li>Discourse: <a href="https://community.mailpile.is/categories" target="_blank">community.mailpile.is</a></li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
-<!--
-                    <li><span style="display: inline-block;">PGP:<br>&nbsp;</span>
-                        <a href="/files/team@mailpile.is.asc" style="display: inline-block;">
-                        4161 CD18 CCA1 1A0B 1F4C<br>
-                        3EA0 AAD9 65A4 7077 75F9
-                    </a></li>
--->
                 </ul>
-                <ul class="add-bottom">
-                   <li>Jobs: <a href="/jobs/">Work for Mailpile!</a></li>
+                <ul>
+                    <li><a href="/privacy.html">Privacy &amp; Information Policy</a></li>
                 </ul>
             </div>
             <div class="one-third">
@@ -159,8 +158,8 @@
                     <li>Support: <a href="https://community.mailpile.is/c/support" target="_blank">Community</a></li>
                 </ul>
                 <ul>
-                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">Color Vector</a> (SVG)</li>
-                    <li>Logo: <a href="/img/mailpile-logo.png" target="_blank">Color Bitmap</a> (PNG)</li>
+                    <li>Logo: <a href="/img/mailpile-logo.svg" target="_blank">SVG</a>,
+                              <a href="/img/mailpile-logo.png" target="_blank">PNG</a></li>
                     <li>Font: <a href="https://github.com/mailpile/fonts" target="_blank">Mailpile "the font"</a></li>
                 </ul>
             </div>
@@ -175,5 +174,9 @@
     </div>
 {% endblock %}
 {%- block tail %}{% endblock %}
+  <p style="display: none;">
+    Please do not send mail to
+    <a href="mailto:aardvark@mailpile.is?subject=Ants">aardvark@mailpile.is</a>
+  </p>
 </body>
 </html>

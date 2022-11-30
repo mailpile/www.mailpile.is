@@ -5,9 +5,9 @@ Type: blog
 
 Hello world! How are you?
 
-I'm writing this, sitting on a bus in Luxembourg, realizing that we have been
-very quite for quite some time. Our last posts were in May, first a report on
-[the results of our first round of desktop package usability
+I'm writing this, sitting on a bus in Luxembourg, realizing that we have
+been very quiet for quite some time. Our last posts were in May, first a
+report on [the results of our first round of desktop package usability
 testing](2018-05-03_Desktop_Usability_Tests.html), quickly followed by a
 [statement on how the EFail flaw impacted
 Mailpile](2018-05-14_PGP_Security_Alert.html).
@@ -70,7 +70,7 @@ For Mailpile, the main outcomes of the summit were the following:
       get a member of the community to review and confirm our implementation
       at the [35c3](https://events.ccc.de/2018/09/11/35c3-call-for-participation-and-submission-guidelines/)
       conference. We have a volunteer to perform the review.
-   4. I have a vouncher and will be representing Mailpile at 35c3. Come say hi!
+   4. I have a voucher and will be representing Mailpile at 35c3. Come say hi!
 
 It was a productive weekend!
 
@@ -79,7 +79,7 @@ It was a productive weekend!
 
 If you've e-mailed me asking this question; my apologies for not
 answering. I haven't replied, because I don't know! If I did, our
-download package would just say so.
+download page would just say so.
 
 There are three main tasks we need to complete before we make the
 desktop packages available to the wider Internet:
@@ -92,8 +92,7 @@ desktop packages available to the wider Internet:
       process without any human bottlenecks.
 
 I am not going to commit to a time-line for getting this done, but this
-work is are all in progress and won't take forever. This year? This
-year.
+work is all in progress and won't take forever. This year? This year.
 
 It's worth mentioning that some important tasks have been postponed and
 will not be blocking the availability of packages - so these packages

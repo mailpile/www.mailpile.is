@@ -126,7 +126,7 @@ Type: full
     </div>
 
 <div class="row add-top add-bottom text-center">
-  <h3>Our 1,113 Awesome Supporters</h3>
+  <h3>Our 1,114 Awesome Supporters</h3>
 </div>
 
 <div class="row add-bottom text-center">
@@ -796,6 +796,7 @@ Type: full
  <li>Mathilde Bonnefoy</li>
  <li>Matt Barnes</li>
  <li>Matt Burns</li>
+ <li>Matt Cengia</li>
  <li>Matt Johnson</li>
  <li>Matt L</li>
  <li>Matt McGivney</li>

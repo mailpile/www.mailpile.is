@@ -1,5 +1,17 @@
 [
   {
+    "markdown_tweet": "A Progress Report: [www.mailpile.is/blog...](/blog/2018-10-27_Progress_Report.html)  \n  \nExtra, extra!  \n  \nRead all about it!  \n  \nTopics: the <a href=\"https://twitter.com/hashtag/OpenPGP\">#OpenPGP</a> e-mail summit, attending <a href=\"https://twitter.com/hashtag/35c3\">#35c3</a>, Mac and Windows packages and of course the elusive Mailpile 1.0.  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Sat, 27 Oct 2018 18:49](https://twitter.com/MailpileTeam/status/1056256534307618816)*  \n", 
+    "from": "MailpileTeam", 
+    "tweet": "A Progress Report: https://t.co/BoxC8VmCYa\n \n Extra, extra!\n \n Read all about it!\n \n Topics: the #OpenPGP e-mail summit, attending #35c3, Mac and Windows packages and of course the elusive Mailpile 1.0.", 
+    "html_tweet": "<div class=\"tweet\"><p>A Progress Report: <a href=\"/blog/2018-10-27_Progress_Report.html\">www.mailpile.is/blog...</a>  </p>\n<p>Extra, extra!  </p>\n<p>Read all about it!  </p>\n<p>Topics: the <a href=\"https://twitter.com/hashtag/OpenPGP\">#OpenPGP</a> e-mail summit, attending <a href=\"https://twitter.com/hashtag/35c3\">#35c3</a>, Mac and Windows packages and of course the elusive Mailpile 1.0.<br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/1056256534307618816\">Sat, 27 Oct 2018 18:49</a></em>  </p></div>\n", 
+    "link": "https://twitter.com/MailpileTeam/status/1056256534307618816", 
+    "urls": {
+      "https://t.co/BoxC8VmCYa": "https://www.mailpile.is/blog/2018-10-27_Progress_Report.html"
+    }, 
+    "date": "Sat, 27 Oct 2018 18:49", 
+    "expanded_tweet": "A Progress Report: https://www.mailpile.is/blog/2018-10-27_Progress_Report.html\n\nExtra, extra!\n\nRead all about it!\n\nTopics: the <a href=\"https://twitter.com/hashtag/OpenPGP\">#OpenPGP</a> e-mail summit, attending <a href=\"https://twitter.com/hashtag/35c3\">#35c3</a>, Mac and Windows packages and of course the elusive Mailpile 1.0."
+  }, 
+  {
     "markdown_tweet": "Important PGP Security Alert: [www.mailpile.is/blog...](/blog/2018-05-14_PGP_Security_Alert.html)  \n  \nPlease read if you use Mailpile. Thanks!  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Mon, 14 May 2018 08:09](https://twitter.com/MailpileTeam/status/995939037851652096)*  \n", 
     "from": "MailpileTeam", 
     "tweet": "Important PGP Security Alert: https://t.co/nU8mtfXhdi\n \n Please read if you use Mailpile. Thanks!", 
@@ -218,17 +230,5 @@
     }, 
     "date": "Mon, 14 Aug 2017 09:59", 
     "expanded_tweet": "New blog post by <a href=\"https://twitter.com/HerraBRE\">@HerraBRE</a>: Still Hacking Anyway.\nHis <a href=\"https://twitter.com/hashtag/SHA2017\">#SHA2017</a> talk about Mailpile (video, links and a correction).\nhttps://www.mailpile.is/blog/2017-08-13_SHA2017.html"
-  }, 
-  {
-    "markdown_tweet": "Since we've only blogged twice this year, I nominate as second best post so far: SHA 2017, Here We Come!  \n[www.mailpile.is/blog...](/blog/2017-08-02_SHA2017_Here_We_Come.html)  \n*[@MailpileTeam](https://twitter.com/MailpileTeam), [Thu, 03 Aug 2017 14:15](https://twitter.com/MailpileTeam/status/893112972758753280)*  \n", 
-    "from": "MailpileTeam", 
-    "tweet": "Since we've only blogged twice this year, I nominate as second best post so far: SHA 2017, Here We Come!\n https://t.co/Fa91I0i7fQ", 
-    "html_tweet": "<div class=\"tweet\"><p>Since we've only blogged twice this year, I nominate as second best post so far: SHA 2017, Here We Come!<br />\n<a href=\"/blog/2017-08-02_SHA2017_Here_We_Come.html\">www.mailpile.is/blog...</a><br />\n<em><a href=\"https://twitter.com/MailpileTeam\">@MailpileTeam</a>, <a href=\"https://twitter.com/MailpileTeam/status/893112972758753280\">Thu, 03 Aug 2017 14:15</a></em>  </p></div>\n", 
-    "link": "https://twitter.com/MailpileTeam/status/893112972758753280", 
-    "urls": {
-      "https://t.co/Fa91I0i7fQ": "https://www.mailpile.is/blog/2017-08-02_SHA2017_Here_We_Come.html"
-    }, 
-    "date": "Thu, 03 Aug 2017 14:15", 
-    "expanded_tweet": "Since we've only blogged twice this year, I nominate as second best post so far: SHA 2017, Here We Come!\nhttps://www.mailpile.is/blog/2017-08-02_SHA2017_Here_We_Come.html"
   }
 ]
