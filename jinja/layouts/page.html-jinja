@@ -11,6 +11,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mailpile ehf">
 
+{%- if page and page.redirect %}
+    <meta http-equiv="refresh" content="0; url={{ page.redirect }}">
+{%- endif %}
+
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -42,7 +46,7 @@
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
     <script src="/js/site.js"></script>
-{%- if page and page.type == 'blog' %}
+{%- if page and page.type in ('blog', 'blog2') %}
     <script src="/blog/nav.js"></script>
 {% endif -%}
 {%- block head_extra %}{% endblock %}
@@ -77,7 +81,9 @@
 {%- endblock %}
     <a style="position: absolute; top: 0;" name="top"></a>
 {% block github_banner %}
+{#
     <a id="github-banner" href="https://github.com/mailpile/Mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+#}
 {%- endblock %}
 
     <div id="content" class="container">
@@ -110,7 +116,7 @@
             <div class="col-1"></div>
             <div class="col-4">{%- block page_sidebar %}{% endblock %}</div>
         </div>
-  {%- if page and page.type == 'blog' %}
+  {%- if page and page.type in ('blog', 'blog2') %}
         <div class='blog-nav'>
           <hr class='above'>
           <p class='prev'></p><p class='next'></p>
@@ -140,7 +146,9 @@ CB48 4157 EC53 EEE5 3C13
                 </ul>
                 <ul>
                     <li>Twitter: <a href="https://twitter.com/mailpileteam" target="_blank">@MailpileTeam</a></li>
+<!--
                     <li>Freenode: <a href="irc://irc.freenode.net/#mailpile">#mailpile</a> (IRC)</li>
+-->
                     <li>Discourse: <a href="https://community.mailpile.is/categories" target="_blank">community.mailpile.is</a></li>
                     <li>Tor: <a href="http://clgs64523yi2bkhz.onion/">clgs64523yi2bkhz.onion</a></li>
                 </ul>

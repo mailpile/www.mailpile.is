@@ -3224,3 +3224,11 @@ div.status h5 a {
   font-weight: normal; 
   font-style: italic;
 }
+pre.quote {
+  color: #555;
+}
+pre.cat {
+  background: none;
+  padding-left: 2em;
+  border: none;
+}

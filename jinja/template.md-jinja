@@ -12,10 +12,15 @@
 
 {% block content %}
 
-  {%- if page.type in ('blog', 'jobs') %}
+  {%- if page.type in ('blog', 'blog2', 'jobs') %}
     <a href="{{ url }}"><h1>{{ page.subject }}</h1></a>
     <p>
       <strong>Posted by <a href="#">{{ page.author }}</a> on {{ page.date|date('%B %e, %Y') }}</strong>
+    {%- if page.type == 'blog' %}
+      <i class="warning">(
+        <a href="/blog/...FIXME...">Content may be obsolete!</a>
+      )</i>
+    {%- endif %}
     {%- if page.deadline %}<br>
       <strong>Deadline: {{ page.deadline|date('%B %e, %Y') }}</strong>
     {%- endif %}

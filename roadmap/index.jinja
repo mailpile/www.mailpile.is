@@ -1,9 +1,17 @@
 {% extends "/jinja/layouts/page.html-jinja" %}
-{% set page = {'type': 'full', 'breadcrumb': 'community'} %}
+{% set page = {'type': 'full', 'breadcrumb': 'community', 'redirect': '/blog/'} %}
 
 {% block title %}Community Roadmap{% endblock %}
 
 {% block content %}
+  <br><br><br><br><br><br><br><br>
+  <h3><center><i>
+    Temporarily unavailable: Check out the blog!
+  </i></center></h3>
+  <br><br><br><br><br><br><br><br>
+{% endblock %}
+
+{% block disabled_content %}
 
 <h4 class="text-center half-bottom">Welcome to the <img src="/img/icon-48x48.png" style="margin-left: 10px; position: relative; top:15px"> <strong>mail</strong>pile</h4>
 <h1 class="text-center">Community Roadmap</h1>

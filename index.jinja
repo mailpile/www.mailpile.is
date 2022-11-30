@@ -42,12 +42,65 @@
          <div style="margin: 0 3em; padding: 10px;
                      border: 2px dashed #fff; background: #eee;">
           <h5>
+{#
             Subject: <strong>mail</strong>pile is an e-mail client
+#}
+            Subject: <strong>mail</strong>pile is being rewritten!
             <small>
+              <br>Date: November 30, 2022
               <br>From: Mailpile Team &lt;team@mailpile.is&gt;
               <br>To: The Internet :-)
             </small>
           </h5>
+          <p>
+            Hi! Thanks for visiting Mailpile.
+          </p>
+          <p>
+            We wrote:
+          </p>
+          <p class=quote>
+            &gt; Mailpile is an e-mail client!<br>
+            &gt; Mailpile is a search engine and a personal webmail server.<br>
+            &gt; Mailpile is an easy way to encrypt your e-mail.<br>
+            &gt; Mailpile is software you run yourself, on your own computer.
+          </p>
+          <p>
+            About that... we are currently working on rewriting and modernizing
+            the Mailpile code-base, moving from Python 2 to Python 3 and fixing
+            a whole bunch of things in the process.
+          </p>
+          <p>
+            We are also exploring the possibility of creating a dedicated
+            hardware device, to make it easy for people to keep their personal
+            Mailpile up and running 24/7, without needing to upload their data
+            to the cloud.
+          </p>
+          <p>
+            Check out the <a href="/blog/">blog</a> and
+            <a href="https://community.mailpile.is/categories">community
+            discourse</a> for progress reports and details.
+          </p>
+          <p>
+            While you wait, please enjoy this picture of a cat:
+          </p>
+          <pre class='cat'>
+   _ 
+   \`*-. 
+    )  _`-.
+   .  : `. .
+   : _   '  \ 
+   ; *` _.   `*-._ 
+   `-.-'          `-.
+     ;       `       `.
+     :.       .        \
+     . \  .   :   .-'   .
+     '  `+.;  ;  '      :
+     :  '  |    ;       ;-.
+     ; '   : :`-:     _.`* ;
+   .*' /  .*' ; .*`- +'  `*'
+   `*-*   `*-*  `*-*'       
+          </pre>
+{#
           <p>
             Mailpile is an e-mail client!<br>
             Mailpile is a search engine and a personal webmail server.<br>
@@ -74,6 +127,7 @@
             our community</a>. If you like what you see, maybe you can
             <a href="/donate/">lend a hand</a>!
           </p>
+#}
           <p>
             Thanks and welcome,<br>
             &nbsp; &nbsp; - Bjarni &amp; the team
@@ -84,8 +138,11 @@
          <div class="status smaller">
           <h5>Vitals:</h5>
           <ul>
-            <li><a href="/download/">Current release</a>: 1.0.0rc6
-            <li><a href="/roadmap/">Next Milestone</a>: 1.0
+{#
+            <li><a href="/download/">Current release</a>: <i>tbd</i>
+#}
+            <li><a>Current release</a>: <i>tbd</i>
+            <li><a href="/roadmap/">Next Milestone</a>: 2.0
             <li><a href="https://github.com/mailpile/Mailpile/blob/master/COPYING.md">License</a>: AGPLv3
             <li><a href="https://github.com/mailpile/Mailpile">Code</a>: Python, JS, HTML5
           </ul>
@@ -94,19 +151,23 @@
           {%- for fn in ls('blog', '\.md$')[-4:]|reverse %}
             {% set post = cat('blog/' + fn)|from_rfc822 -%}
             {% set url = fn|replace('.md', '.html') -%}
+            {%- if post.type == 'blog2' %}
             <li><a href="/blog/{{url}}">{{ post.date|date('%B %e') }}</a>: {{ post.subject }}</li>
+            {%- endif %}
           {%- endfor %}
           </ul>
+{#
           <h5>Latest tweet: <a href="/blog/">more tweets</a></h5>
           {%- set tweets = cat('blog/tweets/tweets.json')|from_json %}
           <ul>
             {{ tweets.0.html_tweet|safe }}
           </ul>
+#}
          </div>
         </div>
       </div>
     <hr>
-
+{#
     <!-- Main Points -->
     <div id="about" class="row add-top add-bottom text-center">
       <h2 class="add-top add-bottom text-center"><strong>mail</strong>pile at a glance</h2>
@@ -214,6 +275,7 @@
     <hr>
     <div class="row add-top"></div>
 
+#}
 
     <!-- Community -->
     <div id="community" class="row clearfix">

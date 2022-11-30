@@ -147,7 +147,7 @@ class JinjaToolExtension(Extension):
     def _without(self, data, skip=[]):
         d = {}
         skip = set([s.lower() for s in skip])
-        for k, v in data.iteritems():
+        for k, v in data.items():
             if k.lower() not in skip:
                 d[k] = v
         return d

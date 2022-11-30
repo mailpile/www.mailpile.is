@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 import copy
 import json
 import markdown
@@ -86,10 +86,11 @@ try:
 
   # Collect all the tweets since the last one.
   tweets = []
-  tweets.extend(api.user_timeline(me, count=(maxtweets * 2),
-                                      include_rts=False,
-                                      exclude_replies=True,
-                                      tweet_mode="extended"))
+  tweets.extend(api.user_timeline(user_id=me,
+                                  count=(maxtweets * 2),
+                                  include_rts=False,
+                                  exclude_replies=True,
+                                  tweet_mode="extended"))
   tweets.sort(key=lambda t: t.created_at)
   tweets = reversed(tweets[-maxtweets:])
 
@@ -135,10 +136,10 @@ try:
 
   with open(os.path.join(homedir, 'index.bak'), 'w') as fd:
     fd.write('\n'.join(output).encode('utf-8'))
-  print '\n'.join(output).encode('utf-8')
+  print('\n'.join(output))
 
 except:
   import traceback
   sys.stderr.write(traceback.format_exc())
   with open(os.path.join(homedir, 'index.bak'), 'r') as fd:
-    print fd.read() 
+    print(fd.read())
