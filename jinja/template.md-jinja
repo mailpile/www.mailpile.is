@@ -18,7 +18,7 @@
       <strong>Posted by <a href="#">{{ page.author }}</a> on {{ page.date|date('%B %e, %Y') }}</strong>
     {%- if page.type == 'blog' %}
       <i class="warning">(
-        <a href="/blog/...FIXME...">Content may be obsolete!</a>
+        <a href="/blog/2022-11-30_Rebooting_Mailpile.html">Content may be obsolete!</a>
       )</i>
     {%- endif %}
     {%- if page.deadline %}<br>
