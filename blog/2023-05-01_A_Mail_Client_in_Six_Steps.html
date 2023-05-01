@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="index.rss" />
 
-    <title>Mailpile: Windows Developer</title>
+    <title>Mailpile: A Mail Client in Six Steps</title>
 
     <!-- JS ================================================== -->
     <script src="/js/jquery.min.js"></script>
@@ -42,6 +42,8 @@
     <script src="/js/sjcl.js"></script>
     <script src="/js/hoipoi.js"></script>
     <script src="/js/site.js"></script>
+    <script src="/blog/nav.js"></script>
+
 </head><body>
 
     <div id="navigation">
@@ -71,7 +73,7 @@
                 <a href="/"><img class="pages-logo" src="/img/icon-120x120.png"></a>
             </div>
             <div class="col-12">
-                <h2 class="breadcrumbs"><a href="/"><strong>mail</strong>pile</a> : <a href="/jobs/">jobs</a></h2>
+                <h2 class="breadcrumbs"><a href="/"><strong>mail</strong>pile</a></h2>
 <!--            <h6>A modern, fast web-mail client with user-friendly encryption and privacy features. 100% Free and Open Source software</h6> -->
             </div>
         </div>
@@ -82,92 +84,95 @@
             <div class="col-11">
 <!-- Page content begins -->
 
-    <a href="/jobs/2018-01-22_Windows_Developer.html"><h1>Windows Developer</h1></a>
+    <a href="/blog/2023-05-01_A_Mail_Client_in_Six_Steps.html"><h1>A Mail Client in Six Steps</h1></a>
     <p>
-      <strong>Posted by <a href="#">Oktavía Hrund</a> on January 22, 2018</strong><br>
-      <strong>Deadline: February 14, 2018</strong>
+      <strong>Posted by <a href="#">Bjarni Rúnar</a> on May  1, 2023</strong>
     </p>
 
-<p>Mailpile is looking for a software developer to join a team looking to
-grow towards more diversity. Your job would be to look out for the needs
-of Mailpile users on Windows, write Windows-specific Mailpile code
-(user-interface and system integration) and automate the packaging of
-Mailpile and its dependencies for easy installation of Mailpile 1.0 on
-Windows.</p>
-<p>Mailpile is an e-mail client. It runs on your desktop or laptop computer
-and you interact with it by using your web browser. The goal of Mailpile
-is to allow people to use e-mail in a more independent, secure and
-private manner.  Mailpile builds upon Tor and GnuPG and is mostly
-written in Python and HTML5.  We are a small company, founded around an
-IndieGoGo crowdfunding campaign in 2013. The business has never taken
-outside investment and work is entirely funded by contributions from
-backers around the world. The goal of the business is to make Mailpile a
-viable, sustainable project which is available to as many people as
-possible.</p>
-<h3>What we offer</h3>
+<p>Good news, friends!</p>
+<p>Mailpile and the fine folks <a href="https://nlnet.net/">NLNet</a> are in the process of exchanging signed copies of a Memorandum of Understanding!</p>
+<p>What's an MoU? So glad you asked.</p>
+<p>What this means, is that NLNet are going to support the next few months of Mailpile work with a grant,
+as part of the <a href="https://nlnet.nl/entrust/">NGI Zero Entrust</a> initiative.
+The tag-line for NGI Zero Entrust is "Trustworthiness and data sovereignty",
+and I'm pretty chuffed that NLNet agree Mailpile is on topic for that theme.</p>
+<p>The Memorandum of Understanding is the final stage of our acceptance into this program;
+it is a description of what work they are supporting with the grant.</p>
+<h2>The Project</h2>
+<p>The work we are about to undertake is summarized
+<a href="https://nlnet.nl/project/Mailpile2-Moggie/">on their website</a>
+like so:</p>
+<blockquote>
+<p>Mailpile's mission is to empower users to be more autonomous and private in how they manage, store and communicate over e-mail,
+simplifying the use of relevant encryption technology (OpenPGP, Tor and encrypted local storage).
+Mailpile 2 will be an Open Source, secure web-mail application,
+usable and powerful enough to be a compelling alternative to both mainstream desktop e-mail clients and proprietary web-mail services.
+Mailpile 2 will offer both local and remote access to an elegant,
+mobile-friendly web interface, built on web-APIs exposed by Moggie.
+Moggie is the project's technical toolkit for searching and working with e-mail.
+This stage of the project is about developing Moggie to the point where it is useful as a stand-alone tool in its own right,
+and feature complete enough that work on the Mailpile 2 user-interface can commence.</p>
+</blockquote>
+<h2>The Plan: ship moggie!</h2>
+<p>The MoU lays out further details.
+It defines six milestones which take us from where we are now,
+to a working terminal-mode (text based) e-mail client called moggie.
+Moggie's back-end will have a documented API,
+which can be used to build other e-mail clients or mail processing tools.</p>
+<p>The milestones:</p>
 <ol>
-<li>A competitive (European) salary</li>
-<li>Be a part of a small team passionate about usability, Free Software
-      and privacy</li>
-<li>Be a part of the development team of a new, awesome tool that allows
-      even non-technical users to host their own personal secure webmail!</li>
-<li>Be a part of a community!</li>
+<li>Deliver a read-only e-mail client</li>
+<li>Add search-engine (search/filter/tag) functionality to the e-mail client</li>
+<li>Add writing capabilities to the e-mail client</li>
+<li>Add the ability to compose and send e-mail to the client</li>
+<li>Add user interfaces and documentation for configuration to the client</li>
+<li>Complete a security review cycle and make a public release</li>
 </ol>
-<h3>Qualifications, background and experience</h3>
-<p>We imagine you have at least 3 years of experience with programming, and
-experience with a similar project, i.e. have you written and packaged
-software for Windows? We wanna hear about it! You are comfortable working
-remotely and appreciate team communication as important. The biggest
-challenge you will face is that this is a complex packaging task – it
-involves the Tor daemon, GnuPG and Python – if you are excited about a
-challenge of this kind we would love to hear from you!</p>
-<h4>Must haves</h4>
-<p>Any experience with Python as well as a good record of following project
-goals and benchmarks.</p>
-<h4>Nice to haves</h4>
-<p>Experience with Tor and if you have experience with packaging for the
-Windows platforms even better! We would also love if you have experience
-working with and in diverse teams.</p>
-<h4>Location: mostly the internet</h4>
-<p>We are looking for you if you are willing – even excited about working
-remotely. The current team is based in Europe, so the only condition we
-make is that you could make time for team meetings up to 1-2 times a
-week within flexible CET working hours.  There will be opportunities to
-travel for team meetings at special events.</p>
-<h4>Remuneration and duration of contract</h4>
-<p>We are looking for a person who is interested in doing a short-term
-consultancy contract within the tight scope of the project tasks as
-listed above. There may be a possibility of an extension of scope and
-consultancy depending on project developments and the outcomes of this
-contract.</p>
-<p>We are expecting the duration of the contract to be approximately 3-4
-months at roughly full-time.  The project is open to spreading the
-approximate contract duration to allow flexibility in working schedule
-(to accommodate family life for example).</p>
-<h4>How to apply:</h4>
-<p>Please send us a cover letter so we get a better idea of who you are and
-why you would be a great addition to the team as well as your CV. Please
-include the following information:</p>
-<ul style="list-style: disc">
-<li>your software development experience, including if you have any:</li>
-  <ul style="list-style: disc">
-     <li>experience with packaging software for Windows</li>
-     <li>experience in open source software and privacy</li>
-   </ul>
-</li>
-<li>your experience in working with and in remote teams</li>
-<li>where you live/will be working from</li>
-<li>other information you find important for us to have to be able to assess your application</li>
+<p>Security, autonomy and encryption (including OpenPGP) are part of every stage of this plan.</p>
+<p>Each of these steps should take roughly one month,
+and after each milestone code will be published on GitHub and there will be a blog post discussing how things went.
+So stay tuned!</p>
+<p>This means that in six months (give or take...),
+we aim to ship a powerful new tool, <em>moggie</em>,
+which provide a terminal-based e-mail client and toolkit for shell scripting and automating various e-mail related tasks.</p>
+<p>But moggie is also designed to be the back-end for a much more user-friendly web-based e-mail client: <strong>Mailpile version 2</strong>.</p>
+<h2>Backstory</h2>
+<p>This plan is, on its surface, a bit crazy.
+Going from zero to mail client in six months
+(with grand security ambitions and only one developer, myself)
+would be a very tall order!</p>
+<p>Luckily we aren't starting from zero.
+This plan builts on almost two years of behind-the-scenes development.
+We already have:</p>
+<ul>
+<li>a working search engine,</li>
+<li>a filtering system,</li>
+<li>a configuration system,</li>
+<li>support for multiple mailbox formats,</li>
+<li>encrypted local storage, </li>
+<li>a powerful system for processing HTML-only e-mail,</li>
+<li><a href="https://passcrow.org/">a secure password recovery scheme</a>,</li>
+<li>partial OpenPGP support,</li>
+<li>a partial prototype for a text-mode mail client</li>
+<li>... built on a web-API back-end</li>
+<li>... which is exposed as a set of unix-style command-line tools</li>
 </ul>
-
-<p>Please send your application to us before 2 February 2018 to
-<a href="mailto:jobs@mailpile.is?subject=Windows%20Developer">jobs@mailpile.is</a>.</p>
-<p>Do you have any questions for us? We would love to hear from you – DM us on
-Twitter <a href="https://twitter.com/MailpileTeam">@MailpileTeam</a> or talk to
-Oktavía over WhatsApp on +4520455995.</p>
-<p><strong>Note:</strong> We reply to all applications. If you do not recieve
-confirmation that we got your e-mail within 2 business days, please
-reach out to make sure your application arrived safely.</p>
+<p>This has been a complete rewrite of Mailpile, from the ground up.
+It is faster and more efficient,
+it uses less RAM,
+and it makes better use of modern multi-core CPUs.
+And of course moggie is written in Python 3
+- no more obsolete Python 2 dependencies.</p>
+<p>A lot of inspiration
+(and code fragments whenever possible)
+were of course taken from the old app.
+But moggie really is a new thing!</p>
+<p>It's time to polish it off,
+tie up the loose ends and share the results with the wider community.</p>
+<p>Which is exacty what NLNet are going to help us do. :-)</p>
+<p><em>Please join the
+<a href="https://community.mailpile.is/t/a-grant-from-nlnet-a-mail-client-in-six-steps/1054">discussion about this post</a>
+on our community forum.</em></p>
 <!-- Page content ends -->
 <!--
                 <p><script id='fbwj89d'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=mailpile&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbwj89d');</script></p>
@@ -176,7 +181,11 @@ reach out to make sure your application arrived safely.</p>
             <div class="col-1"></div>
             <div class="col-4"></div>
         </div>
-        <hr>
+        <div class='blog-nav'>
+          <hr class='above'>
+          <p class='prev'></p><p class='next'></p>
+          <hr class='below'>
+        </div>
         <!-- Contact & Media -->
         <div id="footer" class="clearfix">
             <div class="one-third">

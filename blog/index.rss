@@ -4,6 +4,121 @@
   <title>Mailpile: The Mailpile Blog</title>
   <link>https://www.mailpile.is/blog/</link>
   <item>
+    <title>A Mail Client in Six Steps</title>
+    <link>https://www.mailpile.is/blog/2023-05-01_A_Mail_Client_in_Six_Steps.html</link>
+    <description>&lt;p&gt;Good news, friends!&lt;/p&gt;
+&lt;p&gt;Mailpile and the fine folks &lt;a href=&#34;https://nlnet.net/&#34;&gt;NLNet&lt;/a&gt; are in the process of exchanging signed copies of a Memorandum of Understanding!&lt;/p&gt;
+&lt;p&gt;What&#39;s an MoU? So glad you asked.&lt;/p&gt;
+&lt;p&gt;What this means, is that NLNet are going to support the next few months of Mailpile work with a grant,
+as part of the &lt;a href=&#34;https://nlnet.nl/entrust/&#34;&gt;NGI Zero Entrust&lt;/a&gt; initiative.
+The tag-line for NGI Zero Entrust is &#34;Trustworthiness and data sovereignty&#34;,
+and I&#39;m pretty chuffed that NLNet agree Mailpile is on topic for that theme.&lt;/p&gt;
+&lt;p&gt;The Memorandum of Understanding is the final stage of our acceptance into this program;
+it is a description of what work they are supporting with the grant.&lt;/p&gt;
+&lt;h2&gt;The Project&lt;/h2&gt;
+&lt;p&gt;The work we are about to undertake is summarized
+&lt;a href=&#34;https://nlnet.nl/project/Mailpile2-Moggie/&#34;&gt;on their website&lt;/a&gt;
+like so:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mailpile&#39;s mission is to empower users to be more autonomous and private in how they manage, store and communicate over e-mail,
+simplifying the use of relevant encryption technology (OpenPGP, Tor and encrypted local storage).
+Mailpile 2 will be an Open Source, secure web-mail application,
+usable and powerful enough to be a compelling alternative to both mainstream desktop e-mail clients and proprietary web-mail services.
+Mailpile 2 will offer both local and remote access to an elegant,
+mobile-friendly web interface, built on web-APIs exposed by Moggie.
+Moggie is the project&#39;s technical toolkit for searching and working with e-mail.
+This stage of the project is about developing Moggie to the point where it is useful as a stand-alone tool in its own right,
+and feature complete enough that work on the Mailpile 2 user-interface can commence.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;The Plan: ship moggie!&lt;/h2&gt;
+&lt;p&gt;The MoU lays out further details.
+It defines six milestones which take us from where we are now,
+to a working terminal-mode (text based) e-mail client called moggie.
+Moggie&#39;s back-end will have a documented API,
+which can be used to build other e-mail clients or mail processing tools.&lt;/p&gt;
+&lt;p&gt;The milestones:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Deliver a read-only e-mail client&lt;/li&gt;
+&lt;li&gt;Add search-engine (search/filter/tag) functionality to the e-mail client&lt;/li&gt;
+&lt;li&gt;Add writing capabilities to the e-mail client&lt;/li&gt;
+&lt;li&gt;Add the ability to compose and send e-mail to the client&lt;/li&gt;
+&lt;li&gt;Add user interfaces and documentation for configuration to the client&lt;/li&gt;
+&lt;li&gt;Complete a security review cycle and make a public release&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Security, autonomy and encryption (including OpenPGP) are part of every stage of this plan.&lt;/p&gt;
+&lt;p&gt;Each of these steps should take roughly one month,
+and after each milestone code will be published on GitHub and there will be a blog post discussing how things went.
+So stay tuned!&lt;/p&gt;
+&lt;p&gt;This means that in six months (give or take...),
+we aim to ship a powerful new tool, &lt;em&gt;moggie&lt;/em&gt;,
+which provide a terminal-based e-mail client and toolkit for shell scripting and automating various e-mail related tasks.&lt;/p&gt;
+&lt;p&gt;But moggie is also designed to be the back-end for a much more user-friendly web-based e-mail client: &lt;strong&gt;Mailpile version 2&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Backstory&lt;/h2&gt;
+&lt;p&gt;This plan is, on its surface, a bit crazy.
+Going from zero to mail client in six months
+(with grand security ambitions and only one developer, myself)
+would be a very tall order!&lt;/p&gt;
+&lt;p&gt;Luckily we aren&#39;t starting from zero.
+This plan builts on almost two years of behind-the-scenes development.
+We already have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a working search engine,&lt;/li&gt;
+&lt;li&gt;a filtering system,&lt;/li&gt;
+&lt;li&gt;a configuration system,&lt;/li&gt;
+&lt;li&gt;support for multiple mailbox formats,&lt;/li&gt;
+&lt;li&gt;encrypted local storage, &lt;/li&gt;
+&lt;li&gt;a powerful system for processing HTML-only e-mail,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://passcrow.org/&#34;&gt;a secure password recovery scheme&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;partial OpenPGP support,&lt;/li&gt;
+&lt;li&gt;a partial prototype for a text-mode mail client&lt;/li&gt;
+&lt;li&gt;... built on a web-API back-end&lt;/li&gt;
+&lt;li&gt;... which is exposed as a set of unix-style command-line tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This has been a complete rewrite of Mailpile, from the ground up.
+It is faster and more efficient,
+it uses less RAM,
+and it makes better use of modern multi-core CPUs.
+And of course moggie is written in Python 3
+- no more obsolete Python 2 dependencies.&lt;/p&gt;
+&lt;p&gt;A lot of inspiration
+(and code fragments whenever possible)
+were of course taken from the old app.
+But moggie really is a new thing!&lt;/p&gt;
+&lt;p&gt;It&#39;s time to polish it off,
+tie up the loose ends and share the results with the wider community.&lt;/p&gt;
+&lt;p&gt;Which is exacty what NLNet are going to help us do. :-)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please join the
+&lt;a href=&#34;https://community.mailpile.is/t/a-grant-from-nlnet-a-mail-client-in-six-steps/1054&#34;&gt;discussion about this post&lt;/a&gt;
+on our community forum.&lt;/em&gt;&lt;/p&gt;</description>
+    <pubDate>Mon, 01 May 2023 12:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Rebooting Mailpile</title>
+    <link>https://www.mailpile.is/blog/2022-11-30_Rebooting_Mailpile.html</link>
+    <description>&lt;p&gt;Long time no blog!&lt;/p&gt;
+&lt;p&gt;There have been a few updates on the
+&lt;a href=&#34;https://community.mailpile.is/&#34;&gt;the Community Forum&lt;/a&gt;,
+but nothing here for quite a while!&lt;/p&gt;
+&lt;p&gt;This is a short post to update everyone on the current status of the project:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The Mailpile v1 codebase is no longer being updated&lt;/li&gt;
+&lt;li&gt;Mailpile v2 is making progress, in semi-stealth mode&lt;/li&gt;
+&lt;li&gt;In parallel, a project to create a dedicated hardware device for Mailpile is underway&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The main reason for these changes,
+is that Python 2 is no longer maintained or supported by the community,
+and I decided that rewriting the whole thing in Python 3 made more sense than attempting to port the old code.&lt;/p&gt;
+&lt;p&gt;The old code remains a useful resource,
+both for inspiration and sometimes for copying code directly over,
+but enough things are new that it&#39;s most accurate to call Mailpile v2 a new application.
+The code-name for the v2 project is &lt;em&gt;moggie&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It&#39;s going well,
+but I haven&#39;t made any public releases yet.&lt;/p&gt;
+&lt;p&gt;Watch this space for further updates.
+Thanks for reading!&lt;/p&gt;</description>
+    <pubDate>Wed, 30 Nov 2022 12:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>CCCamp19 and further EFail mitigations</title>
     <link>https://www.mailpile.is/blog/2019-08-31_CCCamp_EFail.html</link>
     <description>&lt;p&gt;Hello world!&lt;/p&gt;
@@ -145,245 +260,5 @@ is for everything else.&lt;/p&gt;
 &lt;p&gt;Including &lt;a href=&#34;https://community.mailpile.is/t/community-discourse-launched/31&#34;&gt;discussions about our blog
 posts!&lt;/a&gt;.&lt;/p&gt;</description>
     <pubDate>Fri, 15 Feb 2019 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>Progress Report: events, packages, 1.0</title>
-    <link>https://www.mailpile.is/blog/2018-10-27_Progress_Report.html</link>
-    <description>&lt;p&gt;Hello world! How are you?&lt;/p&gt;
-&lt;p&gt;I&#39;m writing this, sitting on a bus in Luxembourg, realizing that we have
-been very quiet for quite some time. Our last posts were in May, first a
-report on &lt;a href=&#34;2018-05-03_Desktop_Usability_Tests.html&#34;&gt;the results of our first round of desktop package usability
-testing&lt;/a&gt;, quickly followed by a
-&lt;a href=&#34;2018-05-14_PGP_Security_Alert.html&#34;&gt;statement on how the EFail flaw impacted
-Mailpile&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Since then we may have been quiet, but we have not been idle:&lt;/p&gt;
-&lt;ul class=&#34;square&#34;&gt;
- &lt;li&gt;Many, many bugs have been found and fixed
- &lt;li&gt;The first round of our desktop packaging project is complete,
-     we have packages and very basic desktop integration for both
-     Windows and the Mac
- &lt;li&gt;Mailpile&#39;s multi-user Apache integration
-     (&lt;a href=&#34;https://github.com/mailpile/Mailpile/tree/master/shared-data/multipile&#34;
-         target=_blank&gt;Multipile&lt;/a&gt;)
-     has been simplified and reworked
- &lt;li&gt;Mailpile&#39;s internal (in-memory) master security key is now
-     protected against memory corruption
- &lt;li&gt;Mailpile is now &lt;i&gt;compatible&lt;/i&gt; with
-     &lt;a target=_blank href=&#34;https://autocrypt.org/&#34;&gt;Autocrypt Level 1&lt;/a&gt;,
-     but not yet fully compliant
- &lt;li&gt;I attended the OpenPGP e-mail summit in Brussels
-&lt;/ul&gt;
-
-&lt;p&gt;I would like to publicly thank Alex and Pétur for their hard work on the
-Mailpile Desktop packages, and in particular for how they took delays and slow
-responses from my end graciously and in stride.&lt;/p&gt;
-&lt;p&gt;Read on to learn a bit more about the OpenPGP E-mail Summit, our CCC plans, the
-state of the desktop packaging work, and of course the elusive 1.0 release.&lt;/p&gt;
-&lt;h2&gt;The OpenPGP Summit and 35c3&lt;/h2&gt;
-&lt;p&gt;Last weekend I visited the &lt;a href=&#34;https://mailfence.com/&#34;&gt;Mailfence&lt;/a&gt; office in
-Brussels, to attend the annual OpenPGP E-mail Summit.&lt;/p&gt;
-&lt;p&gt;The OpenPGP E-mail Summit is one of my favourite community events. Just
-two days long, it is an informal event focused on getting people from
-the world of e-mail encryption to exchange knowledge and collaborate. &lt;/p&gt;
-&lt;p&gt;This year there were (by my rough guesstimate) about 50 people from over
-20 projects present, including Phil Zimmermann himself, the creator of
-PGP. I was very happy to meet him and shake his hand. We ended up having
-about 20 different sessions, discussing topics ranging from key server
-management, to user interfaces, to updating the OpenPGP standard itself.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wiki.gnupg.org/EmailSummit2018Notes&#34;&gt;Notes from all the sessions have been published.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;There was also a dinner and plenty of socializing, the value of which is
-not to be understated. Meeting people face-to-face almost always makes
-collaboration online easier and more productive.&lt;/p&gt;
-&lt;p&gt;For Mailpile, the main outcomes of the summit were the following:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;There seems to be potential for partnerships with 2-3 other businesses in
-      the OpenPGP space, which we look forward to exploring further.&lt;/li&gt;
-&lt;li&gt;The Web Key Directory specification is still evolving in ways which may
-      require we re-evaluate how we use it in Mailpile.&lt;/li&gt;
-&lt;li&gt;Mailpile will aim for Autocrypt Level 1 compliance, soon! Our aim is to
-      get a member of the community to review and confirm our implementation
-      at the &lt;a href=&#34;https://events.ccc.de/2018/09/11/35c3-call-for-participation-and-submission-guidelines/&#34;&gt;35c3&lt;/a&gt;
-      conference. We have a volunteer to perform the review.&lt;/li&gt;
-&lt;li&gt;I have a voucher and will be representing Mailpile at 35c3. Come say hi!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;It was a productive weekend!&lt;/p&gt;
-&lt;h2&gt;When will Mac and Windows packages be available?&lt;/h2&gt;
-&lt;p&gt;If you&#39;ve e-mailed me asking this question; my apologies for not
-answering. I haven&#39;t replied, because I don&#39;t know! If I did, our
-download page would just say so.&lt;/p&gt;
-&lt;p&gt;There are three main tasks we need to complete before we make the
-desktop packages available to the wider Internet:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;A short private beta, to reassure ourselves the packages
-      don&#39;t have any blindingly obvious bugs.&lt;/li&gt;
-&lt;li&gt;Launch a Discourse forum, so our users have a venue to help
-      each other out.&lt;/li&gt;
-&lt;li&gt;Finish our &#34;build robot&#34; so packaging becomes an automated
-      process without any human bottlenecks.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I am not going to commit to a time-line for getting this done, but this
-work is all in progress and won&#39;t take forever. This year? This year.&lt;/p&gt;
-&lt;p&gt;It&#39;s worth mentioning that some important tasks have been postponed and
-will not be blocking the availability of packages - so these packages
-will not be &#34;Mailpile 1.0&#34;. But they&#39;re close.&lt;/p&gt;
-&lt;h2&gt;So, what about Mailpile 1.0?&lt;/h2&gt;
-&lt;p&gt;Our current release is 1.0.0rc4, tagged and pushed earlier today.&lt;/p&gt;
-&lt;p&gt;At times it feels like we&#39;re chasing &lt;a href=&#34;https://en.wikipedia.org/wiki/Zeno%27s_paradoxes#Achilles_and_the_tortoise&#34;&gt;the tortoise from one of Zeno&#39;s
-paradoxes&lt;/a&gt;,
-always getting closer but never able to catch up. For every issue we
-close, others are opened...&lt;/p&gt;
-&lt;p&gt;But in spite of that, my to-do list for the elusive &#34;Mailpile 1.0&#34;
-release really is starting to get shorter and the issues that remain are
-not as complex as the ones we&#39;ve resolved. I&#39;ve updated the &lt;a href=&#34;https://github.com/mailpile/Mailpile/milestone/4&#34;&gt;GitHub
-Milestone&lt;/a&gt; to reflect
-the current priority issues. It&#39;s not a long list, mostly relatively
-minor bugfixes.&lt;/p&gt;
-&lt;p&gt;The two big items left on my 1.0 roadmap are:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Fully implement Autocrypt Level 1&lt;/li&gt;
-&lt;li&gt;Implement easy remote access (PageKite and Tor Hidden Services)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The former is necessary for an interoperable and complete implementation
-of &#34;PGP for everyone&#34;, and the latter is needed so people can access
-their Mailpiles remotely - in particular to access their Mailpile from
-their smart-phones.&lt;/p&gt;
-&lt;p&gt;Again, I&#39;m not going to make any promises about when these will get
-done.&lt;/p&gt;
-&lt;p&gt;But this mini roadmap is still worth sharing, because if you liked the
-vision behind Mailpile and those two issues aren&#39;t critical for your
-use-case... then maybe Mailpile is already ready for you. Maybe!&lt;/p&gt;
-&lt;p&gt;One-point-oh is an important label, but it&#39;s not everything.&lt;/p&gt;
-&lt;p&gt;Mailpile is already a great e-mail client. Give it a try!&lt;/p&gt;</description>
-    <pubDate>Sat, 27 Oct 2018 12:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>PGP Security Alert</title>
-    <link>https://www.mailpile.is/blog/2018-05-14_PGP_Security_Alert.html</link>
-    <description>&lt;p&gt;Dear Mailpile users,&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://www.eff.org/deeplinks/2018/05/attention-pgp-users-new-vulnerabilities-require-you-take-action-now&#34;&gt;EFF have publicized advice from a group of security
-researchers&lt;/a&gt;,
-who claim there is a serious problem with PGP encrypted e-mail. Users
-are advised to disable automatic decryption of e-mail and exercise
-caution or avoid decrypting e-mails entirely until the vulnerabilities
-have been addressed.&lt;/p&gt;
-&lt;h2&gt;Second (and 3rd) Update&lt;/h2&gt;
-&lt;p&gt;The actual &lt;a href=&#34;https://efail.de/&#34;&gt;research is now public&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As far as I can tell, Mailpile is [mostly] not vulnerable to these flaws and
-the table of tested mail clients in
-&lt;a href=&#34;https://efail.de/efail-attack-paper.pdf&#34;&gt;the paper itself&lt;/a&gt; is misleading
-in that regard. This is unfortunate.&lt;/p&gt;
-&lt;p&gt;There are some exceptions though, see below.&lt;/p&gt;
-&lt;h4&gt;Why is Mailpile [mostly] not vulnerable?&lt;/h4&gt;
-&lt;p&gt;Because of defense in depth.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Mailpile does not display HTML content by default&lt;/li&gt;
-&lt;li&gt;Before displaying HTML, Mailpile cleans up malformed and incomplete tags.&lt;/li&gt;
-&lt;li&gt;When displaying HTML, Mailpile does not load remote content by default.&lt;/li&gt;
-&lt;li&gt;Mailpile respects the GnuPG error messages which warn of invalid data.&lt;/li&gt;
-&lt;li&gt;Mailpile never sends auto-replies to incoming mail.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The direct exfiltration attack is completely thwarted by #2, and would be
-mitigated in any case by #1, #3 and #5.&lt;/p&gt;
-&lt;p&gt;The CBC/CFB Gadget Attack is mostly thwarted by #4, and would also be
-mitigated in any case by #1, #3 and #5.&lt;/p&gt;
-&lt;p&gt;As far as I can tell, most Mailpile users will not be vulnerable to
-EFail. Don&#39;t let the red mark in the PDF deceive you! Also, it&#39;s worth
-mentioning that this isn&#39;t a lucky accident - this is a direct
-validation of how we approach security.&lt;/p&gt;
-&lt;p&gt;Part of that approach is simply taking these things seriously. If anyone
-disagrees with my analysis or finds other flaws in Mailpile, we want to know
-about it and will do our best to remedy things as quickly as possible.&lt;/p&gt;
-&lt;h4&gt;Wait.. mostly? When is Mailpile vulnerable?&lt;/h4&gt;
-&lt;p&gt;Mailpile is vulnerable to the CBC/CFB Gadget Attack in the following
-cases:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Something is obsolete, either:&lt;ol&gt;
-   &lt;li&gt;Mailpile is configured to use an out-of-date version of GnuPG, or
-   &lt;li&gt;The encrypted data being exfiltrated is so old that GnuPG doesn&#39;t
-       expect and require it to have a Modification Detection Code (MDC).
-   &lt;/ol&gt;
-&lt;li&gt;And:&lt;ol&gt;
-   &lt;li&gt;The user manually displays HTML and loads remote images, or
-   &lt;li&gt;The user has previously enabled HTML and images for the sender
-   &lt;/ol&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In practical terms, this means even if you are running up-to-date
-software, then old content (messages that are 10-20 years old, or more)
-could potentially be stolen - but only with a bit of social engineering,
-and only if you still have the keys on your keychain.&lt;/p&gt;
-&lt;p&gt;The risk is more serious if you have configured Mailpile to use an
-obsolete version of GnuPG - use of GnuPG 1.4.x is still relatively
-common, and our tests suggest it is probably vulnerable. In this case
-more recent messages may be at risk, but the social engineering is still
-required for attacks to succeed.&lt;/p&gt;
-&lt;p&gt;Fixes addressing both of these attack vectors have been pushed to our
-GitHub repository and will be included in our next release candidate.
-They are already present in our &lt;a href=&#34;/download/linux.html&#34;&gt;nightly Debian packages&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;First Update&lt;/h2&gt;
-&lt;p&gt;Further details have emerged.&lt;/p&gt;
-&lt;p&gt;Werner, the lead developer of GnuPG, &lt;a href=&#34;https://lists.gnupg.org/pipermail/gnupg-users/2018-May/060315.html&#34;&gt;claims that the flaw has to do
-with an interaction between HTML mail and GnuPG error handling in common
-e-mail clients and PGP
-plugins&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If this is indeed the case, most Mailpile users are not vulnerable since
-HTML messages are not rendered by default - and even when HTML is
-rendered, loading of images and other remote assets are also disabled by
-default.&lt;/p&gt;
-&lt;p&gt;If you would rather take the EFF&#39;s advice, in spite of Werner&#39;s update,
-our original advice is included below.&lt;/p&gt;
-&lt;h2&gt;Disabling Automatic Decryption&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;This advice is obsolete! It is preserved here for historic reasons.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Within Mailpile, the way to disable automatic decryption is as follows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;In the web interface, visit the &lt;strong&gt;Settings&lt;/strong&gt; page&lt;/li&gt;
-&lt;li&gt;Open the &lt;strong&gt;CLI&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Run the following command: &lt;code&gt;set prefs.index_encrypted = false&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This will disable automatic decryption of incoming mail. However, manual
-decryption (decryption when messages are read) will still work and it is
-advisable to not read any encrypted mail until we know more about the
-attack and whether Mailpile is actually vulnerable.&lt;/p&gt;
-&lt;p&gt;If you &lt;strong&gt;absolutely must read encrypted e-mail&lt;/strong&gt;, we recommend taking
-your computer offline before doing so, so as to prevent network-based
-side channels from leaking sensitive key material.&lt;/p&gt;
-&lt;p&gt;To re-enable indexing of encrypted messages, perform the same steps
-again, except &lt;code&gt;set prefs.index_encrypted = true&lt;/code&gt; at the end.&lt;/p&gt;
-&lt;h2&gt;What is going on?&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;What follows is idle speculation. Please take it with an appropriately
-sized grain of salt!&lt;/em&gt;&lt;/p&gt;
-&lt;div style=&#34;text-decoration: line-through&#34;&gt;
-
-I don&#39;t know what is going on. However, I trust the EFF. They would not
-be advising we disable such an important tool unless it was of critical
-importance.
-
-The implications of the advisory, are that automatic e-mail decryption
-can leak details of your private key material back to a malicious
-attacker.
-
-The mechanism is unknown, but the common denominator in the EFF&#39;s list
-of vulnerable e-mail clients is use of GnuPG - which Mailpile also
-relies upon.
-
-My guess, is that there is a flaw in GnuPG which allows attackers to
-craft encrypted messages that force GnuPG to leak key material back over
-the network to an attacker.
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;See updates from myself and Werner above. The situation is not as bad as
-it first appeared - in fact, it appears Mailpile is not vulnerable to this
-problem.&lt;/p&gt;
-&lt;p&gt;All the same, because we take these things seriously, I have filed issues
-in our issue tracker for follow-up work and proactive improvements:
-&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2072&#34;&gt;#2072&lt;/a&gt;,
-&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2073&#34;&gt;#2073&lt;/a&gt;,
-&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2074&#34;&gt;#2074&lt;/a&gt;,
-&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2075&#34;&gt;#2075&lt;/a&gt;, and
-&lt;a href=&#34;https://github.com/mailpile/Mailpile/issues/2077&#34;&gt;#2077&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We will post updates as more information becomes available.&lt;/p&gt;</description>
-    <pubDate>Mon, 14 May 2018 12:00:00 +0000</pubDate>
   </item>
 </channel></rss>

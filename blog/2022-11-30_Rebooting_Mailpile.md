@@ -15,7 +15,7 @@ This is a short post to update everyone on the current status of the project:
    2. Mailpile v2 is making progress, in semi-stealth mode
    3. In parallel, a project to create a dedicated hardware device for Mailpile is underway
 
-The mean reason for these changes,
+The main reason for these changes,
 is that Python 2 is no longer maintained or supported by the community,
 and I decided that rewriting the whole thing in Python 3 made more sense than attempting to port the old code.
 
