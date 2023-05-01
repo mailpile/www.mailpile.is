@@ -104,3 +104,7 @@ It's time to polish it off,
 tie up the loose ends and share the results with the wider community.
 
 Which is exacty what NLNet are going to help us do. :-)
+
+*Please join the
+[discussion about this post](https://community.mailpile.is/t/a-grant-from-nlnet-a-mail-client-in-six-steps/1054)
+on our community forum.*
