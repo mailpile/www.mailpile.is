@@ -49,6 +49,11 @@
 {%- if page and page.type in ('blog', 'blog2') %}
     <script src="/blog/nav.js"></script>
 {% endif -%}
+{%- if page and page.prism %}
+    <link href="/css/prism.css" rel="stylesheet" />
+    <script src="/js/prism.js" defer></script>
+{%- endif %}
+
 {%- block head_extra %}{% endblock %}
 {%- endblock %}
 </head><body>

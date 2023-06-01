@@ -1,7 +1,10 @@
 jQuery(document).ready(function($){
 
     // Smooth Scrolling
-    $('a.scroll-link[href*=#]:not([href=#])').click(function() {
+    $(
+        'a.scroll-link[href*=#]:not([href=#])'
+//    + ', .jinjatool_toc a[href*=#]:not([href=#])'
+    ).click(function() {
         if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -103,4 +106,12 @@ jQuery(document).ready(function($){
 
     });
 
+    $('div.code-tabs ul li').on('click', function(e) {
+        e.preventDefault();
+        var item = $(this);
+        var tabs = item.parent().parent();
+        var tabname = item.data('tab')
+        tabs.find('li, .tab').removeClass('show');
+        tabs.find('.tab-' + tabname).addClass('show');
+    });
 });

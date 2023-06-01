@@ -42,6 +42,58 @@ from jinja2.ext import Extension
 from markdown import markdown
 
 
+# Used to auto-add <a name=...> to headings.
+HEADINGS_RE = re.compile(r'(<[Hh]\d+[^>]*>)([^>]*)(</[Hh]\d+>)', flags=re.S)
+AUTO_TOC_RE = re.compile(r'<!-- TOC: ((?:[Hh]\d+\s*)*) *-->', flags=re.S)
+
+
+def toc_friendly_markdown(text):
+    counter = 0
+    sections = []
+    def add_anchors(m):
+        nonlocal counter, sections
+        h, title, he = m.group(1), m.group(2), m.group(3)
+        counter += 1
+        aname = 'h%d' % counter
+        if '#=' in title:
+            title, aname = title.rsplit('#=', 1)
+        title = title.strip()
+        if aname in ('#', ''):
+            return '%s%s%s' % (h, title, he)
+        else:
+            sections.append((aname, h[1:3].lower(), title))
+            return ('<a class="anchor" name="%s"></a>%s%s%s'
+                % (aname, h, title, he))
+
+    def gen_auto_toc(m):
+        headings = m.group(1).lower().split()
+        lines = ['<div class="jinjatool_toc"><ul>']
+        toc = []
+        for aname, hN, title in sections:
+            if hN in headings:
+                toc.append((headings.index(hN), aname, title))
+        toc_depth = 0
+        for depth, aname, title in toc:
+            while depth > toc_depth:
+                lines.append('%s <ul>' % (' ' * toc_depth))
+                toc_depth += 1
+            while depth < toc_depth:
+                toc_depth -= 1
+                lines.append('%s </ul>' % (' ' * toc_depth))
+            lines.append(
+                '%s <li><a href="#%s">%s</a>'
+                % (' ' * toc_depth, aname, title))
+        while (toc_depth+1):
+            lines.append('%s</ul>' % (' ' * toc_depth))
+            toc_depth -= 1
+        return '\n' + '\n'.join(lines) + '</div>\n'
+
+    mtext = HEADINGS_RE.sub(add_anchors, markdown(text))
+    mtext = AUTO_TOC_RE.sub(gen_auto_toc, mtext)
+
+    return mtext
+
+
 # This lets us spy on which files get opened, for calculating dependencies.
 REAL_OPEN = open
 OPENED_FILES = set()
@@ -153,7 +205,7 @@ class JinjaToolExtension(Extension):
         return d
 
     def _markdown(self, text):
-        return jinja2.Markup(markdown(text))
+        return jinja2.Markup(toc_friendly_markdown(mtext))
 
     def _to_json(self, data):
         j = json.dumps(data, sort_keys=True, indent=2)
@@ -179,7 +231,7 @@ class JinjaToolExtension(Extension):
                                       for h in header_lines if ':' in h]])
 
         if parse_markdown and rfc822.get('format') in (None, '', 'markdown'):
-            rfc822['body'] = markdown(body).rstrip()
+            rfc822['body'] = toc_friendly_markdown(body).rstrip()
         else:
             rfc822['body'] = body.rstrip()
         return rfc822

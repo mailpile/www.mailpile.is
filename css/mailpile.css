@@ -2159,20 +2159,65 @@ blockquote cite a:visited {
 /* Pre & Code */
 code,
 pre,
+div.code-tabs ul li,
 .pre {
   margin-bottom: 0px;
-  background: #f6f6f6;
-  color: #333333;
-  padding: 2px 8px;
   border: 1px solid #b3b3b3;
   border-radius: 3px;
+  padding: 2px 8px;
+  background: #f6f6f6;
+  color: #333333;
   font-family: 'Courier';
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
 }
-code,
-pre {
+code {
   display: inline-block;
+  padding: 2px;
+  border: none;
+}
+pre code {
+  margin: 0;
+  padding: 0;
+}
+div.code-tabs {
+  display: relative;
+  margin: 0 0 2em 0;
+}
+div.code-tabs ul {
+  padding: 0;
+  margin: 0 0 -1px 5px;
+}
+div.code-tabs code.output {
+  border-left: 2px dashed #777;
+  padding: 0 0 0 10px;
+  margin: 5px 2px 1em 5px;
+  opacity: 0.5;
+}
+div.code-tabs ul li {
+  display: inline-block;
+  padding: 6px 10px 1px 10px;
+  background: #f4f4f4;
+  color: #000000;
+  opacity: 0.5;
+  font-weight: normal;
+}
+div.code-tabs hr {
+  margin: 5px 0;
+  padding: 0;
+}
+div.code-tabs ul li.show {
+  background: #f4f4f4;
+  color: #000000;
+  opacity: 1.0;
+  font-weight: bold;
+}
+div.code-tabs .tab {
+  margin-top: 0;
+  display: none;
+}
+div.code-tabs .tab.show {
+  display: block;
 }
 /* Validation */
 .validation-message {
@@ -2955,26 +3000,30 @@ ul.backers li {
 }
 a.anchor {
   position: absolute;
-  padding-top: 100px;
-  margin-top: -100px;
+  padding-top: 75px;
+  margin-top: -75px;
 }
 li.faq-section-title {
   background: #ffffff;
 }
+.jinjatool_toc,
 #faq #toc {
   max-width: 750px;
   display: block;
   margin: 20px auto;
 }
+.jinjatool_toc ul li ul,
 #faq #toc ul li ul {
   list-style: circle;
   margin-top: 10px;
 }
+.jinjatool_toc ul li ul li,
 #faq #toc ul li ul li {
   line-height: 1.1em;
   padding: 1px 0;
   margin: 1px 0;
 }
+.jinjatool_toc ul li ul li a,
 #faq #toc ul li ul li a {
   font-weight: normal;
 }
