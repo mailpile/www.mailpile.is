@@ -2235,6 +2235,12 @@ ul {
   width: 100%;
   padding: 0px;
 }
+#menu_hidden_check:checked ~ .flexnav{
+  display:block;
+}
+.flexnav{
+  display:none;
+}
 .flexnav.with-js {
   max-height: 0;
 }
@@ -2386,6 +2392,7 @@ ul {
     padding-top: 0px;
   }
   .flexnav {
+    display:block;
     padding-top: 0px;
     margin-top: 0px;
     overflow: visible;
