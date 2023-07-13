@@ -43,7 +43,7 @@ to a working terminal-mode (text based) e-mail client called moggie.
 Moggie's back-end will have a documented API,
 which can be used to build other e-mail clients or mail processing tools.
 
-The milestones:
+The milestones ([Github issue](https://github.com/mailpile/moggie/issues/7)):
 
    1. Deliver a read-only e-mail client ([done!](2023-07-13_A_Read_Only_Mail_Client.html))
    2. Add search-engine (search/filter/tag) functionality to the e-mail client
