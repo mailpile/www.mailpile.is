@@ -5,14 +5,14 @@ Date: 1 May, 2023
 
 Good news, friends!
 
-Mailpile and the fine folks <a href="https://nlnet.net/">NLNet</a> are in the process of exchanging signed copies of a Memorandum of Understanding!
+Mailpile and the fine folks <a href="https://nlnet.net/">NLnet</a> are in the process of exchanging signed copies of a Memorandum of Understanding!
 
 What's an MoU? So glad you asked.
 
-What this means, is that NLNet are going to support the next few months of Mailpile work with a grant,
+What this means, is that NLnet are going to support the next few months of Mailpile work with a grant,
 as part of the <a href="https://nlnet.nl/entrust/">NGI Zero Entrust</a> initiative.
 The tag-line for NGI Zero Entrust is "Trustworthiness and data sovereignty",
-and I'm pretty chuffed that NLNet agree Mailpile is on topic for that theme.
+and I'm pretty chuffed that NLnet agree Mailpile is on topic for that theme.
 
 The Memorandum of Understanding is the final stage of our acceptance into this program;
 it is a description of what work they are supporting with the grant.
@@ -45,7 +45,7 @@ which can be used to build other e-mail clients or mail processing tools.
 
 The milestones:
 
-   1. Deliver a read-only e-mail client
+   1. Deliver a read-only e-mail client ([done!](2023-07-13_A_Read_Only_Mail_Client.html))
    2. Add search-engine (search/filter/tag) functionality to the e-mail client
    3. Add writing capabilities to the e-mail client
    4. Add the ability to compose and send e-mail to the client
@@ -103,7 +103,7 @@ But moggie really is a new thing!
 It's time to polish it off,
 tie up the loose ends and share the results with the wider community.
 
-Which is exacty what NLNet are going to help us do. :-)
+Which is exacty what NLnet are going to help us do. :-)
 
 *Please join the
 [discussion about this post](https://community.mailpile.is/t/a-grant-from-nlnet-a-mail-client-in-six-steps/1054)

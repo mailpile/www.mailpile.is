@@ -503,9 +503,9 @@ and then resubmit the failed request with the missing data added.
 The moggie e-mail client does exactly this:
 
    * The main UI object
-     [listens for incoming NeedInfoException errors](#FIXME),
-   * popping up a [NeedInfoDialog](#FIXME) which resubmits the request when
-     the user has filled out the form.
+     [listens for incoming NeedInfoException errors](https://github.com/mailpile/moggie/blob/08612841fffc3e85f12ff4d295de7221fec1332e/moggie/app/tui/tui_frame.py#L72),
+   * popping up a [RetryDialog](https://github.com/mailpile/moggie/blob/08612841fffc3e85f12ff4d295de7221fec1332e/moggie/app/tui/tui_frame.py#L126),
+   * which [resubmits the request](https://github.com/mailpile/moggie/blob/08612841fffc3e85f12ff4d295de7221fec1332e/moggie/app/tui/retrydialog.py#L58) when the user has filled out the form.
 
 This mechanism is used to log in to both remote IMAP servers,
 and unlock locally encrypted data,
